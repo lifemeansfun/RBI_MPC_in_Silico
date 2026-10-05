@@ -1,0 +1,12 @@
+{
+  "attempt_status": "failed_infrastructure",
+  "verdict": null,
+  "reason": "Reviewer agent terminated with an account usage-limit error before returning a report or verdict.",
+  "next_action": "One fresh infrastructure retry after a new usage check confirmed ordinary usage was allowed.",
+  "usage_check": {
+    "ordinary_usage_allowed": true,
+    "five_hour_used_percent": 0,
+    "weekly_used_percent": 79
+  },
+  "interpretation": "No scientific quality conclusion can be drawn from this attempt."
+}

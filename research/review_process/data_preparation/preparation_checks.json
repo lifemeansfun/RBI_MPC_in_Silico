@@ -1,0 +1,23 @@
+{
+  "documents": 25,
+  "verified_manifest_hashes": 25,
+  "titles_matching_manifest_titles": 25,
+  "unique_decision_dates": 25,
+  "explicit_standalone_month_values": 23,
+  "combined_period_only_rows": [
+    "2020-10-09",
+    "2022-08-05"
+  ],
+  "panel_date_mismatches": [
+    "2022-05-04"
+  ],
+  "manifest_month_mismatches": [
+    "2022-09-30"
+  ],
+  "manifest_sha256": "4f208e2634c2cc4e687c1b9177c34a2f15ffdd8252d3a5fc97f69a667682e962",
+  "macro_panel_sha256": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb",
+  "preparation_script_sha256": "dc208aca827d9e503586f095532066eea99a2631d041bf9d5a72c7d52a0c8b2f",
+  "output_csv_sha256": "e329571330b725f9998233daafca957a06b2bbbc5a8b1ec2d169d29a185662ea",
+  "release_timestamp_verified": false,
+  "vintage_validated": false
+}
