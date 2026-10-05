@@ -1,0 +1,13 @@
+     subset dimension                  predictor  n  tp  fp  fn  precision   recall       f1  exact_match
+        all     union           saved_mock_panel 25  16  27   0   0.372093 1.000000 0.542373     0.360000
+        all     union lag_previous_formal_ballot 25  11   3   5   0.785714 0.687500 0.733333     0.760000
+        all     union               always_varma 25  11  14   5   0.440000 0.687500 0.536585     0.240000
+calibration     union           saved_mock_panel 17  10  17   0   0.370370 1.000000 0.540541     0.411765
+calibration     union lag_previous_formal_ballot 17   7   3   3   0.700000 0.700000 0.700000     0.764706
+calibration     union               always_varma 17   7  10   3   0.411765 0.700000 0.518519     0.235294
+    holdout     union           saved_mock_panel  8   6  10   0   0.375000 1.000000 0.545455     0.250000
+    holdout     union lag_previous_formal_ballot  8   4   0   2   1.000000 0.666667 0.800000     0.750000
+    holdout     union               always_varma  8   4   4   2   0.500000 0.666667 0.571429     0.250000
+    holdout     union         saved_live_holdout  8   6   8   0   0.428571 1.000000 0.600000     0.250000
+    holdout      rate         saved_live_holdout  8   2   0   4   1.000000 0.333333 0.500000     0.500000
+    holdout    stance         saved_live_holdout  8   6   8   0   0.428571 1.000000 0.600000     0.250000

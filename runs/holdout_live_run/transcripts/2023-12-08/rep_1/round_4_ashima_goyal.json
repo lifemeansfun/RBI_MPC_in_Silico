@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "While I support the decision to keep the repo rate unchanged at 6.50% to ensure inflation converges to the target, I dissent on the stance of 'withdrawal of accommodation'. With core inflation having moderated to 4.10%, the real policy rate is now firmly in positive territory, providing sufficient restraint. The current headline inflation of 5.55% is driven largely by supply-side food price shocks, which are best addressed through targeted supply-side measures rather than further monetary tightening. Maintaining a stance of 'withdrawal of accommodation' risks over-tightening and unnecessarily constraining the 6.50% GVA growth trajectory. A shift to a 'neutral' stance better reflects the current macroeconomic reality, signaling that the policy rate is appropriately calibrated to guide inflation toward the 4% target without stifling the post-pandemic recovery.",
+  "fallback_triggered": false
+}

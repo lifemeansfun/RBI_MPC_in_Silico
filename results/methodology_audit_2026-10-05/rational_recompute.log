@@ -1,0 +1,42 @@
+
+[+] Running Rational Track Monte Carlo (1000 draws/meeting) across 25 meetings...
+  [1/25] 2020-10-09: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 5.62%)
+  [2/25] 2020-12-04: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 5.47%)
+  [3/25] 2021-02-05: Actual=+0 bps | Taylor Modal=+25 bps (Implied Mean: 4.28%)
+  [4/25] 2021-04-07: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 4.59%)
+  [5/25] 2021-06-04: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 5.23%)
+  [6/25] 2021-08-06: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 4.92%)
+  [7/25] 2021-10-08: Actual=+0 bps | Taylor Modal=+25 bps (Implied Mean: 4.38%)
+  [8/25] 2021-12-08: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 4.65%)
+  [9/25] 2022-02-10: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 5.27%)
+  [10/25] 2022-04-08: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 5.82%)
+  [11/25] 2022-05-18: Actual=+40 bps | Taylor Modal=+50 bps (Implied Mean: 6.34%)
+  [12/25] 2022-06-08: Actual=+50 bps | Taylor Modal=+50 bps (Implied Mean: 6.27%)
+  [13/25] 2022-08-05: Actual=+50 bps | Taylor Modal=+50 bps (Implied Mean: 6.52%)
+  [14/25] 2022-09-30: Actual=+50 bps | Taylor Modal=+50 bps (Implied Mean: 7.06%)
+  [15/25] 2022-12-07: Actual=+35 bps | Taylor Modal=+50 bps (Implied Mean: 6.85%)
+  [16/25] 2023-02-08: Actual=+25 bps | Taylor Modal=+50 bps (Implied Mean: 7.50%)
+  [17/25] 2023-04-06: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 7.25%)
+  [18/25] 2023-06-08: Actual=+0 bps | Taylor Modal=+0 bps (Implied Mean: 6.51%)
+  [19/25] 2023-08-10: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 8.26%)
+  [20/25] 2023-10-06: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 6.96%)
+  [21/25] 2023-12-08: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 7.24%)
+  [22/25] 2024-02-08: Actual=+0 bps | Taylor Modal=+50 bps (Implied Mean: 6.98%)
+  [23/25] 2024-04-05: Actual=+0 bps | Taylor Modal=+25 bps (Implied Mean: 6.84%)
+  [24/25] 2024-06-07: Actual=+0 bps | Taylor Modal=+25 bps (Implied Mean: 6.78%)
+  [25/25] 2024-08-08: Actual=+0 bps | Taylor Modal=-25 bps (Implied Mean: 6.12%)
+[+] Saved Rational Track panel results: /private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_methodology_audit_zjgwh6ll/results/tables/rational_taylor_panel_results.csv
+
+==========================================================================
+     HEAD-TO-HEAD COMPARISON: BEHAVIORAL LLM vs. RATIONAL TAYLOR RULE
+==========================================================================
+Total Historical Meetings:          25
+Taylor Rule Exact Rate Accuracy:    16.0%
+LLM Multi-Agent Exact Rate Accuracy:76.0%
+Taylor Rule Directional Accuracy:   28.0%
+LLM Multi-Agent Directional Accuracy:76.0%
+Average Absolute Policy Wedge:      43.0 bps
+Master Comparative CSV:             /private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_methodology_audit_zjgwh6ll/results/tables/table4_behavioral_vs_taylor_comparison.csv
+==========================================================================
+
+

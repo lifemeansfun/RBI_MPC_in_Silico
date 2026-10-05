@@ -1,0 +1,2 @@
+total_meetings,directional_rate_accuracy,exact_rate_accuracy,stance_accuracy,dissent_precision,dissent_recall,dissent_f1,holdout_gate_status,total_fallbacks
+25,0.76,0.76,0.76,0.5116,1.0,0.6769,PASS,0

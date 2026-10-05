@@ -1,0 +1,92 @@
+{
+  "meeting_date": "2024-06-07",
+  "replicate_id": 1,
+  "rate_decision_bps": 0,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "-25": 1,
+    "0": 5
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 4,
+    "neutral": 2
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [
+    "jayanth_varma"
+  ],
+  "dissenting_members_stance": [
+    "ashima_goyal",
+    "jayanth_varma"
+  ],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The persistence of food inflation at 8.69 per cent remains a significant threat to the durability of the disinflation process. While core inflation has moderated, headline CPI at 4.75 per cent continues to hover above our 4.00 per cent target, and with the economy operating with a positive output gap of 0.40 per cent, the risk of second-round effects remains elevated. Monetary policy must remain vigilant and committed to the withdrawal of accommodation to ensure that inflation expectations are firmly anchored. Any premature easing or shift in stance would be inconsistent with our mandate to bring inflation durably to the target, especially when the growth momentum of 6.80 per cent provides the necessary space to prioritize price stability.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "member_name": "Dr. Rajiv Ranjan",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While core inflation has moderated to 3.10%, the persistence of food inflation at 8.69% poses a significant risk to unanchoring inflation expectations, necessitating a cautious approach. Given the positive output gap of 0.40% and the need to ensure full monetary transmission, maintaining the current repo rate of 6.50% and the stance of withdrawal of accommodation remains essential to align inflation durably with the 4.00% target. Shifting the stance prematurely would risk signaling a premature easing of our commitment to price stability, which could lead to a persistent upward drift in inflation expectations that would be costly to reverse.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI inflation at 4.75 per cent remains within the tolerance band, the persistent food inflation at 8.69 per cent continues to pose a significant risk to price stability and the anchoring of inflation expectations. The rural economy remains particularly sensitive to these food price shocks, and with the monsoon season ahead, the uncertainty surrounding supply-side pressures necessitates a cautious approach. Given the positive output gap of 0.40 per cent and the need to ensure that inflation durably aligns with the 4.00 per cent target, I believe it is premature to alter the policy stance. Maintaining the current repo rate of 6.50 per cent and the stance of withdrawal of accommodation is essential to safeguard the economy against potential inflationary spillovers while supporting the ongoing growth recovery.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "While I maintain my vote for a status quo on the repo rate, I dissent on the stance of 'withdrawal of accommodation'. With core inflation at a benign 3.10%, the real policy rate is already sufficiently restrictive to anchor expectations. Monetary policy is a blunt instrument for supply-side food price shocks, which currently drive the headline CPI of 4.75%. Given the positive output gap is only marginal at 0.40% and GVA growth is at 6.80%, continuing to signal a withdrawal of accommodation risks over-tightening and unnecessarily constraining the ongoing recovery. A shift to a neutral stance is warranted to better reflect the current macroeconomic reality and provide the MPC with the necessary flexibility to respond to incoming data without signaling an overly hawkish bias that may dampen private investment.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": -25,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": true,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "I vote for a reduction of the repo rate by 25 basis points and a change in the stance to neutral. With core inflation at a benign 3.10%, the current real policy rate is becoming excessively restrictive and risks stifling the 6.80% GVA growth momentum. The headline CPI of 4.75% is driven primarily by food price volatility, which is a supply-side phenomenon that monetary policy is ill-equipped to address without causing collateral damage to the broader economy. Given the output gap is only marginally positive at 0.40%, maintaining a stance of 'withdrawal of accommodation' is no longer appropriate. We must shift to a neutral stance to signal that the policy rate is sufficiently high to anchor expectations without acting as an unnecessary drag on the recovery.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The Indian economy continues to exhibit resilience, with GVA growth at 6.80 per cent, supported by strong domestic demand. However, the inflation trajectory remains a concern, with headline CPI at 4.75 per cent and food inflation elevated at 8.69 per cent. While core inflation has moderated to 3.10 per cent, the persistence of food price pressures poses a risk to the anchoring of inflation expectations. Given the positive output gap of 0.40 per cent and the need to ensure that inflation durably aligns with the 4.00 per cent target, I believe it is premature to alter our policy stance. Maintaining the repo rate at 6.50 per cent and continuing with the withdrawal of accommodation is essential to ensure price stability, which is a prerequisite for sustainable growth. We must remain vigilant and data-driven, as any premature easing could risk undoing the progress made in our disinflationary journey.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

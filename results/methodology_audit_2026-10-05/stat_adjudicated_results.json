@@ -1,0 +1,379 @@
+{
+  "convention": "Strict formal rate/stance dissent requires recorded vote against the majority resolution or an explicit alternative binding vote. Stance reservations are a separate status; do not invent an abstention, yes or neutral vote where source only states reservations. Forward-guidance disagreement has its own field. Mappings are reviewer adjudications from local raw source; preserve original parquet and report both definitions.",
+  "truth_sha256": "0314188f722d13cf8cdd7450b95f2ca13a387ddac81dc552e472795f60529407",
+  "metrics": [
+    {
+      "subset": "all",
+      "dimension": "union",
+      "predictor": "saved_mock_panel",
+      "n": 25,
+      "tp": 16,
+      "fp": 27,
+      "fn": 0,
+      "precision": 0.37209302325581395,
+      "recall": 1.0,
+      "f1": 0.5423728813559322,
+      "exact_match": 0.36
+    },
+    {
+      "subset": "all",
+      "dimension": "union",
+      "predictor": "lag_previous_formal_ballot",
+      "n": 25,
+      "tp": 11,
+      "fp": 3,
+      "fn": 5,
+      "precision": 0.7857142857142857,
+      "recall": 0.6875,
+      "f1": 0.7333333333333333,
+      "exact_match": 0.76
+    },
+    {
+      "subset": "all",
+      "dimension": "union",
+      "predictor": "always_varma",
+      "n": 25,
+      "tp": 11,
+      "fp": 14,
+      "fn": 5,
+      "precision": 0.44,
+      "recall": 0.6875,
+      "f1": 0.5365853658536586,
+      "exact_match": 0.24
+    },
+    {
+      "subset": "calibration",
+      "dimension": "union",
+      "predictor": "saved_mock_panel",
+      "n": 17,
+      "tp": 10,
+      "fp": 17,
+      "fn": 0,
+      "precision": 0.37037037037037035,
+      "recall": 1.0,
+      "f1": 0.5405405405405406,
+      "exact_match": 0.4117647058823529
+    },
+    {
+      "subset": "calibration",
+      "dimension": "union",
+      "predictor": "lag_previous_formal_ballot",
+      "n": 17,
+      "tp": 7,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1": 0.7,
+      "exact_match": 0.7647058823529411
+    },
+    {
+      "subset": "calibration",
+      "dimension": "union",
+      "predictor": "always_varma",
+      "n": 17,
+      "tp": 7,
+      "fp": 10,
+      "fn": 3,
+      "precision": 0.4117647058823529,
+      "recall": 0.7,
+      "f1": 0.5185185185185185,
+      "exact_match": 0.23529411764705882
+    },
+    {
+      "subset": "holdout",
+      "dimension": "union",
+      "predictor": "saved_mock_panel",
+      "n": 8,
+      "tp": 6,
+      "fp": 10,
+      "fn": 0,
+      "precision": 0.375,
+      "recall": 1.0,
+      "f1": 0.5454545454545454,
+      "exact_match": 0.25
+    },
+    {
+      "subset": "holdout",
+      "dimension": "union",
+      "predictor": "lag_previous_formal_ballot",
+      "n": 8,
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "exact_match": 0.75
+    },
+    {
+      "subset": "holdout",
+      "dimension": "union",
+      "predictor": "always_varma",
+      "n": 8,
+      "tp": 4,
+      "fp": 4,
+      "fn": 2,
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285714,
+      "exact_match": 0.25
+    },
+    {
+      "subset": "holdout",
+      "dimension": "union",
+      "predictor": "saved_live_holdout",
+      "n": 8,
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    },
+    {
+      "subset": "holdout",
+      "dimension": "rate",
+      "predictor": "saved_live_holdout",
+      "n": 8,
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "exact_match": 0.5
+    },
+    {
+      "subset": "holdout",
+      "dimension": "stance",
+      "predictor": "saved_live_holdout",
+      "n": 8,
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    }
+  ],
+  "live_predictions": {
+    "union": [
+      {
+        "date": "2023-06-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-08-10",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-10-06",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-12-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2024-02-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-04-05",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-06-07",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-08-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      }
+    ],
+    "rate": [
+      {
+        "date": "2023-06-08",
+        "predicted": [],
+        "formal_true": []
+      },
+      {
+        "date": "2023-08-10",
+        "predicted": [],
+        "formal_true": []
+      },
+      {
+        "date": "2023-10-06",
+        "predicted": [],
+        "formal_true": []
+      },
+      {
+        "date": "2023-12-08",
+        "predicted": [],
+        "formal_true": []
+      },
+      {
+        "date": "2024-02-08",
+        "predicted": [],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-04-05",
+        "predicted": [],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-06-07",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-08-08",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "date": "2023-06-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-08-10",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-10-06",
+        "predicted": [
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2023-12-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": []
+      },
+      {
+        "date": "2024-02-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-04-05",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-06-07",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      },
+      {
+        "date": "2024-08-08",
+        "predicted": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ],
+        "formal_true": [
+          "ashima_goyal",
+          "jayanth_varma"
+        ]
+      }
+    ]
+  },
+  "label_mismatch_dates": [
+    "2022-04-08",
+    "2023-04-06",
+    "2023-06-08",
+    "2023-08-10",
+    "2023-10-06",
+    "2023-12-08"
+  ],
+  "guidance_only_dates": [
+    "2020-10-09"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "I vote to maintain the repo rate at 6.50 per cent, but I dissent on the stance. The persistence of the 'withdrawal of accommodation' stance is no longer appropriate. With core inflation having moderated to 4.10 per cent, the real policy rate is now firmly in restrictive territory. The headline CPI inflation of 5.55 per cent is driven largely by supply-side food price shocks, which are not effectively addressed by monetary tightening. Maintaining a stance of 'withdrawal of accommodation' when the policy rate is already sufficiently restrictive risks overtightening and unnecessarily constraining the growth momentum of 6.50 per cent. A shift to a 'neutral' stance is necessary to signal that the policy rate is appropriately calibrated to guide inflation toward the 4 per cent target without imposing an undue burden on the economy.",
+  "fallback_triggered": false
+}

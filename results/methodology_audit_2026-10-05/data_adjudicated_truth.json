@@ -1,0 +1,743 @@
+{
+  "convention": "Strict formal rate/stance dissent requires recorded vote against the majority resolution or an explicit alternative binding vote. Stance reservations are a separate status; do not invent an abstention, yes or neutral vote where source only states reservations. Forward-guidance disagreement has its own field. Mappings are reviewer adjudications from local raw source; preserve original parquet and report both definitions.",
+  "mapping": [
+    {
+      "panel_meeting_date": "2020-10-09",
+      "adjudicated_meeting_date": "2020-10-09",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [
+        "jayanth_varma"
+      ],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_50560.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+      ],
+      "varma_evidence": [
+        "I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?",
+        "After prolonged deliberation, I have come to the conclusion that a dissent may be painful, but it is more consistent with the obligation of MPC members to express their views independently and candidly.",
+        "Even when a disagreement is more philosophical than operative, it should not always be relegated to the individual statement; I see some merit in occasionally elevating it to a dissent."
+      ]
+    },
+    {
+      "panel_meeting_date": "2020-12-04",
+      "adjudicated_meeting_date": "2020-12-04",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_50831.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary – at least during the current financial year and into the next financial year – to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ],
+      "varma_evidence": [
+        "I also indicated in the October statement that disagreements that are more philosophical than operative need not always be elevated to a dissent, and accordingly I choose not to dissent this time.46."
+      ]
+    },
+    {
+      "panel_meeting_date": "2021-02-05",
+      "adjudicated_meeting_date": "2021-02-05",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_51161.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide; Dr. Ashima Goyal; Prof. Jayanth R. Varma; Dr. Mridul K. Saggar; Dr. Michael Debabrata Patra; and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged at 4 per cent. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary – at least during the current financial year and into the next financial year – to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ],
+      "varma_evidence": []
+    },
+    {
+      "panel_meeting_date": "2021-04-07",
+      "adjudicated_meeting_date": "2021-04-07",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_51456.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary to sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ],
+      "varma_evidence": []
+    },
+    {
+      "panel_meeting_date": "2021-06-04",
+      "adjudicated_meeting_date": "2021-06-04",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_51754.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "14. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent. Furthermore, all members of the MPC unanimously voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ],
+      "varma_evidence": []
+    },
+    {
+      "panel_meeting_date": "2021-08-06",
+      "adjudicated_meeting_date": "2021-08-06",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_52088.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "16. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "For these reasons, I am not in favour of the decision to keep the reverse repo rate at 3.35%, and vote against the accommodative stance.",
+        "On the other hand, I vote for maintaining the repo rate at 4% for the following reasons."
+      ]
+    },
+    {
+      "panel_meeting_date": "2021-10-08",
+      "adjudicated_meeting_date": "2021-10-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_52450.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "For these reasons, I am not in favour of the decision to keep the reverse repo rate at 3.35%, and vote against the accommodative stance.",
+        "On the other hand, I vote for maintaining the repo rate at 4% for the following reasons."
+      ]
+    },
+    {
+      "panel_meeting_date": "2021-12-08",
+      "adjudicated_meeting_date": "2021-12-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_52843.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "I am therefore not in favour of the decision to keep the reverse repo rate at 3.35%, and vote against the accommodative stance.",
+        "On the other hand, I vote for maintaining the repo rate at 4% for the following reasons."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-02-10",
+      "adjudicated_meeting_date": "2022-02-10",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_53319.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "Taking all this into account, I vote in favour of maintaining the policy rate at 4% while voting against the policy stance on two counts.",
+        "I have in the past expressed my reservations about the abnormal width of the policy corridor, but with all money market rates having moved close to the upper end of the corridor, the persistence with a low reverse repo rate has now become a somewhat harmless fetishism, and I will therefore not dwell on it."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-04-08",
+      "adjudicated_meeting_date": "2022-04-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_53601.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "18. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate at 4.0 per cent.",
+        "19. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ],
+      "varma_evidence": [
+        "In this backdrop, maintaining the policy rate at the current level is the only sensible choice, and I therefore vote to keep the policy repo rate at 4.0 per cent.52.",
+        "I therefore vote to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-05-18",
+      "adjudicated_meeting_date": "2022-05-04",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_53728.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 40 basis points to 4.4 per cent.",
+        "14. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ],
+      "varma_evidence": [
+        "Nevertheless, I have thought it fit not to dissent on this issue as the optimal rate hike is not something that can be calculated with mathematical precision, and 40 basis points is not materially different from 50 basis points.",
+        "In view of all this, I vote in favour of increasing the policy repo rate to 4.40 per cent.40.",
+        "But such rephrasing is a matter for a future meeting, and this time around, I vote in favour of the decision to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-06-08",
+      "adjudicated_meeting_date": "2022-06-08",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_53904.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "14. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 50 basis points to 4.90 per cent.",
+        "15. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ],
+      "varma_evidence": [
+        "However, I have decided to go along with the majority view of 50 basis points for the same reason as in May: a difference of opinion of 10 basis points is not material enough to be elevated to a dissent.",
+        "Hence, I vote in favour of raising the policy repo rate to 4.90%.",
+        "I therefore vote in favour of this resolution."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-08-05",
+      "adjudicated_meeting_date": "2022-08-05",
+      "published_dissenters": [],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_54236.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 50 basis points to 5.40 per cent.",
+        "14. All members - Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma - voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "Therefore, I vote in favour of increasing the policy repo rate by 50 basis points to 5.40 per cent.",
+        "At the same time, I do not wish to record an outright dissent on this resolution because clearly further withdrawal of accommodation is warranted.",
+        "So I am confining myself to expressing my reservations on this resolution."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-09-30",
+      "adjudicated_meeting_date": "2022-09-30",
+      "published_dissenters": [
+        "jayanth_varma",
+        "ashima_goyal"
+      ],
+      "formal_rate_dissenters": [
+        "ashima_goyal"
+      ],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_54541.html",
+      "source_lines": [
+        864
+      ],
+      "resolution_evidence": [
+        "15. Dr. Shashanka Bhide, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 50 basis points. Dr. Ashima Goyal voted to increase the repo rate by 35 basis points.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Prof. Jayanth R. Varma voted against this part of the resolution."
+      ],
+      "varma_evidence": [
+        "My votes on the MPC resolutions are informed by these considerations.",
+        "Therefore, I vote in favour of increasing the policy repo rate by 50 basis points to 5.90 percent.",
+        "However, I vote against the second resolution because in my view the MPC should now pause rather than focus on further tightening."
+      ]
+    },
+    {
+      "panel_meeting_date": "2022-12-07",
+      "adjudicated_meeting_date": "2022-12-07",
+      "published_dissenters": [
+        "jayanth_varma",
+        "ashima_goyal"
+      ],
+      "formal_rate_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_54918.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 35 basis points. Prof. Jayanth R. Varma voted against the repo rate hike.",
+        "16. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against this part of the resolution."
+      ],
+      "varma_evidence": [
+        "I therefore vote against this resolution.51.",
+        "This stance would be even more damaging to the fragile growth outlook and I therefore vote against this resolution also."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-02-08",
+      "adjudicated_meeting_date": "2023-02-08",
+      "published_dissenters": [
+        "jayanth_varma",
+        "ashima_goyal"
+      ],
+      "formal_rate_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_55267.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 25 basis points. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against the repo rate hike.",
+        "16. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against this part of the resolution."
+      ],
+      "varma_evidence": [
+        "I therefore vote against this resolution.",
+        "I therefore vote against this resolution also."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-04-06",
+      "adjudicated_meeting_date": "2023-04-06",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_55538.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "Therefore, I vote in favour of keeping the policy rate unchanged in this meeting.44.",
+        "For these reasons, I refrain from dissenting on this part of the resolution, and confine myself to expressing reservations on it."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-06-08",
+      "adjudicated_meeting_date": "2023-06-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_55899.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "Considering the balance of risks, I vote for keeping the repo rate unchanged in this meeting.",
+        "I have therefore seriously considered dissenting on this part of the resolution, but after careful thought I have decided to confine myself to expressing reservations on it.",
+        "The main reason for not dissenting is that, after two successive meetings at which the repo rate has been left unchanged, this stance now appears more vestigial than a serious statement of intent."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-08-10",
+      "adjudicated_meeting_date": "2023-08-10",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_56252.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "Considering the balance of risks, I vote for keeping the repo rate unchanged in this meeting.",
+        "Turning to the stance, my reservations remain the same as in the past.",
+        "So I am content with expressing reservations about the stance."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-10-06",
+      "adjudicated_meeting_date": "2023-10-06",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_56606.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "As regards the stance, I continue to have the same reservations as in the past."
+      ]
+    },
+    {
+      "panel_meeting_date": "2023-12-08",
+      "adjudicated_meeting_date": "2023-12-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [],
+      "formal_stance_dissenters": [],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [
+        "jayanth_varma"
+      ],
+      "strict_rate_stance_dissenters": [],
+      "broad_any_formal_dissenters_including_guidance": [],
+      "strict_label_match": false,
+      "source_file": "mpc_minutes_prid_56982.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "12. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ],
+      "varma_evidence": [
+        "For these reasons, I vote for maintaining the repo rate at 6.50%, but express my reservations on the stance."
+      ]
+    },
+    {
+      "panel_meeting_date": "2024-02-08",
+      "adjudicated_meeting_date": "2024-02-08",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_57366.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "12. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ],
+      "varma_evidence": [
+        "I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+      ]
+    },
+    {
+      "panel_meeting_date": "2024-04-05",
+      "adjudicated_meeting_date": "2024-04-05",
+      "published_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_rate_dissenters": [
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_57735.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "12. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ],
+      "varma_evidence": [
+        "I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+      ]
+    },
+    {
+      "panel_meeting_date": "2024-06-07",
+      "adjudicated_meeting_date": "2024-06-07",
+      "published_dissenters": [
+        "jayanth_varma",
+        "ashima_goyal"
+      ],
+      "formal_rate_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_58136.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "12. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ],
+      "varma_evidence": [
+        "I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+      ]
+    },
+    {
+      "panel_meeting_date": "2024-08-08",
+      "adjudicated_meeting_date": "2024-08-08",
+      "published_dissenters": [
+        "jayanth_varma",
+        "ashima_goyal"
+      ],
+      "formal_rate_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "formal_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "forward_guidance_dissenters": [],
+      "stance_reservations_without_recorded_against_vote": [],
+      "strict_rate_stance_dissenters": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "broad_any_formal_dissenters_including_guidance": [
+        "ashima_goyal",
+        "jayanth_varma"
+      ],
+      "strict_label_match": true,
+      "source_file": "mpc_minutes_prid_58545.html",
+      "source_lines": [
+        863
+      ],
+      "resolution_evidence": [
+        "12. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ],
+      "varma_evidence": [
+        "I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "round3_disconnected": {
+    "round3_actions_injected": [
+      -50,
+      50
+    ],
+    "all_six_final_prompts_byte_identical": true,
+    "round3_markers_present_in_final_prompts": false,
+    "decisions": [
+      0,
+      0
+    ],
+    "final_prompt_sha256": [
+      "6bde1167ad17f7ca89908664c04f0bc45cb48462e8989eda632a04feadd2c68c",
+      "e8489c88c4599b81d89b882f189cc95adc3281018488582710503a9bc402e688",
+      "056ade6934ec4b6284b590e9ae007940d7093f087ba3441731aa17178ea5b0a4",
+      "b852d23fb0ae190814b9b107a249d7a5d8405f506c4076596ecb6bea00ed2545",
+      "50d4c53323d7c425f1b8b1072da71fa3cbce4002cce7d9a5704ead5a4a50f723",
+      "2521a5e4a7977388eaacf6944f05a8fdc0e61f22ebfcfb11e736e677bf235f64"
+    ]
+  },
+  "ablation_visibility": {
+    "ablated_r1_rationale_visible_to_governor": false,
+    "ablated_r2_rationale_visible_to_governor": false,
+    "ablated_final_vote_rationale_visible_to_governor": true,
+    "ablated_member_casts_final_vote": true
+  },
+  "replicate_cache_replay": {
+    "replicate1_generator_calls": 24,
+    "replicate2_new_generator_calls": 0,
+    "replicate_outputs_equal_except_id": true,
+    "cache_seeds": [
+      [
+        42
+      ]
+    ]
+  },
+  "model_rotation_mislabeled": {
+    "attempted_models": [
+      "requested-model",
+      "requested-model",
+      "fallback-model"
+    ],
+    "cost_recorded_models": [
+      "requested-model"
+    ],
+    "cache_records": [
+      [
+        "requested-model",
+        "{\"served_by\": \"fallback-model\"}"
+      ]
+    ],
+    "returned": "{\"served_by\": \"fallback-model\"}"
+  },
+  "integrity_guard_false_positives": {
+    "accepts_225_invalid_json_files_as_nine_verified_live_transcript_chains": true,
+    "accepts_report_f1_0_83_when_csv_f1_0_10": true,
+    "violations_recorded": []
+  },
+  "reproduce_missing_artifacts": {
+    "system_exit": null,
+    "all_phases_verified_green_printed": true,
+    "step_commands": [
+      [
+        "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/pytest",
+        "tests/"
+      ],
+      [
+        "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+        "scripts/deep_verification_battery.py"
+      ],
+      [
+        "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+        "scripts/intensive_academic_verification.py"
+      ],
+      [
+        "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+        "src/reporting/plot_figures.py"
+      ],
+      [
+        "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+        "scripts/academic_integrity_guard.py"
+      ]
+    ],
+    "empirical_execution_steps_present": false
+  },
+  "actual_cross_model_outage_false_positive": {
+    "evidence_text": "## 4. Cross-Model Multi-Agent Matrix (Inter-Rater Reliability)\n- **Methodology**: Evaluated the 2023-08-10 snapshot simultaneously across `gemini-3.1-flash-lite` and `gemini-1.5-pro` to test structural prompt robustness over model RLHF bias.\n- **gemini-3.1-flash-lite Output**: 50 bps\n- **gemini-1.5-pro Output**: 50 bps\n- **Verdict**: **PASSED. Both models output the identical rate decision based on the same economic schema.**\n\n",
+    "script_claims_pass": true,
+    "provider_calls": 0
+  },
+  "budget_cap_does_not_halt_meeting": {
+    "governor_summary": {
+      "call_count": 24,
+      "total_input_tokens": 2880,
+      "total_output_tokens": 1080,
+      "total_tokens": 3960,
+      "total_estimated_cost_usd": 0.00108,
+      "budget_cap_usd": 1e-06,
+      "budget_remaining_usd": 0.0
+    },
+    "fallbacks_count": 24,
+    "meeting_returned_despite_budget_exceptions": true
+  },
+  "experiment_transcript_path_collision": {
+    "files_after_baseline": 25,
+    "files_after_shock": 25,
+    "same_file_paths": true,
+    "outcome_file_overwritten": true
+  },
+  "identity_not_bound_to_caller": {
+    "requested_member": "jayanth_varma",
+    "accepted_final_member_ids": [
+      "michael_patra",
+      "rajiv_ranjan",
+      "shashanka_bhide",
+      "ashima_goyal",
+      "intruder",
+      "shaktikanta_das"
+    ],
+    "decision_successful": true
+  },
+  "schema_silent_repairs_and_action_mismatch": {
+    "not a number": {
+      "coerced_rate": 0,
+      "fallback_flag": false,
+      "unknown_stance_accepted": "mysterious_unknown_stance",
+      "aggregation_error": null
+    },
+    "35": {
+      "coerced_rate": 35,
+      "fallback_flag": false,
+      "unknown_stance_accepted": "mysterious_unknown_stance",
+      "aggregation_error": "Vote 35 by shaktikanta_das is outside valid action set: (-50, -25, 0, 25, 50)"
+    },
+    "40": {
+      "coerced_rate": 40,
+      "fallback_flag": false,
+      "unknown_stance_accepted": "mysterious_unknown_stance",
+      "aggregation_error": "Vote 40 by shaktikanta_das is outside valid action set: (-50, -25, 0, 25, 50)"
+    }
+  },
+  "fallback_only_pipeline": {
+    "fallbacks_count": 24,
+    "rate_decision_bps": 50,
+    "stance_decision": "withdrawal_of_accommodation",
+    "recession_governor_heuristic_rate": 0,
+    "cross_model_equality_would_pass_when_both_models_outage": true
+  },
+  "casting_ablation_statusquo": {
+    "experiment_id": "EXP_2_CASTING_VOTE",
+    "experiment_name": "Governor Statutory Casting-Vote Ablation (\u00a745ZL)",
+    "baseline_decision_bps": 50,
+    "ablated_decision_bps": 50,
+    "baseline_stance": "withdrawal_of_accommodation",
+    "ablated_stance": "neutral",
+    "outcome_shifted": true,
+    "marginal_contribution_bps": 0,
+    "description": "Evaluates whether the Governor's casting vote changed the outcome during a 3-3 split."
+  },
+  "cache_temperature_collision": {
+    "temperature_a": 0.6001,
+    "temperature_b": 0.6004,
+    "equal_cache_keys": true
+  },
+  "counterfactual_extra_field_loss": {
+    "anchor_date": "2022-08-05",
+    "baseline_gva_growth_yoy_pct": 11.2,
+    "fed_shock_gva_growth_yoy_pct": null,
+    "gva_present_in_baseline_prompt": true,
+    "gva_present_in_fed_shock_prompt": false
+  }
+}

@@ -1,0 +1,981 @@
+{
+  "environment": {
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1"
+  },
+  "calibration_definition": {
+    "cutoff": "2023-04-06",
+    "n": 17,
+    "majority_rate_bps": 0,
+    "majority_stance": "accommodative",
+    "frequent_members": [
+      "jayanth_varma"
+    ],
+    "member_counts": {
+      "jayanth_varma": 9,
+      "ashima_goyal": 3
+    }
+  },
+  "input_files": {
+    "results/tables/meeting_by_meeting_comparison.csv": "1a4324970a4c9d3e13152d324561f4d3f90e5d6353c5c22fc4f6efab6e50c9c9",
+    "results/tables/holdout_meeting_by_meeting_comparison.csv": "a6948da373ea8134ac86f47928390d92b3b80c138d2fe637b8ea033d1b7a21f2",
+    "results/tables/rational_taylor_panel_results.csv": "5527464f867a257a51a8a5f570dfd638bd47c30d0d06182830d240a890d8523f",
+    "data/processed/macro_panel.parquet": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb"
+  },
+  "subsets": {
+    "all": {
+      "n": 25,
+      "rate_counts": {
+        "0": 19,
+        "40": 1,
+        "50": 3,
+        "35": 1,
+        "25": 1
+      },
+      "stance_counts": {
+        "accommodative": 11,
+        "withdrawal_of_accommodation": 14
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.76,
+          "dissent_tp": 22,
+          "dissent_fp": 21,
+          "dissent_fn": 0,
+          "dissent_precision": 0.5116279069767442,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.676923076923077,
+          "dissent_exact_match": 0.4
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.96,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 22,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.32
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.44,
+          "dissent_tp": 17,
+          "dissent_fp": 8,
+          "dissent_fn": 5,
+          "dissent_precision": 0.68,
+          "dissent_recall": 0.7727272727272727,
+          "dissent_f1": 0.723404255319149,
+          "dissent_exact_match": 0.48
+        },
+        "lag_previous_observed_decision": {
+          "n": 25,
+          "exact_rate": 0.8,
+          "directional_rate": 0.92,
+          "directional_balanced_accuracy": 0.8903508771929824,
+          "rate_mae_bps": 4.0,
+          "stance": 0.96,
+          "dissent_tp": 18,
+          "dissent_fp": 2,
+          "dissent_fn": 4,
+          "dissent_precision": 0.9,
+          "dissent_recall": 0.8181818181818182,
+          "dissent_f1": 0.8571428571428571,
+          "dissent_exact_match": 0.8
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.96,
+          "dissent_tp": 17,
+          "dissent_fp": 8,
+          "dissent_fn": 5,
+          "dissent_precision": 0.68,
+          "dissent_recall": 0.7727272727272727,
+          "dissent_f1": 0.723404255319149,
+          "dissent_exact_match": 0.48
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 25,
+          "exact_rate": 0.16,
+          "directional_rate": 0.28,
+          "directional_balanced_accuracy": 0.5263157894736842,
+          "rate_mae_bps": 33.0,
+          "stance": 0.48,
+          "dissent_tp": 8,
+          "dissent_fp": 6,
+          "dissent_fn": 14,
+          "dissent_precision": 0.5714285714285714,
+          "dissent_recall": 0.36363636363636365,
+          "dissent_f1": 0.4444444444444444,
+          "dissent_exact_match": 0.36
+        }
+      }
+    },
+    "calibration": {
+      "n": 17,
+      "rate_counts": {
+        "0": 11,
+        "40": 1,
+        "50": 3,
+        "35": 1,
+        "25": 1
+      },
+      "stance_counts": {
+        "accommodative": 11,
+        "withdrawal_of_accommodation": 6
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.6470588235294118,
+          "dissent_tp": 12,
+          "dissent_fp": 15,
+          "dissent_fn": 0,
+          "dissent_precision": 0.4444444444444444,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.6153846153846154,
+          "dissent_exact_match": 0.47058823529411764
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 12,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.47058823529411764
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.6470588235294118,
+          "dissent_tp": 9,
+          "dissent_fp": 8,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5294117647058824,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.6206896551724138,
+          "dissent_exact_match": 0.35294117647058826
+        },
+        "lag_previous_observed_decision": {
+          "n": 17,
+          "exact_rate": 0.7058823529411765,
+          "directional_rate": 0.8823529411764706,
+          "directional_balanced_accuracy": 0.8712121212121212,
+          "rate_mae_bps": 5.882352941176471,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 9,
+          "dissent_fp": 2,
+          "dissent_fn": 3,
+          "dissent_precision": 0.8181818181818182,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.782608695652174,
+          "dissent_exact_match": 0.7647058823529411
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 9,
+          "dissent_fp": 8,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5294117647058824,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.6206896551724138,
+          "dissent_exact_match": 0.35294117647058826
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 17,
+          "exact_rate": 0.17647058823529413,
+          "directional_rate": 0.35294117647058826,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 32.35294117647059,
+          "stance": 0.35294117647058826,
+          "dissent_tp": 1,
+          "dissent_fp": 1,
+          "dissent_fn": 11,
+          "dissent_precision": 0.5,
+          "dissent_recall": 0.08333333333333333,
+          "dissent_f1": 0.14285714285714285,
+          "dissent_exact_match": 0.47058823529411764
+        }
+      }
+    },
+    "holdout": {
+      "n": 8,
+      "rate_counts": {
+        "0": 8
+      },
+      "stance_counts": {
+        "withdrawal_of_accommodation": 8
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 10,
+          "dissent_fp": 6,
+          "dissent_fn": 0,
+          "dissent_precision": 0.625,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.7692307692307693,
+          "dissent_exact_match": 0.25
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 10,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.0
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 0.0,
+          "dissent_tp": 8,
+          "dissent_fp": 0,
+          "dissent_fn": 2,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.8,
+          "dissent_f1": 0.8888888888888888,
+          "dissent_exact_match": 0.75
+        },
+        "lag_previous_observed_decision": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 9,
+          "dissent_fp": 0,
+          "dissent_fn": 1,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.9,
+          "dissent_f1": 0.9473684210526315,
+          "dissent_exact_match": 0.875
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 8,
+          "dissent_fp": 0,
+          "dissent_fn": 2,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.8,
+          "dissent_f1": 0.8888888888888888,
+          "dissent_exact_match": 0.75
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 8,
+          "exact_rate": 0.125,
+          "directional_rate": 0.125,
+          "directional_balanced_accuracy": 0.125,
+          "rate_mae_bps": 34.375,
+          "stance": 0.75,
+          "dissent_tp": 7,
+          "dissent_fp": 5,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5833333333333334,
+          "dissent_recall": 0.7,
+          "dissent_f1": 0.6363636363636364,
+          "dissent_exact_match": 0.125
+        },
+        "saved_live_holdout": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 10,
+          "dissent_fp": 4,
+          "dissent_fn": 0,
+          "dissent_precision": 0.7142857142857143,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.8333333333333334,
+          "dissent_exact_match": 0.5
+        }
+      }
+    }
+  },
+  "paired_tests": {
+    "all/directional_rate/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 19,
+      "both_wrong": 6,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "all/stance/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 5,
+      "both_correct": 19,
+      "both_wrong": 1,
+      "difference": -0.2,
+      "exact_two_sided_mcnemar_p": 0.0625
+    },
+    "all/dissent_exact/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 5,
+      "b_only_correct": 7,
+      "both_correct": 5,
+      "both_wrong": 8,
+      "difference": -0.08,
+      "exact_two_sided_mcnemar_p": 0.7744140625
+    },
+    "all/directional_rate/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 1,
+      "b_only_correct": 5,
+      "both_correct": 18,
+      "both_wrong": 1,
+      "difference": -0.16,
+      "exact_two_sided_mcnemar_p": 0.21875
+    },
+    "all/stance/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 0,
+      "b_only_correct": 5,
+      "both_correct": 19,
+      "both_wrong": 1,
+      "difference": -0.2,
+      "exact_two_sided_mcnemar_p": 0.0625
+    },
+    "all/dissent_exact/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 3,
+      "b_only_correct": 13,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "difference": -0.4,
+      "exact_two_sided_mcnemar_p": 0.021270751953125
+    },
+    "all/directional_rate/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 18,
+      "b_only_correct": 6,
+      "both_correct": 1,
+      "both_wrong": 0,
+      "difference": 0.48,
+      "exact_two_sided_mcnemar_p": 0.022655844688415527
+    },
+    "all/stance/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 8,
+      "b_only_correct": 1,
+      "both_correct": 11,
+      "both_wrong": 5,
+      "difference": 0.28,
+      "exact_two_sided_mcnemar_p": 0.0390625
+    },
+    "all/dissent_exact/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 10,
+      "b_only_correct": 9,
+      "both_correct": 0,
+      "both_wrong": 6,
+      "difference": 0.04,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "calibration/directional_rate/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 11,
+      "both_wrong": 6,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "calibration/stance/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 5,
+      "both_correct": 11,
+      "both_wrong": 1,
+      "difference": -0.29411764705882354,
+      "exact_two_sided_mcnemar_p": 0.0625
+    },
+    "calibration/dissent_exact/saved_mock_panel_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 3,
+      "b_only_correct": 1,
+      "both_correct": 5,
+      "both_wrong": 8,
+      "difference": 0.11764705882352941,
+      "exact_two_sided_mcnemar_p": 0.625
+    },
+    "calibration/directional_rate/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 1,
+      "b_only_correct": 5,
+      "both_correct": 10,
+      "both_wrong": 1,
+      "difference": -0.23529411764705882,
+      "exact_two_sided_mcnemar_p": 0.21875
+    },
+    "calibration/stance/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 0,
+      "b_only_correct": 5,
+      "both_correct": 11,
+      "both_wrong": 1,
+      "difference": -0.29411764705882354,
+      "exact_two_sided_mcnemar_p": 0.0625
+    },
+    "calibration/dissent_exact/saved_mock_panel_vs_lag_previous_observed_decision": {
+      "a_only_correct": 2,
+      "b_only_correct": 7,
+      "both_correct": 6,
+      "both_wrong": 2,
+      "difference": -0.29411764705882354,
+      "exact_two_sided_mcnemar_p": 0.1796875
+    },
+    "calibration/directional_rate/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 11,
+      "b_only_correct": 6,
+      "both_correct": 0,
+      "both_wrong": 0,
+      "difference": 0.29411764705882354,
+      "exact_two_sided_mcnemar_p": 0.332305908203125
+    },
+    "calibration/stance/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 6,
+      "b_only_correct": 1,
+      "both_correct": 5,
+      "both_wrong": 5,
+      "difference": 0.29411764705882354,
+      "exact_two_sided_mcnemar_p": 0.125
+    },
+    "calibration/dissent_exact/saved_mock_panel_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 8,
+      "b_only_correct": 8,
+      "both_correct": 0,
+      "both_wrong": 1,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "holdout/directional_rate/saved_live_holdout_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 8,
+      "both_wrong": 0,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "holdout/stance/saved_live_holdout_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 8,
+      "both_wrong": 0,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "holdout/dissent_exact/saved_live_holdout_vs_always_hold_prev_stance_varma": {
+      "a_only_correct": 2,
+      "b_only_correct": 4,
+      "both_correct": 2,
+      "both_wrong": 0,
+      "difference": -0.25,
+      "exact_two_sided_mcnemar_p": 0.6875
+    },
+    "holdout/directional_rate/saved_live_holdout_vs_lag_previous_observed_decision": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 8,
+      "both_wrong": 0,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "holdout/stance/saved_live_holdout_vs_lag_previous_observed_decision": {
+      "a_only_correct": 0,
+      "b_only_correct": 0,
+      "both_correct": 8,
+      "both_wrong": 0,
+      "difference": 0.0,
+      "exact_two_sided_mcnemar_p": 1.0
+    },
+    "holdout/dissent_exact/saved_live_holdout_vs_lag_previous_observed_decision": {
+      "a_only_correct": 1,
+      "b_only_correct": 4,
+      "both_correct": 3,
+      "both_wrong": 0,
+      "difference": -0.375,
+      "exact_two_sided_mcnemar_p": 0.375
+    },
+    "holdout/directional_rate/saved_live_holdout_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 7,
+      "b_only_correct": 0,
+      "both_correct": 1,
+      "both_wrong": 0,
+      "difference": 0.875,
+      "exact_two_sided_mcnemar_p": 0.015625
+    },
+    "holdout/stance/saved_live_holdout_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 2,
+      "b_only_correct": 0,
+      "both_correct": 6,
+      "both_wrong": 0,
+      "difference": 0.25,
+      "exact_two_sided_mcnemar_p": 0.5
+    },
+    "holdout/dissent_exact/saved_live_holdout_vs_taylor_saved_rate_dissent_probability_ge_0_5": {
+      "a_only_correct": 4,
+      "b_only_correct": 1,
+      "both_correct": 0,
+      "both_wrong": 3,
+      "difference": 0.375,
+      "exact_two_sided_mcnemar_p": 0.375
+    }
+  },
+  "metric_edge_probes": {
+    "zero_stance_accuracy_passes_gate": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 100.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": true
+    },
+    "same_direction_different_size_reported_zero_direction_accuracy": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 0.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": false
+    },
+    "extra_true_rate_silently_ignored": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 100.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": true
+    },
+    "dissent_no_positive_truth_or_prediction": [
+      1.0,
+      1.0,
+      1.0,
+      100.0
+    ]
+  },
+  "holdout_transcript_consistency": [
+    {
+      "date": "2023-06-08",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.5163977794943223
+    },
+    {
+      "date": "2023-08-10",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.408248290463863,
+      "r2_stance_std": 0.408248290463863,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.408248290463863
+    },
+    {
+      "date": "2023-10-06",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.408248290463863,
+      "r2_stance_std": 0.408248290463863,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.408248290463863
+    },
+    {
+      "date": "2023-12-08",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.5163977794943223,
+      "r4_stance_std": 0.5163977794943223
+    },
+    {
+      "date": "2024-02-08",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.5163977794943223
+    },
+    {
+      "date": "2024-04-05",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.5163977794943223
+    },
+    {
+      "date": "2024-06-07",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "jayanth_varma",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.408248290463863,
+      "r4_stance_std": 0.5163977794943223
+    },
+    {
+      "date": "2024-08-08",
+      "files": 25,
+      "csv_rate_matches": true,
+      "csv_stance_matches": true,
+      "csv_union_dissent_matches": true,
+      "rate_dissenters": "jayanth_varma",
+      "stance_dissenters": "ashima_goyal;jayanth_varma",
+      "r1_aggregate_rate_bps": 0,
+      "r1_aggregate_stance": "withdrawal_of_accommodation",
+      "r1_stance_std": 0.5163977794943223,
+      "r2_stance_std": 0.5163977794943223,
+      "r3_stance_std": 0.5163977794943223,
+      "r4_stance_std": 0.5163977794943223
+    }
+  ],
+  "holdout_round1_aggregate_metrics": {
+    "n": 8,
+    "exact_rate": 1.0,
+    "directional_rate": 1.0,
+    "directional_balanced_accuracy": 1.0,
+    "rate_mae_bps": 0.0,
+    "stance": 1.0,
+    "dissent_tp": 10,
+    "dissent_fp": 5,
+    "dissent_fn": 0,
+    "dissent_precision": 0.6666666666666666,
+    "dissent_recall": 1.0,
+    "dissent_f1": 0.8,
+    "dissent_exact_match": 0.375
+  },
+  "dispersion_r1_vs_r3": {
+    "mean_by_round": [
+      0.48936040723670754,
+      0.48936040723670754,
+      0.4352856627214779,
+      0.48936040723670754
+    ],
+    "meeting_paired_differences": [
+      0.10814948903045929,
+      0.0,
+      0.0,
+      0.0,
+      0.10814948903045929,
+      0.10814948903045929,
+      0.10814948903045929,
+      0.0
+    ],
+    "n_nonzero": 4,
+    "exact_two_sided_sign_p": 0.125
+  },
+  "holdout_f1_bootstrap": {
+    "seed": 20261005,
+    "repetitions": 100000,
+    "live_percentile_95_ci": [
+      0.72,
+      0.9565217391304348
+    ],
+    "difference_live_minus_fixed_varma_percentile_95_ci": [
+      -0.2727272727272727,
+      0.15999999999999992
+    ]
+  },
+  "iid_binomial_diagnostic_only": {
+    "successes": 8,
+    "n": 8,
+    "exact_two_sided_95_ci": [
+      0.6305833524471808,
+      1.0
+    ],
+    "all_successes_min_n_for_95_lower_bound_above_0_75": 13,
+    "caveat": "Meetings are temporally dependent and all eight share one policy regime; the iid bound is optimistic for broad generalization."
+  },
+  "uniform_rate_randomization_null": {
+    "exact_uniform_five_action_probability": 2.56e-06,
+    "zero_pause_probability_fitted_to_calibration": 0.030729119068863577,
+    "true_label_permutations_count_unique": 1,
+    "constant_hold_classifier_label_permutation_match_probability": 1.0,
+    "explanation": "Sampling fresh actions from a uniform distribution is not permuting the observed labels; it tests an artificial null, not added predictive value."
+  },
+  "persona_correlation": {
+    "scores": {
+      "rajiv_ranjan": 0.43,
+      "ashima_goyal": -0.07,
+      "shaktikanta_das": 0.23,
+      "jayanth_varma": -0.31,
+      "michael_patra": 0.61,
+      "shashanka_bhide": 0.15,
+      "mridul_saggar": 0.23
+    },
+    "hardcoded_empirical": {
+      "jayanth_varma": -0.8,
+      "ashima_goyal": -0.4,
+      "shashanka_bhide": 0.2,
+      "shaktikanta_das": 0.3,
+      "rajiv_ranjan": 0.5,
+      "michael_patra": 0.9
+    },
+    "actual_repo_dissent_frequencies": {
+      "jayanth_varma": 0.68,
+      "ashima_goyal": 0.2,
+      "shashanka_bhide": 0.0,
+      "shaktikanta_das": 0.0,
+      "rajiv_ranjan": 0.0,
+      "michael_patra": 0.0
+    },
+    "vs_hardcoded_rank": {
+      "kendall_tau": 0.9999999999999999,
+      "kendall_p": 0.002777777777777778,
+      "spearman_rho": 1.0,
+      "spearman_asymptotic_p": 0.0,
+      "spearman_exact_two_sided_permutation_p": 0.002777777777777778,
+      "enumerated_permutations": 720
+    },
+    "vs_actual_frequency": {
+      "kendall_tau": 0.7745966692414834,
+      "kendall_p": 0.04241305932069779,
+      "spearman_rho": 0.8451542547285166,
+      "spearman_asymptotic_p": 0.03410942316740963,
+      "spearman_exact_two_sided_permutation_p": 0.06666666666666667,
+      "enumerated_permutations": 720
+    }
+  },
+  "holdout_formal_ballot_sensitivity": {
+    "status": "Sensitivity interpretation from local statement text; verify against official resolution roll calls before adopting labels.",
+    "union": {
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    },
+    "rate": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "exact_match": 0.5
+    },
+    "stance": {
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    },
+    "lag_formal": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "exact_match": 0.75
+    }
+  },
+  "local_statement_endings": [
+    {
+      "date": "2023-06-08",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2023-06-08/jayanth_varma.txt",
+      "statement_end": "ctions, reflecting the combined impact of monetary tightening and supply augmenting measures.” 42. Turning to the stance, I find that with every successive meeting, this stance is becoming more and more disconnected from reality. Based on the forecast inflation for 5.1% for 2023-24, the real repo rate is now almost 1½%. (The real short term rate could well be above that level since in recent weeks, many money market rates have often drifted towards the MSF rate of 6.75%). In other words, monetary policy is now dangerously close to levels at which it can inflict significant damage to the economy. Despite this, the majority of the MPC wishes to remain focused on withdrawal of accommodation whatever that phrase might mean. I have therefore seriously considered dissenting on this part of the resolution, but after careful thought I have decided to confine myself to expressing reservations on it. The main reason for not dissenting is that, after two successive meetings at which the repo rate has been left unchanged, this stance now appears more vestigial than a serious statement of intent."
+    },
+    {
+      "date": "2023-06-08",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2023-06-08/ashima_goyal.txt",
+      "statement_end": "ion under supply shocks have all contributed to better outcomes. 38. As expected inflation falls, however, it is important that real repo rate does not rise too high. This is what happened in 2015 as international oil prices fell, damaging the economic cycle. Research suggests that the inflation targeting regime has contributed to reducing inflation expectations. Commitment to such a regime only involves aligning the nominal repo rate with expected inflation. Such action, together with the greater impact of official communication in emerging markets, is adequate to bring inflation to target as the effect of shocks dies down. It does not require the nominal repo to be kept higher for longer. 39. But in this meeting, it is appropriate for the MPC to pause. I also vote for the present stance to continue since at present it is not possible to give a signal about future action. The latter will be conditional on the data coming in. The pause is only for the current meeting. Moreover, transient events have created a liquidity surplus, so that withdrawal of liquidity itself is also required."
+    },
+    {
+      "date": "2023-08-10",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2023-08-10/jayanth_varma.txt",
+      "statement_end": "trajectory of inflation over the next several quarters. On this basis, I continue to have the same cautious optimism that I had in the June meeting. I expect the continuing slowdown in China to keep a lid on commodity prices. Moreover, rains in July have attenuated the monsoon risks, though there are continuing worries about the spatio-temporal distribution. 43. Considering the balance of risks, I vote for keeping the repo rate unchanged in this meeting. I am of the view that the current level of the repo rate is high enough to bring inflation below the upper tolerance band on a sustained basis and also glide it towards the middle of the band. 44. Turning to the stance, my reservations remain the same as in the past. However, this would be the third successive meeting at which the repo rate has been left unchanged (assuming that the MPC decides to pause now). This disconnect between stance and action has completely hollowed out whatever meaning the stance might have originally had, and turned it into a harmless ritualism. So I am content with expressing reservations about the stance."
+    },
+    {
+      "date": "2023-08-10",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2023-08-10/ashima_goyal.txt",
+      "statement_end": "price cuts have a large impact on household inflation expectations. 40. Commitment to flexible inflation targeting that anchors inflation expectations requires aligning the nominal repo rate with medium term expected inflation. The latter is less affected by transient shocks and measurement issues. Headline inflation forecasts have risen in the short-term but remain slightly above 5% for the next year so that a repo rate of 6.5% still gives a positive real rate of around unity. This is the apt real rate given uncertainties in both growth and inflation. 41. Therefore, in this meeting it continues to be appropriate for the MPC to pause. I thus vote for keeping the repo rate unchanged in this meeting. I also vote for the present stance to continue since at present liquidity is in surplus and policy needs to signal continuing watchfulness towards bringing inflation to the target. The progress of the rest of the monsoon, possible supply-side action, further pass through of past rate hikes, the behaviour of food prices and the evolution of core inflation, have all to be carefully observed."
+    },
+    {
+      "date": "2023-10-06",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2023-10-06/jayanth_varma.txt",
+      "statement_end": "e last meeting, though several headwinds still remain. 51. The changes in the outlooks for both inflation and growth are quite modest, and the real repo rate is already quite high. I, therefore, support the decision to keep repo rate unchanged. In my view, the real interest rate based on projected inflation is high enough to glide inflation towards the target within a reasonable period. 52. As regards the stance, I continue to have the same reservations as in the past. Successive meetings that promise to withdraw accommodation while actually keeping rates unchanged do not enhance the credibility of the MPC. I would much prefer a stance in which words are consistent with the actions. Moreover, at this point of time, the guidance that the market really needs is not about how high the terminal repo rate would be, but about how long the rate would be maintained at a high level. It would therefore be useful for the MPC to communicate its intention to keep real interest rates high enough for as long as is necessary to drive projected inflation close to the 4% target on a sustainable basis."
+    },
+    {
+      "date": "2023-10-06",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2023-10-06/ashima_goyal.txt",
+      "statement_end": " to lend to those with deficits or participate in longer tenor VRRR despite profit opportunities. They prefer using RBI’s overnight windows. Impediments to developing an active overnight inter-bank call money market have to be addressed. 48. Analysts are again concerned about falling interest differentials with the US. But markets seem to understand that Indian macros are relatively more stable today. In September despite a 46 bps rise in US 10 year yields, Indian 10 year G-secs rose only 5 bps. The IMF gave the average spread for emerging markets at 200 bps in 2022. India still exceeded that at 280 bps in September. Despite narrower differentials, ECBs and other debt inflows continue. Even so, they are a small and therefore a manageable share of Indian markets. In addition, index inclusion is around the corner. More than higher Indian rates it is lower country risk, a stable currency and higher expected growth that keeps FPI here. There is the lure of high US risk free rates, but since higher Indian rates cannot compensate for this, the latter are best aligned to the domestic cycle."
+    },
+    {
+      "date": "2023-12-08",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2023-12-08/jayanth_varma.txt",
+      "statement_end": "to glide inflation to its target of 4%. Second, as inflation drops well below the upper tolerance band, it is necessary to prevent the real interest rate from becoming excessive. At present, projected inflation two to four quarters ahead averages below 4.75%. The prevailing money market interest rates of 6.75% (close to the MSF rate) therefore represent a real interest rate of more than 2%. Three years of high inflation do justify a strong anti-inflationary monetary policy, but in my view a real rate of 2% clearly exceeds the optimal rate. In coming months, as we become more confident about the downward trajectory of inflation (apart from transient food price spikes), there would be a compelling case for continually calibrating the nominal policy rate so as to keep the real interest rate slightly below 1.5% (on the basis of projected inflation 3-5 quarters ahead). 52. For these reasons, I vote for maintaining the repo rate at 6.50%, but express my reservations on the stance. I believe that a stance is not needed at all at this stage. If at all there is a stance, it should be neutral."
+    },
+    {
+      "date": "2023-12-08",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2023-12-08/ashima_goyal.txt",
+      "statement_end": "orridor towards the repo rate as government cash balances are drawn down and measures are taken to reduce liquidity hoarding by banks. Under inflation targeting, liquidity is endogenous and is expected to adjust to keep short rates near the repo rate set by the MPC. The RBI had clarified6 post inflation targeting that its ‘operating procedure aims at modulating liquidity conditions so as to achieve the operating target, i.e., to anchor the WACR around the policy rate’ and ‘MSF rate and the fixed overnight reverse repo rate define an informal corridor for limiting intra-day variations in the call rate.’ Understanding this should alleviate the markets concern that liquidity can suddenly dry up. While under the current stance WACR may stay largely in the upper half of the LAF corridor, it cannot persistently exceed it. 49. Pass-through continues as old deposits and loans are re-priced, but the stance, as well as credit growth continuing to exceed deposit growth, should persuade banks of the virtues of passing through more of the 250bps repo rate rise to increase their primary liquidity."
+    },
+    {
+      "date": "2024-02-08",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2024-02-08/jayanth_varma.txt",
+      "statement_end": "the pandemic induced a massive permanent scarring of the economy. To the contrary, all indications are that the economy has been quite resilient, and even sectors that were badly battered by the pandemic are bouncing back.44. If the potential growth rate of the economy is close to 8%, then the economy is not at risk of overheating in 2024-25. A real interest rate of 1-1.5% would then be sufficient to glide inflation to the target of 4%. A real interest rate of 2% creates the very real risk of turning growth pessimism into a self fulfilling prophecy.45. It must also be borne in mind that the process of fiscal consolidation is projected to continue in 2024-25. This opens up space for monetary easing without risking an inflationary spiral. In my view, the time has come for the MPC to send a clear signal that it takes its dual mandate of inflation and growth seriously, and that it would not maintain a real interest rate that is significantly more than what is needed to achieve its target.46. I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+    },
+    {
+      "date": "2024-02-08",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2024-02-08/ashima_goyal.txt",
+      "statement_end": " lender of last resort and penalties for credit default are now high they also tend to hold excess liquidity. As a result large swathes of the credit system do not get serviced.40. Work on resilience2 suggests CBs should act to reduce risk premiums anywhere in the financial system. An effective example of this is in the Indian foreign exchange (FX) market where rupee volatility and FX forward premiums have declined. This is one reason we have seen large debt inflows coming in at the narrowest interest differentials in the last 2 months3 and again points to the freedoms Indian policy rates have from US rates. 41. Macroprudential tightening also pre-emptively reduces balance sheet (BS) stress as do better macro fundamentals and fiscal consolidation. But adequate liquidity is also important to prevent illiquidity raising costs, turning into insolvency and creating BS stress. A major reason the Silicon Valley Bank collapse was not followed by others was the broad liquidity support the Fed made available to stressed financial institutions even as it continued with quantitative tightening."
+    },
+    {
+      "date": "2024-04-05",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2024-04-05/jayanth_varma.txt",
+      "statement_end": "Statement by Prof. Jayanth R. Varma39. My views are largely the same as in the last meeting (February 2024) and so I will be brief. Despite an uptick in crude oil prices, the outlook for inflation continues to be benign, and I remain convinced that a real interest rate of 1-1.5% would be sufficient to glide inflation to the target of 4%. The current real policy rate of 2% (based on projected inflation for 2024-25) is therefore excessive. 40. This unwarrantedly high real rate imposes significant costs on the economy because of the short run Phillips curve. The fact that economic growth in 2024-25 is projected to slow by over half a percent relative to 2023-24 is a reminder that high interest rates entail a growth sacrifice. Monetary policy should try to reduce this sacrifice while ensuring that inflation (a) remains within the band and (b) glides towards the target.41. I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+    },
+    {
+      "date": "2024-04-05",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2024-04-05/ashima_goyal.txt",
+      "statement_end": "ged stance. Giving indications of the future repo rate is not compatible with data-based guidance and can create unnecessary market turbulence as it has in the US. Policy continues to be forward-looking since it responds to how data affects published inflation and growth forecasts. Its reaction function should by now be well understood by markets, giving them adequate guidance. 38. The tightness in market liquidity has abated. Such tightness affects short rates more, which have little effect on aggregate demand and inflation. Under FIT, policy transmission occurs best through keeping the repo rate at an appropriate level, determined by domestic factors. Rates transmit through both banks and markets. For example, non-food credit of banks as a % of annual flow of resources available to the commercial sector has averaged 44.3% over 2007-23. Competition from other sources may mean less than full transmission of policy repo to loan rates, but points to growing diversity, maturity, fall in spreads and rising efficiency in the Indian financial sector. Market rates also rise with repo rates."
+    },
+    {
+      "date": "2024-06-07",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2024-06-07/jayanth_varma.txt",
+      "statement_end": "Statement by Prof. Jayanth R. Varma 51. In my statement for the last meeting (April 2024), I expressed concern about the growth sacrifice in 2024-25 induced by restrictive monetary policy. It now appears that the maintenance of restrictive policy for unwarrantedly long will lead to a growth sacrifice in 2025-26 as well. Professional forecasters surveyed by the RBI are projecting growth both in 2025-26 and in 2024-25 to be lower than in 2023-24 by more than 0.75%, and lower than the potential growth rate (of say 8%) by more than 1%. This is an unacceptably high growth sacrifice considering that headline inflation is projected to be only about 0.5% above target, and core inflation is extremely benign. 52. As I have stated in the last several meetings, the current real policy rate of around 2% (based on projected inflation) is well above the level needed to glide inflation to its target. I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+    },
+    {
+      "date": "2024-06-07",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2024-06-07/ashima_goyal.txt",
+      "statement_end": "ead in financial markets that India cannot cut before the US Fed. But the US has its own special problems that do not apply elsewhere. Many other central banks are cutting rates. The fall in India’s current account deficit, index inclusion and ratings upgrade add to the many reasons that make interest differentials with the US less important. India’s inflation differential with the US is also narrowing again. 49. Finally, let us turn to the mechanics of cutting and the communication around it. At present only small steps are required to align the repo with the fall in inflation so this should not be seen as the start of a rate cut cycle. Communication should make it clear that there is no softening path and forward-guidance remains data-determined. A neutral stance is appropriate since the rate can then move in either direction as required. 50. In line with the above reasoning, I vote for a 25 basis points cut to the repo rate and a change in the stance to neutral. Even with these changes, monetary policy would remain disinflationary towards bringing inflation credibly to the target."
+    },
+    {
+      "date": "2024-08-08",
+      "member": "jayanth_varma",
+      "path": "data/processed/statements/2024-08-08/jayanth_varma.txt",
+      "statement_end": " Expectations of robust growth depend heavily on an expectation that private capital investment will pick up soon. However, we have been hoping for this revival for many quarters now, and hope is not a strategy. 53. The RBI's projections show inflation bouncing up and down from quarter to quarter, but the trend line is clearly downward, and the projected inflation for the first quarter of 2025-26 is 4.4 per cent. On a forward looking basis, the current repo rate of 6.5 per cent translates into a real rate of 2.1 per cent. This is well above what is needed to drive inflation to the target of 4 per cent. It is true that disinflation has been protracted, and therefore restrictive monetary policy has to be maintained for a few more quarters. But a real interest rate of 1.5 per cent is sufficiently restrictive in this environment. This means that a reduction of over 50 basis points in the repo rate is needed within a short span of time, but it makes sense to move cautiously in this direction. I therefore vote to reduce the repo rate by 25 basis points, and to change the stance to neutral."
+    },
+    {
+      "date": "2024-08-08",
+      "member": "ashima_goyal",
+      "path": "data/processed/statements/2024-08-08/ashima_goyal.txt",
+      "statement_end": "raise growth. This simple guide cuts through complexities in the estimation of NIR. The MPC must make sure, if the approach to target is long and slow, the real policy rate does not deviate too far from the NIR during that period. 48. Credit eventually creates deposits through rising incomes and savings, but in the meanwhile banks should maintain adequate liquidity buffers. We are seeing market rates coming down as liquidity improves with government spending. The call money rate is also near the repo rate. This should be maintained. Adequate liquidity is required along with prudential policies that create good incentives for the financial sector (P8), especially since the sources of liquidity are limited for many parts of India's financial sector leading to liquidity hoarding. Balance requires that over-strictness is avoided. 49. In view of the above arguments I vote for a 25 bps cut in the repo rate and a change in the stance to neutral. These are necessary to lower risks of departure from the principles outlined above, which have contributed to policy successes in the last 3 years."
+    }
+  ]
+}

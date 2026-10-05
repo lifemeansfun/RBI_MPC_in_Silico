@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "With headline CPI inflation at 4.25%, we are within the tolerance band and rapidly approaching the 4% target. The current repo rate of 6.50% already provides a significantly positive real interest rate, which is sufficiently restrictive to ensure price stability. Maintaining a stance of 'withdrawal of accommodation' is no longer data-consistent and risks over-tightening, which could unnecessarily stifle the robust 7.80% GVA growth momentum. The modest positive output gap of 0.50% does not warrant a continued bias toward tightening. I believe a shift to a neutral stance is essential to signal that monetary policy is now data-dependent and balanced, thereby avoiding the risks of policy overreach and long lags in transmission that could harm the ongoing economic recovery.",
+  "fallback_triggered": false
+}

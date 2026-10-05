@@ -1,0 +1,11 @@
+{
+  "member_id": "shaktikanta_das",
+  "member_name": "Shaktikanta Das",
+  "is_internal": true,
+  "final_rate_vote_bps": 50,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI inflation at 7.01 per cent, we are operating persistently above the upper tolerance band of our inflation target. The persistence of core inflation at 6.20 per cent, alongside the continued volatility in global commodity prices and the depreciation of the rupee, necessitates a decisive and front-loaded monetary policy action to anchor inflation expectations. The Indian economy is showing resilience, with a positive output gap of 0.40 per cent and robust industrial production, providing the space to prioritize price stability. Given the systemic liquidity surplus of 190,000 crore INR, a 50 basis point increase in the policy repo rate is essential to maintain the credibility of our inflation targeting framework and ensure that we steer inflation towards the 4 per cent target in a durable manner, while remaining mindful of the growth trajectory.",
+  "fallback_triggered": false
+}

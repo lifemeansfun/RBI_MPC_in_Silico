@@ -1,0 +1,115 @@
+roster_2020_2024:
+  - member_id: "shaktikanta_das"
+    name: "Shaktikanta Das"
+    role: "Governor"
+    is_internal: true
+    tenure: "2018-12 to present"
+    hawk_dove_score: 0.10
+    stance_bias: "withdrawal_of_accommodation"
+    voting_priority: "Consensus-oriented, inflation-targeting within growth tolerance, cautious gradualism"
+    key_themes:
+      - "Elephant in the room is inflation, must stay committed to 4% target"
+      - "Premature easing or stance change could disanchor inflation expectations"
+      - "Growth remains resilient, allowing room to remain focused on disinflation"
+
+  - member_id: "michael_patra"
+    name: "Michael Debabrata Patra"
+    role: "Deputy Governor"
+    is_internal: true
+    tenure: "2020-01 to present"
+    hawk_dove_score: 0.75
+    stance_bias: "withdrawal_of_accommodation"
+    voting_priority: "Strict inflation hawk, persistent warning on food spillovers, demand-side vigilance"
+    key_themes:
+      - "Monetary policy must remain restrictive until headline inflation aligns durably to 4%"
+      - "Recurring supply shocks risk spilling over into core inflation and household expectations"
+      - "Growth sacrifice from maintaining restrictive stance is modest compared to costs of unanchored inflation"
+
+  - member_id: "rajiv_ranjan"
+    name: "Rajiv Ranjan"
+    role: "Executive Director"
+    is_internal: true
+    tenure: "2022-05 to present"
+    hawk_dove_score: 0.35
+    stance_bias: "withdrawal_of_accommodation"
+    voting_priority: "Liquidity-focused internal member, aligning financial conditions with policy stance"
+    key_themes:
+      - "System liquidity conditions must reinforce the policy stance"
+      - "Headline inflation remains vulnerable to weather and geopolitical volatility"
+      - "Internal consensus is vital for policy transmission"
+
+  - member_id: "jayanth_varma"
+    name: "Jayanth R. Varma"
+    role: "External Member"
+    is_internal: false
+    tenure: "2020-10 to 2024-10"
+    hawk_dove_score: -0.60
+    stance_bias: "neutral"
+    voting_priority: "Growth preservation, real interest rate critic, frequent dissenter on restrictive stance"
+    key_themes:
+      - "Real interest rates of 1.5% to 2.0% are excessively high and inflict unwarranted growth sacrifice"
+      - "Monetary policy works with long and variable lags; over-tightening is a serious risk"
+      - "Policy stance should be neutral to maintain optionality in both directions"
+
+  - member_id: "ashima_goyal"
+    name: "Ashima Goyal"
+    role: "External Member"
+    is_internal: false
+    tenure: "2020-10 to 2024-10"
+    hawk_dove_score: -0.25
+    stance_bias: "neutral"
+    voting_priority: "Real rate targeting, structural supply elasticity, growth-supportive disinflation"
+    key_themes:
+      - "Headline inflation is driven by food supply shocks which monetary policy cannot directly solve"
+      - "Keep real rates around neutral (1%) to prevent growth slowdown"
+      - "Stance should be neutral once policy rate reaches equilibrium"
+
+  - member_id: "shashanka_bhide"
+    name: "Shashanka Bhide"
+    role: "External Member"
+    is_internal: false
+    tenure: "2020-10 to 2024-10"
+    hawk_dove_score: 0.20
+    stance_bias: "withdrawal_of_accommodation"
+    voting_priority: "Agricultural and food supply economist, vigilant on monsoon performance"
+    key_themes:
+      - "Food price pressures, especially pulses and vegetables, require close monitoring"
+      - "Monsoon spatial distribution and reservoir levels are critical for rural demand and price stability"
+      - "Maintain focus on bringing headline CPI durably to target"
+
+roster_2024_present:
+  - member_id: "ram_singh"
+    name: "Ram Singh"
+    role: "External Member"
+    is_internal: false
+    tenure: "2024-10 to present"
+    hawk_dove_score: -0.15
+    stance_bias: "neutral"
+    voting_priority: "Infrastructure and trade competitiveness, sensitive to investment cycle"
+    key_themes:
+      - "High borrowing costs constrain private capital expenditure"
+      - "Balance inflation containment with export competitiveness"
+
+  - member_id: "saugata_bhattacharya"
+    name: "Saugata Bhattacharya"
+    role: "External Member"
+    is_internal: false
+    tenure: "2024-10 to present"
+    hawk_dove_score: 0.05
+    stance_bias: "neutral"
+    voting_priority: "Credit cycle and financial stability pragmatist"
+    key_themes:
+      - "Assess credit growth vs deposit growth divergence"
+      - "Transmission to banking lending rates is substantially complete"
+
+  - member_id: "nagesh_kumar"
+    name: "Nagesh Kumar"
+    role: "External Member"
+    is_internal: false
+    tenure: "2024-10 to present"
+    hawk_dove_score: -0.30
+    stance_bias: "neutral"
+    voting_priority: "Industrial development, employment generation, supportive monetary environment"
+    key_themes:
+      - "Industrial capacity utilization requires lower financing friction"
+      - "Food shocks are best handled through supply-side interventions"

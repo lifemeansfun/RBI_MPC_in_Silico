@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "With headline CPI inflation at 4.25% converging toward the 4% target and core inflation moderating to 5.02%, the current repo rate of 6.50% provides a positive real interest rate that is appropriate for the current growth-inflation balance. Given the robust GVA growth of 7.80%, the economy is demonstrating resilience. Maintaining a 'withdrawal of accommodation' stance is no longer necessary as the policy rate has reached a level that is sufficiently restrictive to anchor inflation expectations. A shift to a neutral stance is warranted to signal that monetary policy is now data-dependent and balanced, avoiding the risk of over-tightening which could unnecessarily dampen the post-pandemic recovery. I therefore vote to keep the repo rate unchanged but shift the stance to neutral.",
+  "fallback_triggered": false
+}

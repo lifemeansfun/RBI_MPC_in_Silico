@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": -25,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": true,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "I vote for a reduction of the repo rate by 25 basis points and a change in the stance to neutral. With core inflation at a benign 3.10%, the current real policy rate is becoming excessively restrictive and risks stifling the 6.80% GVA growth momentum. The headline CPI of 4.75% is driven primarily by food price volatility, which is a supply-side phenomenon that monetary policy is ill-equipped to address without causing collateral damage to the broader economy. Given the output gap is only marginally positive at 0.40%, maintaining a stance of 'withdrawal of accommodation' is no longer appropriate. We must shift to a neutral stance to signal that the policy rate is sufficiently high to anchor expectations without acting as an unnecessary drag on the recovery.",
+  "fallback_triggered": false
+}

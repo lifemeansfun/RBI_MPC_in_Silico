@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "While core inflation has moderated to 3.10%, the persistence of food inflation at 8.69% poses a significant risk to unanchoring inflation expectations, necessitating a cautious approach. Given the positive output gap of 0.40% and the need to ensure full monetary transmission, maintaining the current repo rate of 6.50% and the stance of withdrawal of accommodation remains essential to align inflation durably with the 4.00% target. Shifting the stance prematurely would risk signaling a premature easing of our commitment to price stability, which could lead to a persistent upward drift in inflation expectations that would be costly to reverse.",
+  "fallback_triggered": false
+}

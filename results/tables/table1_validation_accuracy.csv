@@ -1,0 +1,2 @@
+total_meetings_evaluated,directional_rate_accuracy_pct,stance_accuracy_pct,dissent_exact_match_rate_pct,dissent_precision,dissent_recall,dissent_f1,passed_validation_gate
+25,76.0,76.0,76.0,0.5116,1.0,0.6769,True

@@ -1,0 +1,8 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "proposed_rate_change_bps": 0,
+  "proposed_stance": "withdrawal_of_accommodation",
+  "key_rationale": "While headline CPI at 7.44% is elevated, the spike is primarily driven by transient food price shocks rather than generalized demand-pull pressures, as evidenced by core inflation moderating to 4.90%. Maintaining the repo rate at 6.50% ensures that real interest rates remain positive and appropriate for the current recovery phase, while avoiding an overreaction to supply-side volatility that could unnecessarily dampen growth.",
+  "fallback_triggered": false
+}

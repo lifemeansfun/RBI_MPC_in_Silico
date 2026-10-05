@@ -1,0 +1,11 @@
+{
+  "member_id": "michael_patra",
+  "member_name": "Dr. Michael Debabrata Patra",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "The headline inflation at 5.02 per cent remains above our 4.00 per cent target, and the persistence of food inflation at 6.56 per cent, compounded by a 6.0 per cent monsoon deficit, poses a significant risk to the durability of the disinflationary process. With the economy operating above potential, as evidenced by a positive output gap of 0.70 per cent and robust GVA growth of 7.60 per cent, the risk of demand-pull pressures exacerbating supply-side shocks is elevated. In this environment, any premature shift in our stance would risk unanchoring inflation expectations, which would be far more costly to correct. Given the volatility in global markets and the prevailing US Fed funds rate of 5.33 per cent, it is imperative that we maintain the stance of withdrawal of accommodation to ensure that inflation durably aligns with the target.",
+  "fallback_triggered": false
+}

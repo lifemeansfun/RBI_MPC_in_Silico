@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "While headline CPI inflation has moderated to 4.25%, core inflation remains sticky at 5.02%, indicating that underlying price pressures are yet to be fully contained. With a positive output gap of 0.50% and GVA growth at 7.80%, the economy is operating above potential, which necessitates continued vigilance to prevent the unanchoring of inflation expectations. The dividends of our hard-won credibility are reflected in the current disinflationary path, and we must ensure this process is durable before signaling a change in our policy stance. Given the prevailing system liquidity surplus of 75,000 crore, maintaining the 'withdrawal of accommodation' stance is essential to ensure effective monetary transmission and to align liquidity conditions with our price stability mandate. Prematurely shifting the stance could be misconstrued as a dilution of our commitment to the 4.00% target, and therefore, I vote to keep the repo rate unchanged at 6.50% and maintain the stance of withdrawal of accommodation.",
+  "fallback_triggered": false
+}

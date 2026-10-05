@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "Official signed statement for Prof. Jayanth R. Varma in MPC minutes.",
+  "fallback_triggered": false
+}

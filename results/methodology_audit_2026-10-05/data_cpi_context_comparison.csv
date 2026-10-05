@@ -1,0 +1,26 @@
+meeting_date,panel_headline_cpi,raw_minutes_latest_rounded_cpi,raw_reference_period,differs_beyond_rounding,source_file
+2020-10-09,7.34,6.7,July-August 2020,True,mpc_minutes_prid_50560.html
+2020-12-04,6.93,7.6,October 2020,True,mpc_minutes_prid_50831.html
+2021-02-05,4.59,4.6,December 2020,False,mpc_minutes_prid_51161.html
+2021-04-07,5.03,5.0,February 2021,False,mpc_minutes_prid_51456.html
+2021-06-04,6.3,4.3,April 2021,True,mpc_minutes_prid_51754.html
+2021-08-06,5.59,6.3,June 2021,True,mpc_minutes_prid_52088.html
+2021-10-08,4.48,5.3,August 2021,True,mpc_minutes_prid_52450.html
+2021-12-08,4.91,4.5,October 2021,True,mpc_minutes_prid_52843.html
+2022-02-10,6.01,5.6,December 2021,True,mpc_minutes_prid_53319.html
+2022-04-08,6.95,6.1,February 2022,True,mpc_minutes_prid_53601.html
+2022-05-18,7.79,7.0,March 2022,True,mpc_minutes_prid_53728.html
+2022-06-08,7.04,7.8,April 2022,True,mpc_minutes_prid_53904.html
+2022-08-05,6.71,7.0,May-June 2022,True,mpc_minutes_prid_54236.html
+2022-09-30,7.0,7.0,August 2022,False,mpc_minutes_prid_54541.html
+2022-12-07,5.88,6.8,October 2022,True,mpc_minutes_prid_54918.html
+2023-02-08,6.52,5.7,December 2022,True,mpc_minutes_prid_55267.html
+2023-04-06,5.66,6.4,February 2023,True,mpc_minutes_prid_55538.html
+2023-06-08,4.25,4.7,April 2023,True,mpc_minutes_prid_55899.html
+2023-08-10,7.44,4.8,June 2023,True,mpc_minutes_prid_56252.html
+2023-10-06,5.02,6.8,August 2023,True,mpc_minutes_prid_56606.html
+2023-12-08,5.55,4.9,October 2023,True,mpc_minutes_prid_56982.html
+2024-02-08,5.1,5.7,December 2023,True,mpc_minutes_prid_57366.html
+2024-04-05,4.85,5.1,January-February 2024,True,mpc_minutes_prid_57735.html
+2024-06-07,4.75,4.8,April 2024,False,mpc_minutes_prid_58136.html
+2024-08-08,3.54,5.1,June 2024,True,mpc_minutes_prid_58545.html

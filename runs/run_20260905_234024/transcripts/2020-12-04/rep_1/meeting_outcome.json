@@ -1,0 +1,89 @@
+{
+  "meeting_date": "2020-12-04",
+  "replicate_id": 1,
+  "rate_decision_bps": 0,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "0": 6
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 4,
+    "neutral": 2
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [],
+  "dissenting_members_stance": [
+    "ashima_goyal",
+    "jayanth_varma"
+  ],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "Official signed statement for Dr. Michael Debabrata Patra in MPC minutes.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "mridul_saggar",
+      "member_name": "Dr. Mridul K. Saggar",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "Official signed statement for Dr. Mridul K. Saggar in MPC minutes.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "Official signed statement for Dr. Shashanka Bhide in MPC minutes.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "Official signed statement for Dr. Ashima Goyal in MPC minutes.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "Official signed statement for Prof. Jayanth R. Varma in MPC minutes.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "Official signed statement for Shaktikanta Das in MPC minutes.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

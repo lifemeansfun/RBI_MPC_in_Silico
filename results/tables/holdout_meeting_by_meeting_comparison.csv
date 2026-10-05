@@ -1,0 +1,9 @@
+meeting_date,panel_subset,actual_rate_bps,sim_rate_bps,rate_match,directional_match,actual_stance,sim_stance,stance_match,actual_dissenters,sim_dissenters,dissent_tp,dissent_fp,dissent_fn,tie_broken,fallbacks_used
+2023-06-08,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,ashima_goyal;jayanth_varma,1,1,0,False,0
+2023-08-10,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,jayanth_varma,1,0,0,False,0
+2023-10-06,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,jayanth_varma,1,0,0,False,0
+2023-12-08,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,ashima_goyal;jayanth_varma,1,1,0,False,0
+2024-02-08,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,ashima_goyal;jayanth_varma,1,1,0,False,0
+2024-04-05,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,jayanth_varma,ashima_goyal;jayanth_varma,1,1,0,False,0
+2024-06-07,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,ashima_goyal;jayanth_varma,ashima_goyal;jayanth_varma,2,0,0,False,0
+2024-08-08,holdout,0,0,True,True,withdrawal_of_accommodation,withdrawal_of_accommodation,True,ashima_goyal;jayanth_varma,ashima_goyal;jayanth_varma,2,0,0,False,0

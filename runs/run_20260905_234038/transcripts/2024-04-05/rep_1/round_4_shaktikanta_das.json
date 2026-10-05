@@ -1,0 +1,11 @@
+{
+  "member_id": "shaktikanta_das",
+  "member_name": "Shaktikanta Das",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "Official signed statement for Shaktikanta Das in MPC minutes.",
+  "fallback_triggered": false
+}

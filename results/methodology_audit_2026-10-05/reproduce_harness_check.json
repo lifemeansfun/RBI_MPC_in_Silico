@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "scripts/reproduce.py"
+  ],
+  "cwd": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_methodology_audit_zjgwh6ll",
+  "exit_code": 0,
+  "elapsed_seconds": 8.076,
+  "scope": "Existing harness in isolated snapshot; no fresh live simulation, data ingestion or persona fitting is in its steps."
+}

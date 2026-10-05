@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI inflation at 7.44% significantly breaching the upper tolerance band and food inflation surging to 11.51%, we must remain vigilant against the risk of unanchored inflation expectations. While I acknowledge the supply-side nature of the current food price shock, allowing persistent deviations from our 4.00% target risks damaging the credibility of our monetary framework, which is essential for long-term price stability. Given the positive output gap of 0.60% and the necessity of aligning the 120,000 crore banking system liquidity surplus with our policy objective, maintaining the current repo rate of 6.50% while strictly adhering to the 'withdrawal of accommodation' stance provides the necessary discipline to ensure a durable disinflationary path without prematurely stifling the 7.80% GVA growth momentum.",
+  "fallback_triggered": false
+}

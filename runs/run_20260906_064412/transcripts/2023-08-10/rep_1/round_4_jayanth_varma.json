@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "While the headline CPI inflation of 7.44% is concerning, it is heavily driven by transitory food price shocks, as evidenced by the much more moderate core inflation of 4.90%. Monetary policy is a blunt instrument that is ill-suited to address supply-side volatility in food items, and further tightening at this juncture risks causing an unnecessary growth sacrifice when GVA growth is at a robust 7.80%. I continue to believe that the current repo rate of 6.50% is sufficient to maintain positive real interest rates and anchor expectations. However, acknowledging the significant breach of the upper tolerance band and the need for committee consensus during this period of heightened volatility, I am willing to concur with the majority on the 'withdrawal of accommodation' stance, provided we do not pursue further rate hikes that would risk over-correcting and stifling the ongoing economic recovery.",
+  "fallback_triggered": false
+}

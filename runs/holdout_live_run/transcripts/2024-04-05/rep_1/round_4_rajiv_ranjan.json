@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "While core inflation has moderated to 3.25%, the headline CPI at 4.85% remains persistently above our 4.00% target, significantly influenced by food inflation at 8.52%. The positive output gap of 0.40% indicates that aggregate demand remains resilient, and with Brent crude oil prices elevated at $90.45 per barrel, the risks to the inflation trajectory remain skewed to the upside. In this environment, shifting to a neutral stance would be premature and could be misconstrued as a dilution of our commitment to price stability, potentially unanchoring inflation expectations. To ensure that the disinflationary process is durable and to maintain the efficacy of monetary transmission, it is imperative that we continue with the withdrawal of accommodation. This approach provides the necessary policy space to navigate global uncertainties while ensuring that inflation durably aligns with the target.",
+  "fallback_triggered": false
+}

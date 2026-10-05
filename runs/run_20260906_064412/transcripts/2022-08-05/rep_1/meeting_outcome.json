@@ -1,0 +1,88 @@
+{
+  "meeting_date": "2022-08-05",
+  "replicate_id": 1,
+  "rate_decision_bps": 50,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "25": 1,
+    "50": 5
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 6
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [
+    "jayanth_varma"
+  ],
+  "dissenting_members_stance": [],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 50,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.01 per cent, we have breached the upper tolerance limit for six consecutive months. The persistence of inflation, particularly the stickiness of core inflation at 6.20 per cent, signals that price pressures are becoming generalized and risk unanchoring inflation expectations. A positive output gap of 0.40 per cent and a systemic liquidity surplus of 190,000 crore INR provide the necessary space for a front-loaded policy response. Given the headwinds from global commodity prices and the pressures on the USD/INR exchange rate, a 50 basis point hike is imperative to demonstrate our commitment to price stability and to prevent the entrenchment of second-round effects. Anything less than a decisive adjustment risks falling behind the curve, ultimately necessitating more painful policy actions in the future.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "member_name": "Dr. Rajiv Ranjan",
+      "is_internal": true,
+      "final_rate_vote_bps": 50,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.01% persistently breaching the upper tolerance band and core inflation remaining elevated at 6.20%, the risk of inflation expectations becoming unanchored is significant. The positive output gap of 0.40% and the substantial banking system liquidity surplus of 190,000 crore INR provide the necessary cushion for a front-loaded policy action. A 50 bps increase is essential to enhance monetary transmission, align real interest rates with the objective of price stability, and maintain the credibility of our inflation-targeting framework. Delaying this adjustment would only increase the terminal policy rate required in the future, and given the current global spillovers and exchange rate pressures, decisive action now is the most prudent path to ensure a durable return to the 4% target.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 50,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The current headline CPI inflation at 7.01 per cent is significantly above the upper tolerance band, and with core inflation remaining sticky at 6.20 per cent, the risk of inflation expectations becoming unanchored is a primary concern. While my commitment to supporting the rural economy and growth remains steadfast, the positive output gap of 0.40 per cent and the prevailing systemic liquidity surplus of 190,000 crore INR indicate that the economy possesses the resilience to accommodate a 50 basis points increase. This front-loaded adjustment is necessary to address the impact of global commodity price volatility and exchange rate pressures, ensuring that monetary policy effectively serves its mandate of price stability, which is a prerequisite for sustaining growth on a durable basis.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 50,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.01% persistently breaching the upper tolerance band, it is essential to move decisively toward a neutral real interest rate to anchor inflation expectations. The current positive output gap of 0.40% and the substantial banking system liquidity of 190,000 crore INR indicate that the economy possesses the resilience to absorb a front-loaded adjustment. While I remain committed to supporting the post-pandemic recovery, the persistence of inflationary pressures, exacerbated by global commodity price volatility and exchange rate pass-through, necessitates a 50 bps increase to maintain macroeconomic stability and the credibility of our inflation-targeting framework.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": 25,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": true,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While I recognize that headline CPI inflation at 7.01% is uncomfortably above our upper tolerance limit, I remain concerned about the risks of over-tightening. Monetary policy operates with significant lags, and an aggressive 50 bps hike, when combined with the cumulative impact of recent policy actions, risks inflicting unnecessary damage on a nascent and still-fragile growth recovery. The economy is currently operating with a positive output gap of 0.40%, and while we must anchor inflation expectations, we must also avoid a policy error that sacrifices growth unnecessarily. A 25 bps increase represents a calibrated and prudent path that addresses the inflation challenge while remaining mindful of the need to support economic activity. I therefore vote for a 25 bps increase in the repo rate, while supporting the stance of withdrawal of accommodation.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 50,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.01 per cent, we are operating persistently above the upper tolerance band of our inflation target. The persistence of core inflation at 6.20 per cent, alongside the continued volatility in global commodity prices and the depreciation of the rupee, necessitates a decisive and front-loaded monetary policy action to anchor inflation expectations. The Indian economy is showing resilience, with a positive output gap of 0.40 per cent and robust industrial production, providing the space to prioritize price stability. Given the systemic liquidity surplus of 190,000 crore INR, a 50 basis point increase in the policy repo rate is essential to maintain the credibility of our inflation targeting framework and ensure that we steer inflation towards the 4 per cent target in a durable manner, while remaining mindful of the growth trajectory.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

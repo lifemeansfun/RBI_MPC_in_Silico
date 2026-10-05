@@ -1,0 +1,88 @@
+{
+  "meeting_date": "2023-08-10",
+  "replicate_id": 1,
+  "rate_decision_bps": 0,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "0": 6
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 5,
+    "neutral": 1
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [],
+  "dissenting_members_stance": [
+    "jayanth_varma"
+  ],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI has touched the 4.00 per cent target, this outcome remains fragile. The positive output gap of 0.60 per cent and the persistent supply-side risk emanating from the 5.0 per cent monsoon rainfall departure necessitate that we remain vigilant against the risk of inflation expectations unanchoring. With banking system liquidity in surplus at 120,000 Crore INR, a premature shift in our stance would be counterproductive to our primary mandate of price stability. I remain firmly committed to the withdrawal of accommodation to ensure that the current inflation moderation is durable and not merely a transient development, thereby safeguarding the macroeconomic stability necessary for sustained growth.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "member_name": "Dr. Rajiv Ranjan",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI inflation has reached the 4.00 per cent target, we must remain cognizant of the underlying macroeconomic dynamics. The positive output gap of 0.60 per cent and the monsoon rainfall departure of -5.0 per cent represent potential supply-side risks that could easily lead to an unanchoring of inflation expectations if we signal a premature shift in our policy resolve. Monetary policy must continue to see through these transitory shocks to ensure that the inflation trajectory remains durably aligned with our target. Given the current surplus liquidity of 120,000 Crore INR in the banking system, maintaining the stance of withdrawal of accommodation is essential to ensure orderly monetary transmission and to align liquidity conditions with our price stability objective. We must not allow the current stability to induce complacency; therefore, I vote to keep the repo rate unchanged at 6.50 per cent and maintain the stance of withdrawal of accommodation.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI inflation is currently at the 4.00 per cent target, the prevailing macroeconomic environment is marked by significant supply-side uncertainties. The monsoon rainfall departure of -5.0 per cent poses a direct and tangible risk to food price stability, which is a critical determinant of household inflation expectations in our economy. Furthermore, with the economy exhibiting a positive output gap of 0.60 per cent, the current growth momentum of 7.80 per cent GVA suggests that demand-pull pressures may persist. In this context, a premature shift to a neutral stance would be inconsistent with the need to ensure that inflation remains durably aligned with our target. Therefore, I vote for maintaining the repo rate at 6.50 per cent and continuing with the stance of withdrawal of accommodation to ensure that inflation expectations remain firmly anchored while we navigate these supply-side risks.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at the 4.00 per cent target, the real policy rate is now in positive territory, providing a stabilizing influence on the economy. However, the positive output gap of 0.60 per cent, coupled with the supply-side uncertainty arising from the 5.0 per cent monsoon rainfall departure, necessitates continued caution. While my preference remains for a neutral stance as inflation approaches target, I am cognisant of the potential for food price volatility to influence inflation expectations. In the interest of maintaining a unified committee signal that ensures price stability remains the priority amidst these supply-side risks, I vote to maintain the repo rate at 6.50 per cent and support the continuation of the withdrawal of accommodation stance.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "I vote to keep the policy repo rate unchanged at 6.50 per cent. However, I dissent on the stance of 'withdrawal of accommodation'. With headline CPI inflation at the 4.00 per cent target and core inflation having moderated to 4.90 per cent, the current policy repo rate is already sufficiently restrictive. Maintaining a stance of 'withdrawal of accommodation' is no longer consistent with the data. Given the robust GVA growth of 7.80 per cent and the significant lags in monetary policy transmission, persisting with this stance risks overtightening and unnecessarily constraining the growth recovery. A shift to a 'neutral' stance is appropriate to signal that the policy rate is now well-calibrated to the current macroeconomic environment.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI inflation has touched our 4.00 per cent target, this milestone must be viewed with caution. The positive output gap of 0.60 per cent and the persistent risks from a 5.0 per cent monsoon rainfall deficit suggest that inflationary pressures remain latent. Given the current global uncertainties and the need to ensure that inflation expectations remain firmly anchored, it is premature to shift our stance. Maintaining the withdrawal of accommodation is essential to ensure that the ongoing growth recovery, evidenced by a 7.80 per cent GVA growth, is not compromised by a resurgence in price pressures. We must remain vigilant and committed to the durable alignment of inflation with the target.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

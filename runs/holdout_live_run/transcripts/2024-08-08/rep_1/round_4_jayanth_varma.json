@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": -25,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": true,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "With headline CPI at 3.54% and core inflation at 3.15%, the real repo rate has become excessively restrictive, creating a drag on the economy that is no longer justified by the inflation trajectory. Monetary policy is a blunt instrument that cannot effectively address supply-side food price shocks, and continuing to use it as such risks sacrificing the 6.80% GVA growth momentum. The positive output gap of 0.30% is marginal and does not warrant the current level of restrictiveness. I believe that maintaining a stance of 'withdrawal of accommodation' is now disconnected from the macroeconomic reality, and a 25 bps reduction in the repo rate, coupled with a shift to a 'neutral' stance, is necessary to prevent the real interest rate from becoming an unnecessary burden on growth.",
+  "fallback_triggered": false
+}

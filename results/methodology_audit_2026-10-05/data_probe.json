@@ -1,0 +1,3278 @@
+{
+  "environment": {
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "pandas": "3.0.5",
+    "network": "blocked by probe"
+  },
+  "input_files_preserved": true,
+  "input_hashes": {
+    "data/raw/manifest.csv": "4f208e2634c2cc4e687c1b9177c34a2f15ffdd8252d3a5fc97f69a667682e962",
+    "data/raw/minutes_html/mpc_minutes_prid_50560.html": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+    "data/raw/minutes_html/mpc_minutes_prid_50831.html": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+    "data/raw/minutes_html/mpc_minutes_prid_51161.html": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+    "data/raw/minutes_html/mpc_minutes_prid_51456.html": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+    "data/raw/minutes_html/mpc_minutes_prid_51754.html": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+    "data/raw/minutes_html/mpc_minutes_prid_52088.html": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+    "data/raw/minutes_html/mpc_minutes_prid_52450.html": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+    "data/raw/minutes_html/mpc_minutes_prid_52843.html": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+    "data/raw/minutes_html/mpc_minutes_prid_53319.html": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+    "data/raw/minutes_html/mpc_minutes_prid_53601.html": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+    "data/raw/minutes_html/mpc_minutes_prid_53728.html": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+    "data/raw/minutes_html/mpc_minutes_prid_53904.html": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+    "data/raw/minutes_html/mpc_minutes_prid_54236.html": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+    "data/raw/minutes_html/mpc_minutes_prid_54541.html": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+    "data/raw/minutes_html/mpc_minutes_prid_54918.html": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+    "data/raw/minutes_html/mpc_minutes_prid_55267.html": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+    "data/raw/minutes_html/mpc_minutes_prid_55538.html": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+    "data/raw/minutes_html/mpc_minutes_prid_55899.html": "53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd",
+    "data/raw/minutes_html/mpc_minutes_prid_56252.html": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+    "data/raw/minutes_html/mpc_minutes_prid_56606.html": "4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b",
+    "data/raw/minutes_html/mpc_minutes_prid_56982.html": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+    "data/raw/minutes_html/mpc_minutes_prid_57366.html": "39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521",
+    "data/raw/minutes_html/mpc_minutes_prid_57735.html": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+    "data/raw/minutes_html/mpc_minutes_prid_58136.html": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+    "data/raw/minutes_html/mpc_minutes_prid_58545.html": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+    "data/processed/macro_panel.parquet": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb",
+    "data/processed/statements/2020-10-09/ashima_goyal.txt": "3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce",
+    "data/processed/statements/2020-10-09/jayanth_varma.txt": "87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2",
+    "data/processed/statements/2020-10-09/michael_patra.txt": "e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7",
+    "data/processed/statements/2020-10-09/mridul_saggar.txt": "c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3",
+    "data/processed/statements/2020-10-09/shaktikanta_das.txt": "28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3",
+    "data/processed/statements/2020-10-09/shashanka_bhide.txt": "3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87",
+    "data/processed/statements/2020-12-04/ashima_goyal.txt": "76563d61606010ead3bd62f1d1fc0ca22178fe7b917f699df2537f0aaee6cf20",
+    "data/processed/statements/2020-12-04/jayanth_varma.txt": "8979e4f4a04ea019c3c9ed013b82e1c70ff9be631bb297859897f140d648ae3f",
+    "data/processed/statements/2020-12-04/michael_patra.txt": "9efaf95f5da8e342f5e980462ba185950a0e9eb5a95cb49ba73e4b4ebf421c10",
+    "data/processed/statements/2020-12-04/mridul_saggar.txt": "1b4c40309ffa2e331ed9567fc7d129af57edb550067aab75385b90d42144a186",
+    "data/processed/statements/2020-12-04/shaktikanta_das.txt": "8eaa13732d1ac0e7918b70e24dce166f1ba509635dfd63aca4e4788caf02dc36",
+    "data/processed/statements/2020-12-04/shashanka_bhide.txt": "2b3b1c905d5d7d4ae4236acd9dd297ab5bb911f80dea6a0be96ee73e728a6d22",
+    "data/processed/statements/2021-02-05/ashima_goyal.txt": "7d68359d17ee4570aab6ad36530a2cd18bbd8b284d89ffd3e27627e87f427625",
+    "data/processed/statements/2021-02-05/jayanth_varma.txt": "19a6c4efb7cf1114e694d94ffd741ed09885150d33d9e7eb046351deaa508281",
+    "data/processed/statements/2021-02-05/michael_patra.txt": "b5eb206c9f5cb8c5f42e964333bc4c4876211f11c369b543ef9a0cdb29d70b92",
+    "data/processed/statements/2021-02-05/mridul_saggar.txt": "87acb6148494d1a5f0c3b86327ea29271399bdfa38bf0c15b39dd64eb867d27a",
+    "data/processed/statements/2021-02-05/shaktikanta_das.txt": "1cb0fa8a7bc871ee422fcbf698b9283fc9771b70929feb417171ab6877e5eb73",
+    "data/processed/statements/2021-02-05/shashanka_bhide.txt": "21a3eb1ac73c962670719a8c1e60c68ee28fb4ad66f0665bde80051712a56f15",
+    "data/processed/statements/2021-04-07/ashima_goyal.txt": "f1b6dce44b185a1de0d21d4d9508a3b8297089a6b811be495407652a2b8d8ae2",
+    "data/processed/statements/2021-04-07/jayanth_varma.txt": "49e7ad8824b7626e388b3d7a1ffc78c6e652cf918bb7971791d1acf6c4fd64aa",
+    "data/processed/statements/2021-04-07/michael_patra.txt": "0cc92ce73405e1e1ee793c8ea81ecb36c61cc16e7cebc3930b4d77fe6a78573e",
+    "data/processed/statements/2021-04-07/mridul_saggar.txt": "81dba7a77c4d55d8d1d8c308c6d1d7901565ec3a68863f15adf3af7a36e6bf4a",
+    "data/processed/statements/2021-04-07/shaktikanta_das.txt": "2821902d47da9190ae65d5681423fcc0c72f17d156189964a0a6d32ac3109f71",
+    "data/processed/statements/2021-04-07/shashanka_bhide.txt": "91530a9f8f36e8e9019218373f26e0d4a5fa8b3f5560e91e8e2e1badc9cef1e0",
+    "data/processed/statements/2021-06-04/ashima_goyal.txt": "bd5104704b2fcbecbe61759eb069e6b436cd1bfc5690fe2e2be82bbf10b714af",
+    "data/processed/statements/2021-06-04/jayanth_varma.txt": "2ea2bb3bf99035b98c5db00df9c0734806f30a9c3890ca89b95b9f7c51604bee",
+    "data/processed/statements/2021-06-04/michael_patra.txt": "eebaf656e582ef3f30a5c10303a411ad5f9730d300ebccbe418309283ca86096",
+    "data/processed/statements/2021-06-04/mridul_saggar.txt": "7d3dd3c2b23d9792af36859cc98da6734b35435f166bab9f0434c6239222cc79",
+    "data/processed/statements/2021-06-04/shaktikanta_das.txt": "b9462ca26f1be7a8efef247d5660ca899c6cf52cd598aaf392f206c114d60064",
+    "data/processed/statements/2021-06-04/shashanka_bhide.txt": "dde250ad90b98ac93a992f14667df8c49a31af42e8a8b60c791f5fa25fab13ab",
+    "data/processed/statements/2021-08-06/ashima_goyal.txt": "8932d5dbe66292d9ebb6b1ad9b3a85f6575738f12e15061214a37711ab953832",
+    "data/processed/statements/2021-08-06/jayanth_varma.txt": "d2d762f5fc2769b60d83d89aabccbbb2942dd292105fdf1db7f8da6ce112c22c",
+    "data/processed/statements/2021-08-06/michael_patra.txt": "5f66f1b15e94f208bcfac9a9aae863856b510a94afd14a73afdaa5c616172f76",
+    "data/processed/statements/2021-08-06/mridul_saggar.txt": "49a483059be4a346f9b7aea27de26d531c989a3a84b804cb14228634904ff8ad",
+    "data/processed/statements/2021-08-06/shaktikanta_das.txt": "9e95a4ca149fe84754f180a2d68fc846a09f85e611ebe0a1894f736b511fd3dd",
+    "data/processed/statements/2021-08-06/shashanka_bhide.txt": "744f3a88570034e7a0eb20d7a945be4b8d3428020e4d4bd9a971308efbb755e8",
+    "data/processed/statements/2021-10-08/ashima_goyal.txt": "e0c33c5394da5f8bfbb2f2dcf5a99f9d463693300f562c5cad39ede8dd763e03",
+    "data/processed/statements/2021-10-08/jayanth_varma.txt": "739f9270d3f7868078ff281c4d4e9588b963eb692e56d4785ccb68119d150ecc",
+    "data/processed/statements/2021-10-08/michael_patra.txt": "5173e22b94a16502c60c458fdb25639618b3740872e407bc4284eb0aea20cb3b",
+    "data/processed/statements/2021-10-08/mridul_saggar.txt": "a6b5346d9483cbc234ddd9e64bd328159a0e67500540db95bdc94f3ae2857c37",
+    "data/processed/statements/2021-10-08/shaktikanta_das.txt": "35f4096f4448de12bf792a93221b344f12eea783386e9644bb2462c5e4022cda",
+    "data/processed/statements/2021-10-08/shashanka_bhide.txt": "336cf8e0b6530b3197afe44d31b35cb23b7df80feb637de4aab906e53feec592",
+    "data/processed/statements/2021-12-08/ashima_goyal.txt": "93ec093f0bba4b829db9a3aa1fee1d6e2cec4393b1b642d8e2e4a382f0be95c2",
+    "data/processed/statements/2021-12-08/jayanth_varma.txt": "f2dd4fb9dcd14377a01101d675bfeadeaa01c7a210c1aaa031844fdfd0adcffb",
+    "data/processed/statements/2021-12-08/michael_patra.txt": "8092f883d5324193b6bb6c8c29562f378a181dad1edfd866a646f712c8da84b5",
+    "data/processed/statements/2021-12-08/mridul_saggar.txt": "d2e7c69d21bdc20121fd2cc7299edfd18385f5b348c1b57d8c37484b70f50280",
+    "data/processed/statements/2021-12-08/shaktikanta_das.txt": "a8f3d08faf4c9132c2eccd87630aa79e4c30793560ea2f8f3676e1c116ca3f53",
+    "data/processed/statements/2021-12-08/shashanka_bhide.txt": "355c730004655437b313161f1144d6d6e9751e66f7cbf3390e2f060b8b058a37",
+    "data/processed/statements/2022-02-10/ashima_goyal.txt": "497bc57ef638cb99a3cdac7288a5070f2b7f65b7bce923add4d913ee4e525da2",
+    "data/processed/statements/2022-02-10/jayanth_varma.txt": "1f552263ff53ec81ece95fca767699c047487855972173c3ac512fa20b46a34b",
+    "data/processed/statements/2022-02-10/michael_patra.txt": "065234c6e9e7b82cd5db55e2108b30abdb1f98db0a9db293f13879b42380f40c",
+    "data/processed/statements/2022-02-10/mridul_saggar.txt": "c6c49888667bc1bdba8e0ac028b01220a3b77f5f17e9bee4cbb12e8215d43f36",
+    "data/processed/statements/2022-02-10/shaktikanta_das.txt": "5a43b474ab0267a54327546d0ad01d03149577bfc6e8b81322d09d2c0b417f6c",
+    "data/processed/statements/2022-02-10/shashanka_bhide.txt": "ada13d8add7717d650742b46559f495ac0bd7edd170f0632dbade5e7e7fe06bb",
+    "data/processed/statements/2022-04-08/ashima_goyal.txt": "0787c93e99c1069f539164c893971edeac49d51eb11a1753467ad1bc80192bcf",
+    "data/processed/statements/2022-04-08/jayanth_varma.txt": "cf64cff9c7219ea119380d21fa33c7f67902644c97720ea31f56afd16c20f088",
+    "data/processed/statements/2022-04-08/michael_patra.txt": "cb4b4c3ef7105eb050e0d59b81ef13ee04b05afff3434beff0adf89e8c793f8f",
+    "data/processed/statements/2022-04-08/mridul_saggar.txt": "d0bb2a1a68588fcd930b6c9063dc135cec4462c63d2b9af44b9d42b4994e5e2c",
+    "data/processed/statements/2022-04-08/shaktikanta_das.txt": "4bbe644190b7fe77ecde932450baa608206e1ad33adf244f8b8f009904277781",
+    "data/processed/statements/2022-04-08/shashanka_bhide.txt": "0a412d25f6ed4fb989dac78cfe2fba760f02138230ee3f9d4ae670598370bc83",
+    "data/processed/statements/2022-05-18/ashima_goyal.txt": "d3fc156fd7465c4584759a45c1dd0ba44e3c7b47819adb2360129177bcb43817",
+    "data/processed/statements/2022-05-18/jayanth_varma.txt": "a64eb5d39ed8cf4501fdcf5afab1d3b7303205a3b0854dba53b642cd8af1841c",
+    "data/processed/statements/2022-05-18/michael_patra.txt": "915ac0f88c80acd86e00286e946726c709ca231e662afc1fa41b8f8bbba5aff8",
+    "data/processed/statements/2022-05-18/rajiv_ranjan.txt": "ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2",
+    "data/processed/statements/2022-05-18/shaktikanta_das.txt": "0ee84d8511581485b6e7d63f494f401535e7bffe5b5997c1f65c1d71e83bff01",
+    "data/processed/statements/2022-05-18/shashanka_bhide.txt": "b699a2dd97afc97767a0d1da85955ca23dc049c48828f4a5f8b850b0bfcff668",
+    "data/processed/statements/2022-06-08/ashima_goyal.txt": "0a75c49bce07b652ac59fa11b1da222e14e96c3972f66403ac7dcc0d8d069001",
+    "data/processed/statements/2022-06-08/jayanth_varma.txt": "daca8ec2365ec53d78409fea16a8d6aac951083a8de07905ab14d74ede070587",
+    "data/processed/statements/2022-06-08/michael_patra.txt": "2e74877bc43381ebe40b4d83acbda860100bdea91a700d10a86fa1f2acbdc059",
+    "data/processed/statements/2022-06-08/rajiv_ranjan.txt": "aba620cb78b72707454e55c751b3a899aa5012200c213ece1c273ff82e5ad7c9",
+    "data/processed/statements/2022-06-08/shaktikanta_das.txt": "0263ffbc38ddb384c5c76aab66655089622c00abb061fa46ec440343dd3051bf",
+    "data/processed/statements/2022-06-08/shashanka_bhide.txt": "d2ae0d1f8818fb97efc57a05b82666d72279da257990f437d16cf9e99e8330dc",
+    "data/processed/statements/2022-08-05/ashima_goyal.txt": "f64be88a9a3a8ab49aef85f00a83707772dbe004437a8b83304bdfdd4af006da",
+    "data/processed/statements/2022-08-05/jayanth_varma.txt": "626c613fbf4da514fc9ec5dbdcb62894940510b95a408cec9e4ef01cd7932b89",
+    "data/processed/statements/2022-08-05/michael_patra.txt": "dd93b90bec240ea38d2c398d73a258b9a7ed7f02294fde5ca6fcb3d430c370fc",
+    "data/processed/statements/2022-08-05/rajiv_ranjan.txt": "1826cc2e66ef887afb878153704d8ecdf63b3aa5d9283348a59c8f526246a8c7",
+    "data/processed/statements/2022-08-05/shaktikanta_das.txt": "7dea665b23ab75c4da86e00e620901f751f6a0cd711cc24d8c4e07ceca4b3cda",
+    "data/processed/statements/2022-08-05/shashanka_bhide.txt": "5af8454de29c1ff07a2e833266feb6b45e639f9d42d3ffb283c75398f9e5afdb",
+    "data/processed/statements/2022-09-30/ashima_goyal.txt": "15285d89e27df50eb7620571759a91f5c9ea5216ddcfd1dfba925596e288e598",
+    "data/processed/statements/2022-09-30/jayanth_varma.txt": "1dfc52436650f6dff9fd93907c6a6aa78ddeca11db03fb4ed82d27e1f9a36661",
+    "data/processed/statements/2022-09-30/michael_patra.txt": "fa56136e555a3c53c46b2848e8fa7c1a8e654e6c1ae4e4c88718f9eadb66e470",
+    "data/processed/statements/2022-09-30/rajiv_ranjan.txt": "a459d16268f224e96d7a80e406b82d5d2029ac4743081cf0ad597fc5440f9d45",
+    "data/processed/statements/2022-09-30/shaktikanta_das.txt": "9e7f29b32637388a60ea6abedfdf0861cffd8c6b2e43e0eef12ccb9e24eca667",
+    "data/processed/statements/2022-09-30/shashanka_bhide.txt": "d5cfc96836d1495cea06dc9ac3d10ca081182a8eb7265202bb86bb86928ac687",
+    "data/processed/statements/2022-12-07/ashima_goyal.txt": "13abe90f26f48403e47a02542a284e4d55bce9ca0bea70f7e460ee44cf12bc56",
+    "data/processed/statements/2022-12-07/jayanth_varma.txt": "525de9c4452b3f64066b8d43f52b9dc33c78ca12a2e891d37d1789314cf61f07",
+    "data/processed/statements/2022-12-07/michael_patra.txt": "d57b6d48b89b587e0c06946f57d01b0cd7d083596c09b3a93652aaea93f2616b",
+    "data/processed/statements/2022-12-07/rajiv_ranjan.txt": "a10578b3a1b4e7600108d39ebdb41dc2d700b949c8d267f6dfdb41e6f99b3816",
+    "data/processed/statements/2022-12-07/shaktikanta_das.txt": "7d8a56e2768ae087a0e0dfbd183f0c12b78e9c121569e8bb9ad6caa20d6fc4b8",
+    "data/processed/statements/2022-12-07/shashanka_bhide.txt": "4a28e8a426425c22ab700596b3a9dadbc3e752ccb51aea9ed7a11c881d6a1f4b",
+    "data/processed/statements/2023-02-08/ashima_goyal.txt": "81b5cbc244157c66b14df4e8fba670c72703d6aa3bd00e9b14d266f0b255952d",
+    "data/processed/statements/2023-02-08/jayanth_varma.txt": "3f30e6015e31826901bd2d2cb749e6e798dd0d4a0d4931dcab3f4ecdca99e91c",
+    "data/processed/statements/2023-02-08/michael_patra.txt": "e810c34e5e75e40d3c6a5c098c69f80890d5a7096647db9fb0633b094a39417d",
+    "data/processed/statements/2023-02-08/rajiv_ranjan.txt": "37c93693768bed1661d755f685f2223b92810e873e0dbcb3be90b2e43ebb091d",
+    "data/processed/statements/2023-02-08/shaktikanta_das.txt": "b4fb0830f78d83efee7658967ac2a6a14db631ba3c6bbd5c95638973958f02f2",
+    "data/processed/statements/2023-02-08/shashanka_bhide.txt": "e787bef103a6c1c4c02942d0e8d35c1adb4d2448ad9633a99ba063f2782e6a9b",
+    "data/processed/statements/2023-04-06/ashima_goyal.txt": "917fd9904e171d619ede1a48ace07ac3e8ad839cae3036e1511d59a27c36873e",
+    "data/processed/statements/2023-04-06/jayanth_varma.txt": "166ebd5a49b53e5dff4fd42be6fef21d56304aa5bff6fb5b56a3e7a579901433",
+    "data/processed/statements/2023-04-06/michael_patra.txt": "4078cc74449920a9b234848a345b3fb9c4b5578b786cc53bc30175d1995e26cb",
+    "data/processed/statements/2023-04-06/rajiv_ranjan.txt": "8f272b4d783654a208c49ac03d0417dc9a19291c3c2be15fa0b2eacacd939e9a",
+    "data/processed/statements/2023-04-06/shaktikanta_das.txt": "03b2cb90d8c5a345ef9fb7fdb833a1b018704f2654a8ee3df54e316a18037e80",
+    "data/processed/statements/2023-04-06/shashanka_bhide.txt": "ab102b0f1c1ac8b4cd6d800e395cfc7a84d1eee33b66922743c8e1bd98950064",
+    "data/processed/statements/2023-06-08/ashima_goyal.txt": "73621c340938a7cadf5da242f06b88c170a3a27cf1501a12f2ea2655e05dce4b",
+    "data/processed/statements/2023-06-08/jayanth_varma.txt": "f4d6c61438077002ffa7befcfdc03f767ce8488f686e8cf3452d5ff6b77ef4b9",
+    "data/processed/statements/2023-06-08/michael_patra.txt": "a2bb912203acfb3875d91259c1c3abd5198274539094cab8c54f2a35b02954ff",
+    "data/processed/statements/2023-06-08/rajiv_ranjan.txt": "50fd27d1c6969c09366a13d4b2c4e0597267fa547692096ff4e354715d01af68",
+    "data/processed/statements/2023-06-08/shaktikanta_das.txt": "27510a98464bd151e3aa637a86fab3bba765a42c6f24a6ab07e24232d38e0184",
+    "data/processed/statements/2023-06-08/shashanka_bhide.txt": "bb72564612e448ef20c64ab6682a51cc509f1777dd28a83d82e4419305975da7",
+    "data/processed/statements/2023-08-10/ashima_goyal.txt": "3982a85603d5a9531e09c491c0028056943744887b97808fe3d27fd0faa43c9c",
+    "data/processed/statements/2023-08-10/jayanth_varma.txt": "f8a344b7326f38e72aac9d83b6ef7fc1fa3828b1730197d3f799bd6bdb6c9fd0",
+    "data/processed/statements/2023-08-10/michael_patra.txt": "6652f8b632ae68cc61f2d1d3ac3e6021d628ce383c1455cf615bfdfb9b8fcd1e",
+    "data/processed/statements/2023-08-10/rajiv_ranjan.txt": "157147cd3d0202c83c2bc5c01cb0fcdb96670c8e503141fc61addb61cffceb26",
+    "data/processed/statements/2023-08-10/shaktikanta_das.txt": "eff8688686defa8a1f76937981723c4d8703be40e096da68b450eb2f01611f2e",
+    "data/processed/statements/2023-08-10/shashanka_bhide.txt": "395ce4fd50fb0d75dceb10efc5371055da363fdf66028fe0b2d9958f2c794934",
+    "data/processed/statements/2023-10-06/ashima_goyal.txt": "06b19a08881d0bb2d21d161540ec43a5a3e149256134ad8e8a8feb806ac4d71d",
+    "data/processed/statements/2023-10-06/jayanth_varma.txt": "fe609cf46624f8230db454bfea79554e7a9e1b14443d94c4749dfbd04281c96b",
+    "data/processed/statements/2023-10-06/michael_patra.txt": "672a89747eff372f09d8903f73ae5566c623efd23be77f8f8ee66e3f0b191239",
+    "data/processed/statements/2023-10-06/rajiv_ranjan.txt": "420ef7ba706e5d6b14aa573335087b449b3efe365ee1af990bbe5539ca7ee314",
+    "data/processed/statements/2023-10-06/shaktikanta_das.txt": "3b80e7cf70b90cc3b5b19cdf595008149eba6ff08cd08e10d9f1a892c4cfc58a",
+    "data/processed/statements/2023-10-06/shashanka_bhide.txt": "cdd2a92b45efa8cd07cab256400df91cc3ebbbc1bc30c2b9af279bc3b8d9cb3f",
+    "data/processed/statements/2023-12-08/ashima_goyal.txt": "34e2d10126a2915b90f84820c960ed240d3fedad1d653aa1e0b367563e70b2de",
+    "data/processed/statements/2023-12-08/jayanth_varma.txt": "c61c433f265c87ede706ce003daa5720b42d0bb136ced72391c4d86ce816be28",
+    "data/processed/statements/2023-12-08/michael_patra.txt": "59cf80b0eafa72a1d532cf623bd093382980283dcc33c4dcd9282eb08e328ebb",
+    "data/processed/statements/2023-12-08/rajiv_ranjan.txt": "4502733c5aacfd2bbd3ee4163304bc823a88c2ac898930ec6c4551b3f739e439",
+    "data/processed/statements/2023-12-08/shaktikanta_das.txt": "e8b490d77da81fb26248bc6f7ba68c713ff6e52e022a6c4b95029c4e7584ab61",
+    "data/processed/statements/2023-12-08/shashanka_bhide.txt": "6cb4b7b8d0fbc920ee2f3160dd18dd2ed40e195bac2bae1a0cf5252d356e0027",
+    "data/processed/statements/2024-02-08/ashima_goyal.txt": "f4034a443fd2f0117672802ba50bdf936c09558299120539925fac4f0d283bd1",
+    "data/processed/statements/2024-02-08/jayanth_varma.txt": "9869679690e9d0c7914f4b002bbfcae36a579db1d42e051d49b6df0ed6f64abb",
+    "data/processed/statements/2024-02-08/michael_patra.txt": "60e2cd5a56737151d0ca6d15c0b4993821c9ac1ae2eb5244297f0e14d9367209",
+    "data/processed/statements/2024-02-08/rajiv_ranjan.txt": "d3eeecc4b2da43771b79bad3a01656793a034576b0932d3e0b666aa22aa0939d",
+    "data/processed/statements/2024-02-08/shaktikanta_das.txt": "eb7f15b567dfcf9bec88934f50798dadbb4440a8f45cce5e6c5dacd405965c6f",
+    "data/processed/statements/2024-02-08/shashanka_bhide.txt": "3b8928b3e02db6e317fe19ef359edbe350ac6a06e34a9836a5e6603b443797e6",
+    "data/processed/statements/2024-04-05/ashima_goyal.txt": "3273a927ee759cf46705189cca295e4303a9f6b62ba30999e6c739b731daa3db",
+    "data/processed/statements/2024-04-05/jayanth_varma.txt": "672b3b5f678afc76a36155fdc2c4ea5d6d69f173c13e7e95ea836f6f6b5b029f",
+    "data/processed/statements/2024-04-05/michael_patra.txt": "b43e5fc2f74b21e1dd019c0f9e024a46979af7b0551cd66981dadf3002b35489",
+    "data/processed/statements/2024-04-05/rajiv_ranjan.txt": "eb9a70861178d1e03bdb2343d30d35ef9c24dcaf38de5d73f00c708596b3718e",
+    "data/processed/statements/2024-04-05/shaktikanta_das.txt": "513706834f0c2030af0df7b96a859952ad7d522e68ee90412ac4fad617b4e2f5",
+    "data/processed/statements/2024-04-05/shashanka_bhide.txt": "9be836275e09fca800b8fcc22d1a4d29d204ba7126d30f8014a1ba39a6598b83",
+    "data/processed/statements/2024-06-07/ashima_goyal.txt": "e88e6527a6e7e3235da208e279dbc7c66178e7c0d93fd75a5f61622c0ce5a845",
+    "data/processed/statements/2024-06-07/jayanth_varma.txt": "f020e12dace22fa278c5a6ad227f0f5d27c7b8c2d78f023947ff562fef59ab2b",
+    "data/processed/statements/2024-06-07/michael_patra.txt": "f6ebc4bce312d75d2b96d544c91dde77c88f0c5cf5bba2c763e7f46c9898f64f",
+    "data/processed/statements/2024-06-07/rajiv_ranjan.txt": "b32ae9a77add9053e8dfbd4e2753862ed172d861b1e28b2e631fdd3eaa566c4d",
+    "data/processed/statements/2024-06-07/shaktikanta_das.txt": "9c783c20165dd9cee3d9a1dc3c87e180fe6a14c8dac485859a9a3eeff31d8b9b",
+    "data/processed/statements/2024-06-07/shashanka_bhide.txt": "04969caa569c2f44b3ad8b54c291b8e502dcaa0611d568bf4a17b8a929a8a805",
+    "data/processed/statements/2024-08-08/ashima_goyal.txt": "0dbdded843dfdcac6856c0100a003821f3832be19fb3090012e8045a7ab51729",
+    "data/processed/statements/2024-08-08/jayanth_varma.txt": "2cf606896b0aa74d1504ed4dae40b757aa4ff905267e1978b70ee2a531bc7f8a",
+    "data/processed/statements/2024-08-08/michael_patra.txt": "3441c3b4661df1114e1b576ca50e8d379fd2ecc9c6660502600c1575c33aa64f",
+    "data/processed/statements/2024-08-08/rajiv_ranjan.txt": "91eddd710dcf629f16a32dfbd540bb1c7513ff619f8770e6ef6eabb853f97eae",
+    "data/processed/statements/2024-08-08/shaktikanta_das.txt": "46aa70218e7ff79a0a554e828664663c9563d7dd68310cee6485c8bda9d8b593",
+    "data/processed/statements/2024-08-08/shashanka_bhide.txt": "429402e2d5a2e3834cf6704e3182360b35ba02f257ee6f973a3aea4674b69079",
+    "personas/2020_2024_roster/ashima_goyal.yaml": "2ad50e238a605fb691be322a0e53fa9fe302ec0570beaca427d256a817e3b796",
+    "personas/2020_2024_roster/jayanth_varma.yaml": "25da21a67f38827edb401eb0feb413b65b1f9a094560b9ff51e526c17d70c640",
+    "personas/2020_2024_roster/michael_patra.yaml": "cb2f3048b1dae1193fbcf0eccb352eb536ac7c922ba32116ae63c0209d8dcac4",
+    "personas/2020_2024_roster/mridul_saggar.yaml": "5857feded51edaeb367667f406e1fcc79949b8ee5f810af3975a396063a5ac20",
+    "personas/2020_2024_roster/rajiv_ranjan.yaml": "3c5e52c37defe2e27cccf437926835b22433311b7b97f62e3bbdc990342cecb3",
+    "personas/2020_2024_roster/shaktikanta_das.yaml": "5e731ba7bfe1280d6760de63652297b3a2762b9a0016f11337120616fcb0890c",
+    "personas/2020_2024_roster/shashanka_bhide.yaml": "4ee8751be02d573f6945eaa80eb4b7ccecdfb51d0709ccaab2c33e5422cce4a1",
+    "personas/PERSONA_REVIEW.md": "f82b5bdcf15850fd4c0366cd3e33bef9bdda5318b2933a7a44fb3b3fa691b6be"
+  },
+  "panel": {
+    "rows": 25,
+    "calibration_rows": 17,
+    "holdout_rows": 8,
+    "builder_equals_parquet": true,
+    "dates_unique": true,
+    "dates_sorted": true,
+    "all_records": [
+      {
+        "meeting_date": "2020-10-09",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 7.34,
+        "cpi_core_yoy_pct": 5.4,
+        "cpi_food_yoy_pct": 10.68,
+        "iip_growth_yoy_pct": -8.0,
+        "gva_growth_yoy_pct": -7.5,
+        "output_gap_pct": -4.2,
+        "system_liquidity_cr": 450000.0,
+        "usd_inr_exchange_rate": 73.15,
+        "brent_crude_usd_bbl": 42.8,
+        "us_fed_funds_rate_pct": 0.09,
+        "monsoon_departure_lpa_pct": 9.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 6.93,
+        "cpi_core_yoy_pct": 5.51,
+        "cpi_food_yoy_pct": 9.5,
+        "iip_growth_yoy_pct": -1.9,
+        "gva_growth_yoy_pct": -5.2,
+        "output_gap_pct": -3.5,
+        "system_liquidity_cr": 520000.0,
+        "usd_inr_exchange_rate": 73.8,
+        "brent_crude_usd_bbl": 48.7,
+        "us_fed_funds_rate_pct": 0.09,
+        "monsoon_departure_lpa_pct": 9.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 4.59,
+        "cpi_core_yoy_pct": 5.34,
+        "cpi_food_yoy_pct": 3.41,
+        "iip_growth_yoy_pct": -1.6,
+        "gva_growth_yoy_pct": 1.0,
+        "output_gap_pct": -2.8,
+        "system_liquidity_cr": 580000.0,
+        "usd_inr_exchange_rate": 72.9,
+        "brent_crude_usd_bbl": 59.34,
+        "us_fed_funds_rate_pct": 0.08,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 5.03,
+        "cpi_core_yoy_pct": 5.88,
+        "cpi_food_yoy_pct": 4.94,
+        "iip_growth_yoy_pct": 5.2,
+        "gva_growth_yoy_pct": 1.5,
+        "output_gap_pct": -2.1,
+        "system_liquidity_cr": 600000.0,
+        "usd_inr_exchange_rate": 74.5,
+        "brent_crude_usd_bbl": 62.8,
+        "us_fed_funds_rate_pct": 0.07,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 6.3,
+        "cpi_core_yoy_pct": 6.55,
+        "cpi_food_yoy_pct": 5.01,
+        "iip_growth_yoy_pct": 13.4,
+        "gva_growth_yoy_pct": 18.8,
+        "output_gap_pct": -2.5,
+        "system_liquidity_cr": 550000.0,
+        "usd_inr_exchange_rate": 73.1,
+        "brent_crude_usd_bbl": 71.89,
+        "us_fed_funds_rate_pct": 0.06,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 5.59,
+        "cpi_core_yoy_pct": 5.8,
+        "cpi_food_yoy_pct": 3.96,
+        "iip_growth_yoy_pct": 11.5,
+        "gva_growth_yoy_pct": 12.0,
+        "output_gap_pct": -1.8,
+        "system_liquidity_cr": 700000.0,
+        "usd_inr_exchange_rate": 74.2,
+        "brent_crude_usd_bbl": 70.7,
+        "us_fed_funds_rate_pct": 0.09,
+        "monsoon_departure_lpa_pct": -1.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 4.48,
+        "cpi_core_yoy_pct": 5.82,
+        "cpi_food_yoy_pct": 0.68,
+        "iip_growth_yoy_pct": 4.0,
+        "gva_growth_yoy_pct": 8.5,
+        "output_gap_pct": -1.2,
+        "system_liquidity_cr": 750000.0,
+        "usd_inr_exchange_rate": 75.0,
+        "brent_crude_usd_bbl": 82.39,
+        "us_fed_funds_rate_pct": 0.08,
+        "monsoon_departure_lpa_pct": -1.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 4.91,
+        "cpi_core_yoy_pct": 6.1,
+        "cpi_food_yoy_pct": 1.87,
+        "iip_growth_yoy_pct": 1.6,
+        "gva_growth_yoy_pct": 5.4,
+        "output_gap_pct": -0.8,
+        "system_liquidity_cr": 800000.0,
+        "usd_inr_exchange_rate": 75.5,
+        "brent_crude_usd_bbl": 75.82,
+        "us_fed_funds_rate_pct": 0.08,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 6.01,
+        "cpi_core_yoy_pct": 6.0,
+        "cpi_food_yoy_pct": 5.43,
+        "iip_growth_yoy_pct": 1.5,
+        "gva_growth_yoy_pct": 4.7,
+        "output_gap_pct": -0.5,
+        "system_liquidity_cr": 650000.0,
+        "usd_inr_exchange_rate": 74.9,
+        "brent_crude_usd_bbl": 91.55,
+        "us_fed_funds_rate_pct": 0.08,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 6.95,
+        "cpi_core_yoy_pct": 6.4,
+        "cpi_food_yoy_pct": 7.68,
+        "iip_growth_yoy_pct": 2.2,
+        "gva_growth_yoy_pct": 4.1,
+        "output_gap_pct": -0.2,
+        "system_liquidity_cr": 580000.0,
+        "usd_inr_exchange_rate": 75.9,
+        "brent_crude_usd_bbl": 102.78,
+        "us_fed_funds_rate_pct": 0.33,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "current_repo_rate_pct": 4.0,
+        "cpi_headline_yoy_pct": 7.79,
+        "cpi_core_yoy_pct": 7.1,
+        "cpi_food_yoy_pct": 8.38,
+        "iip_growth_yoy_pct": 6.7,
+        "gva_growth_yoy_pct": 4.5,
+        "output_gap_pct": 0.1,
+        "system_liquidity_cr": 420000.0,
+        "usd_inr_exchange_rate": 77.4,
+        "brent_crude_usd_bbl": 109.11,
+        "us_fed_funds_rate_pct": 0.77,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 40,
+        "real_stance_decision": "accommodative",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "current_repo_rate_pct": 4.4,
+        "cpi_headline_yoy_pct": 7.04,
+        "cpi_core_yoy_pct": 6.2,
+        "cpi_food_yoy_pct": 7.97,
+        "iip_growth_yoy_pct": 19.6,
+        "gva_growth_yoy_pct": 13.5,
+        "output_gap_pct": 0.3,
+        "system_liquidity_cr": 350000.0,
+        "usd_inr_exchange_rate": 77.7,
+        "brent_crude_usd_bbl": 123.58,
+        "us_fed_funds_rate_pct": 1.21,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "accommodative",
+        "real_rate_decision_bps": 50,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "current_repo_rate_pct": 4.9,
+        "cpi_headline_yoy_pct": 6.71,
+        "cpi_core_yoy_pct": 6.0,
+        "cpi_food_yoy_pct": 6.75,
+        "iip_growth_yoy_pct": 12.3,
+        "gva_growth_yoy_pct": 11.2,
+        "output_gap_pct": 0.4,
+        "system_liquidity_cr": 220000.0,
+        "usd_inr_exchange_rate": 79.2,
+        "brent_crude_usd_bbl": 94.92,
+        "us_fed_funds_rate_pct": 2.33,
+        "monsoon_departure_lpa_pct": 8.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 50,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": []
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "current_repo_rate_pct": 5.4,
+        "cpi_headline_yoy_pct": 7.0,
+        "cpi_core_yoy_pct": 6.1,
+        "cpi_food_yoy_pct": 7.62,
+        "iip_growth_yoy_pct": -0.8,
+        "gva_growth_yoy_pct": 6.3,
+        "output_gap_pct": 0.2,
+        "system_liquidity_cr": 80000.0,
+        "usd_inr_exchange_rate": 81.35,
+        "brent_crude_usd_bbl": 87.96,
+        "us_fed_funds_rate_pct": 3.08,
+        "monsoon_departure_lpa_pct": 6.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 50,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma",
+          "ashima_goyal"
+        ]
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "current_repo_rate_pct": 5.9,
+        "cpi_headline_yoy_pct": 5.88,
+        "cpi_core_yoy_pct": 6.05,
+        "cpi_food_yoy_pct": 4.67,
+        "iip_growth_yoy_pct": 7.3,
+        "gva_growth_yoy_pct": 4.6,
+        "output_gap_pct": 0.1,
+        "system_liquidity_cr": -35000.0,
+        "usd_inr_exchange_rate": 82.5,
+        "brent_crude_usd_bbl": 77.17,
+        "us_fed_funds_rate_pct": 3.78,
+        "monsoon_departure_lpa_pct": 6.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 35,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma",
+          "ashima_goyal"
+        ]
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "current_repo_rate_pct": 6.25,
+        "cpi_headline_yoy_pct": 6.52,
+        "cpi_core_yoy_pct": 6.2,
+        "cpi_food_yoy_pct": 5.94,
+        "iip_growth_yoy_pct": 5.2,
+        "gva_growth_yoy_pct": 4.7,
+        "output_gap_pct": 0.2,
+        "system_liquidity_cr": -12000.0,
+        "usd_inr_exchange_rate": 82.7,
+        "brent_crude_usd_bbl": 85.09,
+        "us_fed_funds_rate_pct": 4.57,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 25,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma",
+          "ashima_goyal"
+        ]
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 5.66,
+        "cpi_core_yoy_pct": 5.8,
+        "cpi_food_yoy_pct": 4.79,
+        "iip_growth_yoy_pct": 4.2,
+        "gva_growth_yoy_pct": 6.1,
+        "output_gap_pct": 0.3,
+        "system_liquidity_cr": 25000.0,
+        "usd_inr_exchange_rate": 82.0,
+        "brent_crude_usd_bbl": 85.12,
+        "us_fed_funds_rate_pct": 4.83,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 4.25,
+        "cpi_core_yoy_pct": 5.02,
+        "cpi_food_yoy_pct": 2.91,
+        "iip_growth_yoy_pct": 4.5,
+        "gva_growth_yoy_pct": 7.8,
+        "output_gap_pct": 0.5,
+        "system_liquidity_cr": 75000.0,
+        "usd_inr_exchange_rate": 82.6,
+        "brent_crude_usd_bbl": 75.96,
+        "us_fed_funds_rate_pct": 5.08,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 7.44,
+        "cpi_core_yoy_pct": 4.9,
+        "cpi_food_yoy_pct": 11.51,
+        "iip_growth_yoy_pct": 5.7,
+        "gva_growth_yoy_pct": 7.8,
+        "output_gap_pct": 0.6,
+        "system_liquidity_cr": 120000.0,
+        "usd_inr_exchange_rate": 82.8,
+        "brent_crude_usd_bbl": 86.4,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": -5.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 5.02,
+        "cpi_core_yoy_pct": 4.5,
+        "cpi_food_yoy_pct": 6.56,
+        "iip_growth_yoy_pct": 10.3,
+        "gva_growth_yoy_pct": 7.6,
+        "output_gap_pct": 0.7,
+        "system_liquidity_cr": -15000.0,
+        "usd_inr_exchange_rate": 83.2,
+        "brent_crude_usd_bbl": 84.58,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": -6.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 5.55,
+        "cpi_core_yoy_pct": 4.1,
+        "cpi_food_yoy_pct": 8.7,
+        "iip_growth_yoy_pct": 2.4,
+        "gva_growth_yoy_pct": 6.5,
+        "output_gap_pct": 0.6,
+        "system_liquidity_cr": -45000.0,
+        "usd_inr_exchange_rate": 83.4,
+        "brent_crude_usd_bbl": 75.84,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": -6.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 5.1,
+        "cpi_core_yoy_pct": 3.6,
+        "cpi_food_yoy_pct": 8.3,
+        "iip_growth_yoy_pct": 3.8,
+        "gva_growth_yoy_pct": 6.8,
+        "output_gap_pct": 0.5,
+        "system_liquidity_cr": -150000.0,
+        "usd_inr_exchange_rate": 83.0,
+        "brent_crude_usd_bbl": 81.63,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 4.85,
+        "cpi_core_yoy_pct": 3.25,
+        "cpi_food_yoy_pct": 8.52,
+        "iip_growth_yoy_pct": 5.0,
+        "gva_growth_yoy_pct": 6.3,
+        "output_gap_pct": 0.4,
+        "system_liquidity_cr": -20000.0,
+        "usd_inr_exchange_rate": 83.3,
+        "brent_crude_usd_bbl": 90.45,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma"
+        ]
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 4.75,
+        "cpi_core_yoy_pct": 3.1,
+        "cpi_food_yoy_pct": 8.69,
+        "iip_growth_yoy_pct": 4.4,
+        "gva_growth_yoy_pct": 6.8,
+        "output_gap_pct": 0.4,
+        "system_liquidity_cr": 40000.0,
+        "usd_inr_exchange_rate": 83.5,
+        "brent_crude_usd_bbl": 79.62,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": 0.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma",
+          "ashima_goyal"
+        ]
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "current_repo_rate_pct": 6.5,
+        "cpi_headline_yoy_pct": 3.54,
+        "cpi_core_yoy_pct": 3.15,
+        "cpi_food_yoy_pct": 5.42,
+        "iip_growth_yoy_pct": 4.7,
+        "gva_growth_yoy_pct": 6.8,
+        "output_gap_pct": 0.3,
+        "system_liquidity_cr": 110000.0,
+        "usd_inr_exchange_rate": 83.95,
+        "brent_crude_usd_bbl": 78.82,
+        "us_fed_funds_rate_pct": 5.33,
+        "monsoon_departure_lpa_pct": 7.0,
+        "prev_stance": "withdrawal_of_accommodation",
+        "real_rate_decision_bps": 0,
+        "real_stance_decision": "withdrawal_of_accommodation",
+        "real_dissenters": [
+          "jayanth_varma",
+          "ashima_goyal"
+        ]
+      }
+    ]
+  },
+  "manifest": {
+    "rows": 25,
+    "checks": [
+      {
+        "file": "mpc_minutes_prid_55267.html",
+        "recorded_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+        "calculated_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_55538.html",
+        "recorded_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+        "calculated_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_55899.html",
+        "recorded_sha256": "53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd",
+        "calculated_sha256": "53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_56252.html",
+        "recorded_sha256": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+        "calculated_sha256": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_56606.html",
+        "recorded_sha256": "4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b",
+        "calculated_sha256": "4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_56982.html",
+        "recorded_sha256": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+        "calculated_sha256": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_57366.html",
+        "recorded_sha256": "39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521",
+        "calculated_sha256": "39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_57735.html",
+        "recorded_sha256": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+        "calculated_sha256": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_58136.html",
+        "recorded_sha256": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+        "calculated_sha256": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_58545.html",
+        "recorded_sha256": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+        "calculated_sha256": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_50560.html",
+        "recorded_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+        "calculated_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_50831.html",
+        "recorded_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+        "calculated_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_51161.html",
+        "recorded_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+        "calculated_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_51456.html",
+        "recorded_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+        "calculated_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_51754.html",
+        "recorded_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+        "calculated_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_52088.html",
+        "recorded_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+        "calculated_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_52450.html",
+        "recorded_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+        "calculated_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_52843.html",
+        "recorded_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+        "calculated_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_53319.html",
+        "recorded_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+        "calculated_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_53601.html",
+        "recorded_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+        "calculated_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_53728.html",
+        "recorded_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+        "calculated_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_53904.html",
+        "recorded_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+        "calculated_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_54236.html",
+        "recorded_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+        "calculated_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_54541.html",
+        "recorded_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+        "calculated_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+        "match": true
+      },
+      {
+        "file": "mpc_minutes_prid_54918.html",
+        "recorded_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+        "calculated_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+        "match": true
+      }
+    ],
+    "all_hashes_match": true
+  },
+  "reextraction": {
+    "raw_documents": 25,
+    "statements": 150,
+    "byte_equal_count": 150,
+    "full_normalized_associated_raw_match_count": 150,
+    "comparisons": [
+      {
+        "meeting_date": "2023-02-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "mridul_saggar",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "shashanka_bhide",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "ashima_goyal",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "jayanth_varma",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "rajiv_ranjan",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "michael_patra",
+        "existing_present": true,
+        "equal": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "shaktikanta_das",
+        "existing_present": true,
+        "equal": true
+      }
+    ],
+    "normalized_comparisons": [
+      {
+        "meeting_date": "2023-02-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-10-09",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "mridul_saggar",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-05-18",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "shashanka_bhide",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "ashima_goyal",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "jayanth_varma",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "rajiv_ranjan",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "michael_patra",
+        "full_text_in_associated_raw": true
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member": "shaktikanta_das",
+        "full_text_in_associated_raw": true
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "file": "mpc_minutes_prid_55267.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, February 6-8, 2023",
+      "manifest_date": "2023-02",
+      "extractor_date": "2023-02-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty first meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during February 6-8, 2023.",
+        "10. CPI headline inflation moderated to 5.7 per cent (y-o-y) in December 2022 – after easing to 5.9 per cent in November – on the back of double digit deflation in vegetable prices. On the other hand, inflationary pressures accentuated across cereals, protein-based food items and spices. Fuel inflation edged up primarily from an uptick in kerosene prices. Core CPI (i.e., CPI excluding food and fuel) inflation rose to 6.1 per cent in December due to sustained price pressures in health, education and personal care and effects.",
+        "14. The easing of inflation in the last two months was driven by strong deflation in vegetables, which may dissipate with the summer season uptick. Headline inflation excluding vegetables has been rising well above the upper tolerance band and may remain elevated, especially with high core inflation pressures. Inflation, therefore, remains a major risk to the outlook. Domestic economic activity is expected to remain resilient aided by the sustained focus on capital and infrastructure spending in the Union Budget 2023-24, even as continuing fiscal consolidation creates space for private investment. While the policy repo rate increases undertaken since May 2022 are working their way through the system, it is imperative to remain alert on inflation so as to ensure that it remains within the tolerance band and progressively aligns with the target. On balance, the MPC is of the view that further calibrated monetary policy action is warranted to keep inflation expectations anchored, break core inflation persistence and thereby strengthen medium-term growth prospects. Accordingly, the MPC decided to increase the policy repo rate by 25 basis points to 6.50 per cent. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth.",
+        "15. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 25 basis points. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against the repo rate hike.",
+        "16. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_55538.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, April 3, 5 and 6, 2023",
+      "manifest_date": "2023-04",
+      "extractor_date": "2023-04-06",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty second meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during April 3, 5 and 6, 2023.",
+        "10. CPI headline inflation rose from 5.7 per cent in December 2022 to 6.4 per cent in February 2023 on the back of higher inflation in cereals, milk and fruits and slower deflation in vegetables prices. Fuel inflation remained elevated, though some softening was witnessed in February due to a fall in kerosene (PDS) prices and favourable base effects. Core inflation (i.e., CPI excluding food and fuel) remained elevated and was above 6 per cent in January-February. The moderation observed in inflation in clothing and footwear, and transportation and communication was largely offset by a pick-up in inflation in personal care and effects and housing.",
+        "14. With CPI headline inflation ruling persistently above the tolerance band, the MPC decided to remain resolutely focused on aligning inflation with the target. It is essential to rein in the generalisation of price pressures and anchor inflation expectations. An environment of low and stable prices is necessary for the resilience in domestic economic activity to be sustained. While the policy rate has been increased by a cumulative 250 basis points since May 2022, which is still working through the system, there can be no room for letting down the guard on price stability. Taking these factors into account, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting, with readiness to act, should the situation so warrant. The MPC will continue to keep a strong vigil on the evolving inflation and growth outlook and will not hesitate to take further action as may be required in its future meetings. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth.",
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_55899.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, June 6 to 8, 2023",
+      "manifest_date": "2023-06",
+      "extractor_date": "2023-06-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty third meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during June 6 to 8, 2023.",
+        "10. CPI inflation fell sharply to 4.7 per cent in April 2023 from 6.4 per cent in February on the back of large favourable base effects, with softening observed across all the three major groups. Food group inflation eased, with moderation in cereals, eggs, milk, fruits, meat and fish, spices and prepared meals inflation and deepening of deflation in edible oils. In the fuel group, inflation in LPG and firewood and chips prices fell and kerosene prices slipped into deflation. Core inflation (i.e., CPI inflation excluding food and fuel) dipped, driven down by clothing and footwear, household goods and services, health, transport and communication, personal care and effects and recreation and amusement sub-groups.",
+        "14. The MPC took note of the moderation in CPI headline inflation in March-April into the tolerance band, in line with projections, reflecting the combined impact of monetary tightening and supply augmenting measures. Headline inflation is projected to decline in 2023-24 from its level in 2022-23 but would still be above the target, warranting continuous vigil. The progress of the south west monsoon is critical in this regard. Domestic economic activity is holding up well. Consumer confidence is improving and businesses remain optimistic about the future. The cumulative rate hike of 250 basis points undertaken by the MPC is transmitting through the economy and its fuller impact should keep inflationary pressures contained in the coming months. Monetary policy would need to be carefully calibrated for alignment of inflation with the target. Against this backdrop, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent. The MPC resolved to continue keeping a close vigil on the evolving inflation and growth outlook. It will take further monetary actions promptly and appropriately as required to keep inflation expectations firmly anchored and to bring down inflation to the target. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth.",
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_56252.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, August 8 to 10, 2023",
+      "manifest_date": "2023-08",
+      "extractor_date": "2023-08-10",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty fourth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during August 8 to 10, 2023.",
+        "10. Headline CPI inflation picked up from 4.3 per cent in May to 4.8 per cent in June, driven largely by food group dynamics on the back of higher prices of vegetables, eggs, meat, fish, cereals, pulses and spices. Fuel inflation softened during May-June, primarily reflecting the fall in kerosene prices. Core inflation (i.e., CPI excluding food and fuel) was steady in June.",
+        "14. The headline inflation is likely to witness a spike in the near months on account of supply disruptions due to adverse weather conditions. It is important to be vigilant about these shocks with a readiness to act appropriately so as to ensure that their effects on the general level of prices do not persist. There are risks from the impact of the skewed south-west monsoon so far, a possible El Niño event and upward pressures on global food prices due to geopolitical hostilities. Domestic economic activity is holding up well, supported by domestic demand in spite of the drag from weak external demand. With the cumulative rate hike of 250 basis points undertaken by the MPC working its way into the economy, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent, but with preparedness to undertake policy responses, should the situation so warrant. The MPC will maintain a close vigil on the evolving inflation scenario and remain resolute in its commitment to aligning inflation to the target and anchoring inflation expectations. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth.",
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns with the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_56606.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, October 4 to 6, 2023",
+      "manifest_date": "2023-10",
+      "extractor_date": "2023-10-06",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty fifth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during October 4 to 6, 2023.",
+        "10. CPI headline inflation surged by 2.6 percentage points to 7.4 per cent in July due to spike in vegetable prices, before moderating somewhat in August to 6.8 per cent. Fuel inflation edged up to 4.3 per cent in August. Core inflation (i.e., CPI excluding food and fuel) softened to 4.9 per cent during July-August 2023.",
+        "14. The MPC observed that the unprecedented food price shocks are impinging on the evolving trajectory of inflation and that recurring incidence of such overlapping shocks can impart generalisation and persistence. Accordingly, the MPC resolved to remain on high alert, given the prevailing environment of elevated global food and energy prices and global financial market volatility. While vegetable prices may undergo further correction and core inflation is easing, the MPC noted that headline inflation is ruling above the tolerance band and its alignment with the target is getting interrupted. Hence, monetary policy needs to remain actively disinflationary. Domestic economic activity is holding up well and is expected to be boosted by festive consumption demand, pick up in investment intentions and improving consumer and business outlook. As the cumulative policy repo rate hike of 250 basis points is still working its way through the economy, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting, but with preparedness to undertake appropriate and timely policy actions, should the situation so warrant. The MPC will remain resolute in its commitment to aligning inflation to the target and anchoring inflation expectations. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth.",
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_56982.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, December 6 to 8, 2023",
+      "manifest_date": "2023-12",
+      "extractor_date": "2023-12-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty sixth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during December 6 to 8, 2023.",
+        "9. CPI headline inflation fell by about 2 percentage points since the last meeting of the MPC to 4.9 per cent in October 2023 on sharp correction in prices of certain vegetables, deflation in fuel and a broad-based moderation in core inflation (CPI inflation excluding food and fuel).",
+        "11. The MPC observed that recurring food price shocks are impeding the ongoing disinflation process. Core disinflation has been steady, indicative of the impact of past monetary policy actions. Headline inflation, however, remains volatile, with possible implications for the anchoring of expectations. Domestic food inflation unpredictability, and volatility in crude oil prices and financial markets in an uncertain international environment pose risks to the inflation outlook. The path of disinflation needs to be sustained. The MPC will carefully monitor any signs of generalisation of food price pressures which can fritter away the gains in easing of core inflation. On the growth front, improved momentum in investment demand along with business and consumer optimism, would support domestic economic activity and ease supply constraints. As the cumulative policy repo rate hike is still working its way through the economy, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting, but with preparedness to undertake appropriate and timely policy actions, should the situation so warrant. Monetary policy must continue to be actively disinflationary to ensure anchoring of inflation expectations and fuller transmission. The MPC will remain resolute in its commitment to aligning inflation to the target. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth.",
+        "12. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 6.50 per cent.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_57366.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, February 6 to 8, 2024",
+      "manifest_date": "2024-02",
+      "extractor_date": "2024-02-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty seventh meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during February 6 to 8, 2024.",
+        "9. From its October 2023 trough of 4.9 per cent, CPI inflation increased successively in the next two months to 5.7 per cent by December. Food inflation, primarily y-o-y vegetable price increases, drove the pick-up in headline inflation, even as deflation in fuel deepened. Core inflation (CPI inflation excluding food and fuel) softened to a four-year low of 3.8 per cent in December.",
+        "12. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_57735.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, April 3 to 5, 2024",
+      "manifest_date": "2024-04",
+      "extractor_date": "2024-04-05",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty eighth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during April 3 to 5, 2024.",
+        "9. Headline inflation softened to 5.1 per cent during January-February 2024, from 5.7 per cent in December. After correcting in January, food inflation edged up to 7.8 per cent in February primarily driven by vegetables, eggs, meat and fish. Fuel prices remained in deflation for the sixth consecutive month in February. CPI core (CPI excluding food and fuel) disinflation took it down to 3.4 per cent in February – this was one of the lowest in the current CPI series, with both goods and services components registering a fall in inflation.",
+        "11. The MPC noted that domestic economic activity remains resilient, backed by strong investment demand and upbeat business and consumer sentiments. Headline inflation has come off the December peak; however, food price pressures have been interrupting the ongoing disinflation process, posing challenges for the final descent of inflation to the target. Unpredictable supply side shocks from adverse climate events and their impact on agricultural production as also geo-political tensions and spillovers to trade and commodity markets add uncertainties to the outlook. As the path of disinflation needs to be sustained till inflation reaches the 4 per cent target on a durable basis, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting. Monetary policy must continue to be actively disinflationary to ensure anchoring of inflation expectations and fuller transmission. The MPC will remain resolute in its commitment to aligning inflation to the target. The MPC believes that durable price stability would set strong foundations for a period of high growth. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth.",
+        "12. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_58136.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, June 5 to 7, 2024",
+      "manifest_date": "2024-06",
+      "extractor_date": "2024-06-07",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The forty ninth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during June 5 to 7, 2024.",
+        "9. Headline inflation has seen sequential moderation since February 2024, albeit in a narrow range from 5.1 per cent in February to 4.8 per cent in April 2024. Food inflation, however, remains elevated due to persistence of inflation pressures in vegetables, pulses, cereals, and spices. Deflation in fuel prices deepened during March-April, reflecting the cut in liquified petroleum gas (LPG) prices. Core (CPI excluding food and fuel) inflation eased further to 3.2 per cent in April, the lowest in the current CPI series, with core services inflation also falling to historic lows.",
+        "11. The MPC noted that the domestic growth-inflation balance has moved favourably since its last meeting in April 2024. Economic activity remains resilient supported by domestic demand. Investment demand is gaining more ground and private consumption is exhibiting signs of revival. Although headline inflation is gradually easing, driven by softening in its core component, the path of disinflation is interrupted by volatile and elevated food inflation due to adverse weather events. Inflation is expected to temporarily fall below the target during Q2:2024-25 due to favourable base effect, before reversing subsequently. For the final descent of inflation to the target and its anchoring, monetary policy has to be watchful of spillovers from food price pressures to core inflation and inflation expectations. The MPC will remain resolute in its commitment to aligning inflation to the 4 per cent target on a durable basis. Accordingly, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting. The MPC reiterates the need to continue with the disinflationary stance, until a durable alignment of the headline CPI inflation with the target is achieved. Enduring price stability sets strong foundations for a sustained period of high growth. Hence, the MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth.",
+        "12. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_58545.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, August 6 to 8, 2024",
+      "manifest_date": "2024-08",
+      "extractor_date": "2024-08-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The fiftieth meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during August 6 to 8, 2024.",
+        "9. Headline inflation increased to 5.1 per cent in June 2024 after remaining steady at 4.8 per cent during April-May 2024. Worsening of food inflation pressures – driven primarily by a sharp increase in prices of vegetables, pulses and edible oils along with a pick-up in inflation across cereals, milk, fruits and prepared meals – pushed up headline inflation. The fuel group remained in deflation, reflecting the cumulative impact of the sharp cuts in LPG price in August 2023 and March 2024. Core (CPI excluding food and fuel) inflation at 3.1 per cent in May-June touched a new low in the current CPI series, with core services inflation also at its lowest in the series.",
+        "11. The MPC expects domestic growth to hold up on the strength of investment demand, steady urban consumption and rising rural consumption. Risks from volatile and elevated food prices remain high, which may adversely impact inflation expectations and result in spillovers to core inflation. There are also indications of core inflation bottoming out. Accordingly, the MPC decided to remain watchful on how these forces play out, going forward. The MPC stays resolute in its commitment to aligning inflation to the 4 per cent target on a durable basis. In these circumstances, the MPC decided to keep the policy repo rate unchanged at 6.50 per cent in this meeting. The MPC reiterates the need to continue with the disinflationary stance, until a durable alignment of the headline CPI inflation with the target is achieved. Enduring price stability sets strong foundations for a sustained period of high growth. Hence the MPC also considers it appropriate to continue with the disinflationary stance of withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth.",
+        "12. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to keep the policy repo rate unchanged at 6.50 per cent. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted to reduce the policy repo rate by 25 basis points.",
+        "13. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation progressively aligns to the target, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted for a change in stance to neutral."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_50560.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting October 7 to 9, 2020",
+      "manifest_date": "2020-10",
+      "extractor_date": "2020-10-09",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "8. Headline CPI inflation increased to 6.7 per cent during July-August 2020 as pressures accentuated across food, fuel and core constituents on account of supply disruptions, higher margins and taxes. One year ahead inflation expectations of households suggest some softening in inflation from three months ahead levels. Selling prices of firms remain muted, reflecting the weak demand conditions.",
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_50831.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting December 2 to 4, 2020",
+      "manifest_date": "2020-12",
+      "extractor_date": "2020-12-04",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "6. The outlook for Q4 (October-December) of 2020 is overcast with a surge in COVID-19 infections in a second wave across Europe, the US and major emerging market economies (EMEs), with accompanying lockdowns. Progress on vaccine candidates has, however, generated some offsetting optimism. World trade recorded a rebound in Q3 as lockdowns were eased, but it is likely to slow in Q4 as pent-up demand is exhausted, inventory restocking is completed, and trade-related uncertainty is rising with the second wave. CPI inflation has remained muted across major advanced economies (AEs) while it picked up in some EMEs on firming food prices and supply disruptions. Global financial markets remain buoyant, supported by highly accommodative monetary policies and positive news on the vaccine.",
+        "8. CPI inflation rose sharply to 7.3 per cent in September and further to 7.6 per cent in October 2020, with some evidence that price pressures are spreading. Food inflation surged to double digits in October across protein-rich items including pulses, edible oils, vegetables and spices on multiple supply shocks. Core inflation, i.e., CPI excluding food and fuel, also picked up from 5.4 per cent in September to 5.8 per cent in October. Both three months and one year ahead inflation expectations of households have eased modestly in anticipation of the seasonal moderation of food prices in the winter and easing of supply chain disruptions.",
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary – at least during the current financial year and into the next financial year – to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_51161.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting February 3-5, 2021",
+      "manifest_date": "2021-02",
+      "extractor_date": "2021-02-05",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "8. After breaching the upper tolerance threshold of 6 per cent for six consecutive months (June-November 2020), CPI inflation fell to 4.6 per cent in December on the back of easing food prices and favourable base effects. Food inflation collapsed to 3.9 per cent in December after averaging 9.6 per cent during the previous three months (September-November) due to a sharp correction in vegetable prices and softening of cereal prices with kharif harvest arrivals, alongside supply side interventions. On the other hand, core inflation, i.e. CPI inflation excluding food and fuel remained elevated at 5.5 per cent in December with marginal moderation from a month ago. In the January 2021 round of the Reserve Bank’s survey, inflation expectations of households softened further over a three month ahead horizon in tandem with the moderation in food inflation; one year ahead inflation expectations, however, remained unchanged.",
+        "13. All members of the MPC – Dr. Shashanka Bhide; Dr. Ashima Goyal; Prof. Jayanth R. Varma; Dr. Mridul K. Saggar; Dr. Michael Debabrata Patra; and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged at 4 per cent. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary – at least during the current financial year and into the next financial year – to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_51456.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, April 5-7, 2021",
+      "manifest_date": "2021-04",
+      "extractor_date": "2021-04-07",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "8. Headline inflation increased to 5.0 per cent in February after having eased to 4.1 per cent in January 2021. Within an overall food inflation print of 4.3 per cent in February, five out of twelve food sub-groups recorded double digit inflation. While fuel inflation pressures eased somewhat in February, core inflation registered a generalised hardening and increased by 50 basis points to touch 6 per cent.",
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted for keeping the policy repo rate unchanged. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary to sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_51754.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, June 2 to 4, 2021",
+      "manifest_date": "2021-06",
+      "extractor_date": "2021-06-04",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "6. Since the MPC’s meeting in April, the global economic recovery has been gaining momentum, driven mainly by major advanced economies (AEs) and powered by massive vaccination programmes and stimulus packages. Activity remains uneven in major emerging market economies (EMEs), with downside risks from renewed waves of infections due to contagious mutants of the virus and the relatively slow progress in vaccination. World merchandise trade continues to recover as external demand resumes, though elevated freight rates and container dislocations are emerging as constraints. CPI inflation is firming up in most AEs, driven by release of pent-up demand, elevated input prices and unfavourable base effects. Inflation in major EMEs has been generally close to or above official targets in recent months, pushed up by the sustained rise in global food and commodity prices. Global financial conditions remain benign.",
+        "9. Headline inflation registered a moderation to 4.3 per cent in April from 5.5 per cent in March, largely on favourable base effects. Food inflation fell to 2.7 per cent in April from 5.2 per cent in March, with prices of cereals, vegetables and sugar continuing to decline on a y-o-y basis. While fuel inflation surged, core (CPI excluding food and fuel) inflation moderated in April across most sub-groups barring housing and health, mainly due to base effects. Inflation in transport and communication remained in double digits.",
+        "14. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent. Furthermore, all members of the MPC unanimously voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_52088.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, August 4 to 6, 2021",
+      "manifest_date": "2021-08",
+      "extractor_date": "2021-08-06",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "7. There has been a considerable hardening of commodity prices, particularly of crude oil. The latest agreement within the Organisation of Petroleum Countries (OPEC) plus to raise oil production for a likely restoration of output to the pre-pandemic levels by September 2022 imparted transient softening to spot and future crude prices from the recent peak in early July. Headline inflation has ratcheted up in several advanced economies (AEs) as well as most emerging market economies (EMEs), prompting a few central banks in EMEs to tighten monetary policy. In contrast, sovereign bond yields have softened across AEs as markets seem to have acquiesced to the views of central banks that inflation is largely transitory. In EMEs, bond yields remain relatively high on inflation concerns and country-specific factors. In the foreign exchange market, EME currencies have depreciated in the wake of portfolio outflows since mid-June as risk appetite ebbed, while the US dollar has strengthened.",
+        "10. Headline CPI inflation plateaued at 6.3 per cent in June after having risen by 207 basis points in May 2021. Food inflation increased in June primarily due to an uptick in inflation in edible oils, pulses, eggs, milk and prepared meals and a pick-up in vegetable prices. Fuel inflation moved into double digits during May-June 2021 as inflation in LPG, kerosene, and firewood and chips surged. After rising sharply to 6.6 per cent in May, core inflation moderated to 6.1 per cent in June, driven by softening of inflation in housing, health, transport and communication, recreation and amusement, footwear, pan, tobacco and other intoxicants (as the effects of the one-off post-lockdown taxes imposed a year ago waned), and personal care and effects (due to sharp reduction in inflation in gold).",
+        "15. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "16. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_52450.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, October 6 to 8, 2021",
+      "manifest_date": "2021-10",
+      "extractor_date": "2021-10-08",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "11. Headline CPI inflation at 5.3 per cent in August softened for the second consecutive month, declining by one percentage point from the recent peak in May-June 2021. This was primarily driven by an easing in food inflation. Fuel inflation edged up to a new high in August. Core inflation, i.e. inflation excluding food and fuel, remained elevated and sticky at 5.8 per cent in July-August 2021.",
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_52843.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, December 6 to 8, 2021",
+      "manifest_date": "2021-12",
+      "extractor_date": "2021-12-08",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "7. Commodity prices remain elevated across the board, though there has been some softening since late October and further drop towards end-November following uncertainties from the new COVID-19 variant, among others. Headline inflation in several advanced economies (AEs) and emerging market economies (EMEs) has soared, prompting a number of central banks to continue tightening and others to bring forward policy normalisation. With the US Federal Reserve commencing tapering of its monthly asset purchases and the possibility of faster taper, renewed bouts of volatility and heightened uncertainties have unsettled global financial markets. Bond yields which had risen in most countries, responding to inflation and monetary policy actions, eased from the last week of November. The US dollar has been trading higher in recent weeks against both AE and EME currencies.",
+        "11. Headline CPI inflation, which has been on a downward trajectory since June 2021, edged up to 4.5 per cent in October from 4.3 per cent in September on account of a spike in vegetable prices – due to crop damage from heavy rainfalls in October in several states, and fuel inflation – driven up by international prices of liquefied petroleum gas and kerosene. In fact, fuel inflation at 14.3 per cent in October surged to an all-time high. Core inflation or CPI inflation excluding food and fuel remained elevated at 5.9 per cent during September-October with continuing upside pressures stemming from clothing and footwear, health, and transportation and communication sub-groups.",
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_53319.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, February 8 to 10, 2022",
+      "manifest_date": "2022-02",
+      "extractor_date": "2022-02-10",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "11. Headline CPI inflation edged up to 5.6 per cent y-o-y in December from 4.9 per cent in November due to large adverse base effects. The food group registered a significant decline in prices in December, primarily on account of vegetables, meat and fish, edible oils and fruits, but sharp adverse base effects from vegetables prices resulted in a rise in y-o-y inflation. Fuel inflation eased in December but remained in double digits. Core inflation or CPI inflation excluding food and fuel stayed elevated, though there was some moderation from 6.2 per cent in November to 6.0 per cent in December, driven by transportation and communication, health, housing and recreation and amusement.",
+        "16. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+        "17. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_53601.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, April 6 to 8, 2022",
+      "manifest_date": "2022-04",
+      "extractor_date": "2022-04-08",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "11. Headline CPI inflation edged up to 6.0 per cent in January 2022 and 6.1 per cent in February, breaching the upper tolerance threshold. Pick-up in food inflation contributed the most in headline inflation, with inflation of cereals, vegetables, spices and protein-based food items like eggs, meat and fish being the key drivers. Fuel inflation moderated on continuing deflation in electricity and steady LPG prices. Core inflation, i.e., CPI inflation excluding food and fuel remained elevated, though there was some moderation from 6.0 per cent in January to 5.8 per cent in February primarily due to the easing of inflation in transport and communication; pan, tobacco and intoxicants; recreation and amusement; and health.",
+        "18. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to keep the policy repo rate at 4.0 per cent.",
+        "19. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_53728.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, May 2 and 4, 2022",
+      "manifest_date": "2022-05",
+      "extractor_date": "2022-05-18",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The thirty fifth meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during May 2 and 4, 2022 as an off-cycle meeting to reassess the evolving inflation-growth dynamics and the impact of the developments after its meeting of April 6-8, 2022.",
+        "9. In March 2022, headline CPI inflation surged to 7.0 per cent from 6.1 per cent in February, largely reflecting the impact of geopolitical spillovers. Food inflation increased by 154 basis points to 7.5 per cent and core inflation rose by 54 bps to 6.4 per cent. The rapid rise in inflation is occurring in an environment in which inflationary pressures are broadening across the world. The IMF projects inflation to increase by 2.6 percentage points to 5.7 per cent in advanced economies in 2022 and by 2.8 percentage points to 8.7 per cent in emerging market and developing economies.",
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 40 basis points to 4.4 per cent.",
+        "14. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain accommodative while focusing on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_53904.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, June 6 to 8, 2022",
+      "manifest_date": "2022-06",
+      "extractor_date": "2022-06-08",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The thirty sixth meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during June 6 to 8, 2022.",
+        "10. CPI headline inflation rose further from 7.0 per cent in March 2022 to 7.8 per cent in April 2022, reflecting broad-based increase in all its major constituents. Food inflation pressures accentuated, led by cereals, milk, fruits, vegetables, spices and prepared meals. Fuel inflation was driven up by a rise in LPG and kerosene prices. Core inflation (i.e., CPI excluding food and fuel) hardened across almost all components, dominated by the transport and communication sub-group.",
+        "13. Inflation risks flagged in the April and May resolutions of the MPC have materialised. The projections indicate that inflation is likely to remain above the upper tolerance level of 6 per cent through the first three quarters of 2022-23. Considerable uncertainty surrounds the inflation trajectory due to global growth risks and geopolitical tensions. The supply side measures taken by the government would help to alleviate some cost-push pressures. At the same time, however, the MPC notes that continuing shocks to food inflation could sustain pressures on headline inflation. Persisting inflationary pressures could set in motion second round effects on headline CPI. Hence, there is a need for calibrated monetary policy action to keep inflation expectations anchored and restrain the broadening of price pressures. Accordingly, the MPC decided to increase the policy repo rate by 50 basis points to 4.90 per cent. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth.",
+        "14. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 50 basis points to 4.90 per cent.",
+        "15. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das unanimously voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_54236.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, August 3 to 5, 2022",
+      "manifest_date": "2022-08",
+      "extractor_date": "2022-08-05",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "The thirty seventh meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during August 3 to 5, 2022.",
+        "8. CPI inflation eased to 7.0 per cent (year-on-year, y-o-y) during May-June 2022 from 7.8 per cent in April, although it persists above the upper tolerance band. Food inflation has registered some moderation, especially with the softening of edible oil prices, and deepening deflation in pulses and eggs. Fuel inflation moved back to double digits in June primarily due to the rise in LPG and kerosene prices. While core inflation (i.e., CPI excluding food and fuel) moderated in May-June due to the full direct impact of the cut in excise duties on petrol and diesel pump prices, effected on May 22, 2022, it remains at elevated levels.",
+        "12. Headline inflation has recently flattened and the supply outlook is improving, helped by some easing of global supply constraints. The MPC, however, noted that inflation is projected to remain above the upper tolerance level of 6 per cent through the first three quarters of 2022-23, entailing the risk of destabilising inflation expectations and triggering second round effects. Given the elevated level of inflation and resilience in domestic economic activity, the MPC took the view that further calibrated monetary policy action is needed to contain inflationary pressures, pull back headline inflation within the tolerance band closer to the target, and keep inflation expectations anchored so as to ensure that growth is sustained. Accordingly, the MPC decided to increase the policy repo rate by 50 basis points to 5.40 per cent. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth.",
+        "13. All members of the MPC – Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das – unanimously voted to increase the policy repo rate by 50 basis points to 5.40 per cent.",
+        "14. All members - Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma - voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_54541.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, September 28-30, 2022",
+      "manifest_date": "2022-10",
+      "extractor_date": "2022-09-30",
+      "member_count": 6,
+      "source_lines": [
+        864
+      ],
+      "resolution_paragraphs": [
+        "The thirty eighth meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during September 28-30, 2022.",
+        "10. CPI inflation rose to 7.0 per cent (y-o-y) in August 2022 from 6.7 per cent in July as food inflation moved higher, driven by prices of cereals, vegetables, pulses, spices and milk. Fuel inflation moderated with reduction in kerosene (PDS) prices, though it remained in double digits. Core CPI (i.e., CPI excluding food and fuel) inflation remained sticky at heightened levels, with upside pressures across various constituent goods and services.",
+        "15. Dr. Shashanka Bhide, Prof. Jayanth R. Varma, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 50 basis points. Dr. Ashima Goyal voted to increase the repo rate by 35 basis points.",
+        "16. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Prof. Jayanth R. Varma voted against this part of the resolution."
+      ]
+    },
+    {
+      "file": "mpc_minutes_prid_54918.html",
+      "manifest_title": "Minutes of the Monetary Policy Committee Meeting, December 5-7, 2022",
+      "manifest_date": "2022-12",
+      "extractor_date": "2022-12-07",
+      "member_count": 6,
+      "source_lines": [
+        863
+      ],
+      "resolution_paragraphs": [
+        "The fortieth meeting of the Monetary Policy Committee (MPC), constituted under section 45ZB of the Reserve Bank of India Act, 1934, was held during December 5-7, 2022.",
+        "10. CPI inflation moderated to 6.8 per cent (y-o-y) in October 2022 from 7.4 per cent in September, with favourable base effects mitigating the impact of pick-up in price momentum in October. Food inflation softened, aided by easing inflation in vegetables and edible oils, despite sustained pressures from prices of cereals, milk and spices. Fuel inflation registered some easing in October, driven by softening of price inflation in LPG, kerosene (PDS) and firewood and chips. Core CPI (i.e., CPI excluding food and fuel) inflation persisted at elevated levels at 6 per cent, with price pressures across most of its constituent sub-groups.",
+        "14. Inflation has ruled at or above the upper tolerance band since January 2022 and core inflation is persisting around 6 per cent. Headline inflation is expected to remain above or close to the upper threshold in Q3 and Q4:2022-23. It is likely to moderate in H1:2023-24 but will still remain well above the target. Meanwhile, economic activity has held up well and is expected to be resilient, supported by domestic demand. Net exports would remain subdued due to the drag from evolving external demand conditions. Further, the impact of monetary policy measures undertaken needs to be watched. On balance, the MPC is of the view that, further calibrated monetary policy action is warranted to keep inflation expectations anchored, break the core inflation persistence and contain second round effects, so as to strengthen medium-term growth prospects. Accordingly, the MPC decided to increase the policy repo rate by 35 basis points to 6.25 per cent. The MPC also decided to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth.",
+        "15. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to increase the policy repo rate by 35 basis points. Prof. Jayanth R. Varma voted against the repo rate hike.",
+        "16. Dr. Shashanka Bhide, Dr. Rajiv Ranjan, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. Dr. Ashima Goyal and Prof. Jayanth R. Varma voted against this part of the resolution."
+      ]
+    }
+  ],
+  "persona_calibration": [
+    {
+      "member": "shaktikanta_das",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.23,
+      "calibration_only_score": 0.21,
+      "persisted_score": 0.23,
+      "persisted_matches_full": true,
+      "full_words": 19052,
+      "calibration_words": 14182,
+      "holdout_words": 4870
+    },
+    {
+      "member": "michael_patra",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.61,
+      "calibration_only_score": 0.6,
+      "persisted_score": 0.61,
+      "persisted_matches_full": true,
+      "full_words": 15492,
+      "calibration_words": 12271,
+      "holdout_words": 3221
+    },
+    {
+      "member": "rajiv_ranjan",
+      "full_meeting_count": 15,
+      "calibration_meeting_count": 7,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.43,
+      "calibration_only_score": 0.46,
+      "persisted_score": 0.43,
+      "persisted_matches_full": true,
+      "full_words": 14997,
+      "calibration_words": 7298,
+      "holdout_words": 7699
+    },
+    {
+      "member": "mridul_saggar",
+      "full_meeting_count": 10,
+      "calibration_meeting_count": 10,
+      "holdout_meeting_count": 0,
+      "latest_corpus_date": "2022-04-08",
+      "full_calibrated_score": 0.23,
+      "calibration_only_score": 0.23,
+      "persisted_score": 0.23,
+      "persisted_matches_full": true,
+      "full_words": 13842,
+      "calibration_words": 13842,
+      "holdout_words": 0
+    },
+    {
+      "member": "jayanth_varma",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": -0.31,
+      "calibration_only_score": -0.28,
+      "persisted_score": -0.31,
+      "persisted_matches_full": true,
+      "full_words": 12823,
+      "calibration_words": 9994,
+      "holdout_words": 2829
+    },
+    {
+      "member": "ashima_goyal",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": -0.07,
+      "calibration_only_score": -0.06,
+      "persisted_score": -0.07,
+      "persisted_matches_full": true,
+      "full_words": 24752,
+      "calibration_words": 16557,
+      "holdout_words": 8195
+    },
+    {
+      "member": "shashanka_bhide",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.15,
+      "calibration_only_score": 0.14,
+      "persisted_score": 0.15,
+      "persisted_matches_full": true,
+      "full_words": 35882,
+      "calibration_words": 24596,
+      "holdout_words": 11286
+    }
+  ],
+  "cpi_context_comparison": [
+    {
+      "meeting_date": "2020-10-09",
+      "panel_headline_cpi": 7.34,
+      "raw_minutes_latest_rounded_cpi": 6.7,
+      "raw_reference_period": "July-August 2020",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_50560.html"
+    },
+    {
+      "meeting_date": "2020-12-04",
+      "panel_headline_cpi": 6.93,
+      "raw_minutes_latest_rounded_cpi": 7.6,
+      "raw_reference_period": "October 2020",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_50831.html"
+    },
+    {
+      "meeting_date": "2021-02-05",
+      "panel_headline_cpi": 4.59,
+      "raw_minutes_latest_rounded_cpi": 4.6,
+      "raw_reference_period": "December 2020",
+      "differs_beyond_rounding": false,
+      "source_file": "mpc_minutes_prid_51161.html"
+    },
+    {
+      "meeting_date": "2021-04-07",
+      "panel_headline_cpi": 5.03,
+      "raw_minutes_latest_rounded_cpi": 5.0,
+      "raw_reference_period": "February 2021",
+      "differs_beyond_rounding": false,
+      "source_file": "mpc_minutes_prid_51456.html"
+    },
+    {
+      "meeting_date": "2021-06-04",
+      "panel_headline_cpi": 6.3,
+      "raw_minutes_latest_rounded_cpi": 4.3,
+      "raw_reference_period": "April 2021",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_51754.html"
+    },
+    {
+      "meeting_date": "2021-08-06",
+      "panel_headline_cpi": 5.59,
+      "raw_minutes_latest_rounded_cpi": 6.3,
+      "raw_reference_period": "June 2021",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_52088.html"
+    },
+    {
+      "meeting_date": "2021-10-08",
+      "panel_headline_cpi": 4.48,
+      "raw_minutes_latest_rounded_cpi": 5.3,
+      "raw_reference_period": "August 2021",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_52450.html"
+    },
+    {
+      "meeting_date": "2021-12-08",
+      "panel_headline_cpi": 4.91,
+      "raw_minutes_latest_rounded_cpi": 4.5,
+      "raw_reference_period": "October 2021",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_52843.html"
+    },
+    {
+      "meeting_date": "2022-02-10",
+      "panel_headline_cpi": 6.01,
+      "raw_minutes_latest_rounded_cpi": 5.6,
+      "raw_reference_period": "December 2021",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_53319.html"
+    },
+    {
+      "meeting_date": "2022-04-08",
+      "panel_headline_cpi": 6.95,
+      "raw_minutes_latest_rounded_cpi": 6.1,
+      "raw_reference_period": "February 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_53601.html"
+    },
+    {
+      "meeting_date": "2022-05-18",
+      "panel_headline_cpi": 7.79,
+      "raw_minutes_latest_rounded_cpi": 7.0,
+      "raw_reference_period": "March 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_53728.html"
+    },
+    {
+      "meeting_date": "2022-06-08",
+      "panel_headline_cpi": 7.04,
+      "raw_minutes_latest_rounded_cpi": 7.8,
+      "raw_reference_period": "April 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_53904.html"
+    },
+    {
+      "meeting_date": "2022-08-05",
+      "panel_headline_cpi": 6.71,
+      "raw_minutes_latest_rounded_cpi": 7.0,
+      "raw_reference_period": "May-June 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_54236.html"
+    },
+    {
+      "meeting_date": "2022-09-30",
+      "panel_headline_cpi": 7.0,
+      "raw_minutes_latest_rounded_cpi": 7.0,
+      "raw_reference_period": "August 2022",
+      "differs_beyond_rounding": false,
+      "source_file": "mpc_minutes_prid_54541.html"
+    },
+    {
+      "meeting_date": "2022-12-07",
+      "panel_headline_cpi": 5.88,
+      "raw_minutes_latest_rounded_cpi": 6.8,
+      "raw_reference_period": "October 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_54918.html"
+    },
+    {
+      "meeting_date": "2023-02-08",
+      "panel_headline_cpi": 6.52,
+      "raw_minutes_latest_rounded_cpi": 5.7,
+      "raw_reference_period": "December 2022",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_55267.html"
+    },
+    {
+      "meeting_date": "2023-04-06",
+      "panel_headline_cpi": 5.66,
+      "raw_minutes_latest_rounded_cpi": 6.4,
+      "raw_reference_period": "February 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_55538.html"
+    },
+    {
+      "meeting_date": "2023-06-08",
+      "panel_headline_cpi": 4.25,
+      "raw_minutes_latest_rounded_cpi": 4.7,
+      "raw_reference_period": "April 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_55899.html"
+    },
+    {
+      "meeting_date": "2023-08-10",
+      "panel_headline_cpi": 7.44,
+      "raw_minutes_latest_rounded_cpi": 4.8,
+      "raw_reference_period": "June 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_56252.html"
+    },
+    {
+      "meeting_date": "2023-10-06",
+      "panel_headline_cpi": 5.02,
+      "raw_minutes_latest_rounded_cpi": 6.8,
+      "raw_reference_period": "August 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_56606.html"
+    },
+    {
+      "meeting_date": "2023-12-08",
+      "panel_headline_cpi": 5.55,
+      "raw_minutes_latest_rounded_cpi": 4.9,
+      "raw_reference_period": "October 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_56982.html"
+    },
+    {
+      "meeting_date": "2024-02-08",
+      "panel_headline_cpi": 5.1,
+      "raw_minutes_latest_rounded_cpi": 5.7,
+      "raw_reference_period": "December 2023",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_57366.html"
+    },
+    {
+      "meeting_date": "2024-04-05",
+      "panel_headline_cpi": 4.85,
+      "raw_minutes_latest_rounded_cpi": 5.1,
+      "raw_reference_period": "January-February 2024",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_57735.html"
+    },
+    {
+      "meeting_date": "2024-06-07",
+      "panel_headline_cpi": 4.75,
+      "raw_minutes_latest_rounded_cpi": 4.8,
+      "raw_reference_period": "April 2024",
+      "differs_beyond_rounding": false,
+      "source_file": "mpc_minutes_prid_58136.html"
+    },
+    {
+      "meeting_date": "2024-08-08",
+      "panel_headline_cpi": 3.54,
+      "raw_minutes_latest_rounded_cpi": 5.1,
+      "raw_reference_period": "June 2024",
+      "differs_beyond_rounding": true,
+      "source_file": "mpc_minutes_prid_58545.html"
+    }
+  ],
+  "strict_truth_mapping_mismatch_count": 6,
+  "schema_probe": {
+    "accepted_invalid_date": "2023-99-99",
+    "ground_truth_field_names_or_dissenter_names_present_in_macro_prompt": false,
+    "macro_fields": [
+      "meeting_date",
+      "current_repo_rate_pct",
+      "cpi_headline_yoy_pct",
+      "cpi_core_yoy_pct",
+      "cpi_food_yoy_pct",
+      "iip_growth_yoy_pct",
+      "gva_growth_yoy_pct",
+      "output_gap_pct",
+      "system_liquidity_cr",
+      "usd_inr_exchange_rate",
+      "brent_crude_usd_bbl",
+      "us_fed_funds_rate_pct",
+      "monsoon_departure_lpa_pct",
+      "prev_stance",
+      "real_rate_decision_bps",
+      "real_stance_decision",
+      "real_dissenters"
+    ]
+  },
+  "fred_probe": {
+    "monthly_final_aug1_observation_for_aug10": {
+      "us_fed_funds": 5.33,
+      "usd_inr": 5.33,
+      "brent_crude": 5.33
+    },
+    "earliest_future_observation_for_jul10": {
+      "us_fed_funds": 5.33,
+      "usd_inr": 5.33,
+      "brent_crude": 5.33
+    },
+    "interpretation": "Observation timestamps alone are not release timestamps. Stub demonstrates selector behavior, not actual FRED source values."
+  }
+}

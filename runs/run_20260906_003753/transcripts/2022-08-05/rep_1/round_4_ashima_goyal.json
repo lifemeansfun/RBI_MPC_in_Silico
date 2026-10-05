@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 50,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI inflation at 7.01% persistently breaching the upper tolerance band, it is essential to move decisively toward a neutral real interest rate to anchor inflation expectations. The current positive output gap of 0.40% and the substantial banking system liquidity of 190,000 crore INR indicate that the economy possesses the resilience to absorb a front-loaded adjustment. While I remain committed to supporting the post-pandemic recovery, the persistence of inflationary pressures, exacerbated by global commodity price volatility and exchange rate pass-through, necessitates a 50 bps increase to maintain macroeconomic stability and the credibility of our inflation-targeting framework.",
+  "fallback_triggered": false
+}

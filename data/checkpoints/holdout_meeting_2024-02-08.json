@@ -1,0 +1,18 @@
+{
+  "meeting_date": "2024-02-08",
+  "panel_subset": "holdout",
+  "actual_rate_bps": 0,
+  "sim_rate_bps": 0,
+  "rate_match": true,
+  "directional_match": true,
+  "actual_stance": "withdrawal_of_accommodation",
+  "sim_stance": "withdrawal_of_accommodation",
+  "stance_match": true,
+  "actual_dissenters": "jayanth_varma",
+  "sim_dissenters": "ashima_goyal;jayanth_varma",
+  "dissent_tp": 1,
+  "dissent_fp": 1,
+  "dissent_fn": 0,
+  "tie_broken": false,
+  "fallbacks_used": 0
+}

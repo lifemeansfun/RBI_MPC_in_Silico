@@ -1,0 +1,11 @@
+{
+  "member_id": "michael_patra",
+  "member_name": "Dr. Michael Debabrata Patra",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "The persistence of food inflation at 8.69 per cent remains a significant threat to the durability of the disinflation process. While core inflation has moderated, headline CPI at 4.75 per cent continues to hover above our 4.00 per cent target, and with the economy operating with a positive output gap of 0.40 per cent, the risk of second-round effects remains elevated. Monetary policy must remain vigilant and committed to the withdrawal of accommodation to ensure that inflation expectations are firmly anchored. Any premature easing or shift in stance would be inconsistent with our mandate to bring inflation durably to the target, especially when the growth momentum of 6.80 per cent provides the necessary space to prioritize price stability.",
+  "fallback_triggered": false
+}

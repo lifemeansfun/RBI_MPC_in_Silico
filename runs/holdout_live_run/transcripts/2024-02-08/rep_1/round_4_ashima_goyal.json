@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "While I vote for keeping the repo rate unchanged at 6.50%, I dissent on the stance of 'withdrawal of accommodation'. With core inflation at 3.60%, the real policy rate is now firmly in positive territory, providing sufficient restraint to anchor inflation expectations. The headline CPI of 5.10% is heavily influenced by food inflation at 8.30%, which is a supply-side phenomenon that monetary policy is ill-equipped to address. Maintaining a stance of 'withdrawal of accommodation' when the output gap is positive at 0.50% and core inflation is well-contained risks an unnecessary tightening of financial conditions that could dampen the 6.80% GVA growth momentum. A shift to a neutral stance is more appropriate to reflect that the current policy rate is already at a level that balances inflation control with the need to support the ongoing growth recovery.",
+  "fallback_triggered": false
+}

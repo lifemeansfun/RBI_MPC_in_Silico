@@ -1,0 +1,38 @@
+............................                                             [100%]
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.16-final-0 _______________
+
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+src/__init__.py                             0      0      0      0   100%
+src/attribution/attribution_runner.py      56      3      8      3    91%   53, 59, 123
+src/behavioral/__init__.py                  0      0      0      0   100%
+src/behavioral/debate_orchestrator.py     167     26     50     12    82%   64, 82, 121, 159, 211, 305-306, 350-355, 406-410, 465-469, 524-529, 556, 558
+src/infra/__init__.py                       0      0      0      0   100%
+src/infra/cache.py                         35      2      4      0    95%   111-112
+src/infra/config_loader.py                 86      1      6      2    97%   103, 106->122
+src/infra/cost_governor.py                 32      0      4      0   100%
+src/infra/exceptions.py                    23     23      0      0     0%   6-61
+src/infra/llm_client.py                   150     67     44      6    51%   40-50, 119, 124-129, 134-136, 158-164, 168-200, 211-247, 276-279
+src/infra/transcript_logger.py             32      4      2      1    85%   19, 28-35
+src/rational/__init__.py                    0      0      0      0   100%
+src/rational/monte_carlo.py                67      1     12      1    97%   57
+src/rational/rational_panel_runner.py      82     82      8      0     0%   11-215
+src/rational/taylor_rule.py                34      1      4      1    95%   89
+src/reporting/report_builder.py            34      0      0      0   100%
+src/rule_engine/__init__.py                 0      0      0      0   100%
+src/rule_engine/engine.py                  82     13     36      4    82%   113, 117, 120, 150-162
+src/run_fast_mvp_demo.py                  100    100      6      0     0%   12-264
+src/run_live_meeting.py                    61     61     10      0     0%   6-97
+src/run_stage2_pipeline.py                 93     93      8      0     0%   12-192
+src/scenarios/scenario_runner.py           84     22      4      0    75%   150-162, 181-193, 257, 278
+src/schemas/__init__.py                     0      0      0      0   100%
+src/schemas/debate_schema.py              114     19     30      7    78%   41-42, 54-57, 84, 87-88, 100-103, 142-143, 155-158
+src/schemas/macro_schema.py                54      2     20      9    85%   48, 65->67, 68, 69->71, 71->73, 73->75, 75->77, 77->79, 79->81
+src/schemas/persona_schema.py              24      1      2      1    92%   55
+src/validation/metrics.py                  44      1      6      2    94%   45->48, 74
+-----------------------------------------------------------------------------------
+TOTAL                                    1454    522    264     49    63%
+Coverage JSON written to file /Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/methodology_audit_2026-10-05/coverage.json
+28 passed in 1.00s
+

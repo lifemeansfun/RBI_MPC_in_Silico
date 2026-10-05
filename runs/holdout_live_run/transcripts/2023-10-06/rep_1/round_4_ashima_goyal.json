@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI at 5.02% and the repo rate at 6.50%, the real policy rate is approaching a neutral level of 1%, which is appropriate given the current growth-inflation balance. While food inflation at 6.56% requires monitoring, the supply-side nature of these shocks, exacerbated by a 6.0% monsoon deficit, suggests that maintaining the current stance is prudent to anchor expectations without stifling the robust 7.60% GVA growth. The positive output gap of 0.70% indicates that the economy has sufficient momentum to withstand the current policy settings, and a shift in stance at this juncture could be misconstrued as a premature easing of our commitment to the 4.00% inflation target.",
+  "fallback_triggered": false
+}

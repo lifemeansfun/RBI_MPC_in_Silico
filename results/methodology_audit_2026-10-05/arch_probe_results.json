@@ -1,0 +1,1163 @@
+{
+  "environment": {
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "probes": {
+    "round3_disconnected": {
+      "round3_actions_injected": [
+        -50,
+        50
+      ],
+      "all_six_final_prompts_byte_identical": true,
+      "round3_markers_present_in_final_prompts": false,
+      "decisions": [
+        0,
+        0
+      ],
+      "final_prompt_sha256": [
+        "6bde1167ad17f7ca89908664c04f0bc45cb48462e8989eda632a04feadd2c68c",
+        "e8489c88c4599b81d89b882f189cc95adc3281018488582710503a9bc402e688",
+        "056ade6934ec4b6284b590e9ae007940d7093f087ba3441731aa17178ea5b0a4",
+        "b852d23fb0ae190814b9b107a249d7a5d8405f506c4076596ecb6bea00ed2545",
+        "50d4c53323d7c425f1b8b1072da71fa3cbce4002cce7d9a5704ead5a4a50f723",
+        "2521a5e4a7977388eaacf6944f05a8fdc0e61f22ebfcfb11e736e677bf235f64"
+      ]
+    },
+    "ablation_visibility": {
+      "ablated_r1_rationale_visible_to_governor": false,
+      "ablated_r2_rationale_visible_to_governor": false,
+      "ablated_final_vote_rationale_visible_to_governor": true,
+      "ablated_member_casts_final_vote": true
+    },
+    "replicate_cache_replay": {
+      "replicate1_generator_calls": 24,
+      "replicate2_new_generator_calls": 0,
+      "replicate_outputs_equal_except_id": true,
+      "cache_seeds": [
+        [
+          42
+        ]
+      ]
+    },
+    "model_rotation_mislabeled": {
+      "attempted_models": [
+        "requested-model",
+        "requested-model",
+        "fallback-model"
+      ],
+      "cost_recorded_models": [
+        "requested-model"
+      ],
+      "cache_records": [
+        [
+          "requested-model",
+          "{\"served_by\": \"fallback-model\"}"
+        ]
+      ],
+      "returned": "{\"served_by\": \"fallback-model\"}"
+    },
+    "integrity_guard_false_positives": {
+      "accepts_225_invalid_json_files_as_nine_verified_live_transcript_chains": true,
+      "accepts_report_f1_0_83_when_csv_f1_0_10": true,
+      "violations_recorded": []
+    },
+    "reproduce_missing_artifacts": {
+      "system_exit": null,
+      "all_phases_verified_green_printed": true,
+      "step_commands": [
+        [
+          "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/pytest",
+          "tests/"
+        ],
+        [
+          "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+          "scripts/deep_verification_battery.py"
+        ],
+        [
+          "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+          "scripts/intensive_academic_verification.py"
+        ],
+        [
+          "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+          "src/reporting/plot_figures.py"
+        ],
+        [
+          "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/mpc_arch_audit_94rz55pj/empty_root/.venv/bin/python",
+          "scripts/academic_integrity_guard.py"
+        ]
+      ],
+      "empirical_execution_steps_present": false
+    },
+    "actual_cross_model_outage_false_positive": {
+      "evidence_text": "## 4. Cross-Model Multi-Agent Matrix (Inter-Rater Reliability)\n- **Methodology**: Evaluated the 2023-08-10 snapshot simultaneously across `gemini-3.1-flash-lite` and `gemini-1.5-pro` to test structural prompt robustness over model RLHF bias.\n- **gemini-3.1-flash-lite Output**: 50 bps\n- **gemini-1.5-pro Output**: 50 bps\n- **Verdict**: **PASSED. Both models output the identical rate decision based on the same economic schema.**\n\n",
+      "script_claims_pass": true,
+      "provider_calls": 0
+    },
+    "budget_cap_does_not_halt_meeting": {
+      "governor_summary": {
+        "call_count": 24,
+        "total_input_tokens": 2880,
+        "total_output_tokens": 1080,
+        "total_tokens": 3960,
+        "total_estimated_cost_usd": 0.00108,
+        "budget_cap_usd": 1e-06,
+        "budget_remaining_usd": 0.0
+      },
+      "fallbacks_count": 24,
+      "meeting_returned_despite_budget_exceptions": true
+    },
+    "experiment_transcript_path_collision": {
+      "files_after_baseline": 25,
+      "files_after_shock": 25,
+      "same_file_paths": true,
+      "outcome_file_overwritten": true
+    },
+    "identity_not_bound_to_caller": {
+      "requested_member": "jayanth_varma",
+      "accepted_final_member_ids": [
+        "michael_patra",
+        "rajiv_ranjan",
+        "shashanka_bhide",
+        "ashima_goyal",
+        "intruder",
+        "shaktikanta_das"
+      ],
+      "decision_successful": true
+    },
+    "schema_silent_repairs_and_action_mismatch": {
+      "not a number": {
+        "coerced_rate": 0,
+        "fallback_flag": false,
+        "unknown_stance_accepted": "mysterious_unknown_stance",
+        "aggregation_error": null
+      },
+      "35": {
+        "coerced_rate": 35,
+        "fallback_flag": false,
+        "unknown_stance_accepted": "mysterious_unknown_stance",
+        "aggregation_error": "Vote 35 by shaktikanta_das is outside valid action set: (-50, -25, 0, 25, 50)"
+      },
+      "40": {
+        "coerced_rate": 40,
+        "fallback_flag": false,
+        "unknown_stance_accepted": "mysterious_unknown_stance",
+        "aggregation_error": "Vote 40 by shaktikanta_das is outside valid action set: (-50, -25, 0, 25, 50)"
+      }
+    },
+    "fallback_only_pipeline": {
+      "fallbacks_count": 24,
+      "rate_decision_bps": 50,
+      "stance_decision": "withdrawal_of_accommodation",
+      "recession_governor_heuristic_rate": 0,
+      "cross_model_equality_would_pass_when_both_models_outage": true
+    },
+    "casting_ablation_statusquo": {
+      "experiment_id": "EXP_2_CASTING_VOTE",
+      "experiment_name": "Governor Statutory Casting-Vote Ablation (\u00a745ZL)",
+      "baseline_decision_bps": 50,
+      "ablated_decision_bps": 50,
+      "baseline_stance": "withdrawal_of_accommodation",
+      "ablated_stance": "neutral",
+      "outcome_shifted": true,
+      "marginal_contribution_bps": 0,
+      "description": "Evaluates whether the Governor's casting vote changed the outcome during a 3-3 split."
+    },
+    "cache_temperature_collision": {
+      "temperature_a": 0.6001,
+      "temperature_b": 0.6004,
+      "equal_cache_keys": true
+    },
+    "counterfactual_extra_field_loss": {
+      "anchor_date": "2022-08-05",
+      "baseline_gva_growth_yoy_pct": 11.2,
+      "fed_shock_gva_growth_yoy_pct": null,
+      "gva_present_in_baseline_prompt": true,
+      "gva_present_in_fed_shock_prompt": false
+    }
+  },
+  "existing_outcome_inventory": [
+    {
+      "path": "runs/fast_mvp_demo/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": null,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2023-06-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-06-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2023-10-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-10-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2023-12-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-12-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2024-02-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-02-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2024-04-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-04-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2024-06-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-06-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/holdout_live_run/transcripts/2024-08-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-08-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/live_gemini_meeting/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234024/transcripts/2020-10-09/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-10-09",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234024/transcripts/2020-12-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-12-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234024/transcripts/2021-02-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-02-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234024/transcripts/2021-04-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-04-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234024/transcripts/2021-06-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-06-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2020-10-09/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-10-09",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2020-12-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-12-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-02-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-02-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-04-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-04-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-06-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-06-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-08-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-08-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-10-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-10-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2021-12-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-12-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-02-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-02-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-04-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-04-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-05-18/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-05-18",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-06-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-06-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-08-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-08-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-09-30/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-09-30",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2022-12-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-12-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-02-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-02-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-04-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-04-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-06-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-06-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-10-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-10-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2023-12-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-12-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2024-02-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-02-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2024-04-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-04-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2024-06-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-06-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260905_234038/transcripts/2024-08-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-08-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260906_003753/transcripts/2022-08-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-08-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260906_003753/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260906_064412/transcripts/2022-08-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-08-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/run_20260906_064412/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2020-10-09/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-10-09",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2020-12-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2020-12-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-02-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-02-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-04-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-04-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-06-04/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-06-04",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-08-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-08-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-10-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-10-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2021-12-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2021-12-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-02-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-02-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-04-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-04-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-05-18/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-05-18",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-06-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-06-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-08-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-08-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-09-30/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-09-30",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2022-12-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2022-12-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-02-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-02-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-04-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-04-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-06-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-06-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-10-06/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-10-06",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2023-12-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-12-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2024-02-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-02-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2024-04-05/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-04-05",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2024-06-07/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-06-07",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/stage2_empirical_run/transcripts/2024-08-08/rep_1/meeting_outcome.json",
+      "meeting_date": "2024-08-08",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    },
+    {
+      "path": "runs/test_mock_run/transcripts/2023-08-10/rep_1/meeting_outcome.json",
+      "meeting_date": "2023-08-10",
+      "fallbacks_count": 0,
+      "metadata_present": {
+        "provider": false,
+        "model": false,
+        "seed": false,
+        "temperature": false,
+        "prompt_hash": false,
+        "scenario_id": false
+      }
+    }
+  ],
+  "existing_cache_inventory": [
+    [
+      "gemini",
+      "gemini-3.1-flash-lite",
+      42,
+      0.0,
+      2
+    ],
+    [
+      "gemini",
+      "gemini-3.1-flash-lite",
+      42,
+      0.1,
+      192
+    ],
+    [
+      "gemini",
+      "gemini-3.1-flash-lite",
+      42,
+      0.6,
+      182
+    ],
+    [
+      "gemini",
+      "gemini-3.1-flash-lite",
+      42,
+      0.7,
+      11
+    ],
+    [
+      "gemini",
+      "gemini-3.8-flash",
+      42,
+      0.6,
+      1
+    ],
+    [
+      "mock",
+      "gemini-2.5-flash",
+      42,
+      0.6,
+      24
+    ],
+    [
+      "mock",
+      "gemini-3.1-flash-lite",
+      42,
+      0.6,
+      720
+    ]
+  ],
+  "source_sha256": {
+    "src/behavioral/debate_orchestrator.py": "7d42fc5b35b301ba938a49db96f375bf75cadcbd0e11c416f58209f6e6b4952b",
+    "src/infra/llm_client.py": "e62c113e4fccb4872a22f2800ed55496c62b51375e68d4e5c66ea34d90eaa5ea",
+    "src/infra/cache.py": "8930c8d7a3ba8398a80ca7083a50bea3118fcbd7bcc2e0a9826d8f7571ea1f9b",
+    "src/infra/transcript_logger.py": "548b4939cfd01f0ff2d6795c6e1cf5abefdda66102fc1163020b75be441808a2",
+    "src/schemas/debate_schema.py": "a8776878111a3c0ef4c8314c190203991586b9442a57086fdb9ee217e8f39368",
+    "src/schemas/persona_schema.py": "7cb1aa9a642b2a5d2ee970beef718a0ad0fb654594001cd68a3d915fc8063767",
+    "src/attribution/attribution_runner.py": "fec888876f632572d635be07754a71ae5044ed37106528fc25f0f58d3bdcde14",
+    "src/scenarios/scenario_runner.py": "ccfdbedb25734b1076f6d7c2d86c444e544831a07c045c947ece0fa4e35ace98",
+    "src/scenarios/run_counterfactual_experiments.py": "bbd06bda3ef18b833872628f817dc9ae73196869655cffd918bce89a94fadc87",
+    "src/rule_engine/engine.py": "d0fbd253dded79997711c75a0ce8fee83160cb22a2c0fa4fbedc23789ce18b8f",
+    "src/backtest/backtest_runner.py": "f1f7310487e02b9ed9f1d1f3f163b0b6e06c08086683db995521d63ae17cfc9f",
+    "src/backtest/run_holdout_live.py": "f11e9afb456fc3d85727d4675ad2144a79a5875dc185059cd3ca8ad6a1f0fe10",
+    "scripts/academic_integrity_guard.py": "6f183d59a8bca1e7e97415a1726d0a8f841488699e2a2c0f703beedb906c5567",
+    "scripts/reproduce.py": "55ab68edd71f480d9615d21609ed3eed6872abfd99e7f555656976e2b8396f14",
+    "scripts/stress_test_multi_model.py": "54f576b940b48af7595238bf81e6ccaff8a003ac32cdf7b2a9906181ff316bcd",
+    "scripts/stress_test_ablation.py": "8c46a634a446140fd40991a76390a4bb9f27f8014587932b28bfd261a222a936",
+    "config/config.yaml": "ee4b567a93a0d510f03b7de4c0f43e27cfc06d8cba6fd002921f05399422e1f2",
+    "requirements.txt": "d3ce31dadd39554687cf4ddf147d6efe438e069058dfc13a430de72724fa0179",
+    "results/RESULTS_REPORT.md": "a04f709da510e25d1d2bf65e17572e75a93d8f371c595ece370a1cf8fbe5cae6"
+  }
+}

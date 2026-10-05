@@ -1,0 +1,529 @@
+{
+  "calibration_definition": {
+    "cutoff": "2023-04-06",
+    "n": 17,
+    "majority_rate_bps": 0,
+    "majority_stance": "accommodative",
+    "frequent_members": [
+      "jayanth_varma"
+    ],
+    "member_counts": {
+      "jayanth_varma": 9,
+      "ashima_goyal": 3
+    }
+  },
+  "subsets": {
+    "all": {
+      "n": 25,
+      "rate_counts": {
+        "0": 19,
+        "40": 1,
+        "50": 3,
+        "35": 1,
+        "25": 1
+      },
+      "stance_counts": {
+        "accommodative": 11,
+        "withdrawal_of_accommodation": 14
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.76,
+          "dissent_tp": 22,
+          "dissent_fp": 21,
+          "dissent_fn": 0,
+          "dissent_precision": 0.5116279069767442,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.676923076923077,
+          "dissent_exact_match": 0.4
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.96,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 22,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.32
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.44,
+          "dissent_tp": 17,
+          "dissent_fp": 8,
+          "dissent_fn": 5,
+          "dissent_precision": 0.68,
+          "dissent_recall": 0.7727272727272727,
+          "dissent_f1": 0.723404255319149,
+          "dissent_exact_match": 0.48
+        },
+        "lag_previous_observed_decision": {
+          "n": 25,
+          "exact_rate": 0.8,
+          "directional_rate": 0.92,
+          "directional_balanced_accuracy": 0.8903508771929824,
+          "rate_mae_bps": 4.0,
+          "stance": 0.96,
+          "dissent_tp": 18,
+          "dissent_fp": 2,
+          "dissent_fn": 4,
+          "dissent_precision": 0.9,
+          "dissent_recall": 0.8181818181818182,
+          "dissent_f1": 0.8571428571428571,
+          "dissent_exact_match": 0.8
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 25,
+          "exact_rate": 0.76,
+          "directional_rate": 0.76,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 10.0,
+          "stance": 0.96,
+          "dissent_tp": 17,
+          "dissent_fp": 8,
+          "dissent_fn": 5,
+          "dissent_precision": 0.68,
+          "dissent_recall": 0.7727272727272727,
+          "dissent_f1": 0.723404255319149,
+          "dissent_exact_match": 0.48
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 25,
+          "exact_rate": 0.16,
+          "directional_rate": 0.28,
+          "directional_balanced_accuracy": 0.5263157894736842,
+          "rate_mae_bps": 33.0,
+          "stance": 0.48,
+          "dissent_tp": 8,
+          "dissent_fp": 6,
+          "dissent_fn": 14,
+          "dissent_precision": 0.5714285714285714,
+          "dissent_recall": 0.36363636363636365,
+          "dissent_f1": 0.4444444444444444,
+          "dissent_exact_match": 0.36
+        }
+      }
+    },
+    "calibration": {
+      "n": 17,
+      "rate_counts": {
+        "0": 11,
+        "40": 1,
+        "50": 3,
+        "35": 1,
+        "25": 1
+      },
+      "stance_counts": {
+        "accommodative": 11,
+        "withdrawal_of_accommodation": 6
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.6470588235294118,
+          "dissent_tp": 12,
+          "dissent_fp": 15,
+          "dissent_fn": 0,
+          "dissent_precision": 0.4444444444444444,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.6153846153846154,
+          "dissent_exact_match": 0.47058823529411764
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 12,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.47058823529411764
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.6470588235294118,
+          "dissent_tp": 9,
+          "dissent_fp": 8,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5294117647058824,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.6206896551724138,
+          "dissent_exact_match": 0.35294117647058826
+        },
+        "lag_previous_observed_decision": {
+          "n": 17,
+          "exact_rate": 0.7058823529411765,
+          "directional_rate": 0.8823529411764706,
+          "directional_balanced_accuracy": 0.8712121212121212,
+          "rate_mae_bps": 5.882352941176471,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 9,
+          "dissent_fp": 2,
+          "dissent_fn": 3,
+          "dissent_precision": 0.8181818181818182,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.782608695652174,
+          "dissent_exact_match": 0.7647058823529411
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 17,
+          "exact_rate": 0.6470588235294118,
+          "directional_rate": 0.6470588235294118,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 14.705882352941176,
+          "stance": 0.9411764705882353,
+          "dissent_tp": 9,
+          "dissent_fp": 8,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5294117647058824,
+          "dissent_recall": 0.75,
+          "dissent_f1": 0.6206896551724138,
+          "dissent_exact_match": 0.35294117647058826
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 17,
+          "exact_rate": 0.17647058823529413,
+          "directional_rate": 0.35294117647058826,
+          "directional_balanced_accuracy": 0.5,
+          "rate_mae_bps": 32.35294117647059,
+          "stance": 0.35294117647058826,
+          "dissent_tp": 1,
+          "dissent_fp": 1,
+          "dissent_fn": 11,
+          "dissent_precision": 0.5,
+          "dissent_recall": 0.08333333333333333,
+          "dissent_f1": 0.14285714285714285,
+          "dissent_exact_match": 0.47058823529411764
+        }
+      }
+    },
+    "holdout": {
+      "n": 8,
+      "rate_counts": {
+        "0": 8
+      },
+      "stance_counts": {
+        "withdrawal_of_accommodation": 8
+      },
+      "metrics": {
+        "saved_mock_panel": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 10,
+          "dissent_fp": 6,
+          "dissent_fn": 0,
+          "dissent_precision": 0.625,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.7692307692307693,
+          "dissent_exact_match": 0.25
+        },
+        "always_hold_prev_stance_no_dissent": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 0,
+          "dissent_fp": 0,
+          "dissent_fn": 10,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "dissent_f1": 0.0,
+          "dissent_exact_match": 0.0
+        },
+        "calibration_majority_and_frequent_member": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 0.0,
+          "dissent_tp": 8,
+          "dissent_fp": 0,
+          "dissent_fn": 2,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.8,
+          "dissent_f1": 0.8888888888888888,
+          "dissent_exact_match": 0.75
+        },
+        "lag_previous_observed_decision": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 9,
+          "dissent_fp": 0,
+          "dissent_fn": 1,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.9,
+          "dissent_f1": 0.9473684210526315,
+          "dissent_exact_match": 0.875
+        },
+        "always_hold_prev_stance_varma": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 8,
+          "dissent_fp": 0,
+          "dissent_fn": 2,
+          "dissent_precision": 1.0,
+          "dissent_recall": 0.8,
+          "dissent_f1": 0.8888888888888888,
+          "dissent_exact_match": 0.75
+        },
+        "taylor_saved_rate_dissent_probability_ge_0_5": {
+          "n": 8,
+          "exact_rate": 0.125,
+          "directional_rate": 0.125,
+          "directional_balanced_accuracy": 0.125,
+          "rate_mae_bps": 34.375,
+          "stance": 0.75,
+          "dissent_tp": 7,
+          "dissent_fp": 5,
+          "dissent_fn": 3,
+          "dissent_precision": 0.5833333333333334,
+          "dissent_recall": 0.7,
+          "dissent_f1": 0.6363636363636364,
+          "dissent_exact_match": 0.125
+        },
+        "saved_live_holdout": {
+          "n": 8,
+          "exact_rate": 1.0,
+          "directional_rate": 1.0,
+          "directional_balanced_accuracy": 1.0,
+          "rate_mae_bps": 0.0,
+          "stance": 1.0,
+          "dissent_tp": 10,
+          "dissent_fp": 4,
+          "dissent_fn": 0,
+          "dissent_precision": 0.7142857142857143,
+          "dissent_recall": 1.0,
+          "dissent_f1": 0.8333333333333334,
+          "dissent_exact_match": 0.5
+        }
+      }
+    }
+  },
+  "holdout_round1_aggregate_metrics": {
+    "n": 8,
+    "exact_rate": 1.0,
+    "directional_rate": 1.0,
+    "directional_balanced_accuracy": 1.0,
+    "rate_mae_bps": 0.0,
+    "stance": 1.0,
+    "dissent_tp": 10,
+    "dissent_fp": 5,
+    "dissent_fn": 0,
+    "dissent_precision": 0.6666666666666666,
+    "dissent_recall": 1.0,
+    "dissent_f1": 0.8,
+    "dissent_exact_match": 0.375
+  },
+  "dispersion_r1_vs_r3": {
+    "mean_by_round": [
+      0.48936040723670754,
+      0.48936040723670754,
+      0.4352856627214779,
+      0.48936040723670754
+    ],
+    "meeting_paired_differences": [
+      0.10814948903045929,
+      0.0,
+      0.0,
+      0.0,
+      0.10814948903045929,
+      0.10814948903045929,
+      0.10814948903045929,
+      0.0
+    ],
+    "n_nonzero": 4,
+    "exact_two_sided_sign_p": 0.125
+  },
+  "holdout_f1_bootstrap": {
+    "seed": 20261005,
+    "repetitions": 100000,
+    "live_percentile_95_ci": [
+      0.72,
+      0.9565217391304348
+    ],
+    "difference_live_minus_fixed_varma_percentile_95_ci": [
+      -0.2727272727272727,
+      0.15999999999999992
+    ]
+  },
+  "iid_binomial_diagnostic_only": {
+    "successes": 8,
+    "n": 8,
+    "exact_two_sided_95_ci": [
+      0.6305833524471808,
+      1.0
+    ],
+    "all_successes_min_n_for_95_lower_bound_above_0_75": 13,
+    "caveat": "Meetings are temporally dependent and all eight share one policy regime; the iid bound is optimistic for broad generalization."
+  },
+  "uniform_rate_randomization_null": {
+    "exact_uniform_five_action_probability": 2.56e-06,
+    "zero_pause_probability_fitted_to_calibration": 0.030729119068863577,
+    "true_label_permutations_count_unique": 1,
+    "constant_hold_classifier_label_permutation_match_probability": 1.0,
+    "explanation": "Sampling fresh actions from a uniform distribution is not permuting the observed labels; it tests an artificial null, not added predictive value."
+  },
+  "metric_edge_probes": {
+    "zero_stance_accuracy_passes_gate": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 100.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": true
+    },
+    "same_direction_different_size_reported_zero_direction_accuracy": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 0.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": false
+    },
+    "extra_true_rate_silently_ignored": {
+      "total_meetings_evaluated": 1,
+      "directional_rate_accuracy_pct": 100.0,
+      "stance_accuracy_pct": 0.0,
+      "dissent_exact_match_rate_pct": 100.0,
+      "dissent_precision": 1.0,
+      "dissent_recall": 1.0,
+      "dissent_f1": 1.0,
+      "passed_validation_gate": true
+    },
+    "dissent_no_positive_truth_or_prediction": [
+      1.0,
+      1.0,
+      1.0,
+      100.0
+    ]
+  },
+  "persona_correlation": {
+    "scores": {
+      "rajiv_ranjan": 0.43,
+      "ashima_goyal": -0.07,
+      "shaktikanta_das": 0.23,
+      "jayanth_varma": -0.31,
+      "michael_patra": 0.61,
+      "shashanka_bhide": 0.15,
+      "mridul_saggar": 0.23
+    },
+    "hardcoded_empirical": {
+      "jayanth_varma": -0.8,
+      "ashima_goyal": -0.4,
+      "shashanka_bhide": 0.2,
+      "shaktikanta_das": 0.3,
+      "rajiv_ranjan": 0.5,
+      "michael_patra": 0.9
+    },
+    "actual_repo_dissent_frequencies": {
+      "jayanth_varma": 0.68,
+      "ashima_goyal": 0.2,
+      "shashanka_bhide": 0.0,
+      "shaktikanta_das": 0.0,
+      "rajiv_ranjan": 0.0,
+      "michael_patra": 0.0
+    },
+    "vs_hardcoded_rank": {
+      "kendall_tau": 0.9999999999999999,
+      "kendall_p": 0.002777777777777778,
+      "spearman_rho": 1.0,
+      "spearman_asymptotic_p": 0.0,
+      "spearman_exact_two_sided_permutation_p": 0.002777777777777778,
+      "enumerated_permutations": 720
+    },
+    "vs_actual_frequency": {
+      "kendall_tau": 0.7745966692414834,
+      "kendall_p": 0.04241305932069779,
+      "spearman_rho": 0.8451542547285166,
+      "spearman_asymptotic_p": 0.03410942316740963,
+      "spearman_exact_two_sided_permutation_p": 0.06666666666666667,
+      "enumerated_permutations": 720
+    }
+  },
+  "holdout_formal_ballot_sensitivity": {
+    "status": "Sensitivity interpretation from local statement text; verify against official resolution roll calls before adopting labels.",
+    "union": {
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    },
+    "rate": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "exact_match": 0.5
+    },
+    "stance": {
+      "tp": 6,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "exact_match": 0.25
+    },
+    "lag_formal": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "exact_match": 0.75
+    }
+  }
+}

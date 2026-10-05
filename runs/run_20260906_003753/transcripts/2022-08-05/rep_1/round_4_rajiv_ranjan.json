@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 50,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI inflation at 7.01% persistently breaching the upper tolerance band and core inflation remaining elevated at 6.20%, the risk of inflation expectations becoming unanchored is significant. The positive output gap of 0.40% and the substantial banking system liquidity surplus of 190,000 crore INR provide the necessary cushion for a front-loaded policy action. A 50 bps increase is essential to enhance monetary transmission, align real interest rates with the objective of price stability, and maintain the credibility of our inflation-targeting framework. Delaying this adjustment would only increase the terminal policy rate required in the future, and given the current global spillovers and exchange rate pressures, decisive action now is the most prudent path to ensure a durable return to the 4% target.",
+  "fallback_triggered": false
+}

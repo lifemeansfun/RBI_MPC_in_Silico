@@ -1,0 +1,2 @@
+experiment_name,baseline_decision_bps,ablated_decision_bps,marginal_contribution_bps,outcome_shifted
+Governor Statutory Casting-Vote Ablation (§45ZL),0,0,0,False

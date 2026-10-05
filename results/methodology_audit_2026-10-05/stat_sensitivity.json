@@ -1,0 +1,216 @@
+{
+  "original_taylor_reproduction": {
+    "n": 25,
+    "draws_per_meeting": 1000,
+    "seed": 42,
+    "noise_std_pct": 0.2,
+    "exact_rate_matches_to_saved": 25,
+    "exact_stance_matches_to_saved": 25,
+    "mean_rate_rounded_matches": 25
+  },
+  "exploratory_rho_only_selection": {
+    "criterion": "Minimum calibration rate MAE, rho ascending as tie breaker; six prespecified grid values for this audit.",
+    "rho": 0.975,
+    "calibration_metrics": {
+      "rho": 0.975,
+      "subset": "calibration",
+      "directional_match": 0.7058823529411765,
+      "exact_match": 0.47058823529411764,
+      "stance_match": 0.35294117647058826,
+      "rate_mae_bps": 13.235294117647058
+    },
+    "holdout_metrics": {
+      "rho": 0.975,
+      "subset": "holdout",
+      "directional_match": 0.875,
+      "exact_match": 0.875,
+      "stance_match": 0.5,
+      "rate_mae_bps": 3.125
+    },
+    "limitation": "Selected after seeing the repository for diagnosis. Not an unbiased new confirmatory result; use nested time-ordered calibration and a new untouched test for claims."
+  },
+  "persona_corpus_sensitivity": [
+    {
+      "member": "shaktikanta_das",
+      "subsets": {
+        "calibration": {
+          "n_statements": 17,
+          "hawk_hits": 309,
+          "dove_hits": 168,
+          "lexical_score": 0.29559748427672955,
+          "calibrated_score": 0.21
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 150,
+          "dove_hits": 51,
+          "lexical_score": 0.4925373134328358,
+          "calibrated_score": 0.29
+        },
+        "all": {
+          "n_statements": 25,
+          "hawk_hits": 459,
+          "dove_hits": 219,
+          "lexical_score": 0.35398230088495575,
+          "calibrated_score": 0.23
+        }
+      }
+    },
+    {
+      "member": "michael_patra",
+      "subsets": {
+        "calibration": {
+          "n_statements": 17,
+          "hawk_hits": 274,
+          "dove_hits": 102,
+          "lexical_score": 0.4574468085106383,
+          "calibrated_score": 0.6
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 96,
+          "dove_hits": 28,
+          "lexical_score": 0.5483870967741935,
+          "calibrated_score": 0.64
+        },
+        "all": {
+          "n_statements": 25,
+          "hawk_hits": 370,
+          "dove_hits": 130,
+          "lexical_score": 0.48,
+          "calibrated_score": 0.61
+        }
+      }
+    },
+    {
+      "member": "rajiv_ranjan",
+      "subsets": {
+        "calibration": {
+          "n_statements": 7,
+          "hawk_hits": 206,
+          "dove_hits": 61,
+          "lexical_score": 0.5430711610486891,
+          "calibrated_score": 0.46
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 206,
+          "dove_hits": 83,
+          "lexical_score": 0.42560553633217996,
+          "calibrated_score": 0.41
+        },
+        "all": {
+          "n_statements": 15,
+          "hawk_hits": 412,
+          "dove_hits": 144,
+          "lexical_score": 0.48201438848920863,
+          "calibrated_score": 0.43
+        }
+      }
+    },
+    {
+      "member": "mridul_saggar",
+      "subsets": {
+        "calibration": {
+          "n_statements": 10,
+          "hawk_hits": 277,
+          "dove_hits": 157,
+          "lexical_score": 0.2764976958525346,
+          "calibrated_score": 0.23
+        },
+        "holdout": {
+          "n_statements": 0,
+          "hawk_hits": 0,
+          "dove_hits": 0,
+          "lexical_score": 0.0,
+          "calibrated_score": 0.12
+        },
+        "all": {
+          "n_statements": 10,
+          "hawk_hits": 277,
+          "dove_hits": 157,
+          "lexical_score": 0.2764976958525346,
+          "calibrated_score": 0.23
+        }
+      }
+    },
+    {
+      "member": "jayanth_varma",
+      "subsets": {
+        "calibration": {
+          "n_statements": 17,
+          "hawk_hits": 137,
+          "dove_hits": 79,
+          "lexical_score": 0.26851851851851855,
+          "calibrated_score": -0.28
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 69,
+          "dove_hits": 56,
+          "lexical_score": 0.104,
+          "calibrated_score": -0.35
+        },
+        "all": {
+          "n_statements": 25,
+          "hawk_hits": 206,
+          "dove_hits": 135,
+          "lexical_score": 0.20821114369501467,
+          "calibrated_score": -0.31
+        }
+      }
+    },
+    {
+      "member": "ashima_goyal",
+      "subsets": {
+        "calibration": {
+          "n_statements": 17,
+          "hawk_hits": 372,
+          "dove_hits": 197,
+          "lexical_score": 0.30755711775043937,
+          "calibrated_score": -0.06
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 198,
+          "dove_hits": 121,
+          "lexical_score": 0.2413793103448276,
+          "calibrated_score": -0.08
+        },
+        "all": {
+          "n_statements": 25,
+          "hawk_hits": 570,
+          "dove_hits": 318,
+          "lexical_score": 0.28378378378378377,
+          "calibrated_score": -0.07
+        }
+      }
+    },
+    {
+      "member": "shashanka_bhide",
+      "subsets": {
+        "calibration": {
+          "n_statements": 17,
+          "hawk_hits": 387,
+          "dove_hits": 397,
+          "lexical_score": -0.012755102040816327,
+          "calibrated_score": 0.14
+        },
+        "holdout": {
+          "n_statements": 8,
+          "hawk_hits": 240,
+          "dove_hits": 228,
+          "lexical_score": 0.02564102564102564,
+          "calibrated_score": 0.16
+        },
+        "all": {
+          "n_statements": 25,
+          "hawk_hits": 627,
+          "dove_hits": 625,
+          "lexical_score": 0.001597444089456869,
+          "calibrated_score": 0.15
+        }
+      }
+    }
+  ]
+}

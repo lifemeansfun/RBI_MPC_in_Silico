@@ -1,0 +1,154 @@
+No prior observation for FEDFUNDS as of 2023-07-10; using earliest 5.33
+No prior observation for DEXINUS as of 2023-07-10; using earliest 5.33
+No prior observation for DCOILBRENTEU as of 2023-07-10; using earliest 5.33
+{
+  "input_files_preserved": true,
+  "panel": {
+    "rows": 25,
+    "calibration_rows": 17,
+    "holdout_rows": 8,
+    "builder_equals_parquet": true,
+    "dates_unique": true,
+    "dates_sorted": true
+  },
+  "manifest_all_hashes_match": true,
+  "statements": 150,
+  "statements_byte_equal": 150,
+  "statements_full_normalized_in_associated_raw": 150,
+  "persona_calibration": [
+    {
+      "member": "shaktikanta_das",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.23,
+      "calibration_only_score": 0.21,
+      "persisted_score": 0.23,
+      "persisted_matches_full": true,
+      "full_words": 19052,
+      "calibration_words": 14182,
+      "holdout_words": 4870
+    },
+    {
+      "member": "michael_patra",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.61,
+      "calibration_only_score": 0.6,
+      "persisted_score": 0.61,
+      "persisted_matches_full": true,
+      "full_words": 15492,
+      "calibration_words": 12271,
+      "holdout_words": 3221
+    },
+    {
+      "member": "rajiv_ranjan",
+      "full_meeting_count": 15,
+      "calibration_meeting_count": 7,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.43,
+      "calibration_only_score": 0.46,
+      "persisted_score": 0.43,
+      "persisted_matches_full": true,
+      "full_words": 14997,
+      "calibration_words": 7298,
+      "holdout_words": 7699
+    },
+    {
+      "member": "mridul_saggar",
+      "full_meeting_count": 10,
+      "calibration_meeting_count": 10,
+      "holdout_meeting_count": 0,
+      "latest_corpus_date": "2022-04-08",
+      "full_calibrated_score": 0.23,
+      "calibration_only_score": 0.23,
+      "persisted_score": 0.23,
+      "persisted_matches_full": true,
+      "full_words": 13842,
+      "calibration_words": 13842,
+      "holdout_words": 0
+    },
+    {
+      "member": "jayanth_varma",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": -0.31,
+      "calibration_only_score": -0.28,
+      "persisted_score": -0.31,
+      "persisted_matches_full": true,
+      "full_words": 12823,
+      "calibration_words": 9994,
+      "holdout_words": 2829
+    },
+    {
+      "member": "ashima_goyal",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": -0.07,
+      "calibration_only_score": -0.06,
+      "persisted_score": -0.07,
+      "persisted_matches_full": true,
+      "full_words": 24752,
+      "calibration_words": 16557,
+      "holdout_words": 8195
+    },
+    {
+      "member": "shashanka_bhide",
+      "full_meeting_count": 25,
+      "calibration_meeting_count": 17,
+      "holdout_meeting_count": 8,
+      "latest_corpus_date": "2024-08-08",
+      "full_calibrated_score": 0.15,
+      "calibration_only_score": 0.14,
+      "persisted_score": 0.15,
+      "persisted_matches_full": true,
+      "full_words": 35882,
+      "calibration_words": 24596,
+      "holdout_words": 11286
+    }
+  ],
+  "schema_probe": {
+    "accepted_invalid_date": "2023-99-99",
+    "ground_truth_field_names_or_dissenter_names_present_in_macro_prompt": false,
+    "macro_fields": [
+      "meeting_date",
+      "current_repo_rate_pct",
+      "cpi_headline_yoy_pct",
+      "cpi_core_yoy_pct",
+      "cpi_food_yoy_pct",
+      "iip_growth_yoy_pct",
+      "gva_growth_yoy_pct",
+      "output_gap_pct",
+      "system_liquidity_cr",
+      "usd_inr_exchange_rate",
+      "brent_crude_usd_bbl",
+      "us_fed_funds_rate_pct",
+      "monsoon_departure_lpa_pct",
+      "prev_stance",
+      "real_rate_decision_bps",
+      "real_stance_decision",
+      "real_dissenters"
+    ]
+  },
+  "fred_probe": {
+    "monthly_final_aug1_observation_for_aug10": {
+      "us_fed_funds": 5.33,
+      "usd_inr": 5.33,
+      "brent_crude": 5.33
+    },
+    "earliest_future_observation_for_jul10": {
+      "us_fed_funds": 5.33,
+      "usd_inr": 5.33,
+      "brent_crude": 5.33
+    },
+    "interpretation": "Observation timestamps alone are not release timestamps. Stub demonstrates selector behavior, not actual FRED source values."
+  }
+}

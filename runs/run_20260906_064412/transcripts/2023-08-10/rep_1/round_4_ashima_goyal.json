@@ -1,0 +1,11 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "The headline CPI inflation of 7.44% is driven primarily by transitory supply-side shocks in food, as corroborated by the relatively contained core inflation of 4.90%. Monetary policy is an blunt instrument for addressing localized food price volatility; responding with further rate hikes would risk an unnecessary contractionary effect on the economy when GVA growth is at 7.80% and still in a recovery phase. The current repo rate of 6.50% provides a sufficient real interest rate to anchor expectations without stifling growth. I support maintaining the current repo rate and the stance of 'withdrawal of accommodation' as a prudent measure to manage liquidity and ensure that we remain vigilant against any potential second-round effects, without over-tightening in response to temporary supply-side pressures.",
+  "fallback_triggered": false
+}

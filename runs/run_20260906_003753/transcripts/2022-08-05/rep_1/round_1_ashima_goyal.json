@@ -1,0 +1,8 @@
+{
+  "member_id": "ashima_goyal",
+  "member_name": "Dr. Ashima Goyal",
+  "proposed_rate_change_bps": 50,
+  "proposed_stance": "withdrawal_of_accommodation",
+  "key_rationale": "With headline CPI inflation at 7.01% persistently above the upper tolerance band, a front-loaded increase in the repo rate is necessary to anchor inflation expectations and move toward a neutral real rate. Given the positive output gap of 0.40% and significant banking system liquidity, this adjustment will help mitigate demand-pull pressures while allowing supply-side measures to address food and commodity price shocks.",
+  "fallback_triggered": false
+}

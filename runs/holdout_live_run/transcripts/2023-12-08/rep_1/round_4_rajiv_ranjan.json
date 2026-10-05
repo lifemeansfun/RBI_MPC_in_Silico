@@ -1,0 +1,11 @@
+{
+  "member_id": "rajiv_ranjan",
+  "member_name": "Dr. Rajiv Ranjan",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "With headline CPI inflation at 5.55% remaining uncomfortably close to the upper tolerance threshold and food inflation elevated at 8.70%, we must remain vigilant against the risk of inflation expectations becoming unanchored. The persistence of these supply-side shocks, exacerbated by the 6.0% monsoon deficit, suggests that inflation gap persistence remains a significant challenge. Given the positive output gap of 0.60%, the economy is operating above its potential, which limits our room for policy complacency. A shift to a neutral stance at this juncture would be premature and could signal a dilution of our commitment to price stability. Maintaining the current repo rate of 6.50% and the stance of withdrawal of accommodation is essential to ensure that liquidity conditions remain consistent with our objective of durable disinflation toward the 4.00% target and to prevent any potential second-round effects.",
+  "fallback_triggered": false
+}

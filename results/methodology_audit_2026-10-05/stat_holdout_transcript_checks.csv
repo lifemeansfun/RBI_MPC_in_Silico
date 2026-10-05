@@ -1,0 +1,9 @@
+date,files,csv_rate_matches,csv_stance_matches,csv_union_dissent_matches,rate_dissenters,stance_dissenters,r1_aggregate_rate_bps,r1_aggregate_stance,r1_stance_std,r2_stance_std,r3_stance_std,r4_stance_std
+2023-06-08,25,True,True,True,,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.408248290463863,0.5163977794943223
+2023-08-10,25,True,True,True,,jayanth_varma,0,withdrawal_of_accommodation,0.408248290463863,0.408248290463863,0.408248290463863,0.408248290463863
+2023-10-06,25,True,True,True,,jayanth_varma,0,withdrawal_of_accommodation,0.408248290463863,0.408248290463863,0.408248290463863,0.408248290463863
+2023-12-08,25,True,True,True,,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.5163977794943223,0.5163977794943223
+2024-02-08,25,True,True,True,,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.408248290463863,0.5163977794943223
+2024-04-05,25,True,True,True,,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.408248290463863,0.5163977794943223
+2024-06-07,25,True,True,True,jayanth_varma,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.408248290463863,0.5163977794943223
+2024-08-08,25,True,True,True,jayanth_varma,ashima_goyal;jayanth_varma,0,withdrawal_of_accommodation,0.5163977794943223,0.5163977794943223,0.5163977794943223,0.5163977794943223

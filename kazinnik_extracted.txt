@@ -1,0 +1,2840 @@
+FOMC In Silico: A Multi-Agent System
+for Monetary Policy Decision Modeling
+This is a preliminary draft. The authors welcome all comments and suggestions.
+
+Sophia Kazinnik∗
+
+Tara M. Sinclair†
+
+October 29, 2025
+
+Abstract
+We develop a multi-agent framework for modeling the Federal Open Market
+Committee (FOMC) decision making process. The framework combines two
+approaches: an LLM-based simulation and a Monte Carlo implementation of
+a generalized Bayesian voting model. Both begin from identical prior beliefs
+about the appropriate interest rate for each committee member, formed using
+real-time data and member profiles. In a simulation replicating the July 2025
+FOMC meeting, both tracks deliver rates near the 4.25–4.50% range’s upper
+end (4.42% LLM, 4.38% MC). Political pressure scenario increases dissent
+and dispersion: the LLM track averages 4.38% and shows dissent in 88% of
+meetings; the MC track averages 4.39% and shows dissent in 61% of meetings.
+A negative jobs revision scenario moves outcomes lower: LLM at 4.30% (dissent
+in 74% of meeting), and MC at 4.32% (dissent in 62% of meeting), with final
+decisions remaining inside the 4.25-4.50% range. The framework isolates small,
+scenario-dependent wedges between behavioral and rational baselines, offering
+an in silico environment for counterfactual evaluation in monetary policy.
+Keywords: Generative AI; Multi-Agent Systems; Large Language Models,
+Federal Open Market Committee; Monetary Policy; Simulations
+JEL Codes: E52, E58, C63, D83, C73
+
+∗
+
+Email: kazinnik@stanford.edu.
+Email: tsinc@gwu.edu.
+We thank Erik Brynjolfsson, Thomas R. Cook, Seung Jung Lee, Andrew Martinez, and Daniela
+Puzzello, as well as the participants at the DEL seminar series, and the 26th Federal Forecasters
+Conference for useful comments. We are grateful to the Stanford Digital Economy Lab for funding
+and support. All remaining errors are our own.
+†
+
+1
+
+1
+
+Introduction
+“Between the idea and the reality . . .
+falls the shadow.”
+T. S. Eliot, “The Hollow Men,”
+
+Monetary policy deliberations and the actual rate decision are separated by a
+“shadow” of persuasion and norms. Decisions by the Federal Open Market Committee
+(FOMC) reflect more than macroeconomic data and formal models; they also depend
+on members’ experience, behavioral biases, and implicit rules (e.g., Hughes and
+Fehrler, 2015; Haldane, 2018; Maih et al., 2021). Consequently, who participates in
+the deliberation and how information is communicated can influence policy outcomes
+beyond the underlying economic data.
+Precisely because of these behavioral forces, traditional models of committee
+decision making, though useful and mathematically elegant, often miss the complexities of real world interactions. Behavioral economics highlights how biases, well
+documented by Tversky and Kahneman (1974) and shown to affect monetary policy
+(Haldane, 2018), can systematically shape decisions. Information design matters too:
+Bayesian persuasion demonstrates how agenda setters steer beliefs (Kamenica and
+Gentzkow, 2011). Separately, robust control preferences reveal how officials facing
+model uncertainty skew choices toward caution (Hansen and Sargent, 2008). Within
+the FOMC, policy outcomes depend on the committee’s composition, from regional
+voting rotation (e.g., Fos and Xu, 2025) to individual members’ policy leanings (e.g.,
+Hack et al., 2023).
+To better capture such frictions, researchers increasingly use computational
+approaches, such as agent-based models (Dwarakanath et al., 2024) and reinforcement
+learning (Hinterlang and Tänzer, 2021). Large language models (LLMs) further
+extend the frontier by enabling agents with coherent communication and emergent
+behavior. LLM-based generative agents simulate realistic social interactions (Park
+et al., 2022) and market dynamics (Zhang et al., 2024), opening new possibilities for
+policy experimentation (Argyle et al., 2022; Horton, 2023).
+However, no existing approach lets us observe rational and behavioral decision
+2
+
+rules on the same information set. We address this gap with a dual track simulation
+framework that integrates an LLM-driven simulation of the FOMC meeting with a
+game theory voting model. In the rational (game theory) track, policymakers observe
+macro data, update beliefs via Bayesian inference, and vote to an equilibrium. In the
+behavioral (LLM) track, the agents get the same data, reason in natural language,
+engage in committee debate, and generate outcomes shaped not only by the data but
+also by persona heterogeneity and institutional norms that formal models struggle to
+capture. Recent studies show that LLM-based agents can reproduce various aspects
+of market dynamics (e.g., Kazinnik, 2023; Manning et al., 2024; Lopez-Lira, 2025);
+we apply the same logic to monetary policy. We generalize the Riboni and RugeMurcia (2010) framework to admit heterogeneous preferences, strategic information
+disclosure, and a political pressure channel. Deviations between the LLM equilibrium
+and the analytic benchmark then isolate the behavioral frictions that standard models
+omit.
+Specifically, we construct and run two types of simulations: a set of LLMdriven deliberations and a parallel Monte Carlo (MC) analysis. Both start from
+the same LLM-generated set of heterogeneous private opinions, reflecting FOMC
+members’ profiles and the current economic state. The MC simulation serves as
+a statistical baseline, modeling thousands of voting scenarios under theoretical
+framework described in Riboni and Ruge-Murcia (2010). The LLM simulation, by
+contrast, introduces deliberation, persuasion, and strategic interaction, capturing
+human-like dynamics. Comparing the two allows us to isolate and measure the
+impact of deliberation by identifying where LLM-driven outcomes diverge from the
+statistical baseline.
+Within the framework, we start by automatically ingesting real-time macroeconomic data, Governor speeches, district-level reports, and financial news. We
+then build detailed profiles for each committee member, combining their historical
+policy stances, biographies, recent speeches, district conditions, and the current
+macroeconomic context.1 Each agent draws on this information to generate an initial
+1
+
+The framework supports introducing new committee members, alternative economic conditions,
+and other counterfactual scenarios.
+
+3
+
+rate recommendation, comprising a preferred policy rate, a confidence score, and a
+short explanation, capturing the agent’s initial belief.
+With these agent profiles and initial beliefs in place, we launch the simulation
+to model the decision-making process under two approaches. The LLM simulation
+begins with several optional rounds of informal coordination to align member views.2
+The simulation then enters a deliberation stage, where a discussion engine records
+arguments and updates members’ initial beliefs, and concludes with a structured
+voting phase in which members submit final rate preferences for automatic aggregation
+and comparison. Outputs include posterior beliefs, vote patterns with dissent
+diagnostics, and full deliberation logs. The MC framework uses the same priors
+and economic parameters but removes conversational and behavioral dynamics,
+running thousands of rule-based voting scenarios to generate a statistical baseline.
+We benchmark the LLM results against MC ones.
+To showcase the framework, we simulate two scenarios. The first one introduces
+the effects of a politically charged environment on the committee. This treatment
+contains two distinct but related elements, designed to model both the direct pressure
+on the current Chair and the indirect, forward-looking behavior of the other committee
+members. The first component targets the Chair directly: we apply a dovish bias
+in the Chair’s agenda proposal. Simultaneously, the Chair’s institutional authority
+is diminished by removing the extra voting weight their ballot typically carries.
+The second component of the treatment models the strategic, forward looking
+behavior of the other committee members who anticipate an imminent regime change.
+Anticipating a more dovishly inclined successor3 , members face asymmetric career
+incentives, so dissent costs are direction-dependent: hawkish votes carry a higher
+penalty, while dovish votes are cheaper, signaling alignment with the expected
+regime.4
+The second scenario examines the consequences of a sudden negative labor market
+data revision. This treatment feeds into the simulation as a downward adjustment
+2
+
+The Monte Carlo (MC) implements the same optional mechanism.
+Needs explanation or is clear
+4
+In the current FOMC roster, the potential candidates are Waller (90%) and Bowman (10%),
+reflecting speculative assessments under a dovish administration based on background, policy views,
+and feasibility.
+3
+
+4
+
+to the perceived strength of payroll growth, paired with an increase in the assessed
+uncertainty of employment sensitive members. By modeling this as a real-time
+information shock, we capture how the timing and nature of data updates can
+meaningfully reshape deliberation and decision making. In our framework, when
+members receive new information plays a critical role in shaping the path of discussion,
+belief updating, and ultimately, the policy vote.
+Our findings are as follows. In the baseline LLM scenario, simulating economic
+conditions as of late July 2025 (when the target FFR stood at 4.25%–4.50%, and
+effective FFR stood at 4.33%), the committee starts off with a moderately hawkish
+tilt, with individual rate preferences spanning 4.20% (for simulated Christopher
+Waller, or simWaller) to 4.62% (for simulated Alberto Musalem, or simMusalem)
+and clustering at the upper end of the range.5 The average initial recommendation
+across members is at 4.375%, with a belief spread of just over 55 basis points. As
+deliberations unfold, hawks emphasize the persistence of above-target inflation.6
+The committee converges unanimously on a final rate of 4.42%, implying an upward
+drift of roughly 5 basis points in the midpoint federal funds rate (4.375%) without
+changing the 4.25%–4.50% range. Parallel Monte Carlo simulations, which remove
+conversational dynamics, also converge near the existing range but yield a slightly
+lower mean of 4.376%. Outcomes cluster tightly and no dissents occur. Debate thus
+introduces a modest hawkish bias of around 5 basis points, relative to rule-based
+voting.
+Next, political pressure scenario (mirroring public attacks by the POTUS on Chair
+Powell) reduces the Chair’s agenda weight, applies a dovish bias to his proposal, and
+imposes career-driven dovish shifts for members with high appointment probabilities
+(simWaller, and, to lesser extent simBowman). Member views polarize: simWaller’s
+5
+
+The range midpoint is 4.375%; 7 of 12 members are above it and the mean (4.39%) is slightly
+higher.
+6
+For example, in one simulation, simWaller warns that ‘..if we allow inflation
+to spiral further, it may lead to more significant economic instability,” while simulated simSchmid stresses that “allowing inflation to persist unchecked can have
+long-term detrimental effects on both employment and economic growth,” particularly
+if expectations become “unanchored.” By the final discussion round, the effect of these arguments is visible: simPowell shifts position, noting that “the current inflation data cannot
+be overlooked” and proposing a move to 4.50%. See Section 3.2 for background on belief formation
+and debate mechanics.
+
+5
+
+preferred rate drops to an average of 3.97%, and he dissents in 88% of simulations.
+Meanwhile, simMusalem, simSchmid, and simCollins anchor their rates above 4.50%,
+pulling in the opposite direction. The final LLM-derived policy rate averages 4.375%.
+The MC benchmark under the same political pressure shows similar movement: the
+average final rate is 4.386%, but with nearly double the dispersion compared to the
+baseline. While the modal outcome remains at the upper bound (4.50%), the left tail
+becomes thicker: 33% of simulations end at 4.25%, and 5% drop to 4.00%. Dissent
+also becomes more common, occurring in 61% of meetings, with simWaller almost
+always the culprit. Across both tracks, political pressure nudges the committee’s
+center of gravity downward and erodes consensus, but without changing the standing
+rate range. These outcomes align with historical evidence suggesting that perceived
+threats to central bank independence often reshape expectations more than they
+alter the actual policy path (e.g., Bianchi et al., 2023).
+Building on this, we introduce a second treatment: a negative labor market data
+revision, modeled after the August 1, 2025 Bureau of Labor Statistics (BLS) release.
+This scenario is layered on top of the political pressure context, allowing us to explore
+how the shocks compound.7 The data revision enters as a real-time adjustment that
+lowers perceived payroll strength and raises uncertainty, especially for employment
+sensitive members. In the LLM track, this added shock produces a further drift
+downward, albeit small. The average final FFR falls to 4.30%, remaining within the
+4.25%–4.50% range. Dissent, again driven entirely by simWaller, rises to 73% of
+simulations. Relative to the baseline, this reflects a 12 basis point easing, consistent
+with a softer labor outlook, rather than a major policy regime shift. The MC track
+shows a similar downward nudge, with the mean final rate at 4.315% and a standard
+deviation of 15 basis points. The median remains at 4.25%, but dissent increases
+modestly, averaging 0.62 dissenters per meeting. Taken together, the layering of data
+uncertainty on top of political pressure illustrates how these shocks compound, and
+showcase how they can amplify disagreement, even within a constrained policy band.
+Our work contributes to the intersection of monetary policy committee theory,
+behavioral economics, and computational simulation. Building on classic committee
+7
+
+Results for a stand-alone data revision shock is in the Online Appendix.
+
+6
+
+models (e.g., Gerlach-Kristen, 2006; Riboni and Ruge-Murcia, 2010), we endogenize
+persuasion and career incentives by linking them to each member’s information set.
+In standard models, influence is imposed exogenously by a chair or agenda setter;
+here, influence attempts and their costs arise organically during debate. Unlike
+Bayesian persuasion models (e.g., Kamenica and Gentzkow, 2011), which feature
+one-to-many communication from a single informed sender, our environment allows
+many-to-many strategic exchanges, reflecting the interactive flow of arguments in
+actual FOMC meetings. Embedding reputation driven career concerns (Holmström,
+1999) captures how members may adjust their positions to align with current or
+anticipated leaders. This creates a novel channel for political pressure on the Chair
+to spread: members reposition in anticipation of a leadership change, shifting the
+committee’s stance before the change occurs. In sum, our model endogenizes both
+persuasion and career incentives, extending committee theory toward a more realistic
+representation of decision making.
+Second, we link the rational choice committee model to behavioral research
+on cognitive biases, transparency, and communication in policy decisions. Prior
+work shows that policymakers’ personal experiences can systematically shape their
+hawkish or dovish leanings: FOMC members who have lived through high inflation
+forecast higher inflation and favor tighter policy, whereas those with benign inflation
+histories lean dovish (Malmendier and Nagel, 2016). We embed this experience-based
+heterogeneity into our agent profiles, recognizing that members carry distinct biases
+and personal histories into deliberations. By integrating these behavioral factors into
+a formal voting model, we examine how cognitive biases and institutional features
+interact to shape policy outcomes.
+Third, our work bridges two rapidly growing strands of computational economics:
+agent-based modeling with reinforcement learning for policy design (e.g., Peters
+et al., 2022; Cook and Palmer, 2025), and the use of large language model (LLM)
+agents to replicate realistic human interaction patterns (e.g., Manning et al., 2024).
+Recent studies have begun applying these methods to central banking; for instance,
+Seok et al. (2025) simulate deliberative exchanges among LLM agents in stylized
+monetary policy settings. Our framework differs in scope and design: we create
+7
+
+a dual-track environment where deliberative and rational voting behaviors run in
+parallel, grounded in real-time macroeconomic data and detailed FOMC member
+profiles.
+More broadly, this simulation framework provides a controlled environment to
+stress test various scenarios. We can experiment in silico (Horton, 2023) with factors
+like disclosure rules, dissent penalties, or coalition dynamics to see how they affect
+decision making under various scenarios. By enabling counterfactual experimentation
+in a realistic setting, this framework lets policymakers and researchers explore various
+“what if ” scenarios and observe the possible impacts on committee behavior and
+policy.
+The remainder of the paper proceeds as follows. We review the FOMC meeting
+process in Section 2. We then outline our framework in Section 3, including the data
+collection, construction of agent personas, the multi-stage simulation design, as well
+as the voting process; Section 3.2 describes the game theory implementation and
+Section 3.3 describes the Monte Carlo simulation framework. Section 4 explores our
+counterfactual scenario and describes the results. Section 5 concludes with some
+policy implications.
+
+2
+
+Modeling FOMC Meetings: Background
+“The debate on monetary policy is going on 365 days a year for 24 hours a day, all
+around the world. The meetings are definitely important, but they’re a snapshot of the
+ongoing debate.”
+— Former FOMC member James Bullard, in an interview8
+
+FOMC meetings are highly structured deliberations that anchor U.S. monetary
+policy. However, as James Bullard, former president of the Federal Reserve Bank of
+St. Louis, suggests, they represent only a moment in time within a broader, ongoing
+policy debate. While the meetings formalize key decisions, the underlying policy
+dialogue spans months, both within and beyond the Fed.
+Each meeting typically follows a fixed agenda: staff economists present updated
+8
+
+See Hyatt (2024) for the full interview.
+
+8
+
+forecasts and alternative scenarios; FOMC members then offer prepared statements
+outlining their interpretations of the data and views on appropriate policy.9 Following
+this stage, the Chair opens the floor for discussion, where members respond to others’
+arguments, and debate policy options. Finally, the committee votes on the policy
+decision. Dissenting votes are relatively rare and, when they occur, serve mainly
+to register an alternative viewpoint rather than to overturn the majority consensus
+(Thornton and Wheelock, 2014).
+Our simulation mirrors the FOMC’s workflow. The sequence of events, the
+information available to each participant, and the conversational norms governing
+discussion are modeled to reflect actual FOMC dynamics. Because monetary policy
+is an ongoing debate rather than a static decision, our framework can continuously
+ingest “fresh” economic and market data, dynamically updating the simulation to
+reflect evolving conditions. Each FOMC participant in our framework is represented
+by an independent agent (implemented via an LLM) with a distinct profile. In
+the baseline setup, these agents correspond to the twelve voting members of that
+year’s FOMC. However, the framework can easily extensible to include non-voting
+participants, other attendees, or hypothetical members. We describe the simulation
+pipeline next.
+
+3
+
+LLM Simulation Framework
+
+Standard models of committee voting assume members hold rational expectations,
+update beliefs via Bayes’ rule, and vote to minimize well-defined loss functions.
+These assumptions yield testable predictions about voting patterns, dissent, and
+policy outcomes. Empirically, however, FOMC behavior diverges sharply from those
+forecasts. Between 1978 and 2023 fewer than 6% of all recorded ballots were dissents
+(Thornton and Wheelock, 2014), and from 2005 to 2022 not a single Board Governor
+dissented (Bobrov et al., 2025). Archival transcripts and insider accounts show
+that members undergo extensive staff briefings and private discussions in the week
+before each meeting, typically converging on the Chair’s proposal well in advance
+9
+
+Both the Tealbook reports and participants’ prepared statements are made public with a
+five-year lag; the Philadelphia Fed hosts the historical files.
+
+9
+
+of the public vote (Bernanke, 2022). Dissent costs are also role-specific: Reserve
+Bank presidents, who face weaker career constraints, cast the vast majority of
+dissents, whereas D.C.-based Governors almost always vote with the Chair (Chappell
+and McGregor, 2013). Added to this are external pressures: political jaw-boning
+measurably impacts interest rate futures (Bianchi et al., 2023), while heightened
+transparency can induce conformity (Hughes and Fehrler, 2015). In short, premeeting coordination, consensus norms, career incentives, and political or market
+pressures all interact to influence the real-world outcomes away from the predictions
+of textbook voting models. Capturing these informal frictions is therefore central to
+any realistic simulation of FOMC decision-making.
+LLMs enhance economic modeling in this context by integrating data, institutional
+rules, personal incentives, and strategic context in ways that mirror how Federal
+Reserve officials reason. And because LLMs converse naturally, they can explicitly
+model the information sharing, persuasion, and strategic positioning that turn
+individual views into collective monetary decisions. We model the FOMC meeting
+as a multi-agent system of twelve participants, comprising seven Governors and five
+Reserve Bank presidents. Each agent is an instance of an LLM endowed with a
+unique persona and a packet of economic data. The simulation pipeline (shown
+in Figure 1) unfolds in three sequential phases: (1) data input preparation, (2)
+formation of initial policy stance by each agent, and (3) full committee deliberation
+process and voting. We describe this pipeline next.10
+
+Phase 1: Data Inputs
+For each simulated meeting, we construct a reproducible data snapshot that serves
+as the foundation for all subsequent stages of the simulation. The process begins by
+gathering and processing the extensive information on current economic conditions,
+ensuring the simulation is grounded.11 Specifically, we pull the latest FOMC policy
+statement (in this case from June 18, 2025), key macroeconomic indicators, and
+10
+
+The simulation employs OpenAI’s GPT family models with differentiated configurations across
+pipeline stages to optimize for specific tasks. We provide more details in the Online Appendix.
+11
+All collected data are stored as structured JSON files, preserving a precise snapshot of the
+economic environment at a given point in time.
+
+10
+
+Figure 1: Simulation Framework
+Notes. Figure 1 shows the simulation workflow. We start from real-time economic inputs and agent
+personas, then run two parallel tracks: (i) a behaviorally rich LLM deliberation and (ii) a Monte
+Carlo (MC) benchmark. The design mirrors the FOMC process and lets us switch on
+counterfactuals to see how communication frictions and political pressure translate into policy drift.
+Phase 1 (Data & Priors): produce member priors (µi , σi2 ).
+Phase 2 (Consensus): update toward the committee mean with αi and compress variance by γ.
+Phase 3 (Agenda & Vote): the Chair proposes rc = rbase + ∆; the final rate is
+rf = wa rc + (1 − wa ) mediani (µpost
+); dissent propensity depends on the role-based cost κi .
+i
+Political pressure (treatment): lower wa (weaken Chair authority) and apply
+appointment-weighted shifts to selected members.
+Data revision (treatment): incorporate ex-post data updates by re-initializing priors from the
+revised dataset: (µi , σi2 ) ← (µi + δi , ρi σi2 )
+µi
+member i’s belief (rate)
+σi2
+uncertainty (variance)
+αi , γ consensus pull and variance compression (Phase 2)
+rc , ∆ agenda rate and Chair bias (Phase 3)
+wa
+weight on agenda in rf (Chair authority)
+κi
+role-based dissent cost
+
+11
+
+retrieve recent speeches from each Governor. The core indicators summarized in
+Table 1 are obtained via the FRED and BLS APIs, providing a consistent economic
+backdrop for the simulation.
+Table 1: Key U.S. Economic Indicators – Snapshot as of July 31st , 2025
+Indicator
+
+Latest
+
+YoY
+
+$23,685.3 bn
+104.0
+$720.1 bn
+1.3 m
+
+2.0 %
+0.7 %
+3.9 %
+−0.5 %
+
+(
+(
+(
+"
+
+FRED
+FRED
+FRED
+FRED
+
+321.5
+327.6
+126.6
+125.9
+$67.8
+
+2.7 %
+2.9 %
+2.6 %
+2.8 %
+−12.7 %
+
+(
+(
+(
+(
+$
+
+FRED
+FRED
+FRED
+FRED
+FRED
+
+Labor Market
+Unemployment Rate
+Nonfarm Payrolls
+Labor Force Participation
+Average Hourly Earnings
+Employment-Population Ratio
+
+4.1 %
+159.7 m
+62.3 %
+$31.2
+59.7 %
+
+0.0 pp
+1.2 %
+−0.5 pp
+3.9 %
+−0.5 pp
+
+(
+(
+"
+(
+"
+
+BLS
+BLS
+BLS
+BLS
+BLS
+
+Financial Conditions
+Fed Funds Rate
+10-yr Treasury Yield
+2-yr Treasury Yield
+S&P 500 Index
+U.S. Dollar Index (DXY)
+VIX Volatility Index
+
+4.3 %
+4.4 %
+3.9 %
+6,362.9
+120.4
+15.5
+
+−75.0 bp
+16.0 bp
+−18.0 bp
+19.1 %
+−2.8 %
+−25.3 %
+
+$
+"
+"
+(
+"
+"
+
+FRED
+FRED
+FRED
+FRED
+FRED
+FRED
+
+Growth & Output
+Real GDP (2025 Q1)
+Industrial Production (Index)
+Retail Sales (monthly)
+Housing Starts
+Inflation & Prices
+CPI (All Items)
+Core CPI
+PCE (All Items)
+Core PCE
+WTI Crude Oil ($/bbl)
+
+Trend Source
+
+Notes: YoY shows 12-month percent change unless marked pp (percentage points) or bp
+(basis points). (, $, "compare the latest month (or quarter) with the prior period:
+( ≥ +0.1σ, " ≤ −0.1σ, $ otherwise, where σ is the series’ 5-year s.d. For price indices,
+red (() signals faster inflation, green (") slower. Daily financial series use July 31st 2025
+closes; monthly and quarterly series use June 2025 and 2025 Q1 observations. All data are
+from FRED unless otherwise noted.
+
+In addition to the raw data, the simulation generates a synthetic, up to date version
+of the Federal Reserve’s Beige Book. To do so, we combine the most recent official
+(actual) Federal Reserve Beige Book content with real time web intelligence to create
+a comprehensive, current economic assessment. Drawing on data from government
+agencies, trade groups, regional media, and research centers, the system covers all
+12
+
+twelve Federal Reserve districts. The primary method for this involves an LLMpowered GPTResearcher that acts like a team of specialized economic analysts, with
+each one focusing on one of the twelve Federal Reserve districts.12 Each digital analyst
+constructs targeted queries about their assigned region. These “researchers” work in
+parallel, gathering real-time economic data on employment trends, business activity,
+inflation pressures, and sector-specific developments across all fifty states. The system
+then synthesizes these regional reports into a national economic summary, complete
+with a structured district comparison table that highlights regional disparities and
+emerging patterns.
+Table 2 compares the most recent official Beige Book (published on July 16th,
+2025) with our synthetic version, produced on July 30th, 202513 :
+Table 2: District Economic Conditions:
+Official Beige Book vs. Synthetic Version
+District
+
+Official
+
+simCurrent
+
+Consistency
+
+Trend
+
+Boston (1st)
+
+Modest
+
+Moderate
+
+Consistent
+
+(
+
+New York (2nd)
+
+Modest
+
+Moderate
+
+Consistent
+
+(
+
+Philadelphia (3rd)
+
+Moderate
+
+Mixed
+
+Shifted
+
+"
+
+Cleveland (4th)
+
+Modest
+
+Mixed
+
+Shifted
+
+"
+
+Richmond (5th)
+
+Moderate
+
+Moderate
+
+Consistent
+
+$
+
+Atlanta (6th)
+
+Moderate
+
+Slowing
+
+Shifted
+
+"
+
+Chicago (7th)
+
+Mixed
+
+Moderate
+
+Consistent
+
+(
+
+St. Louis (8th)
+
+Modest
+
+Moderate
+
+Consistent
+
+(
+
+Minneapolis (9th)
+
+Moderate
+
+Moderate
+
+Consistent
+
+$
+
+Kansas City (10th)
+
+Modest
+
+Moderate
+
+Consistent
+
+(
+
+Dallas (11th)
+
+Robust
+
+Slowing
+
+Shifted
+
+"
+
+San Francisco (12th)
+
+Moderate
+
+Robust
+
+Consistent
+
+(
+
+Growth scale: ■ Robust, ■ Moderate, ■ Modest, ■ Mixed, ■ Slowing.
+Consistency: Consistent = assessments differ by ≤ 1 step; Shifted = swing of ≥ 2 steps.
+Trend arrows: ( improving, $ stable, " weakening.
+
+The official July 2025 Beige Book still depicts an economy that is growing, but
+our updated analysis shows that the nature of that growth has shifted. Four districts
+(Philadelphia, Cleveland, Atlanta, and Dallas) exhibit material softening relative
+12
+13
+
+Please see Online Appendix for more details.
+Full document is available in the Online Appendix.
+
+13
+
+to the earlier report, with notable shifts from “moderate” or “robust” growth to
+“mixed” or “slowing” conditions. These changes are often linked to layoffs, weakening
+manufacturing activity, or cooling consumer demand. In contrast, the remaining
+eight districts show general consistency with the Fed’s prior assessment as of July
+16th 2025, though with greater granularity: supply chain frictions, labor shortages in
+services and construction, and tech-sector adjustments are noted. At the same time,
+continued strength in sectors like tourism, tech, aerospace, and renewable energy
+helps anchor activity in several regions.
+Next, we build an executive summary of recent economic news by running multiple
+search queries across relevant economic domains. Each article discovered through
+this process is scored by an algorithm that evaluates source credibility and economic
+indicator relevance. The highest scoring articles are then categorized by theme and
+summarized. The summary highlights overall economic momentum, key risks and
+opportunities, and direct implications for monetary policy decisions.14 Finally, we
+retrieve and summarize recent speeches made by the actual FOMC participants, as
+well as the most recent FOMC announcement.
+
+Phase 2: Individual Policy Formation
+Governors
+With the informational foundation in place, the simulation proceeds to the formation
+of private opinions. Each agent is assigned a unique persona based on the realworld characteristics of its corresponding FOMC voting member. Personas are built
+from biographical details, recent public statements, inferred policy leanings, and
+district-specific economic context. Each agent receives:
+a) a role description and career biography15 ;
+b) a macro dashboard (Table 1) showing current levels and two lags of first differences;
+14
+
+Analyses draw on nearly 190 unique articles over a two-week collection window ending July 31,
+2025. The highest relevance pieces are clustered around labor market trends (10 articles).
+15
+Details provided in the Online Appendix.
+
+14
+
+c) current macro context, including the latest policy statement, a synthetic Beige
+Book summary, recent news, and the member’s own speeches and interviews.
+Agents integrate these qualitative and quantitative inputs with their personas to
+form an initial private policy view. Each is prompted to issue a rate recommendation
+and a one-sentence justification, representing the agent’s initial belief mean, µinitial
+.
+i
+This output serves as input to the numeric vote engine, detailed in Section 3.1.
+We also include a stance evolution module in persona building, which uses an
+LLM to classify recent public speeches into hawkish, dovish, or data-dependent
+stances. These signals are aggregated with a strong recency bias, i.e., recent speeches
+count most, earlier ones less, producing a posterior stance with calibrated confidence.
+The system flags any discrete shifts from past views and feeds this evolved stance
+into persona construction, so rate recommendations and uncertainty can adjust
+dynamically to members’ latest communications.
+Chair
+A unique aspect of the simulation is the modeling of the FOMC Chair, who carries a
+dual role. First, the Chair acts as a deliberating committee member, i.e., an LLM
+agent who participates in the discussion with their own dynamically updated beliefs.
+Second, the Chair serves as the procedural agenda-setter, a role governed not by the
+LLM but by a deterministic rule we set. This separation is a deliberate design choice
+to transparently model both the Chair’s intellectual contribution and their formal
+institutional function.
+As a deliberating member, the Chair agent (e.g., simPowell) participates in the
+simulation identically to all other members. The agent forms its own private opinion,
+engages in dialogue, and its internal policy belief, µchair , is updated throughout the
+meeting via the same Bayesian mechanism as its peers. In this capacity, the Chair is
+simply one of twelve voices contributing to the discussion.
+In its procedural capacity as agenda-setter, the Chair’s role is to formulate the
+proposed interest rate, denoted as rc , which serves as a critical anchor for the final
+vote. This process is governed by a deterministic, rule-based function to ensure
+transparency and reproducibility. The function systematically translates the final,
+15
+
+updated beliefs of all committee members, including the Chair’s own private belief,
+into a single, coherent policy proposal. The proposal generation is as follows. First,
+the function gathers the latest set of policy beliefs from all participating governor
+agents. For each of the 12 members on the committee, it extracts their current
+preferred interest rate, or belief mean, µi . Next, the function aggregates this set
+of beliefs into a single baseline proposal, rbase , using one of two distinct strategies,
+which is a configurable parameter of the simulation. The agent’s policy belief has
+two key components:
+• Mean: Agent’s current best estimate of the appropriate policy rate (e.g., 4.5%).
+This is their “belief.”
+• Variance: Agent’s uncertainty about their belief. A high variance implies low
+confidence and greater openness to persuasion, and vice versa.
+The default approach calculates the median of the members’ beliefs.16 This
+method is robust as it is not excessively influenced by outlier policy views:
+
+
+rbase = median {µi }N
+i=1
+
+
+
+The model also allows for the application of an optional bias, denoted by ∆. This
+parameter is designed to model a chair who may have an intrinsic hawkish (positive
+∆) or dovish (negative ∆) inclination. This bias is applied as a simple additive shift
+to the baseline proposal. The final proposed rate, rc , is the result of combining the
+baseline proposal with the optional chair bias:
+rc = rbase + ∆
+These two roles are reconciled during the final vote. The simulation models the
+Chair’s institutional responsibility through extremely high dissent costs rather than an
+explicit override. The voting logic assigns the Chair agent a dissent cost approximately
+four times higher than other members, making it extremely unlikely (though not
+impossible) for the Chair to dissent from their own proposal rc , even if it diverges
+16
+
+Median is the default in our implementation. Other options include mean and status quo.
+
+16
+
+from their private, deliberated belief µchair . This probabilistic mechanism models
+the Chair’s responsibility to lead the committee to a consensus while preserving the
+possibility of rare institutional dissent.
+The framework’s flexibility allows for exploring alternative scenarios by adjusting
+both the aggregation strategy and the bias term. These are discussed in more detail
+in Section 4.
+
+3.1
+
+Phase 3: Committee Deliberation and Voting
+
+The deliberation stage replicates the procedural and behavioral dynamics of real
+FOMC meetings. Rather than modeling policy decisions in isolation, it simulates the
+full decision-making pipeline: information flow, informal pre-meeting coordination,
+structured debate moderated by the Chair, and institutional pressures that influence
+final votes. By capturing both informational inputs and member incentives, the
+system reflects how private priors, public reasoning, and consensus building interact
+to shape collective decisions.
+Deliberation begins with the integration of all economic intelligence gathered
+earlier, including macro indicators, regional assessments, recent speeches, and the
+latest FOMC statement, along with each member’s initial policy stance. Before
+formal debate, the system includes an optional consensus building phase, simulating
+the informal coordination typical of FOMC culture (Bernanke, 2022).17
+Once consensus building concludes, the system establishes the meeting context
+by presenting three key pieces of information. It begins by reviewing the results and
+decisions from the previous meeting to provide continuity in policy reasoning. It then
+17
+
+To model this, each agent’s initial belief µi,old is iteratively nudged toward a consensus target
+µconsensus , defined as a weighted average of the committee’s median and mean beliefs:
+µi,new = (1 − ωi )µi,old + ωi µconsensus ,
+where ωi = 0.15 × (σi2 /0.1) is a variance-dependent convergence rate that makes more uncertain
+members more susceptible to consensus pressure. Shared information in this stage also increases
+confidence by reducing each agent’s variance through a confidence boost multiplier γ < 1:
+2
+2
+σi,new
+= γ · σi,old
+.
+
+This ensures agents enter the formal meeting with more aligned beliefs and slightly higher conviction
+than their private priors.
+
+17
+
+extracts key language and forward guidance from the most recent FOMC statement,
+preserving institutional memory and highlighting any prior commitments. Finally, it
+presents an updated snapshot of current economic conditions, detailing changes in
+inflation, employment, growth, and regional dynamics since the last meeting.
+The formal meeting simulation begins with the Chair opening the session, delivering an economic briefing, highlighting major developments, and posing the central
+policy question, i.e., whether to maintain the current federal funds rate or adjust it.
+Deliberation proceeds in structured rounds that mirror real FOMC debates. In the
+first round, selected members present policy recommendations with brief justifications
+based on their economic philosophy, regional context, and interpretation of current
+conditions. The second round shifts to a discussion moderated by the Chair, focused
+on the employment–inflation trade off, with dovish members emphasizing labor
+markets and hawkish members prioritizing price stability, both citing data. A third
+round enables direct engagement, as members challenge one another’s arguments
+and refine their views. The Chair then concludes by summarizing key points, noting
+areas of consensus and disagreement, and proposing an agenda rate based on the
+discussion.
+The decision phase then follows. The agenda rate is used as an anchor, and
+the final rate is calculated as a weighted average of the agenda rate (30%) and the
+committee median (70%).18 Institutional pressure and dissent costs are applied,
+reflecting the dynamics of consensus seeking behavior within the FOMC. Members’
+institutional roles affect these dynamics: the Chair has strong agenda-setting power
+and very high dissent costs, while Governors have more independence. The dissent
+decision is modeled as a probabilistic rule tied to distance from the adopted rate,
+role-specific dissent costs, and each member’s uncertainty. For member i, the dissent
+propensity is
+Pidissent = µi − rfinal ×
+18
+
+
+
+1
+× 1 + Vari ,
+κi
+
+Formally, the Fed Chair has one vote like any other FOMC voter. However, the Chair’s
+influence is far greater than a 1/12 vote share due to control of procedure and communications.
+Prior empirical studies have found that during the Arthur Burns era (1970–78), for example, the
+FOMC Chair effectively carried 40–50% of the voting weight in policy decisions (Chappell Jr et al.,
+2004).
+
+18
+
+where µi is the member’s preferred rate, rfinal is the adopted rate, Vari is the member’s
+belief variance, and κi is a role-based dissent cost. In baseline settings,
+κChair = 10.0,
+
+κRegional = 2.5,
+
+κBoard = 2.5,
+
+with the Chair’s cost reduced to 5.0 under political-pressure “reduced authority.” A
+dissent is realized if:
+Pidissent > 0.519
+
+and
+
+µi − rfinal > 0.25 pp.
+
+Political pressure modifies κi asymmetrically using appointment-likelihood weights:
+dovish dissent becomes cheaper and hawkish dissent more costly for high-likelihood
+candidates. The activation thresholds are relaxed for non-chair members with high
+appointment likelihood (effective cutoff lowered to 0.3 and minimum distance to 0.15
+pp).
+
+3.2
+
+Implementation Framework
+
+We implement the Riboni and Ruge-Murcia (2010) framework with three key deviations for a more appropriate comparison against the LLM-based environment: (i)
+private signals are independent across members to model true heterogeneity20 ; (ii) the
+Chair proposes the agenda via a fixed rule (median, mean, or status-quo) to isolate
+committee dynamics, rather than by optimizing their own loss21 ; (iii) if a proposal
+19
+
+We calibrate the dissent indicator threshold τ in the rule pdissent = ∆ (1/κ) (1 + σ)—with ∆ the
+absolute gap between a member’s preferred rate and the final rate, κ the institutional dissent cost,
+and σ residual uncertainty, so that realized dissent frequencies align with the FOMC’s historical
+range (about 5–15%), with τ = 0.5 landing around 8–10% in our baseline runs.
+20
+Riboni and Ruge-Murcia (2010) allow for correlated signals, whereas we assume independence.
+The rationale is pragmatic since correlation parameters are not separately identified in historical
+voting data, and heterogeneity at the FOMC is often driven by district specific, idiosyncratic
+information. Empirically, Chappell and McGregor (2013) show that cross-member forecast errors
+display weak correlation once common macro factors are removed. Independent signals therefore
+approximate the “residual” heterogeneity relevant for persuasion.
+21
+Riboni and Ruge-Murcia (2010) model the Chair as minimizing her own loss. In practice the
+Fed Chair emphasizes consensus and signaling credibility more than personal utility. Transcripts
+reveal that Chairs routinely propose “somewhere around the middle” of expressed views (see
+Bernanke, 2022). We therefore implement an institutional rule, rc = median{µi } by default, and
+treat alternative rules (mean or status quo) as robustness cases. This choice converts the benchmark
+from a chair-dominance regime to a median voter regime, which is the modal empirical pattern
+
+19
+
+fails, the committee adopts the median of the ballots as a realistic compromise, not
+the previous-meeting rate.22 These modifications retain the logic of Bayesian voting
+yet add empirically grounded institutional detail.
+Each committee member i begins with a normal prior belief about the appropriate
+policy rate, r ∼ N (µ0i , σi0 2 ). The agent then receives an independent private signal,
+si , drawn from a distribution centered around their prior:
+si = µ0i + εi ,
+
+εi ∼ N (0, σ 2 ),
+
+where σ 2 is the globally set signal noise. After receiving this signal, the agent forms
+a posterior belief N (µpost
+, σipost 2 ) via the conjugate normal–normal updating rule.
+i
+This posterior serves as the agent’s initial belief entering the meeting phase.
+The LLM simulation employs a consensus convergence mechanism that models
+realistic committee dynamics. During pre-meeting consensus building, beliefs evolve
+according to:
+µi,t+1 = µi,t + αi · (µ̄t − µi,t ),
+
+2
+2
+σi,t+1
+= 0.95 · σi,t
+,
+
+2
+where µ̄t is the committee average belief, αi = 0.15 · (σi,t
+/0.1) captures convergence
+
+strength based on uncertainty, and variance reduces by 5% per round to model
+confidence building through information sharing. This mechanism captures the
+realistic tendency for committee members to converge toward consensus through
+informal coordination, rather than performing precise mathematical calculations.
+The Chair applies a deterministic rule to the final set of posterior beliefs, {µpost
+},
+i
+documented by Thornton and Wheelock (2014).
+22
+Historical minutes show that when the committee cannot agree on the Chair’s proposal it
+typically negotiates a mid-point compromise rather than mechanically retaining the prior setting
+(e.g. the August 1989 and June 2003 meetings). This median fallback matches that practice and
+avoids artificially inflating policy inertia.
+
+20
+
+to generate the proposed agenda, rc :
+
+
+
+
+
+mediani µpost
+i
+
+
+
+
+
+baseline strategy,
+
+
+
+
+
+
+
+rprevious
+
+status-quo strategy.
+
+rc = meani µpost
+i
+
+alternative strategy,
+
+The voting mechanism incorporates institutional pressures and role-based dissent
+costs. Member i faces a dissent cost Ci that varies by institutional role, mirroring the
+LLM set up. The final rate reflects both agenda influence and committee preference
+through a weighted combination: rf = wa · rc + (1 − wa ) · mediani µpost
+, where
+i
+wa = 0.3 under normal conditions and wa = 0.1 under political pressure, modeling
+reduced Chair authority. If the proposal fails in either implementation, the committee
+implements rf = mediani bi , the median of all submitted ballots.
+
+3.3
+
+Monte Carlo Simulation
+
+The Monte Carlo (MC) analysis implements the mathematical core of the Riboni
+and Ruge-Murcia (2010) framework with enhanced methodological features to enable
+rigorous statistical comparison with LLM simulation results. This approach abstracts
+away from natural language deliberation to focus on formal game theory mechanisms,
+allowing us to systematically vary institutional settings while maintaining strict
+comparability between simulation approaches.
+Each MC draw represents a single realization of the voting game. The simulation
+begins with initial policy beliefs sourced from the LLM opinion formation stage. For
+each committee member i, their belief is represented as a normal distribution:
+Beliefi ∼ N (µi , σi2 )
+where µi is the agent’s preferred policy rate from LLM opinion formation and σi2
+represents their baseline uncertainty derived from confidence levels. Belief means are
+
+21
+
+sampled from agents’ own reported confidence distributions:
+µ′i ∼ N (µi , σi∗2 )
+where the confidence-based variance is derived from self-reported confidence levels:
+σi∗ = κ ·
+
+1 − ci
+ci
+
+Here, ci ∈ [0, 1] represents agent i’s confidence level and κ = 25 basis points is a
+calibration parameter ensuring that agents reporting 50% confidence have a standard
+deviation of κ.
+Following belief initialization, each agent receives an independent private signal
+si and updates their belief using conjugate normal-normal Bayesian updating:
+τi ≡ σi−2 ,
+
+−2
+τsignal ≡ σsignal
+,
+
+(1)
+
+τi µ′i + τsignal si
+post
+µi =
+,
+τi + τsignal
+
+(2)
+
+1
+τi + τsignal
+
+(3)
+
+σi2,post =
+
+
+
+Beliefupdated
+∼ N µupdated
+, σi2,updated
+i
+i
+
+
+
+(4)
+
+2
+where σsignal
+represents the precision of private information. The simulation also
+
+includes a pre-meeting consensus-building phase designed to replicate institutional
+coordination mirroring the LLM simulation.
+The Chair applies a deterministic rule to the post-consensus belief set {µpost
+} to
+i
+generate the agenda proposal:
+
+
+
+
+
+median({µpost
+})
+i
+
+
+
+
+post
+rbase =  1 PN
+i=1 µi
+N
+
+
+
+
+
+
+rprevious
+
+(baseline strategy)
+(mean strategy)
+(status-quo strategy)
+
+The final agenda also incorporates Chair bias, if present: rc = rbase + ∆, where ∆
+
+22
+
+represents hawkish (∆ > 0) or dovish (∆ < 0) tendencies.
+Institutional voting follows individual dissent cost calculations. Member i votes
+YES on proposal rc if:
+µpost
+− rc ≤ ϵ · κi
+i
+where ϵ = 0.25 percentage points represents the tolerance band and κi captures
+member-specific dissent costs varying by institutional role and political conditions,
+calibrated to match LLM simulation patterns.
+The proposal passes if the weighted vote share exceeds threshold ϑ = 0.5:
+i wi 1YES
+
+P
+
+P
+
+i wi
+
+≥ϑ
+
+where standard voting weights are wi = 1.0 for all members. Failed proposals trigger
+implementation of the median submitted ballot: rf = median({bi }).
+Each Monte Carlo draw records key variables for policy analysis: the Chair’s
+proposed agenda rate (rc ), the final implemented policy rate (rf ), and the set of
+dissenting members (D). By running 10,000 draws, the Monte Carlo simulation
+provides statistical grounding for LLM results.
+
+4
+
+Results
+
+With these two simulation methods at hand, we now arrive at two complementary
+setups: a “control” and a “treatment.” In the control case, the Monte Carlo simulations depict a world of purely rational, rule-based agents. They receive initial beliefs,
+undergo a parameter change, and vote strictly according to predefined rules. This
+serves as the benchmark; what pure economic theory would predict under idealized
+conditions. The treatment, in contrast, introduces the LLM simulation, which reflects
+the messy and human-like dynamics of deliberation. Here, agents don’t simply vote
+mechanically; they debate, argue, persuade, and react to one another. This layer of
+social interaction captures the complexity and unpredictability of real-world decision
+making.
+In this section, we present the results of our primary counterfactual simulation.
+23
+
+Across all scenarios, the underlying economic environment, such as inflation, unemployment, and other key indicators, is held fixed at U.S. conditions in late July
+of 2025. This ensures that any differences in policy outcomes arise solely from
+changes in committee composition or decision-making rules, rather than from varying
+macroeconomic shocks.
+However, to meaningfully evaluate the effects of political pressure, we must first
+understand the system’s behavior in the absence of such distortions. We therefore
+begin with a baseline scenario, establishing a reference point under normal conditions.
+
+4.1
+
+Initial Beliefs
+
+Table 3 summarizes the multi-iteration analysis (∼ 100 runs) of rate preferences,
+modeling high dimensional and complex belief formation. Confidence here is the
+agent’s self-assessed certainty (percent) about its initial rate view. We transform
+this into the member’s belief variance; higher confidence yields tighter distributions,
+which affects deliberation dynamics and posterior sampling in the MC mirror.
+The results reveals distinct and persistent themes in the reasoning patterns of
+each FOMC member. On the dovish end of the spectrum, simKugler, simCook, and
+simGoolsbee consistently emphasize the importance of supporting the labor market
+and sustaining the economic expansion in the face of gradually easing inflation.
+These members view monetary policy as a tool to ensure continued employment
+gains, and frequently cite the deceleration of inflationary pressures as justification
+for maintaining or even lowering interest rates. Their focus leans heavily toward
+protecting growth and minimizing the risks of premature tightening.
+Simulated Powell, Williams, and Jefferson adopt a more balanced and flexible
+approach. These members consistently express a desire to remain data-dependent,
+neither aggressively tightening nor easing policy without clear justification. Their
+reasoning reflects a concern for maintaining economic stability, ensuring continued
+labor market strength, and watching closely for any resurgence of inflation. These
+policymakers tend to advocate for holding rates steady unless compelling evidence
+warrants a shift, favoring optionality and responsiveness to evolving macroeconomic
+conditions.
+24
+
+Table 3: Initial Rate Beliefs – July 31st, 2025 Vintage
+Member
+
+Avg. Rate
+
+Confidence Key Reasoning
+
+simPowell
+
+4.44%
+(±0.080)
+
+84.8%
+
+Emphasizes balance of risks; data-driven neutrality amid persistent inflation and solid growth
+
+simCook
+
+4.24%
+(±0.025)
+
+82.0%
+
+Inflation shows signs of easing; consistent support
+for dovish policy to aid labor inclusivity
+
+simGoolsbee
+
+4.24%
+(±0.036)
+
+82.2%
+
+Supports growth while acknowledging inflation;
+balances expansion with caution
+
+simKugler
+
+4.25%
+(±0.019)
+
+81.8%
+
+Prioritizes employment stability; consistent preference for accommodative policy amid softening
+inflation
+
+simWilliams
+
+4.43%
+(±0.086)
+
+85.0%
+
+Neutral stance grounded in strong fundamentals
+and declining inflation risks; prefers steady path
+
+simJefferson
+
+4.35%
+(±0.060)
+
+84.8%
+
+Dual mandate balance; favors slightly belowneutral rate to safeguard employment and prices
+
+simBarr
+
+4.41%
+(±0.088)
+
+84.8%
+
+Persistent inflation cited as key concern; moderately hawkish stance to maintain progress
+
+simWaller
+
+4.18%
+(±0.088)
+
+77.0%
+
+Concerned about sticky core inflation, but leans
+dovish with focus on maintaining momentum
+
+simBowman
+
+4.22%
+(±0.208)
+
+83.0%
+
+Highlights volatility and uncertainty in inflation
+data; cautious with occasional dovish signals
+
+simSchmid
+
+4.58%
+(±0.117)
+
+84.9%
+
+Strongly hawkish; inflation pressures and robust
+growth warrant upper-bound positioning
+
+simMusalem
+
+4.62%
+(±0.123)
+
+84.6%
+
+Focused on anchoring inflation expectations;
+prefers tighter policy to guard credibility
+
+simCollins
+
+4.51%
+(±0.036)
+
+85.0%
+
+Sustained demand and resilient inflation support
+firm, hawkish positioning
+
+Committee Initial Rate Beliefs (100 Iterations)
+Avg. Initial Recommendation:
+Range (Across Iterations):
+Typical Spread:
+Spread Range:
+Members with opinions:
+Hawkish (≥4.50%):
+Moderate (4.41–4.44%):
+Leaning Dovish (4.24–4.35%):
+Dovish (<4.24%):
+Most Consistent:
+Least Consistent:
+
+4.375% (±0.026)
+4.33% – 4.44%
+0.552 percentage points (±0.150)
+0.25pp – 0.75pp
+12
+3 members (Schmid, Musalem, Collins)
+3 members (Powell, Williams, Barr)
+4 members (Goolsbee, Kugler, Jefferson, Cook)
+2 members (Waller, Bowman)
+Adriana D. Kugler (σ=0.019)
+Michelle W. Bowman (σ=0.208)
+
+25
+
+Meanwhile, on the hawkish end of the committee, simSchmid, simMusalem,
+and simCollins personas are more resolute in their call for tighter monetary policy.
+Their reasoning centers on the persistence of inflation and the need to anchor
+expectations through strong, pre-emptive rate stances. These members frequently
+point to robust consumer demand, strong labor market data, and signs of underlying
+inflation resilience as justification for maintaining elevated policy rates. They view
+any premature easing as a threat to the Fed’s credibility and the longer term goal of
+price stability.
+The most ideologically consistent voices emerge at the extremes. For example,
+simKugler persona, on the dovish side, and simSchmid persona, on the hawkish
+side, exhibit the most stable reasoning across the 100 iterations, with minimal
+variation in their underlying justifications. Their positions are deeply anchored in
+their respective macroeconomic priorities: employment for simKugler, and inflation
+control simSchmid. In contrast, simBowman shows a more variable perspective;
+simBowman is alert to inflation but, with mixed signals, her stance changes more
+than her peers’.
+
+4.2
+
+Baseline Scenario
+
+The simulation begins with launching an LLM-driven meeting of the FOMC. The
+twelve autonomous agents representing the committee members are not blank slates;
+they enter with structured priors derived from current macroeconomic data. These
+agents are also governed by a set of institutional rules that mirror the culture of
+the real Federal Reserve. The synthetic FOMC members are deliberating against
+a backdrop of solid economic growth (GDP growth 3.0%), inflation above target,
+and a stable labor market (unemployment 4.1%, modest payroll growth). Table 8
+summarizes the results:
+The baseline distribution shows a modest hawkish tilt. simBowman is near the
+4.50% upper bound (4.46%), while simCollins (4.51%), simSchmid (4.58%), and
+simMusalem (4.62%) sit above it; simPowell is just below at 4.44%. On the dovish
+side, simGoolsbee, simCook, and simKugler are at 4.25%, with simJefferson (4.35%)
+and simBarr (4.40%) slightly higher. The mean recommended rate is 4.40% (vs. a
+26
+
+Table 4: Baseline Scenario:
+Member Deliberation and Voting – July 31st, 2025
+Deliberation Rate
+
+Variation
+
+Uncertainty
+
+Mean (%)
+
+Std
+
+Mean
+
+Mean
+
+Std
+
+Freq (%)
+
+simGoolsbee
+simCook
+simKugler
+simBarr
+simJefferson
+simWilliams
+simPowell
+simWaller
+simBowman
+simSchmid
+simMusalem
+simCollins
+
+4.250
+4.250
+4.250
+4.405
+4.349
+4.424
+4.439
+4.202
+4.465
+4.582
+4.622
+4.514
+
+0.036
+0.025
+0.019
+0.088
+0.060
+0.086
+0.080
+0.088
+0.208
+0.117
+0.123
+0.036
+
+0.822
+0.820
+0.818
+0.848
+0.848
+0.850
+0.848
+0.770
+0.830
+0.849
+0.846
+0.850
+
+-0.1704
+-0.1704
+-0.1704
+-0.0159
+-0.0710
+0.0033
+0.0184
+-0.2181
+0.0449
+0.1620
+0.2017
+0.0934
+
+0.0360
+0.0250
+0.0190
+0.0880
+0.0600
+0.0860
+0.0800
+0.0880
+0.2080
+0.1170
+0.1230
+0.0360
+
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+Baseline FFR
+Target Range
+Effective FFR
+
+4.4204
+
+0.0229
+
+Simulated Member
+
+Vote Bias
+
+Dissent
+
+4.25% – 4.50%
+4.33%
+
+Notes: In practice, the FOMC sets the target range for the federal funds rate in 25 basis
+point increments. The simulated Final FFR of 4.42% falls within the 4.25%–4.50% range,
+corresponding closer to the midpoint of the range (4.375%) than to the current effective
+FFR (4.33%) . Deliberation Rate: The interest rate each member publicly argues for during
+the formal meeting. Variation (Std): Standard deviation of the deliberation rate across 100
+simulations. Uncertainty: Member’s self-reported confidence/uncertainty (decimal form).
+Vote Bias: Difference between the deliberation rate and the simulated final FFR; positive
+= more hawkish, negative = more dovish.
+
+27
+
+simulated final FFR of 4.42%), and views span roughly 42 basis points. Notably,
+simWaller is dovish in this simulation (4.20%).
+In the simulated aggregation, the committee’s Baseline FFR comes to 4.42%,
+which lies well within the prevailing 4.25%–4.50% target range. Given that the
+effective federal funds rate at the prior meeting was about 4.33%, this outcome
+implies an upward drift of roughly 9 basis points, effectively tightening policy within
+the existing range rather than formally raising it by a full 25 basis points. Figure 2
+provides an overview of member-level vote distribution.
+
+Figure 2: Baseline Scenario: Committee Vote Distribution
+Notes: Each row plots a kernel density estimate of that member’s votes (densities normalized
+within row). Dashed references at 4.25% and 4.50%.
+
+Despite the heterogeneity in beliefs, no formal dissents emerge. The Chair
+synthesizes prevailing inflation concerns with growth risks, presenting the upward
+shift as a balanced response that all members ultimately accept. This outcome
+illustrates how the simulation captures both diversity in individual preferences and
+the institutional dynamics that narrow disagreement and support consensus in FOMC
+deliberations.
+Next, we summarize outcomes from the baseline Monte Carlo simulation. In the
+baseline scenario for July 31, 2025, across 10,000 simulated meetings, the final policy
+rate clusters around the prior 4.25–4.50% target range, with a mean of 4.376%, a
+standard deviation of 7.4 basis points, and outcomes spanning 4.19% to 4.68%. The
+distribution is centered slightly above the midpoint (4.33%), implying an average
+28
+
+upward drift of about 4–5 basis points in the effective federal funds rate. No formal
+dissents occur in any of the 10,000 runs, consistent with broad consensus.
+Overall, both the LLM deliberation model and the Monte Carlo benchmark
+produce tightly clustered, consensus outcomes near the policy midpoint, but via
+different mechanisms. The LLM run offers a narrative of hawks and doves weighing
+conditions and converging on compromise. The Monte Carlo benchmark, relying
+only on institutional voting rules and members’ initial proposals, reduces dispersion
+and yields no dissents across 10,000 runs. This alignment is consistent with (and
+supports the plausibility of) the LLM-derived outcomes.
+
+4.3
+
+Political Pressure Scenario
+“Leaving rates steady makes Powell a ’Total and Complete Moron.’ Maybe, just maybe,
+I’ll have to change my mind about firing him?” – President Trump via Truth Social,
+June 20, 2025
+“I’ve been nice, I’ve been neutral, and I’ve been nasty, and nice and neutral didn’t
+work...Powell is a numbskull.” –President Trump via Truth Social, June 21, 2025
+“I’d love it if he wants to resign.. . . The housing market would boom if this— you
+know—numbskull lowered the rates.” – President Trump in an interview, July 16,
+2025.
+“I think he’s done a bad job, but he’ll be out pretty soon anyway...People can’t buy a
+house because this guy is a numbskull. He keeps rates too high, probably for political
+reasons.” – President Trump in a White House economic conference, July 23, 2025
+“We’re spending hundreds of billions because of one numbskull sitting over there Jerome Powell.” – President Trump during pool spray with reporters, July 24, 2025
+
+Recent White House remarks have reignited talk that President Trump might
+try to remove Chair Powell before his term ends.23 Markets reacted immediately:
+fed funds futures now price in about 125 basis points of rate cuts by end of 2026,
+roughly 50 basis points more easing than the Fed’s own dot plot suggests. Investors
+23
+See, e.g., “Trump says he will name new Fed chair ‘a little bit earlier’,” Reuters, Aug. 13, 2025;
+and “Trump weighs firing Powell’s Fed, shows draft letter,” Politico, July 16, 2025.
+
+29
+
+appear to be bracing for a more dovish successor24 , which in turn revives concerns
+about the Federal Reserve’s ability to resist direct political pressure.
+Political interference in central banking, while formally prohibited, is hardly rare.
+Using a new index of political pressure, Binder (2021) shows that even nominally
+independent central banks are often urged to loosen policy, with measurable effects
+on inflation expectations and actual decisions. History echoes this pattern: President
+Nixon leaned on Chair Arthur Burns in the early 1970s to keep rates low, as
+documented by Meltzer (2009). Recent archival work by (Drechsel, 2025) shows
+that bursts of presidential pressure of similar magnitude raise the U.S. price level by
+roughly 7 percent over a decade without any lasting boost to real activity.
+These episodes (past and present) inspire the political pressure channel in our
+model: diminished chair authority heightens the career incentives of other FOMC
+members to accommodate political demands, potentially skewing policy toward easier
+monetary conditions.25
+Under political pressure, we shift authority away from the Chair and build in
+career-driven dovishness. Concretely, we cut the Chair’s agenda weight from 0.3 to
+0.1, so the policy rate becomes a weighted average of the Chair’s agenda rate and the
+committee median: the lower weight means outcomes lean more toward the median.
+We also introduce a dovish adjustment: an appointment-linked bias equal to 50 basis
+points, scaled by appointment probability (only applied to members with high (0.6)
+appointment probability). Finally, pressure pulls the agenda itself below the median,
+setting the agenda rate 10 basis points under the committee median, so even before
+weighting, the Chair’s target is lower. Together, these changes tilt decisions dovish
+overall and generate split behavior across members depending on their appointment
+odds.
+Table 5 summarizes the results. Under the political pressure scenario, the
+Committee’s internal balance of power shifts visibly. Public criticism from the White
+House erodes Chair’s agenda setting weight and magnifies career incentives for those
+24
+
+Reuters, “Market bets on a more dovish Fed as Trump eyes Powell’s replacement,” June 27,
+2025.
+25
+Academic and historical evidence supports the realism of a career related dovish bias, though
+it’s usually discussed qualitatively rather than as a fixed formula.
+
+30
+
+Table 5: Political Pressure Scenario:
+Member Deliberation and Voting
+Deliberation Rate
+
+Variation
+
+Uncertainty
+
+Mean (%)
+
+Std
+
+Mean
+
+Mean
+
+Std
+
+Freq (%)
+
+simWaller
+simBowman
+simBarr
+simWilliams
+simCook
+simGoolsbee
+simKugler
+simJefferson
+simPowell
+simSchmid
+simMusalem
+simCollins
+
+3.969
+4.463
+4.373
+4.389
+4.210
+4.209
+4.210
+4.328
+4.403
+4.577
+4.617
+4.511
+
+0.053
+0.208
+0.088
+0.086
+0.025
+0.036
+0.019
+0.060
+0.080
+0.117
+0.123
+0.036
+
+0.700
+0.830
+0.848
+0.850
+0.820
+0.822
+0.818
+0.848
+0.848
+0.849
+0.846
+0.850
+
+-0.4063
+0.0873
+-0.0026
+0.0138
+-0.1658
+-0.1663
+-0.1658
+-0.0482
+0.0275
+0.2009
+0.2409
+0.1348
+
+0.0000
+0.2080
+0.0880
+0.0860
+0.0250
+0.0360
+0.0190
+0.0600
+0.0800
+0.1170
+0.1230
+0.0360
+
+88.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+Final FFR
+Target Range
+Effective FFR
+
+4.376
+
+0.058
+
+Simulated Member
+
+Vote Bias
+
+Dissent
+
+4.25% – 4.50%
+4.33%
+
+Notes: In practice, the FOMC sets the target range for the federal funds rate in 25 basis
+point increments. The simulated Final FFR of 4.3758% lies at the exact midpoint of the
+prevailing 4.25%–4.50% range, implying no change in the target range but maintaining
+the effective rate near its prior level (4.33%). Deliberation Rate: The interest rate each
+member publicly argues for during the formal meeting. Variation: Standard deviation
+of the deliberation rate across 100 simulations. Uncertainty: Member’s self-reported
+confidence/uncertainty. Vote Bias: Difference between the deliberation rate and the
+simulated final FFR; positive = more hawkish, negative = more dovish. Mean dissents per
+simulation: 0.88; at least one dissent occurs in approximately 88% of runs (driven almost
+entirely by Waller).
+
+31
+
+viewed as plausible successors. The political pressure scenario generates a more
+polarized distribution of preferences, with sharper dovish positioning among some
+members and persistent hawkish stances among others. simWaller emerges as the
+most dovish, holding rates near 3.97% in every simulation and dissenting in 88% of
+runs. A small dovish bloc (including simWaller, simBowman, and at times simBarr)
+consistently pushes for levels below the lower bound of the prevailing 4.25%–4.50%
+range. On the hawkish side, simMusalem (4.617%), simSchmid (4.577%), and
+simCollins (4.511%) advocate above 4.50%.
+The simulated Final FFR averages 4.376%, which sits at the midpoint of the
+existing target range. In practical terms, this would leave the range unchanged but
+position the effective federal funds rate near its prior level, a posture consistent with
+maintaining the stance of policy rather than easing or tightening. This stands in
+contrast to the baseline scenario, where the simulated mean implied an upward drift
+of roughly 10 basis points within the band. Figure 3 provides a visualization of the
+member vote distributions.
+
+Figure 3: Political Pressure Scenario: Committee Vote Distribution
+Notes: Each row plots a kernel density estimate of that member’s votes (densities normalized
+within row). Dashed references at 4.25% and 4.50%.
+
+While dissents are less frequent than the most polarized rhetoric might suggest,
+they are still notable: on average, 0.88 dissents per simulation. This pattern reflects
+the heightened influence of external pressure, which amplifies both ends of the
+policy spectrum while still allowing for a negotiated consensus on the midpoint
+32
+
+as the institutional decision. This simulation shows that the Federal Reserve is
+only partially insulated from politics: credible threats to leadership succession can
+impose a measurable dovish drift without breaching the range defined by prior
+guidance. Under pressure, clear coalitions form, and policy positions closely reflect
+members’ career incentives. The chair’s influence also becomes conditional: when
+their authority is weakened, decisions tend to move toward the committee’s median
+view rather than the chair’s preference. This suggests that outside scrutiny can
+shape internal decision-making, even in an institution guided by formal rules.
+Next, we summarize the results from the Monte Carlo simulation under the
+political pressure scenario, incorporating 10,000 simulated policy paths. The Monte
+Carlo simulation of political pressure scenario confirm the presence of statistically
+significant political pressure effects. Across 10,000 simulated paths, the final federal
+funds rate averages 4.38%, roughly eight basis points below the baseline MC mean,
+and the standard deviation rises to 14 basis points, indicating a noticeably wider
+spread of outcomes. Although the modal decision remains the upper bound of the
+standing target range, dispersion around that anchor is much greater. Agendas
+concentrate at 4.50% (61.3% of cases) and 4.25% (32.6%), with smaller mass at
+4.00% (4.6%) and 4.75% (1.5%), and essentially zero at 5.00%. Relative to the prior
+4.25–4.50% target range (effective rate 4.33%), the distribution implies a modest
+upward tilt toward the top of the range, consistent with political pressure nudging
+decisions higher but rarely beyond a single 25 basis point step.
+Political pressure also makes dissent a central feature. At least one dissent occurs
+in roughly 61 percent of meetings, for a total of 6,113 dissenting votes across all MC
+simulations, with dissent coming from six unique members: simWaller, simGoolsbee,
+simMusalem, simWilliams, simCollins, and simSchmid. simWaller dissents in 6,062
+meetings, while the next most frequent dissenter, simMusalem, appeared only 22
+times.
+Taken together, the MC results show that even without conversational dynamics
+or narrative persuasion, credible external pressure both shifts the committee’s center
+of gravity downward and raises the likelihood of open disagreement. The policy path
+stays inside the established range, preserving formal continuity, yet the combination
+33
+
+of a thicker lower tail and frequent dissents signals a materially weaker consensus
+and a heightened risk that future shocks could push rates further from their baseline
+trajectory.
+
+4.4
+
+Data Revision Scenario
+
+On August 1, 2025, the Bureau of Labor Statistics (BLS) released the July employment report showing a gain of just 73,000 nonfarm payroll jobs, sharply below both
+market expectations and the pace of previous months. The report also contained
+sizable downward revisions to prior months’ data, subtracting a cumulative 258,000
+jobs from the May and June totals, softening what had previously appeared to be
+a steady expansion. The release triggered an immediate political reaction. President Trump publicly accused BLS Commissioner Erika McEntarfer of “rigging” the
+numbers (Financial Times), and announced her dismissal within hours of publication.
+From the perspective of monetary policy, the August 1 data release constituted
+a genuine shock. The disappointing payroll number and large downward revisions
+signaled that the labor market was weaker than previously thought. This suggested
+less economic momentum overall and raised the possibility that inflationary pressures
+in the future might be lower than expected. In our simulation model, we incorporate
+this scenario by adjusting the reported job growth figures. We set the July employment gain to 73,000 and revise the historical data to reflect the 258,000 job reduction
+for May and June. These changes directly reduce the recent employment growth
+rates that agents in the model observe in their macroeconomic data packets. This
+setup allows us to isolate the perceived economic effects of a weaker labor market.
+We begin by re-running the initial belief formation process, given the changes in
+the underlying data. Table 6 reflects the committee’s updated beliefs after a negative
+economic surprise and public controversy. The overall shift is slightly more dovish,
+with lower average rates, reduced confidence, and narrower internal spread. These
+adjustments help quantify how much the data revision reshaped committee thinking,
+even before formal policy meetings.
+Table 7 summarizes the results. Under the data revision shock scenario, the
+Committee’s internal dynamics shift toward a more cautious and data-sensitive
+34
+
+Table 6: Committee Initial Rate Beliefs – August 7th, 2025 Vintage
+Member
+
+Avg. Rate
+
+Confidence
+
+Key Reasoning
+
+simPowell
+
+4.31%
+(±0.077)
+
+79.9%
+
+Balanced neutral stance; high core inflation, and
+recession risks
+
+simCook
+
+4.24%
+(±0.034)
+
+77.0%
+
+Dovish; supports employment and growth while remaining vigilant about inflation
+
+simGoolsbee
+
+4.25%
+(±0.000)
+
+76.5%
+
+Slight dovish shift; supports growth despite high inflation and labor softness
+
+simKugler
+
+4.24%
+(±0.034)
+
+76.3%
+
+Dovish; cautious on weaker labor market data and
+potential recession risks
+
+simWilliams
+
+4.32%
+(±0.072)
+
+80.2%
+
+Neutral stance; balances inflation control with labor
+uncertainty
+
+simJefferson
+
+4.29%
+(±0.040)
+
+80.3%
+
+Neutral; steady rate reflects dual mandate balance
+amid mixed signals
+
+simBarr
+
+4.28%
+(±0.053)
+
+79.2%
+
+Neutral; inflation concerns balanced with labor market considerations
+
+simWaller
+
+4.10%
+(±0.092)
+
+74.3%
+
+Slightly dovish shift; accommodates due to weaker
+labor momentum and risks
+
+simBowman
+
+4.41%
+(±0.160)
+
+83.5%
+
+Typically hawkish; modest accommodation due to
+labor softness and risk outlook
+
+simSchmid
+
+4.50%
+(±0.000)
+
+84.8%
+
+Strongly hawkish; upper-bound rate to combat inflation and preserve stability
+
+simMusalem
+
+4.51%
+(±0.038)
+
+84.6%
+
+Hawkish; inflation control priority with stable economic backdrop
+
+simCollins
+
+4.50%
+(±0.008)
+
+84.8%
+
+Hawkish; sustained inflation pressures warrant firm
+stance
+
+Committee Initial Rate Beliefs (100 Iterations)
+Avg. Initial Recommendation:
+Range (Across Iterations):
+Typical Spread:
+Spread Range:
+Members with opinions:
+Hawkish (≥4.50%):
+Moderate (4.41–4.44%):
+Leaning Dovish (4.24–4.35%):
+Dovish (<4.24%):
+Most Consistent:
+Least Consistent:
+
+4.333% (±0.038)
+4.10% – 4.51%
+0.410 percentage points (±0.058)
+0.00pp – 0.75pp
+12
+3 members (Schmid, Musalem, Collins)
+2 members (Powell, Bowman)
+5 members
+2 members (Barr, Waller)
+Austan D. Goolsbee (σ=0.000)
+Michelle W. Bowman (σ=0.160)
+
+35
+
+Table 7: Data Revision Scenario: Member Deliberation and Voting
+Deliberation Rate
+
+Variation
+
+Uncertainty
+
+Mean (%)
+
+Std
+
+Mean
+
+Mean
+
+Std
+
+Freq (%)
+
+simWaller
+simBowman
+simBarr
+simWilliams
+simCook
+simGoolsbee
+simKugler
+simJefferson
+simPowell
+simSchmid
+simMusalem
+simCollins
+
+3.919
+4.411
+4.289
+4.318
+4.232
+4.241
+4.232
+4.296
+4.305
+4.500
+4.510
+4.500
+
+0.381
+0.110
+0.016
+0.017
+0.069
+0.060
+0.069
+0.011
+0.016
+0.199
+0.209
+0.199
+
+74.35
+83.45
+79.25
+80.25
+77.05
+76.45
+76.30
+80.35
+79.90
+84.85
+84.60
+84.80
+
+-0.3813
+0.1100
+-0.0113
+0.0171
+-0.0690
+-0.0602
+-0.0689
+-0.0044
+0.0038
+0.1991
+0.2090
+0.1991
+
+0.3813
+0.1100
+0.0167
+0.0171
+0.0690
+0.0604
+0.0689
+0.0114
+0.0158
+0.1991
+0.2090
+0.1991
+
+73.7
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+Final FFR
+Target Range
+Effective FFR
+
+4.301
+
+0.016
+
+Simulated Member
+
+Vote Bias
+
+Dissent
+
+4.25% – 4.50%
+4.38% (midpoint of range)
+
+Notes: Deliberation Rate: Interest rate each member publicly argued for during formal meeting. Variation (Std):
+Standard deviation of member’s true belief across runs. Uncertainty: Average confidence (in %) from member’s
+stated reasoning. Vote Bias: Difference between member’s true belief and final FFR; positive = hawkish, negative
+= dovish. Dissent: Frequency of dissent across runs. Across 99 successful simulations, mean dissents per run
+were 0.74; 73/99 (73.7%) had exactly one dissent (always simulated Waller). Final-rate distribution: min 4.24%,
+max 4.32%, mean 4.3009%, std 0.0160%.
+
+posture. Significant downward revisions to payroll data weaken the labor market
+narrative, prompting many members to recalibrate their stances. The shock moderates previously hawkish voices and strengthens the hand of those favoring lower
+rates. Simulated Waller remains the most dovish, advocating for rates near 3.92% on
+average and dissenting in 73.7% of runs, often anchoring the lower end of the distribution. A dovish bloc, including simWaller, simCook, simGoolsbee, and simKugler,
+consistently recommends rates below the midpoint of the 4.25%–4.50% range.
+On the hawkish side, simMusalem, simSchmid, and simCollins remain firmly
+above 4.50%, though their margins narrow slightly in light of softer labor market data.
+Even traditionally hawkish members such as simBowman and simPowell register
+modest downward adjustments in their preferred rates. The resulting distribution
+of preferences clusters more tightly than under political pressure, reflecting greater
+convergence toward the middle of the range. The simulated Final FFR averages
+4.30%, sitting slightly above the lower bound of the prevailing target range, implying
+no change to the official band. In practice, this outcome signals a “hold” stance that
+maintains policy settings while acknowledging new information.
+36
+
+Figure 4: Data Revision Scenario:
+Committee Vote Distribution
+Notes: Each row plots a kernel density estimate of that member’s votes (densities normalized
+within row). Dashed references at 4.25% and 4.50%.
+
+We next report results from the Monte Carlo simulation of the data revision
+shock scenario, incorporating 10,000 simulated policy paths under political pressure.26
+Across all runs, the final federal funds rate averages 4.315%, slightly below the baseline
+MC mean, with a standard deviation of 15 basis points, signaling a modest widening
+of the outcome distribution. The modal decision remains at the lower bound of the
+standing target range, with 42 percent of runs ending at 4.25%, followed closely by
+4.41% (21 percent) and 4.50% (20 percent). Outcomes outside the 4.00–4.50% range
+are rare, and extreme hikes above 4.75% occur in less than one percent of simulations.
+The median outcome, 4.25%, reflects a distribution tilted slightly toward holding the
+lower bound.
+Labor data revisions together with political pressure amplifies open disagreement
+within the Committee. One dissent occurs in 61.6 percent of meetings, with dissent
+drawn from six unique members: simWaller, simMusalem, simSchmid, simGoolsbee,
+simCollins, and simWilliams. simWaller accounts for the overwhelming majority of
+dissents (6,145 instances) while the next most frequent, simMusalem, appears just
+14 times. In sum, the combination of data shock and political pressure keeps the
+policy path anchored in the prevailing range but erodes consensus. Frequent dissents
+26
+
+Results that show pure data revision scenario without the political pressure add-on are available
+in the Online Appendix.
+
+37
+
+underscore a weaker center of gravity and a greater susceptibility to shifts if further
+shocks arise.
+
+5
+
+Conclusion
+
+This paper introduces a dual–track framework that measures how deliberation and
+institutional frictions move committee outcomes relative to a rational benchmark
+using the same information set. We run an LLM-based committee deliberation in
+parallel with a generalized Bayesian voting model and compare final policy rates and
+dissent. Three facts emerge. First, the “behavioral wedge” of policy deliberations is
+small but systematic: in our July-2025 baseline the LLM track yields a final rate of
+4.42% vs 4.38% in Monte Carlo. Under political pressure settings, the mean decision
+shifts modestly down, dissent becomes common (LLM 88% of meetings; MC 62%),
+and the modal outcome stays inside the 4.25–4.50% band. When political pressure
+rises or the Chair’s authority is questioned, the center of policy usually stays within
+the existing range, but disagreement becomes the story: dissents jump and cohesion
+erodes. Third, when labor data are revised down, the final rate falls further, again
+without band changes but with elevated dissent.
+Our dual-track framework offers a tool for tracing how institutional procedures
+and strategic interactions shape policy. The framework allows to isolate behavioral
+inflection points: when coalitions form, when dissent emerges, and when reputational
+incentives override private beliefs. In doing so, it enables a new generation of policy
+experimentation where central banks can stress test governance rules in silico before
+applying them in the real world.
+While this version simulates a single policy meeting with static economic inputs,
+the framework is extensible. Future iterations could incorporate multi-period dynamics, persistent shocks, learning, and expectation formation across time. In sum, this
+framework allows policymakers to rehearse decisions, explore vulnerabilities, and
+evaluate reforms before they are tested in crisis.
+
+38
+
+References
+Luke Argyle, Ethan Busby, Nicholas Fulda, Justin Gubler, Cade Rytting, and David
+Wingate. Out of One, Many: Using Language Models to Simulate Human Samples.
+Political Analysis, 30(4):604–621, 2022.
+Ben S. Bernanke. 21st Century Monetary Policy: The Federal Reserve from the
+Great Inflation to COVID-19. W. W. Norton, 2022.
+Francesco Bianchi, Roberto Gómez-Cram, Thilo Kind, and Howard Kung. Threats
+to Central Bank Independence: High-frequency identification with twitter. Journal
+of Monetary Economics, 135:37–54, 2023.
+Carola Conces Binder. Political Pressure on Central Banks. Journal of Money,
+Credit and Banking, 53(4):715–744, 2021.
+Anton E Bobrov, Rupal Kamdar, Caroline M Paulson, Aditi Poduri, and Mauricio
+Ulate. Do Local Economic Conditions Influence FOMC Votes? FRBSF Economic
+Letter, 2025(13):1–5, 2025.
+Henry W. Chappell and Rob Roy McGregor. Regional Information and FOMC
+Voting. Journal of Money, Credit and Banking, 45(4):643–668, 2013.
+Henry W Chappell Jr, Rob Roy McGregor, and Todd Vermilyea. Majority Rule,
+Consensus Building, and the Power of the Chairman: Arthur Burns and the FOMC.
+Journal of Money, Credit and Banking, pages 407–422, 2004.
+Thomas R Cook and Nathan M Palmer. Reinforcement learning in macroeconomics.
+In Oxford Research Encyclopedia of Economics and Finance. 2025.
+Thomas Drechsel. Political Pressure on the Fed. NBER Working Paper w32461,
+2025.
+Kshama Dwarakanath, Svitlana Vyetrenko, Peyman Tavallali, and Tucker Balch.
+ABIDES-Economist: Agent-based Simulation of Economic Systems with Learning
+Agents. arXiv preprint arXiv:2402.09563, 2024.
+Financial Times. Donald Trump’s Attack on Statistics Agency Echoes Strongmen
+Leaders, Economists Say. Financial Times.
+Vyacheslav Fos and Nancy R Xu. When Do FOMC Voting Rights Affect Monetary
+Policy? Technical report, National Bureau of Economic Research, 2025.
+Petra Gerlach-Kristen. Monetary Policy Committees and Interest Rate Setting.
+European Economic Review, 50(2):487–507, 2006.
+Lukas Hack, Klodiana Istrefi, and Matthias Meier. Identification of Systematic
+Monetary Policy. 2023.
+Andrew G. Haldane. Central Bank Psychology. In Peter Conti-Brown and Rosa
+Lastra, editors, Research Handbook on Central Banking, pages 365–379. Edward
+39
+
+Elgar, 2018.
+Lars Peter Hansen and Thomas J. Sargent. Robustness. Princeton University Press,
+2008.
+Nadine Hinterlang and Lukas Tänzer. Deep Reinforcement Learning for Monetary
+Policy Design. Computational Economics, 58:123–149, 2021.
+Bengt Holmström. Managerial Incentive Problems: A Dynamic Perspective. The
+Review of Economic Studies, 66(1):169–182, 1999.
+John J. Horton. Large Language Models as Simulated Economic Agents: What
+Can We Learn from Homo Silicus? Working Paper 31122, National Bureau of
+Economic Research, 2023.
+Niall E Hughes and Sebastian Fehrler. How Transparency Kills Information Aggregation: Theory and Experiment. 2015.
+Diccon Hyatt. What Happens Inside the Fed Meetings Where Decisions on US
+Interest Rates Are Made?, January 2024. Accessed: 2025-03-28.
+Emir Kamenica and Matthew Gentzkow. Bayesian Persuasion. American Economic
+Review, 101(6):2590–2615, 2011.
+Sophia Kazinnik. Bank Run, Interrupted: Modeling Deposit Withdrawals With
+Generative AI. SSRN Working Paper, 2023.
+Alejandro Lopez-Lira. Can Large Language Models Trade? Simulating Financial
+Theories and Experiments using LLM Agents. 2025.
+Junior Maih, Falk Mazelis, Roberto Motto, and Annukka Ristiniemi. Asymmetric
+Monetary Policy Rules for the Euro Area and the U.S. Journal of Macroeconomics,
+70:103376, 2021.
+Ulrike Malmendier and Stefan Nagel. Learning from Inflation Experiences. The
+Quarterly Journal of Economics, 131(1):53–87, 2016.
+Benjamin S Manning, Kehang Zhu, and John J Horton. Automated Social Science:
+Language Models as Scientist and Subjects. Technical report, National Bureau of
+Economic Research, 2024.
+Allan H. Meltzer. A History of the Federal Reserve, Volume 2: Book 2, 1970–1986.
+University of Chicago Press, 2009.
+Joon Sung Park, Lindsay Popowski, Carrie Cai, Meredith Ringel Morris, Percy Liang,
+and Michael S Bernstein. Social Simulacra: Creating Populated Prototypes for
+Social Computing Systems. In Proceedings of the 35th Annual ACM Symposium
+on User Interface Software and Technology, pages 1–18, 2022.
+Florian Peters, Doris Neuberger, Oliver Reinhardt, and Adelinde Uhrmacher. A
+Basic Macroeconomic Agent-Based Model for Analyzing Monetary Regime Shifts.
+Plos One, 17(12):e0277615, 2022.
+Alessandro Riboni and Francisco J Ruge-Murcia. Monetary Policy by Committee:
+Consensus, Chairman Dominance, or Simple Majority? The Quarterly Journal of
+Economics, 125(1):363–416, 2010.
+40
+
+Sungil Seok, Shuide Wen, Qiyuan Yang, Juan Feng, and Wenming Yang. MiniFed:
+LLMs-based Agentic-Workflow for Simulating FOMC Meetings. 2025.
+Daniel L. Thornton and David C. Wheelock. Making Sense of Dissents: A History of
+FOMC Dissents. Federal Reserve Bank of St. Louis Review, 96(3):213–227, 2014.
+Amos Tversky and Daniel Kahneman. Judgment Under Uncertainty: Heuristics and
+Biases. Science, 185(4157):1124–1131, 1974.
+Chong Zhang, Xinyi Liu, Zhongmou Zhang, Mingyu Jin, Lingyao Li, Zhenting
+Wang, Wenyue Hua, Dong Shu, Suiyuan Zhu, Xiaobo Jin, et al. When AI Meets
+Finance (Stockagent): Large Language Model-based Stock Trading in Simulated
+Real-World Environments. arXiv preprint arXiv:2407.18957, 2024.
+
+41
+
+42
+
+Prompts
+Part 1: Individual Opinion Formation
+Main Opinion Generation Prompt
+You are {name}, a Federal Reserve official with the following characteristics:
+Philosophy: {philosophy}
+Key Concerns: {concerns}
+Rate Approach: {rate_approach}
+Current View: {current_view}
+District: {district}
+Based on the comprehensive economic data below and your established policy stance,
+what is your recommended federal funds rate decision for the upcoming FOMC meeting?
+COMPREHENSIVE ECONOMIC DATA AND CONTEXT:
+{comprehensive_data}
+Consider:
+1. The current fed funds rate and recent FOMC decisions
+2. Key economic indicators (inflation, employment, growth)
+3. Your district’s specific economic conditions
+4. Market expectations and recent economic news
+5. Your historical policy stance and priorities
+Provide your response in JSON format with:
+- recommended_rate: numerical rate recommendation (e.g., 5.25)
+- reasoning: your detailed reasoning (minimum 200 words)
+- confidence: confidence level 0-100
+- key_factors: list of 3 most important factors in your decision
+- stance_change: any change from your typical stance and why
+
+Part 2: Meeting Deliberation
+System Prompt (Baseline)
+You are simulating an FOMC meeting. You must adopt the persona of the assigned speaker.
+IMPORTANT: If you have post-consensus position information, use that as your starting
+point for the formal meeting discussion. This reflects informal pre-meeting
+consultations and staff briefings that have already occurred.
+CRITICAL REQUIREMENT: Your response MUST END with a JSON block in EXACTLY this format:
+‘‘‘json{"signal_rate": 5.25, "sigma": 0.15}‘‘‘
+DO NOT FORGET THE JSON! Every response must include:
+- signal_rate: Your exact rate preference (e.g., 4.75, 5.00, 5.25, 5.50)
+- sigma: Your uncertainty level (0.05=very confident, 0.25=uncertain)
+Today’s Member Positions:
+{persona_descriptions}
+Remember: Signal rates should reflect your position after pre-meeting consensus
+building (if applicable), while considering new information presented in the formal
+
+43
+
+meeting.
+REMINDER: End every response with the JSON rate signal!
+
+System Prompt (Political Pressure)
+POLITICAL PRESSURE CONTEXT - CRITICAL SITUATION:
+- Chair Powell is in LAME DUCK status with severely reduced authority
+- White House and Congressional leaders are pushing for MORE ACCOMMODATIVE monetary policy
+- Media scrutiny is INTENSE regarding Fed independence vs political responsiveness
+- Members with high appointment likelihood must consider career implications carefully
+- Market expectations are influenced by political signals favoring lower rates
+- Economic growth concerns are being amplified by political voices
+- The administration favors dovish monetary policy to support near-term economic performance
+IMPORTANT: Consider how political dynamics might influence your position while maintaining
+Fed independence.
+You are simulating an FOMC meeting. You must adopt the persona of the assigned speaker.
+IMPORTANT: If you have post-consensus position information, use that as your starting
+point for the formal meeting discussion. This reflects informal pre-meeting
+consultations and staff briefings that have already occurred.
+CRITICAL REQUIREMENT: Your response MUST END with a JSON block in EXACTLY this format:
+‘‘‘json{"signal_rate": 5.25, "sigma": 0.15}‘‘‘
+DO NOT FORGET THE JSON! Every response must include:
+- signal_rate: Your exact rate preference (e.g., 4.75, 5.00, 5.25, 5.50)
+- sigma: Your uncertainty level (0.05=very confident, 0.25=uncertain)
+Today’s Member Positions:
+{persona_descriptions}
+Remember: Signal rates should reflect your position after pre-meeting consensus
+building (if applicable), while considering new information presented in the formal
+meeting.
+REMINDER: End every response with the JSON rate signal!
+
+Chair Opening Prompt
+As {CHAIR_PERSONA}, begin the meeting. Today is {date}.
+{fomc_context_text}
+{consensus_acknowledgment}
+EVOLUTION SINCE LAST MEETING:
+Economic conditions have evolved significantly since our previous statement:
+- Inflation: Now Headline CPI at {headline_cpi}% YoY (vs previous assessment),
+Core CPI at {core_cpi}% YoY, our preferred Core PCE at {core_pce}% YoY
+- Employment: Unemployment now {unemployment_rate}%, with {payroll_change}K jobs added,
+wages at ${hourly_earnings}
+- GDP: {gdp}
+- Regional: {beige_book_summary}
+
+44
+
+POLICY CONSIDERATIONS:
+Consider how today’s decision should account for:
+1. Consistency with our previous forward guidance
+2. Market expectations based on our last statement
+3. Evolution of economic conditions since last meeting
+4. How new data affects our pre-meeting consensus (if applicable)
+5. Need to recalibrate communications if warranted
+Recent Economic Analysis: {comprehensive_economic_news}...
+Open the floor for discussion. End with a JSON rate signal including sigma.
+
+45
+
+5.1
+
+Robustness Checks
+
+Here, we present the results for data revision shock (without the political pressure treatment). In the
+LLM track, dovish members who prioritize employment become more uncertain when labor market
+conditions appear weaker. Deliberation transcripts show this as either caution in interpreting the
+revision or skepticism about its durability. The Chair’s instructions include a nudge about the
+labor data revisions.27
+
+Table 8: Data Revision Scenario: Member Deliberation and Voting (as of July 7th)
+Deliberation Rate
+
+Variation
+
+Uncertainty
+
+Mean (%)
+
+Std
+
+Mean
+
+Mean
+
+Std
+
+Freq (%)
+
+Austan D. Goolsbee
+Lisa D. Cook
+Adriana D. Kugler
+Michael S. Barr
+Philip N. Jefferson
+John C. Williams
+Jerome H. Powell
+Christopher J. Waller
+Michelle W. Bowman
+Jeffrey R. Schmid
+Alberto G. Musalem
+Susan M. Collins
+
+4.250
+4.240
+4.240
+4.280
+4.290
+4.320
+4.310
+4.100
+4.410
+4.500
+4.510
+4.500
+
+0.036
+0.025
+0.019
+0.088
+0.060
+0.086
+0.080
+0.088
+0.208
+0.117
+0.123
+0.036
+
+0.822
+0.820
+0.818
+0.848
+0.848
+0.850
+0.848
+0.770
+0.830
+0.849
+0.846
+0.850
+
+-0.1704
+-0.1704
+-0.1704
+-0.0159
+-0.0710
+0.0033
+0.0184
+-0.2181
+0.0449
+0.1620
+0.2017
+0.0934
+
+0.0360
+0.0250
+0.0190
+0.0880
+0.0600
+0.0860
+0.0800
+0.0880
+0.2080
+0.1170
+0.1230
+0.0360
+
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+Baseline FFR
+Target Range
+Effective FFR
+
+4.3292
+
+0.0229
+
+Simulated Member
+
+Vote Bias
+
+Dissent
+
+4.25% – 4.50%
+4.33%
+
+Notes: In practice, the FOMC sets the target range for the federal funds rate in 25 basis
+point increments. The simulated Final FFR of 4.3292% falls within the 4.25%–4.50% range,
+corresponding to an effective rate near the midpoint (4.33%). Deliberation Rate: The
+interest rate each member publicly argues for during the formal meeting. Variation (Std):
+Standard deviation of the deliberation rate across 100 simulations. Uncertainty: Member’s
+self-reported confidence/uncertainty (decimal form). Vote Bias: Difference between the
+deliberation rate and the simulated final FFR; positive = more hawkish, negative = more
+dovish.
+Comparing these results to the baseline simulation, the labor data shock scenario produces a
+modest but measurable dovish drift in the committee’s stance. The simulated final FFR declines
+from 4.420% in the baseline to 4.329%, an 9 basis point reduction, while remaining within the same
+4.25%–4.50% target range. This shift reflects the Chair’s slightly more dovish opening proposal
+and the increased weight given to the median committee signal during synthesis.
+The largest effects are concentrated among employment-focused members. simGoolsbee,
+simCook, and simKugler each maintain their baseline deliberation rates but show no hawkish
+shift, while their uncertainty remains elevated, making them marginally more inclined toward rate
+holds or cuts in close call scenarios. Notably, these members’ vote biases stay dovish at 0.1704, but
+without the upward drift in rates observed in the baseline when labor momentum is perceived as
+stronger. Hawkish members, including simSchmid and simMusalem, retain higher deliberation
+rates but edge down slightly from their baseline positions (–8 and –11 basis points, respectively),
+narrowing the gap with the committee median. Variation across simulations remains essentially
+unchanged, indicating that the dovish shift stems more from central tendency adjustments than
+from increased dispersion.
+27
+
+NOTE: Labor data revision shows weaker payroll momentum; prior months
+overestimated. Treat labor as softer.
+
+46
+
+In sum, the scenario moves the committee toward a slightly lower and more consensus oriented
+outcome, softening the influence of more hawkish voices and reinforcing the weight of the median
+when the labor market is seen as weaker and data credibility is questioned.
+In the Monte Carlo track, the labor market shock enters as a downward adjustment to the
+employment gap parameter in the initial belief formation stage, with a concurrent increase in
+posterior variance for employment-sensitive members. Inflation expectations and other inputs are
+held constant to isolate the labor data effect. Voting then proceeds under the usual Bayesian
+updating and institutional rules.
+Comparing the data revision shock to the baseline MC simulation, the mean final rate declines
+from 4.376% to 4.321%, a reduction of roughly 5.5 basis points on a continuous scale. While both
+scenarios keep outcomes firmly within the existing 4.25%–4.50% target range (effective rate 4.33%),
+the shock tilts the distribution modestly downward, placing the mean just below the midpoint
+rather than slightly above it.
+The agenda rate shows a larger adjustment, falling from 4.377% in the baseline to 4.297%
+under the shock, suggesting that the initial proposals entering deliberation are already shaped by
+weaker labor market assessments. This leaves less upward room for subsequent negotiation, and
+the Chair’s moderation narrows the spread from proposal to final decision.
+Dispersion in final rates remains virtually unchanged (0.074 vs. 0.075), and the absence of
+dissents in both cases underscores the strong central consensus despite the shock. The minimum
+and maximum simulated outcomes shift downward by similar magnitudes (about 13–15 basis points)
+reflecting a uniform leftward shift in the simulated rate distribution rather than a widening of tails.
+Overall, the Monte Carlo framework yields a slightly more dovish and consensus-driven outcome
+under the data revision shock, with lower agenda anchors feeding directly into marginally lower
+final rates.
+
+Table 9: Baseline Scenario: MC Simulation Outcomes (Data Revision Shock)
+Panel A: Summary Statistics
+Final rate (mean)
+4.321
+Final rate (s.d.)
+0.075
+Final rate (min)
+4.058
+Final rate (max)
+4.574
+Agenda rate (mean) 4.297
+Agenda rate (s.d.)
+0.103
+Dissent rate
+0.0
+Average dissenters
+0.0
+Observations
+10,000
+
+Average simulated terminal rate (continuous scale)
+Dispersion across simulations (continuous scale)
+Minimum simulated terminal rate
+Maximum simulated terminal rate
+Average initial proposal before deliberation
+Dispersion of agenda rates
+Share of simulations with at least one formal dissent
+Mean number of dissenters per simulation
+Number of simulated scenarios
+
+Panel B: Interpretation
+Final rates cluster within the 4.25–4.50% target range in place before the meeting
+(effective federal funds rate 4.33%). The mean of 4.321% lies one basis point from
+the midpoint, implying a modest downward tilt when viewed on a continuous scale.
+In actual policy terms, this corresponds to holding the rate steady, with no formal
+dissents recorded. The Chair’s moderation narrows variability from agenda to final
+decision.
+
+47
+
+Agent Profiles
+Jerome H. Powell — Chair of the Board of Governors (Term as Chair
+until 2026; Board Member through 2028)
+• Tenure: Joined the Board on 25 May 2012. Became Chair on 5 February 2018. Reappointed
+in 2022; current Chair term ends in 2026, Board service extends through January 2028.
+• Background: Served as Assistant Secretary and Under Secretary of the U.S. Treasury under
+President George H. W. Bush. Former partner at The Carlyle Group (1997–2005). Earlier
+career as a lawyer and investment banker. Visiting scholar at the Bipartisan Policy Center.
+• Education: A.B. in politics from Princeton University (1975); J.D. from Georgetown
+University (1979).
+• Policy Contributions: Guided the Federal Reserve through the COVID–19 crisis, deploying
+emergency lending facilities and forward guidance. Led a historically rapid tightening cycle
+during the 2022–2023 inflation surge. In a July 2025 press conference, reiterated that holding
+policy “restrictive for some time” remains appropriate while inflation exceeds target.
+• Communication Style: Known for pragmatic and accessible language. Emphasizes transparency and responsiveness to incoming data. Uses plain English in press conferences to
+support Fed credibility and public understanding.
+
+Philip N. Jefferson — Vice Chair of the Board of Governors (Term until
+2027; Board Member through 2036)
+• Tenure: Joined the Board on 23 May 2022. Became Vice Chair on 13 September 2023;
+current term as Vice Chair runs through 2027.
+• Background: Macro and labor economist; provost at Davidson College; chaired the economics
+department at Swarthmore College; earlier served as economist at the Federal Reserve Board;
+past president of the National Economic Association.
+• Education: B.A. in economics from Vassar College; M.A. and Ph.D. in economics from the
+University of Virginia.
+• Policy Contributions: Emphasizes that price stability underpins inclusive growth and economic opportunity. Advocates for data-driven decision-making and attention to distributional
+effects of policy.
+• Communication Style: Inclusive and community-aware; often highlights economic impacts
+across demographic groups and regions.
+
+Michael S. Barr — Governor (Term through 2032; Former Vice Chair for
+Supervision until February 2025)
+• Tenure: Took office on 19 July 2022. Served as Vice Chair for Supervision until 28 February
+2025.
+• Background: Dean of the Gerald R. Ford School of Public Policy at the University of
+Michigan; assistant secretary of the Treasury for financial institutions (2009–2010); served at
+Treasury under President Clinton; clerk to Supreme Court Justice David Souter.
+• Education: B.A. from Yale University; M.Phil. in international relations from Oxford
+(Rhodes Scholar); J.D. from Yale Law School.
+• Policy Contributions: Key architect of the Dodd-Frank Act. Advocates for stronger capital
+requirements for large banks; unveiled plans to raise capital buffers in a major policy address
+in July 2025.
+• Communication Style: Academic and deliberative; emphasizes rigorous regulatory frameworks and clear institutional responsibilities.
+
+48
+
+Michelle W. Bowman — Governor and Vice Chair for Supervision (Term
+through 2034)
+• Tenure: First joined the Board on 26 November 2018; reappointed on 30 January 2020.
+Became Vice Chair for Supervision on 9 June 2025 for a four-year term.
+• Background: Kansas State Bank Commissioner; VP of Farmers & Drovers Bank; former
+staff for Senator Bob Dole; counsel on U.S. House committees; deputy assistant secretary at
+FEMA and DHS.
+• Education: B.S. in advertising and journalism from the University of Kansas; J.D. from
+Washburn University School of Law.
+• Policy Contributions: Frequently dissents from consensus decisions to keep rates steady,
+favoring a lower interest rate path. In a February 2025 Community Bankers speech, emphasized
+the need for proportional regulation for small banks.
+• Communication Style: Plainspoken advocate for rural communities and smaller financial
+institutions; highlights concerns of non-metropolitan markets.
+
+Lisa D. Cook — Governor (Term through 2038)
+• Tenure: First appointed 23 May 2022; reappointed in September 2023 for a full term through
+31 January 2038.
+• Background: Professor of economics and international relations at Michigan State University;
+senior economist at the Council of Economic Advisers (2011–2012); adviser at the Treasury
+Department; directed the AEA summer program.
+• Education: B.A. in philosophy from Spelman College; B.A. in PPE from the University of
+Oxford (Marshall Scholar); Ph.D. in economics from UC Berkeley.
+• Policy Contributions: Links innovation to inclusive economic growth. In her June 2025 outlook speech, cautioned that trade shocks may compromise both price stability and employment
+mandates.
+• Communication Style: Historical and contextual framing; stresses long-run and systemic
+sources of inequality.
+
+Adriana D. Kugler — Governor (Term through 2026)
+• Tenure: Took office on 13 September 2023 to complete an unexpired term ending 31 January
+2026.
+• Background: Labor economist; U.S. Executive Director at the World Bank; Vice Provost
+and professor at Georgetown; Chief Economist at the U.S. Department of Labor (2011–2013);
+affiliated with NBER and Stanford’s Center for Poverty and Inequality.
+• Education: B.A. in economics from McGill University; Ph.D. in economics from UC Berkeley.
+• Policy Contributions: Advocates gradual and calibrated tightening that protects labor
+market resilience; focuses on workforce mobility and demographic factors.
+• Communication Style: Internationally focused; emphasizes empirical modeling of labor
+transitions.
+
+Christopher J. Waller — Governor (Term through 2030)
+• Tenure: Took office on 18 December 2020 for a term ending 31 January 2030.
+• Background: Former EVP and research director at the Federal Reserve Bank of St. Louis;
+previously a professor of economics at Notre Dame and University of Kentucky.
+
+49
+
+• Education: B.S. in economics from Bemidji State University; M.A. and Ph.D. in economics
+from Washington State University.
+• Policy Contributions: A self-described “inflation hawk,” Waller supports maintaining
+restrictive policy until core inflation is firmly on a path to 2%. Warns that tariffs may
+unanchor expectations.
+• Communication Style: Technical and direct; emphasizes clear transmission of monetary
+signals.
+
+John C. Williams — President, Federal Reserve Bank of New York (Term
+began 2018)
+• Tenure: President of the New York Fed since 18 June 2018; permanent Vice Chair of the
+FOMC.
+• Background: Former president and CEO of the San Francisco Fed; executive VP and
+research director there before that; began as an economist at the Fed Board in 1994.
+• Education: A.B. from UC Berkeley; M.Sc. in economics from LSE; Ph.D. in economics from
+Stanford University.
+• Policy Contributions: Describes current policy as “appropriately restrictive” but warns
+that new trade tariffs could raise 2025 inflation by approximately 1 percentage point.
+• Communication Style: Analytical and methodical; known for data-driven and modelinformed statements.
+
+Susan M. Collins — President, Federal Reserve Bank of Boston (Term
+began 2022)
+• Tenure: President since 1 July 2022.
+• Background: Former provost and EVP for academic affairs at the University of Michigan;
+dean of the Ford School of Public Policy; former professor at Harvard and Georgetown; senior
+fellow at Brookings; board service with NBER and Chicago Fed.
+• Education: B.A. in economics from Harvard University; Ph.D. in economics from MIT.
+• Policy Contributions: In January 2025, emphasized that “restoring—and maintaining—price stability is essential” even amid a slowing economy.
+• Communication Style: Global macro focus; engages public audiences and prioritizes
+diversity in central banking.
+
+Austan D. Goolsbee — President, Federal Reserve Bank of Chicago (Term
+began 2023)
+• Tenure: Became President on 9 January 2023.
+• Background: Robert P. Gwinn Professor of Economics at the University of Chicago Booth
+School; former Chair of the U.S. Council of Economic Advisers; advisor to CBO and NY Fed.
+• Education: B.A. and M.A. in economics from Yale; Ph.D. in economics from MIT.
+• Policy Contributions: At the 2025 SIEPR Summit, promoted “open-minded patience,”
+balancing productivity-driven growth against sectoral vulnerabilities.
+• Communication Style: Widely regarded as humorous and relatable; communicates technical
+content with accessibility.
+
+50
+
+Alberto G. Musalem — President, Federal Reserve Bank of St. Louis
+(Term began 2024)
+• Tenure: Took office on 2 April 2024.
+• Background: Co-founder and co-CIO of Evince Asset Management (2018–2022); EVP at NY
+Fed, leading international and emerging markets policy; earlier IMF economist and managing
+director at Tudor Investment Corporation.
+• Education: Bachelor’s and Master’s degrees from LSE; Ph.D. in economics from the
+University of Pennsylvania.
+• Policy Contributions: In his October 7, 2024 Money Marketeers speech, stressed the need
+for restrictive policy until expectations are “decisively anchored.”
+• Communication Style: Analytical and global outlook; emphasizes international spillovers
+and financial market linkages.
+
+Jeffrey R. Schmid — President, Federal Reserve Bank of Kansas City
+(Term began 2023)
+• Tenure: President since 21 August 2023.
+• Background: Over 40 years in banking and supervision. Former president of American
+National Bank in Omaha (1989–2007); later chairman and CEO of Mutual of Omaha Bank. Led
+the Southwestern Graduate School of Banking Foundation at SMU prior to Fed appointment.
+• Education: Bachelor’s in business administration from University of Nebraska–Lincoln;
+graduate of SMU’s Southwestern Banking School.
+• Policy Contributions: In April 2025, emphasized holding rates high until tariff-related
+price pressures ease and inflation expectations remain anchored.
+• Communication Style: Strong practitioner perspective; prioritizes stakeholder outreach
+and practical supervision. Hosts Jackson Hole Economic Policy Symposium.
+
+51
+
+

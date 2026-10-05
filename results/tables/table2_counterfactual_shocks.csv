@@ -1,0 +1,3 @@
+scenario_name,baseline_rate_bps,shocked_rate_bps,rate_wedge_bps,baseline_stance,shocked_stance
+Monsoon Failure & Food Inflation Shock,50,50,0,withdrawal_of_accommodation,withdrawal_of_accommodation
+US Federal Reserve Spillover Shock (+75 bps),50,50,0,withdrawal_of_accommodation,withdrawal_of_accommodation

@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "While I vote for keeping the repo rate unchanged at 6.50%, I must record my dissent regarding the continuation of the 'withdrawal of accommodation' stance. The headline CPI inflation of 7.44% is clearly driven by transient supply-side shocks in food, as evidenced by the much lower core inflation of 4.90%. Monetary policy is a blunt instrument that cannot effectively address food price volatility, and further tightening or maintaining a stance of withdrawal risks imposing unnecessary costs on the real economy, which is currently exhibiting robust GVA growth of 7.80%. With the repo rate at 6.50% and a positive output gap of 0.60%, the policy is already sufficiently restrictive. A 'neutral' stance would more accurately reflect that the policy rate is now appropriately calibrated to the current macroeconomic environment, and that we are no longer in a phase of active tightening.",
+  "fallback_triggered": false
+}

@@ -1,0 +1,85 @@
+{
+  "meeting_date": "2023-08-10",
+  "replicate_id": 1,
+  "rate_decision_bps": 0,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "0": 6
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 6
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [],
+  "dissenting_members_stance": [],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "Headline inflation at 7.44 per cent is a significant breach of our upper tolerance limit, and with food inflation surging to 11.51 per cent, the risks of second-round effects and the unanchoring of inflation expectations have reached a critical threshold. While I remain convinced that a front-loaded policy action is required to demonstrate our commitment to the 4.00 per cent target and to absorb the 120,000 crore of excess liquidity in the system, I acknowledge the emerging consensus of the Committee. In the interest of maintaining a unified front during this period of high volatility, I will align with the majority to keep the repo rate unchanged at 6.50 per cent, while underscoring that the MPC must remain vigilant and ready to act decisively should these supply-side shocks show signs of persistence or generalize into the core basket.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "member_name": "Dr. Rajiv Ranjan",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.44% significantly breaching the upper tolerance band and food inflation surging to 11.51%, we must remain vigilant against the risk of unanchored inflation expectations. While I acknowledge the supply-side nature of the current food price shock, allowing persistent deviations from our 4.00% target risks damaging the credibility of our monetary framework, which is essential for long-term price stability. Given the positive output gap of 0.60% and the necessity of aligning the 120,000 crore banking system liquidity surplus with our policy objective, maintaining the current repo rate of 6.50% while strictly adhering to the 'withdrawal of accommodation' stance provides the necessary discipline to ensure a durable disinflationary path without prematurely stifling the 7.80% GVA growth momentum.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The recent surge in headline CPI inflation to 7.44 per cent, driven primarily by a sharp spike in food inflation to 11.51 per cent, poses a significant risk to the durability of the disinflationary path. While core inflation remains relatively contained at 4.90 per cent, the persistent nature of food price shocks, if left unaddressed, risks spilling over into generalized inflation expectations. Given the prevailing uncertainties regarding the monsoon and the need to align liquidity with our inflation target, I believe it is prudent to keep the policy repo rate unchanged at 6.50 per cent. Maintaining the stance of 'withdrawal of accommodation' is essential to manage the excess systemic liquidity of 120,000 crore and to ensure that monetary conditions remain consistent with bringing inflation back to the 4.00 per cent target while supporting the ongoing growth recovery.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The headline CPI inflation of 7.44% is driven primarily by transitory supply-side shocks in food, as corroborated by the relatively contained core inflation of 4.90%. Monetary policy is an blunt instrument for addressing localized food price volatility; responding with further rate hikes would risk an unnecessary contractionary effect on the economy when GVA growth is at 7.80% and still in a recovery phase. The current repo rate of 6.50% provides a sufficient real interest rate to anchor expectations without stifling growth. I support maintaining the current repo rate and the stance of 'withdrawal of accommodation' as a prudent measure to manage liquidity and ensure that we remain vigilant against any potential second-round effects, without over-tightening in response to temporary supply-side pressures.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While the headline CPI inflation of 7.44% is concerning, it is heavily driven by transitory food price shocks, as evidenced by the much more moderate core inflation of 4.90%. Monetary policy is a blunt instrument that is ill-suited to address supply-side volatility in food items, and further tightening at this juncture risks causing an unnecessary growth sacrifice when GVA growth is at a robust 7.80%. I continue to believe that the current repo rate of 6.50% is sufficient to maintain positive real interest rates and anchor expectations. However, acknowledging the significant breach of the upper tolerance band and the need for committee consensus during this period of heightened volatility, I am willing to concur with the majority on the 'withdrawal of accommodation' stance, provided we do not pursue further rate hikes that would risk over-correcting and stifling the ongoing economic recovery.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The headline CPI inflation at 7.44 per cent, significantly exceeding the upper tolerance band, is a matter of serious concern. While the surge is largely attributable to transitory supply-side shocks in food items, the persistence of these pressures could potentially unanchor inflation expectations if not addressed with vigilance. The robust GVA growth of 7.80 per cent provides us the space to prioritize price stability as our primary nominal anchor. I am of the view that a status quo on the policy repo rate is appropriate at this juncture to allow for a calibrated assessment of the incoming data, particularly the trajectory of food prices. However, given the excess liquidity of 120,000 crore in the banking system and the necessity to bring inflation back to the 4.00 per cent target, it is imperative to maintain the 'withdrawal of accommodation' stance. This approach ensures that our monetary policy remains focused on durable disinflation while supporting the ongoing growth recovery.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

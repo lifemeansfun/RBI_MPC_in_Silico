@@ -1,0 +1,88 @@
+{
+  "meeting_date": "2023-08-10",
+  "replicate_id": 1,
+  "rate_decision_bps": 0,
+  "stance_decision": "withdrawal_of_accommodation",
+  "rate_vote_tally": {
+    "0": 6
+  },
+  "stance_vote_tally": {
+    "withdrawal_of_accommodation": 5,
+    "neutral": 1
+  },
+  "tie_broken_by_governor_rate": false,
+  "tie_broken_by_governor_stance": false,
+  "dissenting_members_rate": [],
+  "dissenting_members_stance": [
+    "jayanth_varma"
+  ],
+  "member_votes": [
+    {
+      "member_id": "michael_patra",
+      "member_name": "Dr. Michael Debabrata Patra",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "With headline CPI inflation at 7.44 per cent, we are in the midst of a significant breach of the upper tolerance limit. The surge in food inflation to 11.51 per cent, compounded by a 5 per cent monsoon deficit, poses a clear and present danger of unanchoring inflation expectations. While I acknowledge the resilience of GVA growth at 7.80 per cent and the moderation in core inflation to 4.90 per cent, history warns us that supply-side shocks can rapidly permeate into generalized inflation if the monetary policy response is not sufficiently firm. A positive output gap of 0.60 per cent indicates that the economy is operating above its potential, providing space for further tightening. Given the persistence of these shocks, I believe a 25 basis point increase is necessary to demonstrate our unwavering commitment to the 4 per cent target and to prevent the current inflation trajectory from becoming entrenched. However, in deference to the collective wisdom of the Committee, I shall align with the majority on the repo rate while maintaining my firm stance on the withdrawal of accommodation.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "member_name": "Dr. Rajiv Ranjan",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The headline CPI inflation print of 7.44 per cent, driven by a sharp spike in food inflation, poses a significant risk to the anchoring of inflation expectations. While core inflation has moderated to 4.90 per cent, we cannot afford to be complacent, especially given the 5.0 per cent monsoon deficit and the potential for supply-side shocks to become persistent. The positive output gap of 0.60 per cent and resilient GVA growth of 7.80 per cent suggest that the economy has the capacity to withstand the current policy setting. However, given the prevailing liquidity surplus of 120,000 crore INR, it is imperative that we maintain the stance of withdrawal of accommodation to ensure that monetary conditions remain consistent with the objective of durable disinflation. A pause in the repo rate at 6.50 per cent is appropriate at this juncture to allow for a calibrated assessment of the evolving inflation trajectory while ensuring that the transmission of previous policy actions continues to work through the system.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shashanka_bhide",
+      "member_name": "Dr. Shashanka Bhide",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The headline CPI inflation at 7.44 per cent is significantly above the upper tolerance band, driven primarily by a sharp 11.51 per cent spike in food inflation. While core inflation has moderated to 4.90 per cent, the risks to the inflation outlook remain elevated, particularly given the 5.0 per cent monsoon rainfall deficit which could exacerbate food price pressures. Given the resilience in GVA growth at 7.80 per cent, the current policy repo rate of 6.50 per cent remains appropriate to balance the growth-inflation trade-off. However, in view of the persistent inflationary risks and the need to ensure that inflation expectations remain anchored, I vote for maintaining the status quo on the policy rate and continuing with the stance of withdrawal of accommodation.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "ashima_goyal",
+      "member_name": "Dr. Ashima Goyal",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "While headline CPI inflation at 7.44% is significantly elevated, it is primarily driven by transient supply-side shocks in food items, as evidenced by the 11.51% food inflation print. Crucially, core inflation has moderated to 4.90%, indicating that generalized demand-pull pressures remain contained. Monetary policy is a blunt instrument that cannot effectively address specific food supply-side volatility; an aggressive tightening response would risk unnecessarily dampening the robust 7.80% GVA growth momentum. With the repo rate at 6.50%, real interest rates are already in positive territory, providing a sufficient anchor for inflation expectations. I support maintaining the current repo rate and the stance of withdrawal of accommodation to ensure price stability while allowing the post-pandemic recovery to sustain its trajectory.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "jayanth_varma",
+      "member_name": "Prof. Jayanth R. Varma",
+      "is_internal": false,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "neutral",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": true,
+      "official_statement_rationale": "While I vote for keeping the repo rate unchanged at 6.50%, I must record my dissent regarding the continuation of the 'withdrawal of accommodation' stance. The headline CPI inflation of 7.44% is clearly driven by transient supply-side shocks in food, as evidenced by the much lower core inflation of 4.90%. Monetary policy is a blunt instrument that cannot effectively address food price volatility, and further tightening or maintaining a stance of withdrawal risks imposing unnecessary costs on the real economy, which is currently exhibiting robust GVA growth of 7.80%. With the repo rate at 6.50% and a positive output gap of 0.60%, the policy is already sufficiently restrictive. A 'neutral' stance would more accurately reflect that the policy rate is now appropriately calibrated to the current macroeconomic environment, and that we are no longer in a phase of active tightening.",
+      "fallback_triggered": false
+    },
+    {
+      "member_id": "shaktikanta_das",
+      "member_name": "Shaktikanta Das",
+      "is_internal": true,
+      "final_rate_vote_bps": 0,
+      "final_stance_vote": "withdrawal_of_accommodation",
+      "dissenting_on_rate": false,
+      "dissenting_on_stance": false,
+      "official_statement_rationale": "The headline CPI inflation at 7.44 per cent represents a significant breach of the upper tolerance band, primarily driven by a sharp 11.51 per cent spike in food inflation. While core inflation has moderated to 4.90 per cent, indicating that demand-pull pressures remain contained, the persistence of food price shocks and the prevailing 5.0 per cent monsoon deficit necessitate a cautious approach. With GVA growth remaining resilient at 7.80 per cent and a positive output gap of 0.60 per cent, the economy has the space to absorb the current policy stance. Given the liquidity surplus of 120,000 crore INR, it is imperative that we maintain the 'withdrawal of accommodation' stance to ensure that inflation expectations remain firmly anchored and that we steer inflation towards the 4.00 per cent target in a durable manner. I vote to keep the policy repo rate unchanged at 6.50 per cent and to continue with the stance of withdrawal of accommodation.",
+      "fallback_triggered": false
+    }
+  ],
+  "fallbacks_count": 0
+}

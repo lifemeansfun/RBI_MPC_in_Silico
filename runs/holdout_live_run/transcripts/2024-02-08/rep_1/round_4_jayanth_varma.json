@@ -1,0 +1,11 @@
+{
+  "member_id": "jayanth_varma",
+  "member_name": "Prof. Jayanth R. Varma",
+  "is_internal": false,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "neutral",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": true,
+  "official_statement_rationale": "I vote to maintain the repo rate at 6.50%, but I dissent on the stance. The persistence of the 'withdrawal of accommodation' stance is increasingly inconsistent with the evolving macroeconomic landscape. With core inflation at 3.60%, well below the 4.00% target, the real policy rate is already significantly positive and restrictive. Food inflation at 8.30% is a supply-side phenomenon that cannot be effectively addressed by further monetary tightening. Maintaining a stance that signals a continued withdrawal of accommodation risks overtightening and unnecessarily dampening the 6.80% GVA growth momentum. A shift to a neutral stance is necessary to acknowledge that the current policy rate is sufficiently restrictive to anchor inflation expectations without imposing an avoidable drag on the economy.",
+  "fallback_triggered": false
+}

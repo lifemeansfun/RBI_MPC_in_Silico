@@ -1,0 +1,11 @@
+{
+  "member_id": "michael_patra",
+  "member_name": "Dr. Michael Debabrata Patra",
+  "is_internal": true,
+  "final_rate_vote_bps": 0,
+  "final_stance_vote": "withdrawal_of_accommodation",
+  "dissenting_on_rate": false,
+  "dissenting_on_stance": false,
+  "official_statement_rationale": "Headline CPI inflation at 4.85 per cent remains uncomfortably above the 4.00 per cent target, and the persistence of food inflation at 8.52 per cent poses a significant risk to the anchoring of inflation expectations. With a positive output gap of 0.40 per cent and Brent crude oil prices elevated at 90.45 dollars per barrel, the economy is operating with limited slack. A shift to a neutral stance at this juncture would be premature and could signal a dilution of our commitment to price stability. I remain convinced that maintaining the stance of withdrawal of accommodation is essential to ensure that the disinflationary process is durable and that we do not lose the gains made in anchoring expectations, especially given the prevailing global uncertainties and the need to maintain a stable macroeconomic environment.",
+  "fallback_triggered": false
+}
