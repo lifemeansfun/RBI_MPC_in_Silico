@@ -1,0 +1,19 @@
+{
+  "url": "https://financialservices.gov.in/sites/default/files/Act-Policies/2026-01/The-Reserve-Bank-of-India-Act--1934.pdf",
+  "retrieved_at_utc": "2026-10-05T14:31:55.595404+00:00",
+  "sha256": "20b8977f2363166e669b01f72f4f3441e6136403d5a7e4c9af0f873b92a9a2cf",
+  "bytes": 797063,
+  "content_type": "application/pdf",
+  "provision_pages": [
+    5,
+    89,
+    90
+  ],
+  "failed_sources": [
+    {
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/2398/1/a1934-2.pdf",
+      "error_type": "ReadTimeout"
+    }
+  ],
+  "scope": "Source acquisition and page location only; legal interpretation and visual inspection are separate checks."
+}
