@@ -1,0 +1,26 @@
+{
+  "reference_month": "2021-06",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Release_12july21.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:19.305701+00:00",
+  "discovery": "Web search: site:mospi.gov.in CPI June 2021 Press",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Release_12july21.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:31 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "316980",
+    "Connection": "keep-alive",
+    "Last-Modified": "Mon, 12 Jul 2021 12:10:16 GMT",
+    "ETag": "\"60ec3128-4d634\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:31 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 316980,
+  "local_file": "raw/2021-06_url.pdf",
+  "sha256": "941a94ca44470566fe522ed15d4fe36678ce9b78b9bf691fed79dc10a80f3e5e",
+  "acquired": true
+}

@@ -1,0 +1,13 @@
+# Research working rules
+
+- Inspect implementation and applicable configuration before edits. Work on the user's `project_upgrade_codex` branch; preserve existing work.
+- Preserve legacy source data, profiles, transcripts, checkpoints and results. New corrected studies use distinct destinations and immutable experiment/condition/replicate identities.
+- Separate verified behavior, repository-reported results, assumptions and hypotheses. Record commands, raw logs, input/config/code hashes, environment, failed checks, nulls and negative effects.
+- Never relabel mock, heuristic, cache replay or model substitution as independent live-model evidence. Research generation fails closed; budget/cancellation/provenance errors propagate.
+- Source every supplied macro observation with reference period, release/vintage availability and source hash. Missing evidence stays missing. Separate decision, publication and information-cutoff dates; validate dates and finite values.
+- Freeze persona/model/prompt/comparator selection on calibration before new evaluation. The exposed 2020-2024 panel is retrospective evidence; repeated review does not make it an untouched test. Never tune a frozen final evaluation to obtain a win.
+- Separate exact rate, direction, stance and formal rate/stance dissent; reservations and guidance disagreements are distinct labels. Enforce aligned joins and use meeting-level/temporal uncertainty with meaningful baselines.
+- Distinguish statutory majority/casting rules from simulated full-roster, fragmentation and information-visibility choices. Claim simulator-local intervention effects unless real-policy external validity is demonstrated.
+- Use purpose-specific verification. Run tests in isolated outputs; validate complete paths and corruption/failure controls. Passing arithmetic or engineering checks does not prove empirical superiority, cognitive diversity, equilibrium or welfare.
+- Fresh critical reviewers receive only workings, a file map and copied current scientific inputs. Exclude prior reviews, implementation plans, chat, memory and Git history. Preserve every completed or failed review; do not seek a preferred verdict.
+- The active implementation plan is `research/implementation_plans/round_001.md`. Parallel owners must keep the declared file boundaries and communicate additive interface changes before integration. Root owns configuration YAML, dependency files, Makefile, existing mixed tests and final scientific documentation.

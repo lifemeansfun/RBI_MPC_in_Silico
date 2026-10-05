@@ -1,0 +1,26 @@
+{
+  "reference_month": "2024-04",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_PR_13may24_0.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:38.370195+00:00",
+  "discovery": "Web search: Consumer April 2024 4.83 CFPI restricted to MoSPI/PIB",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_PR_13may24_0.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:50 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "377465",
+    "Connection": "keep-alive",
+    "Last-Modified": "Tue, 14 May 2024 05:02:16 GMT",
+    "ETag": "\"6642f058-5c279\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:50 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 377465,
+  "local_file": "raw/2024-04_url.pdf",
+  "sha256": "8e1120e7c20271b03fa855d959aa956c1fef6e3c1bf353befb2bb0f0366ed08b",
+  "acquired": true
+}

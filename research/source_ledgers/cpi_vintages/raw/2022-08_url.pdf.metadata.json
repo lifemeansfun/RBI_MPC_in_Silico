@@ -1,0 +1,26 @@
+{
+  "reference_month": "2022-08",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20Aug%202022.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:28.037966+00:00",
+  "discovery": "Web search: CPI August 2022 12th September 2022",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20Aug%202022.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:40 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "320382",
+    "Connection": "keep-alive",
+    "Last-Modified": "Mon, 27 Feb 2023 05:40:00 GMT",
+    "ETag": "\"63fc4230-4e37e\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:40 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 320382,
+  "local_file": "raw/2022-08_url.pdf",
+  "sha256": "a8fc2ca7e4aec34db826f303780e00917ca44056eb104a8fe0664f81f5512556",
+  "acquired": true
+}

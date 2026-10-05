@@ -1,0 +1,26 @@
+{
+  "reference_month": "2020-10",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Statement_12nov20.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:16.327331+00:00",
+  "discovery": "Web search: site:mospi.gov.in CPI October 2020 Press",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Statement_12nov20.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:28 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "173058",
+    "Connection": "keep-alive",
+    "Last-Modified": "Thu, 12 Nov 2020 12:21:36 GMT",
+    "ETag": "\"5fad28d0-2a402\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:28 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 173058,
+  "local_file": "raw/2020-10_url.pdf",
+  "sha256": "ce55a7de52aeb739c1568e432c765bdb9d63e03d1dfa9168339aed3a08e43ba0",
+  "acquired": true
+}

@@ -1,0 +1,78 @@
+{
+  "successful_original_sources": 26,
+  "original_pdf_sources": 21,
+  "original_html_sources": 5,
+  "retained_failed_attempts": 1,
+  "distinct_meetings": 25,
+  "source_table_vintage_rows": 50,
+  "all_original_source_hashes_match": true,
+  "all_meeting_source_hashes_match": true,
+  "all_preserved_failed_response_hashes_match": true,
+  "all_release_timestamps_before_conservative_cutoff": true,
+  "legacy_macro_panel_hash_unchanged": true,
+  "local_note_links_resolve": true,
+  "visual_qa": {
+    "inspected_pdf_first_page_summary_tables": 21,
+    "inspected_contact_sheets": 5,
+    "findings": "Current/final labels, Combined columns and transcribed values agree; no table clipping found",
+    "basis": "Manual inspection of the five rendered contact sheets using view_image"
+  },
+  "credential_pattern_scan": {
+    "unexplained_findings": 0,
+    "classified_public_source_matches": [
+      {
+        "file": "raw/2021-10_url.html",
+        "line": 198,
+        "pattern": "literal_assignment",
+        "classification": "Public PIB browser telemetry key assignment in anonymously retrieved source HTML",
+        "secret_value_printed": false
+      },
+      {
+        "file": "raw/2021-10_url.html",
+        "line": 245,
+        "pattern": "google_key_shape",
+        "classification": "Credential-shaped substring inside public PIB encoded ASP.NET VIEWSTATE",
+        "secret_value_printed": false
+      },
+      {
+        "file": "raw/2022-06_url.html",
+        "line": 198,
+        "pattern": "literal_assignment",
+        "classification": "Public PIB browser telemetry key assignment in anonymously retrieved source HTML",
+        "secret_value_printed": false
+      },
+      {
+        "file": "raw/2023-04_additional_url.html",
+        "line": 221,
+        "pattern": "literal_assignment",
+        "classification": "Public PIB browser telemetry key assignment in anonymously retrieved source HTML",
+        "secret_value_printed": false
+      },
+      {
+        "file": "raw/2023-08_url.html",
+        "line": 221,
+        "pattern": "literal_assignment",
+        "classification": "Public PIB browser telemetry key assignment in anonymously retrieved source HTML",
+        "secret_value_printed": false
+      },
+      {
+        "file": "raw/2024-02_url.html",
+        "line": 221,
+        "pattern": "literal_assignment",
+        "classification": "Public PIB browser telemetry key assignment in anonymously retrieved source HTML",
+        "secret_value_printed": false
+      }
+    ],
+    "note": "Patterns are a limited check; original anonymous public source HTML is preserved unchanged"
+  },
+  "full_macro_panel_validated": false,
+  "file_count": 150,
+  "total_bytes": 25368589,
+  "largest_file": [
+    2220115,
+    "raw/2024-02_url.html"
+  ],
+  "python": "3.11.16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "verification_script_sha256": "41dca45593109dac05b9c08a5c97792d8489b07d9461f359c3cfb4f64fedd5ba"
+}

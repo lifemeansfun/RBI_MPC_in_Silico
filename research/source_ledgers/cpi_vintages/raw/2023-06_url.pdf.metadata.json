@@ -1,0 +1,26 @@
+{
+  "reference_month": "2023-06",
+  "role": "url",
+  "requested_url": "https://www.mospi.gov.in/sites/default/files/press_release/CPI_PR_12july23.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:30.646853+00:00",
+  "discovery": "User supplied URL verified with web open; MoSPI PDF",
+  "status_code": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/press_release/CPI_PR_12july23.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:42 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "321164",
+    "Connection": "keep-alive",
+    "Last-Modified": "Wed, 12 Jul 2023 12:04:20 GMT",
+    "ETag": "\"64ae96c4-4e68c\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:42 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 321164,
+  "local_file": "raw/2023-06_url.pdf",
+  "sha256": "32a2a29da57615c7e5d13e8d10750c03a7b5e6fe5830c0976015845fb014088f",
+  "acquired": true
+}

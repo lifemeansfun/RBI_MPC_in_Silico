@@ -1,0 +1,29 @@
+{
+  "reference_month": "2022-03",
+  "role": "url",
+  "requested_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/apr/doc202241240601.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:25.066346+00:00",
+  "discovery": "Web search: site:pib.gov.in March 2022 Consumer Price Index; MoSPI release PDF hosted by PIB",
+  "status_code": 200,
+  "final_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/apr/doc202241240601.pdf",
+  "response_headers": {
+    "Content-Type": "application/pdf",
+    "Last-Modified": "Tue, 12 Apr 2022 11:43:59 GMT",
+    "Accept-Ranges": "bytes",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Access-Control-Allow-Origin": "https://pib.gov.in",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' https://*.pib.gov.in data:; style-src 'self' 'unsafe-inline'; frame-ancestors https://pib.gov.in https://*.pib.gov.in; base-uri 'self'; form-action 'self';",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+    "Content-Length": "318168",
+    "Cache-Control": "no-cache",
+    "Date": "Mon, 05 Oct 2026 14:27:25 GMT",
+    "Connection": "keep-alive"
+  },
+  "bytes": 318168,
+  "local_file": "raw/2022-03_url.pdf",
+  "sha256": "d43e5fb374b5c32e36026b24b1c464099ac8c0cb54bc994505c6c459cea1047f",
+  "acquired": true
+}

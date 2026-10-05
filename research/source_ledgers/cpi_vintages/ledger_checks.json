@@ -1,0 +1,19 @@
+{
+  "meetings": 25,
+  "release_months": 25,
+  "recorded_vintages": 50,
+  "acquired_original_documents": 26,
+  "failed_source_attempts": 1,
+  "all_release_timestamps_before_meeting_start": true,
+  "all_next_scheduled_release_dates_after_cutoff": true,
+  "all_current_combined_values_match_manual_source_adjudication": true,
+  "all_primary_pdf_rate_rows_match_geometry_tables": true,
+  "full_macro_panel_validated": false,
+  "python": "3.11.16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "source_catalog_sha256": "d1f242de97aa1db72726e290e5cfbb15e3aec5092ae05d0ec49fb2c061b17093",
+  "context_preparation_sha256": "e329571330b725f9998233daafca957a06b2bbbc5a8b1ec2d169d29a185662ea",
+  "legacy_macro_panel_sha256": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb",
+  "script_sha256": "883fb298717d98b3a94c73eeed507c6fe9b1e40daf7f083f4ce1f05bf573fb68",
+  "output_csv_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c"
+}

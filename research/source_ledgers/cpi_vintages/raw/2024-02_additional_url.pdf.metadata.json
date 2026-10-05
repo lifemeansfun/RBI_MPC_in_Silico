@@ -1,0 +1,28 @@
+{
+  "reference_month": "2024-02",
+  "role": "additional_url",
+  "requested_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/mar/doc2024312322801.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:37.927727+00:00",
+  "discovery": "Web searches: Consumer February 2024 5.09 CFPI and February 2024 CFPI Posted On restricted to MoSPI/PIB; MoSPI release posted by PIB and accompanying PIB PDF",
+  "status_code": 200,
+  "final_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/mar/doc2024312322801.pdf",
+  "response_headers": {
+    "Content-Type": "application/pdf",
+    "Last-Modified": "Tue, 12 Mar 2024 11:33:07 GMT",
+    "Accept-Ranges": "bytes",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Access-Control-Allow-Origin": "https://pib.gov.in",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' https://*.pib.gov.in data:; style-src 'self' 'unsafe-inline'; frame-ancestors https://pib.gov.in https://*.pib.gov.in; base-uri 'self'; form-action 'self';",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+    "Content-Length": "326120",
+    "Cache-Control": "no-cache",
+    "Date": "Mon, 05 Oct 2026 14:27:38 GMT",
+    "Connection": "keep-alive"
+  },
+  "bytes": 326120,
+  "local_file": "raw/2024-02_additional_url.pdf",
+  "sha256": "75dd12efbb5650c001c71017c38247e2d6c428806446b73582bfe519b74ed004",
+  "acquired": true
+}

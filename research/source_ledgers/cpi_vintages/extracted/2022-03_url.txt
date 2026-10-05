@@ -1,0 +1,332 @@
+--- PAGE 1 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+GOVERNMENT OF INDIA
+MINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION
+NATIONAL STATISTICAL OFFICE
+Dated the 12th April 2022
+22, Chaitra, Saka 1944
+PRESS RELEASE
+CONSUMER PRICE INDEX NUMBERS ON BASE 2012=100 FOR RURAL,
+URBAN AND COMBINED FOR THE MONTH OF MARCH 2022
+The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation
+(MoSPI) is releasing All India Consumer Price Index (CPI) on Base 2012=100 and corresponding
+Consumer Food Price Index (CFPI) for Rural (R), Urban (U) and Combined (C) for the month of March
+2022 (Provisional) in this press note. CPIs for Sub-Groups and Groups for both All India and all
+States/UTs are also being released.
+2. The Price data are collected from selected 1114 urban Markets and 1181 villages covering all
+States/UTs through personal visits by field staff of Field Operations Division of NSO, MoSPI on a
+weekly roster. During the month of March 2022, NSO collected prices from 99.9 % villages and 98.3%
+urban Markets while the Market-wise prices reported therein were 90.2% for rural and 93.2% for urban.
+3. All India Inflation rates (on point to point basis i.e. current month over same month of last year, i.e.
+March 2022 over March 2021), based on General Indices and CFPIs are given as follows:
+All India Inflation rates (%) based on CPI (General) and CFPI
+Mar. 2022 (Prov.) Feb. 2022 (Final) Mar. 2021
+Indices
+Rural Urban Combd. Rural Urban Combd. Rural Urban Combd.
+CPI (General) 7.66 6.12 6.95 6.38 5.75 6.07 4.61 6.52 5.52
+CFPI 8.04 7.04 7.68 5.81 5.76 5.85 3.94 6.64 4.87
+Notes: Prov. – Provisional, Combd. - Combined
+4. Monthly changes in the General Indices and CFPIs are given below:
+Monthly changes (%) in All India CPI (General) and CFPI: March, 2022 over
+February,2022
+Rural Urban Combined
+Indices Index Value Index Value Index Value
+% % %
+Change Change Change
+Mar.22 Feb.22 Mar.22 Feb.22 Mar.22 Feb.22
+CPI (General) 168.7 166.7 1.20 166.5 165.5 0.60 167.7 166.1 0.96
+CFPI 165.2 162.2 1.85 170.2 168.8 0.83 166.9 164.6 1.40
+Note: Figures of March 2022 are provisional.
+5. Price data for CPI are received through web portals, maintained by the National Informatics
+Centre.
+Next date of release: 12th May 2022 (Thursday) for April 2022.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 1 of 6
+
+--- PAGE 2 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+List of Annex
+Annex Title
+I All-India General (all-groups), Group and Sub-group level CPI
+and CFPI numbers for February 2022 (Final) and March 2022
+(Provisional) for Rural, Urban and Combined
+II All-India inflation rates for General (all-groups), Group and
+Sub-group level CPI and CFPI numbers for March 2022
+(Provisional) for Rural, Urban and Combined
+III General CPI for States for Rural, Urban and Combined for
+February 2022 (Final) and March 2022 (Provisional)
+IV Inflation rates of major States, having population more than 50
+lakhs as per Population Census 2011, for Rural, Urban and
+Combined for March 2022 (Provisional)
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 2 of 6
+
+--- PAGE 3 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+Annex I
+All India Consumer Price Indices
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description Feb. 22 Mar. 22 Feb. 22 Mar. 22 Feb. 22 Mar. 22
+Code Code Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+Cereals and
+1.1.01 12.35 148.8 150.1 6.59 152.5 153.7 9.67 150.0 151.2
+products
+1.1.02 Meat and fish 4.38 198.1 208.0 2.73 205.2 215.8 3.61 200.6 210.7
+1.1.03 Egg 0.49 175.5 168.0 0.36 176.4 167.6 0.43 175.8 167.8
+1.1.04 Milk and products 7.72 160.7 162.0 5.33 160.6 162.6 6.61 160.7 162.2
+1.1.05 Oils and fats 4.21 192.6 203.1 2.81 171.5 180.1 3.56 184.9 194.7
+1.1.06 Fruits 2.88 151.4 155.9 2.90 156.4 159.6 2.89 153.7 157.6
+1.1.07 Vegetables 7.46 155.2 155.9 4.41 198.0 188.3 6.04 169.7 166.9
+Pulses and
+1.1.08 2.95 163.9 164.2 1.73 163.2 163.4 2.38 163.7 163.9
+products
+Sugar and
+1.1.09 1.70 118.1 118.1 0.97 120.6 120.3 1.36 118.9 118.8
+Confectionery
+1.1.10 Spices 3.11 175.4 178.7 1.79 172.2 174.7 2.50 174.3 177.4
+Non-alcoholic
+1.2.11 1.37 170.5 171.2 1.13 156.7 157.1 1.26 164.7 165.3
+beverages
+Prepared meals,
+1.1.12 5.56 176.3 177.4 5.54 180.0 181.5 5.55 178.0 179.3
+snacks, sweets etc.
+Food and
+1 54.18 163.9 166.6 36.29 170.2 171.5 45.86 166.2 168.4
+beverages
+Pan, tobacco and
+2 3.26 191.5 192.3 1.36 196.5 197.6 2.38 192.8 193.7
+intoxicants
+3.1.01 Clothing 6.32 174.1 175.4 4.72 165.7 167.1 5.58 170.8 172.1
+3.1.02 Footwear 1.04 171.0 173.2 0.85 150.4 152.5 0.95 162.4 164.6
+Clothing and
+3 7.36 173.7 175.1 5.57 163.4 164.9 6.53 169.6 171.1
+footwear
+4 Housing - - - 21.67 165.5 165.3 10.07 165.5 165.3
+5 Fuel and light 7.94 167.4 168.9 5.58 163.0 164.5 6.84 165.7 167.2
+Household goods
+6.1.01 3.75 165.7 166.5 3.87 157.4 158.6 3.80 161.8 162.8
+and services
+6.1.02 Health 6.83 175.3 176.0 4.81 167.2 168.2 5.89 172.2 173.0
+Transport and
+6.1.03 7.60 161.2 162.0 9.73 153.1 154.2 8.59 156.9 157.9
+communication
+Recreation and
+6.1.04 1.37 165.5 166.6 2.04 159.5 160.8 1.68 162.1 163.3
+amusement
+6.1.05 Education 3.46 170.3 170.6 5.62 162.0 162.6 4.46 165.4 165.9
+Personal care and
+6.1.06 4.25 164.5 167.4 3.47 164.2 166.8 3.89 164.4 167.2
+effects
+6 Miscellaneous 27.26 167.3 168.3 29.53 159.4 160.6 28.32 163.5 164.6
+General Index (All Groups) 100.00 166.7 168.7 100.00 165.5 166.5 100.00 166.1 167.7
+Consumer Food Price Index (CFPI) 47.25 162.2 165.2 29.62 168.8 170.2 39.06 164.6 166.9
+Notes:
+1. Prov. : Provisional.
+2. CFPI : Out of 12 sub-groups contained in ‘Food and Beverages’ group, CFPI is based on ten sub-groups, excluding ‘Non-
+alcoholic beverages’ and ‘Prepared meals, snacks, sweets etc.’.
+3. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 3 of 6
+
+--- PAGE 4 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+Annex II
+All India year-on-year inflation rates (%) for March 2022 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description Mar. 21 Mar. 22 Inflation Mar. 21 Mar. 22 Inflation Mar. 21 Mar. 22 Inflation
+Code Code Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+1.1.01
+Cereals and
+142.5 150.1 5.33 147.5 153.7 4.20 144.1 151.2 4.93
+products
+1.1.02 Meat and fish 189.4 208.0 9.82 197.5 215.8 9.27 192.2 210.7 9.63
+1.1.03 Egg 163.2 168.0 2.94 164.7 167.6 1.76 163.8 167.8 2.44
+1.1.04 Milk and products 154.5 162.0 4.85 155.6 162.6 4.50 154.9 162.2 4.71
+1.1.05 Oils and fats 168.2 203.1 20.75 156.4 180.1 15.15 163.9 194.7 18.79
+1.1.06 Fruits 150.5 155.9 3.59 157.3 159.6 1.46 153.7 157.6 2.54
+1.1.07 Vegetables 141.0 155.9 10.57 166.1 188.3 13.37 149.5 166.9 11.64
+1.1.08
+Pulses and
+159.2 164.2 3.14 161.1 163.4 1.43 159.8 163.9 2.57
+products
+1.1.09
+Sugar and
+111.7 118.1 5.73 114.3 120.3 5.25 112.6 118.8 5.51
+Confectionery
+1.1.10 Spices 164.0 178.7 8.96 162.6 174.7 7.44 163.5 177.4 8.50
+1.2.11
+Non-alcoholic
+160.6 171.2 6.60 150.7 157.1 4.25 156.5 165.3 5.62
+beverages
+1.1.12
+Prepared meals,
+166.4 177.4 6.61 170.3 181.5 6.58 168.2 179.3 6.60
+snacks, sweets etc.
+1
+Food and
+154.5 166.6 7.83 160.4 171.5 6.92 156.7 168.4 7.47
+beverages
+2
+Pan, tobacco and
+186.1 192.3 3.33 193.5 197.6 2.12 188.1 193.7 2.98
+intoxicants
+3.1.01 Clothing 159.6 175.4 9.90 155.1 167.1 7.74 157.8 172.1 9.06
+3.1.02 Footwear 154.4 173.2 12.18 138.7 152.5 9.95 147.9 164.6 11.29
+3
+Clothing and
+158.9 175.1 10.20 152.6 164.9 8.06 156.4 171.1 9.40
+footwear
+4 Housing - - - 159.9 165.3 3.38 159.9 165.3 3.38
+5 Fuel and light 156.0 168.9 8.27 154.8 164.5 6.27 155.5 167.2 7.52
+6.1.01
+Household goods
+154.8 166.5 7.56 147.2 158.6 7.74 151.2 162.8 7.67
+and services
+6.1.02 Health 164.6 176.0 6.93 156.9 168.2 7.20 161.7 173.0 6.99
+6.1.03
+Transport and
+151.3 162.0 7.07 141.7 154.2 8.82 146.2 157.9 8.00
+communication
+6.1.04
+Recreation and
+157.8 166.6 5.58 148.6 160.8 8.21 152.6 163.3 7.01
+amusement
+6.1.05 Education 163.8 170.6 4.15 157.6 162.6 3.17 160.2 165.9 3.56
+6.1.06
+Personal care and
+153.1 167.4 9.34 154.9 166.8 7.68 153.8 167.2 8.71
+effects
+6 Miscellaneous 157.3 168.3 6.99 150.0 160.6 7.07 153.8 164.6 7.02
+General Index (All Groups) 156.7 168.7 7.66 156.9 166.5 6.12 156.8 167.7 6.95
+Consumer Food Price Index 152.9 165.2 8.04 159.0 170.2 7.04 155.0 166.9 7.68
+Notes:
+1. Prov. : Provisional.
+2. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 4 of 6
+
+--- PAGE 5 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+Annex III
+State/UT wise General Consumer Price Indices
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the Feb. 22 Mar. 22 Feb. 22 Mar. 22 Feb. 22 Mar. 22
+State/UT Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 5.40 167.2 169.7 3.64 170.9 173.1 4.58 168.6 171.0
+2 Arunachal Pradesh 0.14 174.0 174.5 0.06 -- -- 0.10 174.0 174.5
+3 Assam 2.63 168.6 171.0 0.79 167.1 167.9 1.77 168.3 170.4
+4 Bihar 8.21 162.0 164.2 1.62 168.0 169.9 5.14 162.9 165.0
+5 Chhattisgarh 1.68 164.8 165.7 1.22 162.5 163.0 1.46 163.9 164.7
+6 Delhi 0.28 159.8 160.9 5.64 159.4 160.1 2.77 159.4 160.1
+7 Goa 0.14 169.3 168.7 0.25 162.2 162.8 0.19 164.9 165.1
+8 Gujarat 4.54 162.6 164.4 6.82 155.8 156.9 5.60 158.8 160.2
+9 Haryana 3.30 162.2 163.6 3.35 159.0 159.9 3.32 160.7 161.9
+10 Himachal Pradesh 1.03 160.4 160.6 0.26 164.7 165.8 0.67 161.2 161.5
+11 Jharkhand 1.96 163.8 165.0 1.39 167.6 168.7 1.69 165.3 166.4
+12 Karnataka 5.09 167.5 168.7 6.81 173.7 174.9 5.89 170.8 172.0
+13 Kerala 5.50 172.6 174.1 3.46 171.7 172.6 4.55 172.3 173.6
+14 Madhya Pradesh 4.93 164.7 167.2 3.97 168.0 169.5 4.48 166.1 168.1
+15 Maharashtra 8.25 167.8 170.4 18.86 161.6 162.8 13.18 163.7 165.3
+16 Manipur 0.23 183.2 185.5 0.12 169.1 168.5 0.18 178.7 180.1
+17 Meghalaya 0.28 158.4 159.0 0.15 161.8 162.4 0.22 159.5 160.1
+18 Mizoram 0.07 173.1 173.7 0.13 164.2 164.2 0.10 167.7 167.9
+19 Nagaland 0.14 179.0 181.3 0.12 163.7 164.1 0.13 172.5 174.0
+20 Odisha 2.93 167.5 169.3 1.31 162.8 163.0 2.18 166.2 167.5
+21 Punjab 3.31 162.5 163.1 3.09 153.7 154.6 3.21 158.6 159.3
+22 Rajasthan 6.63 163.7 165.8 4.23 163.4 164.8 5.51 163.6 165.4
+23 Sikkim 0.06 183.2 183.2 0.03 171.7 171.8 0.05 179.4 179.5
+24 Tamil Nadu 5.55 172.2 172.2 9.20 171.9 172.2 7.25 172.0 172.2
+25 Telangana 3.16 174.1 178.0 4.41 169.8 171.0 3.74 171.7 174.2
+26 Tripura 0.35 180.6 181.0 0.14 170.7 171.0 0.25 178.0 178.4
+27 Uttar Pradesh 14.83 163.9 166.5 9.54 165.2 166.5 12.37 164.4 166.5
+28 Uttarakhand 1.06 164.0 165.2 0.73 164.0 164.6 0.91 164.0 165.0
+29 West Bengal 6.99 173.0 175.8 7.20 173.6 173.4 7.09 173.3 174.7
+Andaman & Nicobar
+30 0.05 182.3 181.9 0.07 166.0 167.4 0.06 174.0 174.5
+Islands
+31 Chandigarh 0.02 167.0 166.7 0.34 157.0 157.7 0.17 157.6 158.2
+Dadra & Nagar
+32 0.02 154.0 153.5 0.04 160.9 161.7 0.03 158.6 159.0
+Haveli
+33 Daman & Diu 0.02 169.8 170.9 0.02 164.3 166.0 0.02 167.5 168.8
+34 Jammu & Kashmir* 1.14 177.4 179.4 0.72 176.3 176.9 0.94 177.0 178.5
+35 Lakshadweep 0.01 176.9 176.7 0.01 154.8 158.4 0.01 165.6 167.3
+36 Puducherry 0.08 172.5 173.2 0.27 172.1 172.2 0.17 172.2 172.5
+All India 100.00 166.7 168.7 100.00 165.5 166.5 100.00 166.1 167.7
+Notes:
+1. Prov. : Provisional
+2. -- : indicates the receipt of price schedules is less than 80% of allocated schedules and therefore indices are not
+compiled.
+3. * : Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu & Kashmir
+and Ladakh (erstwhile State of Jammu & Kashmir).
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 5 of 6
+
+--- PAGE 6 ---
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th April 2022.
+Annex IV
+Major State/UT wise year-on-year inflation rates (%) for March 2022 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the Mar. 21 Mar. 22 Inflation Mar. 21 Mar. 22 Inflation Mar. 21 Mar. 22 Inflation
+State/UT Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 159.7 169.7 6.26 162.6 173.1 6.46 160.8 171.0 6.34
+2 Assam 157.1 171.0 8.85 159.2 167.9 5.46 157.5 170.4 8.19
+3 Bihar 152.5 164.2 7.67 158.6 169.9 7.12 153.4 165.0 7.56
+4 Chhattisgarh 153.9 165.7 7.67 154.4 163.0 5.57 154.1 164.7 6.88
+5 Delhi 153.9 160.9 4.55 151.3 160.1 5.82 151.4 160.1 5.75
+6 Gujarat 152.5 164.4 7.80 147.5 156.9 6.37 149.7 160.2 7.01
+7 Haryana 151.0 163.6 8.34 150.3 159.9 6.39 150.7 161.9 7.43
+8 Himachal Pradesh 151.1 160.6 6.29 155.5 165.8 6.62 151.9 161.5 6.32
+9 Jharkhand 153.0 165.0 7.84 158.1 168.7 6.70 154.9 166.4 7.42
+10 Karnataka 160.5 168.7 5.11 165.0 174.9 6.00 162.9 172.0 5.59
+11 Kerala 166.9 174.1 4.31 163.9 172.6 5.31 165.8 173.6 4.70
+12 Madhya Pradesh 153.7 167.2 8.78 158.9 169.5 6.67 155.8 168.1 7.89
+13 Maharashtra 157.3 170.4 8.33 151.8 162.8 7.25 153.6 165.3 7.62
+14 Odisha 157.6 169.3 7.42 155.2 163.0 5.03 156.9 167.5 6.76
+15 Punjab 154.9 163.1 5.29 149.8 154.6 3.20 152.6 159.3 4.39
+16 Rajasthan 153.4 165.8 8.08 154.3 164.8 6.80 153.7 165.4 7.61
+17 Tamil Nadu 164.6 172.2 4.62 165.2 172.2 4.24 165.0 172.2 4.36
+18 Telangana 162.7 178.0 9.40 161.0 171.0 6.21 161.8 174.2 7.66
+19 Uttar Pradesh 152.0 166.5 9.54 157.4 166.5 5.78 153.9 166.5 8.19
+20 Uttarakhand 154.6 165.2 6.86 154.8 164.6 6.33 154.7 165.0 6.66
+21 West Bengal 159.2 175.8 10.43 161.9 173.4 7.10 160.5 174.7 8.85
+22 Jammu & Kashmir* 166.2 179.4 7.94 165.4 176.9 6.95 165.9 178.5 7.59
+All India 156.7 168.7 7.66 156.9 166.5 6.12 156.8 167.7 6.95
+Notes:
+1. Prov. : Provisional.
+2. * : Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu &
+Kashmir and Ladakh (erstwhile State of Jammu & Kashmir).
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 6 of 6

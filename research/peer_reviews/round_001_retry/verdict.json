@@ -1,0 +1,259 @@
+{
+  "verdict": "Not fully elite research grade",
+  "review_scope": "Independent supplied-context review of copied tree only; shared runtime, not OS isolation. No original files, memory, other reviews or Git history consulted; no external generation.",
+  "supported_findings": [
+    {
+      "finding": "Unit suite passes",
+      "evidence": "28 passed in 0.93s; reviewer_evidence/pytest.log"
+    },
+    {
+      "finding": "Verification batteries execute successfully",
+      "evidence": "16/16 deep and 17/17 intensive checks; original guard passes, with interpretation limitations."
+    },
+    {
+      "finding": "Local archives consistent",
+      "evidence": "25/25 manifest hashes; 150/150 normalized statements match corresponding releases after manifest-month correction."
+    },
+    {
+      "finding": "Saved outcomes internally consistent",
+      "evidence": "29 holdout-date packages with 24 round files, zero saved fallbacks; ballots reaggregate to stored rate/stance outcomes."
+    },
+    {
+      "finding": "Numerical comparator reproducible",
+      "evidence": "Fresh 25x1000-draw run exactly matches all saved table values."
+    },
+    {
+      "finding": "Binary casting rule correct within modeled full-roster domain",
+      "evidence": "20/20 independent 3-3 profile checks passed."
+    },
+    {
+      "finding": "Direct ground-truth fields excluded from macro prompt formatter",
+      "evidence": "Controlled formatter probe found no real dissent label in prompt; does not resolve other leakage."
+    }
+  ],
+  "deficiencies": [
+    {
+      "id": "D1",
+      "severity": "critical",
+      "finding": "Verified future-release CPI inputs invalidate pre-meeting forecasting interpretation.",
+      "source": [
+        "src/data_pipeline/macro_builder.py:365-381",
+        "src/schemas/macro_schema.py:11-15",
+        "https://mospi.gov.in/sites/default/files/press_release/CPI_PR_14aug23.pdf"
+      ],
+      "evidence": "August 10, 2023 snapshot contains 7.44 headline and 11.51 food CPI released August 14.",
+      "remediation": "Build source-linked, release/vintage-aware input panel; compute output gap from available history or mark synthetic.",
+      "acceptance_check": "Reject release timestamps after meeting cutoff; manually validate vintage snapshots; rerun frozen evaluation."
+    },
+    {
+      "id": "D2",
+      "severity": "critical",
+      "finding": "Personas use all eight holdout statements; stored scores match full-corpus recalibration.",
+      "source": [
+        "src/persona_engine/extractor.py:115-128,150-172",
+        "src/backtest/run_holdout_live.py:38-55,73-86",
+        "src/behavioral/debate_orchestrator.py:279-309"
+      ],
+      "evidence": "Six active corpora include all holdout dates. Stored Varma -0.31 versus calibration-only -0.28. Actual split is 17+8.",
+      "remediation": "Enforce source cutoff and freeze/hash persona, prompt and model selection before untouched evaluation; separately assess pretraining contamination.",
+      "acceptance_check": "Holdout source injection fails; provide manifests and new frozen/prospective evaluation."
+    },
+    {
+      "id": "D3",
+      "severity": "critical",
+      "finding": "Round 3 outputs never reach binding vote prompts.",
+      "source": [
+        "src/behavioral/debate_orchestrator.py:148-169,181-205",
+        "results/RESULTS_REPORT.md:176-180"
+      ],
+      "evidence": "All six Round 4 prompts identical after switching every Round 3 rate from -50 to +50 and changing rationale sentinels.",
+      "remediation": "Implement and document intended state/information graph, including each agent's own updated preference.",
+      "acceptance_check": "Sentinel reachability tests plus paired independent/two-round/full-round predictive comparisons."
+    },
+    {
+      "id": "D4",
+      "severity": "major",
+      "finding": "Holdout is all pauses/unchanged stance; simple baselines match or exceed model.",
+      "source": [
+        "results/tables/holdout_meeting_by_meeting_comparison.csv",
+        "scripts/stress_test_permutation.py:14-38",
+        "src/backtest/run_holdout_live.py:174-197"
+      ],
+      "evidence": "Live dissent F1 0.8333; always Varma 0.8889; previous-meeting dissent 0.9474. Saved R1 rate and stance already 8/8; R1 dissent F1 0.8. Uniform guessing probability is not baseline superiority.",
+      "remediation": "Include persistence, independent, single-agent and fitted comparator baselines; broaden regimes and report clustered paired uncertainty and separate ballot channels.",
+      "acceptance_check": "Publish all predictions/class counts/effect intervals on clean frozen hikes/holds/cuts panel; show incremental performance before claiming it."
+    },
+    {
+      "id": "D5",
+      "severity": "major",
+      "finding": "Legal quorum, section attribution and fragmented/status-quo voting rules overstate institutional fidelity.",
+      "source": [
+        "src/rule_engine/engine.py:3-9,40-41,77-86,147-162",
+        "src/attribution/attribution_runner.py:39-59",
+        "scripts/intensive_academic_verification.py:276-296",
+        "https://ies.gov.in/arthapedia/concept/monetary-policy-committee-mpc",
+        "https://www.indiacode.nic.in/bitstream/123456789/9176/1/a1934-2reserve.pdf"
+      ],
+      "evidence": "Law uses four-person quorum and majority of present/voting; casting provision is 45ZI, publication 45ZL. Six-person restriction, multicandidate median/plurality and neutral fallback are assumptions.",
+      "remediation": "Correct citations, distinguish full-roster protocol from quorum, justify resolution procedure and carry actual prior stance.",
+      "acceptance_check": "Primary-source rule audit and valid attendance cases; synthetic aggregation sensitivity; correct casting flags."
+    },
+    {
+      "id": "D6",
+      "severity": "major",
+      "finding": "Information-flow intervention does not isolate all persuasion paths; wedge and round changes are confounded.",
+      "source": [
+        "src/behavioral/debate_orchestrator.py:97-106,136-143,191-205,261-277",
+        "src/attribution/attribution_runner.py:125-167",
+        "src/scenarios/run_counterfactual_experiments.py:252-334",
+        "results/RESULTS_REPORT.md:203-224"
+      ],
+      "evidence": "Varma prior/rebuttal withheld but final rationale reaches Governor. Fabricated SPF signals added after R1. Leave-outs/mutings produce no committee shift; tied case hand-constructed.",
+      "remediation": "Define simulator-local estimand; separately vary messages, authority, ballot visibility and staff signals; accurately label synthetic forecasts; paired repeated conditions.",
+      "acceptance_check": "Reachability/exclusion tests and member/committee effect intervals with all nulls retained; external validity evidence before real-MPC causal claims."
+    },
+    {
+      "id": "D7",
+      "severity": "major",
+      "finding": "Condition traces overwrite, checkpoints ignore experimental identity, and reproduce validates existing research tables.",
+      "source": [
+        "src/infra/transcript_logger.py:37-64",
+        "src/backtest/backtest_runner.py:145-185",
+        "src/backtest/run_holdout_live.py:92-122",
+        "scripts/reproduce.py:91-115"
+      ],
+      "evidence": "Baseline and shock same date/replicate write same path. Logs lack exact prompt/model/receipt/hash metadata; date-only cache accepts prior conditions; replicate seed not wired.",
+      "remediation": "Immutable condition/content identifiers and provenance manifests; matched cache/checkpoint validation; separate replay and fresh generation.",
+      "acceptance_check": "No overwrite; input/model/seed mutation changes identity; replay regenerates tables from empty results and fails nonzero on corrupt/missing evidence."
+    },
+    {
+      "id": "D8",
+      "severity": "major",
+      "finding": "Heuristic scores mislabeled in headline claims; integrity checks and scientific proof claims exceed tested properties.",
+      "source": [
+        "results/RESULTS_REPORT.md:18,100,104-132,206-207,241,247-250,265-267",
+        "src/run_stage2_pipeline.py:65-72,141",
+        "scripts/academic_integrity_guard.py:68-103,117-124,157-169",
+        "scripts/deep_verification_battery.py:275-301"
+      ],
+      "evidence": "Abstract calls 76%/76%/0.68 multi-agent while table calls heuristic; guard accepts F1 .01 and 225 NOT JSON files. Rank and SVD checks do not prove empirical ranking/cognitive diversity.",
+      "remediation": "Typed semantic reconciliation and provenance validation; track-specific claims; distinguish numerical tests from formal scientific proof.",
+      "acceptance_check": "Mutation tests reject metric/ballot/track/receipt/JSON corruption; auto-reconcile all reported metrics and parameters."
+    },
+    {
+      "id": "D9",
+      "severity": "major",
+      "finding": "Fixed comparator parameters and unmatched dissent targets do not establish economic superiority; frontier/novelty comparison incomplete.",
+      "source": [
+        "src/rational/rational_panel_runner.py:25-34",
+        "src/rational/monte_carlo.py:66-69,119-120",
+        "results/RESULTS_REPORT.md:228-241,267",
+        "kazinnik_extracted.txt:864-919",
+        "results/stress_test_results.md",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+        "https://arxiv.org/abs/2410.18012",
+        "https://arxiv.org/abs/2511.02469"
+      ],
+      "evidence": "No supplied parameter fitting procedure; Gaussian noise assumed; rational dissent is rate-only. Author's updated version reports 218-meeting backtest. Saved cross-model check inconclusive due 404; OOD scenarios synthetic anchors.",
+      "remediation": "Calibration-only comparator fitting with uncertainty, aligned outcomes and inputs, strong baselines and versioned literature; narrow contribution claims.",
+      "acceptance_check": "Clean matched evaluation effect sizes plus explicit novelty matrix; actual unseen regime/roster validation where claimed."
+    },
+    {
+      "id": "D10",
+      "severity": "major",
+      "finding": "Accepted 35/40-bps schema values crash integration and budget errors are swallowed.",
+      "source": [
+        "src/schemas/debate_schema.py:11,135-158",
+        "src/rule_engine/engine.py:33,43-45",
+        "src/behavioral/debate_orchestrator.py:339-361,514-538",
+        "src/infra/llm_client.py:84-95"
+      ],
+      "evidence": "Controlled 35-bps final response raises ValueError; invalid rate becomes zero and invalid stance accepted unflagged. Budget-stop client invoked 24 times with 24 fallbacks and completed.",
+      "remediation": "Single action/stance contract, reject or flag coercions, propagate budget/cancellation exceptions and reserve cost before provider launch.",
+      "acceptance_check": "End-to-end valid historical sizes succeed; corrupt payloads rejected/flagged; budget exhaustion prevents subsequent provider requests."
+    }
+  ],
+  "checks_run": [
+    {
+      "command": ".venv/bin/python -m pytest tests -q",
+      "result": "28 passed in 0.93 seconds",
+      "evidence": "reviewer_evidence/pytest.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/deep_verification_battery.py",
+      "result": "16/16 passed",
+      "evidence": "reviewer_evidence/deep_verification_battery.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/intensive_academic_verification.py",
+      "result": "17/17 passed",
+      "evidence": "reviewer_evidence/intensive_academic_verification.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/academic_integrity_guard.py",
+      "result": "Pass on supplied artifacts; mutation probes later show weak checking",
+      "evidence": "reviewer_evidence/academic_integrity_guard.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/verify_contamination_audit.py",
+      "result": "Pass; text masking/arithmetic only, no model-level contamination test",
+      "evidence": "reviewer_evidence/contamination_audit.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/reproduce.py",
+      "result": "Exit 0; verifies existing tables and regenerates figures, does not rerun model research",
+      "evidence": "reviewer_evidence/reproduce.log"
+    },
+    {
+      "command": ".venv/bin/python reviewer_evidence/probes.py",
+      "result": "Baselines, corpus split, provenance, saved ballot reconciliation, Round3 sentinel, leaveout final-vote leakage, action35 integration, coercion, logger collision, binary tie",
+      "evidence": "reviewer_evidence/probes.json; captured_prompts.json; probes.log"
+    },
+    {
+      "command": ".venv/bin/python reviewer_evidence/audit_probes.py",
+      "result": "F1 .01 accepted; NOT JSON chains accepted; 24 attempts after raised BudgetExceededError; title-corrected 150/150 statement match",
+      "evidence": "reviewer_evidence/audit_probes.json"
+    },
+    {
+      "command": "Aggregate all saved runs/holdout_live_run Round1 ballots",
+      "result": "8/8 rate and stance; dissent TP10 FP5 FN0 F1 .8",
+      "evidence": "reviewer_evidence/no_debate_baseline.json"
+    },
+    {
+      "command": "RationalPanelRunner(results_dir=reviewer_evidence/rational_results).run_full_panel()",
+      "result": "25 meetings x 1000 draws; shared table values identical to saved table",
+      "evidence": "reviewer_evidence/rational_reproduce.log; rational_results/rational_taylor_panel_results.csv"
+    },
+    {
+      "command": "Primary-source web checks for MoSPI availability, government/RBI quorum and literature",
+      "result": "Specific August 2023 lookahead and institutional distinctions confirmed; current outside-paper results author-reported",
+      "evidence": "reviewer_evidence/public_source_notes.md"
+    }
+  ],
+  "limitations": [
+    "No paid or live external generation performed; provider/model identity and robustness not independently authenticated.",
+    "Shared .venv runtime and supplied-context isolation only; no claim of OS sandbox isolation.",
+    "Local copied-manifest hashes do not independently authenticate every source or establish official published hashes.",
+    "Direct current RBI release URL yielded navigation view; India Code PDF open timed out; other primary sources and copied text supported specific findings.",
+    "Foundation-model pretraining contamination not proven; persona and macro data leakage demonstrated independently.",
+    "Real private deliberation and real counterfactual policy responses unobserved; controlled probes establish implementation behavior only.",
+    "External-paper performance claims and saved second-model 404 failure were not independently replicated.",
+    "Only current supplied source/artifact snapshot reviewed, without Git history, prior reviews, memory or original-checkout reads.",
+    "Baseline metrics use repository ground-truth labels; not a full independent audit of all member ballot labels."
+  ],
+  "environment": {
+    "python": "3.11.16",
+    "platform": "macOS-26.6.2-arm64",
+    "versions": {
+      "pydantic": "2.13.5",
+      "pandas": "3.0.5",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pytest": "9.1.1",
+      "statsmodels": "0.15.0",
+      "google-genai": "2.22.0",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "evidence_bundle": "reviewer_evidence.zip"
+}

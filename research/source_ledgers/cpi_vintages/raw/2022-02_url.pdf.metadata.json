@@ -1,0 +1,26 @@
+{
+  "reference_month": "2022-02",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20February%2020221647259249573.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:24.540006+00:00",
+  "discovery": "Web search: site:mospi.gov.in CPI 14th March 2022",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20February%2020221647259249573.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:36 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "318425",
+    "Connection": "keep-alive",
+    "Last-Modified": "Thu, 22 Sep 2022 07:01:48 GMT",
+    "ETag": "\"632c085c-4dbd9\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:36 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 318425,
+  "local_file": "raw/2022-02_url.pdf",
+  "sha256": "871236372c0cd78cebe6f1b90340d715f9daeeba8996228e8455adf0e749ef28",
+  "acquired": true
+}

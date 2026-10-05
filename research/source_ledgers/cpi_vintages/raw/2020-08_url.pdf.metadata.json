@@ -1,0 +1,26 @@
+{
+  "reference_month": "2020-08",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:15.274664+00:00",
+  "discovery": "User supplied URL verified with web open; MoSPI PDF",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:27 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "332425",
+    "Connection": "keep-alive",
+    "Last-Modified": "Mon, 14 Sep 2020 12:20:16 GMT",
+    "ETag": "\"5f5f6000-51289\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:27 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 332425,
+  "local_file": "raw/2020-08_url.pdf",
+  "sha256": "648bf1f7e52b17d74115e1ce3f62136bc167307f87def829178e1e1713add08c",
+  "acquired": true
+}

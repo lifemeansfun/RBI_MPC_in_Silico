@@ -1,0 +1,30 @@
+{
+  "scope": "All-India CPI General Combined and CFPI Combined, base 2012=100; original release documents identified by web search/open on 2026-10-05",
+  "sources": [
+    {"reference_month":"2020-08","url":"https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf","discovery":"User supplied URL verified with web open; MoSPI PDF"},
+    {"reference_month":"2020-10","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Statement_12nov20.pdf","discovery":"Web search: site:mospi.gov.in CPI October 2020 Press"},
+    {"reference_month":"2020-12","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20December%202020.pdf","discovery":"Web search: site:mospi.gov.in CPI December 2020 Press"},
+    {"reference_month":"2021-02","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20February%202021.pdf","discovery":"Web search: site:mospi.gov.in CPI February 2021 Press"},
+    {"reference_month":"2021-04","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI_Press_Release_April2021.pdf","discovery":"Web search: site:mospi.gov.in CPI April 2021 Press"},
+    {"reference_month":"2021-06","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Release_12july21.pdf","discovery":"Web search: site:mospi.gov.in CPI June 2021 Press"},
+    {"reference_month":"2021-08","url":"https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/sep/doc202191301.pdf","discovery":"Web search: site:pib.gov.in August 2021 Consumer Price Index; MoSPI release PDF hosted by PIB"},
+    {"reference_month":"2021-10","url":"https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1771235&lang=2&reg=48","discovery":"Web search: site:pib.gov.in October 2021 Consumer Price Index; MoSPI release posted by PIB"},
+    {"reference_month":"2021-12","url":"https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20December%2020211641988826767.pdf","discovery":"Web search: CPI December 2021 12th January 2022"},
+    {"reference_month":"2022-02","url":"https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20February%2020221647259249573.pdf","discovery":"Web search: site:mospi.gov.in CPI 14th March 2022"},
+    {"reference_month":"2022-03","url":"https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/apr/doc202241240601.pdf","discovery":"Web search: site:pib.gov.in March 2022 Consumer Price Index; MoSPI release PDF hosted by PIB"},
+    {"reference_month":"2022-04","url":"https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20April%202022.pdf","discovery":"Web search: site:mospi.gov.in APRIL 2022 7.79"},
+    {"reference_month":"2022-06","url":"https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1840945&lang=2&reg=48","discovery":"Web search: site:pib.gov.in June 2022 CFPI; MoSPI release posted by PIB"},
+    {"reference_month":"2022-08","url":"https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20Aug%202022.pdf","discovery":"Web search: CPI August 2022 12th September 2022"},
+    {"reference_month":"2022-10","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20October%202022.pdf","discovery":"Web search: CPI October 2022 14th November 2022"},
+    {"reference_month":"2022-12","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI_PR_December_2022.pdf","discovery":"Web search: MoSPI CPI December 2021 January 12 2022 press release pdf; result is December 2022 and retained only for that month"},
+    {"reference_month":"2023-02","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI_PR_13mar23.pdf","discovery":"Web search: site:mospi.gov.in February 2023 CFPI"},
+    {"reference_month":"2023-04","url":"https://mospi.gov.in/dashboard/assets/pdf_data/PR%20April%202023.pdf","additional_url":"https://www.pib.gov.in/PressReleasePage.aspx?PRID=1923709&lang=2&reg=48","discovery":"Web search: Consumer April 2023 4.70 CFPI restricted to MoSPI/PIB; MoSPI dashboard URL currently returns non-PDF bytes; dated PIB release is the authoritative fallback"},
+    {"reference_month":"2023-06","url":"https://www.mospi.gov.in/sites/default/files/press_release/CPI_PR_12july23.pdf","discovery":"User supplied URL verified with web open; MoSPI PDF"},
+    {"reference_month":"2023-08","url":"https://www.pib.gov.in/PressReleasePage.aspx?PRID=1956659&lang=2&reg=48","discovery":"Web search: Consumer August 2023 6.83 CFPI restricted to MoSPI/PIB; MoSPI release posted by PIB"},
+    {"reference_month":"2023-10","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_PR_13nov23.pdf","discovery":"Web search: CPI October 2023 13th November 2023"},
+    {"reference_month":"2023-12","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_PR_12Jan24.pdf","discovery":"Web search: CPI December 2023 12th January 2024"},
+    {"reference_month":"2024-02","url":"https://www.pib.gov.in/PressReleasePage.aspx?PRID=2013793&lang=2&reg=48","additional_url":"https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/mar/doc2024312322801.pdf","discovery":"Web searches: Consumer February 2024 5.09 CFPI and February 2024 CFPI Posted On restricted to MoSPI/PIB; MoSPI release posted by PIB and accompanying PIB PDF"},
+    {"reference_month":"2024-04","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_PR_13may24_0.pdf","discovery":"Web search: Consumer April 2024 4.83 CFPI restricted to MoSPI/PIB"},
+    {"reference_month":"2024-06","url":"https://mospi.gov.in/sites/default/files/press_release/CPI_PR_12july24.pdf","discovery":"Web search: site:mospi.gov.in CPI_PR_12july22; result is July 2024 and retained only for June 2024"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "reference_month": "2021-12",
+  "role": "url",
+  "requested_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20December%2020211641988826767.pdf",
+  "retrieved_at_utc": "2026-10-05T14:27:23.210303+00:00",
+  "discovery": "Web search: CPI December 2021 12th January 2022",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20December%2020211641988826767.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:30:35 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "318335",
+    "Connection": "keep-alive",
+    "Last-Modified": "Thu, 22 Sep 2022 04:31:28 GMT",
+    "ETag": "\"632be520-4db7f\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:30:35 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 318335,
+  "local_file": "raw/2021-12_url.pdf",
+  "sha256": "49d785c60a411a92e985459fe4c944d48fa299b971e1fed36a2d79d657c15e20",
+  "acquired": true
+}
