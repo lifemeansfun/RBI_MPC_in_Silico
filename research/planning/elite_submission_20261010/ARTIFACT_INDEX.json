@@ -1,0 +1,27 @@
+{
+  "artifact_type": "planning_package",
+  "research_execution_performed": false,
+  "files": {
+    "COUNCIL_RECEIPT.json": "25e2b6cbd77b9c91cc69029b7bc0c13ffb3b9654ab280548ccd513ca5c9a99cb",
+    "COUNCIL_SYNTHESIS.md": "596a0e41eab77ff93b168e25418a341362cd17e9f63c2be705c57eeb439feaaf",
+    "ELITE_SUBMISSION_PLAN.md": "76e12a0295b94c0a1a5013665235a6ce6816e2e6b086cb98ef2706c821a58d5d",
+    "EVIDENCE_PACKET.md": "06ba5ff1e81224ccad6bc8cd13c5482de72d64316ad200b759cad2d8b5525966",
+    "SOURCE_CHECKS.json": "280b4a2f3d61f5aafa8bd2c21a70301af9e8377d48e37ead65a76f9aef559039",
+    "anonymous/A.md": "0e34fd733d3706d6748ebaf61ac04fcfb69abad7883aee02ae37ea9e130cdb14",
+    "anonymous/B.md": "300c5baf491909b1eb15e7beacfbc589af7903a8df137746c06b43a61ebdba9f",
+    "anonymous/C.md": "abe473354696aab929ff48ec46cb251c9089a9de91a5afca0ca84dc59a3558da",
+    "anonymous/D.md": "eabe7fc278ee1d15ae7bef0f93d2ddd1ccdf4b51deb2c3737b39b43194d06e07",
+    "anonymous/E.md": "c0ce0c4e7388d337322444d47f43d8132d03b054f77a18c4ef7bee9fb0c19889",
+    "peer_reviews/peer_1.md": "6675ff9b7bc8f6fddb417a663f44e82b50b9c177fc9a87e0f6e2185ed43927ca",
+    "peer_reviews/peer_2.md": "c4bbe481654dbd23afa816224398787900dddc14c9df903a7615311f73ec1835",
+    "peer_reviews/peer_3.md": "ee5ded8b574c34fbe4fcefc565659719171750ce18f2db286342cfc4076d8aae",
+    "peer_reviews/peer_4.md": "3e80ecb699b7e04f3504bd5f764ef9a5fe670419c3769c579f14b6422cb01ff3",
+    "peer_reviews/peer_5.md": "7a3cb7fac2d2bb8eee8c2ae754a889914f41bd225db976e086ea41b5c003fe97"
+  },
+  "checks": {
+    "absolute_local_links_valid": true,
+    "json_records_parse": true,
+    "advisor_reports_present": 5,
+    "peer_reviews_present": 5
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdp_20230228",
+  "url": "https://mospi.gov.in/sites/default/files/press_release/PressNoteNAD_28feb23final.pdf",
+  "role": "gdp_release_pdf",
+  "format": "pdf",
+  "release_date": "2023-02-28",
+  "reference_period": "FY2022-23Q3",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:16.106934+00:00",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/PressNoteNAD_28feb23final.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:57:28 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "565413",
+    "Connection": "keep-alive",
+    "Last-Modified": "Tue, 28 Feb 2023 12:15:38 GMT",
+    "ETag": "\"63fdf06a-8a0a5\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:57:28 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 565413,
+  "acquired": true,
+  "local_file": "raw/gdp_20230228.pdf",
+  "sha256": "f64776dc4c741108c242f2d8c4956869e25ab99948d832ee76d54e38f2ac719d"
+}

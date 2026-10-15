@@ -1,0 +1,62 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-10-07",
+    "corpus_manifest_hash": "4738726516d08e2e40b6d1835b56e3043c399981db742de8b60f3d6f5f614daf",
+    "hawk_dove_score": 0.48201438848920863,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"The reasons outlined for a pause in rate action in my previous statement of April 2023 broadly hold for this meeting as well.\" (2023-06-08)",
+      "\"Since the last monetary policy committee meeting, risks to the global economic outlook have increased, while the domestic economy continue to exhibit resilience.\" (2024-08-08)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2024-08-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-10-07",
+    "corpus_manifest_hash": "4738726516d08e2e40b6d1835b56e3043c399981db742de8b60f3d6f5f614daf",
+    "hawk_dove_score": 0.48,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"With inflation remaining elevated worldwide and a pervasive sense of guilt about the consequences of the pandemic stimulus having been underestimated9, central banks have launched into the most aggressive, front loaded and synchronous monetary policy tightening in decades.\" (2022-08-05)",
+      "\"The wedge between headline and food inflation has been widening, and stalling the alignment of the former with the target.\" (2024-08-08)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-08-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-10-07",
+    "corpus_manifest_hash": "4738726516d08e2e40b6d1835b56e3043c399981db742de8b60f3d6f5f614daf",
+    "hawk_dove_score": 0.35398230088495575,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"Since the last MPC meeting in June 2022, there has been considerable slowdown in the global economy, which is now expected to grow only by 3.2 per cent in 2022 according to the International Monetary Fund (IMF).\" (2022-08-05)",
+      "\"With changing growth- inflation dynamics, several central banks have become less restrictive by way of rate cuts and forward guidance.\" (2024-08-08)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-08-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

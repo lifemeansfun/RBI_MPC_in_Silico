@@ -1,0 +1,30 @@
+{
+  "run_id": "elite_impl_20261010_001",
+  "authorized_work": "Implement saved submission plan, beginning with source/identification/integration gates",
+  "authorization": "User: Alright implement",
+  "started_at": "2026-10-10T12:22:43.241669+00:00",
+  "branch": "project_upgrade_codex",
+  "head": "78de7f75bda03d696205b188af17b9540e02a172",
+  "previous_run": "kazinnik_run_20261010T023656Z; preserved, not reopened",
+  "phase": "engineering_and_zero_generation_audit",
+  "limits": {
+    "new_live_research_calls": 0,
+    "new_research_provider_spend_usd": 0,
+    "scientific_prompt_retries": 0,
+    "isolated_test_command_timeout_seconds": 1200
+  },
+  "observed_hardware": {
+    "cpu": "Apple M1",
+    "memory_gib": 8
+  },
+  "python": "3.14.4",
+  "new_live_calls": 0,
+  "new_provider_spend_usd": 0,
+  "open_dependencies": [
+    "domain specialist/human coding validation",
+    "authenticated remaining allowance and account quotas",
+    "exact eligible source-complete cohort",
+    "full revised reference methods",
+    "prospective outcomes"
+  ]
+}

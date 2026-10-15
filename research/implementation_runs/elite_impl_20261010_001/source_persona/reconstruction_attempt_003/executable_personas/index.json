@@ -1,0 +1,440 @@
+[
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2020-10-09/corpus_manifest.json",
+    "corpus_manifest_sha256": "2993ae30cce64daf48ff6a5c85b0112a68665e038d2763f8d1282e8a30a6bfeb",
+    "information_cutoff": "2020-10-07T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2020-10-09",
+    "missing_history_member_ids": [
+      "ashima_goyal",
+      "jayanth_varma",
+      "michael_debabrata_patra",
+      "mridul_saggar",
+      "shaktikanta_das",
+      "shashanka_bhide"
+    ],
+    "personas_file": "meetings/rbi_mpc_2020-10-09/personas.json",
+    "personas_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2020-12-04/corpus_manifest.json",
+    "corpus_manifest_sha256": "09b0c78cdbd07717eaf1aa75cabdbc1a3bcb48ff999a5d175b0804a5dae12d6f",
+    "information_cutoff": "2020-12-02T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2020-12-04",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2020-12-04/personas.json",
+    "personas_sha256": "27a75451abff50a580138cc841d616981ebc7ab23d0decdf58e73e6984899460",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-02-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "d2e1697b9e95db0a4418d2c606a6f99b662fb0a43ecf386cc64c69b13d3afc77",
+    "information_cutoff": "2021-02-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-02-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-02-05/personas.json",
+    "personas_sha256": "e27b4da4d8e94bb3f9cfd381f9548b0518d2bdf1be0fdb372ba6a2410a8c0050",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-04-07/corpus_manifest.json",
+    "corpus_manifest_sha256": "d47678f481a538d94693577571420b5fcf147bbaa8fe1f53910301fe79ab9b66",
+    "information_cutoff": "2021-04-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-04-07",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-04-07/personas.json",
+    "personas_sha256": "1585359944b1a8ef5d2ababac4c457da55bedb4fe0dbf3d84a8d6f12aae5cfa3",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-06-04/corpus_manifest.json",
+    "corpus_manifest_sha256": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "information_cutoff": "2021-06-02T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-06-04",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-06-04/personas.json",
+    "personas_sha256": "05b279c7a00401c405f9d2a7defafcf3a8c6914b24fd4a0b9e842cef26f76ef3",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-08-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "f68d6a879f83f3e1e336d03b2c6b042b200e30757dc50f92de4bc287bd3257bb",
+    "information_cutoff": "2021-08-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-08-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-08-06/personas.json",
+    "personas_sha256": "9dd0e7e7af4a8a5a409f29cdf3db64a6ef8cf8eac788b635a15c7f1582bd6702",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-10-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "9701a8422f73bdfc162f6cff1b52879a62a42008eb7c29dbd360fd734dc4c59f",
+    "information_cutoff": "2021-10-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-10-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-10-08/personas.json",
+    "personas_sha256": "4d96170286f17d474bc63502df1962e089a5af31d7316245735e277beec8931e",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2021-12-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "95dbcf5b25db4d26b9758ba88ccd7995d1d06773fa0937ca14f2a3c13db7df08",
+    "information_cutoff": "2021-12-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2021-12-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2021-12-08/personas.json",
+    "personas_sha256": "bc75fb2a86f9586519a54d1a993ce11ea34e5daddf520c4f2724f9187964cc3d",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-02-10/corpus_manifest.json",
+    "corpus_manifest_sha256": "c050ee876d436d98ebc50adb92c14cfe2529f0994e03a9ba18e71b00d1ef88bc",
+    "information_cutoff": "2022-02-08T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-02-10",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-02-10/personas.json",
+    "personas_sha256": "59785134ff570368993170cb0a72a08e046469a518ad54fba02748f02f9e5f2e",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-04-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "d6baf6da512b4337ddbe10c668a3a5272ed409aad46b888884c8c2f0aa3e8948",
+    "information_cutoff": "2022-04-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-04-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-04-08/personas.json",
+    "personas_sha256": "d5c8a4ca24c82b903a6b30873c1154b550a50f869c06c76d822a76e34e30e4ee",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-05-04/corpus_manifest.json",
+    "corpus_manifest_sha256": "a2296ebd71ea30aa0d815a9ec41e801ba5039ca749d817057e60a05e2a528b49",
+    "information_cutoff": "2022-05-02T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-05-04",
+    "missing_history_member_ids": [
+      "rajiv_ranjan"
+    ],
+    "personas_file": "meetings/rbi_mpc_2022-05-04/personas.json",
+    "personas_sha256": "73f6e460669eb7c2c8d021d375c88eb44c91523009d507f366318f53ad5a1f9f",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-06-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "5c2fe3a64f10d0a151166132b174bba887f246d2aa954151ba1e27515a3a3bc1",
+    "information_cutoff": "2022-06-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-06-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-06-08/personas.json",
+    "personas_sha256": "589ea35d237223b506ceed2459fdb07ff33ae671fa551a7e92baf5d2ed9fc4f3",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-08-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "55303a0eb03089e40481f6dfa3a7f78870198c4b1bc9c361b68452c123a3fa8a",
+    "information_cutoff": "2022-08-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-08-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-08-05/personas.json",
+    "personas_sha256": "ce49ea992a2cf389d64cfecae0403a54db46db514d4e131ca7b717a355da70a6",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-09-30/corpus_manifest.json",
+    "corpus_manifest_sha256": "b5ad8cef5e168df8b2a7c63f814a64b63fa7db89537095e97a13e104a419cbf7",
+    "information_cutoff": "2022-09-28T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-09-30",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-09-30/personas.json",
+    "personas_sha256": "886d046ec22b71f317fbad139f406e643a9260efaf80d478e723a4ffb6c506eb",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2022-12-07/corpus_manifest.json",
+    "corpus_manifest_sha256": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "information_cutoff": "2022-12-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2022-12-07",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2022-12-07/personas.json",
+    "personas_sha256": "262f738f4923e58ce0e9b29cbdc796480988ecaeae7611a376988d305c5f8a81",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-02-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "b4b5f1d3d94dc6cff4f7ec4c69cf714ba06f6a75b76f66987611ac42820bbf7d",
+    "information_cutoff": "2023-02-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-02-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-02-08/personas.json",
+    "personas_sha256": "2eecf2ae3a6533f339cbb7f217b7733887717ea750245976c27dd7a41caf6859",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-04-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "772cda0f2d7799c6b44e8a9fa3c4a64e019e8501f09398d0237448cab76da4d6",
+    "information_cutoff": "2023-04-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-04-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-04-06/personas.json",
+    "personas_sha256": "3c1b3ce4feb86605451d41487c5cfa7bf7b29f9a9b8aec609d3f8e24860ba8ab",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-06-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "information_cutoff": "2023-06-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-06-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-06-08/personas.json",
+    "personas_sha256": "f15628ea94a701ed3bba3411d4589b96ad22cd199d7d8d46bba5cd1cfbade5f6",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-08-10/corpus_manifest.json",
+    "corpus_manifest_sha256": "a4976d16a57759de8ba50198546a65622a0d5bf45e6abde726252ed9d4755093",
+    "information_cutoff": "2023-08-08T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-08-10",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-08-10/personas.json",
+    "personas_sha256": "20b0117b89d0b072eda69f4a05cd6e823c4b469c4fc31338855f21ba486f2e4d",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-10-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "a2aa09c6e445fa415fdb6b58faa0341757c58db5767a21d777e59ad2adc94f75",
+    "information_cutoff": "2023-10-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-10-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-10-06/personas.json",
+    "personas_sha256": "fbc3a91229061cfbc5ddc8fb6dbbe75f62ef859297b9408c62e2e8aae87a9fd2",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2023-12-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "363bb2176ed9b7e81a02ad7fc66877c0e13795effa9c77b957e9662da10d4133",
+    "information_cutoff": "2023-12-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2023-12-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2023-12-08/personas.json",
+    "personas_sha256": "dad75df7a919ce46fbbe264307c933cca027e8dd1ef10be92fd5d7b5292687e6",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-02-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "9e3dd37f3e6c7e3ab7d002ed80072f76ef815d1e1b2b0bce5b893c9c29c64e18",
+    "information_cutoff": "2024-02-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-02-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2024-02-08/personas.json",
+    "personas_sha256": "1440d546e8541861d6c425ee1395cff1ecbd89eb3c48a0c609d7e95d8b57a363",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-04-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "cb2e5d902cc2ab95ef1afc900a22d57b3cf377cc664089735d7ae77f81ac7eee",
+    "information_cutoff": "2024-04-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-04-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2024-04-05/personas.json",
+    "personas_sha256": "b9f4acb2a9171413662707538935471cef0cced055e73d57320c595725f894ba",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-06-07/corpus_manifest.json",
+    "corpus_manifest_sha256": "2d8ce21244d15f8e0c94ea991a0771d85fc26dc9c93e29679b4bd0b59102f210",
+    "information_cutoff": "2024-06-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-06-07",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2024-06-07/personas.json",
+    "personas_sha256": "a25614c1375629bc239b265457b4fe265c57f7b56778d11850cb50eadc5e2f7a",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-08-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "18e8b5c2c12aeeb0bf2b2bbea04c6d92e0e4fbd09c2a0550e2429b32e280115c",
+    "information_cutoff": "2024-08-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-08-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2024-08-08/personas.json",
+    "personas_sha256": "a85dbd8654d9c4ab520e0e712268f359412093d75e74c71df8ce23d003a66e48",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-10-09/corpus_manifest.json",
+    "corpus_manifest_sha256": "4738726516d08e2e40b6d1835b56e3043c399981db742de8b60f3d6f5f614daf",
+    "information_cutoff": "2024-10-07T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-10-09",
+    "missing_history_member_ids": [
+      "nagesh_kumar",
+      "saugata_bhattacharya",
+      "ram_singh"
+    ],
+    "personas_file": "meetings/rbi_mpc_2024-10-09/personas.json",
+    "personas_sha256": "4e04c96dd03df6709631c3edc4c98a68a600707640b8528dc72528cb4071aa99",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2024-12-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "0abb43375fc84509a0ca79ea348e88deb0e4266f68148145263b481a272ee195",
+    "information_cutoff": "2024-12-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2024-12-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2024-12-06/personas.json",
+    "personas_sha256": "6d567d4a545100dcb676873590068186a03e82cd3be461b70c4d1011f593bdba",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-02-07/corpus_manifest.json",
+    "corpus_manifest_sha256": "a812a9aa934659fa55880d1778bc3093b6d9794d40b2e485b87b579f7b002760",
+    "information_cutoff": "2025-02-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-02-07",
+    "missing_history_member_ids": [
+      "m_rajeshwar_rao",
+      "sanjay_malhotra"
+    ],
+    "personas_file": "meetings/rbi_mpc_2025-02-07/personas.json",
+    "personas_sha256": "5dfd6ca3628f0b6c7142a9aace47d168e093bb1cfa0925ee6c60306a0fe8923f",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-04-09/corpus_manifest.json",
+    "corpus_manifest_sha256": "38b7f752b7cc6a372781f10605eb97841859d377d2ee956367fd59b4afddb4cb",
+    "information_cutoff": "2025-04-07T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-04-09",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2025-04-09/personas.json",
+    "personas_sha256": "de41b00f1ed8deaa6694b15b5ec09be108df83e0177b87effafaedfac49b31b9",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-06-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "2fa77d2cfc694ec5a3ab26b79d9055fbfbc783fdd5ff59b54a9edf04335ddb87",
+    "information_cutoff": "2025-06-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-06-06",
+    "missing_history_member_ids": [
+      "poonam_gupta"
+    ],
+    "personas_file": "meetings/rbi_mpc_2025-06-06/personas.json",
+    "personas_sha256": "190dada4b839938d372b4443ebe5155ca9e99ea30d59b9f0c9eeb25df09437ce",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-08-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "8ea7d822b2197a8e954de09b4d45829f752bfee488df865f67ed88eab4393ce0",
+    "information_cutoff": "2025-08-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-08-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2025-08-06/personas.json",
+    "personas_sha256": "2a1b74875fb6c8a4364653115f693a497dcae07127f60f53cb8546e16804f976",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": false,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-10-01/corpus_manifest.json",
+    "corpus_manifest_sha256": "b7091bd475f5b9be6eb4290acede86239eb48cd4672adabbfe9d51dfc884f45a",
+    "information_cutoff": "2025-09-29T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-10-01",
+    "missing_history_member_ids": [
+      "indranil_bhattacharyya"
+    ],
+    "personas_file": "meetings/rbi_mpc_2025-10-01/personas.json",
+    "personas_sha256": "fda0a8899ef549db39c18992d1205d8185d31e5e02c60f85d8c9b03a01aa570a",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2025-12-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "995bb53b856d3cbf612bdc4550793c4d7fe35b30b4bac949a59088c46635570c",
+    "information_cutoff": "2025-12-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-12-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2025-12-05/personas.json",
+    "personas_sha256": "44d30ed5f4606e1cef041fa158ebe5bf821a3cff7237bc659332d0309b87e9a3",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2026-02-06/corpus_manifest.json",
+    "corpus_manifest_sha256": "b6a28c03f45097d5536f1d71fca471648a7aa27b950f7cb127f796e918421100",
+    "information_cutoff": "2026-02-04T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-02-06",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2026-02-06/personas.json",
+    "personas_sha256": "e6e535c00f7accd4db9f72243ec0e2335ce8613d064954c407545ce957ceb352",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2026-04-08/corpus_manifest.json",
+    "corpus_manifest_sha256": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "information_cutoff": "2026-04-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-04-08",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2026-04-08/personas.json",
+    "personas_sha256": "305b10ccbc1b68e8095a0291ae16e924a9ba7698bb895b4bbc1367269c38f98b",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2026-06-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "025fcded7d38cf4acf380e7c1b8b6c8cd47dd67cb0c220495a6fe2245a7f0868",
+    "information_cutoff": "2026-06-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-06-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2026-06-05/personas.json",
+    "personas_sha256": "35cf2e3c2fc6206af49f5e1a2d0333fad49fc4c13d67fe29246d76000951a6eb",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2026-08-05/corpus_manifest.json",
+    "corpus_manifest_sha256": "0bcf21a23b17e289ed539c3a4e6245f2af5559d07029e600155409010a8ea64c",
+    "information_cutoff": "2026-08-03T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-08-05",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2026-08-05/personas.json",
+    "personas_sha256": "fe1122328f32712adf1ef5b5fda6bd829d620870351023dd690031bf828da704",
+    "predictive_readiness": false
+  },
+  {
+    "complete_executable_roster": true,
+    "corpus_manifest_file": "meetings/rbi_mpc_2026-10-07/corpus_manifest.json",
+    "corpus_manifest_sha256": "09385ce867bc9a627723fc30d65986110160bdb3f8f254dd41f323198dbc9c9f",
+    "information_cutoff": "2026-10-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-10-07",
+    "missing_history_member_ids": [],
+    "personas_file": "meetings/rbi_mpc_2026-10-07/personas.json",
+    "personas_sha256": "08f8d59a6e92a4015e8230a77194b21950a919e6c3c42c84bceff680b7c7a2fe",
+    "predictive_readiness": false
+  }
+]

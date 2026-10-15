@@ -1,0 +1,28 @@
+{
+  "id": "annual_report_2021_2022",
+  "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2021-22.pdf",
+  "filename": "annual_report_2021_2022.pdf",
+  "role": "Primary publication-month evidence for edition NAS2021, not its current table version",
+  "discovery": "Official primary web search inspected report publication table",
+  "retrieved_at_utc": "2026-10-09T16:28:18.015254+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2021-22.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:31:34 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "3122331",
+    "Connection": "close",
+    "Last-Modified": "Thu, 21 Aug 2025 13:07:57 GMT",
+    "ETag": "\"68a71a2d-2fa49b\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:31:34 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_009/raw/annual_report_2021_2022.pdf",
+  "bytes": 3122331,
+  "sha256": "9aa1cadbf42e5514eb61e8706c1f2438c9b97493913508d7b913004ec74fedcd",
+  "primary_final_host": true,
+  "acquired": true
+}

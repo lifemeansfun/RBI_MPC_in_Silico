@@ -1,0 +1,594 @@
+       NOTES ON METHODOLOGY AND REVISIONS IN THE ESTIMATES
+
+        The new series on National Accounts Statistics (NAS) was introduced through a Press
+Release on January 30, 2015 with base year 2011-12 in place of previous series with base year
+2004-05. Later, a brochure titled “Changes in Methodology and Data Sources in the new series
+of National Accounts (base year 2011-12)” was released on 26th June, 2015 incorporating
+details of both the database and the methodology employed in estimation of various
+aggregates. The estimates presented in this issue of NAS are based on the methodology given
+in the above-mentioned brochure.
+
+      The present issue on NAS contains statements on macroeconomic aggregates including
+sectoral analysis, accounts for non-financial corporations, financial corporations, General
+Government, Households and rest of the world. Besides these, it also includes aggregates by
+economic activities and disaggregated statements.
+
+
+           REVISION IN ESTIMATES DUE TO FRESH/ REVISED DATA
+
+         The First Revised Estimates (FRE) and the estimates of macro-economic aggregates
+for the previous years and their disaggregated components published in NAS 2020 have
+undergone revision due to fresh/ revised data becoming available. Sources of data utilized in
+NAS 2021 for preparing estimates for the years 2017-18, 2018-19 and 2019-20 which have
+contributed the most in revision of the estimates, are given below:
+
+A:     Output and Value Added
+
+1 Crops
+
+     1.1   Production estimates - For 2018-19, final estimates of major crops, namely cereals,
+           pulses, oilseeds, sugars and fibres released by the Directorate of Economics and
+           Statistics, Ministry of Agriculture & Farmers Welfare for all States/UTs and final
+           estimates for horticulture crops, namely fruits and vegetables, condiments and
+           spices, released by Horticulture Statistics Division, Ministry of Agriculture and
+           Farmers Welfare for most of the States/UTs have been used. For 2019-20, fourth
+           advance estimates of major Crops released by the Directorate of Economics and
+           Statistics, Ministry of Agriculture & Farmers Welfare and third advance estimates
+           for horticulture crops released by Horticulture Statistics Division, Ministry of
+           Agriculture and Farmers’ Welfare have been used. For 2017-18, final estimates of
+           State specific crops like banana, potato, onion etc., received from DESs of States /
+           UTs, have been used.
+     1.2   Land Use Statistics – For the years 2017-18 and 2018-19, the latest area under
+           crops released by the Ministry of Agriculture & Farmers’ Welfare for some crops
+           and that received from Directorate of Economics and Statistics (DESs) of States/
+           UTs for remaining crops have been used.
+     1.3   Prices data – For 2017-18 and 2018-19, updated prices of agricultural commodities
+           received from DESs of States / UTs have been applied. For 2019-20, where price
+           data were not available, WPI has been used.
+2 Livestock
+
+    2.1   For 2019-20, final estimates of production of Milk, Egg, Meat and Wool released
+          by Department of Animal Husbandry, Dairying & Fisheries have been used.
+    2.2   Revised data on prices of Livestock products received from DESs of States / UTs
+          have been used for all the years. In a few cases, where prices for 2019-20 were not
+          received, corresponding WPI has been used.
+    2.3   For all the years, the latest updated hatching rates received from DESs of States /
+          UTs have been used to estimate production of poultry meat.
+    2.4   Latest Indian Livestock Census (ILC) data have been used.
+
+3 Forestry & Logging
+
+    3.1   Latest data on production and price of Industrial Wood & Non-Timber Forest
+          Products and data on prices of Fuel Wood received from DESs of States / UTs
+          have been used for all the years. In a few cases, where prices for 2019-20 were
+          not received, corresponding WPI has been used.
+
+4 Fisheries
+
+    4.1   Latest data on production and price of Marine Fish, Inland Fish & Prawns received
+          from State Fisheries Departments; Department of Fisheries and DESs of States /
+          UTs have been used for all the years. In a few cases, where prices for 2019-20
+          were not received, corresponding WPIs have been used. Latest data on curing
+          activities, received from the State DESs have also been used.
+
+5 Mining and Quarrying
+
+    5.1   Latest available updated Mineral Production from “Monthly Statistics of Mineral
+          Production”, published by Indian Bureau of Mines (IBM).
+    5.2   Annual Reports of the Mining Companies in Public Sector Enterprises.
+    5.3   Latest data from the Ministry of Corporate Affairs (MCA).
+    5.4   Latest deductible rate data of Minerals received from IBM.
+    5.5   Production of minor minerals other than sand from State Geological Departments.
+    5.6   Data on salt production and prices from the office of the Salt Commissioner.
+    5.7   The value of material inputs used in the construction sector for the estimation of
+          sand.
+
+6 Manufacturing
+
+    6.1   Latest data on Annual Survey of Industries from Ministry of Statistics & P.I.
+    6.2   Annual Reports of the Manufacturing Companies in Public Sector Enterprises.
+    6.3   Latest data from the Ministry of Corporate Affairs.
+    6.4   Budget documents of the Departmental Enterprises, including those of Railway
+          Workshops.
+7 Electricity, Gas, Water Supply and Remediation
+
+    7.1   Data from latest annual reports of public sector companies.
+    7.2   Latest data on Private Corporations received from MCA.
+    7.3   Budget Documents of the Departmental Enterprises.
+    7.4   Number of Bio-gas plants from the Ministry of New & Renewable Energy.
+    7.5   Number as well as production of Bio-gas plants installed by Khadi and Village
+          Industries Commission.
+    7.6   Latest data on Annual Survey of Industries from Ministry of Statistics & P.I.
+
+8 Construction
+
+    8.1   Sources listed at Serial No. 1 and 6.
+    8.2   Latest data from budget documents and annual reports of public sector
+          undertakings.
+    8.3   Data on production of cement (from information on 8 core industries) from the
+          office of Economic Adviser.
+    8.4   Latest data on Private Corporations received from MCA.
+
+9 Trade, Repair, Hotels and Restaurants
+
+    9.1   Latest data from budget documents and annual reports of public sector
+          undertakings.
+    9.2   Latest data on Private Corporations received from MCA.
+    9.3   Sales figure of motor vehicles from Society of Indian Automobile Manufacturers
+          (SIAM).
+    9.4   WPI from the Office of Economic Adviser, Ministry of Commerce & Industry.
+    9.5   TTM Index.
+
+10 Transport by other means
+
+    10.1 Latest data from budget documents and annual reports of public sector
+         undertakings.
+    10.2 Latest data on Private Corporations received from MCA.
+    10.3 Sales trends figure of motor vehicles from SIAM.
+    10.4 WPI from the Office of Economic Adviser, Ministry of Commerce & Industry.
+    10.5 CPI (Transport & Communication) from Ministry of Statistics & P.I.
+    10.6 Cargo Traffic Handled at Major and Minor Ports from the Ministry of Shipping.
+    10.7 Rate of growth of Airlines Passenger Traffic and Cargo Handled from Directorate
+         General of Civil Aviation (DGCA).
+11 Railways, Storage, Communication, Public administration and Defence
+
+    11.1 Budget documents for the year 2020-21 giving actual figures for the year 2018-19
+         and Revised Estimates for 2019-20.
+    11.2 Annual Accounts of public and private corporations.
+
+12 Financial services
+
+    12.1The NAS 2021 estimates for certain sub-sectors, including cooperative banks, Post
+        Office Saving Banks (POSB), Postal Life Insurance (PLI), Non-banking Financial
+        Institutions (NBFIs), Central and State Finance Corporations, financial auxiliaries
+        have been updated based on analysis of latest available annual reports of these
+        enterprises and latest available data on credits, deposits published by the RBI in
+        December 2020. Further, the estimate of the financial sector, at constant prices, uses
+        the ratio of current and constant price estimates (unadjusted for FISIM) in the non-
+        financial sectors as one of the deflators. The changes in these ratios for the years
+        2017-18 and 2018-19 have resulted in modifications in the constant price estimates
+        for the financial services and sub-sectors within it.
+
+13 Real Estate, Ownership of Dwellings, Professional Services
+
+    13.1 Latest data on budget documents and annual reports of public sector undertakings.
+    13.2 Latest data from the Ministry of Corporate Affairs.
+    13.3 CPI (Miscellaneous services)/CPI (General)/CPI(Housing) from Ministry of
+         Statistics & P.I.
+
+    13.4 WPI from Office of Economic Advisor.
+
+14 Other Services
+
+    14.1 Latest budget documents and annual reports of public sector undertakings.
+    14.2 Latest data from the Ministry of Corporate Affairs.
+    14.3 CPI (Education), CPI (Health), CPI (Recreation) and CPI (Miscellaneous services)
+         from Ministry of Statistics & P.I.
+
+
+        B: Private Final Consumption Expenditure, Saving and Capital Formation
+
+
+15 Private Final Consumption Expenditure
+    15.1 Estimates have been revised from 2017-18 onwards due to availability of fresh/
+         revised data of output, change in stocks, export & import etc. The sources are as
+         listed at sl. no. 1 to 14, 17.7 and 17.8.
+16 Saving
+    16.1 Revised data on net deposits, investments in shares and debentures, net claims,
+         insurance funds etc. for household sector received from RBI.
+    16.2 For revision in estimates of saving in physical assets, please see Serial No. 17.
+    16.3 Revised data on saving of private corporate sector.
+    15.2 Saving of Public Sector revised from 2017-18 to 2019-20 due to availability of
+         additional/revised/fresh data in respect of Departmental Enterprises and
+         Administrative Departments from budget documents, annual accounts of RBI and
+         subsequent revision of Consumption of Fixed Capital estimates.
+17 Capital Formation
+    17.1 Sources mentioned at Serial Nos. 6 & 8, annual reports of NDEs and budget
+         documents.
+    17.2 Latest data on Annual Survey of Industries from Ministry of Statistics & P.I.
+    17.3 Latest data on Private Corporations received from MCA.
+    17.4 Capital Formation of Public Sector revised data.
+    17.5 WPI from the Office of Economic Adviser, Ministry of Commerce & Industry.
+    17.6 Index of Industrial Production (IIP) - Ministry of Statistics & P.I.
+    17.7 Import and Excise Duties – Statistics of Customs & Revenue Collection of the
+         Indian Union from Ministry of Finance.
+    15.3 Export-Import Data Bank, DGCIS, Ministry of Commerce & Industry.
+18 Consumption of Fixed Capital
+    15.4 Estimates of consumption of fixed capital (CFC) have been revised due to revision
+         of estimates of gross fixed capital formation as mentioned at serial no. 17.
+
+
+
+
+                                       ********
+ Reasons of revision in growth rate in GVA- 2019-20 (at 2011-12 prices) between the Provisional Estimates
+     (PE) released in May-2020 and the estimates released in National Accounts Statistics (NAS)-2021
+
+                                                        REASON FOR VARIATION in NAS 2021
+S.No.         Item           PE      NAS-21
+ 1      Agriculture,         4.0        4.3     Fourth advance estimates of major Crops released by the
+        forestry   and                          Directorate of Economics and Statistics, Ministry of
+        fishing                                 Agriculture & Farmers Welfare and third advance estimates
+                                                for horticulture crops released by Horticulture Statistics
+                                                Division, Ministry of Agriculture and Farmers’ Welfare have
+                                                been used. Final Estimates of major livestock products as per
+                                                Department of Animal Husbandry and Dairying (DAHD) and
+                                                latest Indian Livestock Census (ILC) data have been used.
+                                                Projected production Industrial Wood (IW) / Trees outside
+                                                Forest (TOF) / Non-Timber Forest Product (NTFP) as per
+                                                latest data used. Final data on production of fisheries as
+                                                supplied by Department of Fisheries (DoF) used.
+
+ 2      Mining    and        3.1       -2.5
+                                                FRE is based on actual data received from sources whereas PE
+        quarrying
+                                                was indicator based.
+
+
+
+
+ 3      Manufacturing        0.03      -2.4     FRE is based on actual data received from sources whereas PE
+                                                was indicator based.
+
+
+
+ 4      Electricity, gas,    4.1        2.1
+        water supply &                          FRE is based on actual data received from sources whereas PE
+        other      utility                      was indicator based.
+        services
+
+ 5      Construction         1.3        1.0     FRE is based on actual data received from sources whereas
+                                                PE was indicator based.
+
+ 6      Trade, repair,       3.6        6.4     Data from source agencies along with detailed analysis of DE,
+        hotels,                                 NDE and Private Corporate sectors have been used for
+        restaurants,                            compilation of estimates for NAS-21 whereas Provisional
+        transport,                              Estimates were indicator based.
+        storage,
+        communicatio
+        n & services
+        related to
+        broadcasting
+
+ 7      Financial            4.6        7.3     (1)     For Financial Services, FRE based on annual reports
+        services, Real                          and data released by RBI, NABARD and other financial
+        estate,                                 regulators, whereas the PE has based on benchmark indicator
+        ownership of                            method.
+        dwelling &                              (2) For real estate, ownership of dwelling & professional
+        professional                            services, data from source agencies along with detailed
+        services                                analysis of NDE and Private Corporate sectors have been used
+                                                for compilation of estimates for NAS-21 whereas provisional
+                                                estimates were indicator based.
+    8     Public              10.0         8.3      (1) For public administration and defence, in NAS - 2021,
+          administration,                           results of detailed analysis of Budget documents (Centre and
+          defence and                               State Governments) have been used for compilation of
+          Other services                            estimates whereas PE were based on indicators derived from
+                                                    total revenue expenditure of the Centre and States.
+                                                    (2) For other services, data from source agencies along with
+                                                    detailed analysis of data for General Government (GG), NDE
+                                                    and Private Corporate sectors have been used for compilation
+                                                    of estimates for NAS-21 whereas provisional estimates were
+                                                    indicator based.
+    9     TOTAL GVA            3.9         4.1
+          at basic prices
+
+
+      Reasons of revision in growth rate in GVA 2018-19 (at 2011-12 prices) between the estimates released in
+         National Accounts Statistics-2020 and the estimates released in National Accounts Statistics-2021
+
+S.No.          Item         NAS 20       NAS 21             REASON FOR VARIATION in NAS 2021
+          Agriculture,
+1         forestry and        2.4          2.6
+          fishing
+                                                   Final estimates of production of major Crops, namely cereals,
+                                                   pulses, oilseeds, sugars and fibres released by the Directorate of
+                                                   Economics and Statistics, Ministry of Agriculture & Farmers
+                                                   Welfare for all States/UTs and final production estimates for
+                                                   horticulture crops, fruits and vegetables, condiments and spices,
+1.1       Crops               -1.0        -1.6     released by Horticulture Statistics Division, Ministry of
+                                                   Agriculture and Farmers Welfare for most of the States/UTs
+                                                   have been used. Latest Cost of Cultivation Study (CCS) rates of
+                                                   by-products have been used. Latest consumption of electricity in
+                                                   the Agriculture sector has been updated as per the latest data
+                                                   received from Central Electricity Authority.
+                                                   Revision in production data as received for States/UTs have
+1.2       Livestock           8.1          8.5     been used. Inclusion of the ILC 2019 report resulted in revision
+                                                   of input and output estimates.
+                                                   Updated production estimate of Industrial wood and Minor
+          Forestry and                             Forest Product as per DESs of States/UTs have been used.
+1.3                           0.4          7.9
+          logging                                  Latest Production data for TOF also have been used as per India
+                                                   State of Forest Report (ISFR) 2019.
+          Fishing and                              Latest data on production and curing activities, received from
+1.4                           12.0         9.0
+          aquaculture                              the State DESs have also been used.
+
+          Mining and                               Revision in Private Corporate, NDE & Minor Minerals
+2                             -5.8         0.3
+          quarrying                                estimates.
+
+
+
+                                                   Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3         Manufacturing       5.7          5.3
+                                                   and revised estimates of NDE and DE.
+
+
+
+          Food
+          products,                                Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3.1                           8.7         18.9
+          beverages and                            and revised estimates of NDE and DE.
+          tobacco
+      Textiles,
+      apparel and                    Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3.2                     4.5   5.2
+      leather                        and revised estimates of NDE and DE.
+      products
+
+
+
+      Metal                          Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3.3                     2.1   1.4
+      products                       and revised estimates of NDE and DE.
+
+
+
+      Machinery                      Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3.4                     7.2   12.3
+      and equipment                  and revised estimates of NDE and DE.
+
+
+
+      Other
+                                     Use of latest available ASI 2018-19 data, MCA21 2018-19 data
+3.5   manufactured      5.8   -1.0
+                                     and revised estimates of NDE and DE.
+      goods
+
+
+
+      Electricity,
+      gas, water
+                                     Availability of revised NDE estimates and reclassification of
+4     supply &          8.2   8.0
+                                     non-financial private corporate companies.
+      other utility
+      services
+
+                                     Revision in value of output of construction sector due to use of
+                                     updated ASI results in compilation process, use of updated data
+5     Construction      6.1   6.3
+                                     of private corporations from M/o Corporate Affairs, budget
+                                     documents and Annual Accounts of NDEs.
+      Trade, repair,
+6     hotels and        8.5   8.8
+      restaurants
+
+      Trade &
+6.1                     8.5   8.8    Revision in DE, NDE, Private Corporate data.
+      repair services
+
+      Hotels &
+6.2                     7.7   9.3    Revision in NDE and Private Corporate data.
+      restaurants
+
+      Transport,
+      storage,
+      communicatio
+7                       6.2   3.8
+      n & services
+      related to
+      broadcasting
+                                     Revision is due to a) use of 2018-19 actual data from the budget
+                                     documents of the Ministry of Railways in place of revised
+                                     estimates of 2018-19, which were used in NAS 2020 for
+7.1   Railways          5.0   3.9
+                                     Departmental Enterprises (DEs)
+                                     b) updated information from Non-Departmental enterprises
+                                     (NDEs) and Private. Corporate.
+      Road
+7.2                    6.8    5.3    Revision in DE, NDE, Private. Corporate data.
+      transport
+
+
+      Water
+7.3                    5.8    5.9    Revision in NDE & Private corporate estimates.
+      transport
+
+
+7.4   Air transport    12.3   12.2   Revision in Private corporate estimates.
+
+
+      Services
+7.5   incidental to    7.3    5.5    Combined effect of Road, Water and Air Transport.
+      transport
+
+
+7.6   Storage          3.5    5.6    Revision in NDE and Private Corporate data.
+
+
+      Communicati
+      on & services
+7.7                    5.0    -0.6   Revision in DE, NDE and Private Corporate data.
+      related to
+      broadcasting
+
+                                     Revision is due to use of latest data of Cooperative Banks,
+                                     POSB, NBFIs, financial auxiliaries, PLI, moneylenders received
+      Financial
+8                      4.7    4.7    from respective financial corporations/ credit and deposit data
+      services
+                                     from RBI and use of updated price deflator based on non-
+                                     financial sector.
+
+      Real estate,
+      ownership of
+9     dwellings &      7.6    8.1    Revision in NDE and Private Corporate data.
+      professional
+      services
+                                     Revision is on account of a) use of 2018-19 actual data from the
+      Public                         budget documents of the Central and State Governments in
+10    administration   9.2    6.8    place of revised estimates of 2018-19 used for NAS-2020.
+      and defence                    b) Use of revised and additional data on Local bodies and
+                                     Autonomous Institutions.
+
+11    Other services   9.5    7.9    Revision in GG, NDE and Private Corporate data.
+
+      TOTAL
+12    GVA at basic     6.0    5.9
+      prices
+    Reasons of revision in growth rate in GVA-2017-18 (at 2011-12 prices) between the estimates released in
+       National Accounts Statistics-2020 and the estimates released in National Accounts Statistics-2021
+
+S.No.             Item            NAS 20     NAS 21         REASON FOR VARIATION in NAS 2021
+          Agriculture, forestry
+1                                   5.9        6.6
+          and fishing
+                                                       Area and production of State/UT specific crops have
+                                                       been updated as per latest data received from DESs of
+                                                       some States / UTs. Latest CCS rates of by-product have
+1.1       Crops                     4.4        5.4     been used. Input data have been updated as per latest
+                                                       reports available from different data sources.
+
+                                                       Inclusion of the ILC 2019 report resulted in revision of
+1.2       Livestock                 7.4        7.9
+                                                       estimates.
+                                                       Latest data on production of Industrial Wood and Non-
+                                                       Timber Forest Products received from DESs of States
+1.3       Forestry and logging      6.2        5.4
+                                                       /UTs have been used. Latest Production data for TOF
+                                                       also have been used.
+                                                       Latest data on production of Marine Fish, Inland Fish &
+          Fishing and                                  Prawns received from State Fisheries Departments,
+1.4                                14.7       15.2
+          aquaculture                                  Department of Fisheries and DESs of States/UTs have
+                                                       been used.
+
+                                                       Reclassification of non-financial private corporate
+2         Mining and quarrying      4.9        -5.6    companies, use of revised sand estimates and other
+                                                       minor minerals and use of revised NDE estimates.
+
+
+
+                                                       Use of final result of ASI 2017-18 and revised estimates
+3         Manufacturing             6.6        7.5
+                                                       of NDE.
+
+
+
+          Food products,
+                                                       Use of final result of ASI 2017-18 and revised estimates
+3.1       beverages and              4.6       5.6
+                                                       of NDE.
+          tobacco
+
+
+
+                                                       Use of final result of ASI 2017-18 and revised estimates
+3.2       Metal products             5.1       7.6
+                                                       of NDE.
+
+
+
+          Machinery and                                Use of final result of ASI 2017-18 and revised estimates
+3.3                                  10.7     12.0
+          equipment                                    of NDE.
+
+
+
+          Other manufactured                           Use of final result of ASI 2017-18 and revised estimates
+3.4                                  11.8     12.4
+          goods                                        of NDE.
+
+
+
+          Other manufactured                           Use of final result of ASI 2017-18 and revised estimates
+3.5                                  3.2       3.6
+          goods                                        of NDE.
+      Electricity, gas, water                  Availability of revised NDE estimates and
+4     supply & other utility    11.2   10.6    reclassification of non-financial private corporate
+      services                                 companies.
+
+                                               Due to use of final ASI results in the compilation
+5     Construction              5.0     5.2
+                                               process.
+
+      Trade, repair, hotels
+6                               10.0   12.9
+      and restaurants
+
+
+      Trade & repair                           Upward revision in Private Corporate sector estimates
+6.1                             10.4   13.2
+      services                                 due to reclassification.
+
+
+
+                                               Upward revision in Private Corporate sector estimates
+6.2   Hotels & restaurants      5.7     9.2
+                                               due to reclassification.
+
+
+      Transport, storage,
+      communication &
+7                               3.3     5.7
+      services related to
+      broadcasting
+7.1   Railways                  7.0     7.0    No Change
+
+7.2   Road transport            6.0     9.4    Revision in NDE & Private Corporate sector estimates.
+
+
+
+                                               Revision in Private Corporate sector estimates due to
+7.3   Water transport           6.5    39.0
+                                               reclassification.
+
+
+
+                                               Revision in Private Corporate sector estimates due to
+7.4   Air transport             17.5   16.7
+                                               reclassification.
+
+
+      Services incidental to
+7.5                             7.3    -2.9    Combined effect of Road, Water and Air Transport.
+      transport
+
+
+                                               Revision in Private Corporate sector estimates due to
+7.6   Storage                   9.2    112.7
+                                               reclassification.
+
+
+      Communication &
+                                               Revision in Private Corporate sector estimates due to
+7.7   services related to       -5.4   -2.7
+                                               reclassification.
+      broadcasting
+
+
+                                               Revision is mainly due to updated price deflator based
+8     Financial services        4.8     4.7    on non-financial sector and use of updated data of
+                                               NBFIs/ financial auxiliaries/Moneylenders.
+     Real estate,
+     ownership of                          Revision in Private corporate sector estimates due to
+9                            4.6    0.6
+     dwellings &                           reclassification.
+     professional services
+     Public administration                 Revision is on account of use of updated analyzed State
+10                           10.0   10.1
+     and defence                           Budget Data and revised data on Local bodies.
+
+                                           Revision in Private corporate sector estimates due to
+11   Other services          9.8    6.9
+                                           reclassification.
+
+     TOTAL GVA at
+12                           6.6    6.2
+     basic prices
+
+
+                                      *********
+

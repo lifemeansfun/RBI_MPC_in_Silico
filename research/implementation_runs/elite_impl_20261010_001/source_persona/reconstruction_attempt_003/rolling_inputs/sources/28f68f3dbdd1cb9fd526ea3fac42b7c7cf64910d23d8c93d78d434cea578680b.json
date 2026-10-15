@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2021-06-04",
+  "meeting_start_date": "2021-06-02",
+  "publication_date": "2021-06-18",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+  "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+  "statement_sha256": {
+    "ashima_goyal": "bd5104704b2fcbecbe61759eb069e6b436cd1bfc5690fe2e2be82bbf10b714af",
+    "jayanth_varma": "2ea2bb3bf99035b98c5db00df9c0734806f30a9c3890ca89b95b9f7c51604bee",
+    "michael_patra": "eebaf656e582ef3f30a5c10303a411ad5f9730d300ebccbe418309283ca86096",
+    "mridul_saggar": "7d3dd3c2b23d9792af36859cc98da6734b35435f166bab9f0434c6239222cc79",
+    "shaktikanta_das": "b9462ca26f1be7a8efef247d5660ca899c6cf52cd598aaf392f206c114d60064",
+    "shashanka_bhide": "dde250ad90b98ac93a992f14667df8c49a31af42e8a8b60c791f5fa25fab13ab"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, June 2 to 4, 2021"
+}

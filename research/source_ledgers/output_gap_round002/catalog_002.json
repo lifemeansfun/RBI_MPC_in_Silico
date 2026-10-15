@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nas2020_s8_18_2_spaced",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S%208.18.2.pdf",
+    "filename": "nas2020_s8_18_2_spaced.pdf",
+    "role": "long_constant_GDP_candidate",
+    "discovery": "Candidate derived from official NAS2020 directory in primary indexed methodology PDF and NAS2019 statement naming; availability not inferred"
+  },
+  {
+    "id": "nas2020_s8_18_2_compact",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S8.18.2.pdf",
+    "filename": "nas2020_s8_18_2_compact.pdf",
+    "role": "long_constant_GDP_candidate",
+    "discovery": "Explicit alternative filename candidate; content/availability not assumed"
+  },
+  {
+    "id": "nas2020_methodology",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/Notes%20on%20Methodology%20and%20Reasons%20for%20Revision%20in%20Estimates.pdf",
+    "filename": "nas2020_methodology.pdf",
+    "role": "official_vintage_methodology",
+    "discovery": "Primary-domain exact indexed URL"
+  },
+  {
+    "id": "official_gdp_revision_notification",
+    "url": "https://www.mospi.gov.in/sites/default/files/main_menu/nsdp_sdds/Notification_ReleaseCalendarChange.pdf",
+    "filename": "gdp_revision_notification.pdf",
+    "role": "annual_and_quarterly_revision_timing",
+    "discovery": "Exact primary FAQ hyperlink"
+  }
+]

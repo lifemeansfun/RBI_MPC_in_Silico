@@ -1,0 +1,464 @@
+# Source-linked original historical labels
+
+These inputs describe the 25 already exposed RBI MPC decisions from 9 October 2020 to 8 August 2024. They are retrospective scientific data. Reconstruction or repeated inspection does not make this panel an untouched evaluation.
+
+`label_annotations.json` retains the scientific interpretation fields, committee-resolution excerpts, publication/decision/start dates, source paths and raw-source SHA-256 identities. Its provenance records the SHA-256 of the archival scientific truth from which the interpretation fields were exported. Every retained excerpt was checked against the corresponding primary-source bytes. This is a portable annotation export, not independent second coding. No numerical rate or stance outcome is imported from the legacy parquet.
+
+`label_ledger.json` adds the published repo level before/after each meeting, the rate change derived from consecutive levels, the stance category derived from the committee's published clause, and the six literal rate-ballot cells. Source dates, selected clauses, rate ballots and attributed signed-statement votes are checked during every reconstruction. The complete April/May 2022 clause remains available: the committee remained accommodative while focusing on withdrawal of accommodation; the leading published category is `accommodative`.
+
+`observed_targets.json` exposes chronological `{meeting_date, member_targets:{member_id:bool|null}}` records separately for literal rate No, disagreement with the committee's exact rate quantum, and formal stance dissent. For this original panel, the two rate channels both contain 150 observed targets, including ten positive events. They are separate definitions even though their targets coincide here. A No vote against a quantified resolution establishes disagreement; it does not identify every alternative magnitude. Narrative preferences that ultimately concur with the binding resolution are not relabeled as formal dissent.
+
+Formal stance contains 144 observed targets, fifteen positives and six missing targets. Nineteen meetings have complete stance labels. Jayanth Varma's reservations in August 2022 and April, June, August, October and December 2023 remain `null`. The four reservations in the 2021–February 2022 committee summaries are resolved by an attributed, explicit signed-statement vote against the stance. The October 2020 disagreement over the duration/formulation of forward guidance stays separate from the accommodative stance category. Missingness never means a known negative, affirmative ballot or invented abstention.
+
+`input_manifest.json` freezes the SHA-256 of 122 required scientific files: these annotations/labels/targets, the observation ledgers, 25 original minutes, the prior policy resolution/record, and the retained CPI, GDP/GVA and FOMC raw sources used by those ledgers. A separately retained manifest digest can anchor a copied source root:
+
+```
+0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757
+```
+
+From the project root, one offline command builds the scientific panel and labels into an explicit new destination:
+
+```sh
+.venv/bin/python research/verification/rebuild_scientific_inputs.py \
+  --source-root . \
+  --output-root /absolute/path/to/new-reconstruction \
+  --expected-input-manifest-sha256 0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757
+```
+
+It writes `panel/{snapshots,truth,manifest}.json`, `labels/{label_ledger,observed_targets}.json` and `reconstruction_receipt.json`. The receipt records input hashes, code identity, runtime/dependency details and zero network/model calls. An optional `--reference-panel data/processed/vintage_v3` records byte and semantic comparisons; the reference is not used to construct scientific inputs. The rebuilt snapshots and archival truth are byte identical to `vintage_v3`; the manifest differs in its version and added label-ledger/input-manifest/observability metadata. Archival truth preserves known-positive lists for old-study replay. New observability-aware scoring must use the explicit member targets rather than interpreting a missing formal vote as a negative.
+
+The standalone export command consumes only these annotations and retained primary sources:
+
+```sh
+.venv/bin/python research/source_ledgers/historical_labels_round002/export_labels.py \
+  --source-root . --output-dir /absolute/path/to/new-label-export
+```
+
+Preserve the catalogue and source bytes as one scientific version. A new input version needs its own declared catalogue and outputs. A checksum ties transcriptions to retained bytes; it does not authenticate contemporaneous web availability or prove that no intermediate revision existed. Missing output gap, core/food CPI, IIP, liquidity, FX, oil and monsoon inputs stay missing. Engineering reconstruction is not empirical model replication, forecasting skill, cognitive diversity or causal policy evidence.
+
+For a source-only scientific copy, include `src/`, this whole directory, `research/verification/rebuild_scientific_inputs.py`, `research/source_ledgers/prior_policy/`, all observation ledger/raw files named in `input_manifest.json`, and the 25 `data/raw/minutes_html/` files named there. `data/processed/macro_panel.parquet`, audit results, Git history, model credentials and prior assessments are unnecessary. Tests may additionally include `tests/test_vintage_rebuild.py` and archival `data/processed/vintage_v3/` for the optional equivalence check.
+# Source-label reconciliation
+
+The two retained source passes were written separately. This directory compares them and records parent adjudication; it does not call the result independent consensus or a universal gold standard. Neither model predictions nor prior forecasting scores entered these decisions.
+
+Both passes agree on all 78 exact rate choices and rate-choice disagreements. Literal ballot agreement includes six unknown cells; only 72 literal ballots are observed. Three literal No ballots differ from four exact-magnitude disagreements because June 2025 Bhattacharya votes Yes for a 25-bps cut while the committee chooses 50 bps.
+
+For formal stance, 76 of 78 entries agree including unknowns. Two personal statements explicitly link a status-quo vote to both rate and stance. The primary definition accepts these contextual personal votes as neutral, with the preceding neutral stance as referent. A strict-narrative sensitivity preserves the second coder's nulls. Both original annotations, excerpts and reasons remain in comparison.json. Resolution-reported October 2026 preferences are not substituted for unavailable personal statements.
+
+The primary definition observes 20 formal stance cells; the strict sensitivity observes 18. Only three meetings have all six stance votes observed. Unknown votes, unassessed reservations and unassessed guidance are never coded as negatives. These labels cover an already exposed retrospective panel of 13 decisions, including eight holds, four cuts and one increase. `calibrated_tightening` is outside the current simulator's three-stance ontology and requires explicit versioned integration.
+
+`build_adjudication.py` verifies 25 shared primary-source hashes and 386 exact annotation raw fragments, then writes new outputs exclusively. The independent pass's broader annotations-plus-statements check covers 1,048 fragments separately; these counts refer to different inputs. Hashes check retained consistency, not authenticated historical first availability.
+
+`evaluate_missing_labels.py` produces one offline no-dissent baseline diagnostic for each distinct channel, including the strict stance sensitivity. The new evaluator reports observed and complete cases plus sharp logical bounds over every possible assignment to missing labels. Bounds are not confidence intervals and do not assume random missingness. This deterministic baseline uses no model generation and cannot establish model performance. Run into a new output directory:
+
+```sh
+PYTHONPATH=. .venv/bin/python research/source_ledgers/expanded_panel_oct09_adjudication/evaluate_missing_labels.py --output-dir results/source_label_diagnostics_new
+```
+{
+  "cpi_ledger_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c",
+  "exposure_status": "Entire 2020-2024 panel was already inspected; evaluation is retrospective",
+  "fed_ledger_sha256": "192a3dca7ba73732c681ea2786e085e9b8e98e209afe90eaf106d2aaaebe1eb9",
+  "full_open_economy_benchmark_ready": false,
+  "gdp_ledger_sha256": "837138053bad27bbadf5d5f6cfd323417dd3b969453d3854b00be3e6365b3142",
+  "historical_split": {
+    "calibration_count": 17,
+    "calibration_through": "2023-04-06",
+    "evaluation_count": 8,
+    "retrospective_evaluation_after": "2023-04-06"
+  },
+  "limits": "Printed release timing and current retained bytes; not independently archived contemporaneous hashes.",
+  "n_meetings": 25,
+  "snapshots_sha256": "b2f005537ff220842ef2547c8500d9b4f1496c52f9f96ee65cb9fe9ed6c5fbe6",
+  "truth_sha256": "333d8da00ea15d860d62a2ab81c2b30ca7e93896d248aeb09248dc68e5b5df7d",
+  "version": "source-linked-historical-v2",
+  "withheld_fields": [
+    "cpi_core_yoy_pct",
+    "cpi_food_yoy_pct",
+    "output_gap_pct",
+    "iip_growth_yoy_pct",
+    "system_liquidity_cr",
+    "usd_inr_exchange_rate",
+    "brent_crude_usd_bbl",
+    "monsoon_departure_lpa_pct"
+  ]
+}
+[
+  {
+    "brent_crude_usd_bbl": null,
+    "cfpi_yoy_pct": 9.05,
+    "cpi_core_yoy_pct": null,
+    "cpi_food_yoy_pct": null,
+    "cpi_headline_yoy_pct": 6.69,
+    "current_repo_rate_pct": 4.0,
+    "gdp_growth_yoy_pct": -23.9,
+    "gva_growth_yoy_pct": -22.8,
+    "iip_growth_yoy_pct": null,
+    "information_cutoff": "2020-10-07T00:00:00+05:30",
+    "input_track": "source_linked",
+    "intervention": {},
+    "meeting_date": "2020-10-09",
+    "meeting_start_date": "2020-10-07",
+    "monsoon_departure_lpa_pct": null,
+    "observations": [
+      {
+        "availability_basis": "Prior resolution release; conservative following calendar day availability",
+        "field": "current_repo_rate_pct",
+        "input_evidence": [],
+        "reference_period": "2020-08-06",
+        "released_at": "2020-08-07T00:00:00+05:30",
+        "source_file": "research/source_ledgers/prior_policy/august_2020_resolution.html",
+        "source_pointer": "Published resolution repo rate and stance",
+        "source_sha256": "9ac9a2ebea6f300311a83df0e2d8d2f995aee057a249a70e847af1d058af95be",
+        "source_url": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=50175",
+        "transformation": null,
+        "units": "% per annum",
+        "value": 4.0,
+        "vintage": "prior published resolution"
+      },
+      {
+        "availability_basis": "Prior resolution release; conservative following calendar day availability",
+        "field": "prev_stance",
+        "input_evidence": [],
+        "reference_period": "2020-08-06",
+        "released_at": "2020-08-07T00:00:00+05:30",
+        "source_file": "research/source_ledgers/prior_policy/august_2020_resolution.html",
+        "source_pointer": "Published resolution repo rate and stance",
+        "source_sha256": "9ac9a2ebea6f300311a83df0e2d8d2f995aee057a249a70e847af1d058af95be",
+        "source_url": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=50175",
+        "transformation": null,
+        "units": "stance category",
+        "value": "accommodative",
+        "vintage": "prior published resolution"
+      },
+      {
+        "availability_basis": "MoSPI release embargo endpoint; India local time",
+        "field": "cpi_headline_yoy_pct",
+        "input_evidence": [],
+        "reference_period": "2020-08",
+        "released_at": "2020-09-14T17:30:00+05:30",
+        "source_file": "research/source_ledgers/cpi_vintages/raw/2020-08_url.pdf",
+        "source_pointer": "PDF page 1, table 1",
+        "source_sha256": "648bf1f7e52b17d74115e1ce3f62136bc167307f87def829178e1e1713add08c",
+        "source_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf",
+        "transformation": null,
+        "units": "YoY %",
+        "value": 6.69,
+        "vintage": "Provisional"
+      },
+      {
+        "availability_basis": "MoSPI release embargo endpoint; India local time",
+        "field": "cfpi_yoy_pct",
+        "input_evidence": [],
+        "reference_period": "2020-08",
+        "released_at": "2020-09-14T17:30:00+05:30",
+        "source_file": "research/source_ledgers/cpi_vintages/raw/2020-08_url.pdf",
+        "source_pointer": "PDF page 1, table 1",
+        "source_sha256": "648bf1f7e52b17d74115e1ce3f62136bc167307f87def829178e1e1713add08c",
+        "source_url": "https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf",
+        "transformation": null,
+        "units": "YoY %",
+        "value": 9.05,
+        "vintage": "Provisional"
+      },
+      {
+        "availability_basis": "FOMC statement printed For release time, America/New_York",
+        "field": "us_fed_funds_rate_pct",
+        "input_evidence": [],
+        "reference_period": "Policy in force at cutoff; effective from 2020-09-17",
+        "released_at": "2020-09-16T18:00:00Z",
+        "source_file": "research/source_ledgers/gdp_fed_vintages/raw/fed_20200916_implementation.html",
+        "source_pointer": "Implementation Note, domestic policy directive",
+        "source_sha256": "623d00d8222d9a88e386148a0d0553ab3ab230a2c1b6d19573cc233fd2ca8caa",
+        "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a1.htm",
+        "transformation": null,
+        "units": "percent per annum",
+        "value": 0.25,
+        "vintage": "Dated FOMC implementation directive; current retained official bytes"
+      },
+      {
+        "availability_basis": "MoSPI PDF printed embargo endpoint, India local time",
+        "field": "gdp_growth_yoy_pct",
+        "input_evidence": [],
+        "reference_period": "FY2020-21Q1",
+        "released_at": "2020-08-31T17:30:00+05:30",
+        "source_file": "research/source_ledgers/gdp_fed_vintages/raw/gdp_20200831.pdf",
+        "source_pointer": "PDF physical page 5, constant-price quarterly GDP total and YoY rows",
+        "source_sha256": "a89d91b589fb63528f8be994817fd93f64ab370eed1d065032328a539cbe1706",
+        "source_url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2020-21.pdf",
+        "transformation": null,
+        "units": "YoY %",
+        "value": -23.9,
+        "vintage": "Quarterly estimate table printed in this dated release; comparisons may be revised"
+      },
+      {
+        "availability_basis": "MoSPI PDF printed embargo endpoint, India local time",
+        "field": "gva_growth_yoy_pct",
+        "input_evidence": [],
+        "reference_period": "FY2020-21Q1",
+        "released_at": "2020-08-31T17:30:00+05:30",
+        "source_file": "research/source_ledgers/gdp_fed_vintages/raw/gdp_20200831.pdf",
+        "source_pointer": "PDF physical page 5, constant-price quarterly GVA total and YoY rows",
+        "source_sha256": "a89d91b589fb63528f8be994817fd93f64ab370eed1d065032328a539cbe1706",
+        "source_url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2020-21.pdf",
+        "transformation": null,
+        "units": "YoY %",
+        "value": -22.8,
+        "vintage": "Quarterly estimate table printed in this dated release; comparisons may be revised"
+      }
+    ],
+    "output_gap_pct": null,
+    "parent_snapshot_hash": null,
+    "prev_stance": "accommodative",
+    "real_dissenters": [],
+    "real_dissenters_rate": null,
+    "real_dissenters_stance": null,
+    "real_guidance_disagreements": [],
+    "real_rate_decision_bps": null,
+    "real_reservations": [],
+    "real_stance_decision": null,
+    "system_liquidity_cr": null,
+    "us_fed_funds_rate_pct": 0.25,
+    "usd_inr_exchange_rate": null
+  },
+  {
+    "brent_crude_usd_bbl": null,
+    "cfpi_yoy_pct": 11.07,
+    "cpi_core_yoy_pct": null,
+    "cpi_food_yoy_pct": null,
+    "cpi_headline_yoy_pct": 7.61,
+    "current_repo_rate_pct": 4.0,
+    "gdp_growth_yoy_pct": -7.5,
+    "gva_growth_yoy_pct": -7.0,
+    "iip_growth_yoy_pct": null,
+    "information_cutoff": "2020-12-02T00:00:00+05:30",
+    "input_track": "source_linked",
+{
+  "channels": {
+    "exact_rate_disagreement": [
+      {
+        "meeting_date": "2020-10-09",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-05-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+{
+  "definitions": {
+    "committee_stance_category": "The leading published stance category. April and May 2022 remain accommodative while focusing on withdrawal; the complete clause is retained",
+    "date_definition": "meeting_date is decision date parsed from the minutes title; publication_date is the separate later minutes header",
+    "exact_rate_disagreement": "A recorded vote against the quantified rate resolution. For this original panel all literal No votes reject the committee rate quantum. This does not identify every alternative rate magnitude",
+    "formal_stance_dissent": "A recorded vote against the committee stance category or an explicit alternative binding stance vote. An attributed signed-statement vote resolves the four 2021-2022 summary reservations",
+    "guidance_disagreement": "Disagreement over the duration or formulation of forward guidance is separate from disagreement over the stance category",
+    "literal_rate_no": "The literal published Yes/No ballot cell on the committee rate resolution; not an inferred preference",
+    "stance_missing": "A stance reservation without an explicit against/alternative binding vote is null, not negative, affirmative or an invented abstention"
+  },
+  "meetings": [
+    {
+      "formal_stance_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+        "shaktikanta_das": false,
+        "shashanka_bhide": false
+      },
+      "guidance_disagreements": [
+        "jayanth_varma"
+      ],
+      "meeting_date": "2020-10-09",
+      "meeting_start_date": "2020-10-07",
+      "member_stance_evidence": {
+        "ashima_goyal": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "jayanth_varma": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "michael_patra": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "mridul_saggar": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "shaktikanta_das": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "shashanka_bhide": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ]
+      },
+      "policy_rate_clause": "keep the policy repo rate under the liquidity adjustment facility (LAF) unchanged at 4.0 per cent.",
+      "policy_stance_clause": "The MPC also decided to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward.",
+      "publication_date": "2020-10-23",
+      "rate_dissenters": [],
+      "reservations": [],
+      "resolution_evidence": [
+        "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+      ],
+      "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+      "source_lines": [
+        864
+      ],
+      "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560",
+      "stance_dissenters": [],
+      "statement_stance_dissenters": []
+    },
+    {
+      "formal_stance_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+        "shaktikanta_das": false,
+        "shashanka_bhide": false
+      },
+      "guidance_disagreements": [],
+      "meeting_date": "2020-12-04",
+      "meeting_start_date": "2020-12-02",
+      "member_stance_evidence": {
+        "ashima_goyal": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ],
+        "jayanth_varma": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ],
+        "michael_patra": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ],
+        "mridul_saggar": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ],
+        "shaktikanta_das": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ],
+        "shashanka_bhide": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+        ]
+      },
+      "policy_rate_clause": "keep the policy repo rate under the liquidity adjustment facility (LAF) unchanged at 4.0 per cent.",
+      "policy_stance_clause": "The MPC also decided to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward.",
+      "publication_date": "2020-12-18",
+      "rate_dissenters": [],
+      "reservations": [],
+      "resolution_evidence": [

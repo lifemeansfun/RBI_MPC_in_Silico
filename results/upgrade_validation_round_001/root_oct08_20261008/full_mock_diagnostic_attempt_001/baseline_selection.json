@@ -1,0 +1,1 @@
+{"calibration_hash":"2fa9baf79ad14f396a56cd0c9c762be49deca9dc4ecece60c1d5409c1a0c0d2a","cutoff":"2023-04-06","information_cutoff":"2023-04-30","method":"best constant dissent set per channel by calibration F1 then exact-match","rate_dissenters":["ashima_goyal","jayanth_varma"],"selection_status":"calibration only; cohort-specific","stance_dissenters":["jayanth_varma"]}

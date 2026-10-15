@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2022-05-04",
+  "meeting_start_date": "2022-05-02",
+  "publication_date": "2022-05-18",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+  "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+  "statement_sha256": {
+    "ashima_goyal": "d3fc156fd7465c4584759a45c1dd0ba44e3c7b47819adb2360129177bcb43817",
+    "jayanth_varma": "a64eb5d39ed8cf4501fdcf5afab1d3b7303205a3b0854dba53b642cd8af1841c",
+    "michael_patra": "915ac0f88c80acd86e00286e946726c709ca231e662afc1fa41b8f8bbba5aff8",
+    "rajiv_ranjan": "ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2",
+    "shaktikanta_das": "0ee84d8511581485b6e7d63f494f401535e7bffe5b5997c1f65c1d71e83bff01",
+    "shashanka_bhide": "b699a2dd97afc97767a0d1da85955ca23dc049c48828f4a5f8b850b0bfcff668"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, May 2 and 4, 2022"
+}

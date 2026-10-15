@@ -1,0 +1,69 @@
+{
+  "eligible_sources": "personally attributed retained minutes only; no same-meeting statements, current biography, or outcome labels",
+  "fit_schedule": "expanding_personal_history_refit_before_each_first_meeting_day",
+  "identity_alias_basis": "Both source IDs refer to personal heading Dr. Michael Debabrata Patra and the same attendance name; duplicate canonical attendees are rejected",
+  "identity_aliases": {
+    "michael_patra": "michael_debabrata_patra"
+  },
+  "information_cutoff": "exclusive midnight IST on first meeting day; entire publication day must precede cutoff",
+  "lexical_fit": {
+    "dove_lexicon": [
+      "growth",
+      "slack",
+      "over-tightening",
+      "lag",
+      "lags",
+      "sacrifice",
+      "soften",
+      "real rate",
+      "neutral",
+      "output gap",
+      "recovery",
+      "headwind",
+      "downturn"
+    ],
+    "hawk_lexicon": [
+      "inflation",
+      "restrictive",
+      "vigilance",
+      "unanchored",
+      "persistence",
+      "second-round",
+      "overheating",
+      "pressures",
+      "brake",
+      "firm",
+      "committed",
+      "tolerance",
+      "target"
+    ],
+    "scope": "descriptive fixed lexical statistic; not construct validated or an identified policy utility",
+    "selection_source": "existing src/persona_engine/extractor.py fixed lexicons",
+    "statistic": "(hawk_hits-dove_hits)/max(hawk_hits+dove_hits,1)"
+  },
+  "minimum_personal_statements": 1,
+  "missing_history_policy": "explicit_missing_no_identity_substitution",
+  "panel_status": "exposed_retrospective_2020_2026",
+  "predictive_readiness": false,
+  "readiness_blockers": [
+    "pre-cutoff membership/appointment evidence not retained in this packet",
+    "missing personal history at entry",
+    "expanded macro packets not supplied by this builder",
+    "simulator stance v2 integration not supplied by this builder",
+    "no live model generation or untouched prospective outcome"
+  ],
+  "roster_available_at_cutoff": false,
+  "roster_evidence_status": "retrospective_oracle_attendance",
+  "source_stance_ontology": {
+    "actions": [
+      "withdrawal_of_accommodation",
+      "neutral",
+      "accommodative",
+      "calibrated_tightening"
+    ],
+    "integration_status": "additive_source_contract_not_existing_simulator_integration",
+    "simulator_v1_policy": "reject unsupported calibrated_tightening; mapping remains null",
+    "version": "expanded_source_v2"
+  },
+  "version": "rolling-persona-retrospective-input-v1"
+}

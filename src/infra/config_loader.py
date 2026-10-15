@@ -7,8 +7,9 @@ import os
 from pathlib import Path
 from typing import Literal, Optional
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from dotenv import load_dotenv
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS
 
 # Automatically load .env if present
 load_dotenv()
@@ -17,23 +18,28 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 
 class RunConfig(BaseModel):
+    model_config = ConfigDict(allow_inf_nan=False)
     provider: Literal["gemini", "openai", "anthropic", "ollama", "mock"] = "gemini"
-    dev_model: str = "gemini-3.8-flash"
-    final_model: str = "gemini-3.8-flash"
-    fallback_models: list[str] = ["gemini-3.5-flash", "gemini-3.1-flash-lite"]
-    rate_limit_rpm: int = 5
-    budget_usd_cap: float = 25.0
-    temperature: float = 0.6
+    dev_model: str = "gemini-3.1-flash-lite"
+    final_model: str = "gemini-3.1-flash-lite"
+    fallback_models: list[str] = []  # legacy field; research runtime never substitutes models
+    rate_limit_rpm: int = Field(default=5, gt=0)
+    budget_usd_cap: float = Field(default=25.0, ge=0)
+    temperature: float = Field(default=0.6, ge=0, le=2)
     n_replicates: int = 3
     seed_base: int = 42
     use_cache: bool = True
-    cache_dir: str = ".cache/llm_cache.sqlite"
+    cache_dir: str = ".cache/corrected_llm_cache_v2.sqlite"
+    max_output_tokens: int = Field(default=2048, gt=0)
+    request_timeout_seconds: float = Field(default=60.0, gt=0)
+    model_epoch: Optional[str] = None
+    budget_ledger_path: str = ".cache/corrected_budget_v1.sqlite"
 
 
 class DecisionSpaceConfig(BaseModel):
-    action_set_bps: list[int] = [-50, -25, 0, 25, 50]
+    action_set_bps: list[int] = list(RATE_ACTIONS_BPS)
     simulate_stance: bool = True
-    stance_set: list[str] = ["withdrawal_of_accommodation", "neutral", "accommodative"]
+    stance_set: list[str] = list(STANCE_ACTIONS)
 
 
 class PanelsConfig(BaseModel):
@@ -65,6 +71,9 @@ class ValidationConfig(BaseModel):
     directional_accuracy_threshold: float = 0.75
     stance_accuracy_threshold: float = 0.70
     dissent_f1_threshold: float = 0.50
+    exact_rate_accuracy_threshold: float = 0.75
+    rate_dissent_f1_threshold: float = 0.50
+    stance_dissent_f1_threshold: float = 0.50
 
 
 class DebateProtocolConfig(BaseModel):
@@ -85,10 +94,10 @@ class AppConfig(BaseModel):
     debate_protocol: DebateProtocolConfig = Field(default_factory=DebateProtocolConfig)
 
     # API keys loaded from environment
-    gemini_api_key: Optional[str] = None
-    openai_api_key: Optional[str] = None
-    anthropic_api_key: Optional[str] = None
-    fred_api_key: Optional[str] = None
+    gemini_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    openai_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    anthropic_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    fred_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
 
 
 _CONFIG_CACHE: Optional[AppConfig] = None

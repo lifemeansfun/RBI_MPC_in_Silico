@@ -1,0 +1,14 @@
+{
+  "substantive_review_saved": true,
+  "process_completed_successfully": false,
+  "exit_code": 1,
+  "missing_requested_outputs": [
+    "evidence_judgments.json",
+    "audit_complete.json",
+    "final_message.md"
+  ],
+  "context_independence": "fresh visible context with declared limits; parent preflight OS restrictions verified; reviewer did not probe denials; hidden context not fully inspectable",
+  "frozen_scientific_inputs_changed": [],
+  "critique_sha256": "6531a268a9826439040b48dec0801d5c81babe205daf350500db9fade3574634",
+  "no_independent_validation_or_readiness_claim": true
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "purpose": "bounded primary acquisition",
+    "argv": [
+      ".venv/bin/python",
+      "-c",
+      "import subprocess,sys; sys.exit(subprocess.run([\".venv/bin/python\",\"research/implementation_runs/elite_impl_20261010_001/reference_fidelity/acquire_primary_sources.py\"], timeout=1200).returncode)"
+    ],
+    "exit_code": 0,
+    "stdout_document": "retrieval_records.json",
+    "request_timeout_seconds": 35,
+    "max_attempts_per_url": 1
+  },
+  {
+    "purpose": "full text/page extraction",
+    "interpreter": "/Users/manishharigovind/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "script": "from pypdf import PdfReader\nfrom pathlib import Path\nimport json,hashlib,platform,sys\nroot=Path('research/implementation_runs/elite_impl_20261010_001/reference_fidelity')\nrecords=[]\nfor name in ('gwu_retained_august_2025','fedsight_arxiv_2512_15728v1','takano_arxiv_2511_02469v1','acl_2025_findings_606'):\n    path=root/'sources'/f'{name}.pdf'\n    reader=PdfReader(path)\n    pages=[{'pdf_page':i+1,'text':p.extract_text()} for i,p in enumerate(reader.pages)]\n    out=root/'sources'/f'{name}_pages.json'\n    out.write_text(json.dumps(pages,indent=2))\n    text=root/'sources'/f'{name}.txt'\n    text.write_text('\\n\\n'.join(f\"=== PDF PAGE {p['pdf_page']} ===\\n{p['text']}\" for p in pages))\n    records.append({'id':name,'pages':len(pages),'pdf_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'page_extraction_file':str(out.relative_to(root)),'text_file':str(text.relative_to(root)),'extraction_sha256':hashlib.sha256(out.read_bytes()).hexdigest()})\n(root/'extraction_records.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'package':'pypdf','records':records},indent=2))\nprint(json.dumps(records,indent=2))",
+    "exit_code": 0,
+    "stdout_document": "extraction_records.json"
+  },
+  {
+    "purpose": "visual check of missing Table2 row",
+    "argv": [
+      "/Users/manishharigovind/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdftoppm",
+      "-f",
+      "12",
+      "-l",
+      "12",
+      "-scale-to",
+      "1400",
+      "-singlefile",
+      "-png",
+      "research/implementation_runs/elite_impl_20261010_001/reference_fidelity/sources/takano_arxiv_2511_02469v1.pdf",
+      "research/implementation_runs/elite_impl_20261010_001/reference_fidelity/takano_table2_page12"
+    ],
+    "exit_code": 0,
+    "output": "takano_table2_page12.png",
+    "verified": "Inspected local image; Experiment3 is absent from Table2, matching text extraction."
+  },
+  {
+    "purpose": "reference package integrity audit",
+    "interpreter": "bundled Python3",
+    "checks": "all retrieval byte lengths/hashes; extraction page counts/hashes; method PDF bindings; retained=current GWU bytes; revised methods missing and gates open",
+    "first_exit_code": 1,
+    "first_error": "NameError: PdfReader undefined",
+    "first_failure_record": "verification_failure_001.txt",
+    "corrected_exit_code": 0,
+    "corrected_result": "verification.json"
+  }
+]

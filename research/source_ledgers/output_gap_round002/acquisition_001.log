@@ -1,0 +1,47 @@
+[
+  {
+    "id": "nas2019_gdp_expenditure",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.2.pdf",
+    "filename": "nas2019_s8_18_2.pdf",
+    "role": "constant_price_quarterly_GDP_candidate",
+    "discovery": "Primary-domain web search result exact URL",
+    "retrieved_at_utc": "2026-10-09T16:09:21.566744+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.2.pdf",
+    "local_file": "acquisition/batch_001/raw/nas2019_s8_18_2.pdf",
+    "bytes": 701740,
+    "sha256": "d9a110c3fa809344f12396f8063fe55d4883493997d1b813f39ea16e8dc8653c",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "annual_report_2020_2021",
+    "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2020-21%20.pdf",
+    "filename": "annual_report_2020_2021.pdf",
+    "role": "NAS2020_publication_month_evidence",
+    "discovery": "Primary-domain web search result exact URL",
+    "retrieved_at_utc": "2026-10-09T16:09:21.567948+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2020-21%20.pdf",
+    "local_file": "acquisition/batch_001/raw/annual_report_2020_2021.pdf",
+    "bytes": 5239326,
+    "sha256": "c31a738b5c4531bef7b6ee6d9dc56768ca3cad203c8a2e6657d1908e4da7785c",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "current_site_discovery_js",
+    "url": "https://www.mospi.gov.in/assets/index-FXIi3u1F.js",
+    "filename": "current_site_discovery.js",
+    "role": "Public primary site route/API discovery, not historical data",
+    "discovery": "Script URL in retained primary landing-page HTML",
+    "retrieved_at_utc": "2026-10-09T16:09:21.568144+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/assets/index-FXIi3u1F.js",
+    "local_file": "acquisition/batch_001/raw/current_site_discovery.js",
+    "bytes": 2644,
+    "sha256": "7acc78abaebeb4e98845543e7058bdb009b28ec9367dd96006e2f965bf015362",
+    "primary_final_host": true,
+    "acquired": true
+  }
+]

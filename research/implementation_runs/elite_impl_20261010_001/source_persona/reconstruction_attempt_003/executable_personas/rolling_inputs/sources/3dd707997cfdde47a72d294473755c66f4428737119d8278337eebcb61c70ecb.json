@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2024-04-05",
+  "meeting_start_date": "2024-04-03",
+  "publication_date": "2024-04-19",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_57735.html",
+  "source_sha256": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+  "statement_sha256": {
+    "ashima_goyal": "3273a927ee759cf46705189cca295e4303a9f6b62ba30999e6c739b731daa3db",
+    "jayanth_varma": "672b3b5f678afc76a36155fdc2c4ea5d6d69f173c13e7e95ea836f6f6b5b029f",
+    "michael_patra": "b43e5fc2f74b21e1dd019c0f9e024a46979af7b0551cd66981dadf3002b35489",
+    "rajiv_ranjan": "eb9a70861178d1e03bdb2343d30d35ef9c24dcaf38de5d73f00c708596b3718e",
+    "shaktikanta_das": "513706834f0c2030af0df7b96a859952ad7d522e68ee90412ac4fad617b4e2f5",
+    "shashanka_bhide": "9be836275e09fca800b8fcc22d1a4d29d204ba7126d30f8014a1ba39a6598b83"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, April 3 to 5, 2024"
+}

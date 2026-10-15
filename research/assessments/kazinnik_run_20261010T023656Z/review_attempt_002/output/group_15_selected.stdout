@@ -1,0 +1,101 @@
+    def _generate_mock(
+        self,
+        user_prompt: str,
+        system_prompt: Optional[str],
+        model: str,
+        response_schema: Optional[Type[T]] = None,
+        expected_identity: dict | None = None,
+    ) -> tuple[str, int, int]:
+        """Offline mock responses for deterministic unit and integration tests."""
+        import re
+        schema_name = response_schema.__name__ if response_schema else ""
+
+        # Dynamically extract member_id and member_name if present in prompt template
+        expected_identity = expected_identity or {}
+        m_ids = re.findall(r'"member_id":\s*"([^"]+)"', user_prompt)
+        member_id = expected_identity.get("member_id", m_ids[-1] if m_ids else "mock_member")
+
+        m_names = re.findall(r'"member_name":\s*"([^"]+)"', user_prompt)
+        member_name = expected_identity.get("member_name", m_names[-1] if m_names else member_id.replace("_", " ").title())
+
+        m_internals = re.findall(r'"is_internal":\s*(true|false)', user_prompt, re.IGNORECASE)
+        is_internal = expected_identity.get("is_internal", m_internals[-1].lower() == "true" if m_internals else True)
+
+        # Extract prevailing stance from prompt if present
+        prev_stance_m = re.search(r"Prevailing (?:Policy )?Stance:\s*([^\n\r]+)", user_prompt, re.IGNORECASE)
+        prev_stance = prev_stance_m.group(1).lower().replace(" ", "_") if prev_stance_m else "withdrawal_of_accommodation"
+        
+        # Scripted identity/date fixture behavior, never evidence of realism.
+        if "accommodat" in prev_stance and "withdrawal" not in prev_stance:
+            if member_id == "jayanth_varma" and any(y in user_prompt for y in ["2021-08", "2021-10", "2021-12", "2022"]):
+                stance = "neutral"  # Varma's famous dissents starting Aug 2021
+            else:
+                stance = "accommodative"
+        else:
+            stance = "neutral" if member_id in ["jayanth_varma", "ashima_goyal"] else "withdrawal_of_accommodation"
+
+        logger.debug("[RESEARCH INTEGRITY NOTICE] Using offline mock generator for offline testing.")
+        if schema_name == "InitialStanceOutput" or (response_schema is None and "Round 1" in user_prompt):
+            mock_data = {
+                "member_id": member_id,
+                "member_name": member_name,
+                "proposed_rate_change_bps": 0,
+                "proposed_stance": stance,
+                "key_rationale": f"[OFFLINE MOCK BASELINE] {member_name} notes inflation is moderating while recovery progresses.",
+            }
+        elif schema_name == "FinalVoteOutput" or (response_schema is None and "Round 4" in user_prompt):
+            mock_data = {
+                "member_id": member_id,
+                "member_name": member_name,
+                "is_internal": is_internal,
+                "final_rate_vote_bps": 0,
+                "final_stance_vote": stance,
+                "dissenting_on_rate": False,
+                "dissenting_on_stance": (stance == "neutral"),
+                "official_statement_rationale": f"[OFFLINE MOCK BASELINE] Official signed statement for {member_name} in MPC minutes.",
+            }
+        else:
+            mock_data = {
+                "member_id": member_id,
+                "round_number": expected_identity.get("round_number", 3 if "Round 3" in user_prompt else 2),
+                "current_rate_preference_bps": 0,
+                "current_stance_preference": stance,
+                "rebuttal_or_critique": f"[OFFLINE MOCK BASELINE] {member_name} analyzes colleagues' views and maintains strategic stance.",
+                "open_to_compromise": True,
+            }
+
+        raw_text = json.dumps(mock_data)
+        return raw_text, 120, 45
+data/processed/statements_v2/2022-08-05/jayanth_varma.txt:1:Statement by Prof. Jayanth R. Varma 40. Inflation is at unacceptably high levels, and the projected trajectory is also above target during the entire forecast horizon. Economic growth has on the other hand proved resilient in the face of an adverse global environment. In this situation, there is clearly a need for front loaded hikes in the policy rate. The choice to my mind is between 50, 60 and 75 basis points. 41. The logic of front loading argues in favour of a 75 basis point hike: it would establish the credibility of monetary policy beyond doubt, would help achieve a faster reduction in the inflation rate, and would hopefully reduce the terminal repo rate consistent with bringing inflation close to the target. Weighing against that is the fact that a 75 basis point rate hike is quite unusual (despite a few recent hikes of this magnitude globally in the recent period). In the context of market expectations of a 35-50 basis point hike, such a large hike risks being misinterpreted as a sign of panic, and could be unnecessarily disruptive. Also even with a 50 basis point hike this month, the cumulative tightening in the past few months of 140 basis points would make the real interest rate positive based on projected inflation 3-4 quarters ahead. On balance, therefore, I do not favour a 75 basis point hike at this juncture. 42. The choice between 50 and 60 basis points is less clear cut. The latter has the advantage of bringing the repo rate back to a round multiple of a quarter percent, but shares some of the disadvantage of a 75 basis point hike to a much lesser extent. As I have argued in past statements, 10 basis points is not material and I am happy to go along with the consensus of the rest of the MPC on this issue. Therefore, I vote in favour of increasing the policy repo rate by 50 basis points to 5.40 per cent. 43. I now turn to the second resolution to remain focused on withdrawal of accommodation to ensure that inflation remains within the target going forward, while supporting growth. This statement confuses more than it clarifies. Because the rate hike in this meeting takes the policy rate above the pre-pandemic level, “withdrawal of accommodation” cannot refer to the withdrawal of the pandemic era accommodation. It can only mean withdrawal of the pre-pandemic accommodation that began with the rate cut from 6.50% to 6.25% in February 2019. A plain reading of this resolution would then be that the MPC is focused on taking the repo rate back to 6.50%. 44. In my view, such an indication of a terminal repo rate of 6.50% is totally unwarranted in the situation that we are in. The reality is that the Ukraine war and monetary tightening in the advanced economies have led to a very serious risk of recession in the world economy. In the face of this, commodity prices have collapsed from their April peaks. Crude oil remained elevated for longer, but it too is softening even as the MPC meeting is in progress. If this trend continues, we could see significant downward adjustments to the projected inflation trajectory. Moreover, though the Indian economy has been highly resilient to geopolitical and commodity price shocks so far, the weakening of exports in July indicates that India would not be immune to growth shocks emanating from the rest of the world. In short, it is easy to imagine that a few months from now, the economic data could point to a terminal repo rate that is well below 6.50%. To focus on one thing implies paying less attention to other things, and I do not think it would be wise to say that the MPC will remain “focused” on withdrawal of accommodation ignoring other considerations. 45. I have made several different suggestions to the MPC regarding alternatives to this resolution. First, in June, I suggested that individual MPC members could start moving towards providing projections of the future path of the policy rate. Since these would be projections of individual members and not of the MPC as a whole, these projections would not tie the hands of the MPC itself in any way. At the same time, they would provide guidance to the public about the thinking within the MPC. Second, at this meeting, I suggested that this resolution should simply be dropped. It is better not to give any guidance than to give confusing guidance. Unfortunately, none of these proposals found favour with the other members. 46. At the same time, I do not wish to record an outright dissent on this resolution because clearly further withdrawal of accommodation is warranted. The terminal repo rate may or may not be 6.50% but it is almost certainly well above 5.40%. So I am confining myself to expressing my reservations on this resolution. The resolution should in my view be interpreted only as stating that there is a high likelihood of further front-loaded tightening without restricting the freedom of the MPC to respond to the changing environment in a data driven manner.
+data/processed/statements_v2/2021-08-06/jayanth_varma.txt:1:Statement by Prof. Jayanth R. Varma 48. In the last several meetings, my statements have expressed the belief that the balance of risk and reward is in favour of monetary accommodation. As the pandemic continues to mutate, it appears to me that the balance of risk and reward is gradually shifting, and this merits a hard look at the accommodative stance. 49. First, Covid-19 is beginning to look more and more like tuberculosis which kills a very large number of people every year without inflicting major damage to the economy; in other words, it is beginning to resemble a neutron bomb. The ability of monetary policy to mitigate a human tragedy of this nature is very limited as compared to its ability to contain an economic crisis. Related to this is the lengthening of the time horizon of the pandemic. Global experience (particularly countries like Israel which are witnessing rising case counts despite very high levels of vaccination) suggests that vaccination is insufficient to stamp out the pandemic though it might reduce its severity. The possibility that Covid-19 will haunt us (though with lower mortality) for the next 3-5 years can no longer be ruled out. Keeping monetary policy highly accommodative for such a long horizon is very different from doing so for what was earlier expected to be a relatively short crisis. 50. Second, monetary policy has very broad effects on the entire economy, and this was appropriate in the early phase of the pandemic which caused generalized economic distress. More recently, however, the ill effects of the pandemic have been concentrated in narrow pockets of the economy. At the industry level, contact intensive services have suffered heavily, while many other industries are now operating above pre-Covid levels. At the firm level, MSMEs have suffered severely, while large businesses have prospered. At the household level, the pandemic has been devastating for weaker sections of the society, while the affluent have weathered it reasonably well. Geographically also, the pandemic has done its worst damage in around 100-200 districts spread across a relatively small number of states. Monetary policy is much less effective than fiscal policy for providing targeted relief to the worst affected segments of the economy. Indeed, monetary accommodation appears to be stimulating asset price inflation to a greater extent than it is mitigating the distress in the economy. 51. Third, inflationary pressures are beginning to show signs of greater persistence than anticipated earlier. There are indications that inflationary expectations may be becoming more widely entrenched. Most worrying of all, there is now a reduced degree of confidence that demand side inflationary pressures would remain quiescent. After averaging above 6% in 2020-21, inflation is forecast to be well above 5% in 2021-22, and is not expected to drop below 5% even in the first quarter of 2022-23 according to RBI projections. While there is some comfort that inflation is forecast to be below the upper end of the tolerance band, it is important to emphasize that the inflation target for the MPC is 4% and not 6% or even 5%. The tolerance band is designed to allow for forecast errors, implementation shortfalls and measurement issues. Treating 5% as the target would significantly increase the risk of inflation targeting failures. (While I have seen some commentary suggesting that there may be a case for raising the inflation target during the pandemic, that decision clearly lies with the government and not with the MPC.) 52. In this context, I believe that the current level of the reverse repo rate is no longer appropriate. I am conscious of the fact that the MPC’s mandate is supposed to be restricted to the policy rate or the repo rate. Unfortunately, the monetary policy statement of this meeting (as in the past several meetings) contains the line: “Consequently, the reverse repo rate under the LAF remains unchanged at 3.35 per cent”. I have for some time now being arguing that if the reverse repo rate does not fall within the remit of the MPC, then the announcement of this rate should be in the Governor’s statement and not in the MPC’s statement, but this view has not found favour with the rest of the MPC. Hence, I have no choice but to express my disagreement with the level of the reverse repo rate. A gradual normalization of the width of the corridor is warranted. In my view, a phased normalization of the corridor would increase the ability of the MPC to keep the repo rate at 4% for a longer period, and this should in my view be a greater priority for the MPC than maintaining an ultra-low reverse repo rate for some more time. 53. At a time when the economic recovery is still nascent, it is extremely important that monetary policy serves as an anchor of macroeconomic stability. That would reduce the inflation risk premium as well as the term premium and help stabilize long term interest rates. As I have argued in my past statements, a low long term interest rate is more important for inducing an investment led growth than a low short term rate. In this light, I fear that the forward guidance and monetary stance are becoming counter productive. By creating the erroneous perception that the MPC is no longer concerned about inflation and is focused exclusively on growth, the MPC may be inadvertently aggravating the risk that inflationary expectations will be disanchored. In that scenario, rising risk premia could cause long term rates to rise. Easy money today could lead to high interest rates tomorrow. On the other hand, by demonstrating its commitment to the inflation target with tangible action, the MPC will be able to anchor expectations, reduce risk premia, and sustain lower long term interest rates for longer thereby aiding the economic recovery. For these reasons, I am not in favour of the decision to keep the reverse repo rate at 3.35%, and vote against the accommodative stance. 54. On the other hand, I vote for maintaining the repo rate at 4% for the following reasons. Economic growth was unsatisfactory long before the pandemic, and even if the economic ill effects of the pandemic abate to some extent, substantial monetary accommodation is warranted. Persistent high inflation means that the monetary accommodation has to be somewhat restrained, and, therefore, I argued above for raising money market rates towards the repo rate of 4% from the current ultra-low level of 3.35%. The repo rate of 4% corresponds to a negative real rate in the range of 1-1.5% based on forward looking inflation forecasts. In my view, this level of rates is currently appropriate for reviving economic growth without excessive risk of an inflationary spiral. Needless to say, the MPC needs to remain data driven so that it can respond rapidly and adequately to any unforeseen shocks that may arise in future.
+45ZI. Meetings of Monetary Policy Committee.
+(1) The Bank shall organise at least four meetings of the Monetary Policy
+Committee in a year.
+(2) The meeting schedule of the Monetary Policy Committee for a year shall be
+published by the Bank at least one week before the first meeting in that year.
+(3) The meeting schedule may be changed only—
+(a) by way of a decision taken at a prior meeting of the Monetary Policy
+Committee; or
+(b) if, in the opinion of the Governor, an additional meeting is required or a
+meeting is required to be rescheduled due to administrative exigencies.
+(4) Any change in meeting schedule shall be published by the Bank as soon as
+practicable.
+(5) The quorum for a meeting of the Monetary Policy Committee shall be four
+Members, at least one of whom shall be the Governor and in his absence, the
+Deputy Governor who is the Member of the Monetary Policy Committee.
+(6) The meetings of the Monetary Policy Committee shall be presided over by
+the Governor, and in his absence by the Deputy Governor who is a Member of
+the Monetary Policy Committee.
+(7) Each Member of the Monetary Policy Committee shall have one vote.
+(8) All questions which come up before any meeting of the Monetary Policy
+Committee shall be decided by a majority of votes by the Members present and
+voting, and in the event of an equality of votes, the Governor shall have a
+second or casting vote.
+(9) The Central Government may, if it considers necessary, convey its views in
+writing to the Monetary Policy Committee from time to time.
+(10) The vote of each Member of the Monetary Policy Committee for a
+proposed resolution shall be recorded against such Member.
+(11) Each Member of the Monetary Policy Committee shall write a statement
+specifying the reasons for voting in favour of, or against the proposed
+resolution.
+89

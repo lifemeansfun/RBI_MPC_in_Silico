@@ -1,0 +1,216 @@
+{
+  "run_id": "kazinnik_run_20261010T023656Z",
+  "activated_utc": "2026-10-10T02:36:56+00:00",
+  "deadline_utc": "2026-10-10T10:36:56+00:00",
+  "closeout_reserve_begins_utc": "2026-10-10T09:36:56+00:00",
+  "bounds": {
+    "repair_cycles": 3,
+    "scientific_reviewer_dispatches": 2,
+    "elapsed_hours": 8,
+    "closeout_reserve_hours": 1,
+    "provider_cap_usd": 25,
+    "increase_cap": false
+  },
+  "counters": {
+    "repair_cycles": 1,
+    "scientific_reviewer_dispatches": 2,
+    "provider_generation_calls": 0,
+    "provider_cost_usd": 0
+  },
+  "inherited_assessment": "research/assessments/bounded_readiness_20261010",
+  "inherited_review_dispatches": 5,
+  "inherited_cycle_count": "unverified; not reset/reclassified",
+  "batches": [
+    {
+      "id": "inspection_001",
+      "purpose": "Read objective, readiness and implementation dependencies",
+      "experiments_max": 0,
+      "provider_generation_calls_max": 0,
+      "retries_max": 0,
+      "cost_usd_max": 0,
+      "runtime_minutes_max": 30,
+      "scientific_cycle": false
+    },
+    {
+      "id": "reference_acquisition_001",
+      "purpose": "Inspect available August full text and attempt later full revision",
+      "http_requests_max": 8,
+      "web_tool_calls_max": 4,
+      "provider_generation_calls_max": 0,
+      "experiments_max": 0,
+      "retries_max": 0,
+      "cost_usd_max": 0,
+      "runtime_minutes_max": 15,
+      "per_request_timeout_seconds": 45,
+      "scientific_cycle": false,
+      "already_used_web_calls": 1
+    },
+    {
+      "id": "closeout_001",
+      "purpose": "Prepare method map, partial frozen protocol, gap assessment and final critique of immutable available evidence",
+      "scientific_experiments_max": 0,
+      "provider_generation_calls_max": 0,
+      "retries_max": 0,
+      "cost_usd_max": 0,
+      "runtime_minutes_max": 90,
+      "reviewer_dispatches_max": 1,
+      "reviewer_runtime_minutes_max": 30,
+      "scientific_cycle": false
+    },
+    {
+      "id": "infrastructure_retry_001",
+      "purpose": "Resolve nested sandbox launch failure; identical immutable science/inputs",
+      "reviewer_dispatches_max": 1,
+      "experiments_max": 0,
+      "provider_generation_calls_max": 0,
+      "generation_retries_max": 0,
+      "cost_usd_max": 0,
+      "runtime_minutes_max": 30,
+      "scientific_cycle": false
+    }
+  ],
+  "workers": {
+    "feasibility": {
+      "role": "read-only implementation assistance",
+      "reads_max": 50,
+      "minutes_max": 30,
+      "provider_calls": 0
+    },
+    "reference_map": {
+      "role": "read-only reference working assistance",
+      "reads_max": 20,
+      "minutes_max": 20,
+      "provider_calls": 0,
+      "supporting_arithmetic_probe": "One undeclared probe preserved and charged to cycle1"
+    },
+    "delivery_integrity": {
+      "role": "closeout file/accounting integrity; not scientific critique",
+      "commands_max": 2,
+      "commands_used": 2,
+      "minutes_max": 10,
+      "provider_calls": 0,
+      "receipt": "raw/delivery_integrity_assistant.json"
+    }
+  },
+  "events": [
+    {
+      "type": "activation",
+      "time": "2026-10-10T02:36:56+00:00",
+      "objective_sha256": "df2cd80b10680771681bd6643910c77d0fcd89900a5ddce7d3176bda84980d9b",
+      "note": "New user-authorized bounded allowances; historical ledgers remain unchanged."
+    },
+    {
+      "type": "necessary_dependency_unavailable",
+      "utc": "2026-10-10T03:18:02.492301+00:00",
+      "reason": "Existing remaining provider allowance is unverified: configured ledger and marker are absent; legacy cache does not establish total spending. Live submissions prohibited; scientific live study stops."
+    },
+    {
+      "type": "unplanned_supporting_arithmetic_probe",
+      "worker": "reference_map",
+      "classification": "conservatively counted as cycle 1",
+      "scope": "reference-equation hand-scale controls; no provider calls, no project edits",
+      "limitation": "Parent acquisition ledger recorded zero experiments; probe was not predeclared there. Preserve evidence and disclose deviation; no retroactive preregistration."
+    },
+    {
+      "type": "final_scientific_reviewer_dispatch",
+      "attempt": 1,
+      "started_utc": "2026-10-10T03:25:03.878233+00:00",
+      "snapshot_manifest_sha256": "e849cf8d79416ae509f4b880f9cefcd13e50e676f32ba5235f35bfbe869890a1"
+    },
+    {
+      "type": "first_review_infrastructure_failure",
+      "utc": "2026-10-10T03:27:29.536153+00:00",
+      "attempt": 1,
+      "scientific_files_read": 0,
+      "offline_commands_executed": 0,
+      "failed_tool_launch_attempts": 3,
+      "verdict": null,
+      "raw_final_message": "review_attempt_001/output/final_message.md",
+      "reason": "Nested sandbox-exec sandbox_apply failed with exit71; file-writing tool also failed. No scientific review completed.",
+      "limit_note": "Three shell tool launch attempts were reported though no command executed; preserve this deviation from bounded intended check count."
+    },
+    {
+      "type": "final_scientific_reviewer_dispatch",
+      "attempt": 2,
+      "started_utc": "2026-10-10T03:27:29.622681+00:00",
+      "snapshot_manifest_sha256": "e849cf8d79416ae509f4b880f9cefcd13e50e676f32ba5235f35bfbe869890a1"
+    },
+    {
+      "type": "supporting_integrity_assistance_completed",
+      "utc": "2026-10-10T03:31:14.712254+00:00",
+      "initial_scientific_hashes_matched": 83,
+      "branches_preserved": true,
+      "no_scientific_experiment": true
+    },
+    {
+      "type": "second_review_partial_closeout_usage_failure",
+      "attempt": 2,
+      "authoritative_end_utc": "2026-10-10T03:35:51.609649+00:00",
+      "exit_code": 1,
+      "reason": "Codex account usage limit after substantive REVIEW.md was saved",
+      "saved_scientific_critique": true,
+      "requested_json_and_final_audit_index_missing": true,
+      "no_third_dispatch_authorized": true
+    },
+    {
+      "type": "deadline_overrun_observed",
+      "observed_clock_utc": "2026-10-10T11:03:34+00:00",
+      "previous_observed_clock_utc": "2026-10-10T03:36:24+00:00",
+      "deadline_utc": "2026-10-10T10:36:56+00:00",
+      "explicit_user_pause": false,
+      "explanation": "Large wall-clock observation gap across continuation; no cause established. Do not subtract it or claim eight-hour compliance. Scientific execution was already stopped; only required delivery closeout remains."
+    },
+    {
+      "type": "delivery_artifacts_assembled",
+      "host_utc": "2026-10-10T11:05:43.901131+00:00",
+      "criterion_statuses": {
+        "A": "UNVERIFIED",
+        "B": "FAIL",
+        "C": "FAIL",
+        "D": "FAIL",
+        "E": "FAIL",
+        "F": "FAIL",
+        "G": "PASS"
+      }
+    },
+    {
+      "type": "delivery_integrity_check",
+      "host_utc": "2026-10-10T11:06:23.240821+00:00",
+      "exit_code": 0,
+      "result": "PASS",
+      "scope": "Artifact/preservation/accounting labels; no scientific achievement"
+    }
+  ],
+  "reference_acquisition_used": {
+    "direct_http_requests": 5,
+    "web_tool_calls": 4,
+    "automatic_model/provider_generations": 0,
+    "retry_loops": 0,
+    "final_full_revision_acquired": false,
+    "earlier_web_reader_failures": [
+      {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+        "error": "403 Forbidden"
+      },
+      {
+        "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+        "error": "400 Timeout fetching"
+      }
+    ]
+  },
+  "accounting_status": {
+    "elapsed_wall_seconds_at_latest_observation": 30398.0,
+    "eight_hour_allowance_exceeded": true,
+    "reviewer_allowance_exhausted": true,
+    "time_compliance": "FAIL; closeout delivered after deadline; cause of observed gap unverified",
+    "remaining_provider_allowance_usd": null,
+    "new_provider_generations": 0,
+    "new_provider_cost_usd": 0,
+    "all_reviewer_dispatches_total_historical_plus_new": 7
+  },
+  "closeout_host_utc": "2026-10-10T11:05:43.901131+00:00",
+  "final_phase": "Delivered bounded incomplete assessment; no further scientific work",
+  "closed_host_utc": "2026-10-10T11:06:23.240821+00:00",
+  "final_elapsed_wall_seconds": 30567.240821,
+  "deadline_overrun_seconds_at_closeout": 1767.240821
+}

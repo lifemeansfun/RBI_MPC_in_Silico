@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2020-10-09",
+  "meeting_start_date": "2020-10-07",
+  "publication_date": "2020-10-23",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+  "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+  "statement_sha256": {
+    "ashima_goyal": "3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce",
+    "jayanth_varma": "87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2",
+    "michael_patra": "e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7",
+    "mridul_saggar": "c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3",
+    "shaktikanta_das": "28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3",
+    "shashanka_bhide": "3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting October 7 to 9, 2020"
+}

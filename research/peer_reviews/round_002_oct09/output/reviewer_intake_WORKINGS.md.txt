@@ -1,0 +1,18 @@
+# Project workings and file map
+
+The scientific project models RBI Monetary Policy Committee decisions and member votes using six named member personas, a macroeconomic briefing, a four-round conversational simulation, categorical ballot aggregation, numerical reaction-function comparators and simulated interventions. Historical decisions and member statements are evaluation inputs. Assess implementation, data, retained results and the strength of scientific claims independently.
+
+- Scientific questions and intended scope: `RBI_MPC_In_Silico_Project_Plan_version_2.md`.
+- Macro inputs and availability: `src/data_pipeline/`, `src/schemas/macro_schema.py`, `data/processed/vintage_v3/` and `research/source_ledgers/`. Older data versions are retained.
+- Persona extraction and source manifests: `src/persona_engine/`, `src/schemas/persona_schema.py`, `personas/`.
+- Deliberation, information visibility and final ballots: `src/behavioral/`, `src/schemas/debate_schema.py`, `src/rule_engine/`.
+- Providers, budgets, caches, generation records and checkpoints: `src/infra/` and `config/config.yaml`.
+- Comparators and evaluation: `src/rational/`, `src/validation/`, `src/backtest/`.
+- Intervention mechanisms: `src/scenarios/`, `src/attribution/`.
+- Reports and verification: `src/reporting/`, `tests/`, `pytest.ini`, `Makefile`.
+- Current saved study evidence: `results/current_mock/`, including protocol, anchors, inputs, transcripts, predictions and summary. Inspect generation metadata to establish what kind of evidence it is.
+- Other retained original result tables: `results/legacy_saved/`.
+- Primary source records and two separate annotation passes for a later roster: `research/source_ledgers/expanded_panel_oct08/` and `research/source_ledgers/expanded_panel_oct08_doublecode/`.
+- Bundled related-work text: `Kazinnik_paper.pdf`, `kazinnik_extracted.txt`. You may check current primary literature or official source websites.
+
+The copy contains no parent chat, prior critical reviews, implementation plans, memory files, Git metadata, credentials, caches, or manuscript. Use only this supplied snapshot for project evidence. Do not seek any previous assessment. The shared Python runtime is `/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python`; use that exact path without dereferencing its symlink. Run any tests with this snapshot as cwd and an isolated basetemp inside it. Generation or paid provider calls are not part of this peer review. Preserve your own commands, raw logs, failed probes, and limitations in the new output directory.

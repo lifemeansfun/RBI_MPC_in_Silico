@@ -1,0 +1,28 @@
+{
+  "id": "nas2021_methodology",
+  "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/Notes_on_methodology_reasons_of_reasons_2021.pdf",
+  "filename": "nas2021_methodology.pdf",
+  "role": "Primary historical methodological/revision context",
+  "discovery": "Official primary web search actual URL",
+  "retrieved_at_utc": "2026-10-09T16:28:18.016493+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/Notes_on_methodology_reasons_of_reasons_2021.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:31:34 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "213542",
+    "Connection": "close",
+    "Last-Modified": "Mon, 19 Jun 2023 11:07:46 GMT",
+    "ETag": "\"64903702-34226\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:31:34 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_009/raw/nas2021_methodology.pdf",
+  "bytes": 213542,
+  "sha256": "c57295a15cee43d381eb2fda0c97a389117310bc4814cbc8661e816080f3adb7",
+  "primary_final_host": true,
+  "acquired": true
+}

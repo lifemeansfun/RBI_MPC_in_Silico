@@ -1,0 +1,103 @@
+{
+  "collector_argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/assessments/bounded_readiness_20261010/collect_evidence.py"
+  ],
+  "collector_sha256": "708a9bcae2195b96a3f3901adc97a51b5704af7fccb470bba8e5851641f976f2",
+  "started_at_utc": "2026-10-10T02:14:47.369238+00:00",
+  "completed_at_utc": "2026-10-10T02:14:48.205902+00:00",
+  "subprocesses": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "project_upgrade_codex\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "78de7f75bda03d696205b188af17b9540e02a172\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "main"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "7f2436bc4f32d6021b1e885eb49286c850de9139\n"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": " M Makefile\n M config/config.yaml\n M requirements-lock.txt\n M requirements.txt\n M research/implementation_plans/round_001.md\n M scripts/create_review_snapshot.py\n M scripts/reproduce.py\n M src/attribution/attribution_runner.py\n M src/backtest/backtest_runner.py\n M src/behavioral/debate_orchestrator.py\n M src/data_pipeline/statement_extractor.py\n M src/infra/cache.py\n M src/infra/config_loader.py\n M src/infra/cost_governor.py\n M src/infra/exceptions.py\n M src/infra/llm_client.py\n M src/infra/transcript_logger.py\n M src/persona_engine/extractor.py\n M src/rational/monte_carlo.py\n M src/rational/rational_panel_runner.py\n M src/rational/taylor_rule.py\n M src/reporting/report_builder.py\n M src/rule_engine/engine.py\n M src/run_stage2_pipeline.py\n M src/scenarios/run_counterfactual_experiments.py\n M src/scenarios/scenario_runner.py\n M src/schemas/debate_schema.py\n M src/schemas/macro_schema.py\n M src/schemas/persona_schema.py\n M src/validation/metrics.py\n M tests/test_attribution_and_scenarios.py\n M tests/test_debate_mock.py\n M tests/test_defenses_and_validation.py\n M tests/test_infra.py\n M tests/test_rule_engine.py\n M tests/test_taylor_rule.py\n?? data/processed/statements_v2/\n?? data/processed/vintage_v2/\n?? data/processed/vintage_v3/\n?? outputs/\n?? personas/calibration_2023-04-30_v2/\n?? research/assessments/\n?? research/implementation_plans/round_002.md\n?? research/peer_reviews/round_002_clean_defaults_oct09/\n?? research/peer_reviews/round_002_clean_process_oct09/\n?? research/peer_reviews/round_002_oct09/\n?? research/source_ledgers/expanded_panel_oct08/\n?? research/source_ledgers/expanded_panel_oct08_doublecode/\n?? research/source_ledgers/expanded_panel_oct09_adjudication/\n?? research/source_ledgers/gdp_fed_vintages/\n?? research/source_ledgers/historical_labels_round002/\n?? research/source_ledgers/literature/current_oct09/\n?? research/source_ledgers/output_gap_round002/\n?? research/source_ledgers/prior_policy/\n?? research/verification/\n?? results/upgrade_validation_round_001/\n?? results/upgrade_validation_round_002/\n?? runs/corrected_v1/\n?? scripts/reproduce_offline.py\n?? src/backtest/study_artifacts.py\n?? src/behavioral/comparator_forecasters.py\n?? src/data_pipeline/output_gap_estimation.py\n?? src/data_pipeline/vintage_panel.py\n?? src/infra/checkpoint.py\n?? src/infra/evidence.py\n?? src/infra/generation_evidence.py\n?? src/persona_engine/provenance.py\n?? src/persona_engine/rolling_inputs.py\n?? src/rational/calibration.py\n?? src/reporting/study_report.py\n?? src/schemas/decision_space.py\n?? src/schemas/temporal_panel_schema.py\n?? src/validation/baselines.py\n?? src/validation/observed_labels.py\n?? src/validation/study_replay.py\n?? tests/test_comparator_forecasters.py\n?? tests/test_deliberation_upgrade.py\n?? tests/test_macro_prompt_metadata.py\n?? tests/test_metric_contracts.py\n?? tests/test_monte_carlo_resolution.py\n?? tests/test_observed_labels.py\n?? tests/test_output_gap_estimation.py\n?? tests/test_review_snapshot.py\n?? tests/test_runtime_upgrade.py\n?? tests/test_scenario_doses.py\n?? tests/test_study_freeze.py\n?? tests/test_study_replay.py\n?? tests/test_study_report.py\n?? tests/test_temporal_panel_schema.py\n?? tests/test_vintage_rebuild.py\n"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-status",
+        "--diff-filter=MD",
+        "main",
+        "--",
+        "data",
+        "personas",
+        "runs",
+        "results"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "HEAD:config/config.yaml"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "Configuration contents omitted; budget cap extracted separately."
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "78de7f75bda03d696205b188af17b9540e02a172\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "main"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "stdout": "7f2436bc4f32d6021b1e885eb49286c850de9139\n"
+    }
+  ],
+  "network_or_provider_operations": 0,
+  "failed_exploratory_lookup": {
+    "path": "research/assessments",
+    "reason": "Closeout directory did not exist before creation; no scientific failure inferred."
+  }
+}

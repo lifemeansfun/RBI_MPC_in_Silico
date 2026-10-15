@@ -1,0 +1,24 @@
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.295597
+is_internal: true
+key_themes:
+- '"After the sharpest contraction in economic activity in Q1:2020-21, a number of
+  high frequency indicators of economic activity for Q2:2020-21 indicate a sequential
+  improvement." (2020-10-09)'
+- '"This has impelled some central banks to embark on aggressive policy tightening
+  to quell inflation risks, while a few others, mostly emerging market economies (EMEs),
+  continue to maintain accommodative policies." (2022-02-10)'
+- '"While issues of geopolitics and high inflation continue to impact the outlook,
+  the emergence of banking sector turmoil on both sides of the Atlantic and the sudden
+  announcement of oil production cut by the OPEC+ countries have rendered the global
+  outlook even more uncertain." (2023-04-06)'
+member_id: shaktikanta_das
+name: Shaktikanta Das
+provenance_status: dated_corpus
+role: Governor
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

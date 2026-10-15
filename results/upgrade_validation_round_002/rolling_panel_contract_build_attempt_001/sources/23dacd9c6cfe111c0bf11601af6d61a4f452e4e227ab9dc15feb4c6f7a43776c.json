@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2020-12-04",
+  "meeting_start_date": "2020-12-02",
+  "publication_date": "2020-12-18",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+  "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+  "statement_sha256": {
+    "ashima_goyal": "76563d61606010ead3bd62f1d1fc0ca22178fe7b917f699df2537f0aaee6cf20",
+    "jayanth_varma": "8979e4f4a04ea019c3c9ed013b82e1c70ff9be631bb297859897f140d648ae3f",
+    "michael_patra": "9efaf95f5da8e342f5e980462ba185950a0e9eb5a95cb49ba73e4b4ebf421c10",
+    "mridul_saggar": "1b4c40309ffa2e331ed9567fc7d129af57edb550067aab75385b90d42144a186",
+    "shaktikanta_das": "8eaa13732d1ac0e7918b70e24dce166f1ba509635dfd63aca4e4788caf02dc36",
+    "shashanka_bhide": "2b3b1c905d5d7d4ae4236acd9dd297ab5bb911f80dea6a0be96ee73e728a6d22"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting December 2 to 4, 2020"
+}

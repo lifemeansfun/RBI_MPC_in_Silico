@@ -1,0 +1,39 @@
+{
+  "argv": [
+    "scripts/reproduce_offline.py",
+    "--output-root",
+    "results/upgrade_validation_round_002/offline_reproduction_attempt_001"
+  ],
+  "started_at_unix": 1791562356.0555892,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scope": "offline source reconstruction and saved-evidence verification; no independent live replication",
+  "provider_generation_requested": false,
+  "steps": [
+    {
+      "name": "rebuild_inputs",
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "research/verification/rebuild_scientific_inputs.py",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/offline_reproduction_attempt_001/rebuilt_inputs"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "started_at_unix": 1791562356.079645,
+      "exit_code": 0,
+      "elapsed_seconds": 5.043499946594238
+    }
+  ],
+  "status": "failed",
+  "verified_generation_counts": {
+    "mock": 1344
+  },
+  "evidence_scope": "Mock procedural diagnostic",
+  "scientific_readiness": "Not established by saved-evidence verification or numerical threshold checks",
+  "elapsed_seconds": 31.39083170890808,
+  "scientific_source_files_unchanged": false,
+  "concurrent_source_changes": [
+    "research/source_ledgers/output_gap_round002/extracted/nas2020_methodology.txt",
+    "research/source_ledgers/output_gap_round002/extracted/official_gdp_revision_notification.txt"
+  ]
+}

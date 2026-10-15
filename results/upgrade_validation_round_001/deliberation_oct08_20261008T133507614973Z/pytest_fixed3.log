@@ -1,0 +1,116 @@
+........F...F........................................................... [100%]
+=================================== FAILURES ===================================
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_snapshot] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...rade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_fixed3_tmp/test_counterfactual_parent_rec3')
+source_linked_fixture_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date='2023-08-08', information_cutoff=datetime.datetime(...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'parent_snapshot', provider = 'mock'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    @pytest.mark.parametrize("provider", ["mock", "gemini"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, source_linked_fixture_snapshot, roster, corruption, provider):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(source_linked_fixture_snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+        client.provider = provider
+        with pytest.raises(GenerationProvenanceError):
+>           await orchestrator(tmp_path, client).run_meeting(corrupt, roster, roster[0].member_id)
+
+tests/test_deliberation_upgrade.py:183: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:289: in run_meeting
+    snapshot = self._validate_snapshot(snapshot)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.behavioral.debate_orchestrator.DebateOrchestrator object at 0x109deaa90>
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date='2023-08-08', information_cutoff=datetime.datetime(...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    def _validate_snapshot(self, snapshot: MacroMeetingSnapshot) -> MacroMeetingSnapshot:
+        snapshot = type(snapshot).model_validate(snapshot.model_dump())
+        if snapshot.input_track == "source_linked":
+            snapshot.verify_sources()
+        provider = getattr(self.client, "provider", "mock")
+        if snapshot.input_track == "source_linked" or (provider == "mock" and snapshot.input_track != "counterfactual"):
+            return snapshot
+        if snapshot.input_track != "counterfactual":
+            raise GenerationProvenanceError("Live research generation requires source-linked inputs")
+        parent_data = snapshot.intervention.get("parent_snapshot")
+        if not isinstance(parent_data, dict):
+            raise GenerationProvenanceError("Live counterfactual requires retained source-linked parent")
+>       parent = type(snapshot).model_validate(parent_data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       pydantic_core._pydantic_core.ValidationError: 1 validation error for MacroMeetingSnapshot
+E         Value error, Observation/evidence value mismatch: current_repo_rate_pct [type=value_error, input_value={'meeting_date': '2023-08...ts': ['guidance_truth']}, input_type=dict]
+E           For further information visit https://errors.pydantic.dev/2.13/v/value_error
+
+src/behavioral/debate_orchestrator.py:89: ValidationError
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_snapshot] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...rade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_fixed3_tmp/test_counterfactual_parent_rec7')
+source_linked_fixture_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date='2023-08-08', information_cutoff=datetime.datetime(...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'parent_snapshot', provider = 'gemini'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    @pytest.mark.parametrize("provider", ["mock", "gemini"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, source_linked_fixture_snapshot, roster, corruption, provider):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(source_linked_fixture_snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+        client.provider = provider
+        with pytest.raises(GenerationProvenanceError):
+>           await orchestrator(tmp_path, client).run_meeting(corrupt, roster, roster[0].member_id)
+
+tests/test_deliberation_upgrade.py:183: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:289: in run_meeting
+    snapshot = self._validate_snapshot(snapshot)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.behavioral.debate_orchestrator.DebateOrchestrator object at 0x109dce850>
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date='2023-08-08', information_cutoff=datetime.datetime(...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    def _validate_snapshot(self, snapshot: MacroMeetingSnapshot) -> MacroMeetingSnapshot:
+        snapshot = type(snapshot).model_validate(snapshot.model_dump())
+        if snapshot.input_track == "source_linked":
+            snapshot.verify_sources()
+        provider = getattr(self.client, "provider", "mock")
+        if snapshot.input_track == "source_linked" or (provider == "mock" and snapshot.input_track != "counterfactual"):
+            return snapshot
+        if snapshot.input_track != "counterfactual":
+            raise GenerationProvenanceError("Live research generation requires source-linked inputs")
+        parent_data = snapshot.intervention.get("parent_snapshot")
+        if not isinstance(parent_data, dict):
+            raise GenerationProvenanceError("Live counterfactual requires retained source-linked parent")
+>       parent = type(snapshot).model_validate(parent_data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       pydantic_core._pydantic_core.ValidationError: 1 validation error for MacroMeetingSnapshot
+E         Value error, Observation/evidence value mismatch: current_repo_rate_pct [type=value_error, input_value={'meeting_date': '2023-08...ts': ['guidance_truth']}, input_type=dict]
+E           For further information visit https://errors.pydantic.dev/2.13/v/value_error
+
+src/behavioral/debate_orchestrator.py:89: ValidationError
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_snapshot]
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_snapshot]
+2 failed, 70 passed in 2.50s

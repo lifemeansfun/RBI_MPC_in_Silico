@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2021-02-05",
+  "meeting_start_date": "2021-02-03",
+  "publication_date": "2021-02-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+  "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+  "statement_sha256": {
+    "ashima_goyal": "7d68359d17ee4570aab6ad36530a2cd18bbd8b284d89ffd3e27627e87f427625",
+    "jayanth_varma": "19a6c4efb7cf1114e694d94ffd741ed09885150d33d9e7eb046351deaa508281",
+    "michael_patra": "b5eb206c9f5cb8c5f42e964333bc4c4876211f11c369b543ef9a0cdb29d70b92",
+    "mridul_saggar": "87acb6148494d1a5f0c3b86327ea29271399bdfa38bf0c15b39dd64eb867d27a",
+    "shaktikanta_das": "1cb0fa8a7bc871ee422fcbf698b9283fc9771b70929feb417171ab6877e5eb73",
+    "shashanka_bhide": "21a3eb1ac73c962670719a8c1e60c68ee28fb4ad66f0665bde80051712a56f15"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting February 3-5, 2021"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdp_corrigendum_20240305",
+  "url": "https://mospi.gov.in/sites/default/files/press_release/CorrigendumPR05032024.pdf",
+  "role": "gdp_corrigendum",
+  "format": "pdf",
+  "release_date": "2024-03-05",
+  "reference_period": "",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:17.810550+00:00",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/CorrigendumPR05032024.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:57:30 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "558793",
+    "Connection": "keep-alive",
+    "Last-Modified": "Tue, 05 Mar 2024 05:29:06 GMT",
+    "ETag": "\"65e6ada2-886c9\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:57:30 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 558793,
+  "acquired": true,
+  "local_file": "raw/gdp_corrigendum_20240305.pdf",
+  "sha256": "84468ab4783c4b1fa9cdb3b72ff4545522ab7f42425d3577ef3569e00fc6ca66"
+}

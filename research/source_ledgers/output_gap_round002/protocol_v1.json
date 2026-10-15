@@ -1,0 +1,53 @@
+{
+  "version": "rbi-output-gap-proxy-v1",
+  "frozen_at_utc": "2026-10-09 16:27:55 UTC",
+  "scope": "Retrospective research protocol frozen before any numerical proxy output or forecast evaluation; not preregistered before the exposed 2020-2024 historical panel",
+  "primary": {
+    "minimum_consecutive_quarters": 28,
+    "minimum_observations_each_quarter": 7,
+    "price_basis": "Constant 2011-12 prices, GDP at market prices, INR crore",
+    "seasonal_model": "OLS log GDP on intercept, linear integer quarter index, and zero-sum four-quarter effects; fitted on available prefix only",
+    "trend_filter": "Endpoint of HP solution (I + lambda D2' D2) trend = seasonally adjusted log GDP; recompute for each dated available prefix",
+    "hp_lambda": 1600,
+    "reported_units": "Percent deviation of seasonally adjusted GDP from statistical log trend: 100*expm1(log_cycle)",
+    "additional_units": "100*log_cycle in log percentage points, reported separately",
+    "history_window": "All available consecutive quarters; no forecasts or future observations appended"
+  },
+  "availability": {
+    "strict_historical_condition": "Documented availability tied to retained table bytes/version with source-linked publication/link evidence, earlier than exclusive cutoff; coherent vector from one source vintage",
+    "unaccepted_proxies": [
+      "edition year/month alone",
+      "workbook created/modified metadata",
+      "HTTP Last-Modified alone",
+      "later final-vintage values assigned to earlier cutoffs",
+      "source URL existence at current retrieval alone"
+    ],
+    "missingness": "Return no strict historical observation when version availability/coherence or required history is unverified; preserve numerical ex-post diagnostics separately",
+    "composition": "No silent splicing. Multi-source vectors are excluded from primary version1; a later protocol would require a frozen audited precedence/revision contract.",
+    "publication_bound": "If version linkage is documented but exact first release time is unknown, a genuine conservative upper bound may be recorded explicitly as a bound, not fabricated exact first timestamp."
+  },
+  "sensitivities": {
+    "hp_lambdas": [
+      400,
+      6400
+    ],
+    "coverage_minimum_quarters": 40,
+    "trailing_window_quarters": 40,
+    "pre_covid_seasonal_training_last_calendar_quarter": "2019Q4",
+    "pre_covid_minimum_quarters": 28,
+    "pre_covid_reason": "Nonrepeating COVID movements can be absorbed by constant quarter dummy refits; fixed pre-COVID seasonality is a separate assumption, not an official correction"
+  },
+  "diagnostics": {
+    "endpoint_news": "Within each retained downloaded source vector compare prefix endpoint with later extended filter estimate of that same reference quarter; explicitly pseudo-real-time/ex-post, never substitute into earlier information set",
+    "data_revision": "Compare the same reference endpoint and same prefix length across retained versions; current downloads do not authenticate historical availability",
+    "uncertainty": "Sensitivity ranges and revisions are not calibrated confidence intervals or fitted model uncertainty"
+  },
+  "assumptions": [
+    "Statistical detrending proxy, not measured potential output or structural capacity",
+    "Constant proportional quarter seasonality, no moving holiday/calendar treatment",
+    "28 quarters is a conservative study choice informed by IMF/Eurostat seasonal guidance, not an HP identification theorem",
+    "No parameter/source selection based on Taylor/comparator forecast scores",
+    "Economic forecasting usefulness and Indian seasonal adequacy remain unverified"
+  ],
+  "methodology_bibliography": "methodology_sources/bibliography_verified_20261009.json"
+}

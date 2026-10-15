@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-08T13:35:00.097044+00:00",
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "branch": "project_upgrade_codex",
+  "git_head": "78de7f75bda03d696205b188af17b9540e02a172",
+  "source_hashes": {
+    "src/infra/cost_governor.py": "86de54671ed8177f1e239324f0f776955a1c7cb9cfa930dee28e7f7636b5b5f7",
+    "src/infra/config_loader.py": "72c08d37240706b448c9525c104608a1076cc1b508806d96cf202b5673d0536f",
+    "src/infra/checkpoint.py": "df4960201af8d646ed48a2d0796eb31354b6ba30eb3aa1e24bc3874585c14cc2",
+    "src/infra/transcript_logger.py": "c053bfb5f2fa2c84f5627eda1cbb5aa41694dc6449314de0cb86bd1e775a29e9",
+    "src/infra/cache.py": "8318f91ed30c7992537988ea0fce37920bf9e15787866717d360475a22548a56",
+    "src/infra/__init__.py": "95a1d3127fd23782776374c26fe311fcaaa9343bb02b03cc805ad8948e4b253f",
+    "src/infra/llm_client.py": "1ed799022ad0e86ff329e9585e03ecfab9a1fed757cc95071be15593e90a9681",
+    "src/infra/exceptions.py": "d9ca96f0057ca894af2b2a62632fd9b71a572c7593cb7a3d8baff4c9edc159ed",
+    "src/infra/evidence.py": "cab5633c69668c96167a15704547d6a0b1d87514cf07fdd8fad9b67ae20e24f0",
+    "tests/test_runtime_upgrade.py": "6988b1cfebca650bf6dabad11c32194471d7e1518b0d7acd9803c7f8d0ddda5e"
+  },
+  "evidence_scope": "offline mocked providers and deterministic fixtures; no paid model calls"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "nas2019_gdp_expenditure",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.2.pdf",
+    "filename": "nas2019_s8_18_2.pdf",
+    "role": "constant_price_quarterly_GDP_candidate",
+    "discovery": "Primary-domain web search result exact URL"
+  },
+  {
+    "id": "annual_report_2020_2021",
+    "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2020-21%20.pdf",
+    "filename": "annual_report_2020_2021.pdf",
+    "role": "NAS2020_publication_month_evidence",
+    "discovery": "Primary-domain web search result exact URL"
+  },
+  {
+    "id": "current_site_discovery_js",
+    "url": "https://www.mospi.gov.in/assets/index-FXIi3u1F.js",
+    "filename": "current_site_discovery.js",
+    "role": "Public primary site route/API discovery, not historical data",
+    "discovery": "Script URL in retained primary landing-page HTML"
+  }
+]

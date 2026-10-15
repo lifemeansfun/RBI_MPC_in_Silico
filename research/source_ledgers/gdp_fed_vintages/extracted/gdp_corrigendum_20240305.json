@@ -1,0 +1,46 @@
+{
+  "local_source_file": "raw/gdp_corrigendum_20240305.pdf",
+  "source_sha256": "84468ab4783c4b1fa9cdb3b72ff4545522ab7f42425d3577ef3569e00fc6ca66",
+  "pages": [
+    {
+      "page": 1,
+      "text": "GOVERNMENT OF INDIA\nMINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION\nDated 11th Phalgun, 1945 Saka\n1st March, 2024\nCorrigendum to Press Note on Second Advance Estimates of National Income, 2023-24,\nQuarterly Estimates of Gross Domestic Product for the Third Quarter (October-December),\n2023-24 and First Revised Estimates of National Income, Consumption Expenditure, Saving\nand Capital Formation, 2022-23\nRow Number 25, 26 & 30 of the \u2018Statement 2A: Second Advance Estimates of National\nIncome and Expenditure Components of GDP, 2023-24 (at Current Prices)\u2019 of Part A of the\nPress Note dated 29th February, 2024 may be read as:\nPercentage\nChange Over\nSl. 2021-22 2022-23 2023-24 Previous\nItem\nNo. (2nd RE) (1st RE) (SAE) Year\n2022- 2023-\n23 24\n.\n.\n.\nGross National Disposable\n25 2,39,25,034 2,73,98,551 2,98,39,727 14.5 8.9\nI ncome (GNDI)\nNet National Disposable\n26 2,12,58,230 2,42,58,653 2,64,42,791 14.1 9.0\nIncome (NNDI)\n.\n.\n.\n30 Per Capita GNDI (\u20b9) 1,74,816 1,98,125 2,13,905 13.3 8.0\n.\n***",
+      "tables": [
+        [
+          [
+            "Sl.\nNo.",
+            "Item",
+            "2021-22\n(2nd RE)",
+            "2022-23\n(1st RE)",
+            "2023-24\n(SAE)",
+            "Percentage\nChange Over\nPrevious\nYear\n2022- 2023-\n23 24"
+          ],
+          [
+            ".\n.\n.",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "25\n26",
+            "Gross National Disposable\nI ncome (GNDI)\nNet National Disposable\nIncome (NNDI)",
+            "2,39,25,034 2,73,98,551 2,98,39,727\n2,12,58,230 2,42,58,653 2,64,42,791",
+            null,
+            null,
+            "14.5 8.9\n14.1 9.0"
+          ],
+          [
+            ".\n.\n.\n30\n.",
+            "Per Capita GNDI (\u20b9)",
+            "1,74,816 1,98,125 2,13,905",
+            null,
+            null,
+            "13.3 8.0"
+          ]
+        ]
+      ]
+    }
+  ]
+}

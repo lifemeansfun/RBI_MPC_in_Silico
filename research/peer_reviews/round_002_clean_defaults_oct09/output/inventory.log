@@ -1,0 +1,283 @@
+tests/test_defenses_and_validation.py
+tests/fixtures/mock_macro_panel.parquet
+tests/fixtures/generate_mock_fixtures.py
+tests/test_taylor_rule.py
+tests/test_deliberation_upgrade.py
+tests/test_debate_mock.py
+tests/test_attribution_and_scenarios.py
+tests/test_infra.py
+tests/test_study_replay.py
+tests/test_rule_engine.py
+tests/test_runtime_upgrade.py
+src/validation/study_replay.py
+src/validation/data_perturbation.py
+src/validation/baselines.py
+src/validation/metrics.py
+src/run_live_meeting.py
+src/run_fast_mvp_demo.py
+src/rule_engine/engine.py
+src/rule_engine/__init__.py
+src/persona_engine/provenance.py
+src/persona_engine/extractor.py
+src/scenarios/run_counterfactual_experiments.py
+src/scenarios/scenario_runner.py
+src/backtest/run_holdout_live.py
+src/backtest/backtest_runner.py
+src/backtest/study_artifacts.py
+src/attribution/attribution_runner.py
+src/schemas/persona_schema.py
+src/schemas/debate_schema.py
+src/schemas/macro_schema.py
+src/schemas/__init__.py
+src/schemas/decision_space.py
+src/rational/taylor_rule.py
+src/rational/rational_panel_runner.py
+src/rational/calibration.py
+src/rational/monte_carlo.py
+src/rational/__init__.py
+src/behavioral/__init__.py
+src/behavioral/debate_orchestrator.py
+src/__init__.py
+src/run_stage2_pipeline.py
+src/infra/evidence.py
+src/infra/generation_evidence.py
+src/infra/exceptions.py
+src/infra/llm_client.py
+src/infra/__init__.py
+src/infra/cache.py
+src/infra/transcript_logger.py
+src/infra/checkpoint.py
+src/infra/config_loader.py
+src/infra/cost_governor.py
+src/data_pipeline/minutes_crawler.py
+src/data_pipeline/fred_client.py
+src/data_pipeline/statement_extractor.py
+src/data_pipeline/macro_builder.py
+src/data_pipeline/vintage_panel.py
+src/reporting/plot_figures.py
+src/reporting/report_builder.py
+{"baseline_metrics":{"calibration_constant_dissent":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.5454545454545454,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5714285714285714,"total_meetings_evaluated":8,"true_positive_dissent_events":6},"hold_previous_stance":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":50.0,"dissent_f1":0.0,"dissent_precision":null,"dissent_recall":0.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":false,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.0,"total_meetings_evaluated":8,"true_positive_dissent_events":0},"lag_persistence":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":75.0,"dissent_f1":0.8,"dissent_precision":1.0,"dissent_recall":0.6666666666666666,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.8,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.8,"total_meetings_evaluated":8,"true_positive_dissent_events":4}},"condition_metrics":{"earlier_rounds":{"1":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6},"2":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6}},"full":{"1":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6},"2":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6}},"independent":{"1":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6},"2":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":25.0,"dissent_f1":0.5454545454545454,"dissent_precision":0.375,"dissent_recall":1.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":true,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.5454545454545454,"total_meetings_evaluated":8,"true_positive_dissent_events":6}},"masked":{"1":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":50.0,"dissent_f1":0.0,"dissent_precision":null,"dissent_recall":0.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":false,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.0,"total_meetings_evaluated":8,"true_positive_dissent_events":0},"2":{"directional_rate_accuracy_pct":100.0,"dissent_exact_match_rate_pct":50.0,"dissent_f1":0.0,"dissent_precision":null,"dissent_recall":0.0,"exact_rate_accuracy_pct":100.0,"observed_positive_dissent_events":6,"passed_validation_gate":false,"rate_class_counts":{"-25":0,"-50":0,"0":8,"25":0,"35":0,"40":0,"50":0},"rate_dissent_f1":0.0,"rate_mae_bps":0.0,"stance_accuracy_pct":100.0,"stance_dissent_f1":0.0,"total_meetings_evaluated":8,"true_positive_dissent_events":0}}},"control_effects":{"earlier_rounds":[{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false}],"independent":[{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":false},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":false}],"masked":[{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-06-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-08-10","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-10-06","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2023-12-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-02-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-04-05","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-06-07","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":1,"stance_changed":false,"stance_dissent_changed":true},{"meeting_date":"2024-08-08","rate_dissent_changed":false,"rate_effect_bps":0,"replicate_id":2,"stance_changed":false,"stance_dissent_changed":true}]},"elapsed_seconds":12.15606689453125,"empirical_superiority_established":false,"live_provider_calls":0,"meeting_dates":["2023-06-08","2023-08-10","2023-10-06","2023-12-08","2024-02-08","2024-04-05","2024-06-07","2024-08-08"],"n_meetings":8,"n_replicates":2,"observed_rate_class_counts":{"0":8},"paired_rate_mae_comparisons":{"calibration_constant_dissent":{"block_size":2,"bootstrap":"circular temporal-block","ci95":[0.0,0.0],"difference_by_meeting":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"mean_advantage":0.0,"n_meetings":8,"resamples":2000,"seed":42,"sign_flip_assumption":"exact meeting sign flip (requires exchangeability/symmetry)","sign_flip_pvalue":1.0,"superiority_supported":false},"hold_previous_stance":{"block_size":2,"bootstrap":"circular temporal-block","ci95":[0.0,0.0],"difference_by_meeting":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"mean_advantage":0.0,"n_meetings":8,"resamples":2000,"seed":42,"sign_flip_assumption":"exact meeting sign flip (requires exchangeability/symmetry)","sign_flip_pvalue":1.0,"superiority_supported":false},"lag_persistence":{"block_size":2,"bootstrap":"circular temporal-block","ci95":[0.0,0.0],"difference_by_meeting":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"mean_advantage":0.0,"n_meetings":8,"resamples":2000,"seed":42,"sign_flip_assumption":"exact meeting sign flip (requires exchangeability/symmetry)","sign_flip_pvalue":1.0,"superiority_supported":false}},"platform":"macOS-26.6.2-arm64-arm-64bit","producer_code_hash":"717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0","producer_code_unchanged":true,"prospective_forecasting_validated":false,"python":"3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]","qualification":"Mock behavior exercises complete paths. Saved replay is consistency verification. Neither validates live prediction, economic welfare or real-policy causal effects.","replay_summaries":{"earlier_rounds":{"evidence_scope":"exposed retrospective study","generation_evidence_counts":{"mock":384},"independent_live_replication":false,"n_meetings":8,"n_replicates":2,"producer_code_hash":"717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0","qualification":"Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated","recorded_estimated_cost_usd":0.0,"replay_provider_calls":0,"replay_version":1,"study_manifest_hash":"6aad8bddccc4b175ff4c0b7e3c6a2284823d9230623ba346c44d41c96b3a3803"},"full":{"evidence_scope":"exposed retrospective study","generation_evidence_counts":{"mock":384},"independent_live_replication":false,"n_meetings":8,"n_replicates":2,"producer_code_hash":"717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0","qualification":"Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated","recorded_estimated_cost_usd":0.0,"replay_provider_calls":0,"replay_version":1,"study_manifest_hash":"4c3fe042b212e2b095f7341cff1ad933d971a4f6251b84c3f171aee703a5748e"},"independent":{"evidence_scope":"exposed retrospective study","generation_evidence_counts":{"mock":192},"independent_live_replication":false,"n_meetings":8,"n_replicates":2,"producer_code_hash":"717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0","qualification":"Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated","recorded_estimated_cost_usd":0.0,"replay_provider_calls":0,"replay_version":1,"study_manifest_hash":"06b633db454a24f9716b67e68c5e0a65f68ff8ab30e502020889102d03989d95"},"masked":{"evidence_scope":"exposed retrospective study","generation_evidence_counts":{"mock":384},"independent_live_replication":false,"n_meetings":8,"n_replicates":2,"producer_code_hash":"717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0","qualification":"Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated","recorded_estimated_cost_usd":0.0,"replay_provider_calls":0,"replay_version":1,"study_manifest_hash":"72ac25064d750c59383f7e867e368415798310a0def55f2726d0dfdc0d5ff5ef"}},"scope":"mock procedural diagnostic on exposed historical evidence","source_missingness":{"2023-06-08":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2023-08-10":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2023-10-06":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2023-12-08":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2024-02-08":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2024-04-05":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2024-06-07":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"],"2024-08-08":["cpi_core_yoy_pct","cpi_food_yoy_pct","iip_growth_yoy_pct","output_gap_pct","system_liquidity_cr","usd_inr_exchange_rate","brent_crude_usd_bbl","monsoon_departure_lpa_pct"]},"summary_finalized_from_existing_evidence":true}
+{"calibration_hash":"2fa9baf79ad14f396a56cd0c9c762be49deca9dc4ecece60c1d5409c1a0c0d2a","cutoff":"2023-04-06","information_cutoff":"2023-04-30","method":"best constant dissent set per channel by calibration F1 then exact-match","rate_dissenters":["ashima_goyal","jayanth_varma"],"selection_status":"calibration only; cohort-specific","stance_dissenters":["jayanth_varma"]}
+"""Aligned, channel-specific predictive metrics and meeting-level paired uncertainty."""
+from itertools import product
+from typing import Sequence
+import math
+import numpy as np
+from pydantic import BaseModel, ConfigDict, Field
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS
+
+
+class ValidationMetricsSummary(BaseModel):
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
+    total_meetings_evaluated: int = Field(gt=0)
+    directional_rate_accuracy_pct: float = Field(ge=0, le=100)
+    exact_rate_accuracy_pct: float = Field(ge=0, le=100)
+    rate_mae_bps: float = Field(ge=0)
+    stance_accuracy_pct: float = Field(ge=0, le=100)
+    dissent_exact_match_rate_pct: float = Field(ge=0, le=100)
+    dissent_precision: float | None = Field(ge=0, le=1)
+    dissent_recall: float | None = Field(ge=0, le=1)
+    dissent_f1: float | None = Field(ge=0, le=1)
+    rate_dissent_f1: float | None = Field(default=None, ge=0, le=1)
+    stance_dissent_f1: float | None = Field(default=None, ge=0, le=1)
+    true_positive_dissent_events: int = Field(ge=0)
+    observed_positive_dissent_events: int = Field(ge=0)
+    rate_class_counts: dict[str, int]
+    passed_validation_gate: bool
+
+
+def _aligned(*sequences):
+    lengths = [len(x) for x in sequences]
+    if not lengths or not lengths[0] or len(set(lengths)) != 1:
+        raise ValueError(f"Evaluation requires nonempty, equal-length aligned inputs: {lengths}")
+
+
+def _dissent_set(values):
+    if isinstance(values, (str, bytes)) or any(not isinstance(x, str) or not x for x in values):
+        raise ValueError("Dissent labels must be sequences of nonempty member IDs")
+    if len(set(values)) != len(values):
+        raise ValueError("Duplicate dissent member ID")
+    return set(values)
+
+
+class MetricsEvaluator:
+    @staticmethod
+    def compute_dissent_f1(predicted_dissenters_list, ground_truth_dissenters_list):
+        _aligned(predicted_dissenters_list, ground_truth_dissenters_list)
+        tp = fp = fn = exact = 0
+        for pred_values, true_values in zip(predicted_dissenters_list, ground_truth_dissenters_list):
+            pred, true = _dissent_set(pred_values), _dissent_set(true_values)
+            tp += len(pred & true)
+            fp += len(pred - true)
+            fn += len(true - pred)
+            exact += pred == true
+        precision = tp / (tp + fp) if tp + fp else None
+        recall = tp / (tp + fn) if tp + fn else None
+        # No observed positives: recall/F1 cannot establish detection performance.
+        f1 = 2 * tp / (2 * tp + fp + fn) if tp + fn else None
+        return precision, recall, f1, exact / len(predicted_dissenters_list) * 100
+
+    @classmethod
+    def evaluate_panel(cls, simulated_rate_actions, ground_truth_rate_actions,
+                       simulated_stances, ground_truth_stances, predicted_dissenters,
+                       ground_truth_dissenters, directional_threshold=.75, dissent_f1_threshold=.50,
+                       stance_threshold=.70, *, predicted_rate_dissenters=None, true_rate_dissenters=None,
+                       predicted_stance_dissenters=None, true_stance_dissenters=None):
+        _aligned(simulated_rate_actions, ground_truth_rate_actions, simulated_stances,
+                 ground_truth_stances, predicted_dissenters, ground_truth_dissenters)
+        for rate in [*simulated_rate_actions, *ground_truth_rate_actions]:
+            if type(rate) is not int or rate not in RATE_ACTIONS_BPS:
+                raise ValueError(f"Invalid rate action {rate}")
+        if any(stance not in STANCE_ACTIONS for stance in [*simulated_stances, *ground_truth_stances]):
+            raise ValueError("Unknown stance")
+        if any(not math.isfinite(t) or not 0 <= t <= 1 for t in (directional_threshold, dissent_f1_threshold, stance_threshold)):
+            raise ValueError("Metric thresholds must be finite proportions")
+        n = len(simulated_rate_actions)
+        sign = lambda x: (x > 0) - (x < 0)
+        direction = sum(sign(a) == sign(b) for a, b in zip(simulated_rate_actions, ground_truth_rate_actions)) / n
+        exact = sum(a == b for a, b in zip(simulated_rate_actions, ground_truth_rate_actions)) / n
+        mae = sum(abs(a - b) for a, b in zip(simulated_rate_actions, ground_truth_rate_actions)) / n
+        stance = sum(a == b for a, b in zip(simulated_stances, ground_truth_stances)) / n
+        precision, recall, f1, exact_dissent = cls.compute_dissent_f1(predicted_dissenters, ground_truth_dissenters)
+        channels = []
+        for pred, truth in ((predicted_rate_dissenters, true_rate_dissenters),
+                            (predicted_stance_dissenters, true_stance_dissenters)):
+            if (pred is None) != (truth is None):
+                raise ValueError("Both prediction and truth are required for each dissent channel")
+            if pred is not None:
+                _aligned(simulated_rate_actions, pred, truth)
+            channels.append(cls.compute_dissent_f1(pred, truth)[2] if pred is not None else None)
+        return ValidationMetricsSummary(
+            total_meetings_evaluated=n, directional_rate_accuracy_pct=100 * direction,
+            exact_rate_accuracy_pct=100 * exact, rate_mae_bps=mae, stance_accuracy_pct=100 * stance,
+            dissent_exact_match_rate_pct=exact_dissent, dissent_precision=precision,
+            dissent_recall=recall, dissent_f1=f1, rate_dissent_f1=channels[0], stance_dissent_f1=channels[1],
+            true_positive_dissent_events=sum(len(set(a) & set(b)) for a, b in zip(predicted_dissenters, ground_truth_dissenters)),
+            observed_positive_dissent_events=sum(len(x) for x in ground_truth_dissenters),
+            rate_class_counts={str(action): sum(x == action for x in ground_truth_rate_actions) for action in RATE_ACTIONS_BPS},
+            passed_validation_gate=direction >= directional_threshold and stance >= stance_threshold
+                and f1 is not None and f1 >= dissent_f1_threshold)
+
+
+def aligned_prediction_join(predictions, truth, keys=("meeting_date",)):
+    """Reject duplicates, missing or extra outcomes before computing metrics."""
+    if predictions.empty or truth.empty:
+        raise ValueError("Empty prediction or truth panel")
+    if predictions.duplicated(list(keys)).any() or truth.duplicated(list(keys)).any():
+        raise ValueError("Duplicate outcome join key")
+    merged = predictions.merge(truth, on=list(keys), how="outer", validate="one_to_one", indicator=True,
+                               suffixes=("_prediction", "_truth"))
+    if not (merged["_merge"] == "both").all():
+        raise ValueError("Missing or extra outcome join keys")
+    return merged.drop(columns="_merge")
+
+
+def paired_meeting_uncertainty(meeting_dates: Sequence[str], model_losses: Sequence[float],
+                               baseline_losses: Sequence[float], *, block_size=2, n_resamples=10000, seed=42):
+    """Positive difference favors model. One row per meeting; no pseudo-replicate N.
+
+    Circular moving-block bootstrap preserves short temporal dependence. The exact
+    sign-flip test additionally assumes symmetric independent meeting differences;
+    it is labeled separately and cannot remove serial dependence.
+    """
+    _aligned(meeting_dates, model_losses, baseline_losses)
+    if len(set(meeting_dates)) != len(meeting_dates) or list(meeting_dates) != sorted(meeting_dates):
+        raise ValueError("Paired losses must have unique chronological meeting keys")
+    delta = np.asarray(baseline_losses, dtype=float) - np.asarray(model_losses, dtype=float)
+    if not np.isfinite(delta).all() or block_size < 1 or n_resamples < 100:
+        raise ValueError("Invalid uncertainty inputs")
+    n = len(delta)
+    if n < 2:
+        return {"n_meetings": n, "mean_advantage": float(delta.mean()), "ci95": None,
+                "sign_flip_pvalue": None, "superiority_supported": False, "reason": "Insufficient meeting clusters"}
+    block_size = min(block_size, n)
+    rng = np.random.default_rng(seed)
+    starts = rng.integers(0, n, size=(n_resamples, math.ceil(n / block_size)))
+    indices = (starts[..., None] + np.arange(block_size)) % n
+    means = delta[indices.reshape(n_resamples, -1)[:, :n]].mean(axis=1)
+    interval = np.quantile(means, [.025, .975]).tolist()
+    observed = abs(float(delta.mean()))
+    if n <= 18:
+        statistics = np.asarray([abs(np.mean(delta * signs)) for signs in product((-1, 1), repeat=n)])
+        pvalue = float(np.mean(statistics >= observed - 1e-12))
+        test = "exact meeting sign flip (requires exchangeability/symmetry)"
+    else:
+        statistics = abs((rng.choice((-1, 1), (n_resamples, n)) * delta).mean(axis=1))
+        pvalue = float((1 + np.sum(statistics >= observed - 1e-12)) / (n_resamples + 1))
+        test = "Monte Carlo meeting sign flip (requires exchangeability/symmetry)"
+    return {"n_meetings": n, "mean_advantage": float(delta.mean()), "ci95": interval,
+            "bootstrap": "circular temporal-block", "block_size": block_size, "resamples": n_resamples,
+            "seed": seed, "sign_flip_pvalue": pvalue, "sign_flip_assumption": test,
+            "superiority_supported": interval[0] > 0, "difference_by_meeting": delta.tolist()}
+
+
+def holm_adjust(pvalues):
+    values = np.asarray(pvalues, dtype=float)
+    if values.ndim != 1 or not np.isfinite(values).all() or np.any((values < 0) | (values > 1)):
+        raise ValueError("Invalid p-values")
+    order = np.argsort(values)
+    adjusted = np.empty(len(values))
+    previous = 0.0
+    for rank, index in enumerate(order):
+        previous = max(previous, min(1.0, (len(values) - rank) * values[index]))
+        adjusted[index] = previous
+    return adjusted.tolist()
+"""Strong, reproducible historical baselines; only published prior truth is usable."""
+from collections import Counter
+from datetime import date
+import hashlib
+import json
+from src.validation.metrics import MetricsEvaluator
+
+
+def fit_dissent_baseline(calibration_truth, cutoff="2023-04-06", *, information_cutoff="2023-04-30"):
+    if date.fromisoformat(cutoff).isoformat() != cutoff or date.fromisoformat(information_cutoff).isoformat() != information_cutoff:
+        raise ValueError('Baseline cutoffs must be ISO calendar dates')
+    if not calibration_truth or any(row['meeting_date'] > cutoff for row in calibration_truth):
+        raise ValueError('Holdout or empty truth in calibration')
+    if len({row['meeting_date'] for row in calibration_truth}) != len(calibration_truth):
+        raise ValueError('Duplicate calibration meeting')
+    for row in calibration_truth:
+        meeting, publication = date.fromisoformat(row['meeting_date']), date.fromisoformat(row['publication_date'])
+        if publication < meeting or row['publication_date'] >= information_cutoff:
+            raise ValueError('Calibration labels are unavailable at the declared selection freeze')
+    result = {'cutoff': cutoff, 'information_cutoff':information_cutoff,
+              'method': 'best constant dissent set per channel by calibration F1 then exact-match',
+              'selection_status': 'calibration only; cohort-specific',
+              'calibration_hash': hashlib.sha256(json.dumps(calibration_truth, sort_keys=True).encode()).hexdigest()}
+    for channel in ('rate_dissenters', 'stance_dissenters'):
+        candidates = sorted({tuple(sorted(row[channel])) for row in calibration_truth})
+        truth = [row[channel] for row in calibration_truth]
+        scored = []
+        for candidate in candidates:
+            precision, recall, f1, exact = MetricsEvaluator.compute_dissent_f1([candidate] * len(truth), truth)
+            scored.append((f1 if f1 is not None else -1, exact, candidate))
+        # Lexical tie-break is predetermined and recorded; no evaluation labels used.
+        result[channel] = list(max(scored, key=lambda item: (item[0], item[1], tuple(item[2])))[2])
+    return result
+
+
+def baseline_predictions(snapshots, truth, frozen_dissent):
+    by_date = {row['meeting_date']: row for row in truth}
+    if len(by_date) != len(truth):
+        raise ValueError('Duplicate truth meeting')
+    rows = []
+    for snapshot in snapshots:
+        # Entire minutes publication day precedes the meeting-start cutoff.
+        cutoff = snapshot.information_cutoff.date().isoformat() if snapshot.information_cutoff else snapshot.meeting_date
+        available = sorted([r for r in truth if r['publication_date'] < cutoff], key=lambda r:r['meeting_date'])
+        prior = available[-1] if available else None
+        for name in ('hold_previous_stance', 'lag_persistence', 'calibration_constant_dissent'):
+            rate = prior['actual_rate_bps'] if name == 'lag_persistence' and prior else 0
+            stance = prior['actual_stance'] if name == 'lag_persistence' and prior else snapshot.prev_stance
+            rate_dissent = prior['rate_dissenters'] if name == 'lag_persistence' and prior else []
+            stance_dissent = prior['stance_dissenters'] if name == 'lag_persistence' and prior else []
+            if name == 'calibration_constant_dissent':
+                if snapshot.meeting_date <= frozen_dissent['cutoff'] or cutoff < frozen_dissent['information_cutoff']:
+                    raise ValueError('Fitted baseline evaluated inside calibration')
+                rate_dissent, stance_dissent = frozen_dissent['rate_dissenters'], frozen_dissent['stance_dissenters']
+            rows.append({'meeting_date':snapshot.meeting_date, 'baseline':name, 'rate_bps':rate,
+                         'stance':stance, 'rate_dissenters':list(rate_dissent), 'stance_dissenters':list(stance_dissent),
+                         'source_prior_meeting':prior['meeting_date'] if prior else None,
+                         'evidence_type':'deterministic_baseline'})
+    return rows

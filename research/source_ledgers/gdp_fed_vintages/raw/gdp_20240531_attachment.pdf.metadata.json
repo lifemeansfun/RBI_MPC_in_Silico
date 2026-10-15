@@ -1,0 +1,32 @@
+{
+  "id": "gdp_20240531_attachment",
+  "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/may/doc2024531339301.pdf",
+  "format": "pdf",
+  "role": "gdp_release_pdf",
+  "release_date": "2024-05-31",
+  "reference_period": "FY2023-24Q4",
+  "discovery_parent_id": "gdp_20240531",
+  "discovery_parent_sha256": "067076c4480ec953ef93fa013f316058855030a0e5751e5ff67427d90add1061",
+  "retrieved_at_utc": "2026-10-05T14:54:29.845289+00:00",
+  "status_code": 200,
+  "final_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/may/doc2024531339301.pdf",
+  "response_headers": {
+    "Content-Type": "application/pdf",
+    "Last-Modified": "Fri, 31 May 2024 11:49:57 GMT",
+    "Accept-Ranges": "bytes",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Access-Control-Allow-Origin": "https://pib.gov.in",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' https://*.pib.gov.in data:; style-src 'self' 'unsafe-inline'; frame-ancestors https://pib.gov.in https://*.pib.gov.in; base-uri 'self'; form-action 'self';",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+    "Content-Length": "826650",
+    "Cache-Control": "no-cache",
+    "Date": "Mon, 05 Oct 2026 14:54:31 GMT",
+    "Connection": "keep-alive"
+  },
+  "bytes": 826650,
+  "acquired": true,
+  "local_file": "raw/gdp_20240531_attachment.pdf",
+  "sha256": "fd70fc6e569ed7b2bfa5a3e1c90740c70c74a3f6306b8c7957cf6559fc358cdd"
+}

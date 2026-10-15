@@ -39,3 +39,45 @@ htmlcov/
 # Local cache & temporary files
 .cache/
 *.parquet.tmp
+
+# Local coursework and temporary document renders
+/output/
+/tmp/
+
+# Repeated verification checkouts and installed runtimes; original records stay local
+**/checkout/
+**/freshenv/
+**/isolated_test_outputs/
+**/test_outputs/
+**/pytest_tmp/
+**/pytest_retry_tmp/
+**/pytest_*_tmp/
+**/*_temp/
+**/.validation_tmp/
+**/verified_source_snapshot*/
+/research/peer_reviews/round_002_oct09/input/
+/research/peer_reviews/**/events.jsonl
+/research/implementation_runs/**/portable_bundle/
+/research/implementation_runs/**/portable_evidence/
+/research/implementation_runs/**/temporary/
+
+# Redundant local review archives; receipts and inventory remain versioned
+/research/peer_reviews/**/complete_review_output.zip
+/research/peer_reviews/**/frozen_scientific_input.zip
+/research/assessments/**/FROZEN_SCIENTIFIC_INPUT.zip
+
+# New third-party article copies whose redistribution permissions were not assessed
+/research/implementation_runs/elite_impl_20261010_001/reference_fidelity/sources/
+/research/implementation_runs/elite_impl_20261010_001/reference_fidelity/takano_table2_page12.png
+/research/assessments/kazinnik_run_20261010T023656Z/sources/*.pdf
+/research/assessments/kazinnik_run_20261010T023656Z/sources/*.txt
+/research/assessments/kazinnik_run_20261010T023656Z/sources/*.bin
+/research/assessments/kazinnik_run_20261010T023656Z/sources/*.html
+/research/source_ledgers/literature/current_oct09/acquisition_attempt_001/*.pdf
+/research/source_ledgers/literature/current_oct09/acquisition_attempt_001/*.html
+/research/source_ledgers/output_gap_round002/methodology_sources/acquisition_*/raw/
+/research/source_ledgers/output_gap_round002/methodology_sources/acquisition_*/text/
+/research/peer_reviews/**/output/tmp/
+/results/upgrade_validation*/**/test_*/
+/results/upgrade_validation_round_002/snapshot_boundary_attempt_001/test_*
+/results/upgrade_validation_round_002/output_gap_oct09/attempt_001/snapshot/

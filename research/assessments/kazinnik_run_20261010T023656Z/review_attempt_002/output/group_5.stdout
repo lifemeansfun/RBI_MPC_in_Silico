@@ -1,0 +1,400 @@
+[
+  {
+    "id": "gwu_current",
+    "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "retrieved_utc": "2026-10-10T02:38:55.858942+00:00",
+    "status_code": 200,
+    "final_url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "content_type": "application/pdf",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/gwu_current.bin",
+    "bytes": 2640547,
+    "sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+    "pdf_magic": true
+  },
+  {
+    "id": "ssrn_record",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.320898+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_record.bin",
+    "bytes": 896436,
+    "sha256": "fb12d44ca19f805b2244e22e35b763b9597f244b51f82f2dfb647480a2a482c2",
+    "pdf_magic": false
+  },
+  {
+    "id": "ssrn_delivery",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.693880+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_delivery.bin",
+    "bytes": 896436,
+    "sha256": "2ad1e4feb1a4002f63558e4241696c999dc4ba581a4eb9e3a39fad1af9256dbf",
+    "pdf_magic": false
+  },
+  {
+    "id": "nber_program",
+    "url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "retrieved_utc": "2026-10-10T02:40:42.020654+00:00",
+    "status_code": 200,
+    "final_url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/nber_program.html",
+    "sha256": "af512842e3c73dc0fcbf8303f960076a0a835e23da7dd196cc810a2e8db7e723",
+    "bytes": 121190,
+    "pdf_magic": false,
+    "candidate_links": []
+  },
+  {
+    "id": "nber_printable",
+    "url": "https://conference.nber.org/agenda/simple_printable?conf_id=SI26EFFE",
+    "retrieved_utc": "2026-10-10T02:40:43.113770+00:00",
+    "error": "HTTPSConnectionPool(host='conference.nber.org', port=443): Max retries exceeded with url: /agenda/simple_printable?conf_id=SI26EFFE (Caused by NewConnectionError(\"HTTPSConnection(host='conference.nber.org', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable\"))"
+  }
+]
+{
+  "record_type": "retained_prior_supporting_arithmetic_probe",
+  "worker": "/root/reference_map",
+  "scope": "Scratch arithmetic control only; no source-code or empirical reproduction.",
+  "accounting_note": "Probe was executed during reference working assistance although the parent reference allowance declared zero experiments. Parent instructed conservative cycle-1 accounting; this record preserves the attempt without rerunning or relabeling it.",
+  "execution_timestamp_utc": null,
+  "execution_timestamp_local": null,
+  "timestamp_limitation": "No execution timestamp was returned or retained for the original command. The run-directory timestamp is not substituted as the probe timestamp.",
+  "command": "python3 - <<'PY'\nimport json, sys\nkappa=.25\nconfidence=.5\nsigma=kappa*(1-confidence)/confidence\nmu0, signal, signal_sigma=4.5,4.0,.5\nprior_precision=1/sigma**2\nsignal_precision=1/signal_sigma**2\nposterior=(prior_precision*mu0+signal_precision*signal)/(prior_precision+signal_precision)\nposterior_variance=1/(prior_precision+signal_precision)\nmedian=4.375\nrows={\n 'scope':'scratch arithmetic control only; no source-code or empirical reproduction',\n 'confidence_50pct_sd_percent':sigma,\n 'confidence_80pct_sd_percent':kappa*(1-.8)/.8,\n 'prior_4_5_sd_0_25_signal_4_sd_0_5_posterior_mean':posterior,\n 'posterior_variance':posterior_variance,\n 'median_agenda_no_bias_final_by_authority_weight':{str(w): w*median+(1-w)*median for w in (.3,.1)},\n 'median_plus_10bps_final_by_authority_weight':{str(w):w*(median+.1)+(1-w)*median for w in (.3,.1)},\n 'six_yes_of_12_formula_accepts':6/12>=.5,\n 'six_yes_of_12_prose_exceeds_accepts':6/12>.5,\n 'python':sys.version,\n}\nassert abs(posterior-4.4)<1e-12\nassert abs(posterior_variance-.05)<1e-12\nassert abs(sigma-.25)<1e-12\nassert abs(rows['median_agenda_no_bias_final_by_authority_weight']['0.3']-rows['median_agenda_no_bias_final_by_authority_weight']['0.1'])<1e-12\nprint(json.dumps(rows, indent=2))\nPY",
+  "script_file": null,
+  "script_file_limitation": "The original script was supplied inline to exec_command and was not saved as a separate /tmp script.",
+  "stdout": "{\n  \"scope\": \"scratch arithmetic control only; no source-code or empirical reproduction\",\n  \"confidence_50pct_sd_percent\": 0.25,\n  \"confidence_80pct_sd_percent\": 0.062499999999999986,\n  \"prior_4_5_sd_0_25_signal_4_sd_0_5_posterior_mean\": 4.4,\n  \"posterior_variance\": 0.05,\n  \"median_agenda_no_bias_final_by_authority_weight\": {\n    \"0.3\": 4.375,\n    \"0.1\": 4.375\n  },\n  \"median_plus_10bps_final_by_authority_weight\": {\n    \"0.3\": 4.404999999999999,\n    \"0.1\": 4.385\n  },\n  \"six_yes_of_12_formula_accepts\": true,\n  \"six_yes_of_12_prose_exceeds_accepts\": false,\n  \"python\": \"3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]\"\n}\n",
+  "stderr_separate": null,
+  "stderr_limitation": "exec_command returned one output field; no separate stderr stream was retained. Its output is reproduced exactly as stdout above.",
+  "exit_code": 0,
+  "exec_command_chunk_id": "845e6e",
+  "exec_command_reported_wall_time_seconds": 0.00000825,
+  "functions_exec_reported_wall_time_seconds": 0.1,
+  "runtime_limitation": "These are the tool-reported durations, not independently measured process runtime. No other timing metadata was retained.",
+  "python_version_from_stdout": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "original_provider_calls": 0,
+  "original_paid_calls": 0,
+  "original_retries": 0,
+  "original_cost_usd": 0,
+  "closeout_reruns": 0,
+  "new_calculations_performed_for_record": 0
+}
+# Literature source register
+
+Checked on 5 October 2026. This is a focused source/version register, not an exhaustive novelty search or independent replication of another paper's results.
+
+## Kazinnik and Sinclair: FOMC In Silico
+
+The [SSRN author record](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097) identifies a revision dated 12 July 2026, while retaining an original writing date of 31 August 2025. Its abstract reports a 218-meeting backtest through June 2026, 8.3 bps rate MAE and 91% hike/cut/hold accuracy. Those are author-reported results on a different committee and sample, not independently verified benchmarks for this project. The revised abstract describes deliberation as building consensus rather than improving forecasting.
+
+The [GWU-hosted PDF](https://www2.gwu.edu/~forcpgm/2025-005.pdf) fetched during this check still opens with the August 2025 draft and July 2025 illustrative-meeting abstract. Its bytes differ from the bundled file: fetched SHA-256 `bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914`, bundled SHA-256 `e03bb52ccf932f4bfc25ddd2b0fb97e2458a67fb01fc91e396ecf705ab724209`. Different hashes establish different bytes, not the reason for the difference or a complete substantive revision comparison. Do not identify the bundled draft, current GWU bytes and revised SSRN abstract as the same verified version. The full revised SSRN manuscript has not been inspected here.
+
+## Riboni and Ruge-Murcia (2010)
+
+[Monetary policy by committee: Consensus, chairman dominance, or simple majority?](https://researchportal.ip-paris.fr/en/publications/monetary-policy-by-committee-consensus-chairman-dominance-or-simp/), *Quarterly Journal of Economics*, 125(1), 363-416. DOI: [10.1162/qjec.2010.125.1.363](https://doi.org/10.1162/qjec.2010.125.1.363).
+
+The authors compare alternative committee decision models and estimate them against policy decisions. This provides a reason to examine voting and agenda assumptions rather than treating a chosen aggregation formula as a derived equilibrium. Applying a model's name does not transfer that paper's theoretical identification or empirical fit to another implementation.
+
+Discovery used a fetched [Consensus record](https://consensus.app/papers/monetary-policy-by-committee-consensus-chairman-riboni-ruge-murcia/b5a2171ac973513a8c0b641211b48c91/?utm_source=chatgpt); publication metadata was checked against the author's institutional record above. Citation counts are provider-dependent and are not evidence of methodological correctness.
+
+## Baerg and Lowe: textual preferences
+
+[A textual Taylor rule: estimating central bank preferences combining topic and scaling methods](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/abs/textual-taylor-rule-estimating-central-bank-preferences-combining-topic-and-scaling-methods/E1CAE25BBA2864109ACF25D599EDD083), *Political Science Research and Methods*, 8(1), January 2020, 106-122; published online 18 September 2018. DOI: [10.1017/psrm.2018.31](https://doi.org/10.1017/psrm.2018.31).
+
+This work estimates preference measures from text through topic and scaling methods without defining them directly by voting outcomes. It is relevant to constructing and validating persona measures separately from the outcomes used to evaluate those personas. It does not validate an arbitrary dictionary score or mixture weight in this project.
+
+The fetched [Consensus record](https://consensus.app/papers/a-textual-taylor-rule-estimating-central-bank-preferences-baerg-lowe/947ced3163f25134910e0b53a3d2df72/?utm_source=chatgpt) gave 2015 as its year; the primary publisher distinguishes the 2018 online date from the 2020 issue. Use the primary publication metadata in bibliographies.
+
+## Limits
+
+OpenReview's document at `https://openreview.net/pdf?id=V3EslRbCIe` returned a browser-verification challenge through the web tool. Its full manuscript was not inspected and no claims from it are used here. Searching a small set of sources cannot establish uniqueness, state of the art or completeness of the relevant literature. No cross-paper performance ranking is warranted without matching tasks, labels, data vintages, exposure controls, models and metric definitions.
+and a one-sentence justification, representing the agent’s initial belief mean, µinitial
+                                                                                 i       .
+This output serves as input to the numeric vote engine, detailed in Section 3.1.
+   We also include a stance evolution module in persona building, which uses an
+LLM to classify recent public speeches into hawkish, dovish, or data-dependent
+stances. These signals are aggregated with a strong recency bias, i.e., recent speeches
+count most, earlier ones less, producing a posterior stance with calibrated confidence.
+The system flags any discrete shifts from past views and feeds this evolved stance
+into persona construction, so rate recommendations and uncertainty can adjust
+dynamically to members’ latest communications.
+
+
+Chair
+
+A unique aspect of the simulation is the modeling of the FOMC Chair, who carries a
+dual role. First, the Chair acts as a deliberating committee member, i.e., an LLM
+agent who participates in the discussion with their own dynamically updated beliefs.
+Second, the Chair serves as the procedural agenda-setter, a role governed not by the
+LLM but by a deterministic rule we set. This separation is a deliberate design choice
+to transparently model both the Chair’s intellectual contribution and their formal
+institutional function.
+   As a deliberating member, the Chair agent (e.g., simPowell) participates in the
+simulation identically to all other members. The agent forms its own private opinion,
+engages in dialogue, and its internal policy belief, µchair , is updated throughout the
+meeting via the same Bayesian mechanism as its peers. In this capacity, the Chair is
+simply one of twelve voices contributing to the discussion.
+   In its procedural capacity as agenda-setter, the Chair’s role is to formulate the
+proposed interest rate, denoted as rc , which serves as a critical anchor for the final
+vote. This process is governed by a deterministic, rule-based function to ensure
+transparency and reproducibility. The function systematically translates the final,
+
+                                           15
+updated beliefs of all committee members, including the Chair’s own private belief,
+into a single, coherent policy proposal. The proposal generation is as follows. First,
+the function gathers the latest set of policy beliefs from all participating governor
+agents. For each of the 12 members on the committee, it extracts their current
+preferred interest rate, or belief mean, µi . Next, the function aggregates this set
+of beliefs into a single baseline proposal, rbase , using one of two distinct strategies,
+which is a configurable parameter of the simulation. The agent’s policy belief has
+two key components:
+
+   • Mean: Agent’s current best estimate of the appropriate policy rate (e.g., 4.5%).
+         This is their “belief.”
+
+   • Variance: Agent’s uncertainty about their belief. A high variance implies low
+         confidence and greater openness to persuasion, and vice versa.
+
+       The default approach calculates the median of the members’ beliefs.16 This
+method is robust as it is not excessively influenced by outlier policy views:
+
+                                                             
+                                    rbase = median {µi }N
+                                                        i=1
+
+
+
+       The model also allows for the application of an optional bias, denoted by ∆. This
+parameter is designed to model a chair who may have an intrinsic hawkish (positive
+∆) or dovish (negative ∆) inclination. This bias is applied as a simple additive shift
+to the baseline proposal. The final proposed rate, rc , is the result of combining the
+baseline proposal with the optional chair bias:
+
+
+                                          rc = rbase + ∆
+
+
+These two roles are reconciled during the final vote. The simulation models the
+Chair’s institutional responsibility through extremely high dissent costs rather than an
+explicit override. The voting logic assigns the Chair agent a dissent cost approximately
+four times higher than other members, making it extremely unlikely (though not
+impossible) for the Chair to dissent from their own proposal rc , even if it diverges
+  16
+       Median is the default in our implementation. Other options include mean and status quo.
+
+
+                                                16
+from their private, deliberated belief µchair . This probabilistic mechanism models
+the Chair’s responsibility to lead the committee to a consensus while preserving the
+possibility of rare institutional dissent.
+       The framework’s flexibility allows for exploring alternative scenarios by adjusting
+both the aggregation strategy and the bias term. These are discussed in more detail
+in Section 4.
+
+
+3.1       Phase 3: Committee Deliberation and Voting
+
+the previous-meeting rate.22 These modifications retain the logic of Bayesian voting
+yet add empirically grounded institutional detail.
+    Each committee member i begins with a normal prior belief about the appropriate
+policy rate, r ∼ N (µ0i , σi0 2 ). The agent then receives an independent private signal,
+si , drawn from a distribution centered around their prior:
+
+
+                             si = µ0i + εi ,        εi ∼ N (0, σ 2 ),
+
+
+where σ 2 is the globally set signal noise. After receiving this signal, the agent forms
+a posterior belief N (µpost
+                       i    , σipost 2 ) via the conjugate normal–normal updating rule.
+This posterior serves as the agent’s initial belief entering the meeting phase.
+    The LLM simulation employs a consensus convergence mechanism that models
+realistic committee dynamics. During pre-meeting consensus building, beliefs evolve
+according to:
+
+
+                  µi,t+1 = µi,t + αi · (µ̄t − µi,t ),      2
+                                                          σi,t+1 = 0.95 · σi,t
+                                                                           2
+                                                                               ,
+
+
+where µ̄t is the committee average belief, αi = 0.15 · (σi,t
+                                                         2
+                                                             /0.1) captures convergence
+strength based on uncertainty, and variance reduces by 5% per round to model
+confidence building through information sharing. This mechanism captures the
+realistic tendency for committee members to converge toward consensus through
+informal coordination, rather than performing precise mathematical calculations.
+    The Chair applies a deterministic rule to the final set of posterior beliefs, {µpost
+                                                                                    i    },
+documented by Thornton and Wheelock (2014).
+   22
+      Historical minutes show that when the committee cannot agree on the Chair’s proposal it
+typically negotiates a mid-point compromise rather than mechanically retaining the prior setting
+(e.g. the August 1989 and June 2003 meetings). This median fallback matches that practice and
+avoids artificially inflating policy inertia.
+
+
+
+
+                                               20
+to generate the proposed agenda, rc :
+                          
+                           mediani µpost      baseline strategy,
+                          
+                          
+                          
+                          
+                          
+                                   i
+                          
+                          
+                     rc = meani µpost
+                                  i           alternative strategy,
+                          
+                          
+                          
+                                              status-quo strategy.
+                          
+                          rprevious
+                          
+                          
+
+
+   The voting mechanism incorporates institutional pressures and role-based dissent
+costs. Member i faces a dissent cost Ci that varies by institutional role, mirroring the
+LLM set up. The final rate reflects both agenda influence and committee preference
+through a weighted combination: rf = wa · rc + (1 − wa ) · mediani µpost
+                                                                    i    , where
+wa = 0.3 under normal conditions and wa = 0.1 under political pressure, modeling
+reduced Chair authority. If the proposal fails in either implementation, the committee
+implements rf = mediani bi , the median of all submitted ballots.
+
+
+3.3    Monte Carlo Simulation
+
+The Monte Carlo (MC) analysis implements the mathematical core of the Riboni
+and Ruge-Murcia (2010) framework with enhanced methodological features to enable
+rigorous statistical comparison with LLM simulation results. This approach abstracts
+away from natural language deliberation to focus on formal game theory mechanisms,
+allowing us to systematically vary institutional settings while maintaining strict
+comparability between simulation approaches.
+   Each MC draw represents a single realization of the voting game. The simulation
+begins with initial policy beliefs sourced from the LLM opinion formation stage. For
+each committee member i, their belief is represented as a normal distribution:
+
+
+                                  Beliefi ∼ N (µi , σi2 )
+
+
+where µi is the agent’s preferred policy rate from LLM opinion formation and σi2
+represents their baseline uncertainty derived from confidence levels. Belief means are
+
+
+
+
+                                            21
+sampled from agents’ own reported confidence distributions:
+
+
+                                   µ′i ∼ N (µi , σi∗2 )
+
+
+where the confidence-based variance is derived from self-reported confidence levels:
+
+                                                  1 − ci
+                                    σi∗ = κ ·
+                                                    ci
+
+Here, ci ∈ [0, 1] represents agent i’s confidence level and κ = 25 basis points is a
+calibration parameter ensuring that agents reporting 50% confidence have a standard
+deviation of κ.
+   Following belief initialization, each agent receives an independent private signal
+si and updates their belief using conjugate normal-normal Bayesian updating:
+
+
+                                  τi ≡ σi−2 ,                   −2
+                                                     τsignal ≡ σsignal ,           (1)
+                                    τi µ′i + τsignal si
+                              µi =
+                               post
+                                                        ,                          (2)
+                                       τi + τsignal
+                                               1
+                             σi2,post =                                            (3)
+                                          τi + τsignal
+                                                                   
+                       Beliefupdated
+                             i       ∼ N µupdated
+                                          i       , σi2,updated                    (4)
+
+
+   where σsignal
+          2
+                 represents the precision of private information. The simulation also
+includes a pre-meeting consensus-building phase designed to replicate institutional
+coordination mirroring the LLM simulation.
+   The Chair applies a deterministic rule to the post-consensus belief set {µpost
+                                                                             i    } to
+generate the agenda proposal:
+                          
+                            median({µpost          (baseline strategy)
+                          
+                                          })
+                          
+                          
+                          
+                          
+                                      i
+                          
+                          
+                  rbase =  1 PN     post
+                                i=1 µi             (mean strategy)
+                           N
+                          
+                          
+                                                   (status-quo strategy)
+                          
+                          rprevious
+                          
+                          
+
+
+   The final agenda also incorporates Chair bias, if present: rc = rbase + ∆, where ∆
+
+
+
+                                             22
+represents hawkish (∆ > 0) or dovish (∆ < 0) tendencies.
+    Institutional voting follows individual dissent cost calculations. Member i votes
+YES on proposal rc if:
+                                   µpost
+                                    i    − rc ≤ ϵ · κi
+
+where ϵ = 0.25 percentage points represents the tolerance band and κi captures
+member-specific dissent costs varying by institutional role and political conditions,
+calibrated to match LLM simulation patterns.
+    The proposal passes if the weighted vote share exceeds threshold ϑ = 0.5:
+
+                                      i wi 1YES
+                                    P
+                                        P         ≥ϑ
+                                         i wi
+
+
+where standard voting weights are wi = 1.0 for all members. Failed proposals trigger
+implementation of the median submitted ballot: rf = median({bi }).
+    Each Monte Carlo draw records key variables for policy analysis: the Chair’s
+proposed agenda rate (rc ), the final implemented policy rate (rf ), and the set of
+dissenting members (D). By running 10,000 draws, the Monte Carlo simulation
+provides statistical grounding for LLM results.
+
+
+
+4     Results
+With these two simulation methods at hand, we now arrive at two complementary
+setups: a “control” and a “treatment.” In the control case, the Monte Carlo simula-

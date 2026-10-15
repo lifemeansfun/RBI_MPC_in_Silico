@@ -1,0 +1,570 @@
+{
+  "calibration_cutoff": "2020-12-02",
+  "construct_validated": false,
+  "evidence_limit": "Verified retained raw bytes, attribution and printed publication headers; neither authenticated historical first availability nor validated policy-preference constructs or pre-cutoff membership.",
+  "extraction_rule": {
+    "biography": null,
+    "dove_lexicon": [
+      "growth",
+      "slack",
+      "over-tightening",
+      "lag",
+      "lags",
+      "sacrifice",
+      "soften",
+      "real rate",
+      "neutral",
+      "output gap",
+      "recovery",
+      "headwind",
+      "downturn"
+    ],
+    "hawk_lexicon": [
+      "inflation",
+      "restrictive",
+      "vigilance",
+      "unanchored",
+      "persistence",
+      "second-round",
+      "overheating",
+      "pressures",
+      "brake",
+      "firm",
+      "committed",
+      "tolerance",
+      "target"
+    ],
+    "orientation": "(hawk_hits-dove_hits)/max(hawk_hits+dove_hits,1); no rounding",
+    "priority": "fixed RBI-mandate instruction, not a fitted member preference",
+    "quotes": "first 20-60-word sentence per chronological source; first, middle, last distinct indices",
+    "stance_bias": "neutral; fixed procedural parameter, not extracted or construct validated",
+    "tenure": "corpus-coverage label only; no appointment-tenure claim",
+    "version": "rolling-executable-lexical-v1"
+  },
+  "historical_first_availability_verified": false,
+  "information_cutoff": "2020-12-02T00:00:00+05:30",
+  "meeting_id": "rbi_mpc_2020-12-04",
+  "members": {
+    "ashima_goyal": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Ashima Goyal",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "ashima_goyal",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/ashima_goyal.txt",
+          "original_member_id": "ashima_goyal",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce.txt",
+          "statement_id": "rbi_mpc_2020-10-09:ashima_goyal",
+          "statement_sha256": "3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce"
+        }
+      ],
+      "dove_hits": 9,
+      "hawk_hits": 20,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.3793103448275862,
+        "is_internal": false,
+        "key_themes": [
+          "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)"
+        ],
+        "member_id": "ashima_goyal",
+        "name": "Ashima Goyal",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:ashima_goyal",
+          "statement_sha256": "3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce",
+          "text": "The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 897
+    },
+    "jayanth_varma": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Prof. Jayanth R. Varma",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "jayanth_varma",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/jayanth_varma.txt",
+          "original_member_id": "jayanth_varma",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2.txt",
+          "statement_id": "rbi_mpc_2020-10-09:jayanth_varma",
+          "statement_sha256": "87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2"
+        }
+      ],
+      "dove_hits": 2,
+      "hawk_hits": 12,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.7142857142857143,
+        "is_internal": false,
+        "key_themes": [
+          "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)"
+        ],
+        "member_id": "jayanth_varma",
+        "name": "Jayanth R. Varma",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:jayanth_varma",
+          "statement_sha256": "87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2",
+          "text": "I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?"
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 899
+    },
+    "michael_debabrata_patra": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Michael Debabrata Patra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "michael_debabrata_patra",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/michael_patra.txt",
+          "original_member_id": "michael_patra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7.txt",
+          "statement_id": "rbi_mpc_2020-10-09:michael_debabrata_patra",
+          "statement_sha256": "e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7"
+        }
+      ],
+      "dove_hits": 9,
+      "hawk_hits": 21,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.4,
+        "is_internal": true,
+        "key_themes": [
+          "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)"
+        ],
+        "member_id": "michael_debabrata_patra",
+        "name": "Michael Debabrata Patra",
+        "provenance_status": "dated_corpus",
+        "role": "Deputy Governor",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:michael_debabrata_patra",
+          "statement_sha256": "e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7",
+          "text": "The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1060
+    },
+    "mridul_saggar": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Mridul K. Saggar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "mridul_saggar",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/mridul_saggar.txt",
+          "original_member_id": "mridul_saggar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3.txt",
+          "statement_id": "rbi_mpc_2020-10-09:mridul_saggar",
+          "statement_sha256": "c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3"
+        }
+      ],
+      "dove_hits": 17,
+      "hawk_hits": 22,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.1282051282051282,
+        "is_internal": true,
+        "key_themes": [
+          "\"At the time of the August MPC, while noting that monetary policy was being framed under large data and forecast uncertainties, I had also indicated that growth could fall more and, inflation less, than the consensus estimates that prevailed at that point.\" (2020-10-09)"
+        ],
+        "member_id": "mridul_saggar",
+        "name": "Mridul K. Saggar",
+        "provenance_status": "dated_corpus",
+        "role": "Executive Director",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:mridul_saggar",
+          "statement_sha256": "c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3",
+          "text": "At the time of the August MPC, while noting that monetary policy was being framed under large data and forecast uncertainties, I had also indicated that growth could fall more and, inflation less, than the consensus estimates that prevailed at that point."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1274
+    },
+    "shaktikanta_das": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Shri Shaktikanta Das",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "shaktikanta_das",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/shaktikanta_das.txt",
+          "original_member_id": "shaktikanta_das",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3.txt",
+          "statement_id": "rbi_mpc_2020-10-09:shaktikanta_das",
+          "statement_sha256": "28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3"
+        }
+      ],
+      "dove_hits": 12,
+      "hawk_hits": 24,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.3333333333333333,
+        "is_internal": true,
+        "key_themes": [
+          "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)"
+        ],
+        "member_id": "shaktikanta_das",
+        "name": "Shaktikanta Das",
+        "provenance_status": "dated_corpus",
+        "role": "Governor",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:shaktikanta_das",
+          "statement_sha256": "28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3",
+          "text": "After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1000
+    },
+    "shashanka_bhide": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Shashanka Bhide",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2020-10-09",
+          "meeting_id": "rbi_mpc_2020-10-09",
+          "member_id": "shashanka_bhide",
+          "origin_statement_file": "data/processed/statements_v2/2020-10-09/shashanka_bhide.txt",
+          "original_member_id": "shashanka_bhide",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+            "publication_date": "2020-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781.html",
+            "source_id": "mpc_minutes_prid_50560",
+            "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+          },
+          "statement_file": "sources/3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87.txt",
+          "statement_id": "rbi_mpc_2020-10-09:shashanka_bhide",
+          "statement_sha256": "3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87"
+        }
+      ],
+      "dove_hits": 19,
+      "hawk_hits": 22,
+      "history_status": "available_personal_history",
+      "meetings_count": 1,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2020-12-02",
+        "hawk_dove_score": 0.07317073170731707,
+        "is_internal": false,
+        "key_themes": [
+          "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)"
+        ],
+        "member_id": "shashanka_bhide",
+        "name": "Shashanka Bhide",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2020-10-09 to 2020-10-09; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2020-10-09",
+          "statement_id": "rbi_mpc_2020-10-09:shashanka_bhide",
+          "statement_sha256": "3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87",
+          "text": "Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1335
+    }
+  },
+  "missing_history_member_ids": [],
+  "packet_file": "rolling_inputs/packets/rbi_mpc_2020-12-04.json",
+  "packet_sha256": "1117589577f9ef5cab5ce675f937ebc991d2455cb3f8b0cc53606242678e53da",
+  "predictive_readiness": false,
+  "protocol_file": "rolling_inputs/protocol.json",
+  "protocol_sha256": "fa39fbf921f0db91a4e7ce6379cbfd15c558e5d6d2f9ab1574804f9cc8ffe4eb",
+  "rolling_receipt_file": "rolling_inputs/receipt.json",
+  "rolling_receipt_sha256": "9867681ed9772d82dccbf984f77405fe6e100abf623a7b42a5d87b54908ce771",
+  "roster": {
+    "appointment_dates": null,
+    "decision_date": "2020-12-04",
+    "governor_id": "shaktikanta_das",
+    "information_cutoff": "2020-12-02T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2020-12-04",
+    "meeting_start_date": "2020-12-02",
+    "members": [
+      {
+        "is_internal": false,
+        "member_id": "ashima_goyal",
+        "name": "Ashima Goyal",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "jayanth_varma",
+        "name": "Jayanth R. Varma",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "michael_debabrata_patra",
+        "name": "Michael Debabrata Patra",
+        "role": "Deputy Governor",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "mridul_saggar",
+        "name": "Mridul K. Saggar",
+        "role": "Executive Director",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "shaktikanta_das",
+        "name": "Shaktikanta Das",
+        "role": "Governor",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "shashanka_bhide",
+        "name": "Shashanka Bhide",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "publication_date": "2020-12-18",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+          "source_id": "mpc_minutes_prid_50831",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      }
+    ],
+    "panel_status": "exposed_retrospective",
+    "predictive_roster_readiness": "unverified_pre_cutoff_membership",
+    "roster_available_at_cutoff": false,
+    "roster_evidence_status": "retrospective_oracle_attendance",
+    "roster_source": {
+      "availability_precision": "calendar_day_only",
+      "historical_first_availability_verified": false,
+      "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+      "publication_date": "2020-12-18",
+      "publication_status": "verified_retained_header",
+      "publication_time": null,
+      "source_file": "sources/49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf.html",
+      "source_id": "mpc_minutes_prid_50831",
+      "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+    },
+    "roster_source_excerpt": "2. The meeting was attended by all the members – Dr. Shashanka Bhide, Senior Advisor, National Council of Applied Economic Research, Delhi; Dr. Ashima Goyal, Professor, Indira Gandhi Institute of Development Research, Mumbai; Prof. Jayanth R. Varma, Professor, Indian Institute of Management, Ahmedabad; Dr. Mridul K. Saggar, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor. Dr. Shashanka Bhide, Dr. Ashima Goyal and Prof. Jayanth R. Varma joined the meeting through video conference."
+  },
+  "roster_available_at_cutoff": false,
+  "roster_evidence_status": "retrospective_oracle_attendance",
+  "rosters_file": "rolling_inputs/realized_rosters.json",
+  "rosters_sha256": "ce7e352b20f3643a5516de2078dec7410a3c862d52f83f87ca143e263d3d88ab",
+  "source_bundle_root": "rolling_inputs",
+  "version": "dated-lexical-rolling-v3"
+}

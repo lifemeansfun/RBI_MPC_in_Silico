@@ -1,0 +1,38 @@
+src/persona_engine/extractor.py:96:HAWK_LEXICON = [
+src/persona_engine/extractor.py:160:    def analyze_member(self, member_id):
+src/persona_engine/extractor.py:167:            hawk_hits += sum(len(re.findall(r"\b" + re.escape(word) + r"\b", text, re.I)) for word in HAWK_LEXICON)
+src/data_pipeline/vintage_panel.py:44:    adjudication_path = ROOT / "results/methodology_audit_2026-10-05/data_adjudicated_truth.json"
+src/data_pipeline/vintage_panel.py:45:    adjudication = json.loads(adjudication_path.read_text())
+src/scenarios/scenario_runner.py:79:    def __init__(self, taylor_rule: SmoothedTaylorRule, fragmentation_policy: str = "reject"):
+src/scenarios/scenario_runner.py:81:        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+src/scenarios/scenario_runner.py:83:        self.fragmentation_policy = fragmentation_policy
+src/scenarios/scenario_runner.py:90:        settings = {"fragmentation_policy": self.fragmentation_policy}
+src/scenarios/scenario_runner.py:138:    def build_us_fed_spillover_snapshot(baseline_snapshot, fed_hike_bps=75, inr_depreciation=1.50):
+src/scenarios/scenario_runner.py:148:                                "headline_delta_pct": 0.30, "core_delta_pct": 0.20, "liquidity_drain_cr": 30000.0})
+src/validation/metrics.py:18:    dissent_precision: float | None = Field(ge=0, le=1)
+src/validation/metrics.py:26:    passed_validation_gate: bool
+src/validation/metrics.py:93:            dissent_exact_match_rate_pct=exact_dissent, dissent_precision=precision,
+src/validation/metrics.py:98:            passed_validation_gate=direction >= directional_threshold and stance >= stance_threshold
+src/reporting/report_builder.py:74:were aggregated through the statutory Institutional Rule Engine (RBI Act §45ZL).
+src/reporting/report_builder.py:79:- **Member-Level Dissent Precision:** {validation_summary.get('dissent_precision', 0.0):.2f}
+src/reporting/report_builder.py:82:- **Validation Gate Declared:** **{'PASSED' if validation_summary.get('passed_validation_gate') else 'REQUIRES RECALIBRATION'}**
+src/reporting/report_builder.py:108:2. **Statutory Tie-Breaker:** The Governor's casting vote under Section 45ZL acts as an essential stability anchor during even-numbered 3-3 splits.
+src/schemas/macro_schema.py:141:    def to_prompt_text(self, mask_date: bool = False) -> str:
+src/schemas/macro_schema.py:146:            "current_repo_rate_pct": "Current policy repo rate (%)", "prev_stance": "Prevailing stance",
+src/rule_engine/engine.py:4:§45ZL concerns publication of minutes, not casting votes. A six-voter simulation
+src/rule_engine/engine.py:63:        attending_member_ids: Optional[Sequence[str]], fragmentation_policy: str, prior_action: Any,
+src/rule_engine/engine.py:68:        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+src/rule_engine/engine.py:91:            if fragmentation_policy == "reject":
+src/rule_engine/engine.py:94:            policy = fragmentation_policy
+src/rule_engine/engine.py:95:            if fragmentation_policy == "status_quo":
+src/rule_engine/engine.py:124:        fragmentation_policy: str = "legacy_synthetic", prior_action: int = 0,
+src/rule_engine/engine.py:129:                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+src/rule_engine/engine.py:136:        fragmentation_policy: str = "legacy_synthetic", prior_action: Optional[str] = None,
+src/rule_engine/engine.py:141:                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+src/infra/llm_client.py:506:        prev_stance_m = re.search(r"Prevailing Policy Stance:\s*([^\n\r]+)", user_prompt, re.IGNORECASE)
+src/backtest/backtest_runner.py:46:                 mask_date=False, fragmentation_policy='reject'):
+src/backtest/backtest_runner.py:58:        self.mask_identity, self.mask_date, self.fragmentation_policy = mask_identity, mask_date, fragmentation_policy
+src/backtest/backtest_runner.py:87:                        'mask_date':self.mask_date,'fragmentation_policy':self.fragmentation_policy}
+src/backtest/backtest_runner.py:115:            fragmentation_policy=self.fragmentation_policy)
+src/backtest/backtest_runner.py:159:                          'fragmentation_policy':self.fragmentation_policy,'evidence_scope':'exposed retrospective study',
+src/backtest/backtest_runner.py:194:    def compute_aggregate_metrics(df):

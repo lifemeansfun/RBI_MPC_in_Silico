@@ -51,6 +51,10 @@ def test_metrics_evaluator():
         ground_truth_stances=true_stances,
         predicted_dissenters=pred_dissents,
         ground_truth_dissenters=true_dissents,
+        predicted_rate_dissenters=[["jayanth_varma"], ["jayanth_varma"], [], ["jayanth_varma"]],
+        true_rate_dissenters=[["jayanth_varma"], ["jayanth_varma"], [], ["jayanth_varma"]],
+        predicted_stance_dissenters=[[], ["ashima_goyal"], [], []],
+        true_stance_dissenters=[[], ["ashima_goyal"], [], []],
     )
 
     assert summary.directional_rate_accuracy_pct == 100.0
@@ -71,7 +75,8 @@ def test_scenario_runner(baseline_snapshot):
         MemberTaylorParameters("shashanka_bhide", alpha=1.3, beta=0.4),
     ]
 
-    runner = ScenarioRunner(taylor_rule=rule)
+    # This legacy fixture tests shock arithmetic under an explicit synthetic resolver.
+    runner = ScenarioRunner(taylor_rule=rule, fragmentation_policy='legacy_synthetic')
     monsoon_res = runner.run_monsoon_food_shock(baseline_snapshot, members, "shaktikanta_das")
     assert monsoon_res.scenario_name == "Monsoon Failure & Food Inflation Shock"
     assert monsoon_res.shocked_repo_rate_change_bps >= monsoon_res.baseline_repo_rate_change_bps
@@ -94,6 +99,7 @@ def test_attribution_runner(baseline_snapshot):
         dissenting_members_rate=["jayanth_varma", "ashima_goyal", "shashanka_bhide"],
         dissenting_members_stance=["jayanth_varma", "ashima_goyal", "shashanka_bhide"],
         member_votes=[],
+        prior_stance=baseline_snapshot.prev_stance,
     )
 
     attr_res = AttributionRunner.ablate_casting_vote(decision, governor_id="shaktikanta_das")
@@ -147,7 +153,11 @@ def test_report_builder():
         assert t2.exists()
         assert t3.exists()
         assert report_file.exists()
-        assert "PASSED" in report_file.read_text(encoding="utf-8")
+        report_text = report_file.read_text(encoding="utf-8")
+        assert "Configured numerical thresholds:** met" in report_text
+        assert "PASSED" not in report_text
+        assert "does not authenticate" in report_text
+        assert "No scientific verdict is issued here" in report_text
 
 
 def test_scenario_snapshot_builders(baseline_snapshot):
@@ -204,8 +214,8 @@ async def test_async_attribution_runner_mock(baseline_snapshot):
     ]
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        client = LLMClient(provider="mock")
-        logger = TranscriptLogger(run_id="test_mock_run")
+        client = LLMClient(provider="mock", cache_enabled=False)
+        logger = TranscriptLogger(run_id="test_mock_run", output_root=Path(tmpdir))
         orchestrator = DebateOrchestrator(llm_client=client, logger=logger)
 
         base_decision = await orchestrator.run_meeting(
@@ -236,4 +246,3 @@ async def test_async_attribution_runner_mock(baseline_snapshot):
         )
         assert res_mute.experiment_id == "EXP_3_MUTE_FOOD_INFLATION"
         assert isinstance(res_mute.marginal_contribution_bps, int)
-

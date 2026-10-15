@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2024-08-08",
+  "meeting_start_date": "2024-08-06",
+  "publication_date": "2024-08-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_58545.html",
+  "source_sha256": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+  "statement_sha256": {
+    "ashima_goyal": "0dbdded843dfdcac6856c0100a003821f3832be19fb3090012e8045a7ab51729",
+    "jayanth_varma": "2cf606896b0aa74d1504ed4dae40b757aa4ff905267e1978b70ee2a531bc7f8a",
+    "michael_patra": "3441c3b4661df1114e1b576ca50e8d379fd2ecc9c6660502600c1575c33aa64f",
+    "rajiv_ranjan": "91eddd710dcf629f16a32dfbd540bb1c7513ff619f8770e6ef6eabb853f97eae",
+    "shaktikanta_das": "46aa70218e7ff79a0a554e828664663c9563d7dd68310cee6485c8bda9d8b593",
+    "shashanka_bhide": "429402e2d5a2e3834cf6704e3182360b35ba02f257ee6f973a3aea4674b69079"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, August 6 to 8, 2024"
+}

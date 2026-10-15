@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "results/upgrade_validation_round_001/root_oct09_20261009/build_verified_report.py",
+    "results/upgrade_validation_round_001/root_oct09_20261009/verified_mock_report_attempt_001"
+  ],
+  "started_at_unix": 1791549601.675702,
+  "studies": {
+    "full": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001/evidence/mock_fullpath_oct08_001/full",
+    "earlier_rounds": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001/evidence/mock_fullpath_oct08_001/earlier_rounds",
+    "independent": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001/evidence/mock_fullpath_oct08_001/independent",
+    "masked": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001/evidence/mock_fullpath_oct08_001/masked"
+  },
+  "anchors": {
+    "full": "4c3fe042b212e2b095f7341cff1ad933d971a4f6251b84c3f171aee703a5748e",
+    "earlier_rounds": "6aad8bddccc4b175ff4c0b7e3c6a2284823d9230623ba346c44d41c96b3a3803",
+    "independent": "06b633db454a24f9716b67e68c5e0a65f68ff8ab30e502020889102d03989d95",
+    "masked": "72ac25064d750c59383f7e867e368415798310a0def55f2726d0dfdc0d5ff5ef"
+  },
+  "reporter_sha256": "7c5d2b9a108bc753454ff161c2476f748365a3e62d3c67f04885bf664942dfe3",
+  "scope": "saved mock evidence; no generation requested"
+}

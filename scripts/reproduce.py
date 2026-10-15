@@ -1,7 +1,7 @@
 """
-Master End-to-End Reproducibility Harness for RBI MPC In Silico.
-Single-command execution that reproduces all scientific results, runs verification batteries,
-generates vector figures, and compiles the final academic report.
+ARCHIVAL reproduction routine, retained for the scientific record.
+The original artifact-size checks below do not establish scientific reproduction.
+This old entry point is disabled; use reproduce_offline.py with a new output root.
 
 Usage:
     python scripts/reproduce.py
@@ -79,7 +79,7 @@ def check_artifacts() -> bool:
     return all_ok
 
 
-def main():
+def _archival_main():
     print("\n" + "#" * 78)
     print("   RBI MPC IN SILICO: MASTER END-TO-END REPRODUCIBILITY HARNESS")
     print("   Validated Multi-Agent Simulation of India's Monetary Policy Committee")
@@ -114,6 +114,10 @@ def main():
     print("\n" + "=" * 78)
     print("      REPRODUCIBILITY HARNESS COMPLETE: ALL PHASES VERIFIED GREEN      ")
     print("=" * 78)
+
+
+def main():
+    raise SystemExit('Archived size/existence-check harness is disabled. Use scripts/reproduce_offline.py --output-root <new-directory>; its scope is source reconstruction and saved-evidence verification, not live replication.')
 
 
 if __name__ == "__main__":

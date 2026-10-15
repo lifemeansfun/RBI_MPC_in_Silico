@@ -1,0 +1,8 @@
+{
+  "complete_executable_meetings": 32,
+  "meetings_count": 38,
+  "missing_history_member_packets": 14,
+  "model_calls": 0,
+  "predictive_readiness": false,
+  "version": "rolling-executable-receipt-v1"
+}

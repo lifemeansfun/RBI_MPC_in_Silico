@@ -1,0 +1,79 @@
+{
+  "verified_at_utc": "2026-10-05T20:36:51.563740+05:30",
+  "source_bodies_verified": 94,
+  "dated_fed_directives": 33,
+  "fed_meetings": 25,
+  "gdp_release_snapshots": 17,
+  "gdp_vintage_observations": 440,
+  "gdp_meetings": 25,
+  "gdp_current_meeting_observations": 100,
+  "output_gap_ready_meetings": 0,
+  "same_table_rounding_checks": 176,
+  "intentional_failure_controls": [
+    {
+      "control": "fed_future_release",
+      "rejected": true
+    },
+    {
+      "control": "fed_changed_source_hash",
+      "rejected": true
+    },
+    {
+      "control": "fed_nonfinite_value",
+      "rejected": true
+    },
+    {
+      "control": "fed_changed_value",
+      "rejected": true
+    },
+    {
+      "control": "fed_unknown_series",
+      "rejected": true
+    },
+    {
+      "control": "gdp_future_release",
+      "rejected": true
+    },
+    {
+      "control": "gdp_changed_source_hash",
+      "rejected": true
+    },
+    {
+      "control": "gdp_nonfinite_value",
+      "rejected": true
+    },
+    {
+      "control": "gdp_changed_value",
+      "rejected": true
+    },
+    {
+      "control": "gdp_unknown_series",
+      "rejected": true
+    },
+    {
+      "control": "fed_future_effective_date",
+      "rejected": true
+    },
+    {
+      "control": "gdp_current_price_series_substitution",
+      "rejected": true
+    }
+  ],
+  "rendered_pdf_table_pages": 21,
+  "legacy_panel_preserved": true,
+  "exhaustive_intermediate_revision_coverage": false,
+  "independent_first_website_availability_proof": false,
+  "verification_scope": "Offline engineering/transcription/cutoff checks; no forecasting, model generation or empirical superiority test",
+  "environment": {
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python"
+  },
+  "input_hashes": {
+    "source_catalog.json": "a5540560b7c58a39147208f5bc6ca513aa0e249c206461ba57b3b1055293edb0",
+    "gdp_table_transcriptions.json": "03a68874811c4da62ad77854a5811e1c681ba8de09c1e855c92855b9ce5c0104",
+    "meeting_fed_ledger.csv": "192a3dca7ba73732c681ea2786e085e9b8e98e209afe90eaf106d2aaaebe1eb9",
+    "meeting_gdp_ledger.csv": "837138053bad27bbadf5d5f6cfd323417dd3b969453d3854b00be3e6365b3142",
+    "gdp_gva_release_vintages.csv": "e2a2b9e760d5fd18a1f8a45c94ec11e8b0f11065e7ae9495b4f8f84d1b47b354"
+  }
+}

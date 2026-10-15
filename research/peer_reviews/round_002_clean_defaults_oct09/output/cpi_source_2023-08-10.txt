@@ -1,0 +1,325 @@
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+GOVERNMENT OF INDIA
+MINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION
+NATIONAL STATISTICAL OFFICE
+Dated the 12th July 2023
+21, Ashadha, Saka 1945
+PRESS RELEASE
+CONSUMER PRICE INDEX NUMBERS ON BASE 2012=100 FOR RURAL,
+URBAN AND COMBINED FOR THE MONTH OF JUNE 2023
+The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation
+(MoSPI) is releasing All India Consumer Price Index (CPI) on Base 2012=100 and corresponding
+Consumer Food Price Index (CFPI) for Rural (R), Urban (U) and Combined (C) for the month of June
+2023 (Provisional) in this press note. CPIs for Sub-Groups and Groups for both All India and all
+States/UTs are also being released.
+2. The price data are collected from selected 1114 urban Markets and 1181 villages covering all
+States/UTs through personal visits by field staff of Field Operations Division of NSO, MoSPI on a
+weekly roster. During the month of June 2023, NSO collected prices from 98.9% villages and 98.4%
+urban Markets while the Market-wise prices reported therein were 88.2% for rural and 92.4% for urban.
+3. All India Inflation rates (on point to point basis i.e. current month over same month of last year, i.e.
+June 2023 over June 2022), based on General Indices and CFPIs are given as follows:
+All India year-on-year inflation rates (%) based on CPI (General) and CFPI: June 2023 over June
+2022
+Jun. 2023 (Prov.) May. 2023 (Final) Jun. 2022
+Rural Urban Combd. Rural Urban Combd. Rural Urban Combd.
+CPI (General) 4.72 4.96 4.81 4.23 4.33 4.31 7.09 6.86 7.01
+Inflation
+CFPI 4.56 4.31 4.49 3.30 2.43 2.96 7.61 8.04 7.75
+CPI (General) 181.8 179.9 180.9 179.8 178.2 179.1 173.6 171.4 172.6
+Index
+CFPI 179.0 186.4 181.6 175.1 181.1 177.2 171.2 178.7 173.8
+Notes: Prov. – Provisional, Combd. – Combined
+4. Monthly changes in the General Indices and CFPIs are given below:
+Monthly changes (%) in All India CPI (General) and CFPI: June 2023 over May 2023
+Indices Jun. 2023 (Prov.) May. 2023 (Final) Monthly change (%)
+Rural Urban Combd. Rural Urban Combd. Rural Urban Combd.
+CPI (General) 181.8 179.9 180.9 179.8 178.2 179.1 1.11 0.95 1.01
+CFPI 179.0 186.4 181.6 175.1 181.1 177.2 2.23 2.93 2.48
+Note: Figures of June 2023 are provisional.
+5. Next date of release for July 2023 CPI is 14th August 2023 (Monday). For more details please
+visit the website www.mospi.gov.in
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 1 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+List of Annex
+Annex Title
+I All-India General, Group and Sub-group level CPI and CFPI
+numbers for May 2023 (Final) and June 2023 (Provisional) for
+Rural, Urban and Combined
+II All-India inflation rates (%) for General, Group and Sub-group
+level CPI and CFPI numbers for June 2023 (Provisional) for
+Rural, Urban and Combined
+III General CPI for States for Rural, Urban and Combined for May
+2023 (Final) and June 2023 (Provisional)
+IV Year-on-year inflation rates (%) of major States for Rural, Urban
+and Combined for June 2023 (Provisional)
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 2 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+Annex I
+All-India General, Group and Sub-group level CPI and CFPI numbers for May 2023
+(Final) and June 2023 (Provisional) for Rural, Urban and Combined
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description May. 23 Jun. 23 May. 23 Jun. 23 May. 23 Jun. 23
+Code Code Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+Cereals and
+1.1.01 12.35 173.2 174.2 6.59 174.7 175.7 9.67 173.7 174.7
+products
+1.1.02 Meat and fish 4.38 211.5 220.3 2.73 219.4 226.6 3.61 214.3 222.5
+1.1.03 Egg 0.49 171.0 181.2 0.36 176.7 185.4 0.43 173.2 182.8
+1.1.04 Milk and products 7.72 179.6 180.1 5.33 179.4 179.8 6.61 179.5 180.0
+1.1.05 Oils and fats 4.21 173.3 167.3 2.81 164.4 159.7 3.56 170.0 164.5
+1.1.06 Fruits 2.88 169.0 166.9 2.90 175.8 177.8 2.89 172.2 172.0
+1.1.07 Vegetables 7.46 148.7 165.3 4.41 185.0 210.4 6.04 161.0 180.6
+Pulses and
+1.1.08 2.95 174.9 180.8 1.73 176.9 183.2 2.38 175.6 181.6
+products
+Sugar and
+1.1.09 1.70 121.9 122.8 0.97 124.2 125.0 1.36 122.7 123.5
+Confectionery
+1.1.10 Spices 3.11 221.0 226.2 1.79 211.9 216.6 2.50 218.0 223.0
+Non-alcoholic
+1.2.11 1.37 178.7 179.3 1.13 165.9 166.7 1.26 173.4 174.0
+beverages
+Prepared meals,
+1.1.12 5.56 191.1 191.5 5.54 197.7 198.4 5.55 194.2 194.7
+snacks, sweets etc.
+Food and
+1 54.18 176.8 180.3 36.29 183.1 187.6 45.86 179.1 183.0
+beverages
+Pan, tobacco and
+2 3.26 199.9 200.3 1.36 204.2 204.6 2.38 201.0 201.4
+intoxicants
+3.1.01 Clothing 6.32 191.2 191.9 4.72 181.3 182.0 5.58 187.3 188.0
+3.1.02 Footwear 1.04 187.9 188.6 0.85 168.1 168.5 0.95 179.7 180.3
+Clothing and
+3 7.36 190.8 191.4 5.57 179.3 180.0 6.53 186.2 186.9
+footwear
+4 Housing - - - 21.67 175.6 174.4 10.07 175.6 174.4
+5 Fuel and light 7.94 182.5 181.8 5.58 183.4 184.6 6.84 182.8 182.9
+Household goods
+6.1.01 3.75 179.8 180.3 3.87 170.1 170.4 3.80 175.2 175.6
+and services
+6.1.02 Health 6.83 187.8 188.5 4.81 182.2 182.8 5.89 185.7 186.3
+Transport and
+6.1.03 7.60 169.7 169.9 9.73 160.4 160.8 8.59 164.8 165.1
+communication
+Recreation and
+6.1.04 1.37 173.8 174.1 2.04 169.2 169.8 1.68 171.2 171.7
+amusement
+6.1.05 Education 3.46 180.3 181.8 5.62 174.8 177.1 4.46 177.1 179.0
+Personal care and
+6.1.06 4.25 184.9 184.4 3.47 185.6 185.2 3.89 185.2 184.7
+effects
+6 Miscellaneous 27.26 179.5 179.9 29.53 171.6 172.3 28.32 175.7 176.2
+General Index (All Groups) 100.00 179.8 181.8 100.00 178.2 179.9 100.00 179.1 180.9
+Consumer Food Price Index (CFPI) 47.25 175.1 179.0 29.62 181.1 186.4 39.06 177.2 181.6
+Notes:
+1. Prov. : Provisional.
+2. CFPI : Out of 12 sub-groups contained in ‘Food and Beverages’ group, CFPI is based on ten sub-groups, excluding ‘Non-
+alcoholic beverages’ and ‘Prepared meals, snacks, sweets etc.’.
+3. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 3 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+Annex II
+All-India year-on-year inflation rates (%) for General, Group and Sub-group level CPI and
+CFPI numbers for June 2023 (Provisional) for Rural, Urban and Combined
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description Jun. 22 Jun. 23 Inflation Jun. 22 Jun. 23 Inflation Jun. 22 Jun. 23 Inflation
+Code Code Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+1.1.01
+Cereals and
+153.8 174.2 13.26 157.5 175.7 11.56 155.0 174.7 12.71
+products
+1.1.02 Meat and fish 217.2 220.3 1.43 223.4 226.6 1.43 219.4 222.5 1.41
+1.1.03 Egg 169.6 181.2 6.84 172.8 185.4 7.29 170.8 182.8 7.03
+1.1.04 Milk and products 165.4 180.1 8.89 166.4 179.8 8.05 165.8 180.0 8.56
+1.1.05 Oils and fats 208.1 167.3 -19.61 188.6 159.7 -15.32 200.9 164.5 -18.12
+1.1.06 Fruits 165.8 166.9 0.66 174.1 177.8 2.13 169.7 172.0 1.36
+1.1.07 Vegetables 167.3 165.3 -1.20 211.5 210.4 -0.52 182.3 180.6 -0.93
+1.1.08
+Pulses and
+164.6 180.8 9.84 163.6 183.2 11.98 164.3 181.6 10.53
+products
+1.1.09
+Sugar and
+119.1 122.8 3.11 121.4 125.0 2.97 119.9 123.5 3.00
+Confectionery
+1.1.10 Spices 188.9 226.2 19.75 183.5 216.6 18.04 187.1 223.0 19.19
+1.2.11
+Non-alcoholic
+174.2 179.3 2.93 159.1 166.7 4.78 167.9 174.0 3.63
+beverages
+1.1.12
+Prepared meals,
+181.9 191.5 5.28 186.3 198.4 6.49 183.9 194.7 5.87
+snacks, sweets etc.
+1
+Food and
+172.4 180.3 4.58 179.3 187.6 4.63 174.9 183.0 4.63
+beverages
+2
+Pan, tobacco and
+192.9 200.3 3.84 198.3 204.6 3.18 194.3 201.4 3.65
+intoxicants
+3.1.01 Clothing 180.7 191.9 6.20 171.6 182.0 6.06 177.1 188.0 6.15
+3.1.02 Footwear 178.7 188.6 5.54 157.4 168.5 7.05 169.9 180.3 6.12
+3
+Clothing and
+180.4 191.4 6.10 169.4 180.0 6.26 176.0 186.9 6.19
+footwear
+4 Housing - - - 166.8 174.4 4.56 166.8 174.4 4.56
+5 Fuel and light 176.7 181.8 2.89 174.9 184.6 5.55 176.0 182.9 3.92
+6.1.01
+Household goods
+170.3 180.3 5.87 162.1 170.4 5.12 166.4 175.6 5.53
+and services
+6.1.02 Health 178.2 188.5 5.78 170.9 182.8 6.96 175.4 186.3 6.21
+6.1.03
+Transport and
+165.5 169.9 2.66 157.2 160.8 2.29 161.1 165.1 2.48
+communication
+6.1.04
+Recreation and
+168.0 174.1 3.63 164.1 169.8 3.47 165.8 171.7 3.56
+amusement
+6.1.05 Education 172.6 181.8 5.33 166.5 177.1 6.37 169.0 179.0 5.92
+6.1.06
+Personal care and
+169.5 184.4 8.79 169.2 185.2 9.46 169.4 184.7 9.03
+effects
+6 Miscellaneous 171.0 179.9 5.20 163.8 172.3 5.19 167.5 176.2 5.19
+General Index (All Groups) 173.6 181.8 4.72 171.4 179.9 4.96 172.6 180.9 4.81
+Consumer Food Price Index 171.2 179.0 4.56 178.7 186.4 4.31 173.8 181.6 4.49
+Notes:
+1. Prov. : Provisional.
+2. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 4 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+Annex III
+General CPI for States for Rural, Urban and Combined for May 2023 (Final) and June
+2023 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the May. 23 Jun. 23 May. 23 Jun. 23 May. 23 Jun. 23
+State/UT Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 5.40 183.1 187.0 3.64 185.5 188.1 4.58 184.0 187.4
+2 Arunachal Pradesh 0.14 183.8 185.3 0.06 -- -- 0.10 183.8 185.3
+3 Assam 2.63 181.0 182.0 0.79 179.2 179.2 1.77 180.6 181.4
+4 Bihar 8.21 173.9 174.6 1.62 181.7 183.0 5.14 175.0 175.8
+5 Chhattisgarh 1.68 169.9 172.1 1.22 168.4 170.8 1.46 169.3 171.6
+6 Delhi 0.28 166.9 167.0 5.64 165.5 165.2 2.77 165.6 165.3
+7 Goa 0.14 172.7 174.6 0.25 171.4 172.8 0.19 171.9 173.5
+8 Gujarat 4.54 177.1 178.6 6.82 168.4 170.3 5.60 172.2 173.9
+9 Haryana 3.30 179.2 180.8 3.35 171.7 173.8 3.32 175.7 177.5
+10 Himachal Pradesh 1.03 168.8 169.5 0.26 176.6 177.0 0.67 170.2 170.9
+11 Jharkhand 1.96 175.7 175.8 1.39 180.1 181.9 1.69 177.4 178.1
+12 Karnataka 5.09 180.2 182.3 6.81 186.2 188.3 5.89 183.4 185.5
+13 Kerala 5.50 187.0 189.3 3.46 185.5 187.2 4.55 186.5 188.6
+14 Madhya Pradesh 4.93 175.2 177.6 3.97 181.6 183.3 4.48 177.8 179.9
+15 Maharashtra 8.25 181.5 184.1 18.86 174.3 176.2 13.18 176.7 178.8
+16 Manipur 0.23 212.5 -- 0.12 177.0 177.4 0.18 201.3 ~
+17 Meghalaya 0.28 164.2 165.3 0.15 173.1 175.2 0.22 167.0 168.4
+18 Mizoram 0.07 196.0 197.7 0.13 172.7 173.3 0.10 181.8 182.8
+19 Nagaland 0.14 189.0 189.6 0.12 175.5 175.9 0.13 183.3 183.8
+20 Odisha 2.93 178.9 180.8 1.31 174.0 177.1 2.18 177.5 179.8
+21 Punjab 3.31 175.4 176.7 3.09 167.4 168.9 3.21 171.8 173.2
+22 Rajasthan 6.63 176.2 176.9 4.23 174.6 176.4 5.51 175.6 176.7
+23 Sikkim 0.06 194.9 196.5 0.03 180.3 181.2 0.05 190.1 191.5
+24 Tamil Nadu 5.55 185.1 189.7 9.20 185.7 189.1 7.25 185.5 189.3
+25 Telangana 3.16 193.0 198.0 4.41 186.3 188.9 3.74 189.3 193.0
+26 Tripura 0.35 196.4 200.3 0.14 188.7 190.4 0.25 194.4 197.7
+27 Uttar Pradesh 14.83 177.1 179.1 9.54 178.8 180.0 12.37 177.7 179.4
+28 Uttarakhand 1.06 176.6 178.8 0.73 181.2 182.1 0.91 178.3 180.0
+29 West Bengal 6.99 185.4 187.3 7.20 185.2 185.0 7.09 185.3 186.2
+Andaman & Nicobar
+30 0.05 199.8 199.7 0.07 182.2 179.2 0.06 190.9 189.3
+Islands
+31 Chandigarh 0.02 179.1 180.7 0.34 168.2 169.3 0.17 168.8 169.9
+Dadra & Nagar
+32 0.02 167.6 168.5 0.04 173.9 177.1 0.03 171.8 174.2
+Haveli
+33 Daman & Diu 0.02 180.4 183.1 0.02 178.2 179.8 0.02 179.5 181.7
+34 Jammu & Kashmir* 1.14 187.8 188.0 0.72 188.7 188.4 0.94 188.1 188.1
+35 Lakshadweep 0.01 190.2 194.6 0.01 177.6 184.3 0.01 183.8 189.3
+36 Puducherry 0.08 187.3 192.4 0.27 183.9 186.0 0.17 184.8 187.6
+All India 100.00 179.8 181.8 100.00 178.2 179.9 100.00 179.1 180.9
+Notes:
+1. Prov.: Provisional
+2. --: indicates the receipt of price schedules is less than 80% of allocated schedules and therefore indices are not
+compiled.
+3. *: Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu & Kashmir
+and Ladakh (erstwhile State of Jammu & Kashmir).
+4. ~: CPI (Combined) not compiled due to non-reporting of data from rural sector
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 5 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 PM of
+12th July 2023.
+Annex IV
+Year-on-year inflation rates (%) of major@ States for Rural, Urban and Combined for June
+2023 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the Jun. 22 Jun. 23 Inflation Jun. 22 Jun. 23 Inflation Jun. 22 Jun. 23 Inflation
+State/UT Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 178.3 187.0 4.88 179.5 188.1 4.79 178.7 187.4 4.87
+2 Assam 178.0 182.0 2.25 173.1 179.2 3.52 177.0 181.4 2.49
+3 Bihar 164.4 174.6 6.20 172.3 183.0 6.21 165.6 175.8 6.16
+4 Chhattisgarh 171.0 172.1 0.64 167.0 170.8 2.28 169.5 171.6 1.24
+5 Delhi 164.5 167.0 1.52 161.9 165.2 2.04 162.0 165.3 2.04
+6 Gujarat 170.2 178.6 4.94 163.1 170.3 4.41 166.2 173.9 4.63
+7 Haryana 168.8 180.8 7.11 165.7 173.8 4.89 167.3 177.5 6.10
+8 Himachal Pradesh 162.7 169.5 4.18 169.0 177.0 4.73 163.8 170.9 4.33
+9 Jharkhand 167.2 175.8 5.14 174.2 181.9 4.42 169.9 178.1 4.83
+10 Karnataka 175.5 182.3 3.87 180.4 188.3 4.38 178.1 185.5 4.15
+11 Kerala 180.2 189.3 5.05 177.5 187.2 5.46 179.2 188.6 5.25
+12 Madhya Pradesh 174.0 177.6 2.07 175.6 183.3 4.38 174.7 179.9 2.98
+13 Maharashtra 176.8 184.1 4.13 167.7 176.2 5.07 170.7 178.8 4.75
+14 Odisha 175.5 180.8 3.02 167.7 177.1 5.61 173.3 179.8 3.75
+15 Punjab 169.1 176.7 4.49 160.7 168.9 5.10 165.3 173.2 4.78
+16 Rajasthan 168.3 176.9 5.11 168.0 176.4 5.00 168.2 176.7 5.05
+17 Tamil Nadu 177.9 189.7 6.63 177.9 189.1 6.30 177.9 189.3 6.41
+18 Telangana 187.8 198.0 5.43 178.7 188.9 5.71 182.8 193.0 5.58
+19 Uttar Pradesh 169.6 179.1 5.60 170.8 180.0 5.39 170.0 179.4 5.53
+20 Uttarakhand 169.4 178.8 5.55 169.0 182.1 7.75 169.3 180.0 6.32
+21 West Bengal 179.8 187.3 4.17 176.6 185.0 4.76 178.3 186.2 4.43
+22 Jammu & Kashmir* 183.6 188.0 2.40 181.6 188.4 3.74 182.9 188.1 2.84
+All India 173.6 181.8 4.72 171.4 179.9 4.96 172.6 180.9 4.81
+Notes:
+1. Prov. : Provisional.
+2. * : Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu &
+Kashmir and Ladakh (erstwhile State of Jammu & Kashmir).
+3. @ : States having population more than 50 lakhs as per Population Census 2011.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 6 of 6

@@ -1,0 +1,54 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_terminal_budget_error_is_not_replaced_by_failure_logger_error ______
+
+self = <test_deliberation_upgrade.ScriptedClient object at 0x106d553d0>
+kwargs = {'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical sim...tructured JSON format without markdown wrapping or conversational preambles.", 'model': None, 'temperature': None, ...}
+
+    async def generate_with_metadata(self, **kwargs):
+        self.calls.append(kwargs)
+        identity = kwargs["request_identity"]
+        if len(self.calls) == self.fail_call:
+>           raise BudgetExceededError("Terminal refusal", context={"request_identity": identity})
+E           src.infra.exceptions.BudgetExceededError: Terminal refusal
+
+tests/test_deliberation_upgrade.py:84: BudgetExceededError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...dation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_logger_prefixed_tmp/test_terminal_budget_error_is_0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_terminal_budget_error_is_not_replaced_by_failure_logger_error(tmp_path, snapshot, roster):
+        class FailedEventLogger(TranscriptLogger):
+            def log_event(self, event, payload):
+                if event == "generation_failed":
+                    raise OSError("failure sink unavailable")
+                return super().log_event(event, payload)
+        client = ScriptedClient(fail_call=1)
+        runner = DebateOrchestrator(client, FailedEventLogger(run_id="failed_logger", output_root=tmp_path))
+        with pytest.raises(BudgetExceededError) as captured:
+>           await runner.run_meeting(snapshot, roster, roster[0].member_id)
+
+tests/test_deliberation_upgrade.py:440: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:370: in run_meeting
+    output, evidence_type = await self._generate_round(
+src/behavioral/debate_orchestrator.py:279: in _generate_round
+    self.logger.log_event("generation_failed", {**identity, "error_type": type(error).__name__, "error": str(error),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_deliberation_upgrade.test_terminal_budget_error_is_not_replaced_by_failure_logger_error.<locals>.FailedEventLogger object at 0x106e1be90>
+event = 'generation_failed'
+payload = {'experiment_id': 'legacy', 'condition_id': 'full', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+
+    def log_event(self, event, payload):
+        if event == "generation_failed":
+>           raise OSError("failure sink unavailable")
+E           OSError: failure sink unavailable
+
+tests/test_deliberation_upgrade.py:435: OSError
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_terminal_budget_error_is_not_replaced_by_failure_logger_error
+1 failed, 89 deselected in 0.26s

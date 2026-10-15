@@ -1,0 +1,11 @@
+{
+  "research/source_ledgers/historical_labels_round002/README.md": "21e0d8f3a311c73b0c00ab3da363a1194f77d76794247dad308a0e4ee219f898",
+  "research/source_ledgers/historical_labels_round002/export_labels.py": "5031445a4e244686663e30eb13bd656be76795871b8173825067fc32f21cea0c",
+  "research/source_ledgers/historical_labels_round002/input_manifest.json": "0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757",
+  "research/source_ledgers/historical_labels_round002/label_annotations.json": "b855647a715a6212aeae9197a859737d64174b9e85df77c41bbb062c728ad145",
+  "research/source_ledgers/historical_labels_round002/label_ledger.json": "36906e5bf9491f21f90ee9b1df7b2d3555f19adb5dabb525e517cc6ecb9ac797",
+  "research/source_ledgers/historical_labels_round002/observed_targets.json": "e08818770870cd3b17c6c95695d16acc9a882b05230932798fd6977a4049d723",
+  "research/verification/rebuild_scientific_inputs.py": "98cc74497a08f96d9c127d8eff2983e9c130c109fcfa923d99404a7aec393656",
+  "src/data_pipeline/vintage_panel.py": "0c6d9317fad41539cdb4ef9f28be372bb67d513df83c7602b8c9eff4d77df695",
+  "tests/test_vintage_rebuild.py": "a270e7feaa7b0ea69a5d275dce8fada90b39f35dabd1ab35528aab4fa8dff71f"
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": -0.42483660130718953,
+    "is_internal": false,
+    "key_themes": [
+      "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+      "\"The June MPC is taking place against the backdrop of continued global uncertainties on tariffs, protectionism, and trade wars that are affecting the global trade and growth outlook.\" (2025-06-06)",
+      "\"The conclusion of the long-pending EU-India FTA negotiations on 27 January, followed quickly by the announcement of the US-India trade deal have helped to lift the sentiment, which had been depressed by the imposition of 50% tariffs on India’s exports by the US since August 2025.\" (2026-02-06)"
+    ],
+    "member_id": "nagesh_kumar",
+    "name": "Nagesh Kumar",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": 0.0945945945945946,
+    "is_internal": false,
+    "key_themes": [
+      "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+      "\"Hence, there is little to add to the essence of my statement in the minutes of the last April ’25 meeting.\" (2025-06-06)",
+      "\"The RBI Governor’s statement post the February 2026 policy review provides a comprehensive and detailed coverage and analysis of the present domestic and global macroeconomic environment and outlook.\" (2026-02-06)"
+    ],
+    "member_id": "saugata_bhattacharya",
+    "name": "Saugata Bhattacharya",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": 0.0663265306122449,
+    "is_internal": false,
+    "key_themes": [
+      "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+      "\"My assessment of the current growth-inflation dynamics and the prospects is very similar to what is described in the MPC statement for the June 2025 meeting.\" (2025-06-06)",
+      "\"The real GDP (FAE) is estimated to grow by 7.4 per cent in 2025-26, with private consumption and fixed investment contributing significantly to the growth.\" (2026-02-06)"
+    ],
+    "member_id": "ram_singh",
+    "name": "Ram Singh",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": 0.15306122448979592,
+    "is_internal": true,
+    "key_themes": [
+      "\"In a world order dominated by continuing geopolitical tensions and elevated trade and policy uncertainties, monetary policy, as the guardian of macroeconomic and financial stability, is traversing through a challenging time.\" (2025-02-07)",
+      "\"The global economy continues to traverse a period of heightened uncertainty on account of trade and tariff negotiations and lingering geopolitical tensions.\" (2025-08-06)",
+      "\"Despite escalating geopolitical tensions and increasing trade frictions posing huge challenges, global growth, supported by a surge in technology-related investments, conducive fiscal and monetary policies, and accommodative financial conditions, is expected to be marginally higher in 2026.\" (2026-02-06)"
+    ],
+    "member_id": "sanjay_malhotra",
+    "name": "Sanjay Malhotra",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-02-07 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": 0.07142857142857142,
+    "is_internal": true,
+    "key_themes": [
+      "\"The Indian economy has exhibited remarkable resilience during the past decade, amidst an extremely uncertain and shifting global economic outlook, marked by worsening trade dynamics, financial volatility and geopolitical flareups.\" (2025-06-06)",
+      "\"The Indian economy is proving to be resilient overall, well on its way to attain a healthy growth rate in the ballpark of 6.5 to 7.0 per cent, both this year and the next.\" (2025-10-01)",
+      "\"Yet, from the Indian perspective, the announcement of a trade deal with the US and the signing of a major free trade agreement (FTA) with the EU have resulted in a more favorable external sector outlook.\" (2026-02-06)"
+    ],
+    "member_id": "poonam_gupta",
+    "name": "Poonam Gupta",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-06-06 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-04-06",
+    "corpus_manifest_hash": "64b930b482b075d4c40caa0693e81383b39a95309a52011b465e514a01d770be",
+    "hawk_dove_score": 0.4567901234567901,
+    "is_internal": true,
+    "key_themes": [
+      "\"In a world characterised by geo-political strife, geo-economic fragmentation and strategic realignment brought about by all-pervasive uncertainty on trade and tariffs, the Indian economy has demonstrated strength and resilience.\" (2025-10-01)",
+      "\"The global economy remained robust in 2025 as evident from upward revision in growth projections 3 but lingering uncertainties and persisting fragilities continue to cloud its outlook.\" (2025-12-05)",
+      "\"Notwithstanding an escalation of geo-political strife amidst intensifying tariff wars between transatlantic allies, global growth projections for 2026 has been revised upwards.\" (2026-02-06)"
+    ],
+    "member_id": "indranil_bhattacharyya",
+    "name": "Indranil Bhattacharyya",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-10-01 to 2026-02-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

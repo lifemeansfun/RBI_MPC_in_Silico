@@ -1,0 +1,22 @@
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.457447
+is_internal: true
+key_themes:
+- "\"The projections of real GDP growth for 2020-21 that are set out for the first\
+  \ time in the MPC\u2019s resolution provide a sense of the wounds on the soul of\
+  \ the economy inflicted by COVID-19.\" (2020-10-09)"
+- '"In corroboration, the UNCTAD nowcasts merchandise trade volume to have picked
+  up pace in the last quarter of 2021 from the quarter before." (2022-02-10)'
+- "\"Hence, inflation remains elevated and generalised; and, as I stated at the time\
+  \ of the MPC\u2019s February 2023 meeting, it is the biggest risk to the outlook\
+  \ for the Indian economy.\" (2023-04-06)"
+member_id: michael_patra
+name: Dr. Michael Debabrata Patra
+provenance_status: dated_corpus
+role: Deputy Governor
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

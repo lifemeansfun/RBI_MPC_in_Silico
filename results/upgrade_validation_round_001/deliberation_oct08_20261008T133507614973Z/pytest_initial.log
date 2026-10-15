@@ -1,0 +1,174 @@
+.....................................................F.                  [100%]
+=================================== FAILURES ===================================
+______________________ test_async_attribution_runner_mock ______________________
+
+baseline_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='legacy_...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+
+    @pytest.mark.asyncio
+    async def test_async_attribution_runner_mock(baseline_snapshot):
+        from src.behavioral.debate_orchestrator import DebateOrchestrator
+        from src.infra.llm_client import LLMClient
+        from src.infra.transcript_logger import TranscriptLogger
+    
+        personas = [
+            MemberPersona(
+                member_id="shaktikanta_das", name="Shaktikanta Das", role="Governor",
+                is_internal=True, tenure="2018-present", hawk_dove_score=0.1, voting_priority="Consensus"
+            ),
+            MemberPersona(
+                member_id="michael_patra", name="Michael Patra", role="Deputy Governor",
+                is_internal=True, tenure="2020-present", hawk_dove_score=0.75, voting_priority="Inflation hawk"
+            ),
+            MemberPersona(
+                member_id="rajiv_ranjan", name="Rajiv Ranjan", role="Executive Director",
+                is_internal=True, tenure="2022-present", hawk_dove_score=0.35, voting_priority="Liquidity"
+            ),
+            MemberPersona(
+                member_id="jayanth_varma", name="Jayanth R. Varma", role="External Member",
+                is_internal=False, tenure="2020-2024", hawk_dove_score=-0.60, voting_priority="Growth"
+            ),
+            MemberPersona(
+                member_id="ashima_goyal", name="Ashima Goyal", role="External Member",
+                is_internal=False, tenure="2020-2024", hawk_dove_score=-0.25, voting_priority="Pragmatic"
+            ),
+            MemberPersona(
+                member_id="shashanka_bhide", name="Shashanka Bhide", role="External Member",
+                is_internal=False, tenure="2020-2024", hawk_dove_score=0.15, voting_priority="Agriculture"
+            ),
+        ]
+    
+        with tempfile.TemporaryDirectory() as tmpdir:
+            client = LLMClient(provider="mock")
+            logger = TranscriptLogger(run_id="test_mock_run", output_root=Path(tmpdir))
+            orchestrator = DebateOrchestrator(llm_client=client, logger=logger)
+    
+>           base_decision = await orchestrator.run_meeting(
+                snapshot=baseline_snapshot, personas=personas, governor_id="shaktikanta_das"
+            )
+
+tests/test_attribution_and_scenarios.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:303: in run_meeting
+    output, evidence_type = await self._generate_round(
+src/behavioral/debate_orchestrator.py:209: in _generate_round
+    result = await self.client.generate_with_metadata(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.infra.llm_client.LLMClient object at 0x109d795d0>
+user_prompt = 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical simulation. Do not ...s": 0,\n  "proposed_stance": "withdrawal_of_accommodation",\n  "key_rationale": "Reason from supplied information."\n}'
+system_prompt = "You are Michael Patra, serving in a simulated RBI Monetary Policy Committee (MPC).\nMember ID: michael_patra\nYour in...ive'\n5. Always respond in the requested structured JSON format without markdown wrapping or conversational preambles."
+model = 'gemini-3.1-flash-lite', temperature = 0.6, seed = 549875871
+response_schema = <class 'src.schemas.debate_schema.InitialStanceOutput'>
+max_retries = 1
+request_identity = {'experiment_id': 'legacy', 'condition_id': 'full', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+request_context = None
+expected_identity = {'member_id': 'michael_patra', 'member_name': 'Michael Patra'}
+max_output_tokens = 2048, input_token_bound = 12185
+parser_version = 'strict-json-v1', model_epoch = '2026-10-05-standard-api'
+
+    async def generate_with_metadata(
+        self, user_prompt: str, system_prompt: Optional[str] = None,
+        model: Optional[str] = None, temperature: Optional[float] = None,
+        seed: Optional[int] = None, response_schema: Optional[Type[T]] = None,
+        max_retries: int = 1, *, request_identity: dict | None = None,
+        request_context: dict | None = None, expected_identity: dict | None = None,
+        max_output_tokens: int | None = None, input_token_bound: int | None = None,
+        parser_version: str = "strict-json-v1", model_epoch: str | None = None,
+    ) -> GenerationResult:
+        model = model or self.cfg.run.dev_model
+        temperature = self.cfg.run.temperature if temperature is None else temperature
+        seed = self.cfg.run.seed_base if seed is None else seed
+        max_output_tokens = (getattr(self.cfg.run, "max_output_tokens", 2048)
+                             if max_output_tokens is None else max_output_tokens)
+        model_epoch = model_epoch or getattr(self.cfg.run, "model_epoch", None)
+        if not isinstance(user_prompt, str) or not user_prompt or (system_prompt is not None and not isinstance(system_prompt, str)):
+            raise GenerationProvenanceError("Prompts must be nonempty text")
+        if type(temperature) not in (float, int) or not math.isfinite(temperature) or not 0 <= temperature <= 2:
+            raise GenerationProvenanceError("Temperature must be finite and within [0,2]")
+        if type(seed) is not int or type(max_output_tokens) is not int or max_output_tokens <= 0:
+            raise GenerationProvenanceError("Seed must be integer; output must have a positive token bound")
+        if parser_version != "strict-json-v1":
+            raise GenerationProvenanceError("This implementation only supports parser_version strict-json-v1")
+        if request_context is not None:
+            if request_identity is not None and request_identity != request_context:
+                raise GenerationProvenanceError("Conflicting request identity/context")
+            request_identity = request_context
+        identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+        schema = response_schema.model_json_schema() if response_schema else None
+        expected = dict(expected_identity or {})
+        properties = (schema or {}).get("properties", {})
+        for field in ("member_id", "round_number"):
+            if field in identity and field in properties:
+                bound_value = identity.get("output_member_id", identity[field]) if field == "member_id" else identity[field]
+                if field in expected and expected[field] != bound_value:
+                    raise GenerationProvenanceError("Requested output identity conflicts with request identity")
+                expected[field] = bound_value
+        if response_schema and set(expected) - set(properties):
+            raise GenerationProvenanceError("Expected identity contains fields absent from output schema")
+        if self.provider != "mock":
+            if self.provider != "gemini" or model not in TOKEN_RATES_PER_MILLION or model == "mock":
+                raise UnknownPriceError(f"Unverified provider/model price: {self.provider}/{model}",
+                                        context={"request_identity": identity, "user_prompt": user_prompt,
+                                                 "system_prompt": system_prompt, "model": model,
+                                                 "seed": seed, "max_output_tokens": max_output_tokens})
+            if not model_epoch:
+                raise GenerationProvenanceError("Live generation requires an explicit model_epoch marker",
+                                                 context={"request_identity": identity, "user_prompt": user_prompt,
+                                                          "system_prompt": system_prompt, "model": model})
+        # UTF-8 bytes + defensive framing allowance is conservative for this text-
+        # only interface and is checked against the provider token-count endpoint.
+        input_bound_method = "explicit_bound_verified_by_provider_count" if input_token_bound is not None else "utf8_bytes_plus_8192_verified_by_provider_count"
+        if input_token_bound is None:
+            input_token_bound = len(canonical_json({"system": system_prompt, "user": user_prompt, "schema": schema}).encode("utf-8")) + 8192
+        if type(input_token_bound) is not int or input_token_bound < 0:
+            raise GenerationProvenanceError("input_token_bound must be a nonnegative integer")
+        request_payload = LLMCache.request_payload(
+            self.provider, model, system_prompt, user_prompt, temperature, seed,
+            max_output_tokens=max_output_tokens, schema=schema, parser_version=parser_version,
+            model_epoch=model_epoch, request_identity=identity, expected_identity=expected,
+            generation_config={"response_mime_type": "application/json", "candidate_count": 1,
+                               "tools": [], "input_token_bound": input_token_bound},
+        )
+        cache_key = content_hash(request_payload)
+        request_id = uuid.uuid4().hex
+        metadata = GenerationMetadata(
+            request_id=request_id, request_hash=cache_key, request_payload_json=canonical_json(request_payload), provider=self.provider,
+            requested_model=model, routed_model=model, served_model=None, model_epoch=model_epoch,
+            response_id=None, seed=seed, provider_reported_seed=None, temperature=temperature,
+            max_output_tokens=max_output_tokens, input_token_bound=input_token_bound,
+            input_bound_method=input_bound_method, schema_name=response_schema.__name__ if response_schema else None,
+            schema_hash=content_hash(schema), schema_json=canonical_json(schema), parser_version=parser_version,
+            prompt_hash=content_hash({"system": system_prompt, "user": user_prompt}),
+            system_prompt=system_prompt, user_prompt=user_prompt, cache_key=cache_key,
+            cache_replay=False, source_request_id=None, source_evidence_type=None,
+            evidence_type="mock" if self.provider == "mock" else "live_model", attempt_count=1,
+            finish_reason=None, input_tokens=None, output_tokens=None, token_usage_source="unreported",
+            estimated_cost_usd=0.0, reservation_id=None,
+            price_revision=PRICE_REVISION if self.provider != "mock" else None,
+            price_source=PRICE_SOURCE if self.provider != "mock" else None,
+            created_at=datetime.now(timezone.utc).isoformat(),
+        )
+        raw_text = ""
+        try:
+            if self.provider != "mock":
+                self.governor.assert_can_submit()
+            if self.cache:
+                cached = self.cache.get(cache_key)
+                if cached is not None:
+                    source = cached.get("metadata")
+                    if not source or cached.get("request_payload") != request_payload:
+                        raise ArtifactIntegrityError("Cached result lacks matching complete generation provenance")
+                    if source.get("request_hash") != cache_key or source.get("cache_key") != cache_key:
+                        raise ArtifactIntegrityError("Cached generation provenance identity mismatch")
+                    for field in ("provider", "requested_model", "routed_model", "model_epoch", "seed",
+                                  "temperature", "max_output_tokens", "input_token_bound", "schema_name",
+                                  "schema_hash", "schema_json", "parser_version", "prompt_hash",
+                                  "system_prompt", "user_prompt", "request_payload_json"):
+                        if source.get(field) != getattr(metadata, field):
+>                           raise ArtifactIntegrityError(f"Cached generation {field} differs from request")
+E                           src.infra.exceptions.ArtifactIntegrityError: Cached generation request_payload_json differs from request
+
+src/infra/llm_client.py:276: ArtifactIntegrityError
+=========================== short test summary info ============================
+FAILED tests/test_attribution_and_scenarios.py::test_async_attribution_runner_mock
+1 failed, 54 passed in 2.51s

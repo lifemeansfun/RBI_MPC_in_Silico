@@ -1,0 +1,12 @@
+.venv/bin/python -m src.backtest.run_frozen_study --protocol "/private/tmp/rbi_publish_20261015_c7xt8emf/fixture/protocol.json" --output-root "/private/tmp/rbi_publish_20261015_c7xt8emf/fixture_validate" --execution validate
+{
+  "actual_generation_calls": 0,
+  "code_files": 78,
+  "evidence_track": "engineering_mock",
+  "input_files": 2,
+  "meetings": 1,
+  "planned_generation_calls": 29,
+  "protocol_hash": "acd1d73513e48f1736fe8b0024d526d83a1b70955f5ff55fdae85f03bdd73991",
+  "scientific_readiness": "not_established_by_engineering_validation",
+  "status": "validated"
+}

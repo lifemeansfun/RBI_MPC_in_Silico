@@ -1,0 +1,79 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-02-05",
+    "corpus_manifest_hash": "9125c5af3441f99f4d8d2a46cf63a577ce8161f2b13793ebb3e10bceafc6cc33",
+    "hawk_dove_score": -0.23404255319148937,
+    "is_internal": false,
+    "key_themes": [
+      "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+      "\"At the last meeting, I had expressed my concerns about the growth slowdown and the need to support it through a cut in policy rates.\" (2024-12-06)"
+    ],
+    "member_id": "nagesh_kumar",
+    "name": "Nagesh Kumar",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-02-05",
+    "corpus_manifest_hash": "9125c5af3441f99f4d8d2a46cf63a577ce8161f2b13793ebb3e10bceafc6cc33",
+    "hawk_dove_score": 0.0,
+    "is_internal": false,
+    "key_themes": [
+      "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+      "\"Among the multiple economic and financial developments informing a difficult voting decision, extracting interpretable signals from the set of factors underlying the unexpectedly sharp Q2 FY25 real GDP growth slowdown was, square and centre, the primary one.\" (2024-12-06)"
+    ],
+    "member_id": "saugata_bhattacharya",
+    "name": "Saugata Bhattacharya",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-02-05",
+    "corpus_manifest_hash": "9125c5af3441f99f4d8d2a46cf63a577ce8161f2b13793ebb3e10bceafc6cc33",
+    "hawk_dove_score": 0.09090909090909091,
+    "is_internal": false,
+    "key_themes": [
+      "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+      "\"In my view, the following questions warrant the attention of the MPC: Is there a strong case for a shift in the monetary policy (MP) in response to the recent developments on inflation and growth fronts, domestically and internationally?\" (2024-12-06)"
+    ],
+    "member_id": "ram_singh",
+    "name": "Ram Singh",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-02-05",
+    "corpus_manifest_hash": "9125c5af3441f99f4d8d2a46cf63a577ce8161f2b13793ebb3e10bceafc6cc33",
+    "hawk_dove_score": 0.44224422442244227,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"In the last minutes, I had mentioned how growth momentum had surprised positively whereas inflation was turning soft, implying a goldilocks kind of scenario.\" (2023-08-10)",
+      "\"In my August 2024 statement, I had stated that we could see a window opening up for monetary policy to change its course, which materialised in October 2024 as the risk-reward for a change in stance to neutral was favorable then.\" (2024-12-06)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2024-12-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

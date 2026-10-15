@@ -1,0 +1,9 @@
+{
+  "reason": "Inner seatbelt launch incompatible with already sandboxed reviewer; avoid nested sandbox while retaining enforced outer OS policy",
+  "inner_cli_sandbox_before": "workspace-write",
+  "inner_cli_sandbox_after": "danger-full-access",
+  "outer_os_policy_unchanged": true,
+  "scientific_snapshot_manifest_sha256": "e849cf8d79416ae509f4b880f9cefcd13e50e676f32ba5235f35bfbe869890a1",
+  "scientific_specification_unchanged": true,
+  "negative_scientific_verdict_not_trigger": true
+}

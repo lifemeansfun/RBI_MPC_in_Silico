@@ -1,0 +1,17 @@
+{
+  "archives": [
+    {
+      "file": "frozen_scientific_input.zip",
+      "bytes": 94815152,
+      "sha256": "338fe7b3e0ddbb128877e91f53c8562ee52dcd91a3499ad6586814452c92644e",
+      "crc_check": "passed"
+    },
+    {
+      "file": "complete_review_output.zip",
+      "bytes": 301506826,
+      "sha256": "4ae273d1328eb935ea01616f8becd8e0ecccba4ad0efb9817d4e4c3b4fef9b26",
+      "crc_check": "passed"
+    }
+  ],
+  "original_directories_retained": true
+}

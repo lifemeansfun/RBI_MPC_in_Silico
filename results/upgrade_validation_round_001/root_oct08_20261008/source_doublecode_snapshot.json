@@ -1,0 +1,10 @@
+{
+  "snapshot": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx",
+  "n_sources": 25,
+  "allowed_context": [
+    "WORKINGS.md",
+    "source_map.json",
+    "raw official sources"
+  ],
+  "prior_labels_included": false
+}

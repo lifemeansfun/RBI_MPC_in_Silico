@@ -1,0 +1,2 @@
+2026-10-09T11:15:16.770552Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-09T12:37:59.270372Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request

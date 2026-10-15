@@ -1,0 +1,74 @@
+{
+  "domain_final": {
+    "argv": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_deliberation_upgrade.py",
+      "-q",
+      "--basetemp",
+      "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_deliberation_final_tmp",
+      "-o",
+      "cache_dir=results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_cache"
+    ],
+    "stdout_stderr": "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_deliberation_final.log",
+    "exit_code": 0
+  },
+  "integration_final": {
+    "argv": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_deliberation_upgrade.py",
+      "tests/test_attribution_and_scenarios.py",
+      "tests/test_debate_mock.py",
+      "-q",
+      "--basetemp",
+      "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_integration_final_tmp",
+      "-o",
+      "cache_dir=results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_cache"
+    ],
+    "stdout_stderr": "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_integration_final.log",
+    "exit_code": 0
+  },
+  "fullpath_original": {
+    "python": ".venv/bin/python",
+    "source": "import asyncio\nfrom pathlib import Path\nfrom src.scenarios.run_counterfactual_experiments import run_phase_7_and_8\nasyncio.run(run_phase_7_and_8(output_root=Path('results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/fullpath'),experiment_id='offline_fullpath_oct08',provider='mock'))\n",
+    "stdout_stderr": "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/fullpath_scenarios.log",
+    "exit_code": 0,
+    "rerun_instruction": "Use a fresh output_root and experiment_id; existing immutable artifacts are never overwritten."
+  },
+  "regressions_expected_failure_before_fixes": {
+    "pytest_prefixed_regressions.log": "7 failed (paired settings/input/seed/Governor gap)",
+    "pytest_mask_prefixed.log": "8 failed (mask case and malformed visibility/controls)",
+    "pytest_parent_prefixed.log": "4 failed (mock parent integrity bypass)",
+    "pytest_semantic_prefixed.log": "9 failed (whitespace and decision semantics)",
+    "pytest_logger_prefixed.log": "1 failed (terminal exception replaced by logger failure)"
+  },
+  "earlier_integration_failures_retained": {
+    "pytest_initial.log": "54 passed / 1 failed: old shared cache entry rejected in mixed mock fixture",
+    "pytest_fixed.log": "54 passed / 1 failed: placeholder persona hash conflicted with actual identity in owned fixture",
+    "pytest_fixed3.log": "70 passed / 2 failed: corrupt parent already refused, with ValidationError instead of expected GenerationProvenanceError",
+    "pytest_final.log": "2 failed / 94 passed: obsolete scenario assertion placement plus mixed arithmetic fixture requiring explicit fragmentation policy",
+    "pytest_final2.log": "95 passed / 1 failed: mixed scenario arithmetic fixture needed explicit legacy_synthetic after corrected default rejects fragmentation",
+    "pytest_stable.log": "95 passed / 1 failed: same mixed fixture before root update"
+  },
+  "observed_all_pytest_summaries": {
+    "pytest_prefixed_regressions.log": "7 failed, 48 deselected in 0.55s",
+    "pytest_final_candidate.log": "95 passed in 4.24s",
+    "pytest_integration_final.log": "97 passed in 4.21s",
+    "pytest_mask_prefixed.log": "8 failed, 55 deselected in 0.48s",
+    "pytest_fixed.log": "1 failed, 54 passed in 2.21s",
+    "pytest_final2.log": "1 failed, 95 passed in 4.85s",
+    "pytest_logger_prefixed.log": "1 failed, 89 deselected in 0.26s",
+    "pytest_deliberation_final.log": "90 passed in 2.59s",
+    "pytest_final.log": "2 failed, 94 passed in 4.41s",
+    "pytest_parent_prefixed.log": "4 failed, 64 deselected in 0.48s",
+    "pytest_stable.log": "1 failed, 95 passed in 4.37s",
+    "pytest_semantic_prefixed.log": "9 failed, 79 deselected in 0.70s",
+    "pytest_fixed4.log": "81 passed in 4.95s",
+    "pytest_fixed2.log": "70 passed in 2.69s",
+    "pytest_initial.log": "1 failed, 54 passed in 2.51s",
+    "pytest_fixed3.log": "2 failed, 70 passed in 2.50s"
+  }
+}

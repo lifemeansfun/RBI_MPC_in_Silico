@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-10T18:08:56.297547+00:00",
+  "branch": "project_upgrade_codex",
+  "baseline_files_missing": [],
+  "baseline_files_changed": [
+    "AGENTS.md",
+    "Makefile",
+    "src/behavioral/debate_orchestrator.py",
+    "src/persona_engine/provenance.py"
+  ],
+  "current_executable_code_matches_integrated_freeze": true,
+  "current_source_tests_and_configuration_match_full_suite_snapshot": true,
+  "full_suite_passed": 518,
+  "source_linked_mock_generations": 26,
+  "independent_replays_equal": true,
+  "clean_install_passed": true,
+  "new_research_provider_calls": 0,
+  "new_provider_spend_usd": 0,
+  "scope": "Preserved earlier work and verified current engineering paths; scientific readiness remains separate"
+}

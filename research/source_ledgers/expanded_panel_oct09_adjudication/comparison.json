@@ -1,0 +1,120 @@
+{
+  "agreement": {
+    "literal_rate_ballot": {
+      "entries": 78,
+      "equal_including_missing": 78,
+      "both_observed_equal": 72,
+      "differences": 0
+    },
+    "exact_rate_choice": {
+      "entries": 78,
+      "equal_including_missing": 78,
+      "both_observed_equal": 78,
+      "differences": 0
+    },
+    "rate_choice_disagreement": {
+      "entries": 78,
+      "equal_including_missing": 78,
+      "both_observed_equal": 78,
+      "differences": 0
+    },
+    "formal_stance_vote": {
+      "entries": 78,
+      "equal_including_missing": 76,
+      "both_observed_equal": 18,
+      "differences": 2
+    },
+    "personal_stance_preference": {
+      "entries": 78,
+      "equal_including_missing": 76,
+      "both_observed_equal": 72,
+      "differences": 2
+    }
+  },
+  "discrepancies": [
+    {
+      "meeting_date": "2025-08-06",
+      "member_id": "saugata_bhattacharya",
+      "field": "formal_stance_vote",
+      "collector_value": "neutral",
+      "independent_value": null,
+      "collector_evidence": [
+        {
+          "text": "31. Hence, given the fluidity of the macro-financial environment, coupled with the ambiguities in the information set presently available, I believe that a pause in monetary policy decisions, both on the repo rate and the stance is appropriate. Hence, I vote for status quo in this MPC meeting.",
+          "pointer": "paragraph 31",
+          "source_id": "rbi_prid_61056",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056",
+          "source_path": "raw/rbi_prid_61056.html",
+          "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa"
+        }
+      ],
+      "adjudicated_value": "neutral",
+      "resolution": "Explicit personal status-quo vote names the stance; retain an alternative strict-narrative value of null and the preceding stance referent"
+    },
+    {
+      "meeting_date": "2026-02-06",
+      "member_id": "nagesh_kumar",
+      "field": "formal_stance_vote",
+      "collector_value": "neutral",
+      "independent_value": null,
+      "collector_evidence": [
+        {
+          "text": "23. However, at this juncture, maintaining the status quo is a prudent action, as we await the new data series on both CPI and growth rates, and the transmission of the December policy rate cut is still happening. Hence, I vote for the status quo on both the repo rate and the stance.",
+          "pointer": "paragraph 23",
+          "source_id": "rbi_prid_62261",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261",
+          "source_path": "raw/rbi_prid_62261.html",
+          "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328"
+        }
+      ],
+      "adjudicated_value": "neutral",
+      "resolution": "Explicit personal status-quo vote names the stance; retain an alternative strict-narrative value of null and the preceding stance referent"
+    },
+    {
+      "meeting_date": "2026-10-07",
+      "member_id": "nagesh_kumar",
+      "field": "personal_stance_preference",
+      "collector_value": "neutral",
+      "independent_value": null,
+      "collector_evidence": [
+        {
+          "text": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+          "pointer": "paragraph 15",
+          "source_id": "rbi_prid_63742",
+          "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+          "source_path": "raw/rbi_prid_63742.html",
+          "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d"
+        }
+      ],
+      "adjudicated_value": null,
+      "resolution": "Resolution-reported named preference remains in its own channel; a personal statement is unavailable"
+    },
+    {
+      "meeting_date": "2026-10-07",
+      "member_id": "ram_singh",
+      "field": "personal_stance_preference",
+      "collector_value": "neutral",
+      "independent_value": null,
+      "collector_evidence": [
+        {
+          "text": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+          "pointer": "paragraph 15",
+          "source_id": "rbi_prid_63742",
+          "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+          "source_path": "raw/rbi_prid_63742.html",
+          "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d"
+        }
+      ],
+      "adjudicated_value": null,
+      "resolution": "Resolution-reported named preference remains in its own channel; a personal statement is unavailable"
+    }
+  ],
+  "provenance": {
+    "collector_annotation_sha256": "2ad73cc76bf7975e9dd3fe29d3347e789c421a396fbd25207ea58ecd502e1c38",
+    "independent_annotation_sha256": "3d63ace293a5cf105071d10ab2740c53738ac322fa5c04a2277d7bdf1e16b997",
+    "source_catalog_sha256": "722f29fa5c01c122e6df3511d2e6b894fddb58fac2fc90145ce5a36b9f8ff86e",
+    "generator_sha256": "c9f99fa4c690b4ced36e72e8ab37b30fbfd6ef164e2f4812ff73abf81fd21e72",
+    "same_primary_source_hashes_checked": 25,
+    "exact_independent_raw_fragments_rechecked": 386
+  }
+}

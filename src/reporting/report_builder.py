@@ -1,10 +1,12 @@
 """
-Automated Synthesis and Reporting Engine.
+Legacy numeric-table exporter and descriptive diagnostic report.
 Produces:
 - results/tables/table1_validation_accuracy.csv
 - results/tables/table2_counterfactual_shocks.csv
 - results/tables/table3_attribution_summary.csv
-- results/RESULTS_REPORT.md (Comprehensive publication-grade academic summary)
+- results/RESULTS_REPORT.md (provenance-unspecified diagnostic summary)
+
+Use study_report.build_study_report for complete saved-evidence verification.
 """
 
 from pathlib import Path
@@ -47,8 +49,14 @@ class ReportBuilder:
         validation_summary: dict[str, Any],
         scenario_summary: list[dict[str, Any]],
         attribution_summary: list[dict[str, Any]],
+        *, evidence_types: list[str] | None = None,
+        evaluation_scope: str = "Unspecified retrospective diagnostic",
     ) -> Path:
         report_path = self.output_dir / "RESULTS_REPORT.md"
+        def display(key, digits=2):
+            value = validation_summary.get(key)
+            return "undefined or not supplied" if value is None else f"{value:.{digits}f}"
+        evidence_label = ", ".join(evidence_types) if evidence_types else "not supplied"
 
         scenarios_md = "\n".join(
             f"| {s['scenario_name']} | {s['baseline_rate_bps']:+d} bps | {s['shocked_rate_bps']:+d} bps | "
@@ -62,30 +70,39 @@ class ReportBuilder:
             for a in attribution_summary
         )
 
-        content = f"""# RBI MPC In Silico — Simulation & Empirical Synthesis Report
+        content = f"""# RBI MPC In Silico — Computational Diagnostic Report
 **Reserve Bank of India Monetary Policy Committee Deliberation Simulation**
 
 ---
 
 ## 1. Executive Summary & Validation Gate Status
 
-The multi-agent institutional simulation framework was backtested against the historical benchmark panel.
-Both the Behavioral Track (multi-round LLM deliberation) and Rational Track (smoothed open-economy Taylor Rule)
-were aggregated through the statutory Institutional Rule Engine (RBI Act §45ZL).
+Evaluation scope: {evaluation_scope}.
+Generation evidence types supplied by the caller: {evidence_label}.
+This legacy exporter formats caller-supplied numbers; it does not authenticate
+inputs, provider execution, or an independent empirical replication. Numerical
+threshold checks do not establish forecasting skill, persuasion or welfare.
+Voting majority and casting provisions are in RBI Act §45ZI; full-roster and
+fragmentation choices are additional simulator assumptions.
 
 ### Key Validation Metrics:
-- **Directional Rate Accuracy:** {validation_summary.get('directional_rate_accuracy_pct', 0.0):.1f}%
-- **Stance Accuracy:** {validation_summary.get('stance_accuracy_pct', 0.0):.1f}%
-- **Member-Level Dissent Precision:** {validation_summary.get('dissent_precision', 0.0):.2f}
-- **Member-Level Dissent Recall:** {validation_summary.get('dissent_recall', 0.0):.2f}
-- **Member-Level Dissent F1 Score:** {validation_summary.get('dissent_f1', 0.0):.2f}
-- **Validation Gate Declared:** **{'PASSED' if validation_summary.get('passed_validation_gate') else 'REQUIRES RECALIBRATION'}**
+- **Exact Rate Accuracy:** {display('exact_rate_accuracy_pct', 1)}
+- **Directional Rate Accuracy:** {display('directional_rate_accuracy_pct', 1)}
+- **Rate MAE in basis points:** {display('rate_mae_bps')}
+- **Stance Accuracy:** {display('stance_accuracy_pct', 1)}
+- **Union Dissent Precision:** {display('dissent_precision')}
+- **Union Dissent Recall:** {display('dissent_recall')}
+- **Union Dissent F1:** {display('dissent_f1')}
+- **Rate Dissent F1:** {display('rate_dissent_f1')}
+- **Stance Dissent F1:** {display('stance_dissent_f1')}
+- **Configured numerical thresholds:** {'met' if validation_summary.get('passed_validation_gate') else 'not met or not supplied'}
 
 ---
 
 ## 2. Counterfactual Macroeconomic Scenarios
 
-The committee was subjected to two historically-grounded macroeconomic shocks to evaluate monetary policy resilience:
+The supplied rows describe changes inside the specified simulator. They do not
+identify effects on the real MPC, the economy, or monetary policy resilience.
 
 | Scenario Name | Baseline Rate | Shocked Rate | Policy Wedge | Baseline Stance | Shocked Stance |
 |---|---|---|---|---|---|
@@ -95,7 +112,8 @@ The committee was subjected to two historically-grounded macroeconomic shocks to
 
 ## 3. Interaction-Level Attribution Experiments
 
-Applying removal-based attribution across multi-agent debate and statutory voting rules:
+The supplied rows describe removal-based simulator contrasts. A null or changed
+output requires its recorded intervention path and matched inputs for interpretation.
 
 | Experiment | Baseline Action | Ablated Action | Marginal Delta | Outcome Shifted |
 |---|---|---|---|---|
@@ -103,10 +121,13 @@ Applying removal-based attribution across multi-agent debate and statutory votin
 
 ---
 
-## 4. Key Methodological Takeaways
-1. **Dual-Voting Realism:** Modeling both the Policy Repo Rate and the Policy Stance successfully captures the institutional locus of RBI MPC dissent.
-2. **Statutory Tie-Breaker:** The Governor's casting vote under Section 45ZL acts as an essential stability anchor during even-numbered 3-3 splits.
-3. **Decoupled Architecture:** Contract-first Pydantic interfaces ensure full modularity and offline reproducibility.
+## 4. Evidence Boundaries
+Formal rate and stance ballots, reservations and guidance disagreement require
+separate source-linked targets. Passing a software invariant is not proof of
+empirical superiority, realistic preferences, an equilibrium or policy welfare.
+Mock or heuristic generation and cache replay must retain those evidence labels.
+Use the verified study-report path for reconstructed tables, provenance and
+available-information baseline comparisons. No scientific verdict is issued here.
 """
         with open(report_path, "w", encoding="utf-8") as f:
             f.write(content.strip() + "\n")

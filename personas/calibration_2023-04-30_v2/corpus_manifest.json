@@ -1,0 +1,1093 @@
+{
+  "calibration_cutoff": "2023-04-30",
+  "members": {
+    "ashima_goyal": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.307557,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/ashima_goyal.txt",
+          "statement_sha256": "3151ee398cc14c19b78d9ac7451a63e5b1b6419fc1b79459048dbf72c7e8abce"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/ashima_goyal.txt",
+          "statement_sha256": "76563d61606010ead3bd62f1d1fc0ca22178fe7b917f699df2537f0aaee6cf20"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/ashima_goyal.txt",
+          "statement_sha256": "7d68359d17ee4570aab6ad36530a2cd18bbd8b284d89ffd3e27627e87f427625"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/ashima_goyal.txt",
+          "statement_sha256": "f1b6dce44b185a1de0d21d4d9508a3b8297089a6b811be495407652a2b8d8ae2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/ashima_goyal.txt",
+          "statement_sha256": "bd5104704b2fcbecbe61759eb069e6b436cd1bfc5690fe2e2be82bbf10b714af"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/ashima_goyal.txt",
+          "statement_sha256": "8932d5dbe66292d9ebb6b1ad9b3a85f6575738f12e15061214a37711ab953832"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/ashima_goyal.txt",
+          "statement_sha256": "e0c33c5394da5f8bfbb2f2dcf5a99f9d463693300f562c5cad39ede8dd763e03"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/ashima_goyal.txt",
+          "statement_sha256": "93ec093f0bba4b829db9a3aa1fee1d6e2cec4393b1b642d8e2e4a382f0be95c2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/ashima_goyal.txt",
+          "statement_sha256": "497bc57ef638cb99a3cdac7288a5070f2b7f65b7bce923add4d913ee4e525da2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/ashima_goyal.txt",
+          "statement_sha256": "0787c93e99c1069f539164c893971edeac49d51eb11a1753467ad1bc80192bcf"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/ashima_goyal.txt",
+          "statement_sha256": "d3fc156fd7465c4584759a45c1dd0ba44e3c7b47819adb2360129177bcb43817"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/ashima_goyal.txt",
+          "statement_sha256": "0a75c49bce07b652ac59fa11b1da222e14e96c3972f66403ac7dcc0d8d069001"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/ashima_goyal.txt",
+          "statement_sha256": "f64be88a9a3a8ab49aef85f00a83707772dbe004437a8b83304bdfdd4af006da"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/ashima_goyal.txt",
+          "statement_sha256": "15285d89e27df50eb7620571759a91f5c9ea5216ddcfd1dfba925596e288e598"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/ashima_goyal.txt",
+          "statement_sha256": "13abe90f26f48403e47a02542a284e4d55bce9ca0bea70f7e460ee44cf12bc56"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/ashima_goyal.txt",
+          "statement_sha256": "81b5cbc244157c66b14df4e8fba670c72703d6aa3bd00e9b14d266f0b255952d"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/ashima_goyal.txt",
+          "statement_sha256": "917fd9904e171d619ede1a48ace07ac3e8ad839cae3036e1511d59a27c36873e"
+        }
+      ],
+      "dove_hits": 197,
+      "exemplar_quotes": [
+        "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India\u2019s macroeconomic structure.\" (2020-10-09)",
+        "\"To arrive at a voting decision I take up issues of global risks facing the economy, factors determining its expected inflation path and growth recovery, as well as the type and the impact of guidance.32.\" (2022-02-10)",
+        "\"The global slowdown is turning out to be less severe than expected but there are signs of a slowing in both growth and inflation suggesting central banks (CBs) tightening is adequate and lagged effects will bring about the required further fall in inflation.\" (2023-04-06)"
+      ],
+      "hawk_hits": 372,
+      "is_internal": false,
+      "meetings_count": 17,
+      "member_id": "ashima_goyal",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Dr. Ashima Goyal",
+      "role": "External Member",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 16557,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "jayanth_varma": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.268519,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/jayanth_varma.txt",
+          "statement_sha256": "87fcb43a9f8f95e72d2df5e01b865932ede73cc260c001da5ae726ccc0bee3e2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/jayanth_varma.txt",
+          "statement_sha256": "8979e4f4a04ea019c3c9ed013b82e1c70ff9be631bb297859897f140d648ae3f"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/jayanth_varma.txt",
+          "statement_sha256": "19a6c4efb7cf1114e694d94ffd741ed09885150d33d9e7eb046351deaa508281"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/jayanth_varma.txt",
+          "statement_sha256": "49e7ad8824b7626e388b3d7a1ffc78c6e652cf918bb7971791d1acf6c4fd64aa"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/jayanth_varma.txt",
+          "statement_sha256": "2ea2bb3bf99035b98c5db00df9c0734806f30a9c3890ca89b95b9f7c51604bee"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/jayanth_varma.txt",
+          "statement_sha256": "d2d762f5fc2769b60d83d89aabccbbb2942dd292105fdf1db7f8da6ce112c22c"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/jayanth_varma.txt",
+          "statement_sha256": "739f9270d3f7868078ff281c4d4e9588b963eb692e56d4785ccb68119d150ecc"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/jayanth_varma.txt",
+          "statement_sha256": "f2dd4fb9dcd14377a01101d675bfeadeaa01c7a210c1aaa031844fdfd0adcffb"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/jayanth_varma.txt",
+          "statement_sha256": "1f552263ff53ec81ece95fca767699c047487855972173c3ac512fa20b46a34b"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/jayanth_varma.txt",
+          "statement_sha256": "cf64cff9c7219ea119380d21fa33c7f67902644c97720ea31f56afd16c20f088"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/jayanth_varma.txt",
+          "statement_sha256": "a64eb5d39ed8cf4501fdcf5afab1d3b7303205a3b0854dba53b642cd8af1841c"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/jayanth_varma.txt",
+          "statement_sha256": "daca8ec2365ec53d78409fea16a8d6aac951083a8de07905ab14d74ede070587"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/jayanth_varma.txt",
+          "statement_sha256": "626c613fbf4da514fc9ec5dbdcb62894940510b95a408cec9e4ef01cd7932b89"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/jayanth_varma.txt",
+          "statement_sha256": "1dfc52436650f6dff9fd93907c6a6aa78ddeca11db03fb4ed82d27e1f9a36661"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/jayanth_varma.txt",
+          "statement_sha256": "525de9c4452b3f64066b8d43f52b9dc33c78ca12a2e891d37d1789314cf61f07"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/jayanth_varma.txt",
+          "statement_sha256": "3f30e6015e31826901bd2d2cb749e6e798dd0d4a0d4931dcab3f4ecdca99e91c"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/jayanth_varma.txt",
+          "statement_sha256": "166ebd5a49b53e5dff4fd42be6fef21d56304aa5bff6fb5b56a3e7a579901433"
+        }
+      ],
+      "dove_hits": 79,
+      "exemplar_quotes": [
+        "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+        "\"As the third Covid-19 wave peters out in India, the time has come to think of the objectives of monetary policy in much broader terms than \u201cmitigate the impact of COVID-19 on the economy\u201d.\" (2022-02-10)",
+        "\"The first risk emanates from the announcement of an output cut by OPEC+ during the weekend just before the MPC meeting.\" (2023-04-06)"
+      ],
+      "hawk_hits": 137,
+      "is_internal": false,
+      "meetings_count": 17,
+      "member_id": "jayanth_varma",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Prof. Jayanth R. Varma",
+      "role": "External Member",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 9994,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "michael_patra": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.457447,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/michael_patra.txt",
+          "statement_sha256": "e67956a464f204dadaf1105750d097eee582f5afa2e5b9a8957e555a80b0d7f7"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/michael_patra.txt",
+          "statement_sha256": "9efaf95f5da8e342f5e980462ba185950a0e9eb5a95cb49ba73e4b4ebf421c10"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/michael_patra.txt",
+          "statement_sha256": "b5eb206c9f5cb8c5f42e964333bc4c4876211f11c369b543ef9a0cdb29d70b92"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/michael_patra.txt",
+          "statement_sha256": "0cc92ce73405e1e1ee793c8ea81ecb36c61cc16e7cebc3930b4d77fe6a78573e"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/michael_patra.txt",
+          "statement_sha256": "eebaf656e582ef3f30a5c10303a411ad5f9730d300ebccbe418309283ca86096"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/michael_patra.txt",
+          "statement_sha256": "5f66f1b15e94f208bcfac9a9aae863856b510a94afd14a73afdaa5c616172f76"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/michael_patra.txt",
+          "statement_sha256": "5173e22b94a16502c60c458fdb25639618b3740872e407bc4284eb0aea20cb3b"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/michael_patra.txt",
+          "statement_sha256": "8092f883d5324193b6bb6c8c29562f378a181dad1edfd866a646f712c8da84b5"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/michael_patra.txt",
+          "statement_sha256": "065234c6e9e7b82cd5db55e2108b30abdb1f98db0a9db293f13879b42380f40c"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/michael_patra.txt",
+          "statement_sha256": "cb4b4c3ef7105eb050e0d59b81ef13ee04b05afff3434beff0adf89e8c793f8f"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/michael_patra.txt",
+          "statement_sha256": "915ac0f88c80acd86e00286e946726c709ca231e662afc1fa41b8f8bbba5aff8"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/michael_patra.txt",
+          "statement_sha256": "2e74877bc43381ebe40b4d83acbda860100bdea91a700d10a86fa1f2acbdc059"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/michael_patra.txt",
+          "statement_sha256": "dd93b90bec240ea38d2c398d73a258b9a7ed7f02294fde5ca6fcb3d430c370fc"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/michael_patra.txt",
+          "statement_sha256": "fa56136e555a3c53c46b2848e8fa7c1a8e654e6c1ae4e4c88718f9eadb66e470"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/michael_patra.txt",
+          "statement_sha256": "d57b6d48b89b587e0c06946f57d01b0cd7d083596c09b3a93652aaea93f2616b"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/michael_patra.txt",
+          "statement_sha256": "e810c34e5e75e40d3c6a5c098c69f80890d5a7096647db9fb0633b094a39417d"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/michael_patra.txt",
+          "statement_sha256": "4078cc74449920a9b234848a345b3fb9c4b5578b786cc53bc30175d1995e26cb"
+        }
+      ],
+      "dove_hits": 102,
+      "exemplar_quotes": [
+        "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC\u2019s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+        "\"In corroboration, the UNCTAD nowcasts merchandise trade volume to have picked up pace in the last quarter of 2021 from the quarter before.\" (2022-02-10)",
+        "\"Hence, inflation remains elevated and generalised; and, as I stated at the time of the MPC\u2019s February 2023 meeting, it is the biggest risk to the outlook for the Indian economy.\" (2023-04-06)"
+      ],
+      "hawk_hits": 274,
+      "is_internal": true,
+      "meetings_count": 17,
+      "member_id": "michael_patra",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Dr. Michael Debabrata Patra",
+      "role": "Deputy Governor",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 12271,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "mridul_saggar": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.276498,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/mridul_saggar.txt",
+          "statement_sha256": "c6b42c6b8a77e27367f5aeeb7ab5a9eeaba690557588f531944db7f2d9e74ef3"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/mridul_saggar.txt",
+          "statement_sha256": "1b4c40309ffa2e331ed9567fc7d129af57edb550067aab75385b90d42144a186"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/mridul_saggar.txt",
+          "statement_sha256": "87acb6148494d1a5f0c3b86327ea29271399bdfa38bf0c15b39dd64eb867d27a"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/mridul_saggar.txt",
+          "statement_sha256": "81dba7a77c4d55d8d1d8c308c6d1d7901565ec3a68863f15adf3af7a36e6bf4a"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/mridul_saggar.txt",
+          "statement_sha256": "7d3dd3c2b23d9792af36859cc98da6734b35435f166bab9f0434c6239222cc79"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/mridul_saggar.txt",
+          "statement_sha256": "49a483059be4a346f9b7aea27de26d531c989a3a84b804cb14228634904ff8ad"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/mridul_saggar.txt",
+          "statement_sha256": "a6b5346d9483cbc234ddd9e64bd328159a0e67500540db95bdc94f3ae2857c37"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/mridul_saggar.txt",
+          "statement_sha256": "d2e7c69d21bdc20121fd2cc7299edfd18385f5b348c1b57d8c37484b70f50280"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/mridul_saggar.txt",
+          "statement_sha256": "c6c49888667bc1bdba8e0ac028b01220a3b77f5f17e9bee4cbb12e8215d43f36"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/mridul_saggar.txt",
+          "statement_sha256": "d0bb2a1a68588fcd930b6c9063dc135cec4462c63d2b9af44b9d42b4994e5e2c"
+        }
+      ],
+      "dove_hits": 157,
+      "exemplar_quotes": [
+        "\"At the time of the August MPC, while noting that monetary policy was being framed under large data and forecast uncertainties, I had also indicated that growth could fall more and, inflation less, than the consensus estimates that prevailed at that point.\" (2020-10-09)",
+        "\"The trepidation reflected in my June MPC statement, when I stated that the risks of breaching the upper tolerance level are not insignificant, materialised in its dreaded form when May inflation data was released in June.\" (2021-08-06)",
+        "\"In my statement in February, I had stated that \u201cthe current geopolitical stress in Europe is a significant risk and if it translates into oil and gas prices spiking, we will need to adjust macro-economic policies suitably\u201d.\" (2022-04-08)"
+      ],
+      "hawk_hits": 277,
+      "is_internal": true,
+      "meetings_count": 10,
+      "member_id": "mridul_saggar",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Dr. Mridul K. Saggar",
+      "role": "Executive Director",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 13842,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "rajiv_ranjan": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.543071,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/rajiv_ranjan.txt",
+          "statement_sha256": "ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/rajiv_ranjan.txt",
+          "statement_sha256": "aba620cb78b72707454e55c751b3a899aa5012200c213ece1c273ff82e5ad7c9"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/rajiv_ranjan.txt",
+          "statement_sha256": "1826cc2e66ef887afb878153704d8ecdf63b3aa5d9283348a59c8f526246a8c7"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/rajiv_ranjan.txt",
+          "statement_sha256": "a459d16268f224e96d7a80e406b82d5d2029ac4743081cf0ad597fc5440f9d45"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/rajiv_ranjan.txt",
+          "statement_sha256": "a10578b3a1b4e7600108d39ebdb41dc2d700b949c8d267f6dfdb41e6f99b3816"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/rajiv_ranjan.txt",
+          "statement_sha256": "37c93693768bed1661d755f685f2223b92810e873e0dbcb3be90b2e43ebb091d"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/rajiv_ranjan.txt",
+          "statement_sha256": "8f272b4d783654a208c49ac03d0417dc9a19291c3c2be15fa0b2eacacd939e9a"
+        }
+      ],
+      "dove_hits": 61,
+      "exemplar_quotes": [
+        "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+        "\"Central banks across the globe continue their fight against inflation this year with more than a dozen central banks hiking rates by 75 bps or even more in one go.\" (2022-09-30)",
+        "\"Let me begin from where I ended my last minutes of February 2023: \u201cGoing ahead, assessment of the impact of the cumulative rate hikes will become important especially in view of higher policy transmission in a primarily bank-based economy\u201d.\" (2023-04-06)"
+      ],
+      "hawk_hits": 206,
+      "is_internal": true,
+      "meetings_count": 7,
+      "member_id": "rajiv_ranjan",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Dr. Rajiv Ranjan",
+      "role": "Executive Director",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 7298,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "shaktikanta_das": {
+      "biography": null,
+      "calibrated_hawk_dove": 0.295597,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/shaktikanta_das.txt",
+          "statement_sha256": "28cc80428584f52f3189a0c8b85ee935ef49051ada79fa8131598bea14db00f3"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/shaktikanta_das.txt",
+          "statement_sha256": "8eaa13732d1ac0e7918b70e24dce166f1ba509635dfd63aca4e4788caf02dc36"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/shaktikanta_das.txt",
+          "statement_sha256": "1cb0fa8a7bc871ee422fcbf698b9283fc9771b70929feb417171ab6877e5eb73"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/shaktikanta_das.txt",
+          "statement_sha256": "2821902d47da9190ae65d5681423fcc0c72f17d156189964a0a6d32ac3109f71"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/shaktikanta_das.txt",
+          "statement_sha256": "b9462ca26f1be7a8efef247d5660ca899c6cf52cd598aaf392f206c114d60064"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/shaktikanta_das.txt",
+          "statement_sha256": "9e95a4ca149fe84754f180a2d68fc846a09f85e611ebe0a1894f736b511fd3dd"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/shaktikanta_das.txt",
+          "statement_sha256": "35f4096f4448de12bf792a93221b344f12eea783386e9644bb2462c5e4022cda"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/shaktikanta_das.txt",
+          "statement_sha256": "a8f3d08faf4c9132c2eccd87630aa79e4c30793560ea2f8f3676e1c116ca3f53"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/shaktikanta_das.txt",
+          "statement_sha256": "5a43b474ab0267a54327546d0ad01d03149577bfc6e8b81322d09d2c0b417f6c"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/shaktikanta_das.txt",
+          "statement_sha256": "4bbe644190b7fe77ecde932450baa608206e1ad33adf244f8b8f009904277781"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/shaktikanta_das.txt",
+          "statement_sha256": "0ee84d8511581485b6e7d63f494f401535e7bffe5b5997c1f65c1d71e83bff01"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/shaktikanta_das.txt",
+          "statement_sha256": "0263ffbc38ddb384c5c76aab66655089622c00abb061fa46ec440343dd3051bf"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/shaktikanta_das.txt",
+          "statement_sha256": "7dea665b23ab75c4da86e00e620901f751f6a0cd711cc24d8c4e07ceca4b3cda"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/shaktikanta_das.txt",
+          "statement_sha256": "9e7f29b32637388a60ea6abedfdf0861cffd8c6b2e43e0eef12ccb9e24eca667"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/shaktikanta_das.txt",
+          "statement_sha256": "7d8a56e2768ae087a0e0dfbd183f0c12b78e9c121569e8bb9ad6caa20d6fc4b8"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/shaktikanta_das.txt",
+          "statement_sha256": "b4fb0830f78d83efee7658967ac2a6a14db631ba3c6bbd5c95638973958f02f2"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/shaktikanta_das.txt",
+          "statement_sha256": "03b2cb90d8c5a345ef9fb7fdb833a1b018704f2654a8ee3df54e316a18037e80"
+        }
+      ],
+      "dove_hits": 168,
+      "exemplar_quotes": [
+        "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+        "\"This has impelled some central banks to embark on aggressive policy tightening to quell inflation risks, while a few others, mostly emerging market economies (EMEs), continue to maintain accommodative policies.\" (2022-02-10)",
+        "\"While issues of geopolitics and high inflation continue to impact the outlook, the emergence of banking sector turmoil on both sides of the Atlantic and the sudden announcement of oil production cut by the OPEC+ countries have rendered the global outlook even more uncertain.\" (2023-04-06)"
+      ],
+      "hawk_hits": 309,
+      "is_internal": true,
+      "meetings_count": 17,
+      "member_id": "shaktikanta_das",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Shaktikanta Das",
+      "role": "Governor",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 14182,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    },
+    "shashanka_bhide": {
+      "biography": null,
+      "calibrated_hawk_dove": -0.012755,
+      "calibration_cutoff": "2023-04-30",
+      "corpus_sources": [
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-10-09",
+          "publication_date": "2020-10-23",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+          "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+          "statement_file": "data/processed/statements_v2/2020-10-09/shashanka_bhide.txt",
+          "statement_sha256": "3a6bdb0cb610eca2dc37fe36b42c33f8505408a4ca698920443081723053ac87"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2020-12-04",
+          "publication_date": "2020-12-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+          "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+          "statement_file": "data/processed/statements_v2/2020-12-04/shashanka_bhide.txt",
+          "statement_sha256": "2b3b1c905d5d7d4ae4236acd9dd297ab5bb911f80dea6a0be96ee73e728a6d22"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-02-05",
+          "publication_date": "2021-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+          "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+          "statement_file": "data/processed/statements_v2/2021-02-05/shashanka_bhide.txt",
+          "statement_sha256": "21a3eb1ac73c962670719a8c1e60c68ee28fb4ad66f0665bde80051712a56f15"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-04-07",
+          "publication_date": "2021-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+          "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+          "statement_file": "data/processed/statements_v2/2021-04-07/shashanka_bhide.txt",
+          "statement_sha256": "91530a9f8f36e8e9019218373f26e0d4a5fa8b3f5560e91e8e2e1badc9cef1e0"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-06-04",
+          "publication_date": "2021-06-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+          "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+          "statement_file": "data/processed/statements_v2/2021-06-04/shashanka_bhide.txt",
+          "statement_sha256": "dde250ad90b98ac93a992f14667df8c49a31af42e8a8b60c791f5fa25fab13ab"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-08-06",
+          "publication_date": "2021-08-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+          "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+          "statement_file": "data/processed/statements_v2/2021-08-06/shashanka_bhide.txt",
+          "statement_sha256": "744f3a88570034e7a0eb20d7a945be4b8d3428020e4d4bd9a971308efbb755e8"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-10-08",
+          "publication_date": "2021-10-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+          "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+          "statement_file": "data/processed/statements_v2/2021-10-08/shashanka_bhide.txt",
+          "statement_sha256": "336cf8e0b6530b3197afe44d31b35cb23b7df80feb637de4aab906e53feec592"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2021-12-08",
+          "publication_date": "2021-12-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+          "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+          "statement_file": "data/processed/statements_v2/2021-12-08/shashanka_bhide.txt",
+          "statement_sha256": "355c730004655437b313161f1144d6d6e9751e66f7cbf3390e2f060b8b058a37"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-02-10",
+          "publication_date": "2022-02-24",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+          "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+          "statement_file": "data/processed/statements_v2/2022-02-10/shashanka_bhide.txt",
+          "statement_sha256": "ada13d8add7717d650742b46559f495ac0bd7edd170f0632dbade5e7e7fe06bb"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-04-08",
+          "publication_date": "2022-04-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+          "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+          "statement_file": "data/processed/statements_v2/2022-04-08/shashanka_bhide.txt",
+          "statement_sha256": "0a412d25f6ed4fb989dac78cfe2fba760f02138230ee3f9d4ae670598370bc83"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-05-04",
+          "publication_date": "2022-05-18",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+          "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+          "statement_file": "data/processed/statements_v2/2022-05-04/shashanka_bhide.txt",
+          "statement_sha256": "b699a2dd97afc97767a0d1da85955ca23dc049c48828f4a5f8b850b0bfcff668"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-06-08",
+          "publication_date": "2022-06-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+          "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+          "statement_file": "data/processed/statements_v2/2022-06-08/shashanka_bhide.txt",
+          "statement_sha256": "d2ae0d1f8818fb97efc57a05b82666d72279da257990f437d16cf9e99e8330dc"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-08-05",
+          "publication_date": "2022-08-19",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+          "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+          "statement_file": "data/processed/statements_v2/2022-08-05/shashanka_bhide.txt",
+          "statement_sha256": "5af8454de29c1ff07a2e833266feb6b45e639f9d42d3ffb283c75398f9e5afdb"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-09-30",
+          "publication_date": "2022-10-14",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+          "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+          "statement_file": "data/processed/statements_v2/2022-09-30/shashanka_bhide.txt",
+          "statement_sha256": "d5cfc96836d1495cea06dc9ac3d10ca081182a8eb7265202bb86bb86928ac687"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2022-12-07",
+          "publication_date": "2022-12-21",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+          "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+          "statement_file": "data/processed/statements_v2/2022-12-07/shashanka_bhide.txt",
+          "statement_sha256": "4a28e8a426425c22ab700596b3a9dadbc3e752ccb51aea9ed7a11c881d6a1f4b"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-02-08",
+          "publication_date": "2023-02-22",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+          "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+          "statement_file": "data/processed/statements_v2/2023-02-08/shashanka_bhide.txt",
+          "statement_sha256": "e787bef103a6c1c4c02942d0e8d35c1adb4d2448ad9633a99ba063f2782e6a9b"
+        },
+        {
+          "availability_basis": "RBI press-release header date; conservatively available after that day",
+          "decision_date": "2023-04-06",
+          "publication_date": "2023-04-20",
+          "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+          "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+          "statement_file": "data/processed/statements_v2/2023-04-06/shashanka_bhide.txt",
+          "statement_sha256": "ab102b0f1c1ac8b4cd6d800e395cfc7a84d1eee33b66922743c8e1bd98950064"
+        }
+      ],
+      "dove_hits": 397,
+      "exemplar_quotes": [
+        "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+        "\"The First Advance Estimates (FAE) released by NSO place the GDP growth in 2021-22 at 9.2 per cent over the previous year, lower than the projected 9.5 per cent in the December MPC statement.\" (2022-02-10)",
+        "\"The Second Advance Estimates (SAE) of the National Income for FY 2022-23 released by the National Statistical Office have retained the overall YOY growth of GDP at constant prices at 7 per cent as provided in the First Advance Estimates (FAE) published on January 6, 2023.\" (2023-04-06)"
+      ],
+      "hawk_hits": 387,
+      "is_internal": false,
+      "meetings_count": 17,
+      "member_id": "shashanka_bhide",
+      "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate",
+      "name": "Dr. Shashanka Bhide",
+      "role": "External Member",
+      "stance_bias": "neutral",
+      "tenure": "Calibration corpus through 2023-04-30",
+      "total_words": 24596,
+      "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+    }
+  },
+  "selection_rule": "publication day strictly precedes cutoff",
+  "version": "dated-lexical-v2"
+}

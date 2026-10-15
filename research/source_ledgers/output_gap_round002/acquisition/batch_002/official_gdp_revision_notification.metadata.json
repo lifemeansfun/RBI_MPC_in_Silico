@@ -1,0 +1,28 @@
+{
+  "id": "official_gdp_revision_notification",
+  "url": "https://www.mospi.gov.in/sites/default/files/main_menu/nsdp_sdds/Notification_ReleaseCalendarChange.pdf",
+  "filename": "gdp_revision_notification.pdf",
+  "role": "annual_and_quarterly_revision_timing",
+  "discovery": "Exact primary FAQ hyperlink",
+  "retrieved_at_utc": "2026-10-09T16:12:27.740347+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/main_menu/nsdp_sdds/Notification_ReleaseCalendarChange.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:15:44 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "78277",
+    "Connection": "close",
+    "Last-Modified": "Mon, 27 Feb 2023 07:01:12 GMT",
+    "ETag": "\"63fc5538-131c5\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:15:44 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_002/raw/gdp_revision_notification.pdf",
+  "bytes": 78277,
+  "sha256": "5e12546abff7cbb5d88b25044231f8a7f10f8679dc3e380a5d245e6569b12e73",
+  "primary_final_host": true,
+  "acquired": true
+}

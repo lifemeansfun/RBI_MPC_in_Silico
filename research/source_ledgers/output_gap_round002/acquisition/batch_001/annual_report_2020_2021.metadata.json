@@ -1,0 +1,28 @@
+{
+  "id": "annual_report_2020_2021",
+  "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2020-21%20.pdf",
+  "filename": "annual_report_2020_2021.pdf",
+  "role": "NAS2020_publication_month_evidence",
+  "discovery": "Primary-domain web search result exact URL",
+  "retrieved_at_utc": "2026-10-09T16:09:21.567948+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2020-21%20.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:12:38 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "5239326",
+    "Connection": "close",
+    "Last-Modified": "Thu, 21 Aug 2025 13:07:56 GMT",
+    "ETag": "\"68a71a2c-4ff21e\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:12:38 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_001/raw/annual_report_2020_2021.pdf",
+  "bytes": 5239326,
+  "sha256": "c31a738b5c4531bef7b6ee6d9dc56768ca3cad203c8a2e6657d1908e4da7785c",
+  "primary_final_host": true,
+  "acquired": true
+}

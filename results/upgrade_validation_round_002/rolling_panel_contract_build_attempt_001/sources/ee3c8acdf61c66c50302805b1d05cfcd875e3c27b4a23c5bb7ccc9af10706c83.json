@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2023-08-10",
+  "meeting_start_date": "2023-08-08",
+  "publication_date": "2023-08-24",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_56252.html",
+  "source_sha256": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+  "statement_sha256": {
+    "ashima_goyal": "3982a85603d5a9531e09c491c0028056943744887b97808fe3d27fd0faa43c9c",
+    "jayanth_varma": "f8a344b7326f38e72aac9d83b6ef7fc1fa3828b1730197d3f799bd6bdb6c9fd0",
+    "michael_patra": "6652f8b632ae68cc61f2d1d3ac3e6021d628ce383c1455cf615bfdfb9b8fcd1e",
+    "rajiv_ranjan": "157147cd3d0202c83c2bc5c01cb0fcdb96670c8e503141fc61addb61cffceb26",
+    "shaktikanta_das": "eff8688686defa8a1f76937981723c4d8703be40e096da68b450eb2f01611f2e",
+    "shashanka_bhide": "395ce4fd50fb0d75dceb10efc5371055da363fdf66028fe0b2d9958f2c794934"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, August 8 to 10, 2023"
+}

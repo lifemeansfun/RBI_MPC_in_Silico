@@ -1,0 +1,46 @@
+{
+  "run_id": "elite_impl_20261010_001",
+  "authorized_work": "Implement saved submission plan, beginning with source/identification/integration gates",
+  "authorization": "User: Alright implement",
+  "started_at": "2026-10-10T12:22:43.241669+00:00",
+  "branch": "project_upgrade_codex",
+  "head": "78de7f75bda03d696205b188af17b9540e02a172",
+  "previous_run": "kazinnik_run_20261010T023656Z; preserved, not reopened",
+  "phase": "engineering_batch_delivered_research_incomplete",
+  "limits": {
+    "new_live_research_calls": 0,
+    "new_research_provider_spend_usd": 0,
+    "scientific_prompt_retries": 0,
+    "isolated_test_command_timeout_seconds": 1200
+  },
+  "observed_hardware": {
+    "cpu": "Apple M1",
+    "memory_gib": 8
+  },
+  "python": "3.14.4",
+  "new_live_calls": 0,
+  "new_provider_spend_usd": 0,
+  "open_dependencies": [
+    "domain specialist/human coding validation",
+    "authenticated remaining allowance and account quotas",
+    "exact eligible source-complete cohort",
+    "full revised reference methods",
+    "prospective outcomes"
+  ],
+  "verification_python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "completed_at": "2026-10-10T18:08:56.342521+00:00",
+  "full_suite_passed": 518,
+  "source_linked_mock_generations": 26,
+  "clean_install_passed": true,
+  "new_scientific_reviewer_dispatches": 0,
+  "external_dependency_status": "Not resolved by implementation; no renewed provider allowance or scientific approval inferred",
+  "subagent_limit_event": "Source owner final message failed at account usage limit after its independent clean-install driver had completed successfully; root verified saved records",
+  "remaining_work": [
+    "July 2026 revised full methods unavailable; complete scientific adaptation and relevant reference-mechanism reproduction remain unestablished",
+    "Exact novelty, domain importance and meaningful effect not assessed; no favorable verdict sought",
+    "Oracle attendance, unauthenticated historical first availability, absent human coding/construct validation; 13 missing macro meetings, 14 missing histories, unsupported stance; no premeeting forecasting eligibility",
+    "Zero live study calls; no reconciled allowance/quota, externally assessed scientific freeze, pilot or main-study execution; semantic disclosure audit missing",
+    "No live variance/precision design, empirical intervals or temporal generalization; fixture null is not evidence of equivalence",
+    "Fresh live replication/provider authentication/billing unverified; new runner blocks existing outputs and does not yet implement controlled continuation of a stopped study; final independent scientific critique not performed"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdp_20200529",
+  "url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20PE%20and%20Q4%20estimates%20of%20GDP.pdf",
+  "role": "gdp_release_pdf",
+  "format": "pdf",
+  "release_date": "2020-05-29",
+  "reference_period": "FY2019-20Q4",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:12.377136+00:00",
+  "status_code": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20PE%20and%20Q4%20estimates%20of%20GDP.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:57:24 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "338131",
+    "Connection": "keep-alive",
+    "Last-Modified": "Fri, 29 May 2020 12:07:42 GMT",
+    "ETag": "\"5ed0fb0e-528d3\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:57:24 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 338131,
+  "acquired": true,
+  "local_file": "raw/gdp_20200529.pdf",
+  "sha256": "5597b3113004c81d7a729b5167e7eb10bcac50b3e001805075fd8adf79a84c09"
+}

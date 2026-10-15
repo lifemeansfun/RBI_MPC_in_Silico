@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2021-08-06",
+  "meeting_start_date": "2021-08-04",
+  "publication_date": "2021-08-20",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+  "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+  "statement_sha256": {
+    "ashima_goyal": "8932d5dbe66292d9ebb6b1ad9b3a85f6575738f12e15061214a37711ab953832",
+    "jayanth_varma": "d2d762f5fc2769b60d83d89aabccbbb2942dd292105fdf1db7f8da6ce112c22c",
+    "michael_patra": "5f66f1b15e94f208bcfac9a9aae863856b510a94afd14a73afdaa5c616172f76",
+    "mridul_saggar": "49a483059be4a346f9b7aea27de26d531c989a3a84b804cb14228634904ff8ad",
+    "shaktikanta_das": "9e95a4ca149fe84754f180a2d68fc846a09f85e611ebe0a1894f736b511fd3dd",
+    "shashanka_bhide": "744f3a88570034e7a0eb20d7a945be4b8d3428020e4d4bd9a971308efbb755e8"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, August 4 to 6, 2021"
+}

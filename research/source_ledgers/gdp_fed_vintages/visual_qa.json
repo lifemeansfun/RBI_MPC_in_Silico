@@ -1,0 +1,23 @@
+{
+  "inspection_method": "ViewedsourcePNGtablepagesusingview_imageafter2500pixelPopplerrender;manuallycheckedconstant-priceheaders/fiscalyears/currentquarterandGDPvsGVAlevel/growthrows",
+  "visually_reviewed_table_pages": [
+    "visual_checks/gdp_20200831_page5.png",
+    "visual_checks/gdp_20201127_page5.png",
+    "visual_checks/gdp_20210226_page8.png",
+    "visual_checks/gdp_20210531_attachment_page8.png",
+    "visual_checks/gdp_20220228_page7.png",
+    "visual_checks/gdp_20230831_attachment_page4.png",
+    "visual_checks/gdp_20231130_page4.png",
+    "visual_checks/gdp_20240531_attachment_page13.png"
+  ],
+  "findings": [
+    "EarlyscannedtablesrequireOCRplusvisualadjudication;OCRdropsminus/decimalmarksandmergesintegercolumns;curatedrowsretaincorrectprintedvalues",
+    "Annualtablesoriginallyrenderedbeforequarterlytableswereidentified;notusedasquarterlyobservations",
+    "FY2020-21Q1GDP-23.9andGVA-22.8correctlydistinct",
+    "May2021currentquartergrowthGDP1.6andGVA3.7confirmed",
+    "February2022Q3GDP5.4andGVA4.7confirmed",
+    "May2024quarterlyGDP7.8andGVA6.3confirmed"
+  ],
+  "all_table_pages_rendered": 21,
+  "all_17_sources_individually_visually_reviewed": false
+}

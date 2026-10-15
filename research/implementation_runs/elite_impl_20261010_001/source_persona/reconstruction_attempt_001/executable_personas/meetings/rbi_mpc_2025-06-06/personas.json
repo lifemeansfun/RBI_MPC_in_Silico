@@ -1,0 +1,101 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-06-04",
+    "corpus_manifest_hash": "bffe2b62ef0f052b69c9c069f7fd7c4cb3bdc43c8d3b85e53c6ffe52083396e9",
+    "hawk_dove_score": -0.3170731707317073,
+    "is_internal": false,
+    "key_themes": [
+      "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+      "\"I have been concerned with the economy's slowdown since the October 2024 Meeting of the MPC and have been making a case for a rate cut to support growth.\" (2025-02-07)",
+      "\"In a huge blow to the multilateral trading system, and its bedrock Most-Favoured Nations (MFN) treatment that the members of the WTO accord to each other, President Donald Trump of the United States announced high reciprocal tariffs on imports from most countries of the world on 2 April 2025, the so-called Liberation Day.\" (2025-04-09)"
+    ],
+    "member_id": "nagesh_kumar",
+    "name": "Nagesh Kumar",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2025-04-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-06-04",
+    "corpus_manifest_hash": "bffe2b62ef0f052b69c9c069f7fd7c4cb3bdc43c8d3b85e53c6ffe52083396e9",
+    "hawk_dove_score": 0.010309278350515464,
+    "is_internal": false,
+    "key_themes": [
+      "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+      "\"The high 6.2% yoy CPI October ’24 inflation print, which was the proximate factor influencing my vote at the Dec ’24 MPC meeting, has since moderated to 5.2% in Dec ’24.\" (2025-02-07)",
+      "\"Due to the elevated uncertainty regarding global trade, the continuing spillovers into financial markets volatility and the prospects, continuing well into the medium term, of adverse economic shocks on growth, economic forecasts at this point are only indicative in nature, conveying merely a sense of the direction of travel.\" (2025-04-09)"
+    ],
+    "member_id": "saugata_bhattacharya",
+    "name": "Saugata Bhattacharya",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2025-04-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-06-04",
+    "corpus_manifest_hash": "bffe2b62ef0f052b69c9c069f7fd7c4cb3bdc43c8d3b85e53c6ffe52083396e9",
+    "hawk_dove_score": 0.15254237288135594,
+    "is_internal": false,
+    "key_themes": [
+      "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+      "\"Since the December meeting of the MPC, we have received additional data related to the economy's inflation trajectory and growth prospects.\" (2025-02-07)",
+      "\"My assessment of the situation and the appropriate monetary policy (MP) response align with the MPC statement for the April 2025 meeting.\" (2025-04-09)"
+    ],
+    "member_id": "ram_singh",
+    "name": "Ram Singh",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2025-04-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-06-04",
+    "corpus_manifest_hash": "bffe2b62ef0f052b69c9c069f7fd7c4cb3bdc43c8d3b85e53c6ffe52083396e9",
+    "hawk_dove_score": 0.4002998500749625,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"At this juncture, three global trends, among many others, need to be closely watched – rising crude oil prices, rising US yields and rising US dollar.\" (2023-10-06)",
+      "\"The current global environment is highly challenging with a new restricted and fragmented global trade order taking shape amidst announcements of reciprocal and retaliatory tariffs.\" (2025-04-09)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2025-04-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2025-06-04",
+    "corpus_manifest_hash": "bffe2b62ef0f052b69c9c069f7fd7c4cb3bdc43c8d3b85e53c6ffe52083396e9",
+    "hawk_dove_score": 0.15384615384615385,
+    "is_internal": true,
+    "key_themes": [
+      "\"In a world order dominated by continuing geopolitical tensions and elevated trade and policy uncertainties, monetary policy, as the guardian of macroeconomic and financial stability, is traversing through a challenging time.\" (2025-02-07)",
+      "\"The global economic landscape remains in a state of flux amidst heightened trade and policy uncertainties, with attendant implications for economies across the world, posing complex challenges and trade-offs in policy making.\" (2025-04-09)"
+    ],
+    "member_id": "sanjay_malhotra",
+    "name": "Sanjay Malhotra",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-02-07 to 2025-04-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

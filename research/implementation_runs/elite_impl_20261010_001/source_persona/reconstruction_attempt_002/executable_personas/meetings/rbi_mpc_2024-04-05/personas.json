@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": 0.3193863319386332,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"There is worry about US inflation generalizing to the rest of the world, but we must remember Indian inflation differs.\" (2022-06-08)",
+      "\"Geopolitical risks continue but neither have oil prices risen as much as feared nor has global growth slowed as much as expected.\" (2024-02-08)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": 0.27586206896551724,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"In my statement during the May meeting, I called for more than 100 basis points of rate increases to be carried out very soon.\" (2022-06-08)",
+      "\"Inflation is projected to average 4.5% in 2024-25, and, therefore, the current policy rate of 6.5% translates into a real rate of 2%.\" (2024-02-08)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": 0.4725274725274725,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"Near shoring, on shoring and reshoring echo through investor conferences, adding to the influential call for friend shoring or relocation of supply chains to friendly countries.\" (2022-06-08)",
+      "\"Recent advance estimates of the National Statistical Office (NSO) and subsequently available high frequency indicators point to the momentum of domestic economic activity being sustained.\" (2024-02-08)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": 0.48598130841121495,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"Let me begin from where I ended my last minutes of February 2023: “Going ahead, assessment of the impact of the cumulative rate hikes will become important especially in view of higher policy transmission in a primarily bank-based economy”.\" (2023-04-06)",
+      "\"Let me start from the outlook I had given in my December 2023 minutes, “While a durable growth path backed by consumption and investment is visible from here on, the same cannot be said about disinflation yet.\" (2024-02-08)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": 0.33671742808798644,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"Global growth and trade are steadily decelerating, global commodity prices remain firm and financial markets worldwide are turning more volatile.\" (2022-06-08)",
+      "\"Considering that price and financial stability are the foundations for strong, sustainable and inclusive growth, our endeavour all along has been to take a holistic approach to keep the economy in balance.60.\" (2024-02-08)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-04-03",
+    "corpus_manifest_hash": "ea0de52a5990ed962b12f375eacd66f6b56c5456eff0a8ef6f34968278b667e6",
+    "hawk_dove_score": -0.0009478672985781991,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The inflation rate was also at or above the upper level of the tolerance band of inflation target in January and February.\" (2022-06-08)",
+      "\"The First Advance Estimates of GDP for FY 2023-24 released by the National Statistical Office placed year-on-year real GDP growth for FY 2023-24 at 7.3 per cent, exceeding the 7.2 per cent in the previous year.\" (2024-02-08)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-02-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

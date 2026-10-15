@@ -1,0 +1,91 @@
+{
+  "scope": "Full intended research contribution; scoped engineering successes do not pass broader criteria.",
+  "status_set": [
+    "PASS",
+    "FAIL",
+    "UNVERIFIED"
+  ],
+  "criteria": [
+    {
+      "id": "A",
+      "criterion": "Contribution",
+      "status": "UNVERIFIED",
+      "verified_scope": "Question identifiable; focused literature acquisition and critical review retained.",
+      "remaining_gap": "Verified source/version novelty comparison and consequential empirical contribution.",
+      "evidence": [
+        "research/peer_reviews/round_002_clean_defaults_oct09/output/REVIEW.md",
+        "research/implementation_plans/round_002.md"
+      ]
+    },
+    {
+      "id": "B",
+      "criterion": "Data and timing",
+      "status": "FAIL",
+      "verified_scope": "Original source reconstruction and cutoff controls; explicit missingness; rolling input byte consistency.",
+      "remaining_gap": "Eight intended macro fields missing; strict output-gap version availability, expanded macro packets, pre-cutoff roster evidence, 14 missing histories and stance integration unresolved.",
+      "evidence": [
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/rebuilt_inputs/reconstruction_receipt.json",
+        "results/upgrade_validation_round_002/rolling_panel_contract_build_attempt_002/protocol.json",
+        "research/source_ledgers/output_gap_round002/protocol_v1.json"
+      ]
+    },
+    {
+      "id": "C",
+      "criterion": "Experimental identification",
+      "status": "FAIL",
+      "verified_scope": "Simple baselines, offline controls and one-call comparator interface.",
+      "remaining_gap": "Aligned informative live comparisons separating persona, deliberation and rules; comparable declared information and resource policy.",
+      "evidence": [
+        "research/verification/comparator_controls.md",
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/verified_report/summary.json"
+      ]
+    },
+    {
+      "id": "D",
+      "criterion": "Empirical evidence",
+      "status": "FAIL",
+      "verified_scope": "1344 explicitly mock saved generations verified offline; zero replay provider calls.",
+      "remaining_gap": "Corrected informative-regime live-model evaluation with raw evidence and independent computation.",
+      "evidence": [
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/result.json",
+        "research/peer_reviews/round_002_clean_defaults_oct09/output/REVIEW.md"
+      ]
+    },
+    {
+      "id": "E",
+      "criterion": "Statistics and measurement",
+      "status": "UNVERIFIED",
+      "verified_scope": "Channel definitions, source label missingness, meeting-level mock scores and paired logical completion bounds.",
+      "remaining_gap": "Frozen adequate-sample live estimands and temporal/multiplicity/failure analysis; eight meetings and deterministic calls insufficient for generalization.",
+      "evidence": [
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/verified_report/summary.json",
+        "research/source_ledgers/expanded_panel_oct09_adjudication/verification.json"
+      ]
+    },
+    {
+      "id": "F",
+      "criterion": "Reproducibility",
+      "status": "FAIL",
+      "verified_scope": "Saved original reconstruction/replay passed; scoped engineering suites and captured current hash consistency.",
+      "remaining_gap": "Complete current integration and source-to-live-evaluation reconstruction; four later modules outside the 307-test snapshot; missing rolling component documentation.",
+      "evidence": [
+        "results/upgrade_validation_round_002/integrated_suite_attempt_002/result.json",
+        "results/upgrade_validation_round_002/comparator_controls_attempt_004/result.json",
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/result.json",
+        "research/assessments/bounded_readiness_20261010/integrity_checks.json"
+      ]
+    },
+    {
+      "id": "G",
+      "criterion": "Claim validity",
+      "status": "UNVERIFIED",
+      "verified_scope": "Current diagnostic/comparator/rolling exports qualify mock, retrospective and simulator-local scope.",
+      "remaining_gap": "Complete final claim audit and evidence for any retained cognition/equilibrium/welfare/external-policy claims.",
+      "evidence": [
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003/verified_report/RESULTS_REPORT.md",
+        "research/verification/comparator_controls.md",
+        "results/upgrade_validation_round_002/rolling_panel_contract_build_attempt_002/protocol.json"
+      ]
+    }
+  ]
+}

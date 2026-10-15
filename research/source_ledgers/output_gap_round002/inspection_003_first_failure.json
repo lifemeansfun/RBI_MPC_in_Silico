@@ -1,0 +1,6 @@
+{
+  "command": "python3 stdin HTML inspection using bs4",
+  "returncode": 1,
+  "error": "ModuleNotFoundError: No module named bs4",
+  "correction": "Use project virtual-environment interpreter; source files unchanged"
+}

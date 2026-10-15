@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/run_mock_diagnostic.py",
+    "--output",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_suite_attempt_005/checkout",
+  "started_at_unix": 1791468601.631588,
+  "scope": "mock procedural diagnostic; no live provider calls permitted"
+}

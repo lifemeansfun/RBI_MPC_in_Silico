@@ -1,0 +1,13 @@
+[
+  "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+  "-m",
+  "pytest",
+  "tests/test_deliberation_upgrade.py",
+  "tests/test_attribution_and_scenarios.py",
+  "tests/test_debate_mock.py",
+  "-q",
+  "--basetemp",
+  "results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_initial_tmp",
+  "-o",
+  "cache_dir=results/upgrade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_cache"
+]

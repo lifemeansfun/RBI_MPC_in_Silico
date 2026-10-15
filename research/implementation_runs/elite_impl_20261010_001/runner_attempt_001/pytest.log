@@ -1,0 +1,97 @@
+.F.....F...                                                              [100%]
+=================================== FAILURES ===================================
+________________ test_complete_mock_path_and_independent_replay ________________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tation_runs/elite_impl_20261010_001/runner_attempt_001/checkout/isolated_test_outputs/test_complete_mock_path_and_in0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x108e5b510>
+
+    def test_complete_mock_path_and_independent_replay(tmp_path, monkeypatch):
+        protocol = _protocol(tmp_path)
+>       result = asyncio.run(run_study(protocol, tmp_path / "mock", execution="mock"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_frozen_study_runner.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py:190: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src/backtest/run_frozen_study.py:374: in run_study
+    write_immutable(out / "analysis.json", _seal(_artifact_analysis(schedule, out / "generations", menu)))
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/backtest/run_frozen_study.py:270: in _artifact_analysis
+    return {"B_minus_H": reconstruct_from_artifacts(schedule, prefix_paths, branch_paths, allowed_labels=menu),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/validation/paired_consensus.py:596: in reconstruct_from_artifacts
+    _check_transcript(path.parent, branch.get("governor_transcript"), payload, expected, requests, tracks)
+src/validation/paired_consensus.py:510: in _check_transcript
+    _require(isinstance(request_identity, Mapping) and all(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False
+message = 'Generation request identity differs from planned request'
+
+    def _require(condition: bool, message: str) -> None:
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Generation request identity differs from planned request
+
+src/validation/paired_consensus.py:35: ValueError
+_______________ test_replay_detects_resealed_ballot_disagreement _______________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tation_runs/elite_impl_20261010_001/runner_attempt_001/checkout/isolated_test_outputs/test_replay_detects_resealed_b0')
+
+    def test_replay_detects_resealed_ballot_disagreement(tmp_path):
+        protocol = _protocol(tmp_path)
+>       asyncio.run(run_study(protocol, tmp_path / "mock", execution="mock"))
+
+tests/test_frozen_study_runner.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py:190: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src/backtest/run_frozen_study.py:374: in run_study
+    write_immutable(out / "analysis.json", _seal(_artifact_analysis(schedule, out / "generations", menu)))
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/backtest/run_frozen_study.py:270: in _artifact_analysis
+    return {"B_minus_H": reconstruct_from_artifacts(schedule, prefix_paths, branch_paths, allowed_labels=menu),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/validation/paired_consensus.py:596: in reconstruct_from_artifacts
+    _check_transcript(path.parent, branch.get("governor_transcript"), payload, expected, requests, tracks)
+src/validation/paired_consensus.py:510: in _check_transcript
+    _require(isinstance(request_identity, Mapping) and all(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False
+message = 'Generation request identity differs from planned request'
+
+    def _require(condition: bool, message: str) -> None:
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Generation request identity differs from planned request
+
+src/validation/paired_consensus.py:35: ValueError
+=============================== warnings summary ===============================
+tests/test_frozen_study_runner.py::test_default_validation_never_constructs_client
+tests/test_frozen_study_runner.py::test_complete_mock_path_and_independent_replay
+tests/test_frozen_study_runner.py::test_live_fixture_and_existing_destinations_refused
+tests/test_frozen_study_runner.py::test_replay_detects_resealed_ballot_disagreement
+  /Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/runner_attempt_001/checkout/src/backtest/run_frozen_study.py:156: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    if any(getattr(snapshot, name) not in (None, []) for name in snapshot.model_fields if name.startswith("real_")):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_frozen_study_runner.py::test_complete_mock_path_and_independent_replay
+FAILED tests/test_frozen_study_runner.py::test_replay_detects_resealed_ballot_disagreement
+2 failed, 9 passed, 4 warnings in 2.87s

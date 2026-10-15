@@ -1,0 +1,54 @@
+[
+  {
+    "id": "nas2020_s8_18_2_spaced",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S%208.18.2.pdf",
+    "filename": "nas2020_s8_18_2_spaced.pdf",
+    "role": "long_constant_GDP_candidate",
+    "discovery": "Candidate derived from official NAS2020 directory in primary indexed methodology PDF and NAS2019 statement naming; availability not inferred",
+    "retrieved_at_utc": "2026-10-09T16:12:27.729334+00:00",
+    "acquired": false,
+    "error_type": "HTTPError",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "nas2020_s8_18_2_compact",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S8.18.2.pdf",
+    "filename": "nas2020_s8_18_2_compact.pdf",
+    "role": "long_constant_GDP_candidate",
+    "discovery": "Explicit alternative filename candidate; content/availability not assumed",
+    "retrieved_at_utc": "2026-10-09T16:12:27.730439+00:00",
+    "acquired": false,
+    "error_type": "HTTPError",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "nas2020_methodology",
+    "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/Notes%20on%20Methodology%20and%20Reasons%20for%20Revision%20in%20Estimates.pdf",
+    "filename": "nas2020_methodology.pdf",
+    "role": "official_vintage_methodology",
+    "discovery": "Primary-domain exact indexed URL",
+    "retrieved_at_utc": "2026-10-09T16:12:27.739894+00:00",
+    "status": 200,
+    "final_url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/Notes%20on%20Methodology%20and%20Reasons%20for%20Revision%20in%20Estimates.pdf",
+    "local_file": "acquisition/batch_002/raw/nas2020_methodology.pdf",
+    "bytes": 216557,
+    "sha256": "27d8232c12539315807514d36ad6e095a1e20ade7cafbb4a5d11df780436770a",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "official_gdp_revision_notification",
+    "url": "https://www.mospi.gov.in/sites/default/files/main_menu/nsdp_sdds/Notification_ReleaseCalendarChange.pdf",
+    "filename": "gdp_revision_notification.pdf",
+    "role": "annual_and_quarterly_revision_timing",
+    "discovery": "Exact primary FAQ hyperlink",
+    "retrieved_at_utc": "2026-10-09T16:12:27.740347+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/main_menu/nsdp_sdds/Notification_ReleaseCalendarChange.pdf",
+    "local_file": "acquisition/batch_002/raw/gdp_revision_notification.pdf",
+    "bytes": 78277,
+    "sha256": "5e12546abff7cbb5d88b25044231f8a7f10f8679dc3e380a5d245e6569b12e73",
+    "primary_final_host": true,
+    "acquired": true
+  }
+]

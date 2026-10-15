@@ -1,0 +1,196 @@
+{
+  "catalog_version": 1,
+  "sources": [
+    {
+      "id": "fed_calendar_2020",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+      "role": "fed_calendar",
+      "format": "html",
+      "release_date": "",
+      "reference_period": "",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "fed_calendar_2021_2024",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "role": "fed_calendar",
+      "format": "html",
+      "release_date": "",
+      "reference_period": "",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20200529",
+      "url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20PE%20and%20Q4%20estimates%20of%20GDP.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2020-05-29",
+      "reference_period": "FY2019-20Q4",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20200831",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2020-21.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2020-08-31",
+      "reference_period": "FY2020-21Q1",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20201127",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q2_2020-21.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2020-11-27",
+      "reference_period": "FY2020-21Q2",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20210226",
+      "url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20SAE%2026-02-2021.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2021-02-26",
+      "reference_period": "FY2020-21Q3",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20210531",
+      "url": "https://www.pib.gov.in/pressreleasepage.aspx?lang=2&prid=1723153&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2021-05-31",
+      "reference_period": "FY2020-21Q4",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20210831",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1750782&lang=2&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2021-08-31",
+      "reference_period": "FY2021-22Q1",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20211130",
+      "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?lang=2&reg=48&relid=227275",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2021-11-30",
+      "reference_period": "FY2021-22Q2",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20220228",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE_SAE28-02-2022.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2022-02-28",
+      "reference_period": "FY2021-22Q3",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20220531",
+      "url": "https://www.mospi.gov.in/sites/default/files/press_release/Press%20Note_PE%20FY22m1653998874449_0.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2022-05-31",
+      "reference_period": "FY2021-22Q4",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20220831",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2022-23F.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2022-08-31",
+      "reference_period": "FY2022-23Q1",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20221130",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1880006&lang=2&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2022-11-30",
+      "reference_period": "FY2022-23Q2",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20230228",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/PressNoteNAD_28feb23final.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2023-02-28",
+      "reference_period": "FY2022-23Q3",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20230531",
+      "url": "https://www.mospi.gov.in/sites/default/files/press_release/PressNoteQ4_FY2022-23_31may23.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2023-05-31",
+      "reference_period": "FY2022-23Q4",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20230831",
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1953769&lang=2&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2023-08-31",
+      "reference_period": "FY2023-24Q1",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20231130",
+      "url": "https://www.mospi.gov.in/sites/default/files/press_release/NAD_PR_Q2_30112023N.pdf",
+      "role": "gdp_release_pdf",
+      "format": "pdf",
+      "release_date": "2023-11-30",
+      "reference_period": "FY2023-24Q2",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20240229",
+      "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2010223&lang=2&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2024-02-29",
+      "reference_period": "FY2023-24Q3",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_20240531",
+      "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2022323&lang=2&reg=48",
+      "role": "gdp_release_html",
+      "format": "html",
+      "release_date": "2024-05-31",
+      "reference_period": "FY2023-24Q4",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    },
+    {
+      "id": "gdp_corrigendum_20240305",
+      "url": "https://mospi.gov.in/sites/default/files/press_release/CorrigendumPR05032024.pdf",
+      "role": "gdp_corrigendum",
+      "format": "pdf",
+      "release_date": "",
+      "reference_period": "",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+      "printed_document_date": "2024-03-01",
+      "release_date_basis": "Website publication/release datetime not independently established; filename is not release-date evidence"
+    },
+    {
+      "id": "history_candidate_post_cutoff_2025",
+      "url": "https://mospi.gov.in/quarter-wise-gdp-estimates-and-growth-rate-current-and-constant-prices-during-2018-19-2024-25-base",
+      "role": "history_candidate_not_input",
+      "format": "html",
+      "release_date": "",
+      "reference_period": "",
+      "discovery": "Official source found through primary-domain web search/open, 2026-10-05"
+    }
+  ]
+}

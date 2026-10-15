@@ -1,0 +1,44 @@
+[
+  {
+    "id": "annual_report_2021_2022",
+    "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2021-22.pdf",
+    "filename": "annual_report_2021_2022.pdf",
+    "role": "Primary publication-month evidence for edition NAS2021, not its current table version",
+    "discovery": "Official primary web search inspected report publication table"
+  },
+  {
+    "id": "annual_report_2023_2024",
+    "url": "https://mospi.gov.in/sites/default/files/publication_reports/AnnualReport_2023-24_0.pdf",
+    "filename": "annual_report_2023_2024.pdf",
+    "role": "Primary publication-month evidence for edition NAS2023, not its current table version",
+    "discovery": "Official primary web search inspected report publication table"
+  },
+  {
+    "id": "revision_policy_2016",
+    "url": "https://mospi.gov.in/sites/default/files/press_releases_statements/Modification_Rev%20Policy_16.11.2016.pdf",
+    "filename": "revision_policy_2016.pdf",
+    "role": "Published quarterly/annual revision policy; not proof of every historical correction",
+    "discovery": "Official primary web search exact retained PDF URL"
+  },
+  {
+    "id": "nas2021_methodology",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/Notes_on_methodology_reasons_of_reasons_2021.pdf",
+    "filename": "nas2021_methodology.pdf",
+    "role": "Primary historical methodological/revision context",
+    "discovery": "Official primary web search actual URL"
+  },
+  {
+    "id": "nas2024_methodology",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2024/Method_NAS2024.pdf",
+    "filename": "nas2024_methodology.pdf",
+    "role": "Primary methodological/revision context, excluded as historical input source",
+    "discovery": "Official primary web search actual URL"
+  },
+  {
+    "id": "nas2025_release",
+    "url": "https://www.mospi.gov.in/sites/default/files/press_release/Press%20Release%20on%20National%20Accounts%20Statistics%20Publication%20-%202025.pdf",
+    "filename": "nas2025_release.pdf",
+    "role": "Primary May16,2025 notice of NAS2024 later updates, negative vintage evidence",
+    "discovery": "Official primary web search actual URL"
+  }
+]

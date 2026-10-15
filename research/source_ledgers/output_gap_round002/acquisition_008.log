@@ -1,0 +1,62 @@
+[
+  {
+    "id": "nas2021_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/8.18.2.xlsx",
+    "filename": "nas2021_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified",
+    "retrieved_at_utc": "2026-10-09T16:23:16.561236+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/8.18.2.xlsx",
+    "local_file": "acquisition/batch_008/raw/nas2021_quarterly_gdp.xlsx",
+    "bytes": 148415,
+    "sha256": "a61378531aeeb8609f74217d57bad6a565c5aeb18cee7e10a107e15ad82ba412",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "nas2022_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2022/8.18.2.xlsx",
+    "filename": "nas2022_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified",
+    "retrieved_at_utc": "2026-10-09T16:23:16.562153+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2022/8.18.2.xlsx",
+    "local_file": "acquisition/batch_008/raw/nas2022_quarterly_gdp.xlsx",
+    "bytes": 72156,
+    "sha256": "b28538dd8ea29a81bbc6aefdc503c7f487670d0294ceb7a13c4f651edde9a29b",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "nas2023_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2023/8.18.2.xlsx",
+    "filename": "nas2023_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified",
+    "retrieved_at_utc": "2026-10-09T16:23:16.562358+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2023/8.18.2.xlsx",
+    "local_file": "acquisition/batch_008/raw/nas2023_quarterly_gdp.xlsx",
+    "bytes": 82006,
+    "sha256": "0c6dbb9f26944a95df5ffafcfb353efbe6aa07b3fa78686e5d88461d3bce045c",
+    "primary_final_host": true,
+    "acquired": true
+  },
+  {
+    "id": "nas2024_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2024/8.18.2.xlsx",
+    "filename": "nas2024_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified",
+    "retrieved_at_utc": "2026-10-09T16:23:16.562515+00:00",
+    "status": 200,
+    "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2024/8.18.2.xlsx",
+    "local_file": "acquisition/batch_008/raw/nas2024_quarterly_gdp.xlsx",
+    "bytes": 97145,
+    "sha256": "d3700ddd817ae2530b7425b2a1f8517982dad07a7948d0554a336e4e84c9ec2a",
+    "primary_final_host": true,
+    "acquired": true
+  }
+]

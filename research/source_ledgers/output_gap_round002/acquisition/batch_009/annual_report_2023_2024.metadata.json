@@ -1,0 +1,28 @@
+{
+  "id": "annual_report_2023_2024",
+  "url": "https://mospi.gov.in/sites/default/files/publication_reports/AnnualReport_2023-24_0.pdf",
+  "filename": "annual_report_2023_2024.pdf",
+  "role": "Primary publication-month evidence for edition NAS2023, not its current table version",
+  "discovery": "Official primary web search inspected report publication table",
+  "retrieved_at_utc": "2026-10-09T16:28:18.016118+00:00",
+  "status": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/publication_reports/AnnualReport_2023-24_0.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:31:34 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "17893735",
+    "Connection": "close",
+    "Last-Modified": "Tue, 14 Jan 2025 04:49:46 GMT",
+    "ETag": "\"6785ecea-1110967\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:31:34 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_009/raw/annual_report_2023_2024.pdf",
+  "bytes": 17893735,
+  "sha256": "ac7532cfe6c42183fd9295e891db0b09bb76a1ef0263b29056216fdf6d706219",
+  "primary_final_host": true,
+  "acquired": true
+}

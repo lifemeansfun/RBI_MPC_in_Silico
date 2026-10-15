@@ -1,0 +1,123 @@
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+__ test_masked_names_in_persona_text_ignore_case_without_replacement_cascades __
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...lidation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_mask_prefixed_tmp/test_masked_names_in_persona_t0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_masked_names_in_persona_text_ignore_case_without_replacement_cascades(tmp_path, snapshot, roster):
+        roster = [p.model_copy(update={"key_themes": ["ORIGINAL PERSON 2 said ORIGINAL_ID_2 favors inflation"]}) for p in roster]
+        client = ScriptedClient()
+        await orchestrator(tmp_path, client).run_meeting(snapshot, roster, roster[0].member_id, mask_identity=True)
+        for call in client.calls:
+            prompt = (call["system_prompt"] + call["user_prompt"]).casefold()
+            for p in roster:
+>               assert p.name.casefold() not in prompt and p.member_id.casefold() not in prompt
+E               assert ('original person 2' not in 'you are a s...rmation."\n}'
+E                 
+E                 'original person 2' is contained here:
+E                   inutes:
+E                   - original person 2 said original_id_2 favors inflation
+E                 ?   +++++++++++++++++
+E                   
+E                   === institutional instructions & behavioral rules ===...
+E                 
+E                 ...Full output truncated (42 lines hidden), use '-vv' to show)
+
+tests/test_deliberation_upgrade.py:283: AssertionError
+_____ test_information_visibility_refuses_string_booleans[peer_arguments] ______
+
+setting = 'peer_arguments'
+
+    @pytest.mark.parametrize("setting", ["peer_arguments", "peer_identity", "governor_ballots", "own_state"])
+    def test_information_visibility_refuses_string_booleans(setting):
+>       with pytest.raises(ValueError, match="boolean"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:292: Failed
+______ test_information_visibility_refuses_string_booleans[peer_identity] ______
+
+setting = 'peer_identity'
+
+    @pytest.mark.parametrize("setting", ["peer_arguments", "peer_identity", "governor_ballots", "own_state"])
+    def test_information_visibility_refuses_string_booleans(setting):
+>       with pytest.raises(ValueError, match="boolean"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:292: Failed
+____ test_information_visibility_refuses_string_booleans[governor_ballots] _____
+
+setting = 'governor_ballots'
+
+    @pytest.mark.parametrize("setting", ["peer_arguments", "peer_identity", "governor_ballots", "own_state"])
+    def test_information_visibility_refuses_string_booleans(setting):
+>       with pytest.raises(ValueError, match="boolean"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:292: Failed
+________ test_information_visibility_refuses_string_booleans[own_state] ________
+
+setting = 'own_state'
+
+    @pytest.mark.parametrize("setting", ["peer_arguments", "peer_identity", "governor_ballots", "own_state"])
+    def test_information_visibility_refuses_string_booleans(setting):
+>       with pytest.raises(ValueError, match="boolean"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:292: Failed
+_____ test_malformed_condition_controls_fail_before_generation[settings0] ______
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...lidation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_mask_prefixed_tmp/test_malformed_condition_contr0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+settings = {'fragmentation_policy': 'invented'}
+
+    @pytest.mark.parametrize("settings", [{"fragmentation_policy": "invented"}, {"mask_identity": "false"}, {"mask_date": 1}])
+    async def test_malformed_condition_controls_fail_before_generation(tmp_path, snapshot, roster, settings):
+        client = ScriptedClient()
+        with pytest.raises(ValueError):
+            await orchestrator(tmp_path, client).run_meeting(snapshot, roster, roster[0].member_id, **settings)
+>       assert not client.calls
+E       assert not [{'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical si...red JSON format without markdown wrapping or conversational preambles.", 'model': None, 'temperature': None, ...}, ...]
+E        +  where [{'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical si...red JSON format without markdown wrapping or conversational preambles.", 'model': None, 'temperature': None, ...}, ...] = <test_deliberation_upgrade.ScriptedClient object at 0x1077e1690>.calls
+
+tests/test_deliberation_upgrade.py:301: AssertionError
+_____ test_malformed_condition_controls_fail_before_generation[settings1] ______
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...lidation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_mask_prefixed_tmp/test_malformed_condition_contr1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+settings = {'mask_identity': 'false'}
+
+    @pytest.mark.parametrize("settings", [{"fragmentation_policy": "invented"}, {"mask_identity": "false"}, {"mask_date": 1}])
+    async def test_malformed_condition_controls_fail_before_generation(tmp_path, snapshot, roster, settings):
+        client = ScriptedClient()
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:299: Failed
+_____ test_malformed_condition_controls_fail_before_generation[settings2] ______
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...lidation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_mask_prefixed_tmp/test_malformed_condition_contr2')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+settings = {'mask_date': 1}
+
+    @pytest.mark.parametrize("settings", [{"fragmentation_policy": "invented"}, {"mask_identity": "false"}, {"mask_date": 1}])
+    async def test_malformed_condition_controls_fail_before_generation(tmp_path, snapshot, roster, settings):
+        client = ScriptedClient()
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:299: Failed
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_masked_names_in_persona_text_ignore_case_without_replacement_cascades
+FAILED tests/test_deliberation_upgrade.py::test_information_visibility_refuses_string_booleans[peer_arguments]
+FAILED tests/test_deliberation_upgrade.py::test_information_visibility_refuses_string_booleans[peer_identity]
+FAILED tests/test_deliberation_upgrade.py::test_information_visibility_refuses_string_booleans[governor_ballots]
+FAILED tests/test_deliberation_upgrade.py::test_information_visibility_refuses_string_booleans[own_state]
+FAILED tests/test_deliberation_upgrade.py::test_malformed_condition_controls_fail_before_generation[settings0]
+FAILED tests/test_deliberation_upgrade.py::test_malformed_condition_controls_fail_before_generation[settings1]
+FAILED tests/test_deliberation_upgrade.py::test_malformed_condition_controls_fail_before_generation[settings2]
+8 failed, 55 deselected in 0.48s

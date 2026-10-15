@@ -1,0 +1,11 @@
+{
+  "id": "nas2020_s8_18_2_compact",
+  "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S8.18.2.pdf",
+  "filename": "nas2020_s8_18_2_compact.pdf",
+  "role": "long_constant_GDP_candidate",
+  "discovery": "Explicit alternative filename candidate; content/availability not assumed",
+  "retrieved_at_utc": "2026-10-09T16:12:27.730439+00:00",
+  "acquired": false,
+  "error_type": "HTTPError",
+  "error": "HTTP Error 404: Not Found"
+}

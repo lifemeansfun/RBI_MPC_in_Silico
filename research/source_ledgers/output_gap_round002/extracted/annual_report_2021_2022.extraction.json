@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/annual_report_2021_2022.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/annual_report_2021_2022.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "9aa1cadbf42e5514eb61e8706c1f2438c9b97493913508d7b913004ec74fedcd",
+  "extracted_sha256": "d37af46659e8c8892f6d843a2da0ca562c5a22cad1e7000839298ea5e8e606f5"
+}

@@ -1,0 +1,435 @@
+"""Fail-closed generation with immutable metadata and durable pre-call accounting.
+
+The tuple generate adapter remains for legacy callers. Mock and cache replay are
+explicit evidence types, never independent live-model observations. There is one
+provider submission per request; SDK retries and model fallbacks are disabled.
+"""
+
+import asyncio
+import json
+import logging
+import math
+import uuid
+from dataclasses import asdict, dataclass, replace
+from datetime import date, datetime, timezone
+from typing import Any, Optional, Type, TypeVar
+
+from pydantic import BaseModel, ValidationError
+
+from src.infra.cache import LLMCache
+from src.infra.config_loader import get_config
+from src.infra.cost_governor import (
+    PRICE_REVISION, PRICE_SOURCE, TOKEN_RATES_PER_MILLION, CostGovernor, get_governor,
+)
+from src.infra.evidence import canonical_json, content_hash
+from src.infra.generation_evidence import validate_generation_evidence, validate_recorded_schema
+from src.infra.exceptions import (
+    ArtifactIntegrityError, GenerationCancelledError, GenerationProvenanceError,
+    LLMInfrastructureError, LLMResponseMalformedError, UncertainChargeError, UnknownPriceError,
+)
+
+logger = logging.getLogger("rbi_mpc.llm_client")
+T = TypeVar("T", bound=BaseModel)
+REQUIRED_REQUEST_FIELDS = frozenset({"experiment_id", "condition_id", "meeting_date",
+                                    "replicate_id", "member_id", "round_number"})
+
+
+def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+    identity = dict(identity or {})
+    for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                        "meeting": "meeting_date", "replicate": "replicate_id",
+                        "member": "member_id", "round": "round_number"}.items():
+        if short in identity:
+            if full in identity and identity[short] != identity[full]:
+                raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+            identity[full] = identity.pop(short)
+    if required and REQUIRED_REQUEST_FIELDS - identity.keys():
+        raise GenerationProvenanceError("Live generation requires complete experiment/condition/meeting/replicate/member/round identity")
+    if any(value is None or value == "" for value in identity.values()):
+        raise GenerationProvenanceError("Request identity contains missing values")
+    for field in ("replicate_id", "round_number"):
+        if field in identity and (type(identity[field]) is not int or identity[field] < (1 if field == "round_number" else 0)):
+            raise GenerationProvenanceError(f"{field} must be a valid integer")
+    if "meeting_date" in identity:
+        try:
+            if date.fromisoformat(identity["meeting_date"]).isoformat() != identity["meeting_date"]:
+                raise ValueError
+        except (TypeError, ValueError) as exc:
+            raise GenerationProvenanceError("meeting_date must be an actual ISO calendar date") from exc
+    for field in ("experiment_id", "condition_id", "member_id", "output_member_id"):
+        if field in identity and (not isinstance(identity[field], str) or not identity[field].strip()):
+            raise GenerationProvenanceError(f"{field} must be a nonempty string")
+    return json.loads(canonical_json(identity))
+
+
+@dataclass(frozen=True)
+class GenerationMetadata:
+    request_id: str
+    request_hash: str
+    request_payload_json: str
+    provider: str
+    requested_model: str
+    routed_model: str
+    served_model: str | None
+    model_epoch: str | None
+    response_id: str | None
+    seed: int
+    provider_reported_seed: int | None
+    temperature: float
+    max_output_tokens: int
+    input_token_bound: int
+    input_bound_method: str
+    schema_name: str | None
+    schema_hash: str
+    schema_json: str
+    parser_version: str
+    prompt_hash: str
+    system_prompt: str | None
+    user_prompt: str
+    cache_key: str
+    cache_replay: bool
+    source_request_id: str | None
+    source_evidence_type: str | None
+    evidence_type: str
+    attempt_count: int
+    finish_reason: str | None
+    input_tokens: int | None
+    output_tokens: int | None
+    token_usage_source: str
+    estimated_cost_usd: float
+    reservation_id: str | None
+    price_revision: str | None
+    price_source: str | None
+    created_at: str
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class GenerationResult:
+    raw_text: str
+    parsed: BaseModel | None
+    validation_error: str | None
+    request_identity_json: str
+    metadata: GenerationMetadata
+
+    @property
+    def request_identity(self) -> dict:
+        return json.loads(self.request_identity_json)
+
+    def to_dict(self) -> dict:
+        return {"raw_text": self.raw_text,
+                "parsed": self.parsed.model_dump(mode="json") if self.parsed is not None else None,
+                "validation_error": self.validation_error, "request_identity": self.request_identity,
+                "metadata": self.metadata.to_dict()}
+
+
+@dataclass(frozen=True)
+class ProviderResponse:
+    raw_text: str
+    input_tokens: int | None
+    output_tokens: int | None
+    served_model: str | None = None
+    response_id: str | None = None
+    finish_reason: str | None = None
+    provider_reported_seed: int | None = None
+    token_usage_source: str = "provider_reported"
+
+
+class LLMClient:
+    def __init__(self, provider: Optional[str] = None, cache_enabled: bool = True, *,
+                 governor: CostGovernor | None = None, cache: LLMCache | None = None,
+                 ledger_path=None, request_timeout_seconds: float | None = None):
+        self.cfg = get_config()
+        self.provider = provider or self.cfg.run.provider
+        self.cache_enabled = cache_enabled and self.cfg.run.use_cache
+        self.cache = (cache or LLMCache(self.cfg.run.cache_dir)) if self.cache_enabled else None
+        self.governor = governor
+        if self.governor is None and self.provider != "mock":
+            self.governor = get_governor(self.cfg.run.budget_usd_cap,
+                                       ledger_path or getattr(self.cfg.run, "budget_ledger_path", None))
+        self.request_timeout_seconds = (request_timeout_seconds if request_timeout_seconds is not None
+                                        else getattr(self.cfg.run, "request_timeout_seconds", 60.0))
+        if not math.isfinite(self.request_timeout_seconds) or self.request_timeout_seconds <= 0:
+            raise GenerationProvenanceError("request_timeout_seconds must be finite and positive")
+        self._gemini_client = None
+        self._semaphore = asyncio.Semaphore(1)
+        self._min_interval = 60.0 / max(1, getattr(self.cfg.run, "rate_limit_rpm", 5))
+        self._last_call_time = 0.0
+
+149:        if self.governor is None and self.provider != "mock":
+205:        identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+220:        if self.provider != "mock":
+221:            if self.provider != "gemini" or model not in TOKEN_RATES_PER_MILLION or model == "mock":
+232:        if self.provider == "mock":
+233:            input_bound_method = "offline_mock_explicit_bound" if input_token_bound is not None else "offline_mock_utf8_bytes_plus_8192"
+259:            evidence_type="mock" if self.provider == "mock" else "live_model", attempt_count=1,
+262:            price_revision=PRICE_REVISION if self.provider != "mock" else None,
+263:            price_source=PRICE_SOURCE if self.provider != "mock" else None,
+268:            if self.provider != "mock":
+304:                    if source["provider"] != "mock":
+317:            if self.provider == "mock":
+318:                raw_text, it, ot = self._generate_mock(user_prompt, system_prompt, model, response_schema, expected)
+320:                                   token_usage_source="offline_mock_fixture", finish_reason="mock")
+482:    def _generate_mock(
+490:        """Offline mock responses for deterministic unit and integration tests."""
+497:        member_id = expected_identity.get("member_id", m_ids[-1] if m_ids else "mock_member")
+509:        # Determine realistic mock stance
+511:            if member_id == "jayanth_varma" and any(y in user_prompt for y in ["2021-08", "2021-10", "2021-12", "2022"]):
+516:            stance = "neutral" if member_id in ["jayanth_varma", "ashima_goyal"] else "withdrawal_of_accommodation"
+518:        logger.debug("[RESEARCH INTEGRITY NOTICE] Using offline mock generator for offline testing.")
+520:            mock_data = {
+528:            mock_data = {
+539:            mock_data = {
+548:        raw_text = json.dumps(mock_data)
+"""
+Unit tests for Infrastructure components: ConfigLoader, CostGovernor, LLMCache, and LLMClient.
+Can run 100% offline without external API keys.
+"""
+
+import pytest
+import tempfile
+from pathlib import Path
+
+from src.infra.config_loader import load_config, get_config
+from src.infra.cost_governor import CostGovernor, BudgetExceededError
+from src.infra.cache import LLMCache
+from src.infra.llm_client import LLMClient
+from src.schemas.debate_schema import InitialStanceOutput, FinalVoteOutput
+
+
+def test_config_loader():
+    cfg = load_config()
+    assert cfg.project_name == "RBI_MPC_In_Silico"
+    assert cfg.run.provider in ["gemini", "mock", "openai", "anthropic", "ollama"]
+    assert cfg.decision_space.action_set_bps == [-50, -25, 0, 25, 35, 40, 50]
+    assert cfg.decision_space.simulate_stance is True
+    assert cfg.taylor_rule.r_star_pct == 1.4
+    assert cfg.taylor_rule.smoothing_rho == 0.75
+
+
+def test_cost_governor_tracking():
+    gov = CostGovernor(budget_cap_usd=1.0)
+    # Record 100,000 input tokens and 50,000 output tokens for gemini-3.1-flash-lite
+    # Input rate: $0.25/M, Output rate: $1.50/M
+    cost = gov.record_usage("gemini-3.1-flash-lite", 100_000, 50_000)
+    expected_cost = (100_000 / 1e6) * 0.25 + (50_000 / 1e6) * 1.50
+    assert abs(cost - expected_cost) < 1e-6
+
+    summary = gov.get_summary()
+    assert summary["call_count"] == 1
+    assert summary["total_input_tokens"] == 100_000
+    assert summary["total_output_tokens"] == 50_000
+    assert summary["budget_remaining_usd"] < 1.0
+
+
+def test_cost_governor_budget_exceeded():
+    gov = CostGovernor(budget_cap_usd=0.01)
+    with pytest.raises(BudgetExceededError):
+        # 200k tokens at $1.50/M output will cross $0.01 cap
+        gov.record_usage("gemini-3.1-flash-lite", 100_000, 200_000)
+
+
+def test_llm_cache():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        db_path = Path(tmpdir) / "test_cache.sqlite"
+        cache = LLMCache(db_path=db_path)
+
+        key = cache.compute_key("mock", "gemini-3.1-flash-lite", "SysPrompt", "UserPrompt", 0.6, 42)
+        assert cache.get(key) is None
+
+        cache.set(
+            cache_key=key,
+            provider="mock",
+            model="gemini-3.1-flash-lite",
+            system_prompt="SysPrompt",
+            user_prompt="UserPrompt",
+            temperature=0.6,
+            seed=42,
+            response_text='{"rate_vote_bps": 0}',
+            input_tokens=50,
+            output_tokens=20,
+        )
+
+        hit = cache.get(key)
+        assert hit is not None
+        assert hit["response_text"] == '{"rate_vote_bps": 0}'
+        assert hit["cached"] is True
+
+
+@pytest.mark.asyncio
+async def test_mock_llm_client_generation():
+    client = LLMClient(provider="mock", cache_enabled=False)
+
+    # 1. Test Initial Stance schema parsing
+    prompt = "State your Initial Stance on repo rate and stance for meeting 2023-08-10."
+    raw_text, parsed = await client.generate(
+        user_prompt=prompt,
+        model="gemini-3.1-flash-lite",
+        response_schema=InitialStanceOutput,
+    )
+    assert parsed is not None
+    assert isinstance(parsed, InitialStanceOutput)
+    assert parsed.proposed_rate_change_bps in [-50, -25, 0, 25, 35, 40, 50]
+    assert parsed.proposed_stance in ["withdrawal_of_accommodation", "neutral", "accommodative"]
+
+    # 2. Test Final Vote schema parsing
+    vote_prompt = "Cast your final binding vote on repo rate and stance."
+    raw_vote, parsed_vote = await client.generate(
+        user_prompt=vote_prompt,
+        model="gemini-3.1-flash-lite",
+        response_schema=FinalVoteOutput,
+    )
+    assert parsed_vote is not None
+    assert isinstance(parsed_vote, FinalVoteOutput)
+    assert parsed_vote.final_rate_vote_bps in [-50, -25, 0, 25, 35, 40, 50]
+tests/fixtures/generate_mock_fixtures.py:9:FIXTURES_DIR = Path(__file__).resolve().parent
+tests/test_infra.py:51:        db_path = Path(tmpdir) / "test_cache.sqlite"
+tests/test_debate_mock.py:96:        logger = TranscriptLogger(run_id="test_mock_run", output_root=Path(tmpdir))
+tests/test_study_replay.py:167:    extractor = PersonaExtractor(statements_dir=statements,output_dir=tmp_path/'profiles',source_root=tmp_path)
+tests/test_attribution_and_scenarios.py:113:        builder = ReportBuilder(output_dir=Path(tmpdir))
+tests/test_attribution_and_scenarios.py:210:        logger = TranscriptLogger(run_id="test_mock_run", output_root=Path(tmpdir))
+"""
+Configuration loader for RBI MPC In Silico.
+Reads config/config.yaml and merges with environment variables.
+"""
+
+import os
+from pathlib import Path
+from typing import Literal, Optional
+import yaml
+from pydantic import BaseModel, ConfigDict, Field
+from dotenv import load_dotenv
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS
+
+# Automatically load .env if present
+load_dotenv()
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
+class RunConfig(BaseModel):
+    model_config = ConfigDict(allow_inf_nan=False)
+    provider: Literal["gemini", "openai", "anthropic", "ollama", "mock"] = "gemini"
+    dev_model: str = "gemini-3.1-flash-lite"
+    final_model: str = "gemini-3.1-flash-lite"
+    fallback_models: list[str] = []  # legacy field; research runtime never substitutes models
+    rate_limit_rpm: int = Field(default=5, gt=0)
+    budget_usd_cap: float = Field(default=25.0, ge=0)
+    temperature: float = Field(default=0.6, ge=0, le=2)
+    n_replicates: int = 3
+    seed_base: int = 42
+    use_cache: bool = True
+    cache_dir: str = ".cache/corrected_llm_cache_v2.sqlite"
+    max_output_tokens: int = Field(default=2048, gt=0)
+    request_timeout_seconds: float = Field(default=60.0, gt=0)
+    model_epoch: Optional[str] = None
+    budget_ledger_path: str = ".cache/corrected_budget_v1.sqlite"
+
+
+class DecisionSpaceConfig(BaseModel):
+    action_set_bps: list[int] = list(RATE_ACTIONS_BPS)
+    simulate_stance: bool = True
+    stance_set: list[str] = list(STANCE_ACTIONS)
+
+
+class PanelsConfig(BaseModel):
+    primary_roster: str = "2020_2024"
+    primary_panel_start: str = "2020-10-01"
+    primary_panel_end: str = "2024-08-31"
+    calibration_holdout_split: float = 0.67
+    forward_test_panel_start: str = "2024-10-01"
+    forward_test_panel_end: str = "latest"
+
+
+class TaylorRuleConfig(BaseModel):
+    r_star_pct: float = 1.4
+    pi_star_pct: float = 4.0
+    hp_filter_lambda: float = 14400.0
+    smoothing_rho: float = 0.75
+    default_alpha: float = 1.5
+    default_beta: float = 0.5
+    default_gamma: float = 0.2
+    us_neutral_rate_pct: float = 2.5
+
+
+class MonteCarloConfig(BaseModel):
+    n_draws: int = 1000
+    macro_noise_std_pct: float = 0.20
+
+
+class ValidationConfig(BaseModel):
+    directional_accuracy_threshold: float = 0.75
+    stance_accuracy_threshold: float = 0.70
+    dissent_f1_threshold: float = 0.50
+
+
+class DebateProtocolConfig(BaseModel):
+    rounds: int = 4
+    order_mode: str = "fixed_governor_last"
+    cross_visibility: bool = True
+
+
+class AppConfig(BaseModel):
+    project_name: str = "RBI_MPC_In_Silico"
+    version: str = "2.0.0"
+    run: RunConfig = Field(default_factory=RunConfig)
+    decision_space: DecisionSpaceConfig = Field(default_factory=DecisionSpaceConfig)
+    panels: PanelsConfig = Field(default_factory=PanelsConfig)
+    taylor_rule: TaylorRuleConfig = Field(default_factory=TaylorRuleConfig)
+    monte_carlo: MonteCarloConfig = Field(default_factory=MonteCarloConfig)
+    validation: ValidationConfig = Field(default_factory=ValidationConfig)
+    debate_protocol: DebateProtocolConfig = Field(default_factory=DebateProtocolConfig)
+
+    # API keys loaded from environment
+    gemini_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    openai_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    anthropic_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+    fred_api_key: Optional[str] = Field(default=None, exclude=True, repr=False)
+
+
+_CONFIG_CACHE: Optional[AppConfig] = None
+
+
+def load_config(config_path: Optional[str | Path] = None) -> AppConfig:
+    """Loads configuration from YAML file and merges environment variables."""
+    global _CONFIG_CACHE
+    if config_path is None:
+        config_path = PROJECT_ROOT / "config" / "config.yaml"
+    else:
+        config_path = Path(config_path)
+
+    data = {}
+    if config_path.exists():
+        with open(config_path, "r", encoding="utf-8") as f:
+            raw_yaml = yaml.safe_load(f) or {}
+            data = {
+                "project_name": raw_yaml.get("project", {}).get("name", "RBI_MPC_In_Silico"),
+                "version": raw_yaml.get("project", {}).get("version", "2.0.0"),
+                "run": raw_yaml.get("run", {}),
+                "decision_space": raw_yaml.get("decision_space", {}),
+                "panels": raw_yaml.get("panels", {}),
+                "taylor_rule": raw_yaml.get("taylor_rule", {}),
+                "monte_carlo": raw_yaml.get("monte_carlo", {}),
+                "validation": raw_yaml.get("validation", {}),
+                "debate_protocol": raw_yaml.get("debate_protocol", {}),
+            }
+
+    # Inject environment keys
+    data["gemini_api_key"] = os.getenv("GEMINI_API_KEY")
+    data["openai_api_key"] = os.getenv("OPENAI_API_KEY")
+    data["anthropic_api_key"] = os.getenv("ANTHROPIC_API_KEY")
+    data["fred_api_key"] = os.getenv("FRED_API_KEY")
+
+    cfg = AppConfig(**data)
+    _CONFIG_CACHE = cfg
+    return cfg
+
+
+def get_config() -> AppConfig:
+    """Returns the cached configuration or loads it."""
+    global _CONFIG_CACHE
+    if _CONFIG_CACHE is None:
+        return load_config()
+    return _CONFIG_CACHE

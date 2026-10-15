@@ -1,0 +1,1384 @@
+{
+  "run_id": "bounded_readiness_20261010",
+  "collected_at_utc": "2026-10-10T02:14:47.369238+00:00",
+  "environment": {
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "objective_path": "/Users/manishharigovind/.codex/attachments/980abce9-e46e-49aa-9d87-161f166aefac/goal-objective.md",
+  "objective_sha256": "91e61c1e974c04ebe985e53df767beee3ad3d5ee1ca76e066d63258cf49fe836",
+  "authority": "Attached active objective, not the separately saved proposed replacement prompt.",
+  "branch": "project_upgrade_codex",
+  "refs": {
+    "HEAD": "78de7f75bda03d696205b188af17b9540e02a172",
+    "main": "7f2436bc4f32d6021b1e885eb49286c850de9139"
+  },
+  "working_state": "M Makefile\n M config/config.yaml\n M requirements-lock.txt\n M requirements.txt\n M research/implementation_plans/round_001.md\n M scripts/create_review_snapshot.py\n M scripts/reproduce.py\n M src/attribution/attribution_runner.py\n M src/backtest/backtest_runner.py\n M src/behavioral/debate_orchestrator.py\n M src/data_pipeline/statement_extractor.py\n M src/infra/cache.py\n M src/infra/config_loader.py\n M src/infra/cost_governor.py\n M src/infra/exceptions.py\n M src/infra/llm_client.py\n M src/infra/transcript_logger.py\n M src/persona_engine/extractor.py\n M src/rational/monte_carlo.py\n M src/rational/rational_panel_runner.py\n M src/rational/taylor_rule.py\n M src/reporting/report_builder.py\n M src/rule_engine/engine.py\n M src/run_stage2_pipeline.py\n M src/scenarios/run_counterfactual_experiments.py\n M src/scenarios/scenario_runner.py\n M src/schemas/debate_schema.py\n M src/schemas/macro_schema.py\n M src/schemas/persona_schema.py\n M src/validation/metrics.py\n M tests/test_attribution_and_scenarios.py\n M tests/test_debate_mock.py\n M tests/test_defenses_and_validation.py\n M tests/test_infra.py\n M tests/test_rule_engine.py\n M tests/test_taylor_rule.py\n?? data/processed/statements_v2/\n?? data/processed/vintage_v2/\n?? data/processed/vintage_v3/\n?? outputs/\n?? personas/calibration_2023-04-30_v2/\n?? research/assessments/\n?? research/implementation_plans/round_002.md\n?? research/peer_reviews/round_002_clean_defaults_oct09/\n?? research/peer_reviews/round_002_clean_process_oct09/\n?? research/peer_reviews/round_002_oct09/\n?? research/source_ledgers/expanded_panel_oct08/\n?? research/source_ledgers/expanded_panel_oct08_doublecode/\n?? research/source_ledgers/expanded_panel_oct09_adjudication/\n?? research/source_ledgers/gdp_fed_vintages/\n?? research/source_ledgers/historical_labels_round002/\n?? research/source_ledgers/literature/current_oct09/\n?? research/source_ledgers/output_gap_round002/\n?? research/source_ledgers/prior_policy/\n?? research/verification/\n?? results/upgrade_validation_round_001/\n?? results/upgrade_validation_round_002/\n?? runs/corrected_v1/\n?? scripts/reproduce_offline.py\n?? src/backtest/study_artifacts.py\n?? src/behavioral/comparator_forecasters.py\n?? src/data_pipeline/output_gap_estimation.py\n?? src/data_pipeline/vintage_panel.py\n?? src/infra/checkpoint.py\n?? src/infra/evidence.py\n?? src/infra/generation_evidence.py\n?? src/persona_engine/provenance.py\n?? src/persona_engine/rolling_inputs.py\n?? src/rational/calibration.py\n?? src/reporting/study_report.py\n?? src/schemas/decision_space.py\n?? src/schemas/temporal_panel_schema.py\n?? src/validation/baselines.py\n?? src/validation/observed_labels.py\n?? src/validation/study_replay.py\n?? tests/test_comparator_forecasters.py\n?? tests/test_deliberation_upgrade.py\n?? tests/test_macro_prompt_metadata.py\n?? tests/test_metric_contracts.py\n?? tests/test_monte_carlo_resolution.py\n?? tests/test_observed_labels.py\n?? tests/test_output_gap_estimation.py\n?? tests/test_review_snapshot.py\n?? tests/test_runtime_upgrade.py\n?? tests/test_scenario_doses.py\n?? tests/test_study_freeze.py\n?? tests/test_study_replay.py\n?? tests/test_study_report.py\n?? tests/test_temporal_panel_schema.py\n?? tests/test_vintage_rebuild.py",
+  "original_tracked_evidence_modifications_relative_to_main": "",
+  "provider_budget": {
+    "current_cap_usd": 25.0,
+    "committed_cap_usd": 25.0,
+    "increased": false,
+    "new_closeout_provider_calls": 0,
+    "legacy_actual_billing_authenticated": false
+  },
+  "test_scopes": {
+    "integrated_suite_attempt_002": {
+      "receipt": {
+        "argv": [
+          "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "tests",
+          "--basetemp",
+          "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/integrated_suite_attempt_002/checkout/isolated_test_outputs"
+        ],
+        "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/integrated_suite_attempt_002/checkout",
+        "started_at_unix": 1791562881.405205,
+        "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "driver_sha256": "913853c3207e719dfb1ada61cf1ae6ba6fd328686ca9e9b5e0db946b0df38470",
+        "exit_code": 0,
+        "elapsed_seconds": 62.93757104873657,
+        "frozen_files_unchanged": true
+      },
+      "pytest_summary": "307 passed in 61.91s (0:01:01)",
+      "before_after_manifests_identical": true,
+      "current_source_comparison": {
+        "files_checked": 72,
+        "missing": [],
+        "changed": []
+      },
+      "captured_src_count": 49,
+      "src_files_outside_captured_scope": [
+        "src/behavioral/comparator_forecasters.py",
+        "src/data_pipeline/output_gap_estimation.py",
+        "src/persona_engine/rolling_inputs.py",
+        "src/schemas/temporal_panel_schema.py"
+      ],
+      "warning": "Captured file hashes are not execution coverage; test scope is the receipt argv. Counts from different suites overlap."
+    },
+    "comparator_controls_attempt_004": {
+      "receipt": {
+        "argv": [
+          "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "tests/test_comparator_forecasters.py",
+          "tests/test_runtime_upgrade.py",
+          "tests/test_rule_engine.py",
+          "--basetemp",
+          "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_controls_attempt_004/checkout/isolated_test_outputs"
+        ],
+        "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_controls_attempt_004/checkout",
+        "started_at_unix": 1791563837.273841,
+        "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "driver_sha256": "af69cb5177fb308717575319c958c9dfdf0f13e918b03e6e816579ff124b616a",
+        "exit_code": 0,
+        "elapsed_seconds": 7.475053071975708,
+        "frozen_files_unchanged": true
+      },
+      "pytest_summary": "102 passed in 6.29s",
+      "before_after_manifests_identical": true,
+      "current_source_comparison": {
+        "files_checked": 81,
+        "missing": [],
+        "changed": []
+      },
+      "captured_src_count": 53,
+      "src_files_outside_captured_scope": [],
+      "warning": "Captured file hashes are not execution coverage; test scope is the receipt argv. Counts from different suites overlap."
+    },
+    "output_gap_oct09/attempt_001": {
+      "receipt": {
+        "started_at_utc": "2026-10-09T16:33:52.489081+00:00",
+        "command": [
+          "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "tests/test_output_gap_estimation.py"
+        ],
+        "working_directory": "results/upgrade_validation_round_002/output_gap_oct09/attempt_001/snapshot",
+        "inputs_sha256": {
+          "src/data_pipeline/output_gap_estimation.py": "8ca9c541ac540905064156e373153ec0583c21b0687be2164baae1a7a97c7cb5",
+          "tests/test_output_gap_estimation.py": "60c2dd0db11d5df24c1ac4f71995e4308b8965fbfb69b9df6601c1fe6d72e871",
+          "research/source_ledgers/output_gap_round002/protocol_v1.json": "1129eecad9043ac29cc005d3e9dd379878acee8a3a00e237a80946be45f956e2"
+        },
+        "python_executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "python_version": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "network_or_provider_calls": 0,
+        "evidence_scope": "Synthetic engineering controls and corruption/failure checks only",
+        "exit_code": 0,
+        "finished_at_utc": "2026-10-09T16:33:53.192000+00:00",
+        "inputs_unchanged": {
+          "src/data_pipeline/output_gap_estimation.py": true,
+          "tests/test_output_gap_estimation.py": true,
+          "research/source_ledgers/output_gap_round002/protocol_v1.json": true
+        }
+      },
+      "pytest_summary": "27 passed in 0.36s",
+      "current_source_comparison": {
+        "files_checked": 3,
+        "missing": [],
+        "changed": []
+      }
+    },
+    "rebuild_tests_attempt_002/pytest.log": {
+      "retained_log_summary": "16 passed in 55.61s",
+      "limitation": "Log result only in this entry; no added claim of independent empirical validation or full current integration."
+    },
+    "paired_missing_labels_attempt_001/pytest.log": {
+      "retained_log_summary": "10 passed in 0.23s",
+      "limitation": "Log result only in this entry; no added claim of independent empirical validation or full current integration."
+    },
+    "rolling_panel_contract_tests_attempt_001.log": {
+      "retained_log_summary": "21 passed in 23.43s",
+      "limitation": "Log result only in this entry; no added claim of independent empirical validation or full current integration."
+    },
+    "snapshot_boundary_attempt_002/pytest.log": {
+      "retained_log_summary": "10 passed in 0.16s",
+      "limitation": "Log result only in this entry; no added claim of independent empirical validation or full current integration."
+    }
+  },
+  "rolling_inputs": {
+    "original_inputs": {
+      "files_checked": 219,
+      "missing": [],
+      "changed": []
+    },
+    "portable_outputs": {
+      "files_checked": 334,
+      "missing": [],
+      "changed": []
+    },
+    "facts": {
+      "build_status": "verified_inputs_built",
+      "input_immutability_verified": true,
+      "meetings_count": 38,
+      "member_packets_count": 228,
+      "source_statements_count": 222,
+      "missing_history_member_packets": 14,
+      "model_calls": 0,
+      "predictive_readiness": false
+    },
+    "protocol": {
+      "eligible_sources": "personally attributed retained minutes only; no same-meeting statements, current biography, or outcome labels",
+      "fit_schedule": "expanding_personal_history_refit_before_each_first_meeting_day",
+      "identity_alias_basis": "Both source IDs refer to personal heading Dr. Michael Debabrata Patra and the same attendance name; duplicate canonical attendees are rejected",
+      "identity_aliases": {
+        "michael_patra": "michael_debabrata_patra"
+      },
+      "information_cutoff": "exclusive midnight IST on first meeting day; entire publication day must precede cutoff",
+      "lexical_fit": {
+        "dove_lexicon": [
+          "growth",
+          "slack",
+          "over-tightening",
+          "lag",
+          "lags",
+          "sacrifice",
+          "soften",
+          "real rate",
+          "neutral",
+          "output gap",
+          "recovery",
+          "headwind",
+          "downturn"
+        ],
+        "hawk_lexicon": [
+          "inflation",
+          "restrictive",
+          "vigilance",
+          "unanchored",
+          "persistence",
+          "second-round",
+          "overheating",
+          "pressures",
+          "brake",
+          "firm",
+          "committed",
+          "tolerance",
+          "target"
+        ],
+        "scope": "descriptive fixed lexical statistic; not construct validated or an identified policy utility",
+        "selection_source": "existing src/persona_engine/extractor.py fixed lexicons",
+        "statistic": "(hawk_hits-dove_hits)/max(hawk_hits+dove_hits,1)"
+      },
+      "minimum_personal_statements": 1,
+      "missing_history_policy": "explicit_missing_no_identity_substitution",
+      "panel_status": "exposed_retrospective_2020_2026",
+      "predictive_readiness": false,
+      "readiness_blockers": [
+        "pre-cutoff membership/appointment evidence not retained in this packet",
+        "missing personal history at entry",
+        "expanded macro packets not supplied by this builder",
+        "simulator stance v2 integration not supplied by this builder",
+        "no live model generation or untouched prospective outcome"
+      ],
+      "roster_available_at_cutoff": false,
+      "roster_evidence_status": "retrospective_oracle_attendance",
+      "source_stance_ontology": {
+        "actions": [
+          "withdrawal_of_accommodation",
+          "neutral",
+          "accommodative",
+          "calibrated_tightening"
+        ],
+        "integration_status": "additive_source_contract_not_existing_simulator_integration",
+        "simulator_v1_policy": "reject unsupported calibrated_tightening; mapping remains null",
+        "version": "expanded_source_v2"
+      },
+      "version": "rolling-persona-retrospective-input-v1"
+    },
+    "missing_component_documentation": true
+  },
+  "saved_study": {
+    "receipt": {
+      "argv": [
+        "scripts/reproduce_offline.py",
+        "--output-root",
+        "results/upgrade_validation_round_002/offline_reproduction_attempt_003"
+      ],
+      "started_at_unix": 1791562882.588882,
+      "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "scope": "offline source reconstruction and saved-evidence verification; no independent live replication",
+      "provider_generation_requested": false,
+      "steps": [
+        {
+          "name": "rebuild_inputs",
+          "argv": [
+            "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+            "research/verification/rebuild_scientific_inputs.py",
+            "--output-root",
+            "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/offline_reproduction_attempt_003/rebuilt_inputs"
+          ],
+          "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+          "started_at_unix": 1791562882.614497,
+          "exit_code": 0,
+          "elapsed_seconds": 6.5635881423950195
+        }
+      ],
+      "status": "passed",
+      "verified_generation_counts": {
+        "mock": 1344
+      },
+      "evidence_scope": "Mock procedural diagnostic",
+      "scientific_readiness": "Not established by saved-evidence verification or numerical threshold checks",
+      "elapsed_seconds": 26.243221044540405,
+      "scientific_source_files_unchanged": true
+    },
+    "reconstruction_receipt": "results/upgrade_validation_round_002/offline_reproduction_attempt_003/rebuilt_inputs/reconstruction_receipt.json",
+    "summary_path": "results/upgrade_validation_round_002/offline_reproduction_attempt_003/verified_report/summary.json",
+    "facts": {
+      "n_meetings": 8,
+      "n_replicates": 2,
+      "generation_evidence_counts": {
+        "mock": 1344
+      },
+      "replay_provider_calls": 0,
+      "observed_rate_class_counts": {
+        "0": 8
+      },
+      "evidence_scope": "Mock procedural diagnostic",
+      "independent_live_replication": false,
+      "scientific_readiness": "Not established by saved-evidence verification or numerical threshold checks",
+      "statistical_scope": "Exploratory meeting-level rate-loss comparisons on exposed history; temporal block size 2; replicate means are not extra independent meetings",
+      "study_anchors": {
+        "earlier_rounds": "6aad8bddccc4b175ff4c0b7e3c6a2284823d9230623ba346c44d41c96b3a3803",
+        "full": "4c3fe042b212e2b095f7341cff1ad933d971a4f6251b84c3f171aee703a5748e",
+        "independent": "06b633db454a24f9716b67e68c5e0a65f68ff8ab30e502020889102d03989d95",
+        "masked": "72ac25064d750c59383f7e867e368415798310a0def55f2726d0dfdc0d5ff5ef"
+      }
+    },
+    "condition_metrics": [
+      {
+        "condition": "earlier_rounds",
+        "replicate": 1,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "earlier_rounds",
+        "replicate": 2,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "full",
+        "replicate": 1,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "full",
+        "replicate": 2,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "independent",
+        "replicate": 1,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "independent",
+        "replicate": 2,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 25.0,
+          "dissent_f1": 0.5454545454545454,
+          "dissent_precision": 0.375,
+          "dissent_recall": 1.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": true,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.5454545454545454,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 6
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "masked",
+        "replicate": 1,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 50.0,
+          "dissent_f1": 0.0,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": false,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.0,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 0
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      },
+      {
+        "condition": "masked",
+        "replicate": 2,
+        "metrics": {
+          "directional_rate_accuracy_pct": 100.0,
+          "dissent_exact_match_rate_pct": 50.0,
+          "dissent_f1": 0.0,
+          "dissent_precision": null,
+          "dissent_recall": 0.0,
+          "exact_rate_accuracy_pct": 100.0,
+          "observed_positive_dissent_events": 6,
+          "passed_validation_gate": false,
+          "rate_class_counts": {
+            "-25": 0,
+            "-50": 0,
+            "0": 8,
+            "25": 0,
+            "35": 0,
+            "40": 0,
+            "50": 0
+          },
+          "rate_dissent_f1": 0.0,
+          "rate_mae_bps": 0.0,
+          "stance_accuracy_pct": 100.0,
+          "stance_dissent_f1": 0.0,
+          "total_meetings_evaluated": 8,
+          "true_positive_dissent_events": 0
+        },
+        "current_channel_threshold_met": false,
+        "producer_threshold_contract": "union_v1"
+      }
+    ],
+    "baseline_metrics": {
+      "calibration_constant_dissent": {
+        "directional_rate_accuracy_pct": 100.0,
+        "dissent_exact_match_rate_pct": 25.0,
+        "dissent_f1": 0.5454545454545454,
+        "dissent_precision": 0.375,
+        "dissent_recall": 1.0,
+        "exact_rate_accuracy_pct": 100.0,
+        "observed_positive_dissent_events": 6,
+        "passed_validation_gate": true,
+        "rate_class_counts": {
+          "-25": 0,
+          "-50": 0,
+          "0": 8,
+          "25": 0,
+          "35": 0,
+          "40": 0,
+          "50": 0
+        },
+        "rate_dissent_f1": 0.5454545454545454,
+        "rate_mae_bps": 0.0,
+        "stance_accuracy_pct": 100.0,
+        "stance_dissent_f1": 0.5714285714285714,
+        "total_meetings_evaluated": 8,
+        "true_positive_dissent_events": 6
+      },
+      "hold_previous_stance": {
+        "directional_rate_accuracy_pct": 100.0,
+        "dissent_exact_match_rate_pct": 50.0,
+        "dissent_f1": 0.0,
+        "dissent_precision": null,
+        "dissent_recall": 0.0,
+        "exact_rate_accuracy_pct": 100.0,
+        "observed_positive_dissent_events": 6,
+        "passed_validation_gate": false,
+        "rate_class_counts": {
+          "-25": 0,
+          "-50": 0,
+          "0": 8,
+          "25": 0,
+          "35": 0,
+          "40": 0,
+          "50": 0
+        },
+        "rate_dissent_f1": 0.0,
+        "rate_mae_bps": 0.0,
+        "stance_accuracy_pct": 100.0,
+        "stance_dissent_f1": 0.0,
+        "total_meetings_evaluated": 8,
+        "true_positive_dissent_events": 0
+      },
+      "lag_persistence": {
+        "directional_rate_accuracy_pct": 100.0,
+        "dissent_exact_match_rate_pct": 75.0,
+        "dissent_f1": 0.8,
+        "dissent_precision": 1.0,
+        "dissent_recall": 0.6666666666666666,
+        "exact_rate_accuracy_pct": 100.0,
+        "observed_positive_dissent_events": 6,
+        "passed_validation_gate": true,
+        "rate_class_counts": {
+          "-25": 0,
+          "-50": 0,
+          "0": 8,
+          "25": 0,
+          "35": 0,
+          "40": 0,
+          "50": 0
+        },
+        "rate_dissent_f1": 0.8,
+        "rate_mae_bps": 0.0,
+        "stance_accuracy_pct": 100.0,
+        "stance_dissent_f1": 0.8,
+        "total_meetings_evaluated": 8,
+        "true_positive_dissent_events": 4
+      }
+    },
+    "full_replicate1_observed_formal_stance": {
+      "complete_case": {
+        "f1": 0.8571428571428571,
+        "false_negative": 0,
+        "false_positive": 2,
+        "observed_positive": 6,
+        "precision": 0.75,
+        "recall": 1.0,
+        "true_negative": 16,
+        "true_positive": 6
+      },
+      "complete_meeting_exact_match_pct": 50.0,
+      "complete_meetings": [
+        "2024-02-08",
+        "2024-04-05",
+        "2024-06-07",
+        "2024-08-08"
+      ],
+      "completion_bounds": {
+        "all_completions_have_no_positive_truth": false,
+        "f1_given_positive_truth": [
+          0.5454545454545454,
+          0.7692307692307693
+        ],
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness",
+        "precision": [
+          0.375,
+          0.625
+        ],
+        "recall_given_positive_truth": [
+          1.0,
+          1.0
+        ],
+        "some_completions_have_no_positive_truth": false
+      },
+      "meeting_counts": [
+        {
+          "fp": 1,
+          "meeting_date": "2023-06-08",
+          "roster_size": 6,
+          "tn": 4,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "fp": 1,
+          "meeting_date": "2023-08-10",
+          "roster_size": 6,
+          "tn": 4,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "fp": 1,
+          "meeting_date": "2023-10-06",
+          "roster_size": 6,
+          "tn": 4,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "fp": 1,
+          "meeting_date": "2023-12-08",
+          "roster_size": 6,
+          "tn": 4,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "fp": 1,
+          "meeting_date": "2024-02-08",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 1
+        },
+        {
+          "fp": 1,
+          "meeting_date": "2024-04-05",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 1
+        },
+        {
+          "meeting_date": "2024-06-07",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 2
+        },
+        {
+          "meeting_date": "2024-08-08",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 2
+        }
+      ],
+      "n_meetings": 8,
+      "n_member_targets": 48,
+      "observed_case": {
+        "f1": 0.6666666666666666,
+        "false_negative": 0,
+        "false_positive": 6,
+        "observed_positive": 6,
+        "precision": 0.5,
+        "recall": 1.0,
+        "true_negative": 32,
+        "true_positive": 6
+      },
+      "observed_fraction": 0.9166666666666666,
+      "observed_targets": 44,
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict",
+      "unknown_targets": 4
+    },
+    "full_replicate1_calibration_constant_formal_stance": {
+      "complete_case": {
+        "f1": 0.8,
+        "false_negative": 2,
+        "false_positive": 0,
+        "observed_positive": 6,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "true_negative": 18,
+        "true_positive": 4
+      },
+      "complete_meeting_exact_match_pct": 50.0,
+      "complete_meetings": [
+        "2024-02-08",
+        "2024-04-05",
+        "2024-06-07",
+        "2024-08-08"
+      ],
+      "completion_bounds": {
+        "all_completions_have_no_positive_truth": false,
+        "f1_given_positive_truth": [
+          0.5714285714285714,
+          0.8888888888888888
+        ],
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness",
+        "precision": [
+          0.5,
+          1.0
+        ],
+        "recall_given_positive_truth": [
+          0.6666666666666666,
+          0.8
+        ],
+        "some_completions_have_no_positive_truth": false
+      },
+      "meeting_counts": [
+        {
+          "meeting_date": "2023-06-08",
+          "roster_size": 6,
+          "tn": 5,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "meeting_date": "2023-08-10",
+          "roster_size": 6,
+          "tn": 5,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "meeting_date": "2023-10-06",
+          "roster_size": 6,
+          "tn": 5,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "meeting_date": "2023-12-08",
+          "roster_size": 6,
+          "tn": 5,
+          "unknown_predicted_positive": 1
+        },
+        {
+          "meeting_date": "2024-02-08",
+          "roster_size": 6,
+          "tn": 5,
+          "tp": 1
+        },
+        {
+          "meeting_date": "2024-04-05",
+          "roster_size": 6,
+          "tn": 5,
+          "tp": 1
+        },
+        {
+          "fn": 1,
+          "meeting_date": "2024-06-07",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 1
+        },
+        {
+          "fn": 1,
+          "meeting_date": "2024-08-08",
+          "roster_size": 6,
+          "tn": 4,
+          "tp": 1
+        }
+      ],
+      "n_meetings": 8,
+      "n_member_targets": 48,
+      "observed_case": {
+        "f1": 0.8,
+        "false_negative": 2,
+        "false_positive": 0,
+        "observed_positive": 6,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "true_negative": 38,
+        "true_positive": 4
+      },
+      "observed_fraction": 0.9166666666666666,
+      "observed_targets": 44,
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict",
+      "unknown_targets": 4
+    },
+    "full_replicate1_paired_dissent_bounds": {
+      "calibration_constant_dissent": {
+        "exact_rate_disagreement": {
+          "f1_difference_bounds_given_positive_truth": [
+            -0.5454545454545454,
+            -0.5454545454545454
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": false,
+          "grouped_completion_states": 1,
+          "observed_case_f1_difference": -0.5454545454545454,
+          "positive_truth_completion_states": 1,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 0
+        },
+        "formal_stance_dissent": {
+          "f1_difference_bounds_given_positive_truth": [
+            -0.11965811965811957,
+            -0.025974025974025983
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": false,
+          "grouped_completion_states": 5,
+          "observed_case_f1_difference": -0.13333333333333341,
+          "positive_truth_completion_states": 5,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 4
+        }
+      },
+      "hold_previous_stance": {
+        "exact_rate_disagreement": {
+          "f1_difference_bounds_given_positive_truth": [
+            0.0,
+            0.0
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": false,
+          "grouped_completion_states": 1,
+          "observed_case_f1_difference": 0.0,
+          "positive_truth_completion_states": 1,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 0
+        },
+        "formal_stance_dissent": {
+          "f1_difference_bounds_given_positive_truth": [
+            0.5454545454545454,
+            0.7692307692307693
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": true,
+          "grouped_completion_states": 5,
+          "observed_case_f1_difference": 0.6666666666666666,
+          "positive_truth_completion_states": 5,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 4
+        }
+      },
+      "lag_persistence": {
+        "exact_rate_disagreement": {
+          "f1_difference_bounds_given_positive_truth": [
+            -0.8,
+            -0.8
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": false,
+          "grouped_completion_states": 1,
+          "observed_case_f1_difference": -0.8,
+          "positive_truth_completion_states": 1,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 0
+        },
+        "formal_stance_dissent": {
+          "f1_difference_bounds_given_positive_truth": [
+            -0.25454545454545463,
+            0.19780219780219788
+          ],
+          "first_exceeds_second_under_every_positive_truth_completion": false,
+          "grouped_completion_states": 5,
+          "observed_case_f1_difference": -0.13333333333333341,
+          "positive_truth_completion_states": 5,
+          "scope": "Sharp paired logical bounds with a common target completion; not sampling uncertainty or a hypothesis test",
+          "some_completions_have_no_positive_truth": false,
+          "unknown_targets": 4
+        }
+      }
+    },
+    "paired_rate_mae_comparisons": {
+      "earlier_rounds": {
+        "calibration_constant_dissent": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "hold_previous_stance": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "lag_persistence": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        }
+      },
+      "full": {
+        "calibration_constant_dissent": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "hold_previous_stance": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "lag_persistence": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        }
+      },
+      "independent": {
+        "calibration_constant_dissent": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "hold_previous_stance": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "lag_persistence": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        }
+      },
+      "masked": {
+        "calibration_constant_dissent": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "hold_previous_stance": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        },
+        "lag_persistence": {
+          "block_size": 2,
+          "bootstrap": "circular temporal-block",
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference_by_meeting": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_advantage": 0.0,
+          "n_meetings": 8,
+          "resamples": 2000,
+          "seed": 42,
+          "sign_flip_assumption": "exact meeting sign flip (requires exchangeability/symmetry)",
+          "sign_flip_pvalue": 1.0,
+          "superiority_supported": false
+        }
+      }
+    },
+    "source_missingness": {
+      "2023-06-08": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2023-08-10": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2023-10-06": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2023-12-08": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2024-02-08": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2024-04-05": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2024-06-07": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ],
+      "2024-08-08": [
+        "cpi_core_yoy_pct",
+        "cpi_food_yoy_pct",
+        "iip_growth_yoy_pct",
+        "output_gap_pct",
+        "system_liquidity_cr",
+        "usd_inr_exchange_rate",
+        "brent_crude_usd_bbl",
+        "monsoon_departure_lpa_pct"
+      ]
+    }
+  },
+  "expanded_labels": {
+    "status": "passed",
+    "counts": {
+      "meetings": 13,
+      "member_meetings": 78,
+      "literal_rate_ballots_observed": 72,
+      "literal_no_rate_ballots": 3,
+      "exact_rate_choice_disagreements": 4,
+      "formal_stance_votes_observed": 20,
+      "formal_stance_votes_observed_strict_sensitivity": 18,
+      "formal_stance_meetings_with_all_six_observed": 3,
+      "stance_menu_not_supported_by_current_simulator": [
+        "calibrated_tightening"
+      ],
+      "rate_direction_counts": {
+        "hold": 8,
+        "cut": 4,
+        "hike": 1
+      }
+    },
+    "provenance": {
+      "collector_annotation_sha256": "2ad73cc76bf7975e9dd3fe29d3347e789c421a396fbd25207ea58ecd502e1c38",
+      "independent_annotation_sha256": "3d63ace293a5cf105071d10ab2740c53738ac322fa5c04a2277d7bdf1e16b997",
+      "source_catalog_sha256": "722f29fa5c01c122e6df3511d2e6b894fddb58fac2fc90145ce5a36b9f8ff86e",
+      "generator_sha256": "c9f99fa4c690b4ced36e72e8ab37b30fbfd6ef164e2f4812ff73abf81fd21e72",
+      "same_primary_source_hashes_checked": 25,
+      "exact_independent_raw_fragments_rechecked": 386
+    },
+    "empirical_model_validation": false,
+    "live_model_calls": 0
+  },
+  "provider_metadata_check": {
+    "version": 1,
+    "operation": "read-only configured model metadata get; no countTokens or generation requested",
+    "generation_requested": false,
+    "started_at_unix": 1791563788.437643,
+    "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "provider": "gemini",
+    "requested_model": "gemini-3.1-flash-lite",
+    "credential_configured": true,
+    "config_sha256": "554f42ec8a01547dd148d9f686780c921f86d5dbc88d1a4d94e2f26354c83630",
+    "status": "metadata_available",
+    "model_metadata_sha256": "b5f0ad120f7d83b80f7b4961478c2ed31dca0bbd658448d10fdd34c47ecce86e",
+    "served_metadata_name": "models/gemini-3.1-flash-lite",
+    "limitation": "Model metadata does not prove generation quota, exact served inference version, token billing, or forecast validity",
+    "elapsed_seconds": 0.6859891414642334
+  },
+  "review_archives": [
+    {
+      "file": "research/peer_reviews/round_002_clean_defaults_oct09/frozen_scientific_input.zip",
+      "expected_sha256": "338fe7b3e0ddbb128877e91f53c8562ee52dcd91a3499ad6586814452c92644e",
+      "actual_sha256": "338fe7b3e0ddbb128877e91f53c8562ee52dcd91a3499ad6586814452c92644e",
+      "bytes": 94815152
+    },
+    {
+      "file": "research/peer_reviews/round_002_clean_defaults_oct09/complete_review_output.zip",
+      "expected_sha256": "4ae273d1328eb935ea01616f8becd8e0ecccba4ad0efb9817d4e4c3b4fef9b26",
+      "actual_sha256": "4ae273d1328eb935ea01616f8becd8e0ecccba4ad0efb9817d4e4c3b4fef9b26",
+      "bytes": 301506826
+    }
+  ],
+  "full_current_scientific_readiness": false,
+  "collector_scope": "Read-only retained-evidence integrity and packaging; no research experiments, pytest execution, provider generation, or reviewer dispatch."
+}

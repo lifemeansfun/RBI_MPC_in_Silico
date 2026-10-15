@@ -1,0 +1,176 @@
+{
+  "version": "current bounded package; parent evidence assessment",
+  "pre_evaluation_acceptance": {
+    "defined_before_new_primary_evaluation": true,
+    "new_primary_evaluation_has_not_occurred": true,
+    "criteria": [
+      {
+        "criterion": "A",
+        "name": "Reference fidelity and justified departures",
+        "acceptance_evidence": "Version-specific full-text/source hashes; section/protocol map; verify necessary mechanisms; Taylor distinct; no imported performance"
+      },
+      {
+        "criterion": "B",
+        "name": "Important incremental contribution",
+        "acceptance_evidence": "Consequential frozen mechanism beyond geography, primary-source comparison including limitations of unavailable revised methods; empirical mechanism estimate"
+      },
+      {
+        "criterion": "C",
+        "name": "Source/timing/persona/label validity",
+        "acceptance_evidence": "Pre-cutoff sourced input histories and membership, declared missing history/labels, typed rate and stance targets; eligible frozen cohort"
+      },
+      {
+        "criterion": "D",
+        "name": "Identification, baselines and empirical execution",
+        "acceptance_evidence": "Equal prefix/matched branch resource allocation, own state retained, chair copying excluded, fresh live final generations, purposeful hold/calibration baselines"
+      },
+      {
+        "criterion": "E",
+        "name": "Measurement/uncertainty/no pseudoreplication",
+        "acceptance_evidence": "Predeclared agreement/dispersion and forecasting/dissent endpoints, meeting-unit paired estimates, temporal uncertainty, replication and missingness sensitivity"
+      },
+      {
+        "criterion": "F",
+        "name": "Integrated reproducibility/provenance/failure transparency",
+        "acceptance_evidence": "Immutable input/config/code/raw identities, bounded accounting, fail-closed execution, independent source-to-result recomputation and corruption controls"
+      },
+      {
+        "criterion": "G",
+        "name": "Conclusions proportional to evidence",
+        "acceptance_evidence": "Simulator-local scope, separate adaptation/contribution/readiness conclusions; nulls/failures retained; no certification or unsupported causal/welfare claim"
+      }
+    ]
+  },
+  "criteria": [
+    {
+      "criterion": "A",
+      "name": "Reference fidelity and justified departures",
+      "acceptance_evidence": "Version-specific full-text/source hashes; section/protocol map; verify necessary mechanisms; Taylor distinct; no imported performance",
+      "status": "UNVERIFIED",
+      "evidence": [
+        "SOURCE_VERSION_RECORD.md",
+        "PAPER_TO_PROJECT_MATRIX.md",
+        "raw/reference_worker_probe_record.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Available August methods are mapped; later revised full methods/materials unavailable; selected empirical behavior not executed. No exact original-code/performance reproduction.",
+      "exact_remaining_evidence": "Obtain later full methods/materials when available; complete selected mechanism/implementation checks with clear justified departures.",
+      "reviewer_status_from_saved_REVIEW_md": "UNVERIFIED"
+    },
+    {
+      "criterion": "B",
+      "name": "Important incremental contribution",
+      "acceptance_evidence": "Consequential frozen mechanism beyond geography, primary-source comparison including limitations of unavailable revised methods; empirical mechanism estimate",
+      "status": "FAIL",
+      "evidence": [
+        "FROZEN_QUESTION_AND_ANALYSIS.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Conditional Governor-ballot visibility question is consequential in design, but novelty versus full revision and empirical contribution are unverified.",
+      "exact_remaining_evidence": "Verified prior-method comparison and actual paired live effect/precision assessment.",
+      "reviewer_status_from_saved_REVIEW_md": "FAIL"
+    },
+    {
+      "criterion": "C",
+      "name": "Source/timing/persona/label validity",
+      "acceptance_evidence": "Pre-cutoff sourced input histories and membership, declared missing history/labels, typed rate and stance targets; eligible frozen cohort",
+      "status": "FAIL",
+      "evidence": [
+        "FROZEN_QUESTION_AND_ANALYSIS.json",
+        "initial_scientific_sha256.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Original source-linked macro records and dated history packets exist; pre-cutoff membership and executable rolling-persona bridge are incomplete.",
+      "exact_remaining_evidence": "Pre-cutoff roster sources, source-preserving persona adapter/manifests and actual frozen eligible cohort/label policy.",
+      "reviewer_status_from_saved_REVIEW_md": "FAIL"
+    },
+    {
+      "criterion": "D",
+      "name": "Identification, baselines and empirical execution",
+      "acceptance_evidence": "Equal prefix/matched branch resource allocation, own state retained, chair copying excluded, fresh live final generations, purposeful hold/calibration baselines",
+      "status": "FAIL",
+      "evidence": [
+        "raw/provider_allowance_audit.json",
+        "FROZEN_QUESTION_AND_ANALYSIS.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Matched-prefix design specified but adapter and actual empirical generations absent. Existing corrected evidence is mock. Remaining provider allowance unverified.",
+      "exact_remaining_evidence": "Reconcile remaining existing spending, current tariff/quota; integrate matched branches; run fresh bounded live study and purposeful baseline comparisons. Freeze final-ballot-only field projection: current helper includes final rationales; preserve measurement despite unresolved aggregation.",
+      "reviewer_status_from_saved_REVIEW_md": "FAIL"
+    },
+    {
+      "criterion": "E",
+      "name": "Measurement/uncertainty/no pseudoreplication",
+      "acceptance_evidence": "Predeclared agreement/dispersion and forecasting/dissent endpoints, meeting-unit paired estimates, temporal uncertainty, replication and missingness sensitivity",
+      "status": "FAIL",
+      "evidence": [
+        "FROZEN_QUESTION_AND_ANALYSIS.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Meeting-unit estimands and temporal/missingness analysis are locked, but no primary effect/interval or achieved precision can be calculated.",
+      "exact_remaining_evidence": "Complete raw branch evidence, meeting-level recomputation and temporal/replicate/failure sensitivity; distinguish imprecision from equivalence. Define finite-cohort versus broader temporal interval target explicitly; fixed original baseline is not an early-meeting rolling fit.",
+      "reviewer_status_from_saved_REVIEW_md": "FAIL"
+    },
+    {
+      "criterion": "F",
+      "name": "Integrated reproducibility/provenance/failure transparency",
+      "acceptance_evidence": "Immutable input/config/code/raw identities, bounded accounting, fail-closed execution, independent source-to-result recomputation and corruption controls",
+      "status": "FAIL",
+      "evidence": [
+        "frozen_archive_receipt.json",
+        "REPRODUCTION.md",
+        "raw/delivery_integrity_assistant.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "Available scientific snapshot is reproducible and preserved; integrated source-to-new-live-result path and authenticated cumulative spending remain absent.",
+      "exact_remaining_evidence": "Complete immutable input/prompt/branch/runtime path, durable reconciled ledger, central empty-output reconstruction and failure/corruption checks.",
+      "reviewer_status_from_saved_REVIEW_md": "FAIL"
+    },
+    {
+      "criterion": "G",
+      "name": "Conclusions proportional to evidence",
+      "acceptance_evidence": "Simulator-local scope, separate adaptation/contribution/readiness conclusions; nulls/failures retained; no certification or unsupported causal/welfare claim",
+      "status": "PASS",
+      "evidence": [
+        "FINAL_ASSESSMENT.md",
+        "PAPER_TO_PROJECT_MATRIX.md",
+        "FROZEN_QUESTION_AND_ANALYSIS.json",
+        "review_attempt_002/output/REVIEW.md"
+      ],
+      "finding": "This bounded package labels missing empirical results, mock evidence, departures and simulator-local scope, and does not claim readiness. This scoped PASS is not an audit of every legacy claim surface.",
+      "exact_remaining_evidence": "Retain these limits; no scientific achievement or journal certification can be inferred.",
+      "reviewer_status_from_saved_REVIEW_md": "PASS"
+    }
+  ],
+  "mandatory_all_supported": false,
+  "terminal_status": 2,
+  "primary_empirical_effect": null,
+  "primary_sampling_uncertainty": null,
+  "adaptation_established": false,
+  "contribution_established": false,
+  "publication_readiness_established": false,
+  "reviewer_adjudication": "Substantive saved critique with partial infrastructure/usage closeout; parent adopted B/E FAIL because necessary empirical evidence is absent. Not certified independent validation.",
+  "pre_review_parent_statuses": {
+    "A": "UNVERIFIED",
+    "B": "UNVERIFIED",
+    "C": "FAIL",
+    "D": "FAIL",
+    "E": "UNVERIFIED",
+    "F": "FAIL",
+    "G": "PASS"
+  },
+  "review_limitations": {
+    "substantive_review_saved": true,
+    "process_completed_successfully": false,
+    "exit_code": 1,
+    "missing_requested_outputs": [
+      "evidence_judgments.json",
+      "audit_complete.json",
+      "final_message.md"
+    ],
+    "context_independence": "fresh visible context with declared limits; parent preflight OS restrictions verified; reviewer did not probe denials; hidden context not fully inspectable",
+    "frozen_scientific_inputs_changed": [],
+    "critique_sha256": "6531a268a9826439040b48dec0801d5c81babe205daf350500db9fade3574634",
+    "no_independent_validation_or_readiness_claim": true
+  }
+}

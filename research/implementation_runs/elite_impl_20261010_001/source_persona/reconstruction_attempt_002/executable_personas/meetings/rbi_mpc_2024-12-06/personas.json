@@ -1,0 +1,116 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": 0.07692307692307693,
+    "is_internal": false,
+    "key_themes": [
+      "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)"
+    ],
+    "member_id": "nagesh_kumar",
+    "name": "Nagesh Kumar",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": 0.07692307692307693,
+    "is_internal": false,
+    "key_themes": [
+      "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)"
+    ],
+    "member_id": "saugata_bhattacharya",
+    "name": "Saugata Bhattacharya",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": -0.28,
+    "is_internal": false,
+    "key_themes": [
+      "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)"
+    ],
+    "member_id": "ram_singh",
+    "name": "Ram Singh",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": 0.46324786324786327,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"In the last minutes, I had mentioned how growth momentum had surprised positively whereas inflation was turning soft, implying a goldilocks kind of scenario.\" (2023-08-10)",
+      "\"In my August 2024 statement, I had stated that we could see a window opening up for monetary policy to change its course backed by steady progress in monsoon, higher kharif sowing, favourable rabi prospects and softening global commodity prices.\" (2024-10-09)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": 0.48846153846153845,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"Given their mandates and the credibility they work hard to earn (in the pandemic, they prioritised revival over price stability which cannot be faulted, but it is), they prefer now to err on the side of hawkishness in their determination to bring inflation to targets, fearing a 1970s redux.\" (2022-09-30)",
+      "\"Since the beginning of 2022-23, monetary policy has pursued a sustained restrictive stance to achieve the goals of maintaining price stability while keeping in mind the objective of growth.\" (2024-10-09)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2024-12-04",
+    "corpus_manifest_hash": "775e6d16b4b0140abd106cfd4ce0c7d472d17abfda8bc61e34aae964cf683488",
+    "hawk_dove_score": 0.3561253561253561,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"The world is in the eye of a new storm originating from aggressive monetary policy tightening and even more aggressive forward guidance from advanced economy (AE) central banks.\" (2022-09-30)",
+      "\"Government expenditure has improved in Q2:2024-25 and this trend is likely to continue during rest of the year in line with the budget estimates.\" (2024-10-09)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2024-10-09; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

@@ -1,0 +1,551 @@
+{
+  "scope": "Offline source integrity, calendar/roster/choice consistency; not independent empirical or label validation",
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "checks": [
+    {
+      "check": "all retained source hashes match",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all source URLs are official",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all 34 enumerated sources retained",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all source dates no later than as-of date",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "consecutive meeting identifiers 51 through 63",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "unique ordered decision dates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "six unique roster members in every meeting",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "78 aligned member records",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2024-10-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2024-10-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2024-10-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2024-10-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2024-10-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2024-12-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2024-12-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2024-12-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2024-12-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2024-12-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-02-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-02-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-02-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-02-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-02-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-04-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-04-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-04-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-04-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-04-09",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-06-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-06-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-06-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-06-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-06-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-08-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-08-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-08-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-08-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-08-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-10-01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-10-01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-10-01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-10-01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-10-01",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2025-12-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2025-12-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2025-12-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2025-12-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2025-12-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2026-02-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2026-02-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2026-02-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2026-02-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2026-02-06",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2026-04-08",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2026-04-08",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2026-04-08",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2026-04-08",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2026-04-08",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2026-06-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2026-06-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2026-06-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2026-06-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2026-06-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2026-08-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2026-08-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2026-08-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "single complete source rate table 2026-08-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2026-08-05",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "meeting and decision dates match retained title 2026-10-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "cutoff precedes meeting 2026-10-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "member roster aligned 2026-10-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "finite rate level and exact basis-point change 2026-10-07",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "October 2026 minutes not backfilled before scheduled release",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all verbatim evidence excerpts and source hashes match",
+      "passed": true,
+      "details": {
+        "quote_count": 243,
+        "bad_quote_count": 0
+      }
+    },
+    {
+      "check": "June 2025 Yes is preserved alongside smaller magnitude disagreement",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "April prior reservation not promoted to final stance disagreement",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "unproved formal stance ballots stay missing",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "reservation negative evidence not invented",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "72 available full statements",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "rate directions retained without outcome exclusion",
+      "passed": true,
+      "details": {
+        "hold": 8,
+        "cut": 4,
+        "increase": 1
+      }
+    }
+  ],
+  "passed": true,
+  "source_records": 34,
+  "panel_meetings": 13,
+  "member_records": 78,
+  "available_full_statements": 72,
+  "raw_retained_source_sha256": {
+    "rbi_prid_63742": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+    "rbi_prid_63403": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+    "rbi_prid_63287": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+    "rbi_prid_62974": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+    "rbi_prid_62863": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+    "rbi_prid_62599": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+    "rbi_prid_62514": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+    "rbi_prid_62261": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+    "rbi_prid_62169": "dae3da104856053bbd879d8e54930604422a783e1e1dce112374e19c3e097231",
+    "rbi_prid_61856": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+    "rbi_prid_61749": "0cd9b1031fbe0911937180f65fd9ed12e95627d0cbdb48557e50034263d379fc",
+    "rbi_prid_61433": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+    "rbi_prid_61332": "daa21b4ce822e6bbd402d5fd0e769e87da9ecbe818bd431f8566d117c574452c",
+    "rbi_prid_61056": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+    "rbi_prid_60957": "e1b7dbe8879009efe75b64b3c908fef7abf584103533e35288eaaedfe38fa6b1",
+    "rbi_prid_60686": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+    "rbi_prid_60604": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+    "rbi_prid_60612": "1c65950f31f1afc469c6dd65f47683356e2c361b7a5ee42a7c5a5694b4b80cbb",
+    "rbi_prid_60279": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+    "rbi_prid_60176": "7776c1994d750c526e6525cce6109a685c0c47696b33265ef84867147bebf3bd",
+    "rbi_prid_59818": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+    "rbi_prid_59692": "012e5566aed59f426d8044aaab637ddb4413144efca2351af04d391c45d2cc72",
+    "rbi_prid_59347": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+    "rbi_prid_59244": "c178e98ca0bb0ad71e2f188250383f791b1262dc006a4352603223ff6bb7a9c3",
+    "rbi_prid_58958": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+    "rbi_prid_58850": "66d63803607bc7289bccc1d1d90ec4ca7c79ca5baf3387327ca21b5d8b43d4f0",
+    "rbi_prid_58545": "265ef648b427f5ee77dfb7267cc367659d75a8a0c039c8fb8ed3c12e6aa09f40",
+    "rbi_prid_58447": "130760aa10cf17862d1cae06b0163ccae6dd616febc0497a8dbff765f0574b78",
+    "rbi_prid_58136": "7d5ef395869eb87806ef90d91ef437430fca86c3284e6431907df7722be1d883",
+    "rbi_prid_58050": "bf5dabcfda4dfcd0f67fc4d32ac4af165ef63b3fa5c3496d62540ff377e5268d",
+    "rbi_prid_57735": "ad45bd4849a4c755c4ba3c34ad4721fa2806a989768f1454c372ef4dd2f8030d",
+    "rbi_prid_57637": "8ee71f46fc818f631424e51c070f7e95976d0ec044b6490c3ba6fe9297a3073b",
+    "rbi_prid_60062": "af03a92d41913123ee332532b40babc927b2b7f615e4b6a8425d06a530eccdc6",
+    "rbi_prid_62422": "e01e8e4c3341c8b34582ed18193c51e8e919507869aefdc22b2939257023f7a3"
+  },
+  "artifacts_sha256": {
+    "availability_ledger.json": "5289859b9b6890cbf51d067412815c7884da61d0612918266806fe96b0284a80",
+    "member_statements.jsonl": "b0993cbfc5ddfc86b8c274dfb98f182fc38ba7da99867cf36eb7cb21a6c20e86",
+    "source_catalog.json": "722f29fa5c01c122e6df3511d2e6b894fddb58fac2fc90145ce5a36b9f8ff86e",
+    "acquire_sources.py": "66366a2ac2d61a02d94a9b157bc45aa950c1e3cb02113e088a189c28ddcfa13c",
+    "acquisition_log.json": "fae8844c6d9ffb6d76256a94a50a50401fb61d47b38a69d39b6faae7a8ce6333",
+    "SOURCE_NOTE.md": "157371e46deea86cf4d1ff841e8aefc52158cb60ac4143f7e00139a94497feec",
+    "meeting_label_ledger.json": "2ad73cc76bf7975e9dd3fe29d3347e789c421a396fbd25207ea58ecd502e1c38",
+    "meeting_ledger.csv": "0e1a3e632561cf3060b524b66520693403bc1e91f80086876d1f7022c7ccd4f5",
+    "discovery_log.json": "ddd32ca86c4a12316ad2cce558b70f0619c39227456218b26a9651aa79737413",
+    "verify_artifacts.py": "d6162485072f7befe6783d853eb64f41ff6c88a717e939cdc5f63e3a2db68052",
+    "member_ballot_ledger.csv": "0b11c39716851293bd33d321c94554867d857bfd11733c8b67a6fdfa39403def",
+    "build_ledger.py": "5b0c81d00909ee9fb2e32ea994dfb38132c21244e5bb9cf4f2eb8c4e4f2169bd",
+    "extracted/rbi_prid_63742.txt": "b67f478473dcf004528451ea7688f130c9f0698be99d2d851c38893d70c9362e",
+    "extracted/rbi_prid_59347.txt": "3ca98e95aba28dd904037186581c8c63b8c2765e42fe47a569578d7c3684e1e8",
+    "extracted/rbi_prid_62514.txt": "445e61448d0e527d5780aab8e9053dba125d3efe8aea574a5a78532592b5fe80",
+    "extracted/rbi_prid_58850.txt": "f64fe689f1dccfe1ea681c2d40d2167f39fce4f7dd4f1d139a2c4d830dd3b66d",
+    "extracted/rbi_prid_60062.txt": "1374c2c99cc5c1f3cda7d4b109d4b56574a08b21884e28469d78e29ef12b3223",
+    "extracted/rbi_prid_61433.txt": "8f905f3d58b015b0239ca2d10c4421e3d9fac32d1852c12189d13119e29e780a",
+    "extracted/rbi_prid_62261.txt": "c8bca6d46093e70ec8b6d7772231e7ff1847a4e49986dc6b8542402feee0973b",
+    "extracted/rbi_prid_57637.txt": "d300f159c9d21de924baefc70741420714c275139645f76cbf01275ece91aeab",
+    "extracted/rbi_prid_60957.txt": "ac38b8026c633117d815b0e704f7395453295c6fcf0339b683d63ad9e1aa5b2f",
+    "extracted/rbi_prid_60604.txt": "658f1f8ed62de66bb7651602575d5c6bccd717adc2d50a36489909c8a8e58da9",
+    "extracted/rbi_prid_60176.txt": "02c0722323a84b086b3c3ee65aa85dba47a7352c0ae1b77c0dec80e37ef62520",
+    "extracted/rbi_prid_61056.txt": "f7f21569850d23564647d29383a6b2ef187ebd04260f63fc009946d2a26efdfa",
+    "extracted/rbi_prid_59244.txt": "5d61374405cf7888f9b4871726122385aebf4a6542dddd6ac5e63a3916d4f5dc",
+    "extracted/rbi_prid_63287.txt": "bb852bcad4efbb8d99e4b8bb0c6de2af6cedd90a8f3df704f814fdc76ec246a7",
+    "extracted/rbi_prid_60612.txt": "b3d053b7d536ff41072e60cd0c1602e3d7a9bfa99fc1de1aba792bd4a0a606be",
+    "extracted/rbi_prid_61332.txt": "772b0a54e6de67a513d80cb07062b7f65bbcb78252f7afad6791bda30a64849a",
+    "extracted/rbi_prid_59692.txt": "87c9d88775b228868fe7b322ca22d1b5f41dd75c3640b44efffb7cf46ccd6a8e",
+    "extracted/rbi_prid_62599.txt": "2ac5a39e4ac917a4717ede68c15c5116941aa65ae2c8adaa0ecd704020109643",
+    "extracted/rbi_prid_57735.txt": "7c515485ad247832e79e3738ba8260dcd8abd452a6eacb4e2e8e8f9ab8accfb8",
+    "extracted/rbi_prid_62422.txt": "b58e2d7eac756663cade5e4025d49b6afb4cc95796daf3f0f0b17517ad697531",
+    "extracted/rbi_prid_61856.txt": "d243e26e29cf2ceb9a0da933accc8ca3e1e6d54e3ece97bf0d23e284f7fa5620",
+    "extracted/rbi_prid_58958.txt": "e2284e1e021a0a11ca0a56f706e8e70cb9c73e9fc455b7b038eb79c7b4573931",
+    "extracted/rbi_prid_58545.txt": "dbd6120c65ca19b6571ff8b32996035f3109a8458830719b113b71dbf2470136",
+    "extracted/rbi_prid_62974.txt": "7601e07f77e570acb265f9e1a1be46bbb758099f5c69a80cb257b677c1f25a37",
+    "extracted/rbi_prid_62169.txt": "74eafef73b64e0f40a73fc524b9be074b5831d2d8b9eb238006fc0c37bccc34d",
+    "extracted/rbi_prid_58050.txt": "a9e03e09b670e981be6fc076c0a08a13d09c9a2db12e9849398d3ef0671e376c",
+    "extracted/rbi_prid_59818.txt": "a59156381661d4b7fb225c808c617f0fbb0cd5f9ec75b502ab5eaae9ef46126a",
+    "extracted/rbi_prid_60686.txt": "f241a2525404fed8cfc1f169c177d8af4f6d091f4e86a89e856c9bd013fbafff",
+    "extracted/rbi_prid_63403.txt": "ab41b5878cf3395ac0c4eca0fddaab204b3ea6f6b88de2b3ea9bff3ab19df9e6",
+    "extracted/rbi_prid_58136.txt": "5400ae404ab75cffeb57f863db4afe8f4ced28d5d7f24e59776916c30223037a",
+    "extracted/rbi_prid_61749.txt": "bd516799c3e55297f2a01777b1fba084510a6e521bc9c4b3e527ab666ab06065",
+    "extracted/rbi_prid_58447.txt": "bd8321b7c3a675ed7497091b647b7567a3c0d3af1f0007e2738e82a4722c82d0",
+    "extracted/rbi_prid_62863.txt": "07e67f0b92a42b23c26c6a0e16443a4797121c53505724d270bddd72840ad682",
+    "extracted/rbi_prid_60279.txt": "2449d0de8d12a914f5fbb1dfe3d2560c5aaa754ef754ee4b9616661fef9433cf",
+    "raw/rbi_prid_62422.html": "e01e8e4c3341c8b34582ed18193c51e8e919507869aefdc22b2939257023f7a3",
+    "raw/rbi_prid_62863.html": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+    "raw/rbi_prid_60604.html": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+    "raw/rbi_prid_60612.html": "1c65950f31f1afc469c6dd65f47683356e2c361b7a5ee42a7c5a5694b4b80cbb",
+    "raw/rbi_prid_60686.html": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+    "raw/rbi_prid_63403.html": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+    "raw/rbi_prid_63287.html": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+    "raw/rbi_prid_60279.html": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+    "raw/rbi_prid_60957.html": "e1b7dbe8879009efe75b64b3c908fef7abf584103533e35288eaaedfe38fa6b1",
+    "raw/rbi_prid_58545.html": "265ef648b427f5ee77dfb7267cc367659d75a8a0c039c8fb8ed3c12e6aa09f40",
+    "raw/rbi_prid_58050.html": "bf5dabcfda4dfcd0f67fc4d32ac4af165ef63b3fa5c3496d62540ff377e5268d",
+    "raw/annualpolicy_2025.html": "9de42ad304da6f52f2a1496c2379c6c07c19ef46e7972f29608ba364a1445308",
+    "raw/rbi_prid_61433.html": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+    "raw/rbi_prid_60062.html": "af03a92d41913123ee332532b40babc927b2b7f615e4b6a8425d06a530eccdc6",
+    "raw/rbi_prid_58850.html": "66d63803607bc7289bccc1d1d90ec4ca7c79ca5baf3387327ca21b5d8b43d4f0",
+    "raw/rbi_prid_58958.html": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+    "raw/rbi_prid_62599.html": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+    "raw/annualpolicy_form_2025.html": "a70686221fe34e3821d8c154aafb2a761948639fb804f176ac9aa1f0d6ef9f69",
+    "raw/rbi_prid_60176.html": "7776c1994d750c526e6525cce6109a685c0c47696b33265ef84867147bebf3bd",
+    "raw/rbi_prid_59692.html": "012e5566aed59f426d8044aaab637ddb4413144efca2351af04d391c45d2cc72",
+    "raw/rbi_prid_58447.html": "130760aa10cf17862d1cae06b0163ccae6dd616febc0497a8dbff765f0574b78",
+    "raw/rbi_prid_57637.html": "8ee71f46fc818f631424e51c070f7e95976d0ec044b6490c3ba6fe9297a3073b",
+    "raw/rbi_prid_59347.html": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+    "raw/rbi_prid_62514.html": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+    "raw/annualpolicy_form_2026.html": "8eccabf619dca1f533f262b6ddb1dfde05404f40d1deb6307afe8962b800a697",
+    "raw/rbi_prid_62261.html": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+    "raw/rbi_prid_62974.html": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+    "raw/rbi_prid_61749.html": "0cd9b1031fbe0911937180f65fd9ed12e95627d0cbdb48557e50034263d379fc",
+    "raw/rbi_prid_61856.html": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+    "raw/rbi_prid_63742.html": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+    "raw/rbi_prid_62169.html": "dae3da104856053bbd879d8e54930604422a783e1e1dce112374e19c3e097231",
+    "raw/rbi_prid_58136.html": "7d5ef395869eb87806ef90d91ef437430fca86c3284e6431907df7722be1d883",
+    "raw/rbi_prid_59818.html": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+    "raw/annualpolicy_2026.html": "6d5c83b0f08972b36b1ede1fdc4df1766ffec688803f6be84021c83940f124fb",
+    "raw/rbi_prid_61332.html": "daa21b4ce822e6bbd402d5fd0e769e87da9ecbe818bd431f8566d117c574452c",
+    "raw/rbi_prid_57735.html": "ad45bd4849a4c755c4ba3c34ad4721fa2806a989768f1454c372ef4dd2f8030d",
+    "raw/rbi_prid_61056.html": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+    "raw/rbi_prid_59244.html": "c178e98ca0bb0ad71e2f188250383f791b1262dc006a4352603223ff6bb7a9c3",
+    "raw/annualpolicy_2027.html": "4962de6b8c94ccc024e1223b7e63bac0f73ab9ca1097f9bd8588d2b55ec1e791"
+  },
+  "remaining_missing": [
+    "October 2026 individual minutes until Oct 21",
+    "Exact first posting times",
+    "Contemporaneous archive hashes",
+    "Independent double-coded labels",
+    "Exhaustive reservations/guidance adjudication",
+    "Expanded macro/persona information packets"
+  ],
+  "failed_checks": []
+}

@@ -1,0 +1,43 @@
+Statement by Prof Ram Singh
+
+31. In my view, the following questions warrant the attention of the MPC: Is there a strong case for a shift in the monetary policy (MP) in response to the recent developments on inflation and growth fronts, domestically and internationally? How are wages and prices likely to play out in the short term and impact inflation growth trade-offs? What is the nature of the relation between the short-term and the long-term inflation growth trade-offs for the Indian economy? What are the implications of the elevated uncertainty for the MP?
+
+32. Though elevated, the inflation trajectory remains along the projected/expected lines. As we advance, food inflation is likely to soften in Q4:2024-25, and energy prices are also expected to be stable in the near future. Overall, CPI inflation for 2024-25, projected at 4.8 per cent, is within the tolerance band though above the 4.0 per cent target. The risks are evenly balanced.
+
+33. Moreover, by now it is widely accepted that vegetable prices are essentially a supply-side phenomenon. Interest rates have little bearing on the volatility in fruits and vegetables prices. During the last ten years, changes in repo rates seem to have made little difference to vegetable price volatility. Specifically, the elevated interest rates during the last ten quarters had no significant effect on price volatility, especially of TOP (tomato, onion and potato) vegetables, the primary source of volatility in headline inflation.
+
+34. Therefore, the question becomes: Does the food inflation transmit to the core inflation?
+
+35. There is empirical evidence that the impact of food inflation on core inflation has significantly reduced in recent years suggesting that the wages and price-setting mechanisms warrant a serious reexamination. The effectiveness of the main channel of transmitting food inflation to core inflation, i.e., the food price-induced increases in wages, has reduced in recent years. The result is a duality - significant divergence between the food and core inflations. During the last nine quarters, while the food prices remained elevated, the CPI core has remained below the price inflation target of 4%. A significant part of this divergence is attributable to slacks (weak wage growth) and other frictions in the labour and food product markets.
+
+36. Moreover, the CPI inflation figures used by the MPC are somewhat higher than what would follow if the share of food and beverages (45.86%) was in line with the total household consumption expenditure (MPCE) data. Even with current weights, core inflation is at 3.8%. From April to October 2024, the CPI excluding TOP, Gold, and Silver on an average stood at 3.80%, whereas the core inflation rate (%) excluding Gold and Silver was on an average at 2.84%.
+
+GDP Growth
+
+37. The GDP growth rate has hit a seven-quarter low of 5.4% in Q2 amid a manufacturing slump and deceleration in private consumption and investment. The GVA, a critical indicator of economic activity, also came at 5.6 per cent in Q2. Accordingly, the RBI has lowered the GDP growth forecast to 6.6 per cent, down significantly from earlier projections of 7.2 per cent.
+
+38. The MPC's mandate is to ensure price stability while supporting growth. The present situation of significantly slower growth without material changes in the prospects for inflation requires shifting the pivot of monetary policy to a counter-cyclical mode.
+
+39. The empirical relation between the core inflation and GDP growth rate (actual and potential) is well established. A persistent decrease in the core inflation during the last 7-8 quarters, combined with the slowdown in growth rate, suggests that the difference between the actual and potential growth rate is increasing. These observations and the fact that the labour market is not tight mean that the economy can grow significantly faster without triggering inflation.
+
+40. From another perspective, the difference between the core inflation (<4%) and the policy rate (at 6.5 %) has been more than 2.5% for over a year now; this makes for a restrictive monetary regime. Further, the existing policy rates are more than two percentage points higher even when compared to the estimated average CPI inflation for the next four quarters - CPI inflation for 2024-25 Q3 at 5.7 per cent and Q4 at 4.5 per cent. For 2025-26, Q1 is projected at 4.6 per cent, and Q2 at 4.0 per cent. Therefore, the forward-looking policy rate is greater than the neutral R-star.
+
+41. When the correlation between food prices and core inflation is weak at best and the share of items contributing to inflation has come down, keeping interest rates elevated to keep overall inflation closer to the target imposes growth costs that are disproportionate to the gains on the prices front.
+
+42. Several indicators point to a slowing economy. Nominal sales growth of listed private manufacturing companies has fallen to 3.3% in Q2: 2024-25. Operating profit margins have moderated for manufacturing and non-IT services while the staff cost has seen only a modest increase even after factoring in the additional jobs. The flow of financial resources to the commercial sector has slowed noticeably, and the total costs of bank/FIs-funded projects have come down. The leverage ratio of companies surveyed by the RBI has reduced from almost 35% in H1: 2022-23 to 29.5% in H1: 2024-25.
+
+43. A rate cut will reduce the costs of doing business and increase the opportunity cost of holding on to cash for firms and companies. Hopefully, this will boost companies' investment plans and improve the scope of employment-linked incentive schemes helping induce a virtual cycle of wage growth and demand. By tightening the labour market, it will also improve efficacy of the MP.
+
+44. A growth-supportive monetary policy is also consistent with the international scenario. In most of big developed markets, the central banks have already cut benchmark interest rates. China's central bank has also cut interest rates. Furthermore, the currencies of several Asian countries, including our competitors, including China, are depreciating against the USD. Expectation of low crude prices is expected to provide further elbowroom for rate cuts by the RBI.
+
+45. While deciding on short-term inflation-growth trade-offs, MP must factor in the long-term implications of the decisions made today. How we address the short-term inflation-growth trade-offs has implications for the long-term growth path. High growth rate, by providing meaningful employment to the millions on the job, boosts demand while reducing supply-side constraints.
+
+46. There will always be uncertainty about the path of inflation and the appropriate policy rates. Due to increases in the capital intensity of production processes due to advances in ICT and AI, the employment elasticity of output is likely to fall in the future. As such, we have a limited window of 10-15 years to capitalise on the demographic dividend. So, the imperative is high growth rate while minimising the likelihood of extreme scenarios on the inflation front.
+
+47. In a world with heightened uncertainty, if the MP were to use insights from research in the areas of Rules-versus-Standards and Regulation under Uncertainty, it would be more plausible to aim for price stability within a range rather than aiming to bring CPI inflation to a point target of 4%. The costs of trying to shoot at the point target in every state of the uncertainty ridden future can be unjustifiably high.
+
+48. Considering all these factors, I vote to:
+
+Reduce the policy repo rate under the liquidity adjustment facility (LAF) by 25 basis points to 6.25 per cent.
+
+Maintain the monetary policy stance to ‘neutral’.

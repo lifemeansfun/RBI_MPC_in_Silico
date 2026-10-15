@@ -1,0 +1,14 @@
+{
+  "predeclared_limits": {
+    "new_directory_bytes": 2147483648,
+    "total_installation_and_checks_seconds": 1200,
+    "installation_attempts": 1,
+    "pip_retries": 0,
+    "provider_calls": 0,
+    "provider_spend_usd": 0
+  },
+  "scope": "Fresh isolated venv, unchanged locked dependencies, fresh portable validation and independent replay only",
+  "lock_sha256": "4847bcb43701ebab63d12b10b76d1937a38800e297f58d86c24a5ee32b868d5a",
+  "portable_lock_sha256": "4847bcb43701ebab63d12b10b76d1937a38800e297f58d86c24a5ee32b868d5a",
+  "portable_protocol_sha256": "8f7eca497686c152cc8c672a3dca4bbba93a005a0076d80929f63fa16494074d"
+}

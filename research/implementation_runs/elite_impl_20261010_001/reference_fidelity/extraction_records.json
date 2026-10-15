@@ -1,0 +1,39 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "package": "pypdf",
+  "records": [
+    {
+      "id": "gwu_retained_august_2025",
+      "pages": 52,
+      "pdf_sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+      "page_extraction_file": "sources/gwu_retained_august_2025_pages.json",
+      "text_file": "sources/gwu_retained_august_2025.txt",
+      "extraction_sha256": "b0910d55b7e9e7c8f97bcd5689ab2f10f27969e403f48723a660023f77488d05"
+    },
+    {
+      "id": "fedsight_arxiv_2512_15728v1",
+      "pages": 9,
+      "pdf_sha256": "909d1b279a4a1f03876040b56bb3838584deaa6b08a2f44708fd4571411649f5",
+      "page_extraction_file": "sources/fedsight_arxiv_2512_15728v1_pages.json",
+      "text_file": "sources/fedsight_arxiv_2512_15728v1.txt",
+      "extraction_sha256": "85c89e1a36f8c4446bcd7e908e65ffc937c037ac465e9e587812f1e94fbd6337"
+    },
+    {
+      "id": "takano_arxiv_2511_02469v1",
+      "pages": 17,
+      "pdf_sha256": "f219d80f69f8a4c6cb5cc81fbd35fada1f16e28dea579d0129d7e42ff568dbef",
+      "page_extraction_file": "sources/takano_arxiv_2511_02469v1_pages.json",
+      "text_file": "sources/takano_arxiv_2511_02469v1.txt",
+      "extraction_sha256": "8865b0d584a5a3b781f3ab2964ba41ff2e1ef64b5b76aff2bb2fca64b67ab7f3"
+    },
+    {
+      "id": "acl_2025_findings_606",
+      "pages": 32,
+      "pdf_sha256": "f4c85dab5bc9dada9d6bc4554dbc7224386769039bc1c2fcff7d856e31863f6d",
+      "page_extraction_file": "sources/acl_2025_findings_606_pages.json",
+      "text_file": "sources/acl_2025_findings_606.txt",
+      "extraction_sha256": "c68c70a8f88ef4a01cc39a93f3ddb447511708c4eebabb9191b0ec5c3a3b02c0"
+    }
+  ]
+}

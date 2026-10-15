@@ -1,0 +1,42 @@
+integrity {"files": 2690, "mismatches": []}
+Traceback (most recent call last):
+  File "/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-defaults-oct09-81o1lnsw/input/peer_review_output/probes.py", line 12, in <module>
+    emit('environment',{'executable':sys.executable,'python':sys.version,'platform':platform.platform()})
+                                                                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/platform.py", line 1212, in platform
+    system, node, release, version, machine, processor = uname()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/platform.py", line 799, in __iter__
+    (self.processor,)
+     ^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/functools.py", line 1001, in __get__
+    val = self.func(instance)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/platform.py", line 794, in processor
+    return _unknown_as_blank(_Processor.get())
+                             ^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/platform.py", line 739, in get
+    return func() or ''
+           ^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/platform.py", line 762, in from_subprocess
+    return subprocess.check_output(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/subprocess.py", line 992, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/subprocess.py", line 1740, in _get_handles
+    errwrite = self._get_devnull()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/subprocess.py", line 1137, in _get_devnull
+    self._devnull = os.open(os.devnull, os.O_RDWR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-defaults-oct09-81o1lnsw/input/peer_review_output/guard.py", line 18, in audit
+    if not p.is_relative_to(OUT): raise RuntimeError('Review write outside output forbidden: '+str(p))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Review write outside output forbidden: /dev/null

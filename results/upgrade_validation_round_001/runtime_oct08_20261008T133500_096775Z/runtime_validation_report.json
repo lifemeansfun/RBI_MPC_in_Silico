@@ -1,0 +1,87 @@
+{
+  "timestamp_utc": "2026-10-08T14:00:58.459264+00:00",
+  "scope": "Runtime implementation and offline fault controls; not an independent scientific review or live-model evaluation",
+  "paid_provider_calls": 0,
+  "files_changed_by_runtime_owner": [
+    "src/infra/cache.py",
+    "src/infra/checkpoint.py",
+    "src/infra/cost_governor.py",
+    "src/infra/generation_evidence.py",
+    "src/infra/llm_client.py",
+    "src/infra/transcript_logger.py",
+    "tests/test_runtime_upgrade.py"
+  ],
+  "current_file_hashes": {
+    "src/infra/cache.py": "3cd258d52b32e74fdcdaef5ce451956025ba5bf367ac7980f643100d0359decc",
+    "src/infra/checkpoint.py": "728530e79df8d719d9fb3748acf802b39ed9e1ed9d20ccb7b78fdad8e6468cd1",
+    "src/infra/cost_governor.py": "653ff524b7a27b84bea6f4e5c576aeaf8e5527657ca68cb2abd6ac5f6f1dfb23",
+    "src/infra/generation_evidence.py": "d82c41150159efa5b438a8ec6b4b30c5e105de6b1e4a1ef6109c6b84f80c4c94",
+    "src/infra/llm_client.py": "b775d1f1ca8be51d4372414621f179c0895ff6e8b0f89aaaf7a8d3a806ca962d",
+    "src/infra/transcript_logger.py": "a30c77e3d73bc290e02cb536631a259164d20de9dcb435ded374f4a3adc2ea77",
+    "tests/test_runtime_upgrade.py": "5877b24efde88b95dac80300ca63d6d1468bd8ea02c6346bde1935da7a984ad3"
+  },
+  "new_dependency": {
+    "name": "jsonschema",
+    "version": "4.26.0",
+    "declaration_and_lock_owner": "root"
+  },
+  "verified_final_checks": {
+    "runtime_suite": {
+      "passed": 52,
+      "log": "final_runtime_only_pytest.log"
+    },
+    "frozen_combined_runtime_and_deliberation": {
+      "passed": 142,
+      "runtime": 52,
+      "deliberation": 90,
+      "log": "frozen_source_v2_pytest.log",
+      "source_manifest": "verified_source_manifest_v2.json",
+      "source_files_unchanged": true
+    }
+  },
+  "genuine_pre_fix_counterexamples": [
+    {
+      "log": "counterexample_pytest.log",
+      "failures": 5,
+      "already_rejected_controls": 1,
+      "conditions": [
+        "required raw field omitted",
+        "boolean used as integer action",
+        "mock relabeled as live_model",
+        "changed normalized transcript payload",
+        "uncertain charge appears between precheck and mark_submitted"
+      ]
+    },
+    {
+      "log": "restart_counterexample_pytest.log",
+      "failures": 2,
+      "conditions": [
+        "previously initialized ledger file missing",
+        "previously initialized ledger truncated to empty"
+      ]
+    }
+  ],
+  "changes": [
+    "Strict finite JSON and Draft202012 schema validation of raw and parsed copied evidence; local references only and strict integer types.",
+    "Generation metadata, evidence track, alias normalization, cost and transcript payload reconciled semantically; dependencies checked before paid submissions.",
+    "Cached live source reconciled with durable committed ledger receipt including response id and token accounting; replay does not debit again.",
+    "Atomic mark_submitted guard stops newly uncertain or over-bound accounting before submission transition.",
+    "Missing ledger configuration or a marked previous ledger cannot be silently reinitialized; durable adjacent *.initialized.json marker records initialized accounting.",
+    "Settled known costs retained in failure metadata even when token bound violation stops generation.",
+    "Mock input-bound methods explicitly label offline fixtures without provider verification.",
+    "Checkpoint identity validates named study/condition/schedule fields and every supplied hash; malformed artifact dictionaries and finite JSON fail closed."
+  ],
+  "preserved_intermediate_failures": [
+    "postfix_attempt_002: 110 passed, 4 failed; concurrently edited deliberation fixture/test placement subsequently repaired by its owner.",
+    "postfix_attempt_003: 137 passed, 1 failed; legitimate anonymous generation versus restored roster payload reconciled with declared unambiguous aliases.",
+    "frozen_source initial: 128 passed, 1 failed, 10 setup errors; copied run layout violated fixture assumption and newly concurrent stale scenario assertion; final distinct source snapshot v2 passes."
+  ],
+  "unverified_limits": [
+    "No real Gemini submission, model availability/quota, real served model identity or authenticated billing invoice was verified.",
+    "Tariff estimates remain at the recorded 2026-10-05 public-price revision; root must revalidate suitability before paid research.",
+    "Digest/semantic checks detect inconsistencies, not coordinated malicious rewriting of all evidence and accounting.",
+    "Deleting both a ledger and its initialization marker is outside local evidence authentication guarantees; preserve both together.",
+    "Process owner recovery is conservative but does not authenticate remote request completion or guarantee cancellation of remote work.",
+    "Runtime/engineering passes do not establish scientific superiority, cognitive diversity, real-policy causal effects, equilibrium or welfare."
+  ]
+}

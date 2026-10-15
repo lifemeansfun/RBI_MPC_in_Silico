@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2022-08-05",
+  "meeting_start_date": "2022-08-03",
+  "publication_date": "2022-08-19",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+  "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+  "statement_sha256": {
+    "ashima_goyal": "f64be88a9a3a8ab49aef85f00a83707772dbe004437a8b83304bdfdd4af006da",
+    "jayanth_varma": "626c613fbf4da514fc9ec5dbdcb62894940510b95a408cec9e4ef01cd7932b89",
+    "michael_patra": "dd93b90bec240ea38d2c398d73a258b9a7ed7f02294fde5ca6fcb3d430c370fc",
+    "rajiv_ranjan": "1826cc2e66ef887afb878153704d8ecdf63b3aa5d9283348a59c8f526246a8c7",
+    "shaktikanta_das": "7dea665b23ab75c4da86e00e620901f751f6a0cd711cc24d8c4e07ceca4b3cda",
+    "shashanka_bhide": "5af8454de29c1ff07a2e833266feb6b45e639f9d42d3ffb283c75398f9e5afdb"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, August 3 to 5, 2022"
+}

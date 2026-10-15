@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/verification/rebuild_scientific_inputs.py",
+    "--source-root",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+    "--output-root",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/rebuild_original_panel_attempt_002/reconstruction",
+    "--expected-input-manifest-sha256",
+    "0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757",
+    "--reference-panel",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/data/processed/vintage_v3"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project"
+}

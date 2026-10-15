@@ -1,89 +1,190 @@
+"""Release-aware observables and separately labeled historical truth.
+Legacy inputs remain readable and unverified; missing observations are never zero.
 """
-Pydantic schemas for Macroeconomic Data Panel and meeting snapshots.
-Defines strict validation for all series entering the simulation.
-Includes defensive bounds, type coercion, and prompt formatting with anti-hallucination constraints.
-"""
+from datetime import date, datetime
+import hashlib
+from pathlib import Path
+from typing import Literal
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from src.schemas.decision_space import StanceType
 
-from typing import Optional, Any
-from pydantic import BaseModel, Field, ConfigDict, field_validator
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def iso_day(value: str) -> str:
+    if not isinstance(value, str) or date.fromisoformat(value).isoformat() != value:
+        raise ValueError("Expected a real calendar date in YYYY-MM-DD format")
+    return value
+
+
+class ObservationEvidence(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True, allow_inf_nan=False)
+    field: str
+    value: float | str
+    units: str
+    reference_period: str
+    vintage: str
+    released_at: datetime
+    source_url: str
+    source_file: str
+    source_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    source_pointer: str = Field(min_length=1)
+    availability_basis: str = Field(min_length=1)
+    transformation: str | None = None
+    input_evidence: tuple["ObservationEvidence", ...] = ()
+
+    @field_validator("released_at")
+    @classmethod
+    def timezone_required(cls, value: datetime) -> datetime:
+        if value.tzinfo is None or value.utcoffset() is None:
+            raise ValueError("Release timestamps need a timezone")
+        return value
+
+    def verify_source(self, root: Path = PROJECT_ROOT) -> None:
+        path = (root / self.source_file).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            raise ValueError(f"Missing or outside-project source for {self.field}")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != self.source_sha256:
+            raise ValueError(f"Source hash mismatch for {self.field}")
+        for item in self.input_evidence:
+            item.verify_source(root)
+
+
+OBSERVABLE_FIELDS = (
+    "current_repo_rate_pct", "prev_stance", "cpi_headline_yoy_pct", "cpi_core_yoy_pct",
+    "cpi_food_yoy_pct", "cfpi_yoy_pct", "iip_growth_yoy_pct", "gva_growth_yoy_pct",
+    "gdp_growth_yoy_pct", "output_gap_pct", "system_liquidity_cr", "usd_inr_exchange_rate",
+    "brent_crude_usd_bbl", "us_fed_funds_rate_pct", "monsoon_departure_lpa_pct")
 
 
 class MacroMeetingSnapshot(BaseModel):
-    """
-    A single meeting's observable macroeconomic snapshot presented to all committee members.
-    Every number here corresponds to actual data available at the time of the meeting.
-    """
-    model_config = ConfigDict(extra="ignore", frozen=False)
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False, validate_assignment=True)
+    meeting_date: str
+    meeting_start_date: str | None = None
+    information_cutoff: datetime | None = None
+    input_track: Literal["legacy_unverified", "source_linked", "synthetic", "counterfactual"] = "legacy_unverified"
+    parent_snapshot_hash: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    intervention: dict = Field(default_factory=dict)
+    current_repo_rate_pct: float = Field(ge=0, le=20)
+    cpi_headline_yoy_pct: float
+    cpi_core_yoy_pct: float | None = None
+    cpi_food_yoy_pct: float | None = None
+    cfpi_yoy_pct: float | None = None
+    iip_growth_yoy_pct: float | None = None
+    gva_growth_yoy_pct: float | None = None
+    gdp_growth_yoy_pct: float | None = None
+    output_gap_pct: float | None = None
+    system_liquidity_cr: float | None = None
+    usd_inr_exchange_rate: float | None = Field(default=None, ge=40, le=150)
+    brent_crude_usd_bbl: float | None = Field(default=None, ge=10, le=250)
+    us_fed_funds_rate_pct: float | None = Field(default=None, ge=0, le=20)
+    monsoon_departure_lpa_pct: float | None = None
+    prev_stance: StanceType = "withdrawal_of_accommodation"
+    observations: tuple[ObservationEvidence, ...] = ()
+    # Historical compatibility fields never enter the prompt.
+    real_rate_decision_bps: int | None = None
+    real_stance_decision: StanceType | None = None
+    real_dissenters: list[str] = Field(default_factory=list)
+    real_dissenters_rate: list[str] | None = None
+    real_dissenters_stance: list[str] | None = None
+    real_reservations: list[str] = Field(default_factory=list)
+    real_guidance_disagreements: list[str] = Field(default_factory=list)
 
-    meeting_date: str = Field(description="Meeting date in YYYY-MM-DD format")
-    current_repo_rate_pct: float = Field(ge=0.0, le=20.0, description="Pre-meeting policy repo rate (e.g., 6.50)")
-    cpi_headline_yoy_pct: float = Field(description="Latest available headline CPI YoY (e.g., 5.4)")
-    cpi_core_yoy_pct: float = Field(description="Latest available Core CPI YoY (e.g., 3.8)")
-    cpi_food_yoy_pct: Optional[float] = Field(default=None, description="Food CPI YoY inflation")
-    iip_growth_yoy_pct: Optional[float] = Field(default=0.0, description="Index of Industrial Production YoY growth")
-    gva_growth_yoy_pct: Optional[float] = Field(default=None, description="Latest quarterly Gross Value Added growth")
-    output_gap_pct: Optional[float] = Field(default=0.0, description="HP-filtered output gap estimate (y - y*) in percentage")
-    system_liquidity_cr: Optional[float] = Field(default=0.0, description="Net LAF liquidity in INR Crores (+ surplus, - deficit)")
-    usd_inr_exchange_rate: Optional[float] = Field(default=82.5, ge=40.0, le=150.0, description="Spot USD/INR rate")
-    brent_crude_usd_bbl: Optional[float] = Field(default=80.0, ge=10.0, le=250.0, description="Brent crude price in USD per barrel")
-    us_fed_funds_rate_pct: Optional[float] = Field(default=5.0, ge=0.0, le=20.0, description="US Federal Funds upper target rate")
-    monsoon_departure_lpa_pct: Optional[float] = Field(
-        default=0.0, description="Cumulative monsoon rainfall departure from LPA in percentage"
-    )
-    prev_stance: str = Field(
-        default="withdrawal_of_accommodation",
-        description="Prevailing policy stance prior to the meeting"
-    )
-
-    # Optional Ground Truth columns for historical backtesting and evaluation
-    real_rate_decision_bps: Optional[int] = Field(default=None, description="Actual RBI rate change in bps")
-    real_stance_decision: Optional[str] = Field(default=None, description="Actual stance adopted")
-    real_dissenters: Optional[list[str]] = Field(default_factory=list, description="List of actual dissenting member IDs")
-
-    @field_validator("meeting_date")
+    @field_validator("meeting_date", "meeting_start_date")
     @classmethod
-    def validate_date(cls, v: str) -> str:
-        parts = v.strip().split("-")
-        if len(parts) != 3 or len(parts[0]) != 4:
-            raise ValueError(f"Invalid date format '{v}', expected YYYY-MM-DD")
-        return v.strip()
+    def real_calendar_day(cls, value):
+        return iso_day(value) if value is not None else None
 
-    def to_prompt_text(self) -> str:
-        """
-        Formats the macro snapshot into a clear, readable text block for LLM prompts.
-        Embeds explicit anti-hallucination grounding instructions.
-        """
-        lines = [
-            f"=== OFFICIAL MACROECONOMIC BRIEFING FOR MPC MEETING: {self.meeting_date} ===",
-            f"- Current Policy Repo Rate: {self.current_repo_rate_pct:.2f}%",
-            f"- Prevailing Policy Stance: {self.prev_stance.replace('_', ' ').title()}",
-            f"- Headline CPI Inflation (YoY): {self.cpi_headline_yoy_pct:.2f}% (Statutory RBI Target: 4.00%, Tolerance Band: 2.00% - 6.00%)",
-            f"- Core CPI Inflation (YoY): {self.cpi_core_yoy_pct:.2f}%",
-        ]
-        if self.cpi_food_yoy_pct is not None:
-            lines.append(f"- Food CPI Inflation (YoY): {self.cpi_food_yoy_pct:.2f}%")
-        if self.iip_growth_yoy_pct is not None:
-            lines.append(f"- Industrial Production (IIP YoY): {self.iip_growth_yoy_pct:.2f}%")
-        if self.gva_growth_yoy_pct is not None:
-            lines.append(f"- Gross Value Added (GVA Growth YoY): {self.gva_growth_yoy_pct:.2f}%")
-        if self.output_gap_pct is not None:
-            lines.append(f"- Estimated Output Gap: {self.output_gap_pct:+.2f}%")
-        if self.system_liquidity_cr is not None:
-            lines.append(f"- Banking System Net Liquidity: {self.system_liquidity_cr:+,.0f} Crore INR")
-        if self.usd_inr_exchange_rate is not None:
-            lines.append(f"- USD/INR Exchange Rate: {self.usd_inr_exchange_rate:.2f}")
-        if self.brent_crude_usd_bbl is not None:
-            lines.append(f"- Brent Crude Oil: ${self.brent_crude_usd_bbl:.2f} / barrel")
-        if self.us_fed_funds_rate_pct is not None:
-            lines.append(f"- US Federal Funds Rate: {self.us_fed_funds_rate_pct:.2f}%")
-        if self.monsoon_departure_lpa_pct is not None:
-            lines.append(f"- Monsoon Rainfall Departure from LPA: {self.monsoon_departure_lpa_pct:+.1f}%")
-        lines.append("=========================================================================")
-        lines.append("CRITICAL GROUNDING CONSTRAINT:")
-        lines.append("You MUST ground your reasoning ONLY in the data points above. Do NOT cite fictitious numbers or invent macroeconomic indicators not present in this briefing.")
-        lines.append("=========================================================================")
+    @model_validator(mode="after")
+    def validate_information(self):
+        if self.meeting_start_date and self.meeting_start_date > self.meeting_date:
+            raise ValueError("Meeting start is after decision")
+        if self.information_cutoff:
+            if self.information_cutoff.tzinfo is None:
+                raise ValueError("Information cutoff needs a timezone")
+            if self.information_cutoff.date().isoformat() > (self.meeting_start_date or self.meeting_date):
+                raise ValueError("Information cutoff is after meeting start")
+        if self.input_track == "counterfactual" and (not self.parent_snapshot_hash or not self.intervention):
+            raise ValueError("Counterfactual inputs require a parent hash and intervention record")
+        if self.input_track != "source_linked":
+            return self
+        if not self.information_cutoff or not self.meeting_start_date:
+            raise ValueError("Source-linked inputs require start and cutoff")
+        evidence = {item.field: item for item in self.observations}
+        if len(evidence) != len(self.observations):
+            raise ValueError("Duplicate observation evidence")
+        supplied = self.observable_values()
+        if set(evidence) != set(supplied):
+            raise ValueError(f"Evidence fields differ from supplied observations: {set(evidence) ^ set(supplied)}")
+        def check(item):
+            if item.released_at >= self.information_cutoff:
+                raise ValueError(f"Future or unavailable release: {item.field}")
+            for child in item.input_evidence:
+                check(child)
+        for name, item in evidence.items():
+            if item.value != supplied[name]:
+                raise ValueError(f"Observation/evidence value mismatch: {name}")
+            check(item)
+            if name == "output_gap_pct" and (not item.transformation or not item.input_evidence):
+                raise ValueError("Output gap requires a recorded method and input vintages")
+        return self
+
+    def observable_values(self) -> dict:
+        return {name: getattr(self, name) for name in OBSERVABLE_FIELDS if getattr(self, name) is not None}
+
+    def verify_sources(self, root: Path = PROJECT_ROOT) -> None:
+        if self.input_track != "source_linked":
+            raise ValueError("Research requires source-linked observations")
+        for item in self.observations:
+            item.verify_source(root)
+
+    def to_prompt_text(self, mask_date: bool = False) -> str:
+        label = "date masked" if mask_date else self.meeting_date
+        lines = [f"=== MACROECONOMIC INPUTS FOR SIMULATED MPC MEETING: {label} ===",
+                 f"Input evidence track: {self.input_track}."]
+        if self.information_cutoff is not None:
+            lines.append('Information cutoff: absolute date masked; availability lags retained.' if mask_date else
+                         f'Information cutoff (exclusive): {self.information_cutoff.isoformat()}.')
+        evidence = {item.field:item for item in self.observations}
+        descriptions = {
+            "current_repo_rate_pct": "Current policy repo rate (%)", "prev_stance": "Prevailing stance",
+            "cpi_headline_yoy_pct": "Combined headline CPI inflation (YoY %)",
+            "cpi_core_yoy_pct": "Core CPI inflation (YoY %)",
+            "cpi_food_yoy_pct": "CPI food and beverages inflation (YoY %)",
+            "cfpi_yoy_pct": "Combined CFPI inflation (YoY %; distinct food index)",
+            "iip_growth_yoy_pct": "Industrial production growth (YoY %)",
+            "gva_growth_yoy_pct": "Real GVA growth (YoY %)", "gdp_growth_yoy_pct": "Real GDP growth (YoY %)",
+            "output_gap_pct": "One-sided estimated output gap (%)", "system_liquidity_cr": "Net liquidity (INR crore)",
+            "usd_inr_exchange_rate": "USD/INR exchange rate", "brent_crude_usd_bbl": "Brent crude (USD/barrel)",
+            "us_fed_funds_rate_pct": "US federal funds target upper bound (%)",
+            "monsoon_departure_lpa_pct": "Monsoon departure from LPA (%)",
+        }
+        for name, value in self.observable_values().items():
+            rendered = f"{value:.2f}" if isinstance(value, float) else value
+            lines.append(f"- {descriptions[name]}: {rendered}")
+            item = evidence.get(name)
+            if item is not None:
+                if mask_date:
+                    metadata = 'absolute reference, release and vintage labels masked'
+                    if self.information_cutoff is not None:
+                        lag = (self.information_cutoff-item.released_at).total_seconds()/86400
+                        metadata += f'; release available {lag:.2f} days before cutoff'
+                else:
+                    metadata = (f'reference period={item.reference_period}; release={item.released_at.isoformat()}; '
+                                f'vintage={item.vintage}')
+                if self.input_track == 'counterfactual' and name in self.intervention.get('changed_fields',{}):
+                    metadata = 'hypothetical changed value; evidence describes the parent value; '+metadata
+                lines.append('  Observation metadata: '+metadata)
+            else:
+                lines.append('  Observation metadata: no source-linked release/vintage supplied for this value.')
+        missing = [descriptions[name] for name in OBSERVABLE_FIELDS if getattr(self,name) is None]
+        if missing:
+            lines.append('Unavailable observations: '+', '.join(missing)+'.')
+        lines.extend(["RBI inflation target: 4.00%, tolerance band 2.00%-6.00%.",
+                      "Unlisted observations are unavailable. Do not impute them from knowledge of this historical meeting.",
+                      "CRITICAL GROUNDING CONSTRAINT:",
+                      "Ground reasoning ONLY in supplied observations. Do NOT cite fictitious numbers or invent macroeconomic indicators."])
         return "\n".join(lines)
 
 
-# Convenient alias
 MacroSnapshot = MacroMeetingSnapshot

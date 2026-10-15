@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2023-04-06",
+  "meeting_start_date": "2023-04-03",
+  "publication_date": "2023-04-20",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+  "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+  "statement_sha256": {
+    "ashima_goyal": "917fd9904e171d619ede1a48ace07ac3e8ad839cae3036e1511d59a27c36873e",
+    "jayanth_varma": "166ebd5a49b53e5dff4fd42be6fef21d56304aa5bff6fb5b56a3e7a579901433",
+    "michael_patra": "4078cc74449920a9b234848a345b3fb9c4b5578b786cc53bc30175d1995e26cb",
+    "rajiv_ranjan": "8f272b4d783654a208c49ac03d0417dc9a19291c3c2be15fa0b2eacacd939e9a",
+    "shaktikanta_das": "03b2cb90d8c5a345ef9fb7fdb833a1b018704f2654a8ee3df54e316a18037e80",
+    "shashanka_bhide": "ab102b0f1c1ac8b4cd6d800e395cfc7a84d1eee33b66922743c8e1bd98950064"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, April 3, 5 and 6, 2023"
+}

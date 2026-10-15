@@ -1,0 +1,415 @@
+{
+  "meeting_date": "2023-08-10",
+  "mean_implied_rate": 6.5,
+  "modal_rate_decision_bps": 50,
+  "modal_stance_decision": "withdrawal_of_accommodation",
+  "rate_distribution_pct": {
+    "50": 100.0
+  },
+  "stance_distribution_pct": {
+    "withdrawal_of_accommodation": 100.0
+  },
+  "dissent_probability_by_member": {
+    "m0": 0.0,
+    "m1": 0.0,
+    "m2": 0.0,
+    "m3": 0.0,
+    "m4": 0.0,
+    "m5": 0.0
+  },
+  "rate_dissent_probability_by_member": {
+    "m0": 0.0,
+    "m1": 0.0,
+    "m2": 0.0,
+    "m3": 0.0,
+    "m4": 0.0,
+    "m5": 0.0
+  },
+  "stance_dissent_probability_by_member": {
+    "m0": 0.0,
+    "m1": 0.0,
+    "m2": 0.0,
+    "m3": 0.0,
+    "m4": 0.0,
+    "m5": 0.0
+  },
+  "noise_basis": "assumed Gaussian sensitivity, not estimated forecast errors",
+  "fragmentation_policy": "reject",
+  "n_draws": 3,
+  "seed": 42,
+  "noise_std_pct": 0.0,
+  "input_snapshot_hash": "73d1b1c3e984606e95918d82dd7ab46ef2165bfc305f8a1ce228617f768fa7dd",
+  "input_observables": {
+    "current_repo_rate_pct": 6.0,
+    "prev_stance": "withdrawal_of_accommodation",
+    "cpi_headline_yoy_pct": 4.0,
+    "output_gap_pct": 0.0,
+    "us_fed_funds_rate_pct": 2.5
+  },
+  "rule_settings": {
+    "class": "src.rational.taylor_rule.SmoothedTaylorRule",
+    "action_set_bps": [
+      -50,
+      -25,
+      0,
+      25,
+      35,
+      40,
+      50
+    ],
+    "r_star": 2.5,
+    "pi_star": 4.0,
+    "rho": 0.0,
+    "us_neutral_rate": 2.5
+  },
+  "member_parameters": {
+    "m0": {
+      "member_id": "m0",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    },
+    "m1": {
+      "member_id": "m1",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    },
+    "m2": {
+      "member_id": "m2",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    },
+    "m3": {
+      "member_id": "m3",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    },
+    "m4": {
+      "member_id": "m4",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    },
+    "m5": {
+      "member_id": "m5",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 0.0
+    }
+  },
+  "rate_accepted_draws": 3,
+  "stance_accepted_draws": 3,
+  "jointly_accepted_draws": 3,
+  "rate_unresolved_draws": 0,
+  "stance_unresolved_draws": 0,
+  "rate_synthetic_resolution_draws": 0,
+  "stance_synthetic_resolution_draws": 0,
+  "rate_unresolved_probability": 0.0,
+  "stance_unresolved_probability": 0.0,
+  "rate_synthetic_resolution_probability": 0.0,
+  "stance_synthetic_resolution_probability": 0.0,
+  "rate_resolution_method_counts": {
+    "majority": 3
+  },
+  "stance_resolution_method_counts": {
+    "majority": 3
+  },
+  "probability_denominators": {
+    "rate_distribution_pct": 3,
+    "stance_distribution_pct": 3,
+    "rate_dissent_probability_by_member": 3,
+    "stance_dissent_probability_by_member": 3,
+    "dissent_probability_by_member": 3,
+    "rate_unresolved_probability": 3,
+    "stance_unresolved_probability": 3,
+    "rate_synthetic_resolution_probability": 3,
+    "stance_synthetic_resolution_probability": 3
+  },
+  "resolution_status": "complete",
+  "probability_basis": "Distributions and dissent are conditional on accepted draws in their named channel; union dissent requires both channels. Unresolved draws remain recorded and counted.",
+  "member_parameter_basis": "caller-supplied coefficients; fitting provenance is not inferred",
+  "modal_tie_policy": "smallest rate action; lexicographically first stance",
+  "continuous_rate_summary_by_member": {
+    "m0": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    },
+    "m1": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    },
+    "m2": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    },
+    "m3": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    },
+    "m4": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    },
+    "m5": {
+      "mean_rate_pct": 6.5,
+      "min_rate_pct": 6.5,
+      "max_rate_pct": 6.5,
+      "mean_raw_change_bps": 50.0,
+      "min_raw_change_bps": 50.0,
+      "max_raw_change_bps": 50.0
+    }
+  },
+  "action_saturation_by_member": {
+    "m0": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    },
+    "m1": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    },
+    "m2": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    },
+    "m3": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    },
+    "m4": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    },
+    "m5": {
+      "draws": 3,
+      "below_menu_draws": 0,
+      "above_menu_draws": 0,
+      "within_menu_draws": 3,
+      "lower_endpoint_votes": 0,
+      "upper_endpoint_votes": 3,
+      "saturated_fraction": 0.0
+    }
+  },
+  "action_saturation_summary": {
+    "basis": "continuous raw change strictly outside the declared action-menu endpoints",
+    "lower_action_bps": -50,
+    "upper_action_bps": 50,
+    "member_draws": 18,
+    "below_menu_member_draws": 0,
+    "above_menu_member_draws": 0,
+    "saturated_member_draws": 0,
+    "saturated_fraction": 0.0
+  },
+  "draw_records": [
+    {
+      "draw_index": 0,
+      "perturbed_cpi_pct": 4.0,
+      "perturbed_output_gap_pct": 0.0,
+      "perturbed_fed_pct": 2.5,
+      "member_continuous_rates_pct": {
+        "m0": 6.5,
+        "m1": 6.5,
+        "m2": 6.5,
+        "m3": 6.5,
+        "m4": 6.5,
+        "m5": 6.5
+      },
+      "member_raw_changes_bps": {
+        "m0": 50.0,
+        "m1": 50.0,
+        "m2": 50.0,
+        "m3": 50.0,
+        "m4": 50.0,
+        "m5": 50.0
+      },
+      "member_action_saturation": {
+        "m0": "within_menu",
+        "m1": "within_menu",
+        "m2": "within_menu",
+        "m3": "within_menu",
+        "m4": "within_menu",
+        "m5": "within_menu"
+      },
+      "member_rate_votes": {
+        "m0": 50,
+        "m1": 50,
+        "m2": 50,
+        "m3": 50,
+        "m4": 50,
+        "m5": 50
+      },
+      "member_stance_votes": {
+        "m0": "withdrawal_of_accommodation",
+        "m1": "withdrawal_of_accommodation",
+        "m2": "withdrawal_of_accommodation",
+        "m3": "withdrawal_of_accommodation",
+        "m4": "withdrawal_of_accommodation",
+        "m5": "withdrawal_of_accommodation"
+      },
+      "rate_decision_bps": 50,
+      "stance_decision": "withdrawal_of_accommodation",
+      "rate_resolution_method": "majority",
+      "stance_resolution_method": "majority",
+      "rate_synthetic_resolution": false,
+      "stance_synthetic_resolution": false,
+      "rate_dissenters": [],
+      "stance_dissenters": []
+    },
+    {
+      "draw_index": 1,
+      "perturbed_cpi_pct": 4.0,
+      "perturbed_output_gap_pct": 0.0,
+      "perturbed_fed_pct": 2.5,
+      "member_continuous_rates_pct": {
+        "m0": 6.5,
+        "m1": 6.5,
+        "m2": 6.5,
+        "m3": 6.5,
+        "m4": 6.5,
+        "m5": 6.5
+      },
+      "member_raw_changes_bps": {
+        "m0": 50.0,
+        "m1": 50.0,
+        "m2": 50.0,
+        "m3": 50.0,
+        "m4": 50.0,
+        "m5": 50.0
+      },
+      "member_action_saturation": {
+        "m0": "within_menu",
+        "m1": "within_menu",
+        "m2": "within_menu",
+        "m3": "within_menu",
+        "m4": "within_menu",
+        "m5": "within_menu"
+      },
+      "member_rate_votes": {
+        "m0": 50,
+        "m1": 50,
+        "m2": 50,
+        "m3": 50,
+        "m4": 50,
+        "m5": 50
+      },
+      "member_stance_votes": {
+        "m0": "withdrawal_of_accommodation",
+        "m1": "withdrawal_of_accommodation",
+        "m2": "withdrawal_of_accommodation",
+        "m3": "withdrawal_of_accommodation",
+        "m4": "withdrawal_of_accommodation",
+        "m5": "withdrawal_of_accommodation"
+      },
+      "rate_decision_bps": 50,
+      "stance_decision": "withdrawal_of_accommodation",
+      "rate_resolution_method": "majority",
+      "stance_resolution_method": "majority",
+      "rate_synthetic_resolution": false,
+      "stance_synthetic_resolution": false,
+      "rate_dissenters": [],
+      "stance_dissenters": []
+    },
+    {
+      "draw_index": 2,
+      "perturbed_cpi_pct": 4.0,
+      "perturbed_output_gap_pct": 0.0,
+      "perturbed_fed_pct": 2.5,
+      "member_continuous_rates_pct": {
+        "m0": 6.5,
+        "m1": 6.5,
+        "m2": 6.5,
+        "m3": 6.5,
+        "m4": 6.5,
+        "m5": 6.5
+      },
+      "member_raw_changes_bps": {
+        "m0": 50.0,
+        "m1": 50.0,
+        "m2": 50.0,
+        "m3": 50.0,
+        "m4": 50.0,
+        "m5": 50.0
+      },
+      "member_action_saturation": {
+        "m0": "within_menu",
+        "m1": "within_menu",
+        "m2": "within_menu",
+        "m3": "within_menu",
+        "m4": "within_menu",
+        "m5": "within_menu"
+      },
+      "member_rate_votes": {
+        "m0": 50,
+        "m1": 50,
+        "m2": 50,
+        "m3": 50,
+        "m4": 50,
+        "m5": 50
+      },
+      "member_stance_votes": {
+        "m0": "withdrawal_of_accommodation",
+        "m1": "withdrawal_of_accommodation",
+        "m2": "withdrawal_of_accommodation",
+        "m3": "withdrawal_of_accommodation",
+        "m4": "withdrawal_of_accommodation",
+        "m5": "withdrawal_of_accommodation"
+      },
+      "rate_decision_bps": 50,
+      "stance_decision": "withdrawal_of_accommodation",
+      "rate_resolution_method": "majority",
+      "stance_resolution_method": "majority",
+      "rate_synthetic_resolution": false,
+      "stance_synthetic_resolution": false,
+      "rate_dissenters": [],
+      "stance_dissenters": []
+    }
+  ]
+}

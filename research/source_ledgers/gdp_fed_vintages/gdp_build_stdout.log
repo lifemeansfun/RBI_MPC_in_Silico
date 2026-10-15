@@ -1,0 +1,14 @@
+{
+  "meetings": 25,
+  "gdp_release_snapshots": 17,
+  "source_linked_vintage_observations": 440,
+  "meeting_current_observations": 100,
+  "same_vintage_growth_rounding_checks": 176,
+  "max_same_table_growth_rounding_difference": 0.04999840309718806,
+  "output_gap_ready_meetings": 0,
+  "legacy_macro_panel_sha256": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb",
+  "cpi_meeting_ledger_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c",
+  "transcription_input_sha256": "03a68874811c4da62ad77854a5811e1c681ba8de09c1e855c92855b9ce5c0104",
+  "meeting_gdp_ledger_sha256": "837138053bad27bbadf5d5f6cfd323417dd3b969453d3854b00be3e6365b3142",
+  "intermediate_revision_completeness": false
+}

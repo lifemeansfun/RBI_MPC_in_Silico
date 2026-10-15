@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "scripts/reproduce_offline.py",
+    "--output-root",
+    "results/upgrade_validation_round_002/offline_reproduction_attempt_003"
+  ],
+  "started_at_unix": 1791562882.588882,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scope": "offline source reconstruction and saved-evidence verification; no independent live replication",
+  "provider_generation_requested": false,
+  "steps": []
+}

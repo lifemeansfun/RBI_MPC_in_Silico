@@ -1,0 +1,9 @@
+{
+  "path": "research/assessments/kazinnik_run_20261010T023656Z/FROZEN_SCIENTIFIC_INPUT.zip",
+  "sha256": "a5489340606cf2e55bd546fe4b2890f70d7f2e5fd2864e67f009492244341157",
+  "bytes": 150877145,
+  "scientific_input_manifest_sha256": "e849cf8d79416ae509f4b880f9cefcd13e50e676f32ba5235f35bfbe869890a1",
+  "archived_files": 2732,
+  "runtime_not_archived": true,
+  "created_utc": "2026-10-10T03:25:48.098367+00:00"
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": -0.41818181818181815,
+    "is_internal": false,
+    "key_themes": [
+      "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+      "\"The MPC held its August meeting against the backdrop of continued challenges to the sustainability of economic growth, especially in the manufacturing sector, posed by the trade policy uncertainties and subdued private investment, while inflationary pressures have eased further.\" (2025-08-06)",
+      "\"The April 2026 MPC Meeting is taking place against the backdrop of the West Asia conflict dramatically clouding the economic outlook for the global economy with significant spillovers for the Indian economic outlook for 2026-27.\" (2026-04-08)"
+    ],
+    "member_id": "nagesh_kumar",
+    "name": "Nagesh Kumar",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": 0.13609467455621302,
+    "is_internal": false,
+    "key_themes": [
+      "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+      "\"The MPC has been pro-active in easing monetary policy since February 2025, in conjunction with multiple RBI measures to reinforce transmission and ease lending conditions.\" (2025-08-06)",
+      "\"In my February 2026 statement, I had noted not just higher forecast inflation, but the risk of accumulating inflationary pressures.\" (2026-04-08)"
+    ],
+    "member_id": "saugata_bhattacharya",
+    "name": "Saugata Bhattacharya",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": 0.07042253521126761,
+    "is_internal": false,
+    "key_themes": [
+      "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+      "\"I will make a brief statement about the August 2025 meeting, as my assessment of the current growth-inflation dynamics and the prospects is very similar to what is described in the MPC statement.\" (2025-08-06)",
+      "\"The West Asia conflict could likely shift the Indian growth-inflation trade-offs from a Goldilocks state (low inflation and high growth) in February 2026 to the opposite extreme.\" (2026-04-08)"
+    ],
+    "member_id": "ram_singh",
+    "name": "Ram Singh",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2024-10-09 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": 0.1872146118721461,
+    "is_internal": true,
+    "key_themes": [
+      "\"In a world order dominated by continuing geopolitical tensions and elevated trade and policy uncertainties, monetary policy, as the guardian of macroeconomic and financial stability, is traversing through a challenging time.\" (2025-02-07)",
+      "\"There is also downside risk from repricing of financial markets as equity markets remain buoyant amidst bearish sentiments on bonds (hardening yields).\" (2025-10-01)",
+      "\"Real economic activity in the country, driven by healthy consumption and investment demand and supported by conducive financial conditions and accommodative policies, remained robust in 2025–26.\" (2026-04-08)"
+    ],
+    "member_id": "sanjay_malhotra",
+    "name": "Sanjay Malhotra",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-02-07 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": 0.1111111111111111,
+    "is_internal": true,
+    "key_themes": [
+      "\"The Indian economy has exhibited remarkable resilience during the past decade, amidst an extremely uncertain and shifting global economic outlook, marked by worsening trade dynamics, financial volatility and geopolitical flareups.\" (2025-06-06)",
+      "\"Second, the recent economic momentum has not just sustained but has even improved, as borne out in the data for Q2:2025-26 (real GDP growth rate accelerating to 8.2 per cent).\" (2025-12-05)",
+      "\"The Indian economy, along with many other economies in the world, has been subject to multiple external shocks in the last few years.\" (2026-04-08)"
+    ],
+    "member_id": "poonam_gupta",
+    "name": "Poonam Gupta",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-06-06 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2026-06-03",
+    "corpus_manifest_hash": "05b55c134d2b8151e82a51d15d497c5b22c80f36f4f144d99bc23a187292e15d",
+    "hawk_dove_score": 0.504950495049505,
+    "is_internal": true,
+    "key_themes": [
+      "\"In a world characterised by geo-political strife, geo-economic fragmentation and strategic realignment brought about by all-pervasive uncertainty on trade and tariffs, the Indian economy has demonstrated strength and resilience.\" (2025-10-01)",
+      "\"Notwithstanding an escalation of geo-political strife amidst intensifying tariff wars between transatlantic allies, global growth projections for 2026 has been revised upwards.\" (2026-02-06)",
+      "\"Global economic outlook, which was buoyant till the February MPC meeting, has deteriorated significantly after the outbreak of the West Asia conflict.\" (2026-04-08)"
+    ],
+    "member_id": "indranil_bhattacharyya",
+    "name": "Indranil Bhattacharyya",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2025-10-01 to 2026-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

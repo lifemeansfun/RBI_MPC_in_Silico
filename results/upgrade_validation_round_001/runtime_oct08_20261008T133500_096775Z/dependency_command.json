@@ -1,0 +1,7 @@
+[
+  "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+  "-m",
+  "pip",
+  "install",
+  "jsonschema>=4.23.0,<5"
+]

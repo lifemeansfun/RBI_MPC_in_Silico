@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct09_20261009/full_suite_attempt_002/checkout/isolated_test_outputs"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct09_20261009/full_suite_attempt_002/checkout",
+  "started_at_unix": 1791549580.113976,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "driver_sha256": "c701e1b5bddaa1962d398f188661ca181c5d8d9cce776b4038859f9467d47803",
+  "exit_code": 0,
+  "elapsed_seconds": 22.477297067642212,
+  "frozen_files_unchanged": true
+}

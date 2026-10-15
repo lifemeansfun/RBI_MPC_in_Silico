@@ -1,0 +1,30 @@
+{
+  "started_at_utc": "2026-10-09T16:33:52.489081+00:00",
+  "command": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_output_gap_estimation.py"
+  ],
+  "working_directory": "results/upgrade_validation_round_002/output_gap_oct09/attempt_001/snapshot",
+  "inputs_sha256": {
+    "src/data_pipeline/output_gap_estimation.py": "8ca9c541ac540905064156e373153ec0583c21b0687be2164baae1a7a97c7cb5",
+    "tests/test_output_gap_estimation.py": "60c2dd0db11d5df24c1ac4f71995e4308b8965fbfb69b9df6601c1fe6d72e871",
+    "research/source_ledgers/output_gap_round002/protocol_v1.json": "1129eecad9043ac29cc005d3e9dd379878acee8a3a00e237a80946be45f956e2"
+  },
+  "python_executable": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+  "python_version": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "network_or_provider_calls": 0,
+  "evidence_scope": "Synthetic engineering controls and corruption/failure checks only",
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-09T16:33:53.192000+00:00",
+  "inputs_unchanged": {
+    "src/data_pipeline/output_gap_estimation.py": true,
+    "tests/test_output_gap_estimation.py": true,
+    "research/source_ledgers/output_gap_round002/protocol_v1.json": true
+  }
+}

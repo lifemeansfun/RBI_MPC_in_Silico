@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-10T02:38:34.110540+00:00",
+  "python": "3.11.16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "branch": "project_upgrade_codex",
+  "head": "78de7f75bda03d696205b188af17b9540e02a172",
+  "main": "7f2436bc4f32d6021b1e885eb49286c850de9139",
+  "provider_key_presence": {
+    "GEMINI_API_KEY": false,
+    "GOOGLE_API_KEY": false
+  },
+  "dotenv_present": true,
+  "goal_service_created_at": 1791599816
+}

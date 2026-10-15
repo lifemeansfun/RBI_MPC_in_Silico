@@ -1,0 +1,47 @@
+Statement by Prof Ram Singh
+
+37. Since the December meeting of the MPC, we have received additional data related to the economy's inflation trajectory and growth prospects. Besides, there have been significant developments on the foreign exchange rates front. These macro data and related indicators underscore the case for a comprehensive review of the existing monetary policy (MP).
+
+Inflation
+
+38. Following a predicted downward trajectory, the headline inflation in December 2024 was 5.2%, with CPI inflation excluding food and fuel at 3.7%. Prices of most farm produce and non-food commodities have moderated, except gold. Looking ahead, food inflation is likely to soften in Q4:2024-25, and energy prices are also expected to be stable in the near future. Overall, CPI inflation for 2024-25, projected at 4.8 per cent, is within the tolerance band though above the 4.0 per cent target.
+
+39. The core goods and services inflation rates in December 2024 have remained moderate at 3.6% and 3.5%, respectively. The CPI core, excluding petrol, diesel, gold and silver, is down at 3.3%. For FY 2025-26, the CPI inflation is expected to be 4.2%.
+
+40. The CPI headline inflation figures will appear even more benign if the shares of food and beverages in the CPI inflation are reduced to their levels observed in the Household Consumption and Expenditure Surveys (HCES) data of the recent vintages. As such, the headline Indian inflation rate is actually lower than the global average.
+
+GDP Growth
+
+41. The RBI has significantly lowered the GDP growth forecast for FY25 from 7.2 to 6.4 per cent. In Q3:2024-25, the manufacturing sector sales growth remains subdued, and net profit margins have further moderated. For the IT sector, staff costs have only slightly increased even as headcount has reduced for top IT companies. The CU has not improved, and the interest coverage rate of non-IT service sector companies remains low, though above unity. Looking ahead, RBI’s enterprise survey indicates a moderate improvement in demand parameters regarding turnover and employees. The CU at 74.2 per cent in Q2:2024-25 is above the long-run average.
+
+42. It is in this context that the Economic Survey 2024-25 has projected the GDP growth to be 6.4% in FY25 and between 6.3% and 6.8% in FY26. As per the first Advanced Estimates, the real and nominal GDP are expected to grow at 6.4% and 9.7%, respectively, in FY25. In FY26, the nominal GDP is projected to grow by 10.1%. These figures underscore the downward trajectory on the inflation front.
+
+43. Subdued private consumption due to a low growth rate of real wages is a factor behind the slowdown. However, excessively contractionary monetary policy has aggravated the problem. High interest rates and regulatory tightening have brought down the credit growth rate. The growth rate for bank credit has declined from 15.6% (y-o-y) in December 2023 to 12.4% in December 2024. This puts downward pressure on demand growth for several segments of the economy.
+
+44. The moderated demand is often cited as the reason behind the slow recovery in private capex in this sector. While demand expectations are important for investment decisions, the high interest rates have raised the risk premium assigned to capital investments. This seems to be a leading factor behind the noticeable slowdown in the flow of funds to the commercial sector. Total costs of bank/FIs-funded projects have seen no appreciable increase. The aggregate bank credit growth rate remains low at 12.4% in December 2024. The rate for industry is even lower (7.4%) under very tight financial conditions overall.
+
+45. The Union Budget 2025 has given a push to demand. However, demand push will not result in higher private capex unless interest rates are reduced immediately. The difference between the core inflation, excluding gold and silver (<4%), and the policy rate (at 6.5 %) has been more than 2.5% for the past year. This means the capex-relevant real interest rate is significantly greater than the growth-neutral real interest rate, R-star. Very high effective real interest rates for capital goods are a drag on private capex and a leading factor why the investment rates remain below what is needed for a high growth rate.
+
+46. With reference to CPI inflation also, the policy rates are more than two percentage points higher than the CPI inflation forecast for the next five quarters – Q4: 2024-25 at 4.4 per cent, Q1: 2025-26 at 4.5 per cent, Q2: 2025-26 at 4.0 per cent, Q3 at 3.8 per cent and Q4 at 4.2 per cent; and FY: 2025-26 is at 4.2%. Undoubtedly, the present MP is contractionary.
+
+47. The combination of a persistently low core inflation rate during the last two years and the slowdown in FY25 suggests that the actual growth is significantly below the potential growth rate.
+
+48. Given the demand boost from Budget 2025, a rate cut powered by a commensurate increase in liquidity will decrease the risk premium demanded by investors, thereby boosting private investment to support growth. By reducing the cost of capital, the rate cut can increase the commercial viability of the public-private partnership schemes for warehouses, cold storage, and infrastructure logistics. By reducing the wastage of fruits and vegetables (the significant causes of inflation), such investments can help induce a virtuous cycle of faster growth and lower inflation.
+
+49. Low core inflation strengthens the case for a rate cut, especially when food price inflation is expected to moderate further. To the extent that inflation risk arises from food prices, it is expected to have a limited impact on core inflation. During the last five quarters, the CPI core, excluding petrol, diesel, gold and silver, has remained mostly below the price inflation target of 4%.
+
+50. In contrast, during the last ten years, including the eight years under the flexible inflation targeting framework of 2016, repo rates have had no significant effect on food prices or their volatility. This lends credence to the claims that food inflation is a primarily supply-side phenomenon.
+
+51. Additionally, the persistent duality in the CPI – that is, a significant and persistent divergence between the food and core inflation levels in recent years – calls for the MPC to see through the fluctuations in food prices while setting policy rates. Further, food prices should be viewed in the broader context of the income-boosting effect of growth and the reduced share of food in the consumption basket, as is evident from the two consecutive rounds of HCES in 2023 and 2024.
+
+52. Admittedly, a rate cut carries risks, too. It will reduce the interest rate differentials between India and the advanced economies (AEs). This, in principle, can increase outflows, putting pressure on the exchange rate. This, in turn, can result in imported inflation. Going by the data, this seems to be a rather low-probability scenario. During the last five years, the benchmark rate differentials between India and AEs have decreased. For instance, vis-à-vis the US, the policy rate differentials have decreased from almost 4% in 2020 to about 1.5% in September 2024 till the US Fed started rate cuts – the real policy rate differentials have also changed significantly. The increased differentials did not adversely affect inflows of USD, very likely due to strong growth fundamentals.
+
+53. In the short run, several factors, including global uncertainty, can change the direction and quantum of capital flows. Interestingly, the recent months have witnessed outflows even as interest differentials between India and most of the AEs increased in the aftermath of rate cuts by the US Fed and other central banks starting September 2024. In any case, as most major economies have already reduced their interest rates, even accounting for the impact of interest rate differences, there is room for us to reduce policy rates without adversely affecting the foreign exchange flows.
+
+54. The risk of imported inflation also does not seem very high. On one hand, some adjustments in the INR-USD exchange rate cannot be ruled out. On the other hand, according to the World Bank’s Commodity Markets Outlook, oil prices and other commodities are expected to decrease risk in CY 2025 and 2026. The effect of tariff hikes on India is difficult to predict. Overall, the risk of imported inflation appears to be low.
+
+55. Considering the trade-offs discussed above, I vote to:
+
+Reduce the policy repo rate under the liquidity adjustment facility (LAF) by 25 basis points to 6.25 per cent.
+
+Maintain the monetary policy stance as ‘neutral’.

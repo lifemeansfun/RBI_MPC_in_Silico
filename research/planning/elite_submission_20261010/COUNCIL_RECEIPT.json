@@ -1,0 +1,86 @@
+{
+  "purpose": "Research planning assistance; not empirical execution, independent scientific validation or journal certification",
+  "date": "2026-10-10",
+  "repository_branch": "project_upgrade_codex",
+  "head": "78de7f75bda03d696205b188af17b9540e02a172",
+  "advisor_count": 5,
+  "anonymous_peer_review_count": 5,
+  "dispatch_failures": 0,
+  "retries": 0,
+  "context_setting": "fork_turns=none for all ten agents",
+  "model_override": "none requested; inherited configured model, actual revision not independently observed",
+  "concurrency": "waves, at most three child agents alongside root",
+  "independence_limits": [
+    "Shared model and host",
+    "Neutral packet shares the same evidence",
+    "No OS filesystem isolation was established for these planning agents",
+    "Project context injection beyond visible dispatch was not independently audited",
+    "Not human peer review or clean-room reproduction"
+  ],
+  "advisor_label_mapping": {
+    "A": "correctness",
+    "B": "methodology",
+    "C": "feasibility",
+    "D": "novelty",
+    "E": "reproduction"
+  },
+  "reviewer_orders": {
+    "peer_1": [
+      "E",
+      "B",
+      "A",
+      "D",
+      "C"
+    ],
+    "peer_2": [
+      "C",
+      "D",
+      "E",
+      "A",
+      "B"
+    ],
+    "peer_3": [
+      "B",
+      "A",
+      "C",
+      "E",
+      "D"
+    ],
+    "peer_4": [
+      "A",
+      "E",
+      "D",
+      "B",
+      "C"
+    ],
+    "peer_5": [
+      "D",
+      "C",
+      "B",
+      "A",
+      "E"
+    ]
+  },
+  "previous_scientific_run": "Counters, failures and immutable protocol remain preserved; this planning exercise does not reopen it or count as a completed scientific review",
+  "hardware": {
+    "cpu": "Apple M1",
+    "memory_bytes": 8589934592,
+    "measured_by": "sysctl -n machdep.cpu.brand_string; sysctl -n hw.memsize"
+  },
+  "new_provider_generations": 0,
+  "research_source_or_configuration_edits": 0,
+  "unresolved_inputs": [
+    "new live research budget",
+    "human collaborators",
+    "eligible cohort after audit",
+    "complete revised Kazinnik methods",
+    "effect margins and precision design before registration",
+    "exact final journal"
+  ],
+  "planning_defaults": [
+    "Evidence-led contribution selection before evaluation",
+    "Staged future funding proposal",
+    "Prospective evidence for predictive claims",
+    "No new spending, experiment or external contact authorization"
+  ]
+}

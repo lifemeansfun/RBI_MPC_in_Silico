@@ -1,0 +1,116 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": 0.35384615384615387,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"My own view is that just as the reversal of the liquidity drought had led to a revival of growth that was visible in the high frequency data for February 2020, the various measures to make liquidity available through the economy not only helped firms survive but have also revived demand.\" (2020-12-04)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": 0.6363636363636364,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"At the outset, let me reiterate my disagreement with the use of the word “decided” in the forward guidance part of the resolution.\" (2020-12-04)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": 0.3617021276595745,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"The preponderant weight assigned by the monetary policy committee (MPC) to growth relative to inflation since the outbreak of COVID-19 appears to be yielding dividends – a much shallower than anticipated contraction in the economy in Q2:2020-21; strengthening incoming data in Q3 so far.\" (2020-12-04)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": 0.0989010989010989,
+    "is_internal": true,
+    "key_themes": [
+      "\"At the time of the August MPC, while noting that monetary policy was being framed under large data and forecast uncertainties, I had also indicated that growth could fall more and, inflation less, than the consensus estimates that prevailed at that point.\" (2020-10-09)",
+      "\"Furthermore, fiscal impulse has weakened since Q2:2020-21 and, therefore, despite inflation persistence, pulling back the monetary support to aggregate demand will not be an apt choice at this juncture.\" (2020-12-04)"
+    ],
+    "member_id": "mridul_saggar",
+    "name": "Mridul K. Saggar",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": 0.18840579710144928,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"Over the last two months it has become increasingly clear that the recovery underway is faster than what was anticipated at the time of the October policy, although it must also be noted that overall activity is still below its level a year ago.\" (2020-12-04)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-02-03",
+    "corpus_manifest_hash": "590e49bf49bb0999518149d058368f5dffaede977112a29f9d4b818087ac2830",
+    "hawk_dove_score": -0.08333333333333333,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The positive developments have included better than expected GDP growth recovery in Q2: 2020-21 and promise of vaccines for the Covid-19 becoming available in early 2021.\" (2020-12-04)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2020-12-04; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

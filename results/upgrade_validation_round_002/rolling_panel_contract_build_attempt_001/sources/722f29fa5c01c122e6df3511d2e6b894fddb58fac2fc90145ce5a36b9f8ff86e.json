@@ -1,0 +1,1087 @@
+{
+  "panel_as_of_date": "2026-10-08",
+  "records": [
+    {
+      "source_id": "rbi_prid_63742",
+      "prid": "63742",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) October 5 to 7, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_63742.html",
+      "sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+      "byte_count": 120066,
+      "extracted_text_path": "extracted/rbi_prid_63742.txt",
+      "publication_date": "2026-10-07",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 8056,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_63403",
+      "prid": "63403",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63403",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, August 3 to 5, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_63403.html",
+      "sha256": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+      "byte_count": 148128,
+      "extracted_text_path": "extracted/rbi_prid_63403.txt",
+      "publication_date": "2026-08-19",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 32461,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_63287",
+      "prid": "63287",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63287",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) August 3 to 5, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_63287.html",
+      "sha256": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+      "byte_count": 119896,
+      "extracted_text_path": "extracted/rbi_prid_63287.txt",
+      "publication_date": "2026-08-05",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 7938,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_62974",
+      "prid": "62974",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62974",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, June 3 to 5, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62974.html",
+      "sha256": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+      "byte_count": 154353,
+      "extracted_text_path": "extracted/rbi_prid_62974.txt",
+      "publication_date": "2026-06-19",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 38847,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_62863",
+      "prid": "62863",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62863",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) June 3 to 5, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62863.html",
+      "sha256": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+      "byte_count": 120392,
+      "extracted_text_path": "extracted/rbi_prid_62863.txt",
+      "publication_date": "2026-06-05",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 8406,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_62599",
+      "prid": "62599",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, April 6 to 8, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62599.html",
+      "sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+      "byte_count": 148156,
+      "extracted_text_path": "extracted/rbi_prid_62599.txt",
+      "publication_date": "2026-04-22",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 33023,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_62514",
+      "prid": "62514",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62514",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) April 6 to 8, 2026",
+      "index_path": "raw/annualpolicy_2027.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62514.html",
+      "sha256": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+      "byte_count": 119544,
+      "extracted_text_path": "extracted/rbi_prid_62514.txt",
+      "publication_date": "2026-04-08",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 7609,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_62261",
+      "prid": "62261",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, February 4 to 6, 2026",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62261.html",
+      "sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+      "byte_count": 143406,
+      "extracted_text_path": "extracted/rbi_prid_62261.txt",
+      "publication_date": "2026-02-20",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 29658,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_62169",
+      "prid": "62169",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62169",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) February 4 to 6, 2026",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62169.html",
+      "sha256": "dae3da104856053bbd879d8e54930604422a783e1e1dce112374e19c3e097231",
+      "byte_count": 119071,
+      "extracted_text_path": "extracted/rbi_prid_62169.txt",
+      "publication_date": "2026-02-06",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 6768,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_61856",
+      "prid": "61856",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, December 3 to 5, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_61856.html",
+      "sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+      "byte_count": 152450,
+      "extracted_text_path": "extracted/rbi_prid_61856.txt",
+      "publication_date": "2025-12-19",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 36558,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_61749",
+      "prid": "61749",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61749",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) December 3 to 5, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_61749.html",
+      "sha256": "0cd9b1031fbe0911937180f65fd9ed12e95627d0cbdb48557e50034263d379fc",
+      "byte_count": 118749,
+      "extracted_text_path": "extracted/rbi_prid_61749.txt",
+      "publication_date": "2025-12-05",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 6835,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_61433",
+      "prid": "61433",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, September 29, 30 and October 1, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_61433.html",
+      "sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+      "byte_count": 158293,
+      "extracted_text_path": "extracted/rbi_prid_61433.txt",
+      "publication_date": "2025-10-15",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 39637,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Shri Indranil Bhattacharyya",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_61332",
+      "prid": "61332",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61332",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) September 29 to October 1, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_61332.html",
+      "sha256": "daa21b4ce822e6bbd402d5fd0e769e87da9ecbe818bd431f8566d117c574452c",
+      "byte_count": 119683,
+      "extracted_text_path": "extracted/rbi_prid_61332.txt",
+      "publication_date": "2025-10-01",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 7803,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_61056",
+      "prid": "61056",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, August 4 to 6, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_61056.html",
+      "sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+      "byte_count": 149108,
+      "extracted_text_path": "extracted/rbi_prid_61056.txt",
+      "publication_date": "2025-08-20",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 35902,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_60957",
+      "prid": "60957",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60957",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) August 4 to 6, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60957.html",
+      "sha256": "e1b7dbe8879009efe75b64b3c908fef7abf584103533e35288eaaedfe38fa6b1",
+      "byte_count": 117180,
+      "extracted_text_path": "extracted/rbi_prid_60957.txt",
+      "publication_date": "2025-08-06",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 6874,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_60686",
+      "prid": "60686",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, June 4 to 6, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60686.html",
+      "sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+      "byte_count": 149722,
+      "extracted_text_path": "extracted/rbi_prid_60686.txt",
+      "publication_date": "2025-06-20",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 36138,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote",
+            "Magnitude of policy repo rate reduction (basis points)"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes",
+            "50"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes",
+            "25"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes",
+            "50"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes",
+            "50"
+          ],
+          [
+            "Dr. Poonam Gupta",
+            "Yes",
+            "50"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes",
+            "50"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_60604",
+      "prid": "60604",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60604",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) June 4 to 6, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60604.html",
+      "sha256": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+      "byte_count": 119127,
+      "extracted_text_path": "extracted/rbi_prid_60604.txt",
+      "publication_date": "2025-06-06",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 7287,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_60612",
+      "prid": "60612",
+      "source_kind": "reschedule",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60612",
+      "index_title": "Meeting of the Monetary Policy Committee (MPC) \u2013 Rescheduled",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60612.html",
+      "sha256": "1c65950f31f1afc469c6dd65f47683356e2c361b7a5ee42a7c5a5694b4b80cbb",
+      "byte_count": 112135,
+      "extracted_text_path": "extracted/rbi_prid_60612.txt",
+      "publication_date": "2025-06-06",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 561,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_60279",
+      "prid": "60279",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, April 7 to 9, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60279.html",
+      "sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+      "byte_count": 150955,
+      "extracted_text_path": "extracted/rbi_prid_60279.txt",
+      "publication_date": "2025-04-23",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 36159,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Shri M. Rajeshwar Rao",
+            "Yes"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_60176",
+      "prid": "60176",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60176",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) April 7 to 9, 2025",
+      "index_path": "raw/annualpolicy_2026.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60176.html",
+      "sha256": "7776c1994d750c526e6525cce6109a685c0c47696b33265ef84867147bebf3bd",
+      "byte_count": 117363,
+      "extracted_text_path": "extracted/rbi_prid_60176.txt",
+      "publication_date": "2025-04-09",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 5589,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_59818",
+      "prid": "59818",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, February 5 to 7, 2025",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_59818.html",
+      "sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+      "byte_count": 156977,
+      "extracted_text_path": "extracted/rbi_prid_59818.txt",
+      "publication_date": "2025-02-21",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 40883,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Shri Sanjay Malhotra",
+            "Yes"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "Yes"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Shri M. Rajeshwar Rao",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_59692",
+      "prid": "59692",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59692",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) February 5 to 7, 2025",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_59692.html",
+      "sha256": "012e5566aed59f426d8044aaab637ddb4413144efca2351af04d391c45d2cc72",
+      "byte_count": 117500,
+      "extracted_text_path": "extracted/rbi_prid_59692.txt",
+      "publication_date": "2025-02-07",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 5585,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_59347",
+      "prid": "59347",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, December 4 to 6, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_59347.html",
+      "sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+      "byte_count": 154245,
+      "extracted_text_path": "extracted/rbi_prid_59347.txt",
+      "publication_date": "2024-12-20",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 39351,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "No"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "No"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Michael Debabrata Patra",
+            "Yes"
+          ],
+          [
+            "Shri Shaktikanta Das",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_59244",
+      "prid": "59244",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59244",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) December 4 to 6, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_59244.html",
+      "sha256": "c178e98ca0bb0ad71e2f188250383f791b1262dc006a4352603223ff6bb7a9c3",
+      "byte_count": 118052,
+      "extracted_text_path": "extracted/rbi_prid_59244.txt",
+      "publication_date": "2024-12-06",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 5896,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_58958",
+      "prid": "58958",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, October 7 to 9, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58958.html",
+      "sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+      "byte_count": 156984,
+      "extracted_text_path": "extracted/rbi_prid_58958.txt",
+      "publication_date": "2024-10-23",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 41547,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Nagesh Kumar",
+            "No"
+          ],
+          [
+            "Shri Saugata Bhattacharya",
+            "Yes"
+          ],
+          [
+            "Prof. Ram Singh",
+            "Yes"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Michael Debabrata Patra",
+            "Yes"
+          ],
+          [
+            "Shri Shaktikanta Das",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_58850",
+      "prid": "58850",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58850",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) October 7 to 9, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58850.html",
+      "sha256": "66d63803607bc7289bccc1d1d90ec4ca7c79ca5baf3387327ca21b5d8b43d4f0",
+      "byte_count": 117823,
+      "extracted_text_path": "extracted/rbi_prid_58850.txt",
+      "publication_date": "2024-10-09",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 5827,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_58545",
+      "prid": "58545",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58545",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, August 6 to 8, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58545.html",
+      "sha256": "265ef648b427f5ee77dfb7267cc367659d75a8a0c039c8fb8ed3c12e6aa09f40",
+      "byte_count": 163257,
+      "extracted_text_path": "extracted/rbi_prid_58545.txt",
+      "publication_date": "2024-08-22",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 46434,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Shashanka Bhide",
+            "Yes"
+          ],
+          [
+            "Dr. Ashima Goyal",
+            "No"
+          ],
+          [
+            "Prof. Jayanth R. Varma",
+            "No"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Michael Debabrata Patra",
+            "Yes"
+          ],
+          [
+            "Shri Shaktikanta Das",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_58447",
+      "prid": "58447",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58447",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) August 6 to 8, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58447.html",
+      "sha256": "130760aa10cf17862d1cae06b0163ccae6dd616febc0497a8dbff765f0574b78",
+      "byte_count": 119265,
+      "extracted_text_path": "extracted/rbi_prid_58447.txt",
+      "publication_date": "2024-08-08",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 7284,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_58136",
+      "prid": "58136",
+      "source_kind": "minutes",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58136",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, June 5 to 7, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58136.html",
+      "sha256": "7d5ef395869eb87806ef90d91ef437430fca86c3284e6431907df7722be1d883",
+      "byte_count": 158011,
+      "extracted_text_path": "extracted/rbi_prid_58136.txt",
+      "publication_date": "2024-06-21",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 41296,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Shashanka Bhide",
+            "Yes"
+          ],
+          [
+            "Dr. Ashima Goyal",
+            "No"
+          ],
+          [
+            "Prof. Jayanth R. Varma",
+            "No"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Michael Debabrata Patra",
+            "Yes"
+          ],
+          [
+            "Shri Shaktikanta Das",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_58050",
+      "prid": "58050",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58050",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) June 5 to 7, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_58050.html",
+      "sha256": "bf5dabcfda4dfcd0f67fc4d32ac4af165ef63b3fa5c3496d62540ff377e5268d",
+      "byte_count": 118707,
+      "extracted_text_path": "extracted/rbi_prid_58050.txt",
+      "publication_date": "2024-06-07",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 6740,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_57735",
+      "prid": "57735",
+      "source_kind": "minutes",
+      "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57735",
+      "index_title": "Minutes of the Monetary Policy Committee Meeting, April 3 to 5, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_57735.html",
+      "sha256": "ad45bd4849a4c755c4ba3c34ad4721fa2806a989768f1454c372ef4dd2f8030d",
+      "byte_count": 158473,
+      "extracted_text_path": "extracted/rbi_prid_57735.txt",
+      "publication_date": "2024-04-19",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 39079,
+      "vote_tables": [
+        [
+          [
+            "Member",
+            "Vote"
+          ],
+          [
+            "Dr. Shashanka Bhide",
+            "Yes"
+          ],
+          [
+            "Dr. Ashima Goyal",
+            "Yes"
+          ],
+          [
+            "Prof. Jayanth R. Varma",
+            "No"
+          ],
+          [
+            "Dr. Rajiv Ranjan",
+            "Yes"
+          ],
+          [
+            "Dr. Michael Debabrata Patra",
+            "Yes"
+          ],
+          [
+            "Shri Shaktikanta Das",
+            "Yes"
+          ]
+        ]
+      ]
+    },
+    {
+      "source_id": "rbi_prid_57637",
+      "prid": "57637",
+      "source_kind": "resolution",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57637",
+      "index_title": "Resolution of the Monetary Policy Committee (MPC) April 3 to 5, 2024",
+      "index_path": "raw/annualpolicy_2025.html",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_57637.html",
+      "sha256": "8ee71f46fc818f631424e51c070f7e95976d0ec044b6490c3ba6fe9297a3073b",
+      "byte_count": 119046,
+      "extracted_text_path": "extracted/rbi_prid_57637.txt",
+      "publication_date": "2024-04-05",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 6989,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_60062",
+      "prid": "60062",
+      "source_kind": "schedule",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60062",
+      "index_title": "Schedule, discovered by primary-source navigation/search",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_60062.html",
+      "sha256": "af03a92d41913123ee332532b40babc927b2b7f615e4b6a8425d06a530eccdc6",
+      "byte_count": 112454,
+      "extracted_text_path": "extracted/rbi_prid_60062.txt",
+      "publication_date": "2025-03-26",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 551,
+      "vote_tables": []
+    },
+    {
+      "source_id": "rbi_prid_62422",
+      "prid": "62422",
+      "source_kind": "schedule",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422",
+      "index_title": "Schedule, discovered by primary-source navigation/search",
+      "acquisition_status": "retained",
+      "raw_path": "raw/rbi_prid_62422.html",
+      "sha256": "e01e8e4c3341c8b34582ed18193c51e8e919507869aefdc22b2939257023f7a3",
+      "byte_count": 112445,
+      "extracted_text_path": "extracted/rbi_prid_62422.txt",
+      "publication_date": "2026-03-23",
+      "publication_time": null,
+      "availability_precision": "date only; no exact first-posting time proved",
+      "extracted_body_character_count": 532,
+      "vote_tables": []
+    }
+  ]
+}

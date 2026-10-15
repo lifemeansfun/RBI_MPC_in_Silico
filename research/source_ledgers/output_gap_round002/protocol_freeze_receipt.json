@@ -1,0 +1,7 @@
+{
+  "protocol_file": "research/source_ledgers/output_gap_round002/protocol_v1.json",
+  "protocol_sha256": "1129eecad9043ac29cc005d3e9dd379878acee8a3a00e237a80946be45f956e2",
+  "frozen_before_estimator_module_and_outputs": true,
+  "scores_accessed_or_used_for_selection": false,
+  "statement": "Parameters, units, source eligibility and diagnostic separation fixed before any output-gap computation."
+}

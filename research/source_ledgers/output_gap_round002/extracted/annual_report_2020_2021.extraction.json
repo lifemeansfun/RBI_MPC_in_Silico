@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_001/raw/annual_report_2020_2021.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/annual_report_2020_2021.txt"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "c31a738b5c4531bef7b6ee6d9dc56768ca3cad203c8a2e6657d1908e4da7785c",
+  "text_sha256": "5dc68051e5803e0c7c406c682ef6a8fa62ae729fb5eb7000f8163919e20b292a"
+}

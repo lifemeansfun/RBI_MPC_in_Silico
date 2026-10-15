@@ -1,0 +1,242 @@
+FFF..F...........F..                                                     [100%]
+=================================== FAILURES ===================================
+_ test_exact_actual_prefix_then_only_three_governor_calls_and_field_projection _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...ntation_runs/elite_impl_20261010_001/pairing_owner_001/checkout/isolated_test_outputs/test_exact_actual_prefix_then_0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+roster = [MemberPersona(member_id='member_0', name='Member Name 0', role='Governor', is_internal=True, tenure='2020-2024', hawk...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_exact_actual_prefix_then_only_three_governor_calls_and_field_projection(tmp_path, snapshot, roster):
+        paired, client, prefix = await prefix_fixture(tmp_path, snapshot, roster)
+        original_bytes = Path(prefix.artifact_path).read_bytes()
+        document = prefix.to_dict()
+        assert len(client.calls) == 23
+        assert {(c["request_identity"]["member_id"], c["request_identity"]["round_number"]) for c in client.calls} == {
+            (f"member_{i}", r) for i in range(6) for r in range(1, 5) if (i, r) != (0, 4)}
+        for key, row in document["transcripts"].items():
+            raw = json.loads((Path(prefix.artifact_path).parent / row["path"]).read_text())
+            assert row["raw_output_hash"] == hashlib.sha256(raw["generation"]["raw_text"].encode()).hexdigest()
+            member, number = key.split(":round_")
+            assert document["output_hashes"][key] == content_hash(document["outputs"][number][member])
+>       results = [await paired.run_governor_branch(prefix, snapshot, roster, condition=c, branch_draw_id=1) for c in ("H", "B", "N")]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_paired_prefix.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_paired_prefix.py:110: in <listcomp>
+    results = [await paired.run_governor_branch(prefix, snapshot, roster, condition=c, branch_draw_id=1) for c in ("H", "B", "N")]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/behavioral/paired_prefix.py:409: in run_governor_branch
+    output, evidence = await self.orchestrator._generate_round(
+src/behavioral/debate_orchestrator.py:251: in _generate_round
+    result = await self.client.generate_with_metadata(
+tests/test_paired_prefix.py:58: in generate_with_metadata
+    return await super().generate_with_metadata(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/infra/llm_client.py:205: in generate_with_metadata
+    identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+identity = {'experiment_id': 'offline_engineering', 'condition_id': 'branch_H_draw_1', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+required = False
+
+    def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+        identity = dict(identity or {})
+        for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                            "meeting": "meeting_date", "replicate": "replicate_id",
+                            "member": "member_id", "round": "round_number"}.items():
+            if short in identity:
+                if full in identity and identity[short] != identity[full]:
+>                   raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+E                   src.infra.exceptions.GenerationProvenanceError: Conflicting identity aliases: condition/condition_id
+
+src/infra/llm_client.py:44: GenerationProvenanceError
+_______ test_fragmented_raw_ballots_keep_rate_stance_and_joint_agreement _______
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...ntation_runs/elite_impl_20261010_001/pairing_owner_001/checkout/isolated_test_outputs/test_fragmented_raw_ballots_ke0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+roster = [MemberPersona(member_id='member_0', name='Member Name 0', role='Governor', is_internal=True, tenure='2020-2024', hawk...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_fragmented_raw_ballots_keep_rate_stance_and_joint_agreement(tmp_path, snapshot, roster):
+        # Independent hand oracle: pairs of each of three rate/stance labels => 3/15.
+        rates = dict(zip([f"member_{i}" for i in range(6)], [-25, -25, 0, 0, 25, 25]))
+        stances = dict(zip([f"member_{i}" for i in range(6)], ["neutral", "neutral", "accommodative", "accommodative",
+                                                             "withdrawal_of_accommodation", "withdrawal_of_accommodation"]))
+        paired, client, prefix = await prefix_fixture(tmp_path, snapshot, roster, RecordingMock(rates=rates, stances=stances))
+>       result = await paired.run_governor_branch(prefix, snapshot, roster, condition="B", branch_draw_id=1)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_paired_prefix.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/paired_prefix.py:409: in run_governor_branch
+    output, evidence = await self.orchestrator._generate_round(
+src/behavioral/debate_orchestrator.py:251: in _generate_round
+    result = await self.client.generate_with_metadata(
+tests/test_paired_prefix.py:58: in generate_with_metadata
+    return await super().generate_with_metadata(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/infra/llm_client.py:205: in generate_with_metadata
+    identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+identity = {'experiment_id': 'offline_engineering', 'condition_id': 'branch_B_draw_1', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+required = False
+
+    def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+        identity = dict(identity or {})
+        for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                            "meeting": "meeting_date", "replicate": "replicate_id",
+                            "member": "member_id", "round": "round_number"}.items():
+            if short in identity:
+                if full in identity and identity[short] != identity[full]:
+>                   raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+E                   src.infra.exceptions.GenerationProvenanceError: Conflicting identity aliases: condition/condition_id
+
+src/infra/llm_client.py:44: GenerationProvenanceError
+_ test_branch_failure_is_retained_propagated_without_retry_or_overwrite[malformed] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...ntation_runs/elite_impl_20261010_001/pairing_owner_001/checkout/isolated_test_outputs/test_branch_failure_is_retaine0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+roster = [MemberPersona(member_id='member_0', name='Member Name 0', role='Governor', is_internal=True, tenure='2020-2024', hawk...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+failure = 'malformed'
+
+    @pytest.mark.parametrize("failure", ["malformed", "refusal", "cancellation"])
+    async def test_branch_failure_is_retained_propagated_without_retry_or_overwrite(tmp_path, snapshot, roster, failure):
+        paired, client, prefix = await prefix_fixture(tmp_path, snapshot, roster)
+        client.malformed = failure == "malformed"
+        if failure == "refusal":
+            client.fail = 24
+        if failure == "cancellation":
+            original = client.generate_with_metadata
+            async def cancel(**kwargs):
+                client.calls.append(kwargs)
+                raise asyncio.CancelledError()
+            client.generate_with_metadata = cancel
+        expected = {"malformed": LLMResponseMalformedError, "refusal": BudgetExceededError, "cancellation": asyncio.CancelledError}[failure]
+        with pytest.raises(expected):
+>           await paired.run_governor_branch(prefix, snapshot, roster, condition="N", branch_draw_id="failure_draw")
+
+tests/test_paired_prefix.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/paired_prefix.py:409: in run_governor_branch
+    output, evidence = await self.orchestrator._generate_round(
+src/behavioral/debate_orchestrator.py:251: in _generate_round
+    result = await self.client.generate_with_metadata(
+tests/test_paired_prefix.py:58: in generate_with_metadata
+    return await super().generate_with_metadata(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/infra/llm_client.py:205: in generate_with_metadata
+    identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+identity = {'experiment_id': 'offline_engineering', 'condition_id': 'branch_N_draw_failure_draw', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+required = False
+
+    def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+        identity = dict(identity or {})
+        for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                            "meeting": "meeting_date", "replicate": "replicate_id",
+                            "member": "member_id", "round": "round_number"}.items():
+            if short in identity:
+                if full in identity and identity[short] != identity[full]:
+>                   raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+E                   src.infra.exceptions.GenerationProvenanceError: Conflicting identity aliases: condition/condition_id
+
+src/infra/llm_client.py:44: GenerationProvenanceError
+__ test_fresh_draws_distinct_paths_duplicate_prefix_and_draw_fail_before_call __
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...ntation_runs/elite_impl_20261010_001/pairing_owner_001/checkout/isolated_test_outputs/test_fresh_draws_distinct_path0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+roster = [MemberPersona(member_id='member_0', name='Member Name 0', role='Governor', is_internal=True, tenure='2020-2024', hawk...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_fresh_draws_distinct_paths_duplicate_prefix_and_draw_fail_before_call(tmp_path, snapshot, roster):
+        paired, client, prefix = await prefix_fixture(tmp_path, snapshot, roster)
+>       first = await paired.run_governor_branch(prefix, snapshot, roster, condition="H", branch_draw_id=1)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_paired_prefix.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/paired_prefix.py:409: in run_governor_branch
+    output, evidence = await self.orchestrator._generate_round(
+src/behavioral/debate_orchestrator.py:251: in _generate_round
+    result = await self.client.generate_with_metadata(
+tests/test_paired_prefix.py:58: in generate_with_metadata
+    return await super().generate_with_metadata(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/infra/llm_client.py:205: in generate_with_metadata
+    identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+identity = {'experiment_id': 'offline_engineering', 'condition_id': 'branch_H_draw_1', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+required = False
+
+    def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+        identity = dict(identity or {})
+        for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                            "meeting": "meeting_date", "replicate": "replicate_id",
+                            "member": "member_id", "round": "round_number"}.items():
+            if short in identity:
+                if full in identity and identity[short] != identity[full]:
+>                   raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+E                   src.infra.exceptions.GenerationProvenanceError: Conflicting identity aliases: condition/condition_id
+
+src/infra/llm_client.py:44: GenerationProvenanceError
+___________ test_source_hash_rechecked_and_copied_prefix_is_portable ___________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...ntation_runs/elite_impl_20261010_001/pairing_owner_001/checkout/isolated_test_outputs/test_source_hash_rechecked_and0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date='2023-08-08', information_cutoff=datetime.datetime(...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+roster = [MemberPersona(member_id='member_0', name='Member Name 0', role='Governor', is_internal=True, tenure='2020-2024', hawk...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_source_hash_rechecked_and_copied_prefix_is_portable(tmp_path, snapshot, roster):
+        source_root = tmp_path / "sources"
+        source_root.mkdir()
+        snapshot = linked_snapshot(source_root, snapshot)
+        paired, client, prefix = await prefix_fixture(tmp_path, snapshot, roster, source_root=source_root)
+        copied = tmp_path / "copied_prefix"
+        shutil.copytree(Path(prefix.artifact_path).parent, copied)
+        relocated_source = tmp_path / "relocated_sources"
+        shutil.copytree(source_root, relocated_source)
+        relocated = FrozenPrefix.from_path(copied / "shared_prefix.json")
+        client.expected_prefix = relocated.artifact_path
+>       result = await paired.run_governor_branch(relocated, snapshot, roster, condition="B", branch_draw_id=1, source_root=relocated_source)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_paired_prefix.py:262: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/paired_prefix.py:409: in run_governor_branch
+    output, evidence = await self.orchestrator._generate_round(
+src/behavioral/debate_orchestrator.py:251: in _generate_round
+    result = await self.client.generate_with_metadata(
+tests/test_paired_prefix.py:58: in generate_with_metadata
+    return await super().generate_with_metadata(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/infra/llm_client.py:205: in generate_with_metadata
+    identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+identity = {'experiment_id': 'offline_engineering', 'condition_id': 'branch_B_draw_1', 'meeting_date': '2023-08-10', 'replicate_id': 1, ...}
+required = False
+
+    def normalize_request_identity(identity: dict | None, *, required: bool) -> dict:
+        identity = dict(identity or {})
+        for short, full in {"experiment": "experiment_id", "condition": "condition_id",
+                            "meeting": "meeting_date", "replicate": "replicate_id",
+                            "member": "member_id", "round": "round_number"}.items():
+            if short in identity:
+                if full in identity and identity[short] != identity[full]:
+>                   raise GenerationProvenanceError(f"Conflicting identity aliases: {short}/{full}")
+E                   src.infra.exceptions.GenerationProvenanceError: Conflicting identity aliases: condition/condition_id
+
+src/infra/llm_client.py:44: GenerationProvenanceError
+=========================== short test summary info ============================
+FAILED tests/test_paired_prefix.py::test_exact_actual_prefix_then_only_three_governor_calls_and_field_projection
+FAILED tests/test_paired_prefix.py::test_fragmented_raw_ballots_keep_rate_stance_and_joint_agreement
+FAILED tests/test_paired_prefix.py::test_branch_failure_is_retained_propagated_without_retry_or_overwrite[malformed]
+FAILED tests/test_paired_prefix.py::test_fresh_draws_distinct_paths_duplicate_prefix_and_draw_fail_before_call
+FAILED tests/test_paired_prefix.py::test_source_hash_rechecked_and_copied_prefix_is_portable
+5 failed, 15 passed in 7.42s

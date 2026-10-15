@@ -1,0 +1,54 @@
+......F..                                                                [100%]
+=================================== FAILURES ===================================
+_____________________________ test_report_builder ______________________________
+
+    def test_report_builder():
+        with tempfile.TemporaryDirectory() as tmpdir:
+            builder = ReportBuilder(output_dir=Path(tmpdir))
+    
+            val_summary = {
+                "directional_rate_accuracy_pct": 88.9,
+                "stance_accuracy_pct": 83.3,
+                "dissent_precision": 0.85,
+                "dissent_recall": 0.80,
+                "dissent_f1": 0.82,
+                "passed_validation_gate": True,
+            }
+            scenarios = [
+                {
+                    "scenario_name": "Monsoon Failure",
+                    "baseline_rate_bps": 0,
+                    "shocked_rate_bps": 25,
+                    "rate_wedge_bps": 25,
+                    "baseline_stance": "withdrawal_of_accommodation",
+                    "shocked_stance": "withdrawal_of_accommodation",
+                }
+            ]
+            attributions = [
+                {
+                    "experiment_name": "Casting Vote Ablation",
+                    "baseline_decision_bps": 25,
+                    "ablated_decision_bps": 0,
+                    "marginal_contribution_bps": 25,
+                    "outcome_shifted": True,
+                }
+            ]
+    
+            t1 = builder.save_validation_table(val_summary)
+            t2 = builder.save_counterfactual_table(scenarios)
+            t3 = builder.save_attribution_table(attributions)
+            report_file = builder.generate_markdown_report(val_summary, scenarios, attributions)
+    
+            assert t1.exists()
+            assert t2.exists()
+            assert t3.exists()
+            assert report_file.exists()
+>           assert "PASSED" in report_file.read_text(encoding="utf-8")
+E           AssertionError: assert 'PASSED' in '# RBI MPC In Silico — Computational Diagnostic Report\n**Reserve Bank of India Monetary Policy Committee Deliberation...onstructed tables, provenance and\navailable-information baseline comparisons. No scientific verdict is issued here.\n'
+E            +  where '# RBI MPC In Silico — Computational Diagnostic Report\n**Reserve Bank of India Monetary Policy Committee Deliberation...onstructed tables, provenance and\navailable-information baseline comparisons. No scientific verdict is issued here.\n' = read_text(encoding='utf-8')
+E            +    where read_text = PosixPath('/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/tmp_7j0cmda/RESULTS_REPORT.md').read_text
+
+tests/test_attribution_and_scenarios.py:152: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_attribution_and_scenarios.py::test_report_builder - Asserti...
+1 failed, 8 passed in 6.19s

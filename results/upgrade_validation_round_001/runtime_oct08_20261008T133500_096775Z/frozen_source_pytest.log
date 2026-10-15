@@ -1,0 +1,559 @@
+......................................................EE.EEEEEEEE....... [ 51%]
+.................................................................F.      [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_direct_live_and_counterfactual_refuse_undated_or_future_personas_before_calls[False] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa0/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa0/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_direct_live_and_counterfactual_refuse_undated_or_future_personas_before_calls[True] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa1/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_direct_live_and_counterfa1/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-changed_fields] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec0/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec0/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_hash] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec1/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec1/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-unrelated_field] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec2')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec2/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec2/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_snapshot] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec3')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec3/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec3/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-changed_fields] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec4')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec4/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec4/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_hash] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec5')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec5/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec5/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-unrelated_field] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec6')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec6/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec6/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+_ ERROR at setup of test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_snapshot] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec7')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    @pytest.fixture
+    def source_linked_fixture_snapshot(tmp_path, snapshot):
+        """Synthetic source bytes exercise integrity controls; these are not empirical inputs."""
+        source = tmp_path / "synthetic_macro_source.txt"
+        source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+>       source_file = str(source.relative_to(Path.cwd()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...me_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec7/synthetic_macro_source.txt')
+other = (PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot'),)
+
+    def relative_to(self, *other):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        a subpath of the other path), raise ValueError.
+        """
+        # For the purpose of this method, drive and root are considered
+        # separate parts, i.e.:
+        #   Path('c:/').relative_to('c:')  gives Path('/')
+        #   Path('c:/').relative_to('/')   raise ValueError
+        if not other:
+            raise TypeError("need at least one argument")
+        parts = self._parts
+        drv = self._drv
+        root = self._root
+        if root:
+            abs_parts = [drv, root] + parts[1:]
+        else:
+            abs_parts = parts
+        to_drv, to_root, to_parts = self._parse_args(other)
+        if to_root:
+            to_abs_parts = [to_drv, to_root] + to_parts[1:]
+        else:
+            to_abs_parts = to_parts
+        n = len(to_abs_parts)
+        cf = self._flavour.casefold_parts
+        if (root or drv) if n == 0 else cf(abs_parts[:n]) != cf(to_abs_parts):
+            formatted = self._format_parsed_parts(to_drv, to_root, to_parts)
+>           raise ValueError("{!r} is not in the subpath of {!r}"
+                    " OR one path is relative and the other is absolute."
+                             .format(str(self), str(formatted)))
+E           ValueError: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/frozen_source_pytest_temp/test_counterfactual_parent_rec7/synthetic_macro_source.txt' is not in the subpath of '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/verified_source_snapshot' OR one path is relative and the other is absolute.
+
+/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/pathlib.py:730: ValueError
+=================================== FAILURES ===================================
+________ test_scenario_fragmentation_is_rejected_or_explicitly_labeled _________
+
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+
+    def test_scenario_fragmentation_is_rejected_or_explicitly_labeled(snapshot):
+        class FragmentedRule:
+            def compute_discrete_action(self, supplied, params):
+                return (0, 0, 35, 35, 40, 40)[int(params.member_id[1:])], "neutral"
+        members = [MemberTaylorParameters(f"m{i}") for i in range(6)]
+        with pytest.raises(ValueError, match="synthetic resolution"):
+            ScenarioRunner(FragmentedRule()).run_us_fed_spillover_shock(snapshot, members, "m0")
+        result = ScenarioRunner(FragmentedRule(), fragmentation_policy="legacy_synthetic").run_us_fed_spillover_shock(snapshot, members, "m0")
+        assert result.rate_wedge_bps == 0
+        assert result.baseline_repo_rate_change_bps == result.shocked_repo_rate_change_bps == 35
+        assert result.synthetic_resolutions["baseline_rate"] and result.synthetic_resolutions["shocked_rate"]
+        assert result.resolution_policies["baseline_rate"] == "synthetic_governor_weighted_median"
+        assert len(result.baseline_snapshot_hash) == len(result.shocked_snapshot_hash) == 64
+>       assert result.resolution_policy == "synthetic_governor_weighted_median"
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'ScenarioOutcome' object has no attribute 'resolution_policy'
+
+tests/test_deliberation_upgrade.py:575: AttributeError
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_scenario_fragmentation_is_rejected_or_explicitly_labeled
+ERROR tests/test_deliberation_upgrade.py::test_direct_live_and_counterfactual_refuse_undated_or_future_personas_before_calls[False]
+ERROR tests/test_deliberation_upgrade.py::test_direct_live_and_counterfactual_refuse_undated_or_future_personas_before_calls[True]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-changed_fields]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_hash]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-unrelated_field]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[mock-parent_snapshot]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-changed_fields]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_hash]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-unrelated_field]
+ERROR tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[gemini-parent_snapshot]
+1 failed, 128 passed, 10 errors in 4.72s

@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2024-06-07",
+  "meeting_start_date": "2024-06-05",
+  "publication_date": "2024-06-21",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_58136.html",
+  "source_sha256": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+  "statement_sha256": {
+    "ashima_goyal": "e88e6527a6e7e3235da208e279dbc7c66178e7c0d93fd75a5f61622c0ce5a845",
+    "jayanth_varma": "f020e12dace22fa278c5a6ad227f0f5d27c7b8c2d78f023947ff562fef59ab2b",
+    "michael_patra": "f6ebc4bce312d75d2b96d544c91dde77c88f0c5cf5bba2c763e7f46c9898f64f",
+    "rajiv_ranjan": "b32ae9a77add9053e8dfbd4e2753862ed172d861b1e28b2e631fdd3eaa566c4d",
+    "shaktikanta_das": "9c783c20165dd9cee3d9a1dc3c87e180fe6a14c8dac485859a9a3eeff31d8b9b",
+    "shashanka_bhide": "04969caa569c2f44b3ad8b54c291b8e502dcaa0611d568bf4a17b8a929a8a805"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, June 5 to 7, 2024"
+}

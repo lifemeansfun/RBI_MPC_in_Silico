@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/annual_report_2023_2024.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/annual_report_2023_2024.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "ac7532cfe6c42183fd9295e891db0b09bb76a1ef0263b29056216fdf6d706219",
+  "extracted_sha256": "17b934f03c28cfc6021217c58160181651a280c387a3b56a6fbf50c72ad88b7a"
+}

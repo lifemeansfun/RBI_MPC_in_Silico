@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2022-06-08",
+  "meeting_start_date": "2022-06-06",
+  "publication_date": "2022-06-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+  "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+  "statement_sha256": {
+    "ashima_goyal": "0a75c49bce07b652ac59fa11b1da222e14e96c3972f66403ac7dcc0d8d069001",
+    "jayanth_varma": "daca8ec2365ec53d78409fea16a8d6aac951083a8de07905ab14d74ede070587",
+    "michael_patra": "2e74877bc43381ebe40b4d83acbda860100bdea91a700d10a86fa1f2acbdc059",
+    "rajiv_ranjan": "aba620cb78b72707454e55c751b3a899aa5012200c213ece1c273ff82e5ad7c9",
+    "shaktikanta_das": "0263ffbc38ddb384c5c76aab66655089622c00abb061fa46ec440343dd3051bf",
+    "shashanka_bhide": "d2ae0d1f8818fb97efc57a05b82666d72279da257990f437d16cf9e99e8330dc"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, June 6 to 8, 2022"
+}

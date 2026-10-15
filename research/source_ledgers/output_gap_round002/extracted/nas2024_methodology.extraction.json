@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/nas2024_methodology.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/nas2024_methodology.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "49b39ae85b7c8fd449f26768988ebfd760d995ddd87fb51c0c0b3558308f3ff9",
+  "extracted_sha256": "1420edb0dd0bd52ae83fc6e8a868956884543fc41b76a1500cd9a811741aee85"
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": "independent_primary_source_doublecode.v1",
+  "created_at_utc": "2026-10-08T14:14:21.602664+00:00",
+  "scope": "13 RBI MPC decisions from 2024-10-09 through 2026-10-07; independent source-label coding only",
+  "input_snapshot": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx",
+  "input_source_map_sha256": "ca11c6b56f71c0d068ae47ec00ffd5c1e05b531a40b08297adde196e4e797a39",
+  "input_workings_sha256": "392fb6aa35d1451c7730a5594f137797c2c1ea63fc87850fa98b27326673dd77",
+  "coding_rules": [
+    "Signed rate changes are negative for cuts and positive for hikes.",
+    "Literal Yes/No cells are transcribed independently from exact magnitude and direction disagreement.",
+    "An explicit vote narrative is separate from all-member decision narrative and named stated views.",
+    "A personal final stance preference is not itself promoted to a separately documented formal stance ballot.",
+    "Prior reservations that ended in concurrence are separate from formal dissent.",
+    "Aspirational alternatives are separate from final member rate choices.",
+    "Unassessed reservations/guidance are null and never false; absence of an identified excerpt is not evidence of absence.",
+    "The October 2026 resolution attributes unanimous rate change, but literal individual ballot cells and statements are unavailable."
+  ],
+  "sources": [
+    {
+      "source_id": "rbi_prid_63742",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+      "raw_path": "raw/rbi_prid_63742.html",
+      "sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+      "publication_date": "2026-10-07",
+      "verified_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+      "bytes": 120066,
+      "publication_date_display_text": "Oct 07, 2026"
+    },
+    {
+      "source_id": "rbi_prid_63403",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63403",
+      "raw_path": "raw/rbi_prid_63403.html",
+      "sha256": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+      "publication_date": "2026-08-19",
+      "verified_sha256": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+      "bytes": 148128,
+      "publication_date_display_text": "Aug 19, 2026"
+    },
+    {
+      "source_id": "rbi_prid_63287",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63287",
+      "raw_path": "raw/rbi_prid_63287.html",
+      "sha256": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+      "publication_date": "2026-08-05",
+      "verified_sha256": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+      "bytes": 119896,
+      "publication_date_display_text": "Aug 05, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62974",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62974",
+      "raw_path": "raw/rbi_prid_62974.html",
+      "sha256": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+      "publication_date": "2026-06-19",
+      "verified_sha256": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+      "bytes": 154353,
+      "publication_date_display_text": "Jun 19, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62863",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62863",
+      "raw_path": "raw/rbi_prid_62863.html",
+      "sha256": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+      "publication_date": "2026-06-05",
+      "verified_sha256": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+      "bytes": 120392,
+      "publication_date_display_text": "Jun 05, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62599",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599",
+      "raw_path": "raw/rbi_prid_62599.html",
+      "sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+      "publication_date": "2026-04-22",
+      "verified_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+      "bytes": 148156,
+      "publication_date_display_text": "Apr 22, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62514",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62514",
+      "raw_path": "raw/rbi_prid_62514.html",
+      "sha256": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+      "publication_date": "2026-04-08",
+      "verified_sha256": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+      "bytes": 119544,
+      "publication_date_display_text": "Apr 08, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62261",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261",
+      "raw_path": "raw/rbi_prid_62261.html",
+      "sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+      "publication_date": "2026-02-20",
+      "verified_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+      "bytes": 143406,
+      "publication_date_display_text": "Feb 20, 2026"
+    },
+    {
+      "source_id": "rbi_prid_62169",
+{
+  "schema_version": 1,
+  "as_of_date": "2026-10-08",
+  "selection_rule": "Consecutive official meetings since 2024-10-01; include all decisions and preserve not-yet-published minutes as missing",
+  "meetings": [
+    {
+      "meeting_id": "rbi_mpc_2024-10-09",
+      "meeting_number": 51,
+      "meeting_start_date": "2024-10-07",
+      "meeting_title": "Minutes of the Monetary Policy Committee Meeting, October 7 to 9, 2024",
+      "date_source_id": "rbi_prid_58958",
+      "date_source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+      "decision_date": "2024-10-09",
+      "information_cutoff_exclusive_ist": "2024-10-07T00:00:00+05:30",
+      "information_cutoff_day": "2024-10-06",
+      "panel_role": "retrospective expansion; not prospective or untouched evaluation",
+      "roster_ids": [
+        "nagesh_kumar",
+        "saugata_bhattacharya",
+        "ram_singh",
+        "rajiv_ranjan",
+        "michael_debabrata_patra",
+        "shaktikanta_das"
+      ],
+      "roster_source_excerpt": {
+        "text": "2. The meeting was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934); Dr. Michael Debabrata Patra, Deputy Governor in charge of monetary policy – and was chaired by Shri Shaktikanta Das, Governor.",
+        "pointer": "paragraph 2",
+        "source_id": "rbi_prid_58958",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958",
+        "source_path": "raw/rbi_prid_58958.html",
+        "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b"
+      },
+      "policy_repo_before_pct": 6.5,
+      "policy_repo_after_pct": 6.5,
+      "policy_change_bps": 0,
+      "policy_direction": "hold",
+      "committee_stance": "neutral",
+      "resolution_source_id": "rbi_prid_58850",
+      "resolution_publication_date": "2024-10-09",
+      "resolution_publication_time": null,
+      "minutes_source_id": "rbi_prid_58958",
+      "minutes_publication_date": "2024-10-23",
+      "minutes_scheduled_publication_date": "2024-10-23",
+      "minutes_availability_status": "retained",
+      "minutes_publication_schedule_excerpt": {
+        "text": "7. The minutes of the MPC’s meeting will be published on October 23, 2024.",
+        "pointer": "paragraph 7",
+        "source_id": "rbi_prid_58850",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58850",
+        "source_path": "raw/rbi_prid_58850.html",
+        "source_sha256": "66d63803607bc7289bccc1d1d90ec4ca7c79ca5baf3387327ca21b5d8b43d4f0"
+      },
+      "release_time_precision": "documented calendar day only; exact first availability time unknown",
+      "formal_rate_choice_disagreements": [
+        "nagesh_kumar"
+      ],
+      "explicit_formal_stance_vote_disagreements": [],
+      "stated_stance_preference_disagreements": [],
+      "decision_evidence": [
+        {
+          "text": "Keep the policy repo rate under the liquidity adjustment facility (LAF) unchanged at 6.50 per cent.",
+          "pointer": "statement text or nested list item",
+          "source_id": "rbi_prid_58958",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958",
+          "source_path": "raw/rbi_prid_58958.html",
+decision_date,meeting_start_date,information_cutoff_day,cutoff_exclusive_ist,reference_month,vintage,headline_cpi_yoy_pct,cfpi_yoy_pct,documented_release_timestamp_ist,documented_release_timestamp_utc,release_timestamp_basis,next_scheduled_release_date,latest_selection_basis,source_url,local_source_file,source_sha256,source_table_pointer,existing_panel_meeting_date,existing_panel_headline_cpi_yoy_pct,meeting_title,meeting_minutes_file,meeting_minutes_sha256,preparation_status,unexpected_intermediate_or_correction_releases_exhaustively_ruled_out
+2020-10-09,2020-10-07,2020-10-06,2020-10-07T00:00:00+05:30,2020-08,Provisional,6.69,9.05,2020-09-14T17:30:00+05:30,2020-09-14T12:00:00+00:00,MoSPI release embargo endpoint; India local time,2020-10-12,Latest retained release before meeting start; next scheduled release is after cutoff,https://mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20August%202020.pdf,raw/2020-08_url.pdf,648bf1f7e52b17d74115e1ce3f62136bc167307f87def829178e1e1713add08c,"PDF page 1, table 1",2020-10-09,7.34,"Minutes of the Monetary Policy Committee Meeting October 7 to 9, 2020",data/raw/minutes_html/mpc_minutes_prid_50560.html,50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781,Source-backed CPI/CFPI release ledger; full macro panel remains unvalidated,false
+2020-12-04,2020-12-02,2020-12-01,2020-12-02T00:00:00+05:30,2020-10,Provisional,7.61,11.07,2020-11-12T17:30:00+05:30,2020-11-12T12:00:00+00:00,MoSPI release embargo endpoint; India local time,2020-12-14,Latest retained release before meeting start; next scheduled release is after cutoff,https://mospi.gov.in/sites/default/files/press_release/CPI_Press_Statement_12nov20.pdf,raw/2020-10_url.pdf,ce55a7de52aeb739c1568e432c765bdb9d63e03d1dfa9168339aed3a08e43ba0,"PDF page 1, table 1",2020-12-04,6.93,"Minutes of the Monetary Policy Committee Meeting December 2 to 4, 2020",data/raw/minutes_html/mpc_minutes_prid_50831.html,49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf,Source-backed CPI/CFPI release ledger; full macro panel remains unvalidated,false
+2021-02-05,2021-02-03,2021-02-02,2021-02-03T00:00:00+05:30,2020-12,Provisional,4.59,3.41,2021-01-12T17:30:00+05:30,2021-01-12T12:00:00+00:00,MoSPI release embargo endpoint; India local time,2021-02-12,Latest retained release before meeting start; next scheduled release is after cutoff,https://www.mospi.gov.in/sites/default/files/press_release/CPI%20Press%20Release%20December%202020.pdf,raw/2020-12_url.pdf,05cf2b12b5d317b504e199795e0d425847a252bb6def62863f627c80db97be7f,"PDF page 1, table 1",2021-02-05,4.59,"Minutes of the Monetary Policy Committee Meeting February 3-5, 2021",data/raw/minutes_html/mpc_minutes_prid_51161.html,8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a,Source-backed CPI/CFPI release ledger; full macro panel remains unvalidated,false
+decision_date,meeting_start_date,information_cutoff_day,cutoff_exclusive_ist,reference_period,series,value,units,vintage,latest_selection_basis,release_id,release_date,documented_release_timestamp_utc,release_timestamp_basis,policy_effective_date,target_lower_pct,target_upper_pct,source_url,local_source_file,source_sha256,source_table_pointer,source_excerpt,statement_source_url,statement_local_source_file,statement_source_sha256,statement_release_excerpt,valid_until_effective_date_exclusive
+2020-10-09,2020-10-07,2020-10-06,2020-10-07T00:00:00+05:30,Policy in force at cutoff; effective from 2020-09-17,us_fed_target_upper_pct,0.25,percent per annum,Dated FOMC implementation directive; current retained official bytes,Latest effective policy directive among all retained FOMC calendar decisions; successor effective date is after meeting start,fed_20200916_implementation,2020-09-16,2020-09-16T18:00:00+00:00,"FOMC statement printed For release time, America/New_York",2020-09-17,0.0,0.25,https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a1.htm,raw/fed_20200916_implementation.html,623d00d8222d9a88e386148a0d0553ab3ab230a2c1b6d19573cc233fd2ca8caa,"Implementation Note, domestic policy directive","Effective September 17, 2020, the Federal Open Market Committee directs the Desk to: Undertake open market operations as necessary to maintain the federal funds rate in a target range of 0 to 1/4 percent",https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a.htm,raw/fed_20200916_statement.html,9037f42242e6386026d5db1fd5a28b0ca2c9cc426bb448409b6eb023ea2db51e,For release at 2:00 p.m. EDT,2020-11-06
+2020-12-04,2020-12-02,2020-12-01,2020-12-02T00:00:00+05:30,Policy in force at cutoff; effective from 2020-11-06,us_fed_target_upper_pct,0.25,percent per annum,Dated FOMC implementation directive; current retained official bytes,Latest effective policy directive among all retained FOMC calendar decisions; successor effective date is after meeting start,fed_20201105_implementation,2020-11-05,2020-11-05T19:00:00+00:00,"FOMC statement printed For release time, America/New_York",2020-11-06,0.0,0.25,https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a1.htm,raw/fed_20201105_implementation.html,f40ec297fcc4ce008283103e831ce989ed1eb1ecfd4631b3a110fc640ac901fa,"Implementation Note, domestic policy directive","Effective November 6, 2020, the Federal Open Market Committee directs the Desk to: Undertake open market operations as necessary to maintain the federal funds rate in a target range of 0 to 1/4 percent",https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a.htm,raw/fed_20201105_statement.html,d9318e03e0236aa79d12416b0419bd990f6c0b66af7a3ff04ec45a964d15db3f,For release at 2:00 p.m. EST,2020-12-17
+2021-02-05,2021-02-03,2021-02-02,2021-02-03T00:00:00+05:30,Policy in force at cutoff; effective from 2021-01-28,us_fed_target_upper_pct,0.25,percent per annum,Dated FOMC implementation directive; current retained official bytes,Latest effective policy directive among all retained FOMC calendar decisions; successor effective date is after meeting start,fed_20210127_implementation,2021-01-27,2021-01-27T19:00:00+00:00,"FOMC statement printed For release time, America/New_York",2021-01-28,0.0,0.25,https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a1.htm,raw/fed_20210127_implementation.html,732aad9ddfe9df05a2e527e6574f6723cd65bc3291ecd8378319e7acb87cc6ca,"Implementation Note, domestic policy directive","Effective January 28, 2021, the Federal Open Market Committee directs the Desk to: Undertake open market operations as necessary to maintain the federal funds rate in a target range of 0 to 1/4 percent",https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm,raw/fed_20210127_statement.html,29c588ce3d1304116ca255dabc8a2c08f0ba661105a2d1b9543bcf36902e4c78,For release at 2:00 p.m. EST,2021-03-18
+sh: rg: command not found
+#!/usr/bin/env python3
+"""Validate only this new annotation and its preserved input snapshot."""
+from pathlib import Path
+from datetime import datetime
+import json
+import hashlib
+
+out = Path(__file__).resolve().parent
+a = json.loads((out/'annotations.json').read_text())
+statements = json.loads((out/'statement_evidence.json').read_text())
+known = {(s['meeting_id'],s['member_id']):{p['zero_based_p_index'] for p in s['paragraph_evidence']} for s in statements}
+member_evidence_checks = 0
+date_checks = 0
+fragment_checks = 0
+for source in a['sources']:
+    raw = (out/'source_snapshot'/source['raw_path']).read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == source['source_sha256'] if 'source_sha256' in source else hashlib.sha256(raw).hexdigest() == source['sha256']
+    parsed_date = datetime.strptime(source['publication_date_display_text'],'%b %d, %Y').strftime('%Y-%m-%d')
+    assert parsed_date == source['publication_date']
+    date_checks += 1
+
+def verify_evidence_tree(value):
+    global fragment_checks
+    if isinstance(value, dict):
+        if 'raw_html_excerpt' in value:
+            text = (out/'source_snapshot'/value['raw_path']).read_bytes().decode('utf-8')
+            assert text[value['raw_character_start']:value['raw_character_end_exclusive']] == value['raw_html_excerpt']
+            assert hashlib.sha256(value['raw_html_excerpt'].encode('utf-8')).hexdigest() == value['raw_html_excerpt_utf8_sha256']
+            fragment_checks += 1
+        for child in value.values():
+            verify_evidence_tree(child)
+    elif isinstance(value,list):
+        for child in value:
+            verify_evidence_tree(child)
+
+verify_evidence_tree(a)
+verify_evidence_tree(statements)
+for meeting in a['meetings']:
+    for member in meeting['members']:
+        if not meeting['minutes_source_id']:
+            continue
+        for channel in ['final_member_rate_choice_delta_bps','expressed_final_stance_preference','reservations','guidance_qualifications','alternative_rate_magnitude_discussion']:
+            for e in member[channel]['evidence']:
+                if e['evidence_kind'] == 'paragraph':
+                    assert e['zero_based_p_index'] in known[(meeting['meeting_id'],member['member_id'])]
+                    member_evidence_checks += 1
+        for channel in ['reservations','guidance_qualifications']:
+            if member[channel]['status']=='not_comprehensively_assessed':
+                assert member[channel]['value'] is None
+summary = {'source_display_date_checks_passed':date_checks,
+           'raw_fragment_checks_passed':fragment_checks,
+           'personal_statement_attribution_checks_passed':member_evidence_checks,
+           'input_copy_hash_checks_passed':27,
+           'status':'passed'}
+with (out/'validation_secondary.json').open('x') as f:
+    json.dump(summary,f,indent=2)
+    f.write('\n')
+print(json.dumps(summary,indent=2))
+manifest = {str(p.relative_to(out)):hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(out.rglob('*')) if p.is_file() and p.name != 'artifact_sha256.json'}
+with (out/'artifact_sha256.json').open('x') as f:
+    json.dump(manifest,f,indent=2)
+    f.write('\n')

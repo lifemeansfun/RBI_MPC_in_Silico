@@ -1,0 +1,24 @@
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: -0.012755
+is_internal: false
+key_themes:
+- '"Two key goals from the monetary policy perspective at the present juncture, in
+  which output growth has declined sharply and inflation pressures remain, are enabling
+  sustained recovery of the economy and moderation in inflation rate." (2020-10-09)'
+- '"The First Advance Estimates (FAE) released by NSO place the GDP growth in 2021-22
+  at 9.2 per cent over the previous year, lower than the projected 9.5 per cent in
+  the December MPC statement." (2022-02-10)'
+- '"The Second Advance Estimates (SAE) of the National Income for FY 2022-23 released
+  by the National Statistical Office have retained the overall YOY growth of GDP at
+  constant prices at 7 per cent as provided in the First Advance Estimates (FAE) published
+  on January 6, 2023." (2023-04-06)'
+member_id: shashanka_bhide
+name: Dr. Shashanka Bhide
+provenance_status: dated_corpus
+role: External Member
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

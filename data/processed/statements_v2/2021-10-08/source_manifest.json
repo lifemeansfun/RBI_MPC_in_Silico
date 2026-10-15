@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2021-10-08",
+  "meeting_start_date": "2021-10-06",
+  "publication_date": "2021-10-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+  "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+  "statement_sha256": {
+    "ashima_goyal": "e0c33c5394da5f8bfbb2f2dcf5a99f9d463693300f562c5cad39ede8dd763e03",
+    "jayanth_varma": "739f9270d3f7868078ff281c4d4e9588b963eb692e56d4785ccb68119d150ecc",
+    "michael_patra": "5173e22b94a16502c60c458fdb25639618b3740872e407bc4284eb0aea20cb3b",
+    "mridul_saggar": "a6b5346d9483cbc234ddd9e64bd328159a0e67500540db95bdc94f3ae2857c37",
+    "shaktikanta_das": "35f4096f4448de12bf792a93221b344f12eea783386e9644bb2462c5e4022cda",
+    "shashanka_bhide": "336cf8e0b6530b3197afe44d31b35cb23b7df80feb637de4aab906e53feec592"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, October 6 to 8, 2021"
+}

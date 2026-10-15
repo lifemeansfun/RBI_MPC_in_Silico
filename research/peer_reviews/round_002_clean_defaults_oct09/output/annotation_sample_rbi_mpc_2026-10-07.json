@@ -1,0 +1,713 @@
+{
+  "meeting_id": "rbi_mpc_2026-10-07",
+  "meeting_number": 63,
+  "meeting_start_date": "2026-10-05",
+  "decision_date": "2026-10-07",
+  "minutes_source_id": null,
+  "resolution_source_id": "rbi_prid_63742",
+  "committee": {
+    "rate_delta_bps": 25,
+    "repo_rate_percent": 5.5,
+    "stance": "calibrated tightening",
+    "outcome_evidence": [
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 3,
+        "raw_character_start": 34979,
+        "raw_character_end_exclusive": 35461,
+        "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+        "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+        "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+      },
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 19,
+        "raw_character_start": 41814,
+        "raw_character_end_exclusive": 42519,
+        "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+        "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+        "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+      },
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 20,
+        "raw_character_start": 42523,
+        "raw_character_end_exclusive": 42643,
+        "excerpt": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+        "raw_html_excerpt": "<p>15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.</p>",
+        "raw_html_excerpt_utf8_sha256": "dd3928afc6ccac3723db99d7295184d3e6b1c77d3b9a11cff9a9156e411b661a"
+      }
+    ],
+    "resolution_outcome_evidence": [
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 3,
+        "raw_character_start": 34979,
+        "raw_character_end_exclusive": 35461,
+        "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+        "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+        "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+      },
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 19,
+        "raw_character_start": 41814,
+        "raw_character_end_exclusive": 42519,
+        "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+        "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+        "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+      },
+      {
+        "source_id": "rbi_prid_63742",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "raw_path": "raw/rbi_prid_63742.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "publication_date": "2026-10-07",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 20,
+        "raw_character_start": 42523,
+        "raw_character_end_exclusive": 42643,
+        "excerpt": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+        "raw_html_excerpt": "<p>15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.</p>",
+        "raw_html_excerpt_utf8_sha256": "dd3928afc6ccac3723db99d7295184d3e6b1c77d3b9a11cff9a9156e411b661a"
+      }
+    ]
+  },
+  "rate_vote_table_proposal": null,
+  "members": [
+    {
+      "member_id": "nagesh_kumar",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": "neutral",
+        "status": "documented_named_view",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 20,
+            "raw_character_start": 42523,
+            "raw_character_end_exclusive": 42643,
+            "excerpt": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+            "raw_html_excerpt": "<p>15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "dd3928afc6ccac3723db99d7295184d3e6b1c77d3b9a11cff9a9156e411b661a"
+          }
+        ]
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    },
+    {
+      "member_id": "saugata_bhattacharya",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    },
+    {
+      "member_id": "ram_singh",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": "neutral",
+        "status": "documented_named_view",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 20,
+            "raw_character_start": 42523,
+            "raw_character_end_exclusive": 42643,
+            "excerpt": "15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.",
+            "raw_html_excerpt": "<p>15. Two members - Dr. Nagesh Kumar and Prof. Ram Singh - were of the view that the stance be retained at neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "dd3928afc6ccac3723db99d7295184d3e6b1c77d3b9a11cff9a9156e411b661a"
+          }
+        ]
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    },
+    {
+      "member_id": "indranil_bhattacharyya",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    },
+    {
+      "member_id": "poonam_gupta",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    },
+    {
+      "member_id": "sanjay_malhotra",
+      "literal_rate_ballot": {
+        "value": null,
+        "status": "not_available_in_resolution_only_snapshot",
+        "evidence": []
+      },
+      "table_magnitude_bps_unsigned": null,
+      "final_member_rate_choice_delta_bps": {
+        "value": 25,
+        "status": "attributed_from_explicit_committee_unanimity_with_supplied_roster",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 3,
+            "raw_character_start": 34979,
+            "raw_character_end_exclusive": 35461,
+            "excerpt": "2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.",
+            "raw_html_excerpt": "<p>2. After a detailed assessment of the evolving macroeconomic and financial developments and the outlook, the MPC voted unanimously to increase the policy repo rate under the liquidity adjustment facility (LAF) by 25 bps to 5.50 per cent. Consequently, the standing deposit facility (SDF) rate stands adjusted at 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate at 5.75 per cent. The MPC also decided to change the stance to calibrated tightening.</p>",
+            "raw_html_excerpt_utf8_sha256": "42ca1f38fc980a80a8d27ffda83eb345d0fdb894ec4981d80dbf68d562efc947"
+          },
+          {
+            "source_id": "rbi_prid_63742",
+            "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+            "raw_path": "raw/rbi_prid_63742.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_63742.html",
+            "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+            "publication_date": "2026-10-07",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 19,
+            "raw_character_start": 41814,
+            "raw_character_end_exclusive": 42519,
+            "excerpt": "14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.",
+            "raw_html_excerpt": "<p>14. Considering all these factors, the MPC unanimously voted to increase the policy repo rate by 25 basis points to 5.50 per cent. The MPC also decided to change the stance to calibrated tightening. It only signals that given the current conditions, rate cuts are off the table in the near term and policy action ahead can only be a rate hike or a pause, depending on the evolving conditions and the outlook. The duration and extent of rate hike cycle would be contingent on the actual growth-inflation developments and outlook, especially that of underlying inflation, the extent of broadening of price pressures and second round effects of the supply shock, as also the impact of demand impulses.</p>",
+            "raw_html_excerpt_utf8_sha256": "429c37b7707bfb7ca05c833002da4c37f1d0ae34b392015e5176582ff66fe3a6"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": null,
+        "status": "personal_statement_unavailable",
+        "evidence": []
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": null,
+        "status": "unavailable"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": false
+    }
+  ],
+  "missingness": {
+    "minutes_available": false,
+    "literal_rate_ballot_table_available": false,
+    "individual_statement_count": 0,
+    "stance_literal_ballot_table_available": false,
+    "formal_stance_vote_narrative_identified": false
+  }
+}

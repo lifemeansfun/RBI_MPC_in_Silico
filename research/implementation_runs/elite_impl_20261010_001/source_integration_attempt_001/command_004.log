@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/src/backtest/run_frozen_study.py", line 507, in <module>
+    main()
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/src/backtest/run_frozen_study.py", line 502, in main
+    result = asyncio.run(run_study(args.protocol, args.output_root, execution=args.execution))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/src/backtest/run_frozen_study.py", line 420, in run_study
+    preflight = live_preflight(spec, protocol_path.parent) if execution == "live" else {"provider_spend_usd": 0}
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/src/backtest/run_frozen_study.py", line 232, in live_preflight
+    raise GenerationProvenanceError("Live execution requires a distinct registered research protocol")
+src.infra.exceptions.GenerationProvenanceError: Live execution requires a distinct registered research protocol

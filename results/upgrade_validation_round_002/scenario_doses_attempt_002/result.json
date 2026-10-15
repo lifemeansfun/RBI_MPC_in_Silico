@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 1.376088124990929,
+  "input_hashes_unchanged": true,
+  "provider_calls": 0,
+  "verification_scope": "offline compound-dose, missingness, legacy scenario and menu-saturation contracts",
+  "scientific_boundary": "assumed simulator-local bundles; no empirical transmission or welfare evidence"
+}

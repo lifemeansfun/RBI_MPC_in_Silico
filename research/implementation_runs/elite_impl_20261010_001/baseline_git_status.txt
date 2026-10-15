@@ -1,0 +1,92 @@
+ M Makefile
+ M config/config.yaml
+ M requirements-lock.txt
+ M requirements.txt
+ M research/implementation_plans/round_001.md
+ M scripts/create_review_snapshot.py
+ M scripts/reproduce.py
+ M src/attribution/attribution_runner.py
+ M src/backtest/backtest_runner.py
+ M src/behavioral/debate_orchestrator.py
+ M src/data_pipeline/statement_extractor.py
+ M src/infra/cache.py
+ M src/infra/config_loader.py
+ M src/infra/cost_governor.py
+ M src/infra/exceptions.py
+ M src/infra/llm_client.py
+ M src/infra/transcript_logger.py
+ M src/persona_engine/extractor.py
+ M src/rational/monte_carlo.py
+ M src/rational/rational_panel_runner.py
+ M src/rational/taylor_rule.py
+ M src/reporting/report_builder.py
+ M src/rule_engine/engine.py
+ M src/run_stage2_pipeline.py
+ M src/scenarios/run_counterfactual_experiments.py
+ M src/scenarios/scenario_runner.py
+ M src/schemas/debate_schema.py
+ M src/schemas/macro_schema.py
+ M src/schemas/persona_schema.py
+ M src/validation/metrics.py
+ M tests/test_attribution_and_scenarios.py
+ M tests/test_debate_mock.py
+ M tests/test_defenses_and_validation.py
+ M tests/test_infra.py
+ M tests/test_rule_engine.py
+ M tests/test_taylor_rule.py
+?? data/processed/statements_v2/
+?? data/processed/vintage_v2/
+?? data/processed/vintage_v3/
+?? outputs/
+?? personas/calibration_2023-04-30_v2/
+?? research/assessments/
+?? research/implementation_plans/round_002.md
+?? research/implementation_runs/
+?? research/peer_reviews/round_002_clean_defaults_oct09/
+?? research/peer_reviews/round_002_clean_process_oct09/
+?? research/peer_reviews/round_002_oct09/
+?? research/planning/
+?? research/source_ledgers/expanded_panel_oct08/
+?? research/source_ledgers/expanded_panel_oct08_doublecode/
+?? research/source_ledgers/expanded_panel_oct09_adjudication/
+?? research/source_ledgers/gdp_fed_vintages/
+?? research/source_ledgers/historical_labels_round002/
+?? research/source_ledgers/literature/current_oct09/
+?? research/source_ledgers/output_gap_round002/
+?? research/source_ledgers/prior_policy/
+?? research/verification/
+?? results/upgrade_validation_round_001/
+?? results/upgrade_validation_round_002/
+?? runs/corrected_v1/
+?? scripts/reproduce_offline.py
+?? src/backtest/study_artifacts.py
+?? src/behavioral/comparator_forecasters.py
+?? src/data_pipeline/output_gap_estimation.py
+?? src/data_pipeline/vintage_panel.py
+?? src/infra/checkpoint.py
+?? src/infra/evidence.py
+?? src/infra/generation_evidence.py
+?? src/persona_engine/provenance.py
+?? src/persona_engine/rolling_inputs.py
+?? src/rational/calibration.py
+?? src/reporting/study_report.py
+?? src/schemas/decision_space.py
+?? src/schemas/temporal_panel_schema.py
+?? src/validation/baselines.py
+?? src/validation/observed_labels.py
+?? src/validation/study_replay.py
+?? tests/test_comparator_forecasters.py
+?? tests/test_deliberation_upgrade.py
+?? tests/test_macro_prompt_metadata.py
+?? tests/test_metric_contracts.py
+?? tests/test_monte_carlo_resolution.py
+?? tests/test_observed_labels.py
+?? tests/test_output_gap_estimation.py
+?? tests/test_review_snapshot.py
+?? tests/test_runtime_upgrade.py
+?? tests/test_scenario_doses.py
+?? tests/test_study_freeze.py
+?? tests/test_study_replay.py
+?? tests/test_study_report.py
+?? tests/test_temporal_panel_schema.py
+?? tests/test_vintage_rebuild.py

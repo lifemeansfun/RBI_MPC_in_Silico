@@ -1,0 +1,66 @@
+[
+  {
+    "type": "message",
+    "id": "msg_01a1205a-8bfd-73f3-be6f-3589961ac6eb",
+    "role": "developer",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "<skills_instructions>\n## Skills\nA skill is a set of local instructions to follow that is stored in a `SKILL.md` file. Below is the list of skills that can be used. Each entry includes a name, description, and a short path that can be expanded into an absolute path using the skill roots table.\n### Skill roots\n- `r0` = `/Users/manishharigovind/.codex/skills`\n- `r1` = `/Users/manishharigovind/.codex/skills/.system`\n### Available skills\n- imagegen: Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas. (file: r1/imagegen/SKILL.md)\n- openai-docs: Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex. (file: r1/openai-docs/SKILL.md)\n- plugin-creator: Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow. (file: r1/plugin-creator/SKILL.md)\n- skill-creator: Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources. (file: r1/skill-creator/SKILL.md)\n- skill-installer: Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos). (file: r1/skill-installer/SKILL.md)\n- coding-research-council: Pressure-test consequential coding research decisions through independent advisors, anonymous peer review, and an evidence-based synthesis. Use for 'council this', 'run the council', or requests to debate research hypotheses, architecture choices, experiment designs, novelty claims, benchmark validity, or reproducibility. Not for routine implementation, factual lookups, or ordinary debugging without a consequential tradeoff. (file: r0/coding-research-council/SKILL.md)\n</skills_instructions>"
+      },
+      {
+        "type": "input_text",
+        "text": "<permissions instructions>\nFilesystem sandboxing defines which files can be read or written. `sandbox_mode` is `workspace-write`: The sandbox permits reading files, and editing files in `cwd` and `writable_roots`. Editing files in other directories requires approval. Network access is enabled.\n# Escalation Requests\n\nCommands are run outside the sandbox if they are approved by the user, or match an existing rule that allows it to run unrestricted. The command string is split into independent command segments at shell control operators, including but not limited to:\n\n- Pipes: |\n- Logical operators: &&, ||\n- Command separators: ;\n- Subshell boundaries: (...), $(...)\n\nEach resulting segment is evaluated independently for sandbox restrictions and approval requirements.\n\nExample:\n\ngit pull | tee output.txt\n\nThis is treated as two command segments:\n\n[\"git\", \"pull\"]\n\n[\"tee\", \"output.txt\"]\n\nCommands that use more advanced shell features like redirection (>, >>, <), substitutions ($(...), ...), environment variables (FOO=bar), or wildcard patterns (*, ?) will not be evaluated against rules, to limit the scope of what an approved rule allows.\n\n## How to request escalation\n\nIMPORTANT: To request approval to execute a command that will require escalated privileges:\n\n- Provide the `sandbox_permissions` parameter with the value `\"require_escalated\"`\n- Include a short question asking the user if they want to allow the action in `justification` parameter. e.g. \"Do you want to download and install dependencies for this project?\"\n- Optionally suggest a `prefix_rule` - this will be shown to the user with an option to persist the rule approval for future sessions.\n\nIf you run a command that is important to solving the user's query, but it fails because of sandboxing or with a likely sandbox-related network error (for example DNS/host resolution, registry/index access, or dependency download failure), rerun the command with \"require_escalated\". ALWAYS proceed to use the `justification` parameter - do not message the user before requesting approval for the command.\n\n## When to request escalation\n\nWhile commands are running inside the sandbox, here are some scenarios that will require escalation outside the sandbox:\n\n- You need to run a command that writes to a directory that requires it (e.g. running tests that write to /var)\n- You need to run a GUI app (e.g., open/xdg-open/osascript) to open browsers or files.\n- If you run a command that is important to solving the user's query, but it fails because of sandboxing or with a likely sandbox-related network error (for example DNS/host resolution, registry/index access, or dependency download failure), rerun the command with `require_escalated`. ALWAYS proceed to use the `sandbox_permissions` and `justification` parameters. do not message the user before requesting approval for the command.\n- You are about to take a potentially destructive action such as an `rm` or `git reset` that the user did not explicitly ask for.\n- Be judicious with escalating, but if completing the user's request requires it, you should do so - don't try and circumvent approvals by using other tools.\n\n## prefix_rule guidance\n\nWhen choosing a `prefix_rule`, request one that will allow you to fulfill similar requests from the user in the future without re-requesting escalation. It should be categorical and reasonably scoped to similar capabilities. You should rarely pass the entire command into `prefix_rule`.\n\n### Banned prefix_rules \nAvoid requesting overly broad prefixes that the user would be ill-advised to approve. For example, do not request [\"python3\"], [\"python\", \"-\"], or other similar prefixes that would allow arbitrary scripting.\nNEVER provide a prefix_rule argument for destructive commands like rm.\nNEVER provide a prefix_rule if your command uses a heredoc or herestring. \n\n### Examples\nGood examples of prefixes:\n- [\"npm\", \"run\", \"dev\"]\n- [\"gh\", \"pr\", \"check\"]\n- [\"cargo\", \"test\"]\n\n\n## Approved command prefixes\nThe following prefix rules have already been approved: - [\"gh\", \"repo\", \"view\"]\n The writable roots are `/private/tmp`, `/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T`, `/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input`.\n</permissions instructions>"
+      }
+    ],
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "auto-compact-0",
+      "create_time": 1791544167.421485,
+      "content_item_kinds": [
+        "host_skills.instructions",
+        "permissions.instructions"
+      ]
+    }
+  },
+  {
+    "type": "message",
+    "id": "msg_01a1205a-8bfd-73f3-be6f-359cc77db6a3",
+    "role": "user",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "# AGENTS.md instructions\n\n<INSTRUCTIONS>\n# Personal working preferences\n\n- Inspect the existing project instructions, implementation and environment before changing code.\n- Explain important design choices and tradeoffs in plain language, with concrete file references where useful.\n- Separate verified facts, repository-reported findings, assumptions and hypotheses.\n- Keep changes focused and preserve existing work; use the project's established conventions and verification commands.\n- Report what changed, which checks actually ran, their results and anything left unverified.\n- For research work, preserve reproducible commands, raw evidence and relevant environment details; report null and negative findings as clearly as positive ones.\n- Put project-specific rules in that project's AGENTS.md and repeatable procedures in focused skills; keep these global defaults concise.\n</INSTRUCTIONS>"
+      },
+      {
+        "type": "input_text",
+        "text": "<environment_context>\n  <cwd>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-10-09</current_date>\n  <timezone>Asia/Kolkata</timezone>\n  <filesystem><workspace_roots><root>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry><entry access=\"write\"><path>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input</path></entry><entry access=\"write\"><special>:slash_tmp</special></entry><entry access=\"write\"><special>:tmpdir</special></entry><entry access=\"read\"><path>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input/.git</path></entry><entry access=\"read\"><path>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input/.agents</path></entry><entry access=\"read\"><path>/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-blind-peer-oct09-6sncv8en/input/.codex</path></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+      }
+    ],
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "auto-compact-0",
+      "create_time": 1791544167.421493,
+      "content_item_kinds": [
+        "agents_md.instructions",
+        "environments.environment_context"
+      ]
+    }
+  },
+  {
+    "type": "message",
+    "id": "msg_01a1205a-8c03-7213-8494-93955ff34e48",
+    "role": "user",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "You are an independent critical research reviewer. Review only the scientific snapshot in the current working directory. Start with WORKINGS.md and SNAPSHOT_SHA256.json. These describe a monetary-policy committee simulation and supply a file exploration map. Do not read parent directories, previous reviews, memory, chats, Git/history, or implementation plans. First record whether your inherited instructions or context expose any prior scientific judgment about this project. If they do, stop and provide no verdict. Otherwise independently verify, validate and stress-test the full research methodology, implementation and central evidence. Inspect scientific inputs and actual generated artifacts rather than accepting claims or tests uncritically. Use the supplied Python runtime without symlink dereference; run probes within the snapshot and preserve commands, raw logs, failed checks and limitations. Public primary-source literature and official source checks are permitted. Do not issue provider generation calls for the simulation, access credentials, change the active project, or communicate with other agents. Write a comprehensive evidence-linked review, meaningful executable probes where useful, prioritized concrete improvements and exactly one terminal verdict: Elite research grade or Not fully elite research grade. No preferred result is requested. Save all outputs under ./peer_review_output, a new directory. Your final message should identify the verdict or why no valid review was possible. This is an AI peer review, not a claim of independent human review or independent model-family diversity."
+      }
+    ],
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "auto-compact-0",
+      "create_time": 1791544167.427357,
+      "content_item_kinds": [
+        "user.text"
+      ]
+    }
+  }
+]

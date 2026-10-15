@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/nas2025_release.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/nas2025_release.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "b55c686174535ae4928200c344ac5f7e22843ace7e0dad4ad4bff0b4511dfb3f",
+  "extracted_sha256": "e7c92ba2583bd2208ddf00a6eee758fa30e23484e8d1b24880359581be36262b"
+}

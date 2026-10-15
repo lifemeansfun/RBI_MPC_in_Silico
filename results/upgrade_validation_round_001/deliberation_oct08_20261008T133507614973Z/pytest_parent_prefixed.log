@@ -1,0 +1,108 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[changed_fields] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...dation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_parent_prefixed_tmp/test_counterfactual_parent_rec0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'changed_fields'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, snapshot, roster, corruption):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+>       with pytest.raises(GenerationProvenanceError):
+E       Failed: DID NOT RAISE GenerationProvenanceError
+
+tests/test_deliberation_upgrade.py:154: Failed
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[parent_hash] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...dation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_parent_prefixed_tmp/test_counterfactual_parent_rec1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'parent_hash'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, snapshot, roster, corruption):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+>       with pytest.raises(GenerationProvenanceError):
+E       Failed: DID NOT RAISE GenerationProvenanceError
+
+tests/test_deliberation_upgrade.py:154: Failed
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[unrelated_field] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...dation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_parent_prefixed_tmp/test_counterfactual_parent_rec2')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'unrelated_field'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, snapshot, roster, corruption):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+>       with pytest.raises(GenerationProvenanceError):
+E       Failed: DID NOT RAISE GenerationProvenanceError
+
+tests/test_deliberation_upgrade.py:154: Failed
+_ test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[parent_snapshot] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...dation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_parent_prefixed_tmp/test_counterfactual_parent_rec3')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'parent_snapshot'
+
+    @pytest.mark.parametrize("corruption", ["changed_fields", "parent_hash", "unrelated_field", "parent_snapshot"])
+    async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, snapshot, roster, corruption):
+        shocked = ScenarioRunner.build_monsoon_food_shock_snapshot(snapshot)
+        payload = shocked.model_dump(mode="json")
+        if corruption == "changed_fields":
+            payload["intervention"]["changed_fields"]["cpi_headline_yoy_pct"] = 123.0
+        elif corruption == "parent_hash":
+            payload["intervention"]["parent_snapshot_hash"] = "f" * 64
+        elif corruption == "unrelated_field":
+            payload["gva_growth_yoy_pct"] = 7.2
+        else:
+            payload["intervention"]["parent_snapshot"]["current_repo_rate_pct"] = 5.5
+        corrupt = MacroMeetingSnapshot.model_validate(payload)
+        client = ScriptedClient()
+>       with pytest.raises(GenerationProvenanceError):
+E       Failed: DID NOT RAISE GenerationProvenanceError
+
+tests/test_deliberation_upgrade.py:154: Failed
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[changed_fields]
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[parent_hash]
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[unrelated_field]
+FAILED tests/test_deliberation_upgrade.py::test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls[parent_snapshot]
+4 failed, 64 deselected in 0.48s

@@ -1,0 +1,29 @@
+{
+  "id": "fed_calendar_2020",
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+  "role": "fed_calendar",
+  "format": "html",
+  "release_date": "",
+  "reference_period": "",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:12.376203+00:00",
+  "status_code": 200,
+  "final_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+  "response_headers": {
+    "Date": "Mon, 05 Oct 2026 14:54:12 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "CF-Ray": "a45d42a0ee80ff9d-BOM",
+    "CF-Cache-Status": "REVALIDATED",
+    "Last-Modified": "Thu, 17 Sep 2026 14:53:49 GMT",
+    "Server": "cloudflare",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Content-Encoding": "gzip"
+  },
+  "bytes": 98555,
+  "acquired": true,
+  "local_file": "raw/fed_calendar_2020.html",
+  "sha256": "ca27c9dc9ead7c7b76f8fbe64bd604ed51e7bc478bd14c30911f11f90588f967"
+}

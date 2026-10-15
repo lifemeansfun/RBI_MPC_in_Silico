@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/verification/run_isolated_pytest.py",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/tests_attempt_004_boundary_refinement",
+    "tests/test_executable_rolling_and_eligibility.py::test_original_statement_cannot_include_the_next_person_even_after_rehash",
+    "tests/test_executable_rolling_and_eligibility.py::test_complete_portable_adapter_retains_exclusions_and_raw_grounding",
+    "tests/test_executable_rolling_and_eligibility.py::test_panel_audit_enumerates_all_meetings_and_separates_claims",
+    "tests/test_executable_rolling_and_eligibility.py::test_rehashed_derived_statement_still_requires_raw_dom_reconstruction",
+    "tests/test_executable_rolling_and_eligibility.py::test_cached_raw_history_cannot_be_reassigned_to_another_person",
+    "tests/test_executable_rolling_and_eligibility.py::test_executable_receipt_cannot_relabel_its_evidence"
+  ],
+  "timeout_seconds": 1200,
+  "started_at_unix": 1791635926.737348,
+  "exit_code": 0,
+  "elapsed_seconds": 40.00990390777588
+}

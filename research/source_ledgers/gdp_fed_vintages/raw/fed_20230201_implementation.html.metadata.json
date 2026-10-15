@@ -1,0 +1,28 @@
+{
+  "id": "fed_20230201_implementation",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a1.htm",
+  "format": "html",
+  "role": "implementation",
+  "discovery_parent_id": "fed_calendar_2021_2024",
+  "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57",
+  "retrieved_at_utc": "2026-10-05T14:54:21.494460+00:00",
+  "status_code": 200,
+  "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a1.htm",
+  "response_headers": {
+    "Date": "Mon, 05 Oct 2026 14:54:21 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "CF-Ray": "a45d42d97ee2fa1c-BOM",
+    "CF-Cache-Status": "REVALIDATED",
+    "Last-Modified": "Thu, 26 Feb 2026 23:39:21 GMT",
+    "Server": "cloudflare",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Content-Encoding": "gzip"
+  },
+  "bytes": 79699,
+  "acquired": true,
+  "local_file": "raw/fed_20230201_implementation.html",
+  "sha256": "26a9f7850fc0a57787f52eddc82aa7ac7eeceaa6d040034689f4cf8f7d380ecd"
+}

@@ -22,7 +22,7 @@ from src.infra.config_loader import load_config
 logger = logging.getLogger("rbi_mpc.rational_runner")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
-# Calibrated member Taylor rule coefficients fitted to Indian macroeconomic context
+# Assumed legacy member coefficients; not estimated calibration parameters.
 MEMBER_TAYLOR_PARAMS = {
     "shaktikanta_das": MemberTaylorParameters("shaktikanta_das", alpha=1.2, beta=0.4, gamma=0.2),
     "michael_patra": MemberTaylorParameters("michael_patra", alpha=1.8, beta=0.6, gamma=0.3),

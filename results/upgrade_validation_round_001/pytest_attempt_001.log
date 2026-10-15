@@ -1,0 +1,464 @@
+..F...FFFFFF..........................................FFF............... [ 73%]
+.........................F                                               [100%]
+=================================== FAILURES ===================================
+___________________________ test_attribution_runner ____________________________
+
+baseline_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='legacy_...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+
+    def test_attribution_runner(baseline_snapshot):
+        # Test casting vote ablation on a simulated 3-3 tie
+        decision = MeetingCommitteeDecision(
+            meeting_date="2023-08-10",
+            replicate_id=1,
+            rate_decision_bps=25,
+            stance_decision="withdrawal_of_accommodation",
+            rate_vote_tally={25: 3, 0: 3},
+            stance_vote_tally={"withdrawal_of_accommodation": 3, "neutral": 3},
+            tie_broken_by_governor_rate=True,
+            tie_broken_by_governor_stance=True,
+            dissenting_members_rate=["jayanth_varma", "ashima_goyal", "shashanka_bhide"],
+            dissenting_members_stance=["jayanth_varma", "ashima_goyal", "shashanka_bhide"],
+            member_votes=[],
+        )
+    
+>       attr_res = AttributionRunner.ablate_casting_vote(decision, governor_id="shaktikanta_das")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_attribution_and_scenarios.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meeting_outcome = MeetingCommitteeDecision(meeting_date='2023-08-10', replicate_id=1, rate_decision_bps=25, stance_decision='withdrawal_...unspecified_legacy', synthetic_resolution_rate=False, synthetic_resolution_stance=False, fragmentation_policy='reject')
+governor_id = 'shaktikanta_das', prior_stance = None
+
+    @staticmethod
+    def ablate_casting_vote(meeting_outcome: MeetingCommitteeDecision, governor_id: str,
+                            prior_stance: Optional[str] = None) -> AttributionResult:
+        """Remove actual binary casting; status-quo resolution is a synthetic policy.
+    
+        Retain the actual pre-meeting stance. A fragmented menu outcome must never
+        masquerade as a statutory casting vote, even when its winner is Governor's.
+        """
+        if meeting_outcome.member_votes and governor_id not in {v.member_id for v in meeting_outcome.member_votes}:
+            raise ValueError("Casting removal requires a Governor ballot")
+        for tie, tally, synthetic in (
+            (meeting_outcome.tie_broken_by_governor_rate, meeting_outcome.rate_vote_tally, meeting_outcome.synthetic_resolution_rate),
+            (meeting_outcome.tie_broken_by_governor_stance, meeting_outcome.stance_vote_tally, meeting_outcome.synthetic_resolution_stance),
+        ):
+            if tie and (synthetic or len(tally) != 2 or len(set(tally.values())) != 1 or any(n <= 0 for n in tally.values())):
+                raise ValueError("Casting flag must represent binary equality, not synthetic fragmentation")
+        prev = prior_stance or meeting_outcome.prior_stance
+        if meeting_outcome.tie_broken_by_governor_stance and prev not in STANCE_ACTIONS:
+>           raise ValueError("Casting removal requires the actual prior stance")
+E           ValueError: Casting removal requires the actual prior stance
+
+src/attribution/attribution_runner.py:60: ValueError
+_______________________ test_full_mock_debate_simulation _______________________
+
+path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/runs/corrected_v1/legacy/test_mock_run/full/transcripts/2023-08-10/rep_1/round_1_michael_patra.json')
+value = {'member_id': 'michael_patra', 'fallback_triggered': False, 'member_name': 'Michael Patra', 'proposed_rate_change_bps': 0, ...}
+replay = False
+
+    def write_immutable(path: str | Path, value: Any, *, replay: bool = False) -> Path:
+        """Publish fsynced canonical bytes without replacing an existing artifact."""
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        raw = (canonical_json(value) + "\n").encode("utf-8")
+        descriptor, temporary = tempfile.mkstemp(prefix=".evidence-", dir=path.parent)
+        try:
+            with os.fdopen(descriptor, "wb") as handle:
+                handle.write(raw)
+                handle.flush()
+                os.fsync(handle.fileno())
+            try:
+                # A hard link publishes complete bytes atomically and fails on collisions.
+>               os.link(temporary, path)
+E               FileExistsError: [Errno 17] File exists: '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/runs/corrected_v1/legacy/test_mock_run/full/transcripts/2023-08-10/rep_1/.evidence-222gjdtl' -> '/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/runs/corrected_v1/legacy/test_mock_run/full/transcripts/2023-08-10/rep_1/round_1_michael_patra.json'
+
+src/infra/evidence.py:54: FileExistsError
+
+The above exception was the direct cause of the following exception:
+
+mock_personas = [MemberPersona(member_id='shaktikanta_das', name='Shaktikanta Das', role='Governor', is_internal=True, tenure='2018-pr...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+sample_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='legacy_...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+
+    @pytest.mark.asyncio
+    async def test_full_mock_debate_simulation(mock_personas, sample_snapshot):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            logger = TranscriptLogger(run_id="test_mock_run")
+            logger.run_dir = Path(tmpdir)
+            logger.transcripts_dir = Path(tmpdir) / "transcripts"
+            logger.transcripts_dir.mkdir(parents=True, exist_ok=True)
+            logger.log_file = Path(tmpdir) / "run.jsonl"
+    
+            client = LLMClient(provider="mock", cache_enabled=False)
+            orchestrator = DebateOrchestrator(llm_client=client, logger=logger)
+    
+>           decision = await orchestrator.run_meeting(
+                snapshot=sample_snapshot,
+                personas=mock_personas,
+                governor_id="shaktikanta_das",
+                replicate_id=1,
+                model="gemini-2.5-flash",
+            )
+
+tests/test_debate_mock.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:253: in run_meeting
+    output, evidence_type = await self._generate_round(
+src/behavioral/debate_orchestrator.py:176: in _generate_round
+    self.logger.save_round_transcript(
+src/infra/transcript_logger.py:98: in save_round_transcript
+    return write_immutable(directory / f"round_{round_number}_{safe_component(member_id)}.json", result, replay=replay)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/runs/corrected_v1/legacy/test_mock_run/full/transcripts/2023-08-10/rep_1/round_1_michael_patra.json')
+value = {'member_id': 'michael_patra', 'fallback_triggered': False, 'member_name': 'Michael Patra', 'proposed_rate_change_bps': 0, ...}
+replay = False
+
+    def write_immutable(path: str | Path, value: Any, *, replay: bool = False) -> Path:
+        """Publish fsynced canonical bytes without replacing an existing artifact."""
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        raw = (canonical_json(value) + "\n").encode("utf-8")
+        descriptor, temporary = tempfile.mkstemp(prefix=".evidence-", dir=path.parent)
+        try:
+            with os.fdopen(descriptor, "wb") as handle:
+                handle.write(raw)
+                handle.flush()
+                os.fsync(handle.fileno())
+            try:
+                # A hard link publishes complete bytes atomically and fails on collisions.
+                os.link(temporary, path)
+            except FileExistsError as exc:
+                if not replay or path.read_bytes() != raw:
+>                   raise ArtifactIntegrityError(f"Immutable artifact already exists: {path}") from exc
+E                   src.infra.exceptions.ArtifactIntegrityError: Immutable artifact already exists: /Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/runs/corrected_v1/legacy/test_mock_run/full/transcripts/2023-08-10/rep_1/round_1_michael_patra.json
+
+src/infra/evidence.py:57: ArtifactIntegrityError
+______________________ test_schema_coercion_dirty_strings ______________________
+
+    def test_schema_coercion_dirty_strings():
+        """Verifies that dirty rate strings and irregular stance casing are defensively sanitized."""
+        # Dirty rate strings with plus signs, "bps", and spaces
+>       out = InitialStanceOutput(
+            member_id="jayanth_varma",
+            member_name="Jayanth R. Varma",
+            proposed_rate_change_bps="+25 bps",
+            proposed_stance="WITHDRAWAL OF ACCOMMODATION",
+            key_rationale="Testing dirty input string sanitization.",
+        )
+E       pydantic_core._pydantic_core.ValidationError: 2 validation errors for InitialStanceOutput
+E       proposed_rate_change_bps
+E         Value error, Rate action must be an integer in (-50, -25, 0, 25, 35, 40, 50); received '+25 bps' [type=value_error, input_value='+25 bps', input_type=str]
+E           For further information visit https://errors.pydantic.dev/2.13/v/value_error
+E       proposed_stance
+E         Input should be 'withdrawal_of_accommodation', 'neutral' or 'accommodative' [type=literal_error, input_value='WITHDRAWAL OF ACCOMMODATION', input_type=str]
+E           For further information visit https://errors.pydantic.dev/2.13/v/literal_error
+
+tests/test_defenses_and_validation.py:20: ValidationError
+_______________ test_anti_hallucination_macro_prompt_constraints _______________
+
+    def test_anti_hallucination_macro_prompt_constraints():
+        """Verifies that MacroMeetingSnapshot generates strict anti-hallucination instructions."""
+        snapshot = MacroMeetingSnapshot(
+            meeting_date="2023-08-10",
+            current_repo_rate_pct=6.50,
+            cpi_headline_yoy_pct=7.44,
+            cpi_core_yoy_pct=4.90,
+            cpi_food_yoy_pct=11.51,
+            iip_growth_yoy_pct=5.70,
+            output_gap_pct=0.60,
+            system_liquidity_cr=120000.0,
+            usd_inr_exchange_rate=82.80,
+            brent_crude_usd_bbl=86.40,
+            us_fed_funds_rate_pct=5.33,
+            prev_stance="withdrawal_of_accommodation",
+        )
+    
+        prompt = snapshot.to_prompt_text()
+>       assert "OFFICIAL MACROECONOMIC BRIEFING FOR MPC MEETING: 2023-08-10" in prompt
+E       AssertionError: assert 'OFFICIAL MACROECONOMIC BRIEFING FOR MPC MEETING: 2023-08-10' in '=== MACROECONOMIC INPUTS FOR SIMULATED MPC MEETING: 2023-08-10 ===\nInput evidence track: legacy_unverified.\n- Curre...T:\nGround reasoning ONLY in supplied observations. Do NOT cite fictitious numbers or invent macroeconomic indicators.'
+
+tests/test_defenses_and_validation.py:60: AssertionError
+__________________ test_defensive_rate_heuristic_calibration ___________________
+
+    def test_defensive_rate_heuristic_calibration():
+        """Verifies that the emergency heuristic behaves economically consistent with member personas."""
+        high_cpi_snapshot = MacroMeetingSnapshot(
+            meeting_date="2022-06-08",
+            current_repo_rate_pct=4.40,
+            cpi_headline_yoy_pct=7.04,
+            cpi_core_yoy_pct=6.20,
+            prev_stance="accommodative",
+        )
+    
+        hawk_persona = MemberPersona(
+            member_id="michael_patra",
+            name="Michael Debabrata Patra",
+            role="Deputy Governor",
+            is_internal=True,
+            tenure="2020-01 to present",
+            hawk_dove_score=0.70,
+            stance_bias="withdrawal_of_accommodation",
+            voting_priority="Strict inflation hawk",
+        )
+    
+        dove_persona = MemberPersona(
+            member_id="jayanth_varma",
+            name="Jayanth R. Varma",
+            role="External Member",
+            is_internal=False,
+            tenure="2020-10 to 2024-10",
+            hawk_dove_score=-0.65,
+            stance_bias="neutral",
+            voting_priority="Growth preservation",
+        )
+    
+        # Under high CPI (7.04%), hawk should recommend a hike (+50 or +25 bps)
+>       hawk_rate = DebateOrchestrator._compute_defensive_rate_heuristic(hawk_persona, high_cpi_snapshot)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: type object 'DebateOrchestrator' has no attribute '_compute_defensive_rate_heuristic'
+
+tests/test_defenses_and_validation.py:100: AttributeError
+_____________ test_persona_system_prompt_anti_hallucination_rules ______________
+
+    def test_persona_system_prompt_anti_hallucination_rules():
+        """Verifies that MemberPersona system prompt includes institutional behavioral guardrails."""
+        persona = MemberPersona(
+            member_id="shashanka_bhide",
+            name="Dr. Shashanka Bhide",
+            role="External Member",
+            is_internal=False,
+            tenure="2020-10 to 2024-10",
+            hawk_dove_score=0.20,
+            stance_bias="withdrawal_of_accommodation",
+            voting_priority="Agricultural economist vigilant on food prices",
+            key_themes=["Food price pressures require close monitoring"],
+        )
+    
+        sys_prompt = persona.build_system_prompt()
+        assert "Dr. Shashanka Bhide" in sys_prompt
+        assert "External Academic / Expert Appointee" in sys_prompt
+        assert "Ground all arguments in Indian macroeconomic reality" in sys_prompt
+>       assert "Rate Change: -50, -25, 0, +25, +50 bps" in sys_prompt
+E       assert 'Rate Change: -50, -25, 0, +25, +50 bps' in "You are Dr. Shashanka Bhide, serving in a simulated RBI Monetary Policy Committee (MPC).\nMember ID: shashanka_bhide\...ive'\n5. Always respond in the requested structured JSON format without markdown wrapping or conversational preambles."
+
+tests/test_defenses_and_validation.py:133: AssertionError
+____________________ test_actual_runtime_mock_complete_path ____________________
+
+self = <src.infra.llm_client.LLMClient object at 0x10f5d62d0>
+text = '{"member_id": "original_id_0", "member_name": "Original Person 0", "is_internal": false, "final_rate_vote_bps": 0, "f...icial_statement_rationale": "[OFFLINE MOCK BASELINE] Official signed statement for Original Person 0 in MPC minutes."}'
+schema = <class 'src.schemas.debate_schema.FinalVoteOutput'>
+expected_identity = {'member_id': 'original_id_0', 'member_name': 'Original Person 0', 'is_internal': True}
+
+    def _parse_schema(self, text: str, schema: Optional[Type[T]], expected_identity: dict | None = None) -> Optional[T]:
+        if schema is None:
+            return None
+        def no_duplicates(pairs):
+            data = {}
+            for key, value in pairs:
+                if key in data:
+                    raise ValueError(f"Duplicate JSON field {key!r}")
+                data[key] = value
+            return data
+        def no_constants(value):
+            raise ValueError(f"Nonfinite JSON value {value}")
+        try:
+            # Strict JSON: fenced text/extra prose is failed evidence, not repaired.
+            data = json.loads(text, object_pairs_hook=no_duplicates, parse_constant=no_constants)
+            if not isinstance(data, dict):
+                raise ValueError("Expected a JSON object")
+            allowed = set(schema.model_json_schema().get("properties", {}))
+            if set(data) - allowed:
+                raise ValueError(f"Unexpected output fields: {sorted(set(data)-allowed)}")
+            if data.get("fallback_triggered", False) is not False:
+                raise ValueError("Fallback output is not permitted as research generation")
+            for field, expected in (expected_identity or {}).items():
+                if field not in data or type(data[field]) is not type(expected) or data[field] != expected:
+>                   raise ValueError(f"Output impersonates/misidentifies requested {field}")
+E                   ValueError: Output impersonates/misidentifies requested is_internal
+
+src/infra/llm_client.py:386: ValueError
+
+The above exception was the direct cause of the following exception:
+
+tmp_path = PosixPath('/private/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/pytest-of-manishharigovind/pytest-52/test_actual_runtime_mock_compl0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_actual_runtime_mock_complete_path(tmp_path, snapshot, roster):
+        client = LLMClient(provider="mock", cache_enabled=False, ledger_path=tmp_path / "budget.sqlite3")
+>       decision = await orchestrator(tmp_path, client).run_meeting(snapshot, roster, roster[0].member_id,
+                                                                   experiment_id="runtime_mock")
+
+tests/test_deliberation_upgrade.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:253: in run_meeting
+    output, evidence_type = await self._generate_round(
+src/behavioral/debate_orchestrator.py:162: in _generate_round
+    result = await self.client.generate_with_metadata(
+src/infra/llm_client.py:351: in generate_with_metadata
+    parsed = self._parse_schema(raw_text, response_schema, expected)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.infra.llm_client.LLMClient object at 0x10f5d62d0>
+text = '{"member_id": "original_id_0", "member_name": "Original Person 0", "is_internal": false, "final_rate_vote_bps": 0, "f...icial_statement_rationale": "[OFFLINE MOCK BASELINE] Official signed statement for Original Person 0 in MPC minutes."}'
+schema = <class 'src.schemas.debate_schema.FinalVoteOutput'>
+expected_identity = {'member_id': 'original_id_0', 'member_name': 'Original Person 0', 'is_internal': True}
+
+    def _parse_schema(self, text: str, schema: Optional[Type[T]], expected_identity: dict | None = None) -> Optional[T]:
+        if schema is None:
+            return None
+        def no_duplicates(pairs):
+            data = {}
+            for key, value in pairs:
+                if key in data:
+                    raise ValueError(f"Duplicate JSON field {key!r}")
+                data[key] = value
+            return data
+        def no_constants(value):
+            raise ValueError(f"Nonfinite JSON value {value}")
+        try:
+            # Strict JSON: fenced text/extra prose is failed evidence, not repaired.
+            data = json.loads(text, object_pairs_hook=no_duplicates, parse_constant=no_constants)
+            if not isinstance(data, dict):
+                raise ValueError("Expected a JSON object")
+            allowed = set(schema.model_json_schema().get("properties", {}))
+            if set(data) - allowed:
+                raise ValueError(f"Unexpected output fields: {sorted(set(data)-allowed)}")
+            if data.get("fallback_triggered", False) is not False:
+                raise ValueError("Fallback output is not permitted as research generation")
+            for field, expected in (expected_identity or {}).items():
+                if field not in data or type(data[field]) is not type(expected) or data[field] != expected:
+                    raise ValueError(f"Output impersonates/misidentifies requested {field}")
+            return schema.model_validate(data, strict=True)
+        except (json.JSONDecodeError, ValueError, TypeError, ValidationError) as exc:
+>           raise LLMResponseMalformedError(f"Invalid {schema.__name__} output: {exc}") from exc
+E           src.infra.exceptions.LLMResponseMalformedError: Invalid FinalVoteOutput output: Output impersonates/misidentifies requested is_internal
+
+src/infra/llm_client.py:389: LLMResponseMalformedError
+______________________________ test_config_loader ______________________________
+
+    def test_config_loader():
+        cfg = load_config()
+        assert cfg.project_name == "RBI_MPC_In_Silico"
+        assert cfg.run.provider in ["gemini", "mock", "openai", "anthropic", "ollama"]
+>       assert cfg.decision_space.action_set_bps == [-50, -25, 0, 25, 50]
+E       assert [-50, -25, 0, 25, 35, 40, ...] == [-50, -25, 0, 25, 50]
+E         
+E         At index 4 diff: 35 != 50
+E         Left contains 2 more items, first extra item: 40
+E         Use -v to get more diff
+
+tests/test_infra.py:21: AssertionError
+_________________________ test_cost_governor_tracking __________________________
+
+    def test_cost_governor_tracking():
+        gov = CostGovernor(budget_cap_usd=1.0)
+        # Record 100,000 input tokens and 50,000 output tokens for gemini-2.5-flash
+        # Input rate: $0.075/M, Output rate: $0.30/M
+>       cost = gov.record_usage("gemini-2.5-flash", 100_000, 50_000)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_infra.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/infra/cost_governor.py:253: in record_usage
+    rid = self.reserve(uuid.uuid4().hex, "gemini" if model != "mock" else "mock", model, input_tokens, max(1, output_tokens))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.infra.cost_governor.CostGovernor object at 0x10f6fd110>
+attempt_id = 'f6633ba6a8a84834ab279b15d85766ea', provider = 'gemini'
+routed_model = 'gemini-2.5-flash', input_token_bound = 100000
+max_output_tokens = 50000
+price_revision = 'google-gemini-standard-text-2026-10-05'
+
+    def reserve(self, attempt_id: str, provider: str, routed_model: str,
+                input_token_bound: int, max_output_tokens: int,
+                price_revision: str = PRICE_REVISION) -> str:
+        _tokens(input_token_bound, "input_token_bound")
+        _tokens(max_output_tokens, "max_output_tokens", positive=True)
+        if not isinstance(attempt_id, str) or not attempt_id:
+            raise GenerationProvenanceError("A unique attempt_id is required")
+        if price_revision != PRICE_REVISION or not (
+            (provider == "gemini" and routed_model == "gemini-3.1-flash-lite")
+            or (provider == "mock" and routed_model == "mock")
+        ):
+>           raise UnknownPriceError("Unverified provider/tariff combination")
+E           src.infra.exceptions.UnknownPriceError: Unverified provider/tariff combination
+
+src/infra/cost_governor.py:184: UnknownPriceError
+______________________ test_cost_governor_budget_exceeded ______________________
+
+    def test_cost_governor_budget_exceeded():
+        gov = CostGovernor(budget_cap_usd=0.01)
+        with pytest.raises(BudgetExceededError):
+            # 200k tokens at $0.30/M output will cross $0.01 cap
+>           gov.record_usage("gemini-2.5-flash", 100_000, 200_000)
+
+tests/test_infra.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/infra/cost_governor.py:253: in record_usage
+    rid = self.reserve(uuid.uuid4().hex, "gemini" if model != "mock" else "mock", model, input_tokens, max(1, output_tokens))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.infra.cost_governor.CostGovernor object at 0x10f5b5690>
+attempt_id = 'd642c4ee535a4bc594ceb66c6b11ce97', provider = 'gemini'
+routed_model = 'gemini-2.5-flash', input_token_bound = 100000
+max_output_tokens = 200000
+price_revision = 'google-gemini-standard-text-2026-10-05'
+
+    def reserve(self, attempt_id: str, provider: str, routed_model: str,
+                input_token_bound: int, max_output_tokens: int,
+                price_revision: str = PRICE_REVISION) -> str:
+        _tokens(input_token_bound, "input_token_bound")
+        _tokens(max_output_tokens, "max_output_tokens", positive=True)
+        if not isinstance(attempt_id, str) or not attempt_id:
+            raise GenerationProvenanceError("A unique attempt_id is required")
+        if price_revision != PRICE_REVISION or not (
+            (provider == "gemini" and routed_model == "gemini-3.1-flash-lite")
+            or (provider == "mock" and routed_model == "mock")
+        ):
+>           raise UnknownPriceError("Unverified provider/tariff combination")
+E           src.infra.exceptions.UnknownPriceError: Unverified provider/tariff combination
+
+src/infra/cost_governor.py:184: UnknownPriceError
+___________________________ test_monte_carlo_engine ____________________________
+
+sample_snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='legacy_...nters=[], real_dissenters_rate=None, real_dissenters_stance=None, real_reservations=[], real_guidance_disagreements=[])
+
+    def test_monte_carlo_engine(sample_snapshot):
+        rule = SmoothedTaylorRule()
+        members = [
+            MemberTaylorParameters("shaktikanta_das", alpha=1.2, beta=0.4),
+            MemberTaylorParameters("michael_patra", alpha=1.8, beta=0.6),
+            MemberTaylorParameters("rajiv_ranjan", alpha=1.4, beta=0.5),
+            MemberTaylorParameters("jayanth_varma", alpha=0.5, beta=0.2),
+            MemberTaylorParameters("ashima_goyal", alpha=0.8, beta=0.3),
+            MemberTaylorParameters("shashanka_bhide", alpha=1.3, beta=0.4),
+        ]
+    
+        engine = MonteCarloEngine(taylor_rule=rule, n_draws=100, noise_std_pct=0.15, seed=123)
+        result = engine.simulate(sample_snapshot, members, governor_id="shaktikanta_das")
+    
+>       assert result.modal_rate_decision_bps in [-50, -25, 0, 25, 50]
+E       AssertionError: assert 35 in [-50, -25, 0, 25, 50]
+E        +  where 35 = MonteCarloResult(meeting_date='2023-08-10', mean_implied_rate=6.836963549404195, modal_rate_decision_bps=35, modal_sta...shima_goyal': 0.02, 'shashanka_bhide': 0.0}, noise_basis='assumed Gaussian sensitivity, not estimated forecast errors').modal_rate_decision_bps
+
+tests/test_taylor_rule.py:82: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_attribution_and_scenarios.py::test_attribution_runner - Val...
+FAILED tests/test_debate_mock.py::test_full_mock_debate_simulation - src.infr...
+FAILED tests/test_defenses_and_validation.py::test_schema_coercion_dirty_strings
+FAILED tests/test_defenses_and_validation.py::test_anti_hallucination_macro_prompt_constraints
+FAILED tests/test_defenses_and_validation.py::test_defensive_rate_heuristic_calibration
+FAILED tests/test_defenses_and_validation.py::test_persona_system_prompt_anti_hallucination_rules
+FAILED tests/test_deliberation_upgrade.py::test_actual_runtime_mock_complete_path
+FAILED tests/test_infra.py::test_config_loader - assert [-50, -25, 0, 25, 35,...
+FAILED tests/test_infra.py::test_cost_governor_tracking - src.infra.exception...
+FAILED tests/test_infra.py::test_cost_governor_budget_exceeded - src.infra.ex...
+FAILED tests/test_taylor_rule.py::test_monte_carlo_engine - AssertionError: a...
+11 failed, 87 passed in 2.04s

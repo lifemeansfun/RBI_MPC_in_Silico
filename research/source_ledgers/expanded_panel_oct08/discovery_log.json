@@ -1,0 +1,36 @@
+{
+  "scope": "Exploratory source discovery before the bounded acquisition; secondary search results used solely as locators for primary RBI endpoints",
+  "events": [
+    {
+      "surface": "requests exploratory fiscal-index form setup",
+      "url": "https://www.rbi.org.in/Scripts/Annualpolicy.aspx",
+      "status": "failed",
+      "error": "ConnectionError / RemoteDisconnected during initial GET before form POST",
+      "resolution": "A later fresh official GET and official form POST succeeded; preserved bounded acquisition subsequently ran successfully"
+    },
+    {
+      "surface": "web.open",
+      "url": "https://www.rbi.org.in/Scripts/Annualpolicy.aspx?year=2026",
+      "status": "inaccessible",
+      "resolution": "GET query parameter did not select a fiscal year; official form POST navigation used instead"
+    },
+    {
+      "surface": "web.open",
+      "urls": [
+        "https://systemhealth.rbi.org.in/Scripts/Annualpolicy.aspx.html",
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63744",
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60612"
+      ],
+      "status": "tool internal error or inaccessible",
+      "resolution": "Official main-site sources required by ledger were retrieved successfully as raw HTML through requests; the Governor statement PRID 63744 was not required or used for label construction"
+    },
+    {
+      "surface": "source-table extraction development",
+      "status": "corrected before final build",
+      "issue": "Initial broad Vote-cell match also admitted enclosing presentation tables; an exact Member/Vote leading header predicate was used. The June 2025 three-column magnitude table required accepting a third header column.",
+      "resolution": "All final twelve minutes have exactly one complete six-member rate table; raw source bytes preserved"
+    }
+  ]
+}

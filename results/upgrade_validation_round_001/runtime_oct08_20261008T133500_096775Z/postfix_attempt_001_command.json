@@ -1,0 +1,10 @@
+[
+  "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+  "-m",
+  "pytest",
+  "-q",
+  "tests/test_runtime_upgrade.py",
+  "tests/test_deliberation_upgrade.py",
+  "--basetemp",
+  "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/postfix_attempt_001_temp"
+]

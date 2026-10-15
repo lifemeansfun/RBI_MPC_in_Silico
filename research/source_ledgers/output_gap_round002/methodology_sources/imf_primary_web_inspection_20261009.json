@@ -1,0 +1,327 @@
+7. Seasonal Adjustment (https://www.elibrary.imf.org/display/book/9781475589870/ch007.xml)
+citeturn103search0 [wordlim: 200] Published: 7.9 years ago; Crawled: 2 weeks ago; Such effects are not part of the underlying linear data generation process assumed for the original series. ... X-13A-S produces a chart comparing the final seasonal factors with the SI ratios (see the example in Figure 7.3). ... ### Length of the Series for Seasonal Adjustment ... 7.115 For QNA variables, it is recommended that at least five years of data (20 quarters) be used for seasonal adjustment. ... Both sliding spans and revisions history require a minimum length of the time series which depend on the length of the filters used in seasonal adjustment.
+
+7. Seasonal Adjustment
+
+Author:
+
+Mr. Kwangwon Lee
+
+Mr. Kwangwon Lee
+Search for other papers by Mr. Kwangwon Lee in
+Current site
+Google Scholar
+
+Language:
+    English
+
+Print Publication Date:
+    06 Nov 2018
+
+Keywords:
+    M&G; early estimate; QNA estimate; time series; QNA series; calendar effect; adjusted series; current price; seasonal adjustment; adjusted data; Adjustment process; Natural disasters
+
+## Abstract
+
+The purpose of seasonal adjustment is to identify and estimate the different components of a time series, and thus provide a better understanding of the underlying trends, business cycle, and short-run movements in the series. Seasonal adjustment offers a complementary view on the current developments of macroeconomic series, allowing comparisons between quarters without the influence of seasonal and calendar effects. This chapter introduces the main principles of seasonal adjustment. Practical guidance is provided on how to evaluate and validate the quality of seasonally adjusted data. Finally, some specific issues arising from the application of seasonal adjustment in the framework of national accounts are considered, such as the direct versus indirect adjustment of quarterly national accounts (QNA) aggregates and the temporal consistency with annual benchmarks.
+
+## Introduction
+
+7.1 Seasonal adjustment of the QNA allows a timely assessment of the current economic conditions and identification of turning points in key macroeconomic variables, such as quarterly gross domestic product (GDP). Economic variables are influenced by systematic and recurrent within-a-year patterns due to weather and social factors, commonly referred to as the seasonal pattern (or seasonality). When seasonal variations dominate period-to-period changes in the original series (or seasonally unadjusted series), it is difficult to identify nonseasonal effects, such as long-term movements, cyclical variations, or irregular factors, which carry the most important economic signals for QNA users.
+
+7.2 Seasonal adjustment is the process of removing seasonal and calendar effects from a time series. This process is performed by means of analytical techniques that break down the series into components with different dynamic features. These components are unobserved and have to be identified from the observed data based on a priori assumptions on their expected behavior. In a broad sense, seasonal adjustment comprises the removal of both within-a-year seasonal movements and the influence of calendar effects (such as the different number of working days or moving holidays). By removing the repeated impact of these effects, seasonally adjusted data highlight the underlying long-term trend and short-run innovations in the series.
+
+7.3 In trend-cycle estimates, the impact of irregular events in addition to seasonal variations is removed. Adjusting a series for seasonal variations removes the identifiable, regularly repeated influences on the series but not the impact of any irregular events. Consequently, if the impact of irregular events is strong, seasonally adjusted series may not represent a smooth, easily interpretable series. ## Main Principles of Seasonal Adjustment
+
+7.10 For seasonal adjustment purposes, a time series is generally assumed to be made up of four main components: (i) the trend-cycle component, (ii) the seasonal component, (iii) the calendar component, and (iv) the irregular component. These components are unobserved and have to be identified (and estimated) from the observed time series using a signal extraction technique.
+
+7.11 The trend-cycle component (T_{t}) is the underlying path of the series. It includes both the long-term trend and the business-cycle movements in the data. The long-term trend can be associated with structural changes in the economy, such as population growth and progress in technology and productivity. Business-cycle variations are related to the periodic oscillations of different phases of the economy (i.e., recession, recovery, growth, and decline), which generally repeat themselves with a period between two and eight years.
+
+7.12 The seasonal component (S_{t}) includes those seasonal fluctuations that repeat themselves with similar annual timing, direction, and magnitude.These effects are modeled through specific intervention variables. The different types of outliers are shown in Figure 7.1. Further details on the treatment of outlier effects is given in “Preadjustment” section.
+
+Image: Figure 7.1[Button: View Full Size ]
+
+Image: Figure 7.1
+
+^{Figure 7.1}
+
+Types of Outliers
+
+     * Download Figure
+     * Download figure as PowerPoint slide
+
+  2. White Noise Effects. In the absence of outliers, the irregular component is assumed to be a random variable with normal distribution, uncorrelated at all times with constant variance. In statistical terms, such a variable is called a white noise process. Differently from outlier effects, a white noise process is assumed to be part of the underlying linear data generation process of the series.
+
+7.15 The purpose of seasonal adjustment is to identify and estimate the different components of a time series, and thus provide a better understanding of the underlying trends, business cycle, and short-run movements in the series. The target variable of a seasonal adjustment process is the series adjusted for seasonal and calendar effects (or seasonally and calendar adjusted series). As mentioned before, both seasonal and calendar effects should be removed from the original series to allow for a correct analysis of the current economic conditions.
+
+7.16 A fundamental prerequisite for applying seasonal adjustment procedures is that the processed series should present clear and sufficiently stable seasonal effects. Series with no seasonal effects, or series with seasonal effects that are not easy to identify from the original series, should not be seasonally adjusted. As discussed in the next section, the original series should always be tested for the presence of identifiable seasonality. At the same time, the series should also be tested for the presence of calendar effects. Calendar effects are usually less visible than seasonal effects, therefore their identification relies on statistical tests that reveal when their contribution to the series is statistically different from zero.
+
+7.17 Two observations on the limits of seasonal adjustment are worth noting here. First, seasonal adjustment is not meant for smoothing series. A seasonally adjusted series^{9} is the sum of the trend-cycle component and the irregular component. As a consequence, when the irregular component is strong, the seasonally adjusted series may not present a smooth pattern over time. To extract the trend-cycle component, the irregular component should be further removed from the seasonally adjusted series. Trend-cycle extraction is a difficult exercise and subject to greater uncertainty than seasonal adjustment, especially in the final period of a series.
+
+7.18 Second, seasonal adjustment and trend-cycle estimation represent an analytical processing of the original data. As such, the seasonally adjusted data and the estimated trend-cycle component complement the original data, but they can never replace the original data for the following reasons:
+
+  1. Unadjusted data are useful in their own right. The nonseasonally adjusted data show the actual economic events that have occurred, while the seasonally adjusted data and the trend-cycle estimate represent an analytical elaboration of the data designed to show the underlying movements that may be hidden by the seasonal variations. ## Seasonal Adjustment Procedure
+
+7.20 A seasonal adjustment procedure follows a two-stage approach (see the diagram in Box 7.2). The first stage is called preadjustment. The objective of pre-adjustment is to select a regression model with ARIMA errors that best describes the characteristics of the original series. The chosen model is used to adjust the series for deterministic effects (from which the name “preadjustment” is taken) and to extend the series with backcasts and forecasts to be used in the time series decomposition process. The preadjustment stage comprises mainly the choice of (i) how the unobserved components are related to each other (additive, multiplicative, or other mixed forms), (ii) the order of the ARIMA model, (iii) calendar effects,^{10} and (iv) outliers and other intervention variables.
+
+7.21 The second stage performs a decomposition of the preadjusted series into unobserved components. The series adjusted for deterministic effects is decomposed into three unobserved components: trend-cycle, seasonal, and irregular. q2 2013  |  |  |  |  |  |  |  |  |  |  | 114.3  | 0.7  | 115.1  | 1.2  | 115.0  | 1.3
+q3 2013  |  |  |  |  |  |  |  |  |  |  |  |  | 117.2  | 1.9  | 117.2  | 1.9
+q4 2013  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 116.8  | −0.3
+
+However, parameters are reestimated every time new observations are added to the series (i.e., parameters are concurrently estimated every time new data are available). Between two review periods, models and options should be checked for adequacy. Changes between review periods should be made only when exceptional events occur and require special treatment in the adjustment. Otherwise, revisions to seasonally adjusted data are determined only by changes in the estimated parameters.
+
+^{Example 7.4}
+
+Concurrent Adjustment versus Current Adjustment
+
+Concurrent adjustment versus current adjustment (one-year-ahead forecast of seasonal factors)
+
+(Original unadjusted data in Figure 7.2)
+
+Image[Button: View Full Size ]
+
+Image
+
+  * Download Figure
+  * Download figure as PowerPoint slide
+
+Image: article image
+
+[Button: View Table ]
+
+Quarter  | Concurrent Seasonal Adjustment (up to 2013q4)  | Rate of Change (%)  | Fixed Seasonal Factors from 2013q1  | Rate of Change (%)
+--- | --- | --- | --- | ---
+q1 2010  | 105.9  | −2.0  | 105.7  | −2.2
+q2 2010  | 106.9  | 1.0  | 106.9  | 1.1
+q3 2010  | 108.6  | 1.6  | 108.8  | 1.8
+q4 2010  | 108.3  | −0.3  | 108.4  | −0.4
+q1 2011  | 109.0  | 0.7  | 108.7  | 0.3
+q2 2011  | 110.1  | 0.9  | 109.9  | 1.1
+q3 2011  | 109.4  | −0.6  | 109.8  | −0.2
+q4 2011  | 111.2  | 1.7  | 111.2  | 1.4
+q1 2012  | 113.0  | 1.6  | 112.6  | 1.2
+q2 2012  | 111.6  | −1.3  | 111.4  | −1.1
+q3 2012  | 112.0  | 0.4  | 112.6  | 1.1
+q4 2012  | 113.5  | 1.4  | 113.6  | 0.9
+q1 2013  | 113.6  | 0.1  | 112.8  | −0.8
+q2 2013  | 115.0  | 1.3  | 114.8  | 1.8
+q3 2013  | 117.2  | 1.9  | 118.2  | 3.0
+q4 2013  | 116.8  | −0.3  | 116.7  | −1.3
+
+### Advanced Diagnostics
+
+7.94 X-13A-S offers two advanced diagnostic tools for evaluating the reliability of seasonal adjustment results. The first tool is the sliding spans diagnostic. It measures how stable the seasonal adjustment estimates are when different spans of data in the original series are considered in the estimation process. When the sliding spans statistics signal instability of the seasonally adjusted data, this may indicate the presence of breaks in the series or moving seasonality. The second tool is the revisions history diagnostic. It looks at the revisions of seasonally adjusted data for the most recent quarters when new data points are introduced. Both tools are very useful for comparing alternative options for the same seasonal adjustment filter (either X-11 or SEATS) or for comparing the same options using two different filters (X-11 vs. SEATS).
+
+7.95 When the sliding spans diagnostic is enabled,^{59} the program selects four spans of data from the series. The span length is automatically chosen between 6 and 11 years, depending on the seasonal filter selected, the length of the series, and its frequency (monthly or quarterly). Correlated movements in the component series, when subtracted, will cancel each other out in the balancing item, resulting in a more regular seasonally adjusted series. For value added, however, the estimate of intermediate consumption at the quarterly level may be absent or subject to high uncertainty; in that case, a direct seasonal adjustment of value added should be followed.
+
+7.104 In practice, the choice between direct and indirect seasonal adjustment may be guided by the expected uses of seasonally adjusted data. For some uses, preserving accounting and aggregation relationships in the data may be crucial, and the smoothness and stability of the derived series secondary. For other uses, the time-series properties of the derived estimates may be crucial, while accounting and aggregation relationships may be less important. If the differences are insignificant, accounting and aggregation relationships in the seasonally adjusted data should be guaranteed. When the indirect approach is preferred, seasonally adjusted aggregates should be checked to exclude the presence of residual seasonality using the F-test available in X-13A-S (see Box 7.4).
+
+7.105 Countries’ practices vary with respect to the choice between direct and indirect seasonal adjustment. Many countries obtain the seasonally adjusted QNA aggregates as the sum of adjusted components, while others prefer to adjust the totals independently, showing discrepancies between the seasonally adjusted total and the sum of the seasonally adjusted component series. Allocating discrepancies on components to achieve consistency should be avoided.
+
+7.106 X-13A-S offers a diagnostic tool to evaluate the direct and indirect adjustment of aggregates.^{64} The program calculates seasonally adjusted aggregates using the direct and indirect approaches and provides in output a set of statistics to compare the results (M diagnostics, measures of smoothness, frequency spectrum diagnostics, etc.). Furthermore, sliding spans and revision history diagnostics can be requested to assess which of the two approaches provides more stable and reliable seasonally adjusted results.
+
+Therefore, the best approach is to apply seasonal adjustment to price and volume series and derive seasonally adjusted data in current prices indirectly. However, seasonal adjustment of data in current prices should be preferred when the main data source is available in nominal terms. In any case, the residual item should always be tested because indirect adjustment may induce residual seasonality.
+
+### Temporal Consistency with the Annual Accounts
+
+7.109 Annual totals based on the seasonally adjusted data will not automatically—and often should not conceptually—be equal to the corresponding annual totals based on the original unadjusted data. The number of working days, the impact of moving holidays, and other calendar effects vary from year to year. Similarly, moving seasonality implies that the impact of seasonal effects will vary from year to year. Thus, conceptually, for series with significant calendar effects or moving seasonality effects, the annual totals of a seasonally adjusted series should differ from the unadjusted series.
+
+7.110 Seasonal adjustment based on the additive model (1) without calendar effects or moving seasonality will produce seasonally adjusted data that add up to the corresponding unadjusted annual totals. In the case of multiplicative seasonal adjustment with no significant calendar or moving seasonality effects, the difference between the annual totals of the adjusted and unadjusted series will depend on the amplitude of the seasonal variation, the volatility of the seasonally adjusted series, and the pace of the change in the underlying trend cycle. The difference will be small, and often insignificant, for series with moderate to low seasonal amplitudes and for series with little volatility and trend-cycle change.
+
+7.111 In the QNA, it is generally considered acceptable to force seasonally adjusted series to annual benchmarks of the national accounts. From a user’s point of view, consistent quarterly and annual estimates are generally preferred. However, there are no reasons for forcing seasonally adjusted series when there are significant calendar effects or evolving seasonal patterns.^{67} In fact, consistency with the annual series would be achieved at the expense of the quality of the seasonal adjustment.^{68}
+
+7.112 When a series is adjusted for calendar effects and these effects lead to significant changes in the annual rates, the seasonally adjusted data should be benchmarked to the annual data adjusted for calendar effects (see also paragraph 7.44). The annual data adjusted for calendar effects should be derived as the sum of quarterly data adjusted for calendar effects. For practical considerations, however, countries may choose to benchmark seasonally adjusted data to the original annual aggregates of national accounts. Maintaining two systems of annual data (unadjusted and adjusted for calendar effects) can be a challenging task for national accounts compilers. Users may also be puzzled when the results are different and the differences are not sufficiently explained by metadata.
+
+7.113 X-13A-S provides an option for benchmarking the seasonally adjusted data to the annual original (or calendar adjusted) totals.^{69} When this option is not chosen (i.e., when seasonally adjusted data are not benchmarked to the annual unadjusted data), the differences between the annual unadjusted data and the annual aggregation of seasonally (and calendar) adjusted data should be checked for plausibility. For example, different rates of change between unadjusted data and adjusted data for working days should be coherent with movements in the number of working days. When the number of working days in a year is larger (smaller) than the number of working days in the previous one, the rate of change in the annual adjusted series should be lower (higher) than the rate of change in the unadjusted series.
+
+### Length of the Series for Seasonal Adjustment
+
+7.114 Seasonal adjustment requires sufficiently long time series for delivering results with acceptable quality. When a series is too short, it may be difficult to identify a stable seasonal pattern and significant calendar effects from a small number of observations. Moreover, the estimated coefficients of the regARIMA model would be characterized by large uncertainty. This may have consequences in the reliability of the seasonally adjusted series, with the potential risk of large revisions when new data points are added to the series. Such risks are higher with model-based methods than with MA methods, as model-based methods (like SEATS) rely heavily on the results of the estimation process.
+
+7.115 For QNA variables, it is recommended that at least five years of data (20 quarters) be used for seasonal adjustment. Time series with less than five years of data^{70} may be seasonally adjusted for internal use, but not published until five complete years are available and the stability of results seems acceptable. Better results are to be expected when the data span more than five years. When starting a new QNA system, unadjusted data should be reconstructed as far back as possible before applying seasonal adjustment procedures.
+
+7.116 Seasonal adjustment may also return questionable results for very long series. A long series may be affected by discontinuities and structural breaks in the seasonal pattern due to the existence of different economic conditions over a long period of time. Some breaks can be accounted for in the regARIMA model by means of outliers or specific intervention variables in the preadjustment stage, but it may be more difficult to model an evolving seasonal pattern. Furthermore, the assumption of fixed calendar effects may not be tenable for long time spans. For example, the average impact of one working day on production activities today is likely to be different from the impact of one working day 20–30 years ago due to productivity changes, different working regulations, or other structural factors.
+
+7.117 When seasonal adjustment results are unsatisfactory for long series, it may be worth dividing the series in two (or more) contiguous periods characterized by relative stability and applying seasonal adjustment to each subperiod separately. The resulting seasonally adjusted series should be linked together to create a consistent, long time series. For calendar effects, stability of parameter estimates should be evaluated over time. When the impact of calendar effects significantly changes over time, it is advisable to estimate these effects from the most recent span in order to increase the precision of the latest seasonally adjusted data.
+
+### Seasonally Adjusting Indicators or QNA Series?
+
+7.118 Seasonal adjustment can be applied either to monthly or quarterly indicators, or to unadjusted QNA series (i.e., to quarterly series benchmarked to ANA levels and consistent with other QNA variables). When seasonal adjustment is applied to indicators, the seasonally adjusted indicator is used to derive QNA data in seasonally adjusted form. When seasonal adjustment is applied to unadjusted QNA series, the seasonally adjusted QNA series is obtained as a result from the chosen seasonal adjustment method. Both approaches are equally acceptable. An advantage of applying seasonal adjustment directly to indicators is that seasonal effects originate from actual data sources; instead, unadjusted QNA series may contain artificial seasonality introduced by QNA techniques (e.g., benchmarking or chain-linking methods). On the other hand, unadjusted QNA series have the advantage of being consistent with other variables in the QNA. When seasonal adjustment is applied to consistent QNA series, one may expect to see a high degree of consistency in the seasonality of production, expenditure, and income components of the GDP.
+
+7.119 This choice should consider the effects of temporal aggregation on seasonal adjustment, in particular whether the seasonal and calendar adjustment should be done at the monthly or quarterly frequency. As explained in “Preadjustment” section, calendar effects are better identified and estimated on monthly series than on quarterly series. Calendar adjustment on quarterly data should only be considered when indicators are not available on a monthly basis. Because QNA series are not available at the monthly frequency, the best approach is to identify and estimate calendar effects on monthly indicators. For seasonal adjustment, the choice between monthly or quarterly adjustment is less obvious. Studies have been conducted on this issue but conclusions are still unclear.^{71} In general, it is preferred to apply seasonal adjustment on quarterly series when temporal aggregation reduces the variance of the irregular component in the monthly series.
+
+### Organizing Seasonal Adjustment in the QNA
+
+7.120 Many series are well behaved and easy to seasonally adjust, requiring little intervention from the user. Seasonal adjustment programs (such as X-13A-S or TRAMO-SEATS) offer automatic selection procedures that give satisfactory results for the majority of time series. Thus, lack of experience in seasonal adjustment or lack of staff with particular expertise in seasonal adjustment should not preclude one from starting to compile and publish seasonally adjusted estimates. Before compiling seasonally adjusted estimates, however, the main focus of compilation and presentation should be on the unadjusted QNA data.
+
+7.121 For problematic series, substantial experience and expertise may be required to determine whether the seasonal adjustment is done properly or to fine-tune the seasonal adjustment options. In particularly unstable series with a strong irregular component (e.g., outliers and other special events, seasonal breaks, or level shifts), it may be difficult to derive satisfactory results without sufficient experience. In the medium term, the team responsible for seasonal adjustment should build skills and knowledge (both theoretical and practical) to be able to handle the adjustment of problematic series.
+
+7.122 It is generally recommended that the statisticians who compile the statistics should also be responsible—either solely or together with seasonal adjustment specialists—for seasonally adjusting the statistics. This arrangement should give them greater insight into the data, make their job more interesting, help them understand the nature of the data better, and lead to improved quality of both the original unadjusted data and the seasonally adjusted data. However, it is advisable in addition to set up a small central group of seasonal adjustment experts, because the in-depth seasonal adjustment expertise required to handle ill-behaved series can only be acquired by hands-on experience with seasonal adjustment of many different types of series.
+
+## Status and Presentation of Seasonally Adjusted and Trend-Cycle QNA Estimates
+
+7.123 The status and presentation of seasonally adjusted and trend-cycle QNA estimates vary. Some countries publish seasonally adjusted estimates for only a few main aggregates and present them as additional (sometimes unofficial) analytical elaborations of the official data. Other countries focus on the seasonally adjusted and trend-cycle estimates and publish an almost complete set of seasonally adjusted and trend-cycle QNA estimates in a reconciled accounting format. Data adjusted for calendar effects may also be published separately. This presentation makes the impact of calendar effects on the QNA aggregates visible for users.
+
+7.124 The mode of presentation also varies substantially. Seasonally adjusted and trend-cycle data can be presented as charts; as tables with the actual data, either in money values or as index series; and as tables with derived measures of quarter-to-quarter rates of change. Calendar adjusted data should be presented in the same manner as the original unadjusted data (generally in levels and year-on-year changes). Quarter-to-quarter rates of change are not appropriate for calendar adjusted data, because these data still contain seasonal effects which may dominate quarterly movements.
+
+7.125 Quarter-to-quarter rates of change should be presented as actual rates of change between one quarter and the previous one. Growth rates are sometimes annualized to make it easier for the user to interpret the data. Most users have a feel for the size of annual rates of change but not for monthly or quarterly ones. Annualizing growth rates, however, also means that the irregular effects are compounded. Irrespective of whether the actual or annualized quarterly rates of change are presented, it is important to clearly indicate what the data represent.
+
+7.126 Growth rates representing different measures of change can easily be confused unless it is clearly indicated what the data represent. For instance, terms like “annual percentage change” or “annual rate of growth” can mean (a) the rate of change from one quarter to the next annualized (at annual rate); (b) the change from the same period of the previous year; (c) the change from one year to the next in annual data or, equivalently, the change from the average of one year to the average of the next year; or (d) the change from the end of one year to the end of the next year.
+
+^{Figure 7.4}
+
+Presentation of the Seasonally Adjusted Series and Trend-Cycle Component
+
+(Based on data from Example 7.1)
+
+Presenting the seasonally adjusted series and the trend-cycle component in the same chart highlights the overall development in the two series over time, including the uncertainty of the irregular component. Users should be informed that trend-cycle estimates of the latest observations are subject to high uncertainty and should be taken with caution.
+
+  * Download Figure
+  * Download figure as PowerPoint slide
+
+Summary of Key Recommendations
+
+  * Seasonally adjusted data in the QNA should be calculated to facilitate the analysis of current economic developments without the influence of seasonal and calendar effects. However, seasonally adjusted data should not replace the unadjusted QNA data.
+
+  * A series should be seasonally adjusted only when there is evidence of identifiable seasonality. Series with no seasonality or too unstable seasonality should not be seasonally adjusted.
+
+  * QNA series should also be adjusted for calendar effects. However, the adjustment should be done only for those series for which there is statistical evidence and economical interpretation of calendar effects.
+
+  * In the preadjustment stage, deterministic effects should be identified and removed from the series using regression models and diagnostics.
+
+  * Decomposition of the (preadjusted) series should be conducted using either the moving average X-11 method or the model-based SEATS method. The X-13A-S program, which implements both X-11 and SEATS, is the recommended procedure for seasonal adjustment in the QNA.
+
+  * Seasonal adjustment results should be evaluated using basic and advanced diagnostics. Seasonally adjusted series with residual seasonality should not be accepted.
+
+  * Seasonally adjusted data should be updated using a partial concurrent strategy. In a partial concurrent strategy, models and options for seasonal adjustment are selected at established review periods (usually once a year). In nonreview periods, seasonal adjustment models and options are kept fixed but parameters are reestimated each time a new observation is added.
+
+  * The full seasonally adjusted series should be revised anytime the seasonal adjustment model is changed or updated. In non-review periods, seasonally adjusted data should at least cover the revision period of the unadjusted data.
+
+  * Revisions studies of seasonally adjusted QNA data should be conducted on a regular basis to identify where revisions are large and systematic.
+
+  * Due to moving seasonality and calendar effects, seasonally adjusted data may not be consistent with corresponding annual data. However, seasonally adjusted data could be benchmarked to annual benchmarks of national accounts for consistency reasons. When the series is adjusted for calendar effects, the seasonally adjusted data should be benchmarked to annual benchmarks adjusted for calendar effects.
+
+  * A minimum of five years is required to seasonally adjust QNA series. Shorter series may be adjusted for internal use but not disseminated.
+
+  * Seasonally adjusted data of the main QNA aggregates should be released to the public. Trend-cycle component and calendar adjusted data could also be disseminated. Metadata on seasonal adjustment models and revision policy should be made available for transparency.
+
+
+^{}50
+
+See among others Dagum (1982) and Wallis (1982).
+
+^{}51
+
+To preserve stability of seasonally adjusted series, previously identified models and options should be maintained as much as possible. Changes should be done only when they are supported by better statistical tests and diagnostics.
+
+^{}52
+
+For example, in the standard X-11 filter for quarterly series, zero weights are assigned to observations that are distant five or more years.
+
+^{}53
+
+X-13A-S provides a wide range of diagnostics to assess the seasonal adjustment results, both for the preadjustment and decomposition stages. Most of them apply equally to the X-11 and SEATS filters; therefore with X-13A-S, it is possible to compare alternative adjustments with a common set of quality measures.
+
+^{}54
+
+Both sliding spans and revisions history require a minimum length of the time series which depend on the length of the filters used in seasonal adjustment.
+
+^{}55
+
+A seasonal plot for quarterly series splits the series into four subseries by quarter and plots each quarter against the years. The average value for each quarter is usually shown in each subplot. Chart 7.3 is an example of seasonal plot of seasonal–irregular ratios.
+
+^{}56
+
+The M7 statistic can also be helpful to determine whether identifiable seasonality is present, as explained later.
+
+^{}57
+
+Absence of seasonal and calendar effects can also be verified by looking at the spectrum diagnostics available in X-13A-S. For more details, see section 6.1 “Spectral Plots” of the X-13A-S refference manual (U.S. Census Bureau, 2013).
+
+^{}58
+
+The airline model may not provide an admissible decomposition when the seasonal MA parameter is large and positive.
+
+^{}59
+
+In X-13A-S, the spec name for the sliding spans diagnostic is SLIDINGSPANS; the spec name for revisions history is HISTORY.
+
+^{}60
+
+For the series used in this chapter, the span length selected is eight years and the four spans are q1 2004–q4 2010, q1 2005–q4 2011, q1 2006–q4 2012, and q1 2007–q4 2013.
+
+^{}61
+
+For a discussion on the direct versus indirect adjustment in the QNA, see paragraph 134.
+
+^{}62
+
+However, for chain-linked series, these accounting relationships are already broken (see Chapter 8 on nonadditivity of chain-linked measures in monetary terms).
+
+^{}63
+
+See, among others, Dagum and Morry (1984).
+
+^{}64
+
+In X-13A-S, the spec name for comparing direct and indirect adjustment is COMPOSITE.
+
+^{}65
+
+Experience has shown that the price data may not always show identifiable seasonal variations.
+
+^{}66
+--------------------------------------------------------------------------------
+7 ADJUSTING FOR QUALITY CHANGE (https://www.elibrary.imf.org/display/book/9789221136996/C07.xml)
+citeturn103search1 [wordlim: 200] Published: 22.1 years ago; Crawled: last month; 7.114 Finally, Bascher and Lacroix (1999) list several requirements for successful design and use of hedonic quality adjustment in the consumer price index, noting that these require heavy investments over a long period involving: ... 7.115 Hedonic methods may also improve quality adjustment in the consumer price index by indicating which product attributes do not appear to have material impacts on price. ... Paragraphs 7.110 to 7.115 stress the need for caution in the use of hedonic regressions for quality adjustments; some of the theoretical and econometric aspects are considered in Chapter 21.
+
+7.114 Finally, Bascher and Lacroix (1999) list several requirements for successful design and use of hedonic quality adjustment in the consumer price index, noting that these require heavy investments over a long period involving:
+
+  * intellectual competencies and sufficient time to develop and reestimate the model, and to employ it when products are replaced;
+
+  * access to detailed, reliable information on product characteristics;
+
+  * a suitable organization of the infrastructure for collecting, checking and processing information.
+
+7.115 Hedonic methods may also improve quality adjustment in the consumer price index by indicating which product attributes do not appear to have material impacts on price. That is, if a replacement item differs from the old item only in characteristics that have been rejected as price-determining variables in a hedonic study, this would support a decision to treat the items as comparable or equivalent to and include the entire price difference, if any, as pure price change. --------------------------------------------------------------------------------
+7. Seasonal Adjustment in: Quarterly National Accounts Manual (2017 Edition) (https://www.elibrary.imf.org/abstract/book/9781475589870/ch007.xml)
+citeturn103search2 [wordlim: 200] Published: 7.9 years ago; Crawled: 3 weeks ago; q2 2013  |  |  |  |  |  |  |  |  |  |  | 114.3  | 0.7  | 115.1  | 1.2  | 115.0  | 1.3 ... Both sliding spans and revisions history require a minimum length of the time series which depend on the length of the filters used in seasonal adjustment. ... For the series used in this chapter, the span length selected is eight years and the four spans are q1 2004–q4 2010, q1 2005–q4 2011, q1 2006–q4 2012, and q1 2007–q4 2013.
+
+^{}50
+
+See among others Dagum (1982) and Wallis (1982).
+
+^{}51
+
+To preserve stability of seasonally adjusted series, previously identified models and options should be maintained as much as possible. Changes should be done only when they are supported by better statistical tests and diagnostics.
+
+^{}52
+
+For example, in the standard X-11 filter for quarterly series, zero weights are assigned to observations that are distant five or more years.
+
+^{}53
+
+X-13A-S provides a wide range of diagnostics to assess the seasonal adjustment results, both for the preadjustment and decomposition stages. Most of them apply equally to the X-11 and SEATS filters; therefore with X-13A-S, it is possible to compare alternative adjustments with a common set of quality measures.
+
+^{}54
+
+Both sliding spans and revisions history require a minimum length of the time series which depend on the length of the filters used in seasonal adjustment.
+
+^{}55
+
+A seasonal plot for quarterly series splits the series into four subseries by quarter and plots each quarter against the years. The average value for each quarter is usually shown in each subplot. Chart 7.3 is an example of seasonal plot of seasonal–irregular ratios.
+
+^{}56
+
+The M7 statistic can also be helpful to determine whether identifiable seasonality is present, as explained later.
+
+^{}57
+
+Absence of seasonal and calendar effects can also be verified by looking at the spectrum diagnostics available in X-13A-S. For more details, see section 6.1 “Spectral Plots” of the X-13A-S refference manual (U.S. Census Bureau, 2013).
+
+^{}58
+
+The airline model may not provide an admissible decomposition when the seasonal MA parameter is large and positive.
+
+^{}59
+

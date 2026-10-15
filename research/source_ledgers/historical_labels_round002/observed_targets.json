@@ -1,0 +1,845 @@
+{
+  "channels": {
+    "exact_rate_disagreement": [
+      {
+        "meeting_date": "2020-10-09",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-05-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      }
+    ],
+    "formal_stance_dissent": [
+      {
+        "meeting_date": "2020-10-09",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-05-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": null,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      }
+    ],
+    "literal_rate_no": [
+      {
+        "meeting_date": "2020-10-09",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2020-12-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-02-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-04-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-06-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-08-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-10-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2021-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-02-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-04-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "mridul_saggar": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-05-04",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-08-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-09-30",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2022-12-07",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-02-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-04-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-06-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-08-10",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-10-06",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2023-12-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": false,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-02-08",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-04-05",
+        "member_targets": {
+          "ashima_goyal": false,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-06-07",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      },
+      {
+        "meeting_date": "2024-08-08",
+        "member_targets": {
+          "ashima_goyal": true,
+          "jayanth_varma": true,
+          "michael_patra": false,
+          "rajiv_ranjan": false,
+          "shaktikanta_das": false,
+          "shashanka_bhide": false
+        }
+      }
+    ]
+  },
+  "definitions": {
+    "committee_stance_category": "The leading published stance category. April and May 2022 remain accommodative while focusing on withdrawal; the complete clause is retained",
+    "date_definition": "meeting_date is decision date parsed from the minutes title; publication_date is the separate later minutes header",
+    "exact_rate_disagreement": "A recorded vote against the quantified rate resolution. For this original panel all literal No votes reject the committee rate quantum. This does not identify every alternative rate magnitude",
+    "formal_stance_dissent": "A recorded vote against the committee stance category or an explicit alternative binding stance vote. An attributed signed-statement vote resolves the four 2021-2022 summary reservations",
+    "guidance_disagreement": "Disagreement over the duration or formulation of forward guidance is separate from disagreement over the stance category",
+    "literal_rate_no": "The literal published Yes/No ballot cell on the committee rate resolution; not an inferred preference",
+    "stance_missing": "A stance reservation without an explicit against/alternative binding vote is null, not negative, affirmative or an invented abstention"
+  },
+  "version": "historical-observed-member-targets-v1"
+}

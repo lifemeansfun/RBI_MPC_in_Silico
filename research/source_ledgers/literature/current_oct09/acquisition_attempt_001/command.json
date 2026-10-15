@@ -1,0 +1,13 @@
+{
+  "operation": "ordinary public-source HTTP retrieval; no credentials",
+  "urls": {
+    "gwu_fomc_2025": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "argyle_arxiv_v1": "https://arxiv.org/pdf/2209.06899v1",
+    "bisbee_publisher": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B92267DC26195C7F36E63EA04A47D2FE/S1047198724000056a.pdf/synthetic-replacements-for-human-survey-data-the-perils-of-large-language-models.pdf",
+    "cummins_arxiv": "https://arxiv.org/abs/2509.13397",
+    "ssrn_fomc_record": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097"
+  },
+  "started_at_unix": 1791563644.071769,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit"
+}

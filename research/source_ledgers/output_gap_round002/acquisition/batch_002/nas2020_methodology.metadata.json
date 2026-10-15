@@ -1,0 +1,28 @@
+{
+  "id": "nas2020_methodology",
+  "url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/Notes%20on%20Methodology%20and%20Reasons%20for%20Revision%20in%20Estimates.pdf",
+  "filename": "nas2020_methodology.pdf",
+  "role": "official_vintage_methodology",
+  "discovery": "Primary-domain exact indexed URL",
+  "retrieved_at_utc": "2026-10-09T16:12:27.739894+00:00",
+  "status": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/Notes%20on%20Methodology%20and%20Reasons%20for%20Revision%20in%20Estimates.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:15:44 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "216557",
+    "Connection": "close",
+    "Last-Modified": "Tue, 21 Jul 2020 11:42:42 GMT",
+    "ETag": "\"5f16d4b2-34ded\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:15:44 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_002/raw/nas2020_methodology.pdf",
+  "bytes": 216557,
+  "sha256": "27d8232c12539315807514d36ad6e095a1e20ade7cafbb4a5d11df780436770a",
+  "primary_final_host": true,
+  "acquired": true
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rbi2021_gdp_constant_pdf",
+  "url": "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/156TEA0040C492024FA28F45F452A44EBD5E.PDF",
+  "filename": "rbi2021_gdp_constant.pdf",
+  "role": "Published quarterly constant-price GDP history in 2021 RBI Handbook",
+  "discovery": "Exact link in retained official rbi2021_index.html table row: Table 156 : Quarterly Estimates of Gross Domestic Product (At Constant Prices) New Series (Base : 2011-12) 11 kb 122 kb",
+  "retrieved_at_utc": "2026-10-09T16:20:47.136648+00:00",
+  "status": 200,
+  "final_url": "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/156TEA0040C492024FA28F45F452A44EBD5E.PDF",
+  "response_headers": {
+    "Set-Cookie": "TSa07da9d1029=08c70ea5e1ab28002f7558e10bd9d4b2e7783bc4c310980f7975a3a58491e872f854cf21d4c4da353c8efaf85d009303; Secure; Max-Age=30; Path=/",
+    "Cache-Control": "no-store, must-revalidate, no-cache, max-age=0",
+    "Content-Type": "text/html",
+    "Content-Length": "46321",
+    "Connection": "close",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "local_file": "acquisition/batch_005/raw/rbi2021_gdp_constant.pdf",
+  "bytes": 46321,
+  "sha256": "afb7571ef3698dca2f8f8018d8664a2c8a7e29fe627de3cf2d73846d2f0ffbb4",
+  "primary_final_host": true,
+  "acquired": true
+}

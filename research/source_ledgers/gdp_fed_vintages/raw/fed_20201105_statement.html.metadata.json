@@ -1,0 +1,28 @@
+{
+  "id": "fed_20201105_statement",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a.htm",
+  "format": "html",
+  "role": "statement",
+  "discovery_parent_id": "fed_calendar_2020",
+  "discovery_parent_sha256": "ca27c9dc9ead7c7b76f8fbe64bd604ed51e7bc478bd14c30911f11f90588f967",
+  "retrieved_at_utc": "2026-10-05T14:54:19.286729+00:00",
+  "status_code": 200,
+  "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a.htm",
+  "response_headers": {
+    "Date": "Mon, 05 Oct 2026 14:54:19 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "CF-Ray": "a45d42cc6cac3fe6-BOM",
+    "CF-Cache-Status": "REVALIDATED",
+    "Last-Modified": "Thu, 26 Feb 2026 22:33:56 GMT",
+    "Server": "cloudflare",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Content-Encoding": "gzip"
+  },
+  "bytes": 83013,
+  "acquired": true,
+  "local_file": "raw/fed_20201105_statement.html",
+  "sha256": "d9318e03e0236aa79d12416b0419bd990f6c0b66af7a3ff04ec45a964d15db3f"
+}

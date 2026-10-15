@@ -1,0 +1,7 @@
+{
+  "check": "Ad hoc completion/analysis/environment summary read",
+  "error": "KeyError: temporal_generalization_interval",
+  "cause": "Inspector expected an uncertainty field at top level rather than its declared nested location",
+  "classification": "inspection script failure; scientific artifacts unchanged",
+  "correction": "Read actual JSON key structure before rendering summary"
+}

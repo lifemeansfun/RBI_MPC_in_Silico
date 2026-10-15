@@ -1,6 +1,8 @@
 """
-Stage 2: Full Empirical Pipeline Execution Script.
-Executes the comprehensive, publication-grade academic workflow:
+ARCHIVAL Stage 2 demonstration (retained for the scientific record).
+Its original routine below is incompatible with the corrected research contracts
+and is disabled as an entry point. Use the offline reproduction command or a
+separately frozen live-study protocol. The archived routine formerly attempted:
 1. Validates real 25-meeting macroeconomic panel (data/processed/macro_panel.parquet)
 2. Loads quantitatively calibrated personas (personas/2020_2024_roster/)
 3. Runs panel backtesting over calibration (16) and holdout (8) sets with statutory aggregation (§45ZL)
@@ -33,7 +35,7 @@ from src.attribution.attribution_runner import AttributionRunner
 from src.reporting.report_builder import ReportBuilder
 
 
-async def main():
+async def _archival_main():
     print("=" * 76)
     print("      RBI MPC IN SILICO — FULL STAGE 2 EMPIRICAL PIPELINE EXECUTION")
     print("=" * 76)
@@ -186,6 +188,10 @@ async def main():
     print("\n" + "=" * 76)
     print("      STAGE 2 EMPIRICAL PIPELINE COMPLETED SUCCESSFULLY (ALL GATES GREEN)")
     print("=" * 76)
+
+
+async def main():
+    raise SystemExit('Archived Stage 2 entry point is incompatible with corrected source/persona contracts. Use scripts/reproduce_offline.py --output-root <new-directory> for saved-evidence verification; live evaluation requires a frozen protocol.')
 
 
 if __name__ == "__main__":

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "base": "/private/tmp/rbi_publish_20261015_c7xt8emf",
+  "export": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+  "export_method": "git checkout-index --all",
+  "index_tree": "99fb34ff5950f2a8343e6952168f6b92f45e7828",
+  "python": "Python 3.11.16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "environment_reused": true,
+  "environment_note": "Export uses existing compatible project venv; no new clean installation claimed",
+  "provider_generation_requested": false,
+  "phases": []
+}

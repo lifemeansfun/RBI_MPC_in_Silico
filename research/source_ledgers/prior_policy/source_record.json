@@ -1,0 +1,11 @@
+{
+  "url": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=50175",
+  "retrieved_utc": "2026-10-05T15:00:11.352266+00:00",
+  "sha256": "9ac9a2ebea6f300311a83df0e2d8d2f995aee057a249a70e847af1d058af95be",
+  "release_date": "2020-08-06",
+  "decision_date": "2020-08-06",
+  "repo_pct": 4.0,
+  "stance": "accommodative",
+  "availability_basis": "RBI dated resolution header; conservative next-day availability",
+  "limits": "Current endpoint bytes; no contemporaneous archive hash."
+}

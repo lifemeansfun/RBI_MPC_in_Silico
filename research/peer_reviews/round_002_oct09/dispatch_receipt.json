@@ -1,0 +1,19 @@
+{
+  "created_at_unix": 1791543716.5681112,
+  "snapshot": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/peer_reviews/round_002_oct09/input",
+  "file_count": 2690,
+  "snapshot_hash": "af0ae85191c87111eb3a88ab6fa817b0f2ee6ae501f5f6b76733bdc9affdaf02",
+  "excluded": [
+    "prior reviews",
+    "implementation plans",
+    "chat",
+    "memory",
+    "Git",
+    "credentials",
+    "caches",
+    "manuscript"
+  ],
+  "process_isolation": "Copied allowlist and fresh supplied context; shared host. Reviewer must disclose any inherited prior scientific context.",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "previous_goal_turn_classification": "no progress: scope correction only; this turn resumes work"
+}

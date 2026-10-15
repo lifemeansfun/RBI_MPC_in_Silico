@@ -1,0 +1,285 @@
+{
+  "sources": [
+    {
+      "source_id": "rbi_prid_63742",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+      "raw_path": "raw/rbi_prid_63742.html",
+      "sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+      "publication_date": "2026-10-07"
+    },
+    {
+      "source_id": "rbi_prid_63403",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63403",
+      "raw_path": "raw/rbi_prid_63403.html",
+      "sha256": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+      "publication_date": "2026-08-19"
+    },
+    {
+      "source_id": "rbi_prid_63287",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63287",
+      "raw_path": "raw/rbi_prid_63287.html",
+      "sha256": "979ecb6d861d0122faea3aee629947fa532ebe251c3be40477fae0022813ec21",
+      "publication_date": "2026-08-05"
+    },
+    {
+      "source_id": "rbi_prid_62974",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62974",
+      "raw_path": "raw/rbi_prid_62974.html",
+      "sha256": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+      "publication_date": "2026-06-19"
+    },
+    {
+      "source_id": "rbi_prid_62863",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62863",
+      "raw_path": "raw/rbi_prid_62863.html",
+      "sha256": "90f14ed8969bfe9071a3199b1e5f7926689899d8d30416c925db8af3eafa7787",
+      "publication_date": "2026-06-05"
+    },
+    {
+      "source_id": "rbi_prid_62599",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599",
+      "raw_path": "raw/rbi_prid_62599.html",
+      "sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+      "publication_date": "2026-04-22"
+    },
+    {
+      "source_id": "rbi_prid_62514",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62514",
+      "raw_path": "raw/rbi_prid_62514.html",
+      "sha256": "73a51a410134274f63d49fef7983ad5a5303d13f4ef60e8cfd94e8b42622b6ec",
+      "publication_date": "2026-04-08"
+    },
+    {
+      "source_id": "rbi_prid_62261",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261",
+      "raw_path": "raw/rbi_prid_62261.html",
+      "sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+      "publication_date": "2026-02-20"
+    },
+    {
+      "source_id": "rbi_prid_62169",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62169",
+      "raw_path": "raw/rbi_prid_62169.html",
+      "sha256": "dae3da104856053bbd879d8e54930604422a783e1e1dce112374e19c3e097231",
+      "publication_date": "2026-02-06"
+    },
+    {
+      "source_id": "rbi_prid_61856",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856",
+      "raw_path": "raw/rbi_prid_61856.html",
+      "sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+      "publication_date": "2025-12-19"
+    },
+    {
+      "source_id": "rbi_prid_61749",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61749",
+      "raw_path": "raw/rbi_prid_61749.html",
+      "sha256": "0cd9b1031fbe0911937180f65fd9ed12e95627d0cbdb48557e50034263d379fc",
+      "publication_date": "2025-12-05"
+    },
+    {
+      "source_id": "rbi_prid_61433",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433",
+      "raw_path": "raw/rbi_prid_61433.html",
+      "sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+      "publication_date": "2025-10-15"
+    },
+    {
+      "source_id": "rbi_prid_61332",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61332",
+      "raw_path": "raw/rbi_prid_61332.html",
+      "sha256": "daa21b4ce822e6bbd402d5fd0e769e87da9ecbe818bd431f8566d117c574452c",
+      "publication_date": "2025-10-01"
+    },
+    {
+      "source_id": "rbi_prid_61056",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056",
+      "raw_path": "raw/rbi_prid_61056.html",
+      "sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+      "publication_date": "2025-08-20"
+    },
+    {
+      "source_id": "rbi_prid_60957",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60957",
+      "raw_path": "raw/rbi_prid_60957.html",
+      "sha256": "e1b7dbe8879009efe75b64b3c908fef7abf584103533e35288eaaedfe38fa6b1",
+      "publication_date": "2025-08-06"
+    },
+    {
+      "source_id": "rbi_prid_60686",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+      "raw_path": "raw/rbi_prid_60686.html",
+      "sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+      "publication_date": "2025-06-20"
+    },
+    {
+      "source_id": "rbi_prid_60604",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60604",
+      "raw_path": "raw/rbi_prid_60604.html",
+      "sha256": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+      "publication_date": "2025-06-06"
+    },
+    {
+      "source_id": "rbi_prid_60279",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279",
+      "raw_path": "raw/rbi_prid_60279.html",
+      "sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+      "publication_date": "2025-04-23"
+    },
+    {
+      "source_id": "rbi_prid_60176",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60176",
+      "raw_path": "raw/rbi_prid_60176.html",
+      "sha256": "7776c1994d750c526e6525cce6109a685c0c47696b33265ef84867147bebf3bd",
+      "publication_date": "2025-04-09"
+    },
+    {
+      "source_id": "rbi_prid_59818",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818",
+      "raw_path": "raw/rbi_prid_59818.html",
+      "sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+      "publication_date": "2025-02-21"
+    },
+    {
+      "source_id": "rbi_prid_59692",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59692",
+      "raw_path": "raw/rbi_prid_59692.html",
+      "sha256": "012e5566aed59f426d8044aaab637ddb4413144efca2351af04d391c45d2cc72",
+      "publication_date": "2025-02-07"
+    },
+    {
+      "source_id": "rbi_prid_59347",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347",
+      "raw_path": "raw/rbi_prid_59347.html",
+      "sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+      "publication_date": "2024-12-20"
+    },
+    {
+      "source_id": "rbi_prid_59244",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59244",
+      "raw_path": "raw/rbi_prid_59244.html",
+      "sha256": "c178e98ca0bb0ad71e2f188250383f791b1262dc006a4352603223ff6bb7a9c3",
+      "publication_date": "2024-12-06"
+    },
+    {
+      "source_id": "rbi_prid_58958",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958",
+      "raw_path": "raw/rbi_prid_58958.html",
+      "sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+      "publication_date": "2024-10-23"
+    },
+    {
+      "source_id": "rbi_prid_58850",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58850",
+      "raw_path": "raw/rbi_prid_58850.html",
+      "sha256": "66d63803607bc7289bccc1d1d90ec4ca7c79ca5baf3387327ca21b5d8b43d4f0",
+      "publication_date": "2024-10-09"
+    }
+  ],
+  "meetings": [
+    {
+      "meeting_id": "rbi_mpc_2024-10-09",
+      "meeting_number": 51,
+      "meeting_start_date": "2024-10-07",
+      "decision_date": "2024-10-09",
+      "minutes_source_id": "rbi_prid_58958",
+      "resolution_source_id": "rbi_prid_58850"
+    },
+    {
+      "meeting_id": "rbi_mpc_2024-12-06",
+      "meeting_number": 52,
+      "meeting_start_date": "2024-12-04",
+      "decision_date": "2024-12-06",
+      "minutes_source_id": "rbi_prid_59347",
+      "resolution_source_id": "rbi_prid_59244"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-02-07",
+      "meeting_number": 53,
+      "meeting_start_date": "2025-02-05",
+      "decision_date": "2025-02-07",
+      "minutes_source_id": "rbi_prid_59818",
+      "resolution_source_id": "rbi_prid_59692"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-04-09",
+      "meeting_number": 54,
+      "meeting_start_date": "2025-04-07",
+      "decision_date": "2025-04-09",
+      "minutes_source_id": "rbi_prid_60279",
+      "resolution_source_id": "rbi_prid_60176"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-06-06",
+      "meeting_number": 55,
+      "meeting_start_date": "2025-06-04",
+      "decision_date": "2025-06-06",
+      "minutes_source_id": "rbi_prid_60686",
+      "resolution_source_id": "rbi_prid_60604"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-08-06",
+      "meeting_number": 56,
+      "meeting_start_date": "2025-08-04",
+      "decision_date": "2025-08-06",
+      "minutes_source_id": "rbi_prid_61056",
+      "resolution_source_id": "rbi_prid_60957"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-10-01",
+      "meeting_number": 57,
+      "meeting_start_date": "2025-09-29",
+      "decision_date": "2025-10-01",
+      "minutes_source_id": "rbi_prid_61433",
+      "resolution_source_id": "rbi_prid_61332"
+    },
+    {
+      "meeting_id": "rbi_mpc_2025-12-05",
+      "meeting_number": 58,
+      "meeting_start_date": "2025-12-03",
+      "decision_date": "2025-12-05",
+      "minutes_source_id": "rbi_prid_61856",
+      "resolution_source_id": "rbi_prid_61749"
+    },
+    {
+      "meeting_id": "rbi_mpc_2026-02-06",
+      "meeting_number": 59,
+      "meeting_start_date": "2026-02-04",
+      "decision_date": "2026-02-06",
+      "minutes_source_id": "rbi_prid_62261",
+      "resolution_source_id": "rbi_prid_62169"
+    },
+    {
+      "meeting_id": "rbi_mpc_2026-04-08",
+      "meeting_number": 60,
+      "meeting_start_date": "2026-04-06",
+      "decision_date": "2026-04-08",
+      "minutes_source_id": "rbi_prid_62599",
+      "resolution_source_id": "rbi_prid_62514"
+    },
+    {
+      "meeting_id": "rbi_mpc_2026-06-05",
+      "meeting_number": 61,
+      "meeting_start_date": "2026-06-03",
+      "decision_date": "2026-06-05",
+      "minutes_source_id": "rbi_prid_62974",
+      "resolution_source_id": "rbi_prid_62863"
+    },
+    {
+      "meeting_id": "rbi_mpc_2026-08-05",
+      "meeting_number": 62,
+      "meeting_start_date": "2026-08-03",
+      "decision_date": "2026-08-05",
+      "minutes_source_id": "rbi_prid_63403",
+      "resolution_source_id": "rbi_prid_63287"
+    },
+    {
+      "meeting_id": "rbi_mpc_2026-10-07",
+      "meeting_number": 63,
+      "meeting_start_date": "2026-10-05",
+      "decision_date": "2026-10-07",
+      "minutes_source_id": null,
+      "resolution_source_id": "rbi_prid_63742"
+    }
+  ]
+}

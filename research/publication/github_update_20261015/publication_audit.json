@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "baseline_main": "7f2436bc4f32d6021b1e885eb49286c850de9139",
+  "previous_upgrade_tip": "78de7f75bda03d696205b188af17b9540e02a172",
+  "branch": "project_upgrade_codex",
+  "scope": "curated preservation checkpoint; no live scientific evaluation",
+  "payload_files": 9480,
+  "payload_bytes": 475685701,
+  "selected_new_files_by_top_level": {
+    "data": 181,
+    "results": 3073,
+    "research": 3814,
+    "scripts": 2,
+    "personas": 9,
+    "outputs": 14,
+    "tests": 19,
+    "runs": 77,
+    "src": 22,
+    "PROJECT_STATUS.md": 1
+  },
+  "credential_pattern_scan": {
+    "files_scanned": 9477,
+    "findings": [
+      {
+        "path": "research/source_ledgers/cpi_vintages/raw/2021-10_url.html",
+        "category": "google_key"
+      },
+      {
+        "path": "research/source_ledgers/gdp_fed_vintages/raw/gdp_20210831.html",
+        "category": "google_key"
+      }
+    ],
+    "scope": "recognizable private-key and provider token patterns in selected text/XML; credentials file not read; not an exhaustive secret detector",
+    "reviewed_false_positives": [
+      {
+        "path": "research/source_ledgers/cpi_vintages/raw/2021-10_url.html",
+        "category": "google_key",
+        "resolution": "false positive: character sequence inside public source-page base64 ASP.NET VIEWSTATE; no standalone credential"
+      },
+      {
+        "path": "research/source_ledgers/gdp_fed_vintages/raw/gdp_20210831.html",
+        "category": "google_key",
+        "resolution": "false positive: character sequence inside public source-page base64 ASP.NET VIEWSTATE; no standalone credential"
+      }
+    ],
+    "unresolved_findings": [],
+    "status": "passed with documented false positives"
+  },
+  "non_zip_docx_fixtures": [],
+  "files_at_least_100_MiB": [],
+  "local_archives": [
+    {
+      "path": "research/peer_reviews/round_002_clean_defaults_oct09/complete_review_output.zip",
+      "bytes": 301506826,
+      "sha256": "4ae273d1328eb935ea01616f8becd8e0ecccba4ad0efb9817d4e4c3b4fef9b26",
+      "published": false,
+      "retained_locally": true
+    },
+    {
+      "path": "research/assessments/kazinnik_run_20261010T023656Z/FROZEN_SCIENTIFIC_INPUT.zip",
+      "bytes": 150877145,
+      "sha256": "a5489340606cf2e55bd546fe4b2890f70d7f2e5fd2864e67f009492244341157",
+      "published": false,
+      "retained_locally": true
+    },
+    {
+      "path": "research/peer_reviews/round_002_clean_defaults_oct09/frozen_scientific_input.zip",
+      "bytes": 94815152,
+      "sha256": "338fe7b3e0ddbb128877e91f53c8562ee52dcd91a3499ad6586814452c92644e",
+      "published": false,
+      "retained_locally": true
+    }
+  ],
+  "exclusion_policy_file": ".gitignore",
+  "excluded_files_deleted": false,
+  "main_merge_requested": false,
+  "manuscript_modified": false,
+  "current_manuscript_layout_verified": false,
+  "known_uncertainty_defect_fixed": false,
+  "scope_note": "Generated synthetic scratch files and temporary test budget databases removed from selection after initial scan; local originals retained.",
+  "new_verification": {
+    "isolated_tests_passed": 518,
+    "pytest_seconds": 196.24,
+    "offline_reproduction": "passed",
+    "fixture_validation": "passed",
+    "preserved_bundle_replay": "passed",
+    "provider_generation_requested": false,
+    "new_clean_environment_installation": false
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "action": "First secondary raw-fragment verifier",
+    "result": "AssertionError because Path.read_text normalized CRLF in raw copied HTML while stored offsets preserve original decoded bytes",
+    "correction": "verify_annotations_v2.py uses read_bytes().decode to preserve exact CRLF; first verifier retained unchanged",
+    "annotation_change": "none"
+  }
+]

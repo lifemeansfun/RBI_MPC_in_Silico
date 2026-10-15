@@ -1,0 +1,9 @@
+{
+  "evidence_scope": "Mock procedural diagnostic",
+  "n_meetings": 8,
+  "n_replicates": 2,
+  "generation_evidence_counts": {
+    "mock": 1344
+  },
+  "scientific_readiness": "Not established by saved-evidence verification or numerical threshold checks"
+}

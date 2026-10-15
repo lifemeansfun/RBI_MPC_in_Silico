@@ -1,0 +1,6 @@
+{
+  "command": ".venv/bin/python inline import openpyxl; inspect RBI2020 XLSX",
+  "exit_code": 1,
+  "error": "ModuleNotFoundError: No module named openpyxl",
+  "correction": "Use stdlib zipfile and XML to inspect retained XLSX; no dependency install"
+}

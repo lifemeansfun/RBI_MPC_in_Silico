@@ -1,0 +1,11 @@
+{
+  "artificial_conditional_simulator_eligible": 23,
+  "full_open_economy_comparator_eligible": 0,
+  "meetings_count": 38,
+  "missing_history_meetings": 6,
+  "missing_macro_meetings": 13,
+  "original_macro_meetings": 25,
+  "original_truth_meetings": 25,
+  "premeeting_forecasting_eligible": 0,
+  "unsupported_source_stance_meetings": 1
+}

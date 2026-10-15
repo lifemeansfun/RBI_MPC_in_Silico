@@ -1,0 +1,353 @@
+"""Strong, reproducible historical baselines; only published prior truth is usable."""
+from collections import Counter
+from datetime import date
+import hashlib
+import json
+from src.validation.metrics import MetricsEvaluator
+
+
+def fit_dissent_baseline(calibration_truth, cutoff="2023-04-06", *, information_cutoff="2023-04-30"):
+    if date.fromisoformat(cutoff).isoformat() != cutoff or date.fromisoformat(information_cutoff).isoformat() != information_cutoff:
+        raise ValueError('Baseline cutoffs must be ISO calendar dates')
+    if not calibration_truth or any(row['meeting_date'] > cutoff for row in calibration_truth):
+        raise ValueError('Holdout or empty truth in calibration')
+    if len({row['meeting_date'] for row in calibration_truth}) != len(calibration_truth):
+        raise ValueError('Duplicate calibration meeting')
+    for row in calibration_truth:
+        meeting, publication = date.fromisoformat(row['meeting_date']), date.fromisoformat(row['publication_date'])
+        if publication < meeting or row['publication_date'] >= information_cutoff:
+            raise ValueError('Calibration labels are unavailable at the declared selection freeze')
+    result = {'cutoff': cutoff, 'information_cutoff':information_cutoff,
+              'method': 'best constant dissent set per channel by calibration F1 then exact-match',
+              'selection_status': 'calibration only; cohort-specific',
+              'calibration_hash': hashlib.sha256(json.dumps(calibration_truth, sort_keys=True).encode()).hexdigest()}
+    for channel in ('rate_dissenters', 'stance_dissenters'):
+        candidates = sorted({tuple(sorted(row[channel])) for row in calibration_truth})
+        truth = [row[channel] for row in calibration_truth]
+        scored = []
+        for candidate in candidates:
+            precision, recall, f1, exact = MetricsEvaluator.compute_dissent_f1([candidate] * len(truth), truth)
+            scored.append((f1 if f1 is not None else -1, exact, candidate))
+        # Lexical tie-break is predetermined and recorded; no evaluation labels used.
+        result[channel] = list(max(scored, key=lambda item: (item[0], item[1], tuple(item[2])))[2])
+    return result
+
+
+def baseline_predictions(snapshots, truth, frozen_dissent):
+    by_date = {row['meeting_date']: row for row in truth}
+    if len(by_date) != len(truth):
+        raise ValueError('Duplicate truth meeting')
+    rows = []
+    for snapshot in snapshots:
+        # Entire minutes publication day precedes the meeting-start cutoff.
+        cutoff = snapshot.information_cutoff.date().isoformat() if snapshot.information_cutoff else snapshot.meeting_date
+        available = sorted([r for r in truth if r['publication_date'] < cutoff], key=lambda r:r['meeting_date'])
+        prior = available[-1] if available else None
+        for name in ('hold_previous_stance', 'lag_persistence', 'calibration_constant_dissent'):
+            rate = prior['actual_rate_bps'] if name == 'lag_persistence' and prior else 0
+            stance = prior['actual_stance'] if name == 'lag_persistence' and prior else snapshot.prev_stance
+            rate_dissent = prior['rate_dissenters'] if name == 'lag_persistence' and prior else []
+            stance_dissent = prior['stance_dissenters'] if name == 'lag_persistence' and prior else []
+            if name == 'calibration_constant_dissent':
+                if snapshot.meeting_date <= frozen_dissent['cutoff'] or cutoff < frozen_dissent['information_cutoff']:
+                    raise ValueError('Fitted baseline evaluated inside calibration')
+                rate_dissent, stance_dissent = frozen_dissent['rate_dissenters'], frozen_dissent['stance_dissenters']
+            rows.append({'meeting_date':snapshot.meeting_date, 'baseline':name, 'rate_bps':rate,
+                         'stance':stance, 'rate_dissenters':list(rate_dissent), 'stance_dissenters':list(stance_dissent),
+                         'source_prior_meeting':prior['meeting_date'] if prior else None,
+                         'evidence_type':'deterministic_baseline'})
+    return rows
+"""
+Pydantic schema for MPC Member Personas.
+Validates the structure of persona YAML profiles and prompt generation.
+"""
+
+from typing import Optional, Literal
+from pydantic import BaseModel, Field, ConfigDict
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS, StanceType
+
+
+class MemberPersona(BaseModel):
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
+
+    member_id: str
+    name: str
+    role: str = Field(description="Governor | Deputy Governor | Executive Director | External Member")
+    is_internal: bool = Field(description="True if RBI official, False if external government appointee")
+    tenure: str = Field(description="e.g. 2020-10 to 2024-10")
+    hawk_dove_score: float = Field(
+        ge=-1.0, le=1.0,
+        description="Hawk (+1.0) vs Dove (-1.0) score based on historical statements"
+    )
+    stance_bias: StanceType = Field(
+        default="withdrawal_of_accommodation",
+        description="Historical tendency on stance (withdrawal_of_accommodation, neutral, accommodative)"
+    )
+    voting_priority: str = Field(
+        description="Summary of primary monetary policy objective and behavioral posture"
+    )
+    biography: Optional[str] = Field(
+        default=None,
+        description="Double-blind qualitative abstract of academic/policy background for zero-shot prompting."
+    )
+    key_themes: list[str] = Field(
+        default_factory=list,
+        description="3-5 recurring economic concepts or arguments cited in official minutes"
+    )
+    system_prompt_override: Optional[str] = None
+    calibration_cutoff: Optional[str] = None
+    corpus_manifest_hash: Optional[str] = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    provenance_status: Literal["legacy_unverified", "dated_corpus", "assumed"] = "legacy_unverified"
+
+    def build_system_prompt(self, zero_shot_biography: bool = False, mask_identity: bool = False) -> str:
+        """Generates the grounded system prompt for the LLM agent.
+        If zero_shot_biography=True, explicit quantitative parameters are hidden to mitigate prompt endogeneity.
+        """
+        themes_str = "\n".join(f"- {theme}" for theme in self.key_themes)
+        role_type = "Internal RBI Official" if self.is_internal else "External Academic / Expert Appointee"
+        
+        prompt_lines = [
+            f"You are {'a simulated committee member' if mask_identity else self.name}, serving in a simulated RBI Monetary Policy Committee (MPC).",
+            f"Member ID: {self.member_id}",
+            f"Your institutional role: {self.role} ({role_type}).",
+            f"Persona evidence status: {self.provenance_status}.",
+            "",
+            "=== YOUR ECONOMIC PHILOSOPHY & MONETARY POSTURE ==="
+        ]
+
+        if zero_shot_biography and self.biography:
+            prompt_lines.extend([
+                "Supplied biography (its availability must be established by the experiment):",
+                f"{self.biography}",
+                "",
+                "Use only this supplied background, without recalling historical meeting outcomes."
+            ])
+        else:
+            prompt_lines.extend([
+                f"- Lexical orientation statistic: {self.hawk_dove_score:+.2f} (Scale: -1.0 Dove to +1.0 Hawk; not a validated structural preference)",
+                f"- Underlying Policy Priority: {self.voting_priority}",
+                "- Recurring Themes in Your Historical Signed Minutes:",
+                themes_str
+            ])
+
+        prompt_lines.extend([
+            "",
+            "=== INSTITUTIONAL INSTRUCTIONS & BEHAVIORAL RULES ===",
+            "1. You are deliberating in a simulation. Your outputs are generated statements, not actual official minutes.",
+            "2. Ground all arguments in Indian macroeconomic reality: CPI-Combined inflation (RBI 4.00% target with +/-2% band), monsoon progress and food price spikes, growth recovery, system liquidity, and US Fed policy spillovers.",
+            "3. Maintain your authentic personal perspective. Do not automatically collapse into consensus with the Governor unless the macroeconomic evidence genuinely warrants it.",
+            "4. You must cast votes strictly from the authorized action sets:",
+            "   - Rate Change: " + ", ".join(f"{a:+d}" if a > 0 else str(a) for a in RATE_ACTIONS_BPS) + " bps",
+            "   - Policy Stance: " + ", ".join(repr(s) for s in STANCE_ACTIONS),
+            "5. Always respond in the requested structured JSON format without markdown wrapping or conversational preambles."
+        ])
+        
+        return "\n".join(prompt_lines).strip()
+            raise ValueError("Expanded cutoff is inconsistent with meeting start")
+        soup = store.soups[str(relative)]
+        body = soup.select_one("#doublescroll")
+        if body is None or normalized(evidence["text"]) not in normalized(body.get_text(" ", strip=True)):
+            raise ValueError("Roster excerpt missing from raw source")
+        roster = _roster(row, row["roster_ids"], source, evidence["text"], previous_role_evidence=prior_roles)
+        meetings.append(roster)
+        for member in roster.members:
+            prior_roles[member.member_id] = (member.role_evidence_source, member.role_evidence_excerpt)
+        refs[source.source_id] = source
+    statements = []
+    for row in [json.loads(line) for line in statement_path.read_text().splitlines() if line.strip()]:
+        identifier = canonical_member_id(row["member_id"])
+        record = catalog[row["source_id"]]
+        source = refs[row["source_id"]]
+        if (row["source_sha256"] != source.source_sha256
+                or row["minutes_publication_date"] != record["publication_date"]):
+            raise ValueError("Statement publication/source differs from verified source ledger")
+        soup = store.soups[source.source_file]
+        body = soup.select_one("#doublescroll")
+        active, personal, heading = None, [], None
+        for elem in body.find_all(lambda e: e.name == "p" or (e.name == "span" and "head" in e.get("class", []))):
+            text = normalized(elem.get_text(" ", strip=True))
+            if text.startswith("Statement by"):
+                matches = [key for key in MEMBERS if _name_present(text, key)]
+                if len(matches) != 1:
+                    raise ValueError("Ambiguous personal statement heading")
+                active = matches[0]
+                if active == identifier:
+                    heading = text
+            elif active == identifier and text:
+                personal.append(text)
+        if heading is None or personal != row["statement_paragraphs"]:
+            raise ValueError("Personal statement segmentation differs from raw bytes")
+        # Text is derived deterministically, retained with its own digest; the
+        # exact source JSONL bytes and raw HTML remain in the portable catalogue.
+        text = heading + "\n\n" + "\n\n".join(personal) + "\n"
+        payload = text.encode("utf-8")
+        digest = sha256(payload)
+        name = "derived_statements/" + row["meeting_id"] + "/" + identifier + ".txt"
+        store.payloads[name] = payload
+        statements.append((PersonalStatementRef(
+            statement_id=row["meeting_id"] + ":" + identifier, member_id=identifier,
+            original_member_id=row["member_id"], meeting_id=row["meeting_id"],
+            decision_date=row["decision_date"], source=source, statement_file=name,
+            statement_sha256=digest, attribution_heading=heading), text))
+    # Unsupported source category is a diagnostic outcome, never a persona input.
+    compatibility = [{"meeting_id": row["meeting_id"], "source_stance": row["committee_stance"],
+                      "simulator_v1_supported": row["committee_stance"] != "calibrated_tightening",
+                      "mapping": None, "ontology": "expanded_source_v2",
+                      "status": "outcome_diagnostic_excluded_from_persona_inputs"}
+                     for row in ledger["meetings"]]
+    return meetings, statements, compatibility
+
+
+def _rolling_partition(roster, statements):
+    cutoff_day = roster.information_cutoff.date().isoformat()
+    packets, exclusions = [], []
+    for member in roster.members:
+        included = []
+        texts = []
+        for statement, text in statements:
+            if statement.member_id != member.member_id:
+                continue
+            publication = statement.source.publication_date
+            reason = None
+            if statement.meeting_id == roster.meeting_id:
+                reason = "same_meeting_outcome_statement"
+            elif statement.decision_date >= cutoff_day:
+                reason = "decision_not_before_cutoff"
+            elif publication is None:
+                reason = "unresolved_publication_timing"
+            elif publication >= cutoff_day:
+                reason = "publication_day_not_strictly_before_cutoff"
+            if reason:
+                exclusions.append({"member_id": member.member_id, "statement_id": statement.statement_id,
+                                   "decision_date": statement.decision_date, "publication_date": publication,
+                                   "reason": reason, "source_sha256": statement.source.source_sha256,
+                                   "statement_sha256": statement.statement_sha256})
+            else:
+                included.append(statement)
+                texts.append(text)
+        hawk = sum(len(re.findall(r"\b" + re.escape(word) + r"\b", text, re.I))
+                   for text in texts for word in HAWK_LEXICON)
+        dove = sum(len(re.findall(r"\b" + re.escape(word) + r"\b", text, re.I))
+                   for text in texts for word in DOVE_LEXICON)
+        packets.append(RollingPersonaPacket(
+            meeting_id=roster.meeting_id, member_id=member.member_id,
+            information_cutoff=roster.information_cutoff, statements=tuple(included),
+            history_status="available_personal_history" if included else "missing_personal_history",
+            lexical_orientation=(hawk - dove) / max(hawk + dove, 1) if included else None,
+            lexical_hawk_hits=hawk, lexical_dove_hits=dove))
+    return packets, exclusions
+
+
+def _regimes(rosters):
+    regimes = []
+    for roster in rosters:
+        signature = tuple(sorted(m.member_id for m in roster.members))
+        if not regimes or tuple(regimes[-1]["member_ids"]) != signature:
+            regimes.append({"regime_id": "observed_roster_" + roster.decision_date,
+                            "member_ids": list(signature), "governor_id": roster.governor_id,
+                            "first_observed_decision": roster.decision_date,
+                            "last_observed_decision": roster.decision_date,
+                            "meeting_ids": [], "source_refs": [], "appointment_start_date": None,
+                            "appointment_end_date": None,
+                            "status": "realized_attendance_interval_not_appointment_tenure"})
+        regime = regimes[-1]
+        regime["last_observed_decision"] = roster.decision_date
+        regime["meeting_ids"].append(roster.meeting_id)
+        regime["source_refs"].append(roster.roster_source.model_dump(mode="json"))
+    for index, regime in enumerate(regimes):
+        if index:
+            prior = regimes[index - 1]
+            regime["turnover_bracket"] = {
+                "after_old_roster_observed_decision": prior["last_observed_decision"],
+                "by_new_roster_observed_decision": regime["first_observed_decision"],
+                "appointment_day_known": False,
+                "added_member_ids": sorted(set(regime["member_ids"]) - set(prior["member_ids"])),
+                "departed_member_ids": sorted(set(prior["member_ids"]) - set(regime["member_ids"]))}
+        else:
+            regime["turnover_bracket"] = None
+    return regimes
+
+
+def _json_bytes(value):
+    return (json.dumps(value, sort_keys=True, indent=2, ensure_ascii=False, allow_nan=False) + "\n").encode()
+
+
+def _portable_refs(value, mapping):
+    """Copy reference topology, replacing only explicitly verified source paths."""
+    if isinstance(value, list):
+        return [_portable_refs(item, mapping) for item in value]
+    if isinstance(value, dict):
+        result = {key: _portable_refs(item, mapping) for key, item in value.items()}
+        if "source_file" in value and "source_sha256" in value:
+            result["origin_source_file"] = value["source_file"]
+            result["source_file"] = mapping[value["source_file"]]
+        return result
+    return value
+
+
+def _write(path, payload):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("xb") as handle:
+        handle.write(payload)
+
+
+def build_rolling_inputs(*, output_root, source_root=ROOT):
+    """Verify first, then exclusively create one new portable input destination."""
+    root = Path(source_root).resolve()
+    out = Path(output_root).resolve()
+    if out.exists():
+        raise FileExistsError("Rolling input destinations must be unused")
+    store = _SourceStore(root)
+    for code in ("src/schemas/temporal_panel_schema.py", "src/persona_engine/rolling_inputs.py",
+                 "src/persona_engine/extractor.py"):
+        store.read(code)
+    original_rosters, original_statements = _original_inputs(store)
+    expanded_rosters, expanded_statements, compatibility = _expanded_inputs(store)
+    rosters = sorted(original_rosters + expanded_rosters, key=lambda r: r.decision_date)
+    statements = sorted(original_statements + expanded_statements,
+                        key=lambda pair: (pair[0].decision_date, pair[0].member_id))
+    if len({r.meeting_id for r in rosters}) != len(rosters) or len({s.statement_id for s, _ in statements}) != len(statements):
+        raise ValueError("Duplicated meeting or personally attributed source identity")
+    for statement, _ in statements:
+        roster = next((r for r in rosters if r.meeting_id == statement.meeting_id), None)
+        if roster is None or statement.member_id not in {m.member_id for m in roster.members}:
+            raise ValueError("Statement belongs to no verified realized attendance roster")
+    protocol = {
+        "version": "rolling-persona-retrospective-input-v1",
+total_holdout_meetings,directional_rate_accuracy_pct,exact_rate_accuracy_pct,stance_accuracy_pct,dissent_precision,dissent_recall,dissent_f1,passed_validation_gate
+8,100.0,100.0,100.0,0.7143,1.0,0.8333,True
+total_meetings_evaluated,directional_rate_accuracy_pct,stance_accuracy_pct,dissent_exact_match_rate_pct,dissent_precision,dissent_recall,dissent_f1,passed_validation_gate
+25,76.0,76.0,76.0,0.5116,1.0,0.6769,True
+26:PRICE_REVISION = "google-gemini-standard-text-2026-10-05"
+27:PRICE_SOURCE = "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite"
+29:TOKEN_RATES_PER_MILLION = {
+49:    if model not in TOKEN_RATES_PER_MILLION:
+51:    rates = TOKEN_RATES_PER_MILLION[model]
+60:    Pass a study-specific ledger_path in research. The no-path constructor creates
+61:    an isolated durable temporary ledger for backwards-compatible component use.
+65:    def __init__(self, budget_cap_usd: float = 25.0, ledger_path: str | Path | None = None):
+68:        self.ledger_path = Path(ledger_path) if ledger_path is not None else (
+71:        self.ledger_path.parent.mkdir(parents=True, exist_ok=True)
+72:        self.initialization_path = self.ledger_path.with_name(self.ledger_path.name + ".initialized.json")
+73:        initialization = {"ledger_filename": self.ledger_path.name, "cap_nanos": self._cap_nanos, "schema_version": 1}
+74:        previously_initialized = self.initialization_path.exists()
+75:        if previously_initialized:
+78:                if canonical_json(recorded) != canonical_json(initialization) or not self.ledger_path.is_file():
+79:                    raise BudgetLedgerError("Previously initialized ledger is missing or its identity changed; do not reset accounting")
+89:                    raise BudgetLedgerError("Existing ledger tables are missing; accounting cannot be reset")
+102:                    if tables or version or previously_initialized:
+103:                        raise BudgetLedgerError("Existing ledger configuration is missing; accounting cannot be reinitialized")
+110:            raise BudgetLedgerError(f"Cannot initialize accounting ledger: {self.ledger_path}") from exc
+112:            # SQLite is committed first. Concurrent initializers publish identical
+116:            raise BudgetLedgerError("Cannot preserve durable ledger initialization evidence") from exc
+121:            conn = sqlite3.connect(self.ledger_path, timeout=30)
+134:            raise BudgetLedgerError(f"Invalid/unavailable budget ledger: {self.ledger_path}") from exc
+145:            if revision != PRICE_REVISION or model not in TOKEN_RATES_PER_MILLION:
+200:            raise UncertainChargeError("Unresolved provider charge in ledger; new submissions halted")
+208:                price_revision: str = PRICE_REVISION) -> str:
+213:        if price_revision != PRICE_REVISION or not (
+333:                "bound_violations": violated, "price_revision": PRICE_REVISION,
+334:                "price_source": PRICE_SOURCE, "ledger_path": str(self.ledger_path)}
+340:def get_governor(budget_cap_usd: float = 25.0, ledger_path: str | Path | None = None) -> CostGovernor:
+342:    path = Path(ledger_path) if ledger_path else PROJECT_ROOT / ".cache" / "corrected_budget_v1.sqlite"
+343:    if (_DEFAULT_GOVERNOR is None or _DEFAULT_GOVERNOR.ledger_path != path

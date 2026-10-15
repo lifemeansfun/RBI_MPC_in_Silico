@@ -1,0 +1,323 @@
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+GOVERNMENT OF INDIA
+MINISTRY OF STATISTICS AND PROGRAMME IMPLEMENTATION
+NATIONAL STATISTICAL OFFICE
+Dated the 14th September, 2020
+23, Bhadrapada, Saka 1942
+PRESS RELEASE
+CONSUMER PRICE INDEX NUMBERS ON BASE 2012=100 FOR RURAL,
+URBAN AND COMBINED FOR THE MONTH OF AUGUST 2020
+The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation
+is releasing Consumer Price Index (CPI) on Base 2012=100 for Rural (R), Urban (U) and Combined
+(C) for the month of August 2020 (Provisional) in this press note. The corresponding Consumer Food
+Price Index (CFPI) for all India Rural, Urban and Combined are also being released.
+2. The Price data are collected from representative and selected 1114 urban markets and 1181
+villages covering all States/UTs through personal visits by field staff of Field Operations Division of
+NSO, MoSPI on a weekly roster. During the month of August, 2020, NSO collected prices from 96.1%
+villages and 96.4% urban markets while the market-wise numbers of prices reported therein were
+78.6% for rural and 84.4% for urban as compared to 87.9% for rural and 93.9% for urban in February
+2020. It may be seen that as various pandemic related restrictions were gradually lifted and non-
+essential activities started resuming operations, availability of price data has also improved. CPIs for
+Sub-Groups, Groups, General CPI (R, U & C), CFPI (R, U & C) at All India level and State-wise
+General CPI (R, U & C) are being released for all State/UTs.
+3. All India Inflation rates (on point to point basis i.e. current month over same month of last year, i.e.,
+August 2020 over August 2019), based on General Indices and CFPIs are given as follows:
+All India Inflation rates (%) based on CPI (General) and CFPI
+Aug. 2020 (Prov.) Jul. 2020 (Final)
+Indices
+Rural Urban Combd. Rural Urban Combd.
+CPI (General) 6.66 6.80 6.69 6.76 6.70 6.73
+CFPI 9.11 8.82 9.05 9.47 8.99 9.27
+Notes: Prov. – Provisional, Combd. - Combined
+4. Monthly changes in the General Indices and CFPIs are given below:
+Monthly changes (%) in All India CPI (General) and CFPI: Aug. 2020 over Jul. 2020
+Rural Urban Combined
+Indices Index Value Index Value Index Value
+% % %
+Aug.20 Jul.20 Change Aug.20 Jul.20 Change Aug.20 Jul.20 Change
+CPI (General) 155.4 154.7 0.45 154.0 152.9 0.72 154.7 153.9 0.52
+CFPI 155.7 154.9 0.52 161.6 160.1 0.94 157.8 156.7 0.70
+Note: Figures of August 2020 are provisional.
+5. Price data are collected from selected towns and selected villages by the Field Operations
+Division (FOD) of NSO, MoSPI. Price data are received through web portals, maintained by the
+National Informatics Centre.
+Next date of release: 12th October, 2020 (Monday) for September 2020.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 1 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+List of Annex
+Annex Title
+I All-India General (all-groups), Group and Sub-group level CPI
+and CFPI numbers for July and August 2020 (P) for Rural,
+Urban and Combined
+II All-India inflation rates for General (all-groups), Group and
+Sub-group level CPI and CFPI numbers for July and August
+2020 (P) for Rural, Urban and Combined
+III General CPI for States for Rural, Urban and Combined for July
+and August 2020 (P)
+IV Inflation rates of major States, having population more than 50
+lakhs as per population Census 2011, for Rural, Urban and
+Combined for July and August 2020 (P)
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 2 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+Annex I
+All India Consumer Price Indices
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description Jul. 20 Aug. 20 Jul. 20 Aug. 20 Jul. 20 Aug. 20
+Code Code Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+Cereals and
+1.1.01 12.35 147.6 146.9 6.59 151.6 151.5 9.67 148.9 148.4
+products
+1.1.02 Meat and fish 4.38 187.2 183.9 2.73 197.8 193.1 3.61 190.9 187.1
+1.1.03 Egg 0.49 148.4 149.4 0.36 154.5 157.3 0.43 150.8 152.5
+1.1.04 Milk and products 7.72 153.3 153.5 5.33 153.4 153.9 6.61 153.3 153.6
+1.1.05 Oils and fats 4.21 139.8 140.4 2.81 133.4 134.3 3.56 137.4 138.2
+1.1.06 Fruits 2.88 146.9 146.9 2.90 154.5 155.5 2.89 150.4 150.9
+1.1.07 Vegetables 7.46 171.0 178.5 4.41 191.9 202.1 6.04 178.1 186.5
+Pulses and
+1.1.08 2.95 149.9 149.4 1.73 151.3 150.7 2.38 150.4 149.8
+products
+Sugar and
+1.1.09 1.70 114.2 115.1 0.97 116.8 118.9 1.36 115.1 116.4
+Confectionery
+1.1.10 Spices 3.11 160.0 159.9 1.79 160.0 160.9 2.50 160.0 160.2
+Non-alcoholic
+1.2.11 1.37 143.5 145.2 1.13 136.5 137.7 1.26 140.6 142.1
+beverages
+Prepared meals,
+1.1.12 5.56 161.5 161.6 5.54 163.3 164.3 5.55 162.3 162.9
+snacks, sweets etc.
+Food and
+1 54.18 155.3 156.1 36.29 159.9 161.3 45.86 157.0 158.0
+beverages
+Pan, tobacco and
+2 3.26 180.9 182.9 1.36 187.2 188.6 2.38 182.6 184.4
+intoxicants
+3.1.01 Clothing 6.32 155.1 155.4 4.72 150.0 150.2 5.58 153.1 153.4
+3.1.02 Footwear 1.04 149.3 149.9 0.85 135.2 136.4 0.95 143.4 144.3
+Clothing and
+3 7.36 154.3 154.6 5.57 147.8 148.1 6.53 151.7 152.0
+footwear
+4 Housing - - - 21.67 155.5 156.3 10.07 155.5 156.3
+5 Fuel and light 7.94 145.8 146.2 5.58 138.3 137.2 6.84 143.0 142.8
+Household goods
+6.1.01 3.75 151.9 151.8 3.87 144.5 145.5 3.80 148.4 148.8
+and services
+6.1.02 Health 6.83 158.8 159.0 4.81 148.7 149.8 5.89 155.0 155.5
+Transport and
+6.1.03 7.60 143.6 144.7 9.73 133.9 135.2 8.59 138.5 139.7
+communication
+Recreation and
+6.1.04 1.37 152.2 152.7 2.04 141.2 141.8 1.68 146.0 146.6
+amusement
+6.1.05 Education 3.46 162.7 161.1 5.62 155.5 154.8 4.46 158.5 157.4
+Personal care and
+6.1.06 4.25 153.6 157.4 3.47 155.2 159.7 3.89 154.3 158.4
+effects
+6 Miscellaneous 27.26 153.0 153.7 29.53 144.8 146.0 28.32 149.0 150.0
+General Index (All Groups) 100.00 154.7 155.4 100.00 152.9 154.0 100.00 153.9 154.7
+Consumer Food Price Index (CFPI) 47.25 154.9 155.7 29.62 160.1 161.6 39.06 156.7 157.8
+Notes:
+1. Prov. : Provisional.
+2. CFPI : Out of 12 sub-groups contained in ‘Food and Beverages’ group, CFPI is based on ten sub-groups, excluding
+‘Non-alcoholic beverages’ and ‘Prepared meals, snacks, sweets etc.’.
+3. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 3 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+Annex II
+All India year-on-year inflation rates (%) for August 2020 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sub-
+Group group Description Aug. 19 Aug. 20 Inflation Aug. 19 Aug. 20 Inflation Aug. 19 Aug. 20 Inflation
+Code Code Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12)
+1.1.01
+Cereals and
+139.2 146.9 5.53 142.1 151.5 6.62 140.1 148.4 5.92
+products
+1.1.02 Meat and fish 161.9 183.9 13.59 158.3 193.1 21.98 160.6 187.1 16.50
+1.1.03 Egg 137.1 149.4 8.97 140.8 157.3 11.72 138.5 152.5 10.11
+1.1.04 Milk and products 144.6 153.5 6.15 144.9 153.9 6.21 144.7 153.6 6.15
+1.1.05 Oils and fats 124.7 140.4 12.59 119.9 134.3 12.01 122.9 138.2 12.45
+1.1.06 Fruits 145.5 146.9 0.96 153.9 155.5 1.04 149.4 150.9 1.00
+1.1.07 Vegetables 156.2 178.5 14.28 189.1 202.1 6.87 167.4 186.5 11.41
+1.1.08
+Pulses and
+131.5 149.4 13.61 129.8 150.7 16.10 130.9 149.8 14.44
+products
+1.1.09
+Sugar and
+111.7 115.1 3.04 112.7 118.9 5.50 112.0 116.4 3.93
+Confectionery
+1.1.10 Spices 142.7 159.9 12.05 142.5 160.9 12.91 142.6 160.2 12.34
+1.2.11
+Non-alcoholic
+138.5 145.2 4.84 129.8 137.7 6.09 134.9 142.1 5.34
+beverages
+1.1.12
+Prepared meals,
+156.9 161.6 3.00 156.2 164.3 5.19 156.6 162.9 4.02
+snacks, sweets etc.
+1
+Food and
+144.0 156.1 8.40 149.1 161.3 8.18 145.9 158.0 8.29
+beverages
+2
+Pan, tobacco and
+165.1 182.9 10.78 167.9 188.6 12.33 165.8 184.4 11.22
+intoxicants
+3.1.01 Clothing 151.8 155.4 2.37 145.0 150.2 3.59 149.1 153.4 2.88
+3.1.02 Footwear 146.6 149.9 2.25 132.2 136.4 3.18 140.6 144.3 2.63
+3
+Clothing and
+151.1 154.6 2.32 143.0 148.1 3.57 147.9 152.0 2.77
+footwear
+4 Housing - - - 151.6 156.3 3.10 151.6 156.3 3.10
+5 Fuel and light 146.4 146.2 -0.14 125.5 137.2 9.32 138.5 142.8 3.10
+6.1.01
+Household goods
+150.2 151.8 1.07 138.1 145.5 5.36 144.5 148.8 2.98
+and services
+6.1.02 Health 152.7 159.0 4.13 141.5 149.8 5.87 148.5 155.5 4.71
+6.1.03
+Transport and
+131.4 144.7 10.12 120.8 135.2 11.92 125.8 139.7 11.05
+communication
+6.1.04
+Recreation and
+148.0 152.7 3.18 135.4 141.8 4.73 140.9 146.6 4.05
+amusement
+6.1.05 Education 159.7 161.1 0.88 151.5 154.8 2.18 154.9 157.4 1.61
+6.1.06
+Personal care and
+138.8 157.4 13.40 137.8 159.7 15.89 138.4 158.4 14.45
+effects
+6 Miscellaneous 144.9 153.7 6.07 135.3 146.0 7.91 140.2 150.0 6.99
+General Index (All Groups) 145.7 155.4 6.66 144.2 154.0 6.80 145.0 154.7 6.69
+Consumer Food Price Index 142.7 155.7 9.11 148.5 161.6 8.82 144.7 157.8 9.05
+Notes:
+1. Prov. : Provisional.
+2. - : CPI (Rural) for housing is not compiled.
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 4 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+Annex III
+State/UT wise General Consumer Price Indices
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the Jul. 20 Aug. 20 Jul. 20 Aug. 20 Jul. 20 Aug. 20
+State/UT Weights Index Index Weights Index Index Weights Index Index
+(Final) (Prov.) (Final) (Prov.) (Final) (Prov.)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 5.40 155.1 154.9 3.64 154.5 155.2 4.58 154.9 155.0
+2 Arunachal Pradesh 0.14 160.2 161.7 0.06 -- -- 0.10 160.2 161.7
+3 Assam 2.63 163.0 162.4 0.79 160.4 161.4 1.77 162.5 162.2
+4 Bihar 8.21 151.3 153.2 1.62 152.6 152.9 5.14 151.5 153.2
+5 Chhattisgarh 1.68 154.4 155.2 1.22 151.1 152.5 1.46 153.1 154.2
+6 Delhi 0.28 149.8 150.8 5.64 149.6 150.6 2.77 149.6 150.6
+7 Goa 0.14 162.0 159.8 0.25 152.7 153.6 0.19 156.3 156.0
+8 Gujarat 4.54 148.8 149.6 6.82 145.2 146.4 5.60 146.8 147.8
+9 Haryana 3.30 149.5 150.8 3.35 147.6 148.0 3.32 148.6 149.5
+10 Himachal Pradesh 1.03 144.5 145.8 0.26 151.3 152.8 0.67 145.7 147.1
+11 Jharkhand 1.96 154.3 154.9 1.39 155.5 155.2 1.69 154.8 155.0
+12 Karnataka 5.09 157.3 157.0 6.81 158.4 158.6 5.89 157.9 157.9
+13 Kerala 5.50 162.9 164.4 3.46 160.1 161.4 4.55 161.9 163.3
+14 Madhya Pradesh 4.93 152.0 152.6 3.97 154.9 155.5 4.48 153.2 153.8
+15 Maharashtra 8.25 154.4 154.5 18.86 149.1 150.2 13.18 150.9 151.6
+16 Manipur 0.23 183.5 186.2 0.12 167.7 169.4 0.18 178.5 180.9
+17 Meghalaya 0.28 151.8 155.0 0.15 150.3 151.5 0.22 151.3 153.9
+18 Mizoram 0.07 156.0 156.1 0.13 148.1 150.3 0.10 151.2 152.6
+19 Nagaland 0.14 154.7 155.5 0.12 147.7 154.1 0.13 151.7 154.9
+20 Odisha 2.93 159.1 159.5 1.31 150.8 152.4 2.18 156.8 157.5
+21 Punjab 3.31 151.6 152.8 3.09 144.8 146.1 3.21 148.6 149.8
+22 Rajasthan 6.63 152.3 153.7 4.23 152.8 153.9 5.51 152.5 153.8
+23 Sikkim 0.06 162.9 164.4 0.03 156.4 155.2 0.05 160.8 161.4
+24 Tamil Nadu 5.55 159.6 158.9 9.20 158.8 159.4 7.25 159.1 159.2
+25 Telangana 3.16 155.6 156.5 4.41 156.1 156.5 3.74 155.9 156.5
+26 Tripura 0.35 173.2 171.7 0.14 157.2 158.9 0.25 169.1 168.4
+27 Uttar Pradesh 14.83 152.1 153.2 9.54 153.3 155.0 12.37 152.5 153.8
+28 Uttarakhand 1.06 153.0 153.5 0.73 149.2 150.8 0.91 151.6 152.5
+29 West Bengal 6.99 157.3 158.1 7.20 158.1 159.9 7.09 157.7 158.9
+Andaman & Nicobar
+30 0.05 165.2 169.2 0.07 153.7 160.3 0.06 159.4 164.7
+Islands
+31 Chandigarh 0.02 153.1 152.7 0.34 146.3 147.2 0.17 146.7 147.5
+Dadra & Nagar
+32 0.02 146.1 145.3 0.04 148.8 143.7 0.03 147.9 144.2
+Haveli
+33 Daman & Diu 0.02 157.6 156.6 0.02 150.2 147.2 0.02 154.5 152.7
+34 Jammu & Kashmir* 1.14 159.0 159.1 0.72 158.3 160.1 0.94 158.8 159.5
+35 Lakshadweep 0.01 166.1 170.1 0.01 157.8 157.1 0.01 161.9 163.5
+36 Puducherry 0.08 158.3 158.2 0.27 157.7 157.5 0.17 157.9 157.7
+All India 100.00 154.7 155.4 100.00 152.9 154.0 100.00 153.9 154.7
+Notes:
+1. Prov. : Provisional
+2. -- : indicates the receipt of price schedules is less than 80% of allocated schedules and therefore indices are not compiled.
+3. * : Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu & Kashmir and Ladakh (erstwhile
+State of Jammu & Kashmir).
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 5 of 6
+This Press Release is embargoed against publication, telecast or circulation on internet till 5.30 pm
+today i.e. 14th September 2020.
+Annex IV
+Major State/UT wise year-on-year inflation rates (%) for August 2020 (Provisional)
+(Base: 2012=100)
+Rural Urban Combined
+Sl. No. Name of the Aug. 19 Aug. 20 Inflation Aug. 19 Aug. 20 Inflation Aug. 19 Aug. 20 Inflation
+State/UT Index Index Rate Index Index Rate Index Index Rate
+(Final) (Prov.) (%) (Final) (Prov.) (%) (Final) (Prov.) (%)
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11)
+1 Andhra Pradesh 143.1 154.9 8.25 145.4 155.2 6.74 143.9 155.0 7.71
+2 Assam 148.5 162.4 9.36 146.5 161.4 10.17 148.1 162.2 9.52
+3 Bihar 143.2 153.2 6.98 142.5 152.9 7.30 143.1 153.2 7.06
+4 Chhattisgarh 141.9 155.2 9.37 144.2 152.5 5.76 142.8 154.2 7.98
+5 Delhi 147.0 150.8 2.59 145.3 150.6 3.65 145.4 150.6 3.58
+6 Gujarat 142.8 149.6 4.76 139.8 146.4 4.72 141.1 147.8 4.75
+7 Haryana 142.6 150.8 5.75 139.4 148.0 6.17 141.1 149.5 5.95
+8 Himachal Pradesh 140.9 145.8 3.48 142.4 152.8 7.30 141.2 147.1 4.18
+9 Jharkhand 147.3 154.9 5.16 144.8 155.2 7.18 146.3 155.0 5.95
+10 Karnataka 148.6 157.0 5.65 151.8 158.6 4.48 150.3 157.9 5.06
+11 Kerala 154.8 164.4 6.20 150.6 161.4 7.17 153.3 163.3 6.52
+12 Madhya Pradesh 141.7 152.6 7.69 145.2 155.5 7.09 143.1 153.8 7.48
+13 Maharashtra 146.4 154.5 5.53 139.9 150.2 7.36 142.1 151.6 6.69
+14 Odisha 146.7 159.5 8.73 142.6 152.4 6.87 145.6 157.5 8.17
+15 Punjab 145.5 152.8 5.02 138.1 146.1 5.79 142.2 149.8 5.34
+16 Rajasthan 146.7 153.7 4.77 146.3 153.9 5.19 146.6 153.8 4.91
+17 Tamil Nadu 149.2 158.9 6.50 148.3 159.4 7.48 148.7 159.2 7.06
+18 Telangana 143.3 156.5 9.21 145.3 156.5 7.71 144.4 156.5 8.38
+19 Uttar Pradesh 142.8 153.2 7.28 145.3 155.0 6.68 143.7 153.8 7.03
+20 Uttarakhand 142.0 153.5 8.10 140.1 150.8 7.64 141.3 152.5 7.93
+21 West Bengal 146.7 158.1 7.77 143.6 159.9 11.35 145.2 158.9 9.44
+22 Jammu & Kashmir* 151.5 159.1 5.02 149.7 160.1 6.95 150.9 159.5 5.70
+All India 145.7 155.4 6.66 144.2 154.0 6.80 145.0 154.7 6.69
+Notes:
+1. Prov. : Provisional.
+2. * : Figures of this row pertain to the prices and weights of the combined Union Territories of Jammu &
+Kashmir and Ladakh (erstwhile State of Jammu & Kashmir).
+Price 9001: 2015
+Statistics IS/ ISO
+Division CERTIFIED
+Page 6 of 6

@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 2.153183959017042,
+  "input_hashes_unchanged": true,
+  "provider_calls": 0,
+  "verification_scope": "offline compound-dose and legacy scenario contracts"
+}

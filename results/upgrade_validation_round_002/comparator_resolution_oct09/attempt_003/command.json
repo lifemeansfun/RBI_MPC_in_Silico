@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_monte_carlo_resolution.py",
+    "tests/test_taylor_rule.py",
+    "--basetemp",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_resolution_oct09/attempt_003/checkout/isolated_test_outputs"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_resolution_oct09/attempt_003/checkout",
+  "environment_controls": {
+    "PYTHONPATH": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_resolution_oct09/attempt_003/checkout",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "validation_scope": "synthetic ballots and real Taylor arithmetic, no provider calls"
+}

@@ -1,0 +1,120 @@
+{
+  "observed_at_utc": "2026-10-09T16:13:49.057004+00:00",
+  "failed_command": "Initial inline bootstrap executed runpy.run_path with a relative script path",
+  "exit_code": 1,
+  "error_type": "ValueError",
+  "error": "research/source_ledgers/output_gap_round002/methodology_sources/acquire_primary_sources_20261009.py is not in the absolute base subpath; metadata construction failed after downloads",
+  "scope": "Download results in process were lost before ledger serialization; raw files remain unchanged. Do not interpret this incomplete directory as a complete retrieval ledger. Recovery reruns the identical source script with an absolute __file__ path.",
+  "preserved_files": [
+    {
+      "path": "acquisition_20261009T161203Z/raw/census_x13_2017.pdf",
+      "sha256": "787b1146c6606f1431deb505186b8512ddea5709c8c2c0d2c36f1d4f3251c82b",
+      "bytes": 1896614
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/champagne_poulin_sekkel_2016.pdf",
+      "sha256": "3435e4dcd2d95746e4e21c1b9af40718b0e8e968858680ebf8e11cdcf3d7da60",
+      "bytes": 527088
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/edge_rudd_2012.pdf",
+      "sha256": "e7fd829c25814fbf61bde42cd883c02d9be6da22a048d31ed9e2978513376f30",
+      "bytes": 101743
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/eurostat_2009.pdf",
+      "sha256": "3a16053b279956924d3b74bec3216ecc4b333536bf0f477ac8cd25fcfa3623cb",
+      "bytes": 629309
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/eurostat_2024.pdf",
+      "sha256": "b8c78bb4caeb16e1e9a24706cf0803a50fe99b1495ab7da297df32d51c082107",
+      "bytes": 1169222
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/gruen_robinson_stone_2002.pdf",
+      "sha256": "319d34be763abe48974cd89722750751b7293e2357bbb12fee0865116b1a876b",
+      "bytes": 187711
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/hamilton_2017.pdf",
+      "sha256": "93e1ef47a7679d3a1483751477e6c63929603d7665fb758bc826f158593167de",
+      "bytes": 486170
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/imf_qna_2017.pdf",
+      "sha256": "450159e6772e6cc18252e25f6d9a419936dd925833b6b277b4917b241c6acd8c",
+      "bytes": 4441361
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/imf_qna_2017_ch7.response.bin",
+      "sha256": "e3b61c98540d887438568aa665e81ae8b7827d2edb6f2e7d8f576ce28faed107",
+      "bytes": 1260167
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/kamber_morley_wong_2016_legacy.response.bin",
+      "sha256": "6b6ff142c38f0f574025654c22e34dc8bdcb218d1fe413cc18a298f0c8de5055",
+      "bytes": 127624
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/kamber_morley_wong_2016_pdf.pdf",
+      "sha256": "4a95aefb0a7ab0f718f41eb2d8a6745c4ecaa7032b7e21069dc079b52996a32d",
+      "bytes": 2547999
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/ovn_1999.pdf",
+      "sha256": "0cd0060927fa5bd5831cff7ef9679abfae4033f7e465b112e113debe93de6619",
+      "bytes": 296166
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/census_x13_2017.txt",
+      "sha256": "ec4a44081fe605a7ee80f662ba2a9dcd6c0248683288126db5f61efa8e6f1239",
+      "bytes": 965314
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/champagne_poulin_sekkel_2016.txt",
+      "sha256": "0d1b821a8b5d1eaff5cad4db382dda4c7eb355d15ac7184feeaba883f9dec12d",
+      "bytes": 57146
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/edge_rudd_2012.txt",
+      "sha256": "9df12a28022506fc6a13d025a4df7cbaee29abd9d77e5f674e2abffe88489152",
+      "bytes": 31613
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/eurostat_2009.txt",
+      "sha256": "f3cd4db5c2e7f30f290709ff9cedbd79e783a544f796eb0ce672478a56f93871",
+      "bytes": 106635
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/eurostat_2024.txt",
+      "sha256": "27f6385afde91820676ec3e825c2405fbce28bbfef61c59a7ff5e92bc7f1cf39",
+      "bytes": 187692
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/gruen_robinson_stone_2002.txt",
+      "sha256": "fed1b2d3d7d576cab906db33dc3660ed2c941b5a931cd911b0e85e27bac766f8",
+      "bytes": 127004
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/hamilton_2017.txt",
+      "sha256": "fe035b59612969a8eaf544c8fbf4bcd5812a4e1ce06ee085a9f48eeea714973c",
+      "bytes": 129879
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/imf_qna_2017.txt",
+      "sha256": "55f08cc95fd19e6d954ef3f360a92f8d5e94b16b0b36b5cd00efe80a113b6dfc",
+      "bytes": 1565597
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/kamber_morley_wong_2016_pdf.txt",
+      "sha256": "10ed498a31d10863d7f860fe6e1a16576e0afd00ece9f6718e951700226aa9f6",
+      "bytes": 85098
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/ovn_1999.txt",
+      "sha256": "8b6e2162b90b4006a49a5c1d918f44cb66517d5a703a9bb869e7c1e08d8633c0",
+      "bytes": 88055
+    }
+  ]
+}

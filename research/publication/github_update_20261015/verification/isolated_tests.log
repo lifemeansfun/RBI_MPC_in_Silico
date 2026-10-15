@@ -1,0 +1,30 @@
+.venv/bin/python research/verification/run_isolated_pytest.py "/private/tmp/rbi_publish_20261015_c7xt8emf/tests"
+{
+  "argv": [
+    "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp",
+    "/private/tmp/rbi_publish_20261015_c7xt8emf/tests/checkout/isolated_test_outputs"
+  ],
+  "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/tests/checkout",
+  "started_at_unix": 1792077697.075658,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "driver_sha256": "af69cb5177fb308717575319c958c9dfdf0f13e918b03e6e816579ff124b616a",
+  "exit_code": 0,
+  "elapsed_seconds": 197.3308539390564,
+  "frozen_files_unchanged": true
+}
+........................................................................ [ 13%]
+........................................................................ [ 27%]
+........................................................................ [ 41%]
+........................................................................ [ 55%]
+........................................................................ [ 69%]
+........................................................................ [ 83%]
+........................................................................ [ 97%]
+..............                                                           [100%]
+518 passed in 196.24s (0:03:16)
+

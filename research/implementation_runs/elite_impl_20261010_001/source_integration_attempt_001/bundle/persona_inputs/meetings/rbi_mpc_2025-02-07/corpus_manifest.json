@@ -1,0 +1,968 @@
+{
+  "calibration_cutoff": "2025-02-05",
+  "construct_validated": false,
+  "evidence_limit": "Verified retained raw bytes, attribution and printed publication headers; neither authenticated historical first availability nor validated policy-preference constructs or pre-cutoff membership.",
+  "extraction_rule": {
+    "biography": null,
+    "dove_lexicon": [
+      "growth",
+      "slack",
+      "over-tightening",
+      "lag",
+      "lags",
+      "sacrifice",
+      "soften",
+      "real rate",
+      "neutral",
+      "output gap",
+      "recovery",
+      "headwind",
+      "downturn"
+    ],
+    "hawk_lexicon": [
+      "inflation",
+      "restrictive",
+      "vigilance",
+      "unanchored",
+      "persistence",
+      "second-round",
+      "overheating",
+      "pressures",
+      "brake",
+      "firm",
+      "committed",
+      "tolerance",
+      "target"
+    ],
+    "orientation": "(hawk_hits-dove_hits)/max(hawk_hits+dove_hits,1); no rounding",
+    "priority": "fixed RBI-mandate instruction, not a fitted member preference",
+    "quotes": "first 20-60-word sentence per chronological source; first, middle, last distinct indices",
+    "stance_bias": "neutral; fixed procedural parameter, not extracted or construct validated",
+    "tenure": "corpus-coverage label only; no appointment-tenure claim",
+    "version": "rolling-executable-lexical-v1"
+  },
+  "historical_first_availability_verified": false,
+  "information_cutoff": "2025-02-05T00:00:00+05:30",
+  "meeting_id": "rbi_mpc_2025-02-07",
+  "members": {
+    "m_rajeshwar_rao": {
+      "construct_validated": false,
+      "corpus_sources": [],
+      "dove_hits": 0,
+      "hawk_hits": 0,
+      "history_status": "missing_personal_history",
+      "meetings_count": 0,
+      "persona_fields": null,
+      "quote_evidence": [],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 0
+    },
+    "nagesh_kumar": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2024-10-09:nagesh_kumar",
+          "statement_sha256": "0aaedbaa42e9bf440c31df9847eeab1eb36d993c3ff61197a9af533b294bb77f"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2024-12-06:nagesh_kumar",
+          "statement_sha256": "8d6ab899a8f732a00b45d06955e4be29a8a67f92ae41b33f4e4876c2bb565f9d"
+        }
+      ],
+      "dove_hits": 29,
+      "hawk_hits": 18,
+      "history_status": "available_personal_history",
+      "meetings_count": 2,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2025-02-05",
+        "hawk_dove_score": -0.23404255319148937,
+        "is_internal": false,
+        "key_themes": [
+          "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+          "\"At the last meeting, I had expressed my concerns about the growth slowdown and the need to support it through a cut in policy rates.\" (2024-12-06)"
+        ],
+        "member_id": "nagesh_kumar",
+        "name": "Nagesh Kumar",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:nagesh_kumar",
+          "statement_sha256": "0aaedbaa42e9bf440c31df9847eeab1eb36d993c3ff61197a9af533b294bb77f",
+          "text": "At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals."
+        },
+        {
+          "decision_date": "2024-12-06",
+          "statement_id": "rbi_mpc_2024-12-06:nagesh_kumar",
+          "statement_sha256": "8d6ab899a8f732a00b45d06955e4be29a8a67f92ae41b33f4e4876c2bb565f9d",
+          "text": "At the last meeting, I had expressed my concerns about the growth slowdown and the need to support it through a cut in policy rates."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 2037
+    },
+    "rajiv_ranjan": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2022-05-04",
+          "meeting_id": "rbi_mpc_2022-05-04",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2022-05-04/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+            "publication_date": "2022-05-18",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2.html",
+            "source_id": "mpc_minutes_prid_53728",
+            "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53728"
+          },
+          "statement_file": "sources/ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2.txt",
+          "statement_id": "rbi_mpc_2022-05-04:rajiv_ranjan",
+          "statement_sha256": "ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2022-06-08",
+          "meeting_id": "rbi_mpc_2022-06-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2022-06-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+            "publication_date": "2022-06-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad.html",
+            "source_id": "mpc_minutes_prid_53904",
+            "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53904"
+          },
+          "statement_file": "sources/aba620cb78b72707454e55c751b3a899aa5012200c213ece1c273ff82e5ad7c9.txt",
+          "statement_id": "rbi_mpc_2022-06-08:rajiv_ranjan",
+          "statement_sha256": "aba620cb78b72707454e55c751b3a899aa5012200c213ece1c273ff82e5ad7c9"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2022-08-05",
+          "meeting_id": "rbi_mpc_2022-08-05",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2022-08-05/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+            "publication_date": "2022-08-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b.html",
+            "source_id": "mpc_minutes_prid_54236",
+            "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54236"
+          },
+          "statement_file": "sources/1826cc2e66ef887afb878153704d8ecdf63b3aa5d9283348a59c8f526246a8c7.txt",
+          "statement_id": "rbi_mpc_2022-08-05:rajiv_ranjan",
+          "statement_sha256": "1826cc2e66ef887afb878153704d8ecdf63b3aa5d9283348a59c8f526246a8c7"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2022-09-30",
+          "meeting_id": "rbi_mpc_2022-09-30",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2022-09-30/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+            "publication_date": "2022-10-14",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002.html",
+            "source_id": "mpc_minutes_prid_54541",
+            "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54541"
+          },
+          "statement_file": "sources/a459d16268f224e96d7a80e406b82d5d2029ac4743081cf0ad597fc5440f9d45.txt",
+          "statement_id": "rbi_mpc_2022-09-30:rajiv_ranjan",
+          "statement_sha256": "a459d16268f224e96d7a80e406b82d5d2029ac4743081cf0ad597fc5440f9d45"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2022-12-07",
+          "meeting_id": "rbi_mpc_2022-12-07",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2022-12-07/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+            "publication_date": "2022-12-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115.html",
+            "source_id": "mpc_minutes_prid_54918",
+            "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54918"
+          },
+          "statement_file": "sources/a10578b3a1b4e7600108d39ebdb41dc2d700b949c8d267f6dfdb41e6f99b3816.txt",
+          "statement_id": "rbi_mpc_2022-12-07:rajiv_ranjan",
+          "statement_sha256": "a10578b3a1b4e7600108d39ebdb41dc2d700b949c8d267f6dfdb41e6f99b3816"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-02-08",
+          "meeting_id": "rbi_mpc_2023-02-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-02-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+            "publication_date": "2023-02-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e.html",
+            "source_id": "mpc_minutes_prid_55267",
+            "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55267"
+          },
+          "statement_file": "sources/37c93693768bed1661d755f685f2223b92810e873e0dbcb3be90b2e43ebb091d.txt",
+          "statement_id": "rbi_mpc_2023-02-08:rajiv_ranjan",
+          "statement_sha256": "37c93693768bed1661d755f685f2223b92810e873e0dbcb3be90b2e43ebb091d"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-04-06",
+          "meeting_id": "rbi_mpc_2023-04-06",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-04-06/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+            "publication_date": "2023-04-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495.html",
+            "source_id": "mpc_minutes_prid_55538",
+            "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55538"
+          },
+          "statement_file": "sources/8f272b4d783654a208c49ac03d0417dc9a19291c3c2be15fa0b2eacacd939e9a.txt",
+          "statement_id": "rbi_mpc_2023-04-06:rajiv_ranjan",
+          "statement_sha256": "8f272b4d783654a208c49ac03d0417dc9a19291c3c2be15fa0b2eacacd939e9a"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-06-08",
+          "meeting_id": "rbi_mpc_2023-06-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-06-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_55899.html",
+            "publication_date": "2023-06-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd.html",
+            "source_id": "mpc_minutes_prid_55899",
+            "source_sha256": "53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55899"
+          },
+          "statement_file": "sources/50fd27d1c6969c09366a13d4b2c4e0597267fa547692096ff4e354715d01af68.txt",
+          "statement_id": "rbi_mpc_2023-06-08:rajiv_ranjan",
+          "statement_sha256": "50fd27d1c6969c09366a13d4b2c4e0597267fa547692096ff4e354715d01af68"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-08-10",
+          "meeting_id": "rbi_mpc_2023-08-10",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-08-10/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_56252.html",
+            "publication_date": "2023-08-24",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a.html",
+            "source_id": "mpc_minutes_prid_56252",
+            "source_sha256": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56252"
+          },
+          "statement_file": "sources/157147cd3d0202c83c2bc5c01cb0fcdb96670c8e503141fc61addb61cffceb26.txt",
+          "statement_id": "rbi_mpc_2023-08-10:rajiv_ranjan",
+          "statement_sha256": "157147cd3d0202c83c2bc5c01cb0fcdb96670c8e503141fc61addb61cffceb26"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-10-06",
+          "meeting_id": "rbi_mpc_2023-10-06",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-10-06/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_56606.html",
+            "publication_date": "2023-10-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b.html",
+            "source_id": "mpc_minutes_prid_56606",
+            "source_sha256": "4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56606"
+          },
+          "statement_file": "sources/420ef7ba706e5d6b14aa573335087b449b3efe365ee1af990bbe5539ca7ee314.txt",
+          "statement_id": "rbi_mpc_2023-10-06:rajiv_ranjan",
+          "statement_sha256": "420ef7ba706e5d6b14aa573335087b449b3efe365ee1af990bbe5539ca7ee314"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2023-12-08",
+          "meeting_id": "rbi_mpc_2023-12-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2023-12-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_56982.html",
+            "publication_date": "2023-12-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248.html",
+            "source_id": "mpc_minutes_prid_56982",
+            "source_sha256": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56982"
+          },
+          "statement_file": "sources/4502733c5aacfd2bbd3ee4163304bc823a88c2ac898930ec6c4551b3f739e439.txt",
+          "statement_id": "rbi_mpc_2023-12-08:rajiv_ranjan",
+          "statement_sha256": "4502733c5aacfd2bbd3ee4163304bc823a88c2ac898930ec6c4551b3f739e439"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan47. Let me start from the outlook I had given in my December 2023 minutes, “While a durable growth path backed by consumption and investment is visible from here on, the same cannot be said about disinflation yet. The below 5 per cent print in October 2023 may reverse as early as next month.” Since the last policy, the growth inflation dynamics have evolved largely along these lines. Growth is holding up better than expected, while the inflation prints in November and December crossed 5 per cent. Core inflation has shown marked and durable signs of disinflation that gives us comfort from monetary policy perspective, but upside risks remain from food inflation.48. Two other comforting developments since the last policy needs attention. The first relates to the global economy that is performing better than expected earlier. Global growth prospects have improved and inflation in advanced economies is slowly inching down, though intermittently deviating from the declining trend. Global commodity prices remain benign and crude oil prices have not risen despite several new flash points in the ongoing conflicts. Second, the central government in its interim budget stayed the course on a fiscal consolidation path. A prudent fiscal policy can reinforce the credibility of the flexible inflation targeting framework and thus help in anchoring the long-term inflation expectations.4 With less budgeted market borrowings and bond inclusion driven flows expected in 2024, the fisc has vacated space for the private sector on the one hand, while on the other hand taken steps to crowd in private investment through its continued focus on capex and other long term sustainable growth initiatives in areas like solar energy, health, innovation and renewables.",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-02-08",
+          "meeting_id": "rbi_mpc_2024-02-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2024-02-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_57366.html",
+            "publication_date": "2024-02-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521.html",
+            "source_id": "mpc_minutes_prid_57366",
+            "source_sha256": "39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57366"
+          },
+          "statement_file": "sources/d3eeecc4b2da43771b79bad3a01656793a034576b0932d3e0b666aa22aa0939d.txt",
+          "statement_id": "rbi_mpc_2024-02-08:rajiv_ranjan",
+          "statement_sha256": "d3eeecc4b2da43771b79bad3a01656793a034576b0932d3e0b666aa22aa0939d"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-04-05",
+          "meeting_id": "rbi_mpc_2024-04-05",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2024-04-05/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_57735.html",
+            "publication_date": "2024-04-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de.html",
+            "source_id": "mpc_minutes_prid_57735",
+            "source_sha256": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57735"
+          },
+          "statement_file": "sources/eb9a70861178d1e03bdb2343d30d35ef9c24dcaf38de5d73f00c708596b3718e.txt",
+          "statement_id": "rbi_mpc_2024-04-05:rajiv_ranjan",
+          "statement_sha256": "eb9a70861178d1e03bdb2343d30d35ef9c24dcaf38de5d73f00c708596b3718e"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-06-07",
+          "meeting_id": "rbi_mpc_2024-06-07",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2024-06-07/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_58136.html",
+            "publication_date": "2024-06-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742.html",
+            "source_id": "mpc_minutes_prid_58136",
+            "source_sha256": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58136"
+          },
+          "statement_file": "sources/b32ae9a77add9053e8dfbd4e2753862ed172d861b1e28b2e631fdd3eaa566c4d.txt",
+          "statement_id": "rbi_mpc_2024-06-07:rajiv_ranjan",
+          "statement_sha256": "b32ae9a77add9053e8dfbd4e2753862ed172d861b1e28b2e631fdd3eaa566c4d"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-08-08",
+          "meeting_id": "rbi_mpc_2024-08-08",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "data/processed/statements_v2/2024-08-08/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "data/raw/minutes_html/mpc_minutes_prid_58545.html",
+            "publication_date": "2024-08-22",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c.html",
+            "source_id": "mpc_minutes_prid_58545",
+            "source_sha256": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58545"
+          },
+          "statement_file": "sources/91eddd710dcf629f16a32dfbd540bb1c7513ff619f8770e6ef6eabb853f97eae.txt",
+          "statement_id": "rbi_mpc_2024-08-08:rajiv_ranjan",
+          "statement_sha256": "91eddd710dcf629f16a32dfbd540bb1c7513ff619f8770e6ef6eabb853f97eae"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/rajiv_ranjan.txt",
+          "statement_id": "rbi_mpc_2024-10-09:rajiv_ranjan",
+          "statement_sha256": "a97a672b6e9ce54f0712ed95fc44b5d27115581a1154f498c4abc28d2c183752"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Rajiv Ranjan",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "rajiv_ranjan",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/rajiv_ranjan.txt",
+          "original_member_id": "rajiv_ranjan",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/rajiv_ranjan.txt",
+          "statement_id": "rbi_mpc_2024-12-06:rajiv_ranjan",
+          "statement_sha256": "30ae33c0050a833e8f5e80a3609798bdc3b839318de45a26997f65e7936d5602"
+        }
+      ],
+      "dove_hits": 169,
+      "hawk_hits": 437,
+      "history_status": "available_personal_history",
+      "meetings_count": 17,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2025-02-05",
+        "hawk_dove_score": 0.44224422442244227,
+        "is_internal": true,
+        "key_themes": [
+          "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+          "\"In the last minutes, I had mentioned how growth momentum had surprised positively whereas inflation was turning soft, implying a goldilocks kind of scenario.\" (2023-08-10)",
+          "\"In my August 2024 statement, I had stated that we could see a window opening up for monetary policy to change its course, which materialised in October 2024 as the risk-reward for a change in stance to neutral was favorable then.\" (2024-12-06)"
+        ],
+        "member_id": "rajiv_ranjan",
+        "name": "Rajiv Ranjan",
+        "provenance_status": "dated_corpus",
+        "role": "Executive Director",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2022-05-04 to 2024-12-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2022-05-04",
+          "statement_id": "rbi_mpc_2022-05-04:rajiv_ranjan",
+          "statement_sha256": "ac9852e911826c1b6f4776be0fda86db8e861b0cf7be39ae088a9e7f3ab708d2",
+          "text": "The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management."
+        },
+        {
+          "decision_date": "2023-08-10",
+          "statement_id": "rbi_mpc_2023-08-10:rajiv_ranjan",
+          "statement_sha256": "157147cd3d0202c83c2bc5c01cb0fcdb96670c8e503141fc61addb61cffceb26",
+          "text": "In the last minutes, I had mentioned how growth momentum had surprised positively whereas inflation was turning soft, implying a goldilocks kind of scenario."
+        },
+        {
+          "decision_date": "2024-12-06",
+          "statement_id": "rbi_mpc_2024-12-06:rajiv_ranjan",
+          "statement_sha256": "30ae33c0050a833e8f5e80a3609798bdc3b839318de45a26997f65e7936d5602",
+          "text": "In my August 2024 statement, I had stated that we could see a window opening up for monetary policy to change its course, which materialised in October 2024 as the risk-reward for a change in stance to neutral was favorable then."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 16708
+    },
+    "ram_singh": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/ram_singh.txt",
+          "statement_id": "rbi_mpc_2024-10-09:ram_singh",
+          "statement_sha256": "527c10917277bbc62a0da47d80b7b6ddf48032f57ac91a88fd50d3e8cb3f995a"
+        },
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/ram_singh.txt",
+          "statement_id": "rbi_mpc_2024-12-06:ram_singh",
+          "statement_sha256": "566890e134aa8cffaa17e1f0c78123f49c69872ca9c68f654202dae03d796c08"
+        }
+      ],
+      "dove_hits": 40,
+      "hawk_hits": 48,
+      "history_status": "available_personal_history",
+      "meetings_count": 2,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2025-02-05",
+        "hawk_dove_score": 0.09090909090909091,
+        "is_internal": false,
+        "key_themes": [
+          "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+          "\"In my view, the following questions warrant the attention of the MPC: Is there a strong case for a shift in the monetary policy (MP) in response to the recent developments on inflation and growth fronts, domestically and internationally?\" (2024-12-06)"
+        ],
+        "member_id": "ram_singh",
+        "name": "Ram Singh",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:ram_singh",
+          "statement_sha256": "527c10917277bbc62a0da47d80b7b6ddf48032f57ac91a88fd50d3e8cb3f995a",
+          "text": "The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter."
+        },
+        {
+          "decision_date": "2024-12-06",
+          "statement_id": "rbi_mpc_2024-12-06:ram_singh",
+          "statement_sha256": "566890e134aa8cffaa17e1f0c78123f49c69872ca9c68f654202dae03d796c08",
+          "text": "In my view, the following questions warrant the attention of the MPC: Is there a strong case for a shift in the monetary policy (MP) in response to the recent developments on inflation and growth fronts, domestically and internationally?"
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 2183
+    },
+    "sanjay_malhotra": {
+      "construct_validated": false,
+      "corpus_sources": [],
+      "dove_hits": 0,
+      "hawk_hits": 0,
+      "history_status": "missing_personal_history",
+      "meetings_count": 0,
+      "persona_fields": null,
+      "quote_evidence": [],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 0
+    },
+    "saugata_bhattacharya": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2024-10-09:saugata_bhattacharya",
+          "statement_sha256": "0b5dcadb6d8b901374618a112cf448c7d7a6aba289080e25ca6f6a1de737ba06"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2024-12-06:saugata_bhattacharya",
+          "statement_sha256": "86baaeabba3fea091a4141b388ad18b46e77e8551bf9ee898818df9af4b2e6de"
+        }
+      ],
+      "dove_hits": 24,
+      "hawk_hits": 24,
+      "history_status": "available_personal_history",
+      "meetings_count": 2,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2025-02-05",
+        "hawk_dove_score": 0.0,
+        "is_internal": false,
+        "key_themes": [
+          "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+          "\"Among the multiple economic and financial developments informing a difficult voting decision, extracting interpretable signals from the set of factors underlying the unexpectedly sharp Q2 FY25 real GDP growth slowdown was, square and centre, the primary one.\" (2024-12-06)"
+        ],
+        "member_id": "saugata_bhattacharya",
+        "name": "Saugata Bhattacharya",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2024-12-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:saugata_bhattacharya",
+          "statement_sha256": "0b5dcadb6d8b901374618a112cf448c7d7a6aba289080e25ca6f6a1de737ba06",
+          "text": "Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook."
+        },
+        {
+          "decision_date": "2024-12-06",
+          "statement_id": "rbi_mpc_2024-12-06:saugata_bhattacharya",
+          "statement_sha256": "86baaeabba3fea091a4141b388ad18b46e77e8551bf9ee898818df9af4b2e6de",
+          "text": "Among the multiple economic and financial developments informing a difficult voting decision, extracting interpretable signals from the set of factors underlying the unexpectedly sharp Q2 FY25 real GDP growth slowdown was, square and centre, the primary one."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1944
+    }
+  },
+  "missing_history_member_ids": [
+    "m_rajeshwar_rao",
+    "sanjay_malhotra"
+  ],
+  "packet_file": "rolling_inputs/packets/rbi_mpc_2025-02-07.json",
+  "packet_sha256": "1875ae271c8441055474f7974fde5ddfe6de7cd8b4765922143d37f0d260a6b4",
+  "predictive_readiness": false,
+  "protocol_file": "rolling_inputs/protocol.json",
+  "protocol_sha256": "fa39fbf921f0db91a4e7ce6379cbfd15c558e5d6d2f9ab1574804f9cc8ffe4eb",
+  "rolling_receipt_file": "rolling_inputs/receipt.json",
+  "rolling_receipt_sha256": "ac7efe40a493dbe93c542963c9193d569cce4b88a63d64a1c34784fa41c21cb9",
+  "roster": {
+    "appointment_dates": null,
+    "decision_date": "2025-02-07",
+    "governor_id": "sanjay_malhotra",
+    "information_cutoff": "2025-02-05T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2025-02-07",
+    "meeting_start_date": "2025-02-05",
+    "members": [
+      {
+        "is_internal": false,
+        "member_id": "nagesh_kumar",
+        "name": "Nagesh Kumar",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "saugata_bhattacharya",
+        "name": "Saugata Bhattacharya",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "ram_singh",
+        "name": "Ram Singh",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "rajiv_ranjan",
+        "name": "Rajiv Ranjan",
+        "role": "Executive Director",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "m_rajeshwar_rao",
+        "name": "Rajeshwar Rao",
+        "role": "Deputy Governor",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "sanjay_malhotra",
+        "name": "Sanjay Malhotra",
+        "role": "Governor",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy.",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+          "publication_date": "2025-02-21",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+          "source_id": "rbi_prid_59818",
+          "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      }
+    ],
+    "panel_status": "exposed_retrospective",
+    "predictive_roster_readiness": "unverified_pre_cutoff_membership",
+    "roster_available_at_cutoff": false,
+    "roster_evidence_status": "retrospective_oracle_attendance",
+    "roster_source": {
+      "availability_precision": "calendar_day_only",
+      "historical_first_availability_verified": false,
+      "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+      "publication_date": "2025-02-21",
+      "publication_status": "verified_retained_header",
+      "publication_time": null,
+      "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+      "source_id": "rbi_prid_59818",
+      "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+    },
+    "roster_source_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Rajiv Ranjan, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934), and Shri M Rajeshwar Rao, Deputy Governor in charge of monetary policy."
+  },
+  "roster_available_at_cutoff": false,
+  "roster_evidence_status": "retrospective_oracle_attendance",
+  "rosters_file": "rolling_inputs/realized_rosters.json",
+  "rosters_sha256": "ce7e352b20f3643a5516de2078dec7410a3c862d52f83f87ca143e263d3d88ab",
+  "source_bundle_root": "rolling_inputs",
+  "version": "dated-lexical-rolling-v3"
+}

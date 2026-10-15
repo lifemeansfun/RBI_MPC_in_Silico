@@ -1,0 +1,28 @@
+{
+  "id": "nas2021_quarterly_gdp_xlsx",
+  "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/8.18.2.xlsx",
+  "filename": "nas2021_quarterly_gdp.xlsx",
+  "role": "Candidate coherent NAS quarterly GDP expenditure history",
+  "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified",
+  "retrieved_at_utc": "2026-10-09T16:23:16.561236+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/8.18.2.xlsx",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:26:33 GMT",
+    "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "Content-Length": "148415",
+    "Connection": "close",
+    "Last-Modified": "Mon, 19 Jun 2023 11:07:20 GMT",
+    "ETag": "\"649036e8-243bf\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:26:33 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_008/raw/nas2021_quarterly_gdp.xlsx",
+  "bytes": 148415,
+  "sha256": "a61378531aeeb8609f74217d57bad6a565c5aeb18cee7e10a107e15ad82ba412",
+  "primary_final_host": true,
+  "acquired": true
+}

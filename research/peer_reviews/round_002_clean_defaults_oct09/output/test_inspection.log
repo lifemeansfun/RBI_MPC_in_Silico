@@ -1,0 +1,529 @@
+tests/test_infra.py:2:Unit tests for Infrastructure components: ConfigLoader, CostGovernor, LLMCache, and LLMClient.
+tests/test_infra.py:13:from src.infra.llm_client import LLMClient
+tests/test_infra.py:20:    assert cfg.run.provider in ["gemini", "mock", "openai", "anthropic", "ollama"]
+tests/test_infra.py:59:            provider="mock",
+tests/test_infra.py:78:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:1:"""Offline fault/concurrency probes for corrected runtime. No provider calls."""
+tests/test_runtime_upgrade.py:24:from src.infra.llm_client import LLMClient, ProviderResponse
+tests/test_runtime_upgrade.py:42:    client = LLMClient(provider="gemini", cache_enabled=False, governor=governor,
+tests/test_runtime_upgrade.py:57:async def test_complete_metadata_tuple_and_replay(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:59:    client = LLMClient(provider="mock", cache=cache)
+tests/test_runtime_upgrade.py:60:    monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+tests/test_runtime_upgrade.py:71:    assert first.metadata.provider_reported_seed is None
+tests/test_runtime_upgrade.py:112:async def test_failed_output_preserves_raw_request_and_no_fallback(tmp_path, monkeypatch, bad):
+tests/test_runtime_upgrade.py:113:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:118:    monkeypatch.setattr(client, "_generate_mock", generate)
+tests/test_runtime_upgrade.py:129:async def test_unknown_price_identity_and_budget_refusal_submit_zero(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:138:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:139:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:154:async def test_live_response_usage_resolved_before_output_failure(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:159:        return ProviderResponse("invalid JSON", 10, 5, "provider-version", "response-1", "STOP")
+tests/test_runtime_upgrade.py:160:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:161:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:167:    assert caught.value.context["metadata"]["served_model"] == "provider-version"
+tests/test_runtime_upgrade.py:173:async def test_timeout_retains_reservation_across_restart_and_blocks_next(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:182:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:183:    monkeypatch.setattr(client, "_call_gemini", hung)
+tests/test_runtime_upgrade.py:199:async def test_cancellation_after_submission_is_terminal_and_persisted(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:207:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:208:    monkeypatch.setattr(client, "_call_gemini", hung)
+tests/test_runtime_upgrade.py:220:async def test_preflight_failure_releases_only_with_no_submission_evidence(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:227:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:228:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:241:async def test_missing_or_overbound_usage_halts_future_submissions(tmp_path, monkeypatch, usage):
+tests/test_runtime_upgrade.py:247:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:248:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:318:    corrupt.write_bytes(b"not sqlite")
+tests/test_runtime_upgrade.py:334:                                   response_id="provider-response", candidates=[SimpleNamespace(finish_reason="STOP")],
+tests/test_runtime_upgrade.py:348:    assert result.metadata.response_id == "provider-response"
+tests/test_runtime_upgrade.py:413:    path.write_text(json.dumps(document))
+tests/test_runtime_upgrade.py:418:    path.write_text(json.dumps(document))
+tests/test_runtime_upgrade.py:419:    artifact.write_text("corrupt")
+tests/test_runtime_upgrade.py:425:async def test_declared_masked_alias_retains_actual_request_identity(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:426:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:427:    monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW.replace('"member"', '"member_2"'), 10, 5))
+tests/test_runtime_upgrade.py:445:async def test_cache_replay_does_not_resubmit_or_debit_again(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:448:    client = LLMClient(provider="gemini", cache_enabled=True, governor=gov, cache=cache)
+tests/test_runtime_upgrade.py:457:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:458:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:472:async def test_non_normal_finish_rejected_after_retaining_cost(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:478:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:479:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:498:async def test_empty_output_artifact_replay_and_missing_corrupt_evidence(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:502:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:503:    monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+tests/test_runtime_upgrade.py:527:    round_path.write_text(json.dumps(document))
+tests/test_runtime_upgrade.py:537:    path.write_text(json.dumps(document))
+tests/test_runtime_upgrade.py:550:async def test_replay_rejects_rehashed_schema_track_and_payload_contradictions(tmp_path, monkeypatch, mutation):
+tests/test_runtime_upgrade.py:552:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:553:    monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+tests/test_runtime_upgrade.py:571:    governor.mark_uncertain(earlier, "provider timeout")
+tests/test_runtime_upgrade.py:589:async def test_missing_finish_evidence_is_failed_and_known_cost_retained(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:595:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:596:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:606:async def test_bound_violation_failure_context_retains_settled_cost(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:612:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:613:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:631:async def test_mock_cache_cannot_relabel_even_with_recomputed_digest(tmp_path, monkeypatch, mutation):
+tests/test_runtime_upgrade.py:633:    client = LLMClient(provider="mock", cache_enabled=True, cache=cache)
+tests/test_runtime_upgrade.py:638:    monkeypatch.setattr(client, "_generate_mock", generate)
+tests/test_runtime_upgrade.py:652:async def test_live_cache_reconciles_ledger_receipt_without_new_submission(tmp_path, monkeypatch, tamper):
+tests/test_runtime_upgrade.py:655:    client = LLMClient(provider="gemini", cache_enabled=True, cache=cache, governor=governor)
+tests/test_runtime_upgrade.py:664:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:665:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:686:async def test_recorded_action_domain_replay_and_invalid_rate_injection(tmp_path, monkeypatch, rate):
+tests/test_runtime_upgrade.py:692:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:693:    monkeypatch.setattr(client, "_generate_mock", lambda *args: (json.dumps(data), 10, 5))
+tests/test_runtime_upgrade.py:719:async def test_missing_schema_dependency_fails_before_provider_or_reservation(tmp_path, monkeypatch):
+tests/test_runtime_upgrade.py:734:    monkeypatch.setattr(client, "_count_gemini_input", count)
+tests/test_runtime_upgrade.py:735:    monkeypatch.setattr(client, "_call_gemini", generate)
+tests/test_runtime_upgrade.py:736:    with monkeypatch.context() as patch:
+tests/test_runtime_upgrade.py:753:        validate_recorded_schema({}, {"$ref": "https://invalid.example/schema"}, schema_only=True)
+tests/test_runtime_upgrade.py:768:    client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_runtime_upgrade.py:794:        path.write_bytes(b"")
+tests/fixtures/generate_mock_fixtures.py:189:    output_path.parent.mkdir(parents=True, exist_ok=True)
+tests/test_deliberation_upgrade.py:23:from src.infra.llm_client import LLMClient
+tests/test_deliberation_upgrade.py:50:def source_linked_fixture_snapshot(tmp_path, snapshot, monkeypatch):
+tests/test_deliberation_upgrade.py:53:    source.write_text("Test-only synthetic numbers: current repo 6.5; headline CPI 5.4; stance accommodative")
+tests/test_deliberation_upgrade.py:58:    monkeypatch.setattr(MacroMeetingSnapshot, "verify_sources",
+tests/test_deliberation_upgrade.py:62:        vintage="synthetic_fixture", released_at=datetime(2023, 7, 1, tzinfo=timezone.utc), source_url="https://example.invalid/test-fixture",
+tests/test_deliberation_upgrade.py:110:    client = LLMClient(provider="mock", cache_enabled=False, ledger_path=tmp_path / "budget.sqlite3")
+tests/test_deliberation_upgrade.py:122:    client = LLMClient(provider="mock", cache_enabled=False, ledger_path=tmp_path / "budget.sqlite3")
+tests/test_deliberation_upgrade.py:146:    client.provider = "gemini"
+tests/test_deliberation_upgrade.py:159:    client.provider = "gemini"
+tests/test_deliberation_upgrade.py:186:@pytest.mark.parametrize("provider", ["mock", "gemini"])
+tests/test_deliberation_upgrade.py:187:async def test_counterfactual_parent_reconciliation_runs_for_mock_and_live_before_calls(tmp_path, source_linked_fixture_snapshot, roster, corruption, provider):
+tests/test_deliberation_upgrade.py:200:    client.provider = provider
+tests/test_deliberation_upgrade.py:275:@pytest.mark.parametrize("setting,changed", [("model_epoch", "different_epoch"), ("max_output_tokens", 1024), ("provider", "gemini")])
+tests/test_deliberation_upgrade.py:278:    client.provider = "mock"
+tests/test_deliberation_upgrade.py:284:    if setting == "provider":
+tests/test_deliberation_upgrade.py:285:        client.provider = changed
+tests/test_attribution_and_scenarios.py:178:    from src.infra.llm_client import LLMClient
+tests/test_attribution_and_scenarios.py:209:        client = LLMClient(provider="mock", cache_enabled=False)
+tests/test_study_replay.py:23:from src.infra.llm_client import LLMClient
+tests/test_study_replay.py:37:        orchestrator = DebateOrchestrator(LLMClient(provider='mock', cache_enabled=False),
+tests/test_study_replay.py:56:    assert summary['replay_provider_calls'] == 0
+tests/test_study_replay.py:108:        path.write_text(json.dumps(data))
+tests/test_study_replay.py:118:                    checkpoint.write_text(json.dumps(document))
+tests/test_study_replay.py:129:    (study/'study_manifest.json').write_text(json.dumps(manifest))
+tests/test_study_replay.py:137:        orchestrator = DebateOrchestrator(LLMClient(provider='mock',cache_enabled=False),
+tests/test_study_replay.py:156:    statements = tmp_path/'statements'; statements.mkdir()
+tests/test_study_replay.py:158:        directory = statements/meeting; directory.mkdir()
+tests/test_study_replay.py:159:        path = directory/'shaktikanta_das.txt'; path.write_text(text)
+tests/test_study_replay.py:160:        raw = tmp_path/f'{meeting}.html'; raw.write_text(text)
+tests/test_study_replay.py:165:        (directory/'source_manifest.json').write_text(json.dumps(metadata))
+tests/test_debate_mock.py:13:from src.infra.llm_client import LLMClient
+tests/test_debate_mock.py:98:        client = LLMClient(provider="mock", cache_enabled=False)
+research/source_ledgers/expanded_panel_oct08_doublecode/annotations.json
+research/source_ledgers/expanded_panel_oct08_doublecode/validation_secondary.json
+results/current_mock/baseline_predictions.json
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59244.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61056.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61332.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59818.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62169.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63742.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61856.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61749.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62974.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62261.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62514.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59347.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59692.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60176.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62599.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_58958.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_58850.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61433.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60957.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60279.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63287.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63403.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60686.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60604.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62863.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/WORKINGS.md
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/source_map.json
+research/source_ledgers/expanded_panel_oct08_doublecode/validation.json
+research/source_ledgers/expanded_panel_oct08_doublecode/artifact_sha256.json
+research/source_ledgers/expanded_panel_oct08_doublecode/verify_annotations.py
+research/source_ledgers/expanded_panel_oct08_doublecode/verify_annotations_v2.py
+research/source_ledgers/expanded_panel_oct08_doublecode/build_annotations.py
+research/source_ledgers/expanded_panel_oct08_doublecode/validation_failures.json
+research/source_ledgers/expanded_panel_oct08_doublecode/METHODS_AND_MISSINGNESS.md
+research/source_ledgers/expanded_panel_oct08_doublecode/statement_evidence.json
+results/current_mock/evidence/mock_fullpath_oct08_001/masked/predictions.json
+results/current_mock/evidence/mock_fullpath_oct08_001/masked/study_manifest.json
+results/current_mock/evidence/mock_fullpath_oct08_001/full/predictions.json
+results/current_mock/evidence/mock_fullpath_oct08_001/full/study_manifest.json
+results/current_mock/evidence/mock_fullpath_oct08_001/earlier_rounds/predictions.json
+results/current_mock/evidence/mock_fullpath_oct08_001/earlier_rounds/study_manifest.json
+results/current_mock/evidence/mock_fullpath_oct08_001/independent/study_manifest.json
+results/current_mock/evidence/mock_fullpath_oct08_001/independent/predictions.json
+"""Declared synthetic sensitivity scenarios; numerical wedges are simulator-local."""
+
+import hashlib
+import json
+import math
+from typing import Sequence, Any
+from dataclasses import dataclass, field
+
+from src.schemas.macro_schema import MacroMeetingSnapshot, OBSERVABLE_FIELDS
+from src.rational.taylor_rule import SmoothedTaylorRule, MemberTaylorParameters
+from src.rule_engine.engine import InstitutionalRuleEngine
+from src.infra.evidence import content_hash
+
+
+def apply_snapshot_intervention(
+    baseline: MacroMeetingSnapshot, updates: dict[str, Any], name: str,
+    assumptions: dict[str, Any] | None = None,
+) -> MacroMeetingSnapshot:
+    """Preserve every unrelated validated field, and validate changed fields afresh.
+
+    Existing observation records describe the parent snapshot, not the synthetic
+    values. The counterfactual track and intervention manifest make that explicit.
+    """
+    # Revalidate to reject bypassed/model_construct inputs before preserving their evidence.
+    baseline = type(baseline).model_validate(baseline.model_dump())
+    if baseline.input_track == "source_linked":
+        baseline.verify_sources()
+    payload = baseline.model_dump(mode="json")
+    unknown = set(updates) - set(OBSERVABLE_FIELDS)
+    if unknown:
+        raise ValueError(f"Unknown intervention fields: {sorted(unknown)}")
+    for key, value in updates.items():
+        if isinstance(value, (int, float)) and (isinstance(value, bool) or not math.isfinite(value)):
+            raise ValueError(f"Intervention field {key} must be finite")
+    fields = type(baseline).model_fields
+    parent_hash = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
+    payload.update(updates)
+    if "input_track" in fields:
+        payload["input_track"] = "counterfactual"
+    if "parent_snapshot_hash" in fields:
+        payload["parent_snapshot_hash"] = parent_hash
+    if "intervention" in fields:
+        payload["intervention"] = {"name": name, "changed_fields": updates, "assumptions": assumptions or {},
+                                   "estimand_scope": "simulator_local", "parent_snapshot_hash": parent_hash,
+                                   "parent_snapshot": baseline.model_dump(mode="json")}
+    return type(baseline).model_validate(payload)
+
+
+def _add_if_observed(value: float | None, delta: float) -> float | None:
+    return None if value is None else value + delta
+
+
+def _finite_parameter(value: float, name: str) -> None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+        raise ValueError(f"{name} must be finite")
+
+
+@dataclass
+class ScenarioOutcome:
+    scenario_name: str
+    baseline_repo_rate_change_bps: int
+    shocked_repo_rate_change_bps: int
+    baseline_stance: str
+    shocked_stance: str
+    rate_wedge_bps: int
+    stance_changed: bool
+    dissenting_members_shocked: list[str]
+    estimand_scope: str = "simulator_local"
+    scenario_evidence_type: str = "synthetic_sensitivity"
+    dissenting_members_stance_shocked: list[str] = field(default_factory=list)
+    baseline_snapshot_hash: str = ""
+    shocked_snapshot_hash: str = ""
+    resolution_policies: dict[str, str] = field(default_factory=dict)
+    synthetic_resolutions: dict[str, bool] = field(default_factory=dict)
+
+
+class ScenarioRunner:
+    """Apply declared shocks to a fitted or explicitly assumed rational comparator."""
+    def __init__(self, taylor_rule: SmoothedTaylorRule, fragmentation_policy: str = "reject"):
+        self.rule = taylor_rule
+        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+            raise ValueError("Unknown scenario fragmentation policy")
+        self.fragmentation_policy = fragmentation_policy
+
+    def _run(self, name, baseline, shocked, member_params, governor_id):
+        if len({p.member_id for p in member_params}) != len(member_params):
+            raise ValueError("Comparator members must have unique identities")
+        baseline_votes = {p.member_id: self.rule.compute_discrete_action(baseline, p) for p in member_params}
+        shock_votes = {p.member_id: self.rule.compute_discrete_action(shocked, p) for p in member_params}
+        settings = {"fragmentation_policy": self.fragmentation_policy}
+        base_r = InstitutionalRuleEngine.aggregate_rate_votes({m: v[0] for m, v in baseline_votes.items()}, governor_id, prior_action=0, **settings)
+        base_s = InstitutionalRuleEngine.aggregate_stance_votes({m: v[1] for m, v in baseline_votes.items()}, governor_id, prior_action=baseline.prev_stance, **settings)
+        shock_r = InstitutionalRuleEngine.aggregate_rate_votes({m: v[0] for m, v in shock_votes.items()}, governor_id, prior_action=0, **settings)
+        shock_s = InstitutionalRuleEngine.aggregate_stance_votes({m: v[1] for m, v in shock_votes.items()}, governor_id, prior_action=shocked.prev_stance, **settings)
+        return ScenarioOutcome(name, base_r.winning_action, shock_r.winning_action,
+                               base_s.winning_action, shock_s.winning_action,
+                               shock_r.winning_action - base_r.winning_action,
+                               shock_s.winning_action != base_s.winning_action, shock_r.dissenting_members,
+                               dissenting_members_stance_shocked=shock_s.dissenting_members,
+                               baseline_snapshot_hash=content_hash(baseline.model_dump(mode="json")),
+                               shocked_snapshot_hash=content_hash(shocked.model_dump(mode="json")),
+                               resolution_policies={"baseline_rate": base_r.resolution_policy, "baseline_stance": base_s.resolution_policy,
+                                                    "shocked_rate": shock_r.resolution_policy, "shocked_stance": shock_s.resolution_policy},
+                               synthetic_resolutions={"baseline_rate": base_r.synthetic_resolution, "baseline_stance": base_s.synthetic_resolution,
+                                                      "shocked_rate": shock_r.synthetic_resolution, "shocked_stance": shock_s.synthetic_resolution})
+
+    def run_monsoon_food_shock(self, baseline_snapshot, member_params, governor_id,
+                               food_cpi_shock_pct=4.0, monsoon_departure_pct=-20.0):
+        shock = self.build_monsoon_food_shock_snapshot(baseline_snapshot, food_cpi_shock_pct, monsoon_departure_pct)
+        return self._run("Monsoon Failure & Food Inflation Shock", baseline_snapshot, shock, member_params, governor_id)
+
+    def run_us_fed_spillover_shock(self, baseline_snapshot, member_params, governor_id,
+                                  fed_hike_bps=75, inr_depreciation=1.50):
+        shock = self.build_us_fed_spillover_snapshot(baseline_snapshot, fed_hike_bps, inr_depreciation)
+        return self._run(f"US Federal Reserve Spillover Shock (+{fed_hike_bps} bps)", baseline_snapshot, shock, member_params, governor_id)
+
+    def run_pandemic_easing_shock(self, baseline_snapshot, member_params, governor_id):
+        return self._run("2020 Pandemic Easing Cycle", baseline_snapshot,
+                         self.build_pandemic_easing_snapshot(baseline_snapshot), member_params, governor_id)
+
+    def run_taper_tantrum_shock(self, baseline_snapshot, member_params, governor_id):
+        return self._run("2013 Taper Tantrum Crisis", baseline_snapshot,
+                         self.build_taper_tantrum_snapshot(baseline_snapshot), member_params, governor_id)
+
+    @staticmethod
+    def build_monsoon_food_shock_snapshot(baseline_snapshot, food_cpi_shock_pct=4.0, monsoon_departure_pct=-20.0):
+        _finite_parameter(food_cpi_shock_pct, "food_cpi_shock_pct")
+        _finite_parameter(monsoon_departure_pct, "monsoon_departure_pct")
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": _add_if_observed(baseline_snapshot.cpi_headline_yoy_pct, food_cpi_shock_pct * 0.458),
+            "cpi_food_yoy_pct": _add_if_observed(baseline_snapshot.cpi_food_yoy_pct, food_cpi_shock_pct),
+            "iip_growth_yoy_pct": _add_if_observed(baseline_snapshot.iip_growth_yoy_pct, -0.5),
+            "output_gap_pct": _add_if_observed(baseline_snapshot.output_gap_pct, -0.2),
+            "monsoon_departure_lpa_pct": monsoon_departure_pct,
+        }, "monsoon_food_shock", {"food_headline_weight": 0.458, "iip_drag_pct": -0.5, "output_gap_drag_pct": -0.2})
+
+    @staticmethod
+    def build_us_fed_spillover_snapshot(baseline_snapshot, fed_hike_bps=75, inr_depreciation=1.50):
+        _finite_parameter(fed_hike_bps, "fed_hike_bps")
+        _finite_parameter(inr_depreciation, "inr_depreciation")
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": _add_if_observed(baseline_snapshot.cpi_headline_yoy_pct, 0.30),
+            "cpi_core_yoy_pct": _add_if_observed(baseline_snapshot.cpi_core_yoy_pct, 0.20),
+            "system_liquidity_cr": _add_if_observed(baseline_snapshot.system_liquidity_cr, -30000.0),
+            "usd_inr_exchange_rate": _add_if_observed(baseline_snapshot.usd_inr_exchange_rate, inr_depreciation),
+            "us_fed_funds_rate_pct": _add_if_observed(baseline_snapshot.us_fed_funds_rate_pct, fed_hike_bps / 100.0),
+        }, "us_fed_spillover", {"fed_hike_bps": fed_hike_bps, "inr_depreciation": inr_depreciation,
+                                "headline_delta_pct": 0.30, "core_delta_pct": 0.20, "liquidity_drain_cr": 30000.0})
+
+    @staticmethod
+    def build_pandemic_easing_snapshot(baseline_snapshot):
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": 4.50, "cpi_core_yoy_pct": 3.50, "cpi_food_yoy_pct": 5.50,
+            "iip_growth_yoy_pct": -16.7, "output_gap_pct": -4.0,
+            "system_liquidity_cr": _add_if_observed(baseline_snapshot.system_liquidity_cr, 150000.0),
+            "usd_inr_exchange_rate": 76.0, "brent_crude_usd_bbl": 25.0,
+            "us_fed_funds_rate_pct": 0.25, "prev_stance": "accommodative",
+        }, "pandemic_easing_sensitivity", {"historical_reconstruction": False})
+
+    @staticmethod
+    def build_taper_tantrum_snapshot(baseline_snapshot):
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": 9.84, "cpi_core_yoy_pct": 8.00, "cpi_food_yoy_pct": 13.00,
+            "iip_growth_yoy_pct": 1.0, "output_gap_pct": 0.5, "system_liquidity_cr": -80000.0,
+            "usd_inr_exchange_rate": 68.80, "brent_crude_usd_bbl": 110.0,
+            "us_fed_funds_rate_pct": 0.25, "prev_stance": "withdrawal_of_accommodation",
+        }, "taper_tantrum_sensitivity", {"historical_reconstruction": False})
+"""Declared removal sensitivities identify effects inside this simulator only."""
+
+from typing import Sequence, Optional
+from dataclasses import dataclass, field
+
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.persona_schema import MemberPersona
+from src.schemas.debate_schema import MeetingCommitteeDecision
+from src.schemas.decision_space import STANCE_ACTIONS
+from src.behavioral.debate_orchestrator import DebateOrchestrator, InformationVisibility
+from src.infra.evidence import content_hash
+from src.scenarios.scenario_runner import apply_snapshot_intervention
+
+
+@dataclass
+class AttributionResult:
+    experiment_id: str
+    experiment_name: str
+    baseline_decision_bps: int
+    ablated_decision_bps: int
+    baseline_stance: str
+    ablated_stance: str
+    outcome_shifted: bool
+    marginal_contribution_bps: int
+    description: str
+    estimand_scope: str = "simulator_local"
+    donor_behavior: str = "not_applicable"
+    condition_id: str = ""
+    replicate_id: int = 1
+    member_rate_changes_bps: dict[str, int] = field(default_factory=dict)
+    member_stance_changed: dict[str, bool] = field(default_factory=dict)
+    study_experiment_id: str = ""
+    baseline_condition_id: str = ""
+    evidence_types: list[str] = field(default_factory=list)
+
+
+class AttributionRunner:
+    @staticmethod
+    def _paired_generation_settings(orchestrator, baseline, snapshot, personas, governor_id,
+                                    model, temperature, seed):
+        """Reject a mismatched intervention before any new generation is submitted.
+
+        Historical decisions remain readable, but without frozen input/settings
+        identities they cannot qualify as a paired mechanism experiment.
+        """
+        if not baseline.snapshot_hash or not baseline.persona_hash or not baseline.generation_settings or not baseline.governor_id:
+            raise ValueError("Attribution baseline lacks frozen paired input and generation identities")
+        validated_snapshot = type(snapshot).model_validate(snapshot.model_dump())
+        if content_hash(validated_snapshot.model_dump(mode="json")) != baseline.snapshot_hash:
+            raise ValueError("Attribution snapshot differs from the frozen baseline")
+        if content_hash([p.model_dump(mode="json") for p in personas]) != baseline.persona_hash:
+            raise ValueError("Attribution personas differ from the frozen baseline")
+        if governor_id != baseline.governor_id:
+            raise ValueError("Attribution Governor differs from the frozen baseline")
+        selected_seed = baseline.seed_base if seed is None else seed
+        if type(selected_seed) is not int or selected_seed != baseline.seed_base:
+            raise ValueError("Attribution seed differs from the paired baseline schedule")
+        frozen = baseline.generation_settings
+        selected_model = frozen["model"] if model is None else model
+        selected_temperature = frozen["temperature"] if temperature is None else temperature
+        current = orchestrator.generation_settings(selected_model, selected_temperature)
+        if current != frozen:
+            raise ValueError("Attribution generation settings differ from the frozen baseline")
+        return {"model": selected_model, "temperature": selected_temperature, "seed": selected_seed}
+
+    @staticmethod
+    def _condition_settings(baseline):
+        graph = {key: value for key, value in baseline.visibility.items() if key in InformationVisibility.__dataclass_fields__}
+        return {"visibility": InformationVisibility(**graph),
+                "mask_identity": baseline.visibility.get("mask_identity", False),
+                "mask_date": baseline.visibility.get("mask_date", False),
+                "fragmentation_policy": baseline.fragmentation_policy}
+
+    @staticmethod
+    def ablate_casting_vote(meeting_outcome: MeetingCommitteeDecision, governor_id: str,
+                            prior_stance: Optional[str] = None) -> AttributionResult:
+        """Remove actual binary casting; status-quo resolution is a synthetic policy.
+
+        Retain the actual pre-meeting stance. A fragmented menu outcome must never
+        masquerade as a statutory casting vote, even when its winner is Governor's.
+        """
+        if meeting_outcome.member_votes and governor_id not in {v.member_id for v in meeting_outcome.member_votes}:
+            raise ValueError("Casting removal requires a Governor ballot")
+        if meeting_outcome.governor_id is not None and governor_id != meeting_outcome.governor_id:
+            raise ValueError("Casting removal Governor differs from the recorded baseline")
+        for tie, tally, synthetic in (
+            (meeting_outcome.tie_broken_by_governor_rate, meeting_outcome.rate_vote_tally, meeting_outcome.synthetic_resolution_rate),
+            (meeting_outcome.tie_broken_by_governor_stance, meeting_outcome.stance_vote_tally, meeting_outcome.synthetic_resolution_stance),
+        ):
+            if tie and (synthetic or len(tally) != 2 or len(set(tally.values())) != 1 or any(n <= 0 for n in tally.values())):
+                raise ValueError("Casting flag must represent binary equality, not synthetic fragmentation")
+        if prior_stance is not None and prior_stance not in STANCE_ACTIONS:
+            raise ValueError("Casting removal prior stance must use the declared stance domain")
+        if prior_stance is not None and meeting_outcome.prior_stance is not None and prior_stance != meeting_outcome.prior_stance:
+            raise ValueError("Casting removal prior stance contradicts the recorded baseline")
+        prev = meeting_outcome.prior_stance if prior_stance is None else prior_stance
+        if meeting_outcome.tie_broken_by_governor_stance and prev not in STANCE_ACTIONS:
+            raise ValueError("Casting removal requires the actual prior stance")
+        rate = 0 if meeting_outcome.tie_broken_by_governor_rate else meeting_outcome.rate_decision_bps
+        stance = prev if meeting_outcome.tie_broken_by_governor_stance else meeting_outcome.stance_decision
+        return AttributionResult(
+            experiment_id="EXP_2_CASTING_VOTE", experiment_name="Governor Casting-Vote Removal (§45ZI(8))",
+            baseline_decision_bps=meeting_outcome.rate_decision_bps, ablated_decision_bps=rate,
+            baseline_stance=meeting_outcome.stance_decision, ablated_stance=stance,
+            outcome_shifted=(rate != meeting_outcome.rate_decision_bps or stance != meeting_outcome.stance_decision),
+            marginal_contribution_bps=meeting_outcome.rate_decision_bps - rate,
+            description="Simulator-local numerical casting removal; unresolved equality uses synthetic status quo (0 bps and actual prior stance). Ballots are held fixed.",
+            donor_behavior="all_ballots_held_fixed", replicate_id=meeting_outcome.replicate_id,
+            condition_id="casting_removed",
+            study_experiment_id=meeting_outcome.experiment_id, baseline_condition_id=meeting_outcome.condition_id,
+            evidence_types=meeting_outcome.evidence_types if meeting_outcome.member_votes else ["constructed_rule_probe"],
+        )
+
+    @staticmethod
+    def mute_macro_input(baseline_snapshot: MacroMeetingSnapshot, muted_factor: str) -> MacroMeetingSnapshot:
+        if muted_factor == "monsoon":
+            return apply_snapshot_intervention(baseline_snapshot, {"monsoon_departure_lpa_pct": 0.0},
+                                               "mute_monsoon", {"neutral_departure_pct": 0.0})
+        if muted_factor == "food_inflation":
+            if baseline_snapshot.cpi_food_yoy_pct is None:
+                raise ValueError("Food muting requires an observed food-inflation baseline")
+            headline = baseline_snapshot.cpi_headline_yoy_pct
+            if headline is not None:
+                headline -= (baseline_snapshot.cpi_food_yoy_pct - 4.0) * 0.458
+            return apply_snapshot_intervention(baseline_snapshot, {"cpi_headline_yoy_pct": headline, "cpi_food_yoy_pct": 4.0},
+                                               "mute_food_inflation", {"assumed_food_reference_pct": 4.0, "food_headline_weight": 0.458})
+        raise ValueError(f"Unknown muting factor: {muted_factor}")
+
+    @staticmethod
+    def _result(base, treatment, experiment_id, experiment_name, description, donor_behavior="not_applicable"):
+        baseline_votes = {v.member_id: v for v in base.member_votes}
+        treatment_votes = {v.member_id: v for v in treatment.member_votes}
+        if set(baseline_votes) != set(treatment_votes) or len(baseline_votes) != len(base.member_votes) or len(treatment_votes) != len(treatment.member_votes):
+            raise ValueError("Attribution requires exactly aligned unique member ballots")
+        if base.meeting_date != treatment.meeting_date or base.replicate_id != treatment.replicate_id:
+            raise ValueError("Attribution requires paired meeting and replicate identity")
+        if base.seed_schedule != treatment.seed_schedule:
+            raise ValueError("Attribution requires the same declared paired seed schedule")
+        if (base.experiment_id != treatment.experiment_id or base.governor_id != treatment.governor_id
+                or base.persona_hash != treatment.persona_hash or base.generation_settings != treatment.generation_settings):
+            raise ValueError("Attribution requires matching frozen experiment, roster and generation settings")
+        return AttributionResult(
+            experiment_id=experiment_id, experiment_name=experiment_name,
+            baseline_decision_bps=base.rate_decision_bps, ablated_decision_bps=treatment.rate_decision_bps,
+            baseline_stance=base.stance_decision, ablated_stance=treatment.stance_decision,
+            outcome_shifted=(base.rate_decision_bps != treatment.rate_decision_bps or base.stance_decision != treatment.stance_decision),
+            marginal_contribution_bps=base.rate_decision_bps - treatment.rate_decision_bps,
+            description=description, donor_behavior=donor_behavior,
+            replicate_id=treatment.replicate_id, condition_id=treatment.condition_id,
+            member_rate_changes_bps={m: treatment_votes[m].final_rate_vote_bps - v.final_rate_vote_bps for m, v in baseline_votes.items()},
+            member_stance_changed={m: treatment_votes[m].final_stance_vote != v.final_stance_vote for m, v in baseline_votes.items()},
+            study_experiment_id=base.experiment_id, baseline_condition_id=base.condition_id,
+            evidence_types=sorted(set(base.evidence_types + treatment.evidence_types)),
+        )
+
+    @classmethod
+    async def run_leave_one_out_ablation(
+        cls, orchestrator: DebateOrchestrator, baseline_decision: MeetingCommitteeDecision,
+        snapshot: MacroMeetingSnapshot, personas: Sequence[MemberPersona], governor_id: str,
+        ablated_member_id: str, model: Optional[str] = None, temperature: Optional[float] = None,
+        seed: Optional[int] = None,
+    ) -> AttributionResult:
+        paired = cls._paired_generation_settings(orchestrator, baseline_decision, snapshot, personas,
+                                                governor_id, model, temperature, seed)
+        treatment = await orchestrator.run_meeting(
+            snapshot=snapshot, personas=personas, governor_id=governor_id,
+            replicate_id=baseline_decision.replicate_id, **paired,
+            ablated_member_id=ablated_member_id, experiment_id=baseline_decision.experiment_id,
+            condition_id=f"{baseline_decision.condition_id}_outgoing_removed_{ablated_member_id}",
+            control_mode=baseline_decision.control_mode,
+            **cls._condition_settings(baseline_decision),
+        )
+        own_state_retained = baseline_decision.visibility.get("own_state", True)
+        return cls._result(
+            baseline_decision, treatment, f"EXP_1_LEAVE_OUT_{ablated_member_id.upper()}",
+            f"Outgoing Information Removal ({ablated_member_id})",
+            f"Simulator-local removal of {ablated_member_id}'s outgoing R1-R3 arguments, identities and Governor-visible R4 ballot. The donor's vote still counts, own-state visibility matches baseline ({own_state_retained}); all members may respond endogenously.",
+            donor_behavior="own_state_retained_endogenous_ballot" if own_state_retained else "own_state_withheld_in_both_conditions_endogenous_ballot",
+        )
+
+    @classmethod
+    async def run_macro_muting_ablation(
+        cls, orchestrator: DebateOrchestrator, baseline_decision: MeetingCommitteeDecision,
+        snapshot: MacroMeetingSnapshot, personas: Sequence[MemberPersona], governor_id: str,
+        muted_factor: str, model: Optional[str] = None, temperature: Optional[float] = None,
+        seed: Optional[int] = None,
+    ) -> AttributionResult:
+        paired = cls._paired_generation_settings(orchestrator, baseline_decision, snapshot, personas,
+                                                governor_id, model, temperature, seed)
+        treatment = await orchestrator.run_meeting(
+            snapshot=cls.mute_macro_input(snapshot, muted_factor), personas=personas, governor_id=governor_id,
+            replicate_id=baseline_decision.replicate_id, **paired,
+            experiment_id=baseline_decision.experiment_id,
+            condition_id=f"{baseline_decision.condition_id}_mute_{muted_factor}",
+            control_mode=baseline_decision.control_mode,
+            **cls._condition_settings(baseline_decision),
+        )
+        return cls._result(baseline_decision, treatment, f"EXP_3_MUTE_{muted_factor.upper()}",
+                           f"Macro Input Sensitivity ({muted_factor})",
+                           f"Simulator-local sensitivity to an explicitly synthetic {muted_factor} intervention; unrelated fields are preserved.")

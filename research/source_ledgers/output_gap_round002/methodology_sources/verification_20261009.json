@@ -1,0 +1,87 @@
+{
+  "checked_at_utc": "2026-10-09T16:19:08.930308+00:00",
+  "scope": "Archival integrity checks only; no output-gap implementation, GDP, forecasts or empirical comparisons were run",
+  "checks": [
+    {
+      "id": "ovn_1999",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "hamilton_2017",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "gruen_robinson_stone_2002",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "kamber_morley_wong_2016_pdf",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "edge_rudd_2012",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "champagne_poulin_sekkel_2016",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "eurostat_2009",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "eurostat_2024",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "census_x13_2017",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "imf_qna_2017",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_pdf"
+    },
+    {
+      "id": "imf_qna_2017_ch7",
+      "raw_exists": true,
+      "raw_hash_matches": true,
+      "bytes_match": true,
+      "status": "downloaded_non_pdf_response"
+    }
+  ],
+  "all_raw_hashes_and_sizes_match": true,
+  "pdf_count": 10,
+  "metadata_corrections_present": true,
+  "new_files_only": true
+}

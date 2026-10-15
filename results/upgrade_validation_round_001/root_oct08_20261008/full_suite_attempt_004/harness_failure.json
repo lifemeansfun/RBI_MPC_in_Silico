@@ -1,0 +1,7 @@
+{
+  "exit_code": 1,
+  "stage": "copy",
+  "error": "FileNotFoundError: optional templates directory absent",
+  "tests_started": false,
+  "provenance": "Original console failure preserved as a structured record"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nas2019_gdp_expenditure",
+  "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.2.pdf",
+  "filename": "nas2019_s8_18_2.pdf",
+  "role": "constant_price_quarterly_GDP_candidate",
+  "discovery": "Primary-domain web search result exact URL",
+  "retrieved_at_utc": "2026-10-09T16:09:21.566744+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.2.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:12:38 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "701740",
+    "Connection": "close",
+    "Last-Modified": "Thu, 26 Sep 2019 04:12:36 GMT",
+    "ETag": "\"5d8c3ab4-ab52c\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:12:38 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_001/raw/nas2019_s8_18_2.pdf",
+  "bytes": 701740,
+  "sha256": "d9a110c3fa809344f12396f8063fe55d4883493997d1b813f39ea16e8dc8653c",
+  "primary_final_host": true,
+  "acquired": true
+}

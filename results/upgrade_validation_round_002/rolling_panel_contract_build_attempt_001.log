@@ -1,0 +1,9 @@
+{
+  "build_status": "verified_inputs_built",
+  "meetings_count": 38,
+  "member_packets_count": 228,
+  "missing_history_member_packets": 14,
+  "model_calls": 0,
+  "predictive_readiness": false,
+  "source_statements_count": 222
+}

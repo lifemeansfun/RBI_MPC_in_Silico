@@ -1,0 +1,28 @@
+{
+  "id": "revision_policy_2016",
+  "url": "https://mospi.gov.in/sites/default/files/press_releases_statements/Modification_Rev%20Policy_16.11.2016.pdf",
+  "filename": "revision_policy_2016.pdf",
+  "role": "Published quarterly/annual revision policy; not proof of every historical correction",
+  "discovery": "Official primary web search exact retained PDF URL",
+  "retrieved_at_utc": "2026-10-09T16:28:18.016330+00:00",
+  "status": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_releases_statements/Modification_Rev%20Policy_16.11.2016.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:31:35 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "99123",
+    "Connection": "close",
+    "Last-Modified": "Wed, 16 Nov 2016 07:02:26 GMT",
+    "ETag": "\"582c0482-18333\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:31:35 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_009/raw/revision_policy_2016.pdf",
+  "bytes": 99123,
+  "sha256": "3dedd6658612d9e1668bbd95c04ff83988dc25cc07f9fb4af36efbaaadf1854b",
+  "primary_final_host": true,
+  "acquired": true
+}

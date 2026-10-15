@@ -1,0 +1,28 @@
+{
+  "id": "fed_20200916_implementation",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a1.htm",
+  "format": "html",
+  "role": "implementation",
+  "discovery_parent_id": "fed_20200916_statement",
+  "discovery_parent_sha256": "9037f42242e6386026d5db1fd5a28b0ca2c9cc426bb448409b6eb023ea2db51e",
+  "retrieved_at_utc": "2026-10-05T14:54:36.696271+00:00",
+  "status_code": 200,
+  "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a1.htm",
+  "response_headers": {
+    "Date": "Mon, 05 Oct 2026 14:54:37 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "CF-Ray": "a45d433908f39094-BOM",
+    "CF-Cache-Status": "REVALIDATED",
+    "Last-Modified": "Thu, 26 Feb 2026 23:40:31 GMT",
+    "Server": "cloudflare",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Content-Encoding": "gzip"
+  },
+  "bytes": 80168,
+  "acquired": true,
+  "local_file": "raw/fed_20200916_implementation.html",
+  "sha256": "623d00d8222d9a88e386148a0d0553ab3ab230a2c1b6d19573cc233fd2ca8caa"
+}

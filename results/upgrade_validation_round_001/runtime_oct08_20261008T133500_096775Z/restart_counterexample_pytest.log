@@ -1,0 +1,42 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_previously_initialized_ledger_cannot_reset_on_new_owner[missing] _____
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...alidation_round_001/runtime_oct08_20261008T133500_096775Z/restart_counterexample_temp/test_previously_initialized_le0')
+corruption = 'missing'
+
+    @pytest.mark.parametrize("corruption", ["missing", "empty_file"])
+    def test_previously_initialized_ledger_cannot_reset_on_new_owner(tmp_path, corruption):
+        path = tmp_path / "budget.sqlite"
+        governor = CostGovernor(1, path)
+        governor.record_usage("gemini-3.1-flash-lite", 10, 5)
+        if corruption == "missing":
+            path.unlink()
+        else:
+            path.write_bytes(b"")
+>       with pytest.raises(BudgetLedgerError):
+E       Failed: DID NOT RAISE BudgetLedgerError
+
+tests/test_runtime_upgrade.py:795: Failed
+___ test_previously_initialized_ledger_cannot_reset_on_new_owner[empty_file] ___
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...alidation_round_001/runtime_oct08_20261008T133500_096775Z/restart_counterexample_temp/test_previously_initialized_le1')
+corruption = 'empty_file'
+
+    @pytest.mark.parametrize("corruption", ["missing", "empty_file"])
+    def test_previously_initialized_ledger_cannot_reset_on_new_owner(tmp_path, corruption):
+        path = tmp_path / "budget.sqlite"
+        governor = CostGovernor(1, path)
+        governor.record_usage("gemini-3.1-flash-lite", 10, 5)
+        if corruption == "missing":
+            path.unlink()
+        else:
+            path.write_bytes(b"")
+>       with pytest.raises(BudgetLedgerError):
+E       Failed: DID NOT RAISE BudgetLedgerError
+
+tests/test_runtime_upgrade.py:795: Failed
+=========================== short test summary info ============================
+FAILED tests/test_runtime_upgrade.py::test_previously_initialized_ledger_cannot_reset_on_new_owner[missing]
+FAILED tests/test_runtime_upgrade.py::test_previously_initialized_ledger_cannot_reset_on_new_owner[empty_file]
+2 failed, 50 deselected in 0.25s

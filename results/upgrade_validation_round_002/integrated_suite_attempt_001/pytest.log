@@ -1,0 +1,31 @@
+..............F......................................................... [ 23%]
+........................................................................ [ 47%]
+........................................................................ [ 70%]
+........................................................................ [ 94%]
+.................                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_anti_hallucination_macro_prompt_constraints _______________
+
+    def test_anti_hallucination_macro_prompt_constraints():
+        snapshot=MacroMeetingSnapshot(meeting_date='2023-08-10',current_repo_rate_pct=6.5,cpi_headline_yoy_pct=4.81,
+            real_rate_decision_bps=0,real_dissenters=['secret_truth_member'])
+        prompt=snapshot.to_prompt_text()
+        assert 'legacy_unverified' in prompt and 'SIMULATED MPC MEETING' in prompt
+        assert '4.81' in prompt and '6.50' in prompt
+        assert 'Unlisted observations are unavailable' in prompt
+>       assert 'Core CPI' not in prompt and 'US federal funds' not in prompt
+E       AssertionError: assert ('Core CPI' not in '=== MACROEC... indicators.'
+E         
+E         'Core CPI' is contained here:
+E         ?           ^^^^^^^^^^^^^^^^^^^     ^^^^^^^^
+E           rvations: Core CPI inflation (YoY %), CPI food and beverages inflation (YoY %), Combined CFPI inflation (YoY %; distinct food index), Industrial production growth (YoY %), Real GVA growth (YoY %), Real GDP growth (YoY %), One-sided estimated output gap (%), Net liquidity (INR crore), USD/INR exchange rate, Brent crude (USD/barrel), US federal funds target upper bound (%), Monsoon departure from LPA (%).
+E         ?           ^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RBI inflation target: 4.00%, tolerance band 2.00%-6.00%.
+E           U...
+E         
+E         ...Full output truncated (3 lines hidden), use '-vv' to show)
+
+tests/test_defenses_and_validation.py:29: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_defenses_and_validation.py::test_anti_hallucination_macro_prompt_constraints
+1 failed, 304 passed in 113.11s (0:01:53)

@@ -1,0 +1,28 @@
+{
+  "id": "nas2025_release",
+  "url": "https://www.mospi.gov.in/sites/default/files/press_release/Press%20Release%20on%20National%20Accounts%20Statistics%20Publication%20-%202025.pdf",
+  "filename": "nas2025_release.pdf",
+  "role": "Primary May16,2025 notice of NAS2024 later updates, negative vintage evidence",
+  "discovery": "Official primary web search actual URL",
+  "retrieved_at_utc": "2026-10-09T16:28:19.478642+00:00",
+  "status": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/press_release/Press%20Release%20on%20National%20Accounts%20Statistics%20Publication%20-%202025.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Fri, 09 Oct 2026 16:31:36 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "164817",
+    "Connection": "close",
+    "Last-Modified": "Fri, 16 May 2025 12:41:59 GMT",
+    "ETag": "\"68273297-283d1\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Sun, 08 Nov 2026 16:31:36 GMT",
+    "Cache-Control": "max-age=2592000",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "local_file": "acquisition/batch_009/raw/nas2025_release.pdf",
+  "bytes": 164817,
+  "sha256": "b55c686174535ae4928200c344ac5f7e22843ace7e0dad4ad4bff0b4511dfb3f",
+  "primary_final_host": true,
+  "acquired": true
+}

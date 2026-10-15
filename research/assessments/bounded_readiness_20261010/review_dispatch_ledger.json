@@ -1,0 +1,48 @@
+{
+  "count": 5,
+  "active_goal_cap": 4,
+  "counting_rule": "Existing run counted cumulatively without reset; failed and contaminated dispatches included. Prompt-design editing is not a scientific review.",
+  "stop_condition": "reviewer_dispatch_cap_exceeded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "directory": "round_001",
+      "outcome": "failed_infrastructure_account_quota",
+      "verdict": null,
+      "evidence": "research/peer_reviews/round_001/attempt_status.json",
+      "evidence_sha256": "4a3a7603dc423dcb2b34724df83811668813df38e15573c64ae838ab37d2d2b0"
+    },
+    {
+      "attempt": 2,
+      "directory": "round_001_retry",
+      "outcome": "completed_with_recorded_context_and_shared_host_limits",
+      "verdict": "Not fully elite research grade",
+      "evidence": "research/peer_reviews/round_001_retry/verdict.json",
+      "evidence_sha256": "6be12d4413665e33c60909988e881d5273805fda2008e425c173463aa7a4f8fc"
+    },
+    {
+      "attempt": 3,
+      "directory": "round_002_oct09",
+      "outcome": "stopped_inherited_memory_contamination",
+      "verdict": null,
+      "evidence": "research/peer_reviews/round_002_oct09/output/isolation_receipt.json",
+      "evidence_sha256": "f5410e7e09025298b65914a4278c30f30dfc6a48d1dc7efd6ab19e29a2ed3d51"
+    },
+    {
+      "attempt": 4,
+      "directory": "round_002_clean_process_oct09",
+      "outcome": "failed_http400_unsupported_cli_model",
+      "verdict": null,
+      "evidence": "research/peer_reviews/round_002_clean_process_oct09/events.jsonl",
+      "evidence_sha256": "a9847e1c6529710953e18242c531a6ea27a70b35e418ad1672560c8c86cd39e8"
+    },
+    {
+      "attempt": 5,
+      "directory": "round_002_clean_defaults_oct09",
+      "outcome": "completed_valid_fresh_ai_review_with_recorded_access_limits",
+      "verdict": "Not fully elite research grade",
+      "evidence": "research/peer_reviews/round_002_clean_defaults_oct09/root_acceptance_receipt.json",
+      "evidence_sha256": "f3bae4d559f258ccdf0b7c3c6d70db6b535bff7339104258a6b44d7d674d75ea"
+    }
+  ]
+}

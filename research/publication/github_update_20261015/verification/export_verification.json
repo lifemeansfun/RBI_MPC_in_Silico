@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-15",
+  "base": "/private/tmp/rbi_publish_20261015_c7xt8emf",
+  "export": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+  "export_method": "git checkout-index --all",
+  "index_tree": "99fb34ff5950f2a8343e6952168f6b92f45e7828",
+  "python": "Python 3.11.16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "environment_reused": true,
+  "environment_note": "Export uses existing compatible project venv; no new clean installation claimed",
+  "provider_generation_requested": false,
+  "phases": [
+    {
+      "name": "pip_check",
+      "argv": [
+        "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+      "started_at_unix": 1792077695.4173372,
+      "exit_code": 0,
+      "elapsed_seconds": 0.6857798099517822
+    },
+    {
+      "name": "isolated_tests",
+      "argv": [
+        "make",
+        "test",
+        "OUT=/private/tmp/rbi_publish_20261015_c7xt8emf/tests"
+      ],
+      "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+      "started_at_unix": 1792077696.1034932,
+      "exit_code": 0,
+      "elapsed_seconds": 198.34619975090027
+    },
+    {
+      "name": "offline_reproduction",
+      "argv": [
+        "make",
+        "reproduce",
+        "OUT=/private/tmp/rbi_publish_20261015_c7xt8emf/reproduction"
+      ],
+      "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+      "started_at_unix": 1792077894.450901,
+      "exit_code": 0,
+      "elapsed_seconds": 12.087963819503784
+    },
+    {
+      "name": "fixture",
+      "argv": [
+        "make",
+        "study-fixture",
+        "OUT=/private/tmp/rbi_publish_20261015_c7xt8emf/fixture"
+      ],
+      "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+      "started_at_unix": 1792077906.540253,
+      "exit_code": 0,
+      "elapsed_seconds": 0.2027289867401123
+    },
+    {
+      "name": "fixture_validate",
+      "argv": [
+        "make",
+        "study-validate",
+        "PROTOCOL=/private/tmp/rbi_publish_20261015_c7xt8emf/fixture/protocol.json",
+        "OUT=/private/tmp/rbi_publish_20261015_c7xt8emf/fixture_validate"
+      ],
+      "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout",
+      "started_at_unix": 1792077906.743402,
+      "exit_code": 0,
+      "elapsed_seconds": 0.25794196128845215
+    }
+  ],
+  "status": "passed",
+  "elapsed_seconds": 211.5806143283844
+}

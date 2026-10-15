@@ -1,0 +1,127 @@
+{
+  "verified_at_utc": "2026-10-10T02:15:55.097346+00:00",
+  "bounded_assessment_complete": true,
+  "publication_readiness_achieved": false,
+  "scientific_terminal_status": "Research incomplete \u2014 specified evidence or resources remain necessary",
+  "scope": "Completion proves delivery of the bounded assessment and stop, not scientific gate satisfaction or historical compliance with the newly reduced dispatch cap.",
+  "requirement_checks": [
+    {
+      "requirement": "Governing objective read and retained",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "goal-objective.md; matching attached-objective hash"
+    },
+    {
+      "requirement": "Existing work reused without restarting",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "evidence_inventory.json: retained execution receipts, matching current source hashes"
+    },
+    {
+      "requirement": "Main and original tracked evidence preserved",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "evidence_inventory.json: fixed main commit; no modified/deleted original data/personas/runs/results relative to main"
+    },
+    {
+      "requirement": "No manuscript work",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Collector allowlist excludes outputs/main_paper; closeout edits are assessment and plan-status files"
+    },
+    {
+      "requirement": "Limits evaluated without reset",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "review_dispatch_ledger.json: five cumulative scientific attempts; failed/contaminated attempts included; inherited cap overrun explicitly disclosed"
+    },
+    {
+      "requirement": "Provider cap not increased",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "evidence_inventory.json: current and committed USD25 cap; zero closeout provider calls"
+    },
+    {
+      "requirement": "All mandatory scientific criteria assessed",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "criterion_matrix.json: A through G with status, scoped evidence and exact remaining gaps"
+    },
+    {
+      "requirement": "Decisive experiments identified",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md: Exact remaining gaps and smallest next actions"
+    },
+    {
+      "requirement": "Evaluation freeze and exposure addressed",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Saved studies retain anchors; future live freeze is an explicit unmet requirement; no new evaluation initiated at closeout"
+    },
+    {
+      "requirement": "Critical review and independence limits recorded",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Five-attempt ledger; valid negative review preserved; contaminated/failed attempts have no invented verdict; no final-current approval claimed"
+    },
+    {
+      "requirement": "Implemented remedies and their acceptance boundaries reported",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md: implemented changes, retained executions, partial component boundaries"
+    },
+    {
+      "requirement": "Scientific disagreements, nulls, failures and contrary findings preserved",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md; hashed failed execution logs and existing raw review archives"
+    },
+    {
+      "requirement": "Stop condition enforced",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Dispatch allowance exhausted; no further repairs/experiments/reviews; historical plans marked superseded"
+    },
+    {
+      "requirement": "Changes and why delivered",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md: Implemented changes and what they establish"
+    },
+    {
+      "requirement": "Executed checks and results delivered",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md; evidence_inventory.json: exact receipt argv, logs, environment and limits"
+    },
+    {
+      "requirement": "Criterion evidence table delivered",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md and criterion_matrix.json"
+    },
+    {
+      "requirement": "Exact gaps and smallest next actions delivered",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md: prioritized source/integration/live/contribution requirements"
+    },
+    {
+      "requirement": "Reproduction commands and artifact locations delivered",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "READINESS_ASSESSMENT.md: supported Makefile interfaces and absolute file links"
+    },
+    {
+      "requirement": "Terminal status distinguishes task completion from readiness",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Status 2; publication readiness false; no universal rejection of untested live approach"
+    },
+    {
+      "requirement": "Automatic continuation beyond stopping condition prohibited",
+      "bounded_task_status": "COMPLETE",
+      "evidence": "Terminal assessment and both supersession notices require new user instruction"
+    }
+  ],
+  "scientific_gate_statuses": {
+    "A": "UNVERIFIED",
+    "B": "FAIL",
+    "C": "FAIL",
+    "D": "FAIL",
+    "E": "UNVERIFIED",
+    "F": "FAIL",
+    "G": "UNVERIFIED"
+  },
+  "historical_dispatch_count": 5,
+  "active_dispatch_limit": 4,
+  "historical_overrun_not_erased": true,
+  "scientific_manifest_sha256": "ad04eb0b9ab04776a55829494ddee043e2d946009092b642404cadf5459b725f",
+  "verifier_sha256": "01510a8a8d80ad9152231f3fa43ff9c3467a070ceb49350479a5b799adc4d7ea",
+  "verification_command": [
+    ".venv/bin/python",
+    "research/assessments/bounded_readiness_20261010/verify_closeout.py"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "prehistory_nas19_statement_8_18_1",
+  "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.1.pdf",
+  "format": "pdf",
+  "role": "prehistory_candidate",
+  "publication_year": 2019,
+  "release_date": "",
+  "release_date_precision": "Not printed in table; publicationmonthneedsseparateevidence",
+  "retrieved_at_utc": "2026-10-05T15:10:31.701482+00:00",
+  "status_code": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.1.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 15:13:44 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "767143",
+    "Connection": "keep-alive",
+    "Last-Modified": "Thu, 26 Sep 2019 04:12:28 GMT",
+    "ETag": "\"5d8c3aac-bb4a7\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 15:13:44 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 767143,
+  "acquired": true,
+  "local_file": "raw/prehistory_nas19_statement_8_18_1.pdf",
+  "sha256": "dc342adbd53fec53f848a88cbb42f9ce8f31b2cb23b9369f0a2c8ade2a41624e"
+}

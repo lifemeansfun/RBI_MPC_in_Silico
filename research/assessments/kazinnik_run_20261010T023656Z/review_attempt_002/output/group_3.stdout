@@ -1,0 +1,410 @@
+[
+  {
+    "id": "gwu_current",
+    "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "retrieved_utc": "2026-10-10T02:38:55.858942+00:00",
+    "status_code": 200,
+    "final_url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "content_type": "application/pdf",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/gwu_current.bin",
+    "bytes": 2640547,
+    "sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+    "pdf_magic": true
+  },
+  {
+    "id": "ssrn_record",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.320898+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_record.bin",
+    "bytes": 896436,
+    "sha256": "fb12d44ca19f805b2244e22e35b763b9597f244b51f82f2dfb647480a2a482c2",
+    "pdf_magic": false
+  },
+  {
+    "id": "ssrn_delivery",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.693880+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_delivery.bin",
+    "bytes": 896436,
+    "sha256": "2ad1e4feb1a4002f63558e4241696c999dc4ba581a4eb9e3a39fad1af9256dbf",
+    "pdf_magic": false
+  },
+  {
+    "id": "nber_program",
+    "url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "retrieved_utc": "2026-10-10T02:40:42.020654+00:00",
+    "status_code": 200,
+    "final_url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/nber_program.html",
+    "sha256": "af512842e3c73dc0fcbf8303f960076a0a835e23da7dd196cc810a2e8db7e723",
+    "bytes": 121190,
+    "pdf_magic": false,
+    "candidate_links": []
+  },
+  {
+    "id": "nber_printable",
+    "url": "https://conference.nber.org/agenda/simple_printable?conf_id=SI26EFFE",
+    "retrieved_utc": "2026-10-10T02:40:43.113770+00:00",
+    "error": "HTTPSConnectionPool(host='conference.nber.org', port=443): Max retries exceeded with url: /agenda/simple_printable?conf_id=SI26EFFE (Caused by NewConnectionError(\"HTTPSConnection(host='conference.nber.org', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable\"))"
+  }
+]
+{
+  "record_type": "retained_prior_supporting_arithmetic_probe",
+  "worker": "/root/reference_map",
+  "scope": "Scratch arithmetic control only; no source-code or empirical reproduction.",
+  "accounting_note": "Probe was executed during reference working assistance although the parent reference allowance declared zero experiments. Parent instructed conservative cycle-1 accounting; this record preserves the attempt without rerunning or relabeling it.",
+  "execution_timestamp_utc": null,
+  "execution_timestamp_local": null,
+  "timestamp_limitation": "No execution timestamp was returned or retained for the original command. The run-directory timestamp is not substituted as the probe timestamp.",
+  "command": "python3 - <<'PY'\nimport json, sys\nkappa=.25\nconfidence=.5\nsigma=kappa*(1-confidence)/confidence\nmu0, signal, signal_sigma=4.5,4.0,.5\nprior_precision=1/sigma**2\nsignal_precision=1/signal_sigma**2\nposterior=(prior_precision*mu0+signal_precision*signal)/(prior_precision+signal_precision)\nposterior_variance=1/(prior_precision+signal_precision)\nmedian=4.375\nrows={\n 'scope':'scratch arithmetic control only; no source-code or empirical reproduction',\n 'confidence_50pct_sd_percent':sigma,\n 'confidence_80pct_sd_percent':kappa*(1-.8)/.8,\n 'prior_4_5_sd_0_25_signal_4_sd_0_5_posterior_mean':posterior,\n 'posterior_variance':posterior_variance,\n 'median_agenda_no_bias_final_by_authority_weight':{str(w): w*median+(1-w)*median for w in (.3,.1)},\n 'median_plus_10bps_final_by_authority_weight':{str(w):w*(median+.1)+(1-w)*median for w in (.3,.1)},\n 'six_yes_of_12_formula_accepts':6/12>=.5,\n 'six_yes_of_12_prose_exceeds_accepts':6/12>.5,\n 'python':sys.version,\n}\nassert abs(posterior-4.4)<1e-12\nassert abs(posterior_variance-.05)<1e-12\nassert abs(sigma-.25)<1e-12\nassert abs(rows['median_agenda_no_bias_final_by_authority_weight']['0.3']-rows['median_agenda_no_bias_final_by_authority_weight']['0.1'])<1e-12\nprint(json.dumps(rows, indent=2))\nPY",
+  "script_file": null,
+  "script_file_limitation": "The original script was supplied inline to exec_command and was not saved as a separate /tmp script.",
+  "stdout": "{\n  \"scope\": \"scratch arithmetic control only; no source-code or empirical reproduction\",\n  \"confidence_50pct_sd_percent\": 0.25,\n  \"confidence_80pct_sd_percent\": 0.062499999999999986,\n  \"prior_4_5_sd_0_25_signal_4_sd_0_5_posterior_mean\": 4.4,\n  \"posterior_variance\": 0.05,\n  \"median_agenda_no_bias_final_by_authority_weight\": {\n    \"0.3\": 4.375,\n    \"0.1\": 4.375\n  },\n  \"median_plus_10bps_final_by_authority_weight\": {\n    \"0.3\": 4.404999999999999,\n    \"0.1\": 4.385\n  },\n  \"six_yes_of_12_formula_accepts\": true,\n  \"six_yes_of_12_prose_exceeds_accepts\": false,\n  \"python\": \"3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]\"\n}\n",
+  "stderr_separate": null,
+  "stderr_limitation": "exec_command returned one output field; no separate stderr stream was retained. Its output is reproduced exactly as stdout above.",
+  "exit_code": 0,
+  "exec_command_chunk_id": "845e6e",
+  "exec_command_reported_wall_time_seconds": 0.00000825,
+  "functions_exec_reported_wall_time_seconds": 0.1,
+  "runtime_limitation": "These are the tool-reported durations, not independently measured process runtime. No other timing metadata was retained.",
+  "python_version_from_stdout": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "original_provider_calls": 0,
+  "original_paid_calls": 0,
+  "original_retries": 0,
+  "original_cost_usd": 0,
+  "closeout_reruns": 0,
+  "new_calculations_performed_for_record": 0
+}
+# Literature source register
+
+Checked on 5 October 2026. This is a focused source/version register, not an exhaustive novelty search or independent replication of another paper's results.
+
+## Kazinnik and Sinclair: FOMC In Silico
+
+The [SSRN author record](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097) identifies a revision dated 12 July 2026, while retaining an original writing date of 31 August 2025. Its abstract reports a 218-meeting backtest through June 2026, 8.3 bps rate MAE and 91% hike/cut/hold accuracy. Those are author-reported results on a different committee and sample, not independently verified benchmarks for this project. The revised abstract describes deliberation as building consensus rather than improving forecasting.
+
+The [GWU-hosted PDF](https://www2.gwu.edu/~forcpgm/2025-005.pdf) fetched during this check still opens with the August 2025 draft and July 2025 illustrative-meeting abstract. Its bytes differ from the bundled file: fetched SHA-256 `bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914`, bundled SHA-256 `e03bb52ccf932f4bfc25ddd2b0fb97e2458a67fb01fc91e396ecf705ab724209`. Different hashes establish different bytes, not the reason for the difference or a complete substantive revision comparison. Do not identify the bundled draft, current GWU bytes and revised SSRN abstract as the same verified version. The full revised SSRN manuscript has not been inspected here.
+
+## Riboni and Ruge-Murcia (2010)
+
+[Monetary policy by committee: Consensus, chairman dominance, or simple majority?](https://researchportal.ip-paris.fr/en/publications/monetary-policy-by-committee-consensus-chairman-dominance-or-simp/), *Quarterly Journal of Economics*, 125(1), 363-416. DOI: [10.1162/qjec.2010.125.1.363](https://doi.org/10.1162/qjec.2010.125.1.363).
+
+The authors compare alternative committee decision models and estimate them against policy decisions. This provides a reason to examine voting and agenda assumptions rather than treating a chosen aggregation formula as a derived equilibrium. Applying a model's name does not transfer that paper's theoretical identification or empirical fit to another implementation.
+
+Discovery used a fetched [Consensus record](https://consensus.app/papers/monetary-policy-by-committee-consensus-chairman-riboni-ruge-murcia/b5a2171ac973513a8c0b641211b48c91/?utm_source=chatgpt); publication metadata was checked against the author's institutional record above. Citation counts are provider-dependent and are not evidence of methodological correctness.
+
+## Baerg and Lowe: textual preferences
+
+[A textual Taylor rule: estimating central bank preferences combining topic and scaling methods](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/abs/textual-taylor-rule-estimating-central-bank-preferences-combining-topic-and-scaling-methods/E1CAE25BBA2864109ACF25D599EDD083), *Political Science Research and Methods*, 8(1), January 2020, 106-122; published online 18 September 2018. DOI: [10.1017/psrm.2018.31](https://doi.org/10.1017/psrm.2018.31).
+
+This work estimates preference measures from text through topic and scaling methods without defining them directly by voting outcomes. It is relevant to constructing and validating persona measures separately from the outcomes used to evaluate those personas. It does not validate an arbitrary dictionary score or mixture weight in this project.
+
+The fetched [Consensus record](https://consensus.app/papers/a-textual-taylor-rule-estimating-central-bank-preferences-baerg-lowe/947ced3163f25134910e0b53a3d2df72/?utm_source=chatgpt) gave 2015 as its year; the primary publisher distinguishes the 2018 online date from the 2020 issue. Use the primary publication metadata in bibliographies.
+
+## Limits
+
+OpenReview's document at `https://openreview.net/pdf?id=V3EslRbCIe` returned a browser-verification challenge through the web tool. Its full manuscript was not inspected and no claims from it are used here. Searching a small set of sources cannot establish uniqueness, state of the art or completeness of the relevant literature. No cross-paper performance ranking is warranted without matching tasks, labels, data vintages, exposure controls, models and metric definitions.
+                     WORKING PAPER SERIES
+     FOMC In Silico: A Multi-Agent System for
+       Monetary Policy Decision Modeling
+                                         Sophia Kazinnik
+
+                                         Tara M. Sinclair
+
+
+                                Working Paper No. 2025-005
+
+                                           August, 2025
+
+             H. O. STEKLER RESEARCH PROGRAM ON FORECASTING
+                                 Department of Economics
+                           Columbian College of Arts & Sciences
+                            The George Washington University
+                                  Washington, DC 20052
+          https://cer.columbian.gwu.edu/ho-stekler-research-program-forecasting
+
+
+
+
+Working Papers represent preliminary work circulated for comment and discussion. Please contact the
+author(s) before citing this paper in any publications. The views expressed in Working Papers are solely
+those of the author(s) and do not necessarily represent the views of the H. O. Stekler Research Program on
+Forecasting, the Department of Economics, the Columbian College, or the George Washington University.
+ FOMC In Silico: A Multi-Agent System
+ for Monetary Policy Decision Modeling
+
+       This is a preliminary draft. The authors welcome all comments and suggestions.
+
+
+                     Sophia Kazinnik∗                Tara M. Sinclair†
+                                     August 31, 2025
+
+
+                                           Abstract
+        We develop a multi-agent framework for modeling the Federal Open Market
+        Committee (FOMC) decision making process. The framework combines two
+        approaches: an LLM-based simulation and a Monte Carlo implementation of
+        a generalized Bayesian voting model. Both begin from identical prior beliefs
+        about the appropriate interest rate for each committee member, formed using
+        real-time data and member profiles. In a simulation replicating the July 2025
+        FOMC meeting, both tracks deliver rates near the 4.25–4.50% range’s upper
+        end (4.42% LLM, 4.38% MC). Political pressure scenario increases dissent
+        and dispersion: the LLM track averages 4.38% and shows dissent in 88% of
+        meetings; the MC track averages 4.39% and shows dissent in 61% of meetings.
+        A negative jobs revision scenario moves outcomes lower: LLM at 4.30% (dissent
+        in 74% of meeting), and MC at 4.32% (dissent in 62% of meeting), with final
+        decisions remaining inside the 4.25-4.50% range. The framework isolates small,
+        scenario-dependent wedges between behavioral and rational baselines, offering
+        an in silico environment for counterfactual evaluation in monetary policy.
+
+
+        Keywords: Generative AI; Multi-Agent Systems; Large Language Models,
+        Federal Open Market Committee; Monetary Policy; Simulations
+        JEL Codes: E52, E58, C63, D83, C73
+
+
+
+
+   ∗
+    Email: kazinnik@stanford.edu.
+   †
+    Email: tsinc@gwu.edu.
+We thank Erik Brynjolfsson, Thomas R. Cook, Seung Jung Lee, Andrew Martinez, and Daniela
+Puzzello, as well as the participants at the DEL brownbag series. We are grateful to the Stanford
+Digital Economy Lab for funding and support. All remaining errors are our own.
+
+
+                                               1
+1     Introduction
+                                                   “Between the idea and the reality . . .
+                                                   falls the shadow.”
+
+                                                       T. S. Eliot, “The Hollow Men,”
+
+    Monetary policy deliberations and the actual rate decision are separated by a
+“shadow” of persuasion and norms. Decisions by the Federal Open Market Committee
+(FOMC) reflect more than macroeconomic data and formal models; they also depend
+on members’ experience, behavioral biases, and implicit rules (e.g., Hughes and
+Fehrler, 2015; Haldane, 2018; Maih et al., 2021). Consequently, who participates in
+the deliberation and how information is communicated can influence policy outcomes
+beyond the underlying economic data.
+    Precisely because of these behavioral forces, traditional models of committee
+decision making, though useful and mathematically elegant, often miss the complex-
+ities of real world interactions. Behavioral economics highlights how biases, well
+documented by Tversky and Kahneman (1974) and shown to affect monetary policy
+(Haldane, 2018), can systematically shape decisions. Information design matters too:
+Bayesian persuasion demonstrates how agenda setters steer beliefs (Kamenica and
+Gentzkow, 2011). Separately, robust control preferences reveal how officials facing
+model uncertainty skew choices toward caution (Hansen and Sargent, 2008). Within
+the FOMC, policy outcomes depend on the committee’s composition, from regional
+voting rotation (e.g., Fos and Xu, 2025) to individual members’ policy leanings (e.g.,
+Hack et al., 2023).
+    To better capture such frictions, researchers increasingly use computational
+approaches, such as agent-based models (Dwarakanath et al., 2024) and reinforcement
+learning (Hinterlang and Tänzer, 2021). Large language models (LLMs) further
+extend the frontier by enabling agents with coherent communication and emergent
+behavior. LLM-based generative agents simulate realistic social interactions (Park
+11:                                           August, 2025
+34:                                     August 31, 2025
+43:        real-time data and member profiles. In a simulation replicating the July 2025
+51:        scenario-dependent wedges between behavioral and rational baselines, offering
+103:    However, no existing approach lets us observe rational and behavioral decision
+109:game theory voting model. In the rational (game theory) track, policymakers observe
+147:begins with several optional rounds of informal coordination to align member views.2
+159:on the current Chair and the indirect, forward-looking behavior of the other committee
+160:members. The first component targets the Chair directly: we apply a dovish bias
+161:in the Chair’s agenda proposal. Simultaneously, the Chair’s institutional authority
+177:reflecting speculative assessments under a dovish administration based on background, policy views,
+189:conditions as of late July 2025 (when the target FFR stood at 4.25%–4.50%, and
+201:introduces a modest hawkish bias of around 5 basis points, relative to rule-based
+203:       Next, political pressure scenario (mirroring public attacks by the POTUS on Chair
+204:Powell) reduces the Chair’s agenda weight, applies a dovish bias to his proposal, and
+215:if expectations become “unanchored.” By the final discussion round, the effect of these argu-
+217:be overlooked” and proposing a move to 4.50%. See Section 3.2 for background on belief formation
+232:center of gravity downward and erodes consensus, but without changing the standing
+237:revision, modeled after the August 1, 2025 Bureau of Labor Statistics (BLS) release.
+261:In standard models, influence is imposed exogenously by a chair or agenda setter;
+268:anticipated leaders. This creates a novel channel for political pressure on the Chair
+273:   Second, we link the rational choice committee model to behavioral research
+293:a dual-track environment where deliberative and rational voting behaviors run in
+294:parallel, grounded in real-time macroeconomic data and detailed FOMC member
+313:2         Modeling FOMC Meetings: Background
+315:          around the world. The meetings are definitely important, but they’re a snapshot of the
+334:this stage, the Chair opens the floor for discussion, where members respond to others’
+337:to register an alternative viewpoint rather than to overturn the majority consensus
+345:by an independent agent (implemented via an LLM) with a distinct profile. In
+354:Standard models of committee voting assume members hold rational expectations,
+362:before each meeting, typically converging on the Chair’s proposal well in advance
+371:dissents, whereas D.C.-based Governors almost always vote with the Chair (Chappell
+375:meeting coordination, consensus norms, career incentives, and political or market
+397:ensuring the simulation is grounded.11 Specifically, we pull the latest FOMC policy
+415:Phase 3 (Agenda & Vote): the Chair proposes rc = rbase + ∆; the final rate is
+418:Political pressure (treatment): lower wa (weaken Chair authority) and apply
+424:αi , γ consensus pull and variance compression (Phase 2)
+425:rc , ∆ agenda rate and Chair bias (Phase 3)
+426:wa       weight on agenda in rf (Chair authority)
+436:      Table 1: Key U.S. Economic Indicators – Snapshot as of July 31st , 2025
+467:red (() signals faster inflation, green (") slower. Daily financial series use July 31st 2025
+488:       Table 2 compares the most recent official Beige Book (published on July 16th,
+489:2025) with our synthetic version, produced on July 30th, 202513 :
+514:       The official July 2025 Beige Book still depicts an economy that is growing, but
+527:eight districts show general consistency with the Fed’s prior assessment as of July
+556:     Analyses draw on nearly 190 unique articles over a two-week collection window ending July 31,
+557:2025. The highest relevance pieces are clustered around labor market trends (10 articles).
+582:Chair
+584:A unique aspect of the simulation is the modeling of the FOMC Chair, who carries a
+585:dual role. First, the Chair acts as a deliberating committee member, i.e., an LLM
+587:Second, the Chair serves as the procedural agenda-setter, a role governed not by the
+589:to transparently model both the Chair’s intellectual contribution and their formal
+591:   As a deliberating member, the Chair agent (e.g., simPowell) participates in the
+593:engages in dialogue, and its internal policy belief, µchair , is updated throughout the
+594:meeting via the same Bayesian mechanism as its peers. In this capacity, the Chair is
+596:   In its procedural capacity as agenda-setter, the Chair’s role is to formulate the
+602:updated beliefs of all committee members, including the Chair’s own private belief,
+627:parameter is designed to model a chair who may have an intrinsic hawkish (positive
+630:baseline proposal with the optional chair bias:
+637:Chair’s institutional responsibility through extremely high dissent costs rather than an
+638:explicit override. The voting logic assigns the Chair agent a dissent cost approximately
+640:impossible) for the Chair to dissent from their own proposal rc , even if it diverges
+646:from their private, deliberated belief µchair . This probabilistic mechanism models
+647:the Chair’s responsibility to lead the committee to a consensus while preserving the
+659:structured debate moderated by the Chair, and institutional pressures that influence
+661:system reflects how private priors, public reasoning, and consensus building interact
+666:formal debate, the system includes an optional consensus building phase, simulating
+668:       Once consensus building concludes, the system establishes the meeting context
+672:    To model this, each agent’s initial belief µi,old is iteratively nudged toward a consensus target
+673:µconsensus , defined as a weighted average of the committee’s median and mean beliefs:
+675:                               µi,new = (1 − ωi )µi,old + ωi µconsensus ,
+678:members more susceptible to consensus pressure. Shared information in this stage also increases
+693:       The formal meeting simulation begins with the Chair opening the session, deliv-
+696:Deliberation proceeds in structured rounds that mirror real FOMC debates. In the
+697:first round, selected members present policy recommendations with brief justifications
+699:conditions. The second round shifts to a discussion moderated by the Chair, focused
+702:round enables direct engagement, as members challenge one another’s arguments
+703:and refine their views. The Chair then concludes by summarizing key points, noting
+704:areas of consensus and disagreement, and proposing an agenda rate based on the
+709:reflecting the dynamics of consensus seeking behavior within the FOMC. Members’
+710:institutional roles affect these dynamics: the Chair has strong agenda-setting power
+719:     Formally, the Fed Chair has one vote like any other FOMC voter. However, the Chair’s
+722:FOMC Chair effectively carried 40–50% of the voting weight in policy decisions (Chappell Jr et al.,
+732:                    κChair = 10.0,         κRegional = 2.5,       κBoard = 2.5,
+735:with the Chair’s cost reduced to 5.0 under political-pressure “reduced authority.” A
+744:candidates. The activation thresholds are relaxed for non-chair members with high
+753:private signals are independent across members to model true heterogeneity20 ; (ii) the
+754:Chair proposes the agenda via a fixed rule (median, mean, or status-quo) to isolate
+760:range (about 5–15%), with τ = 0.5 landing around 8–10% in our baseline runs.
+763:The rationale is pragmatic since correlation parameters are not separately identified in historical
+769:     Riboni and Ruge-Murcia (2010) model the Chair as minimizing her own loss. In practice the
+770:Fed Chair emphasizes consensus and signaling credibility more than personal utility. Transcripts
+771:reveal that Chairs routinely propose “somewhere around the middle” of expressed views (see
+774:from a chair-dominance regime to a median voter regime, which is the modal empirical pattern
+781:yet add empirically grounded institutional detail.
+783:policy rate, r ∼ N (µ0i , σi0 2 ). The agent then receives an independent private signal,
+784:si , drawn from a distribution centered around their prior:
+794:    The LLM simulation employs a consensus convergence mechanism that models
+795:realistic committee dynamics. During pre-meeting consensus building, beliefs evolve
+808:strength based on uncertainty, and variance reduces by 5% per round to model
+810:realistic tendency for committee members to converge toward consensus through
+812:    The Chair applies a deterministic rule to the final set of posterior beliefs, {µpost
+816:      Historical minutes show that when the committee cannot agree on the Chair’s proposal it
+818:(e.g. the August 1989 and June 2003 meetings). This median fallback matches that practice and
+854:reduced Chair authority. If the proposal fails in either implementation, the committee
+896:   Following belief initialization, each agent receives an independent private signal
+919:includes a pre-meeting consensus-building phase designed to replicate institutional
+921:   The Chair applies a deterministic rule to the post-consensus belief set {µpost
+947:   The final agenda also incorporates Chair bias, if present: rc = rbase + ∆, where ∆
+971:    Each Monte Carlo draw records key variables for policy analysis: the Chair’s
+974:provides statistical grounding for LLM results.
+981:tions depict a world of purely rational, rule-based agents. They receive initial beliefs,
+994:employment, and other key indicators, is held fixed at U.S. conditions in late July
+1028:               Table 3: Initial Rate Beliefs – July 31st, 2025 Vintage
+1049:simWilliams                      85.0%         Neutral stance grounded in strong fundamentals
+1134:                 Member Deliberation and Voting – July 31st, 2025
+1185:    Despite the heterogeneity in beliefs, no formal dissents emerge. The Chair
+1189:the institutional dynamics that narrow disagreement and support consensus in FOMC
+1192:baseline scenario for July 31, 2025, across 10,000 simulated meetings, the final policy
+1193:rate clusters around the prior 4.25–4.50% target range, with a mean of 4.376%, a
+1199:dissents occur in any of the 10,000 runs, consistent with broad consensus.
+1201:produce tightly clustered, consensus outcomes near the policy midpoint, but via
+1219:      know—numbskull lowered the rates.” – President Trump in an interview, July 16,
+1224:      reasons.” – President Trump in a White House economic conference, July 23, 2025
+1227:      Jerome Powell.” – President Trump during pool spray with reporters, July 24, 2025
+1231:try to remove Chair Powell before his term ends.23 Markets reacted immediately:
+1235:     See, e.g., “Trump says he will name new Fed chair ‘a little bit earlier’,” Reuters, Aug. 13, 2025;
+1236:and “Trump weighs firing Powell’s Fed, shows draft letter,” Politico, July 16, 2025.
+1246:independent central banks are often urged to loosen policy, with measurable effects
+1248:Nixon leaned on Chair Arthur Burns in the early 1970s to keep rates low, as
+1253:model: diminished chair authority heightens the career incentives of other FOMC
+1256:       Under political pressure, we shift authority away from the Chair and build in
+1257:career-driven dovishness. Concretely, we cut the Chair’s agenda weight from 0.3 to
+1258:0.1, so the policy rate becomes a weighted average of the Chair’s agenda rate and the
+1264:weighting, the Chair’s target is lower. Together, these changes tilt decisions dovish
+1269:House erodes Chair’s agenda setting weight and magnifies career incentives for those
+1344:policy spectrum while still allowing for a negotiated consensus on the midpoint
+1351:members’ career incentives. The chair’s influence also becomes conditional: when
+1353:view rather than the chair’s preference. This suggests that outside scrutiny can
+1362:standing target range, dispersion around that anchor is much greater. Agendas
+1381:of a thicker lower tail and frequent dissents signals a materially weaker consensus
+1388:On August 1, 2025, the Bureau of Labor Statistics (BLS) released the July employ-
+1396:   From the perspective of monetary policy, the August 1 data release constituted
+1401:this scenario by adjusting the reported job growth figures. We set the July employ-
+1416:       Table 6: Committee Initial Rate Beliefs – August 7th, 2025 Vintage
+1556:policy path anchored in the prevailing range but erodes consensus. Frequent dissents
+1570:institutional frictions move committee outcomes relative to a rational benchmark
+1574:small but systematic: in our July-2025 baseline the LLM track yields a final rate of
+1578:rises or the Chair’s authority is questioned, the center of policy usually stays within
+1615:  Consensus Building, and the Power of the Chairman: Arthur Burns and the FOMC.
+1675:  Consensus, Chairman Dominance, or Simple Majority? The Quarterly Journal of
+1731:IMPORTANT: If you have post-consensus position information, use that as your starting
+1745:Remember: Signal rates should reflect your position after pre-meeting consensus
+1756:- Chair Powell is in LAME DUCK status with severely reduced authority
+1769:IMPORTANT: If you have post-consensus position information, use that as your starting
+1783:Remember: Signal rates should reflect your position after pre-meeting consensus
+1789:Chair Opening Prompt
+1794:{consensus_acknowledgment}
+1812:4. How new data affects our pre-meeting consensus (if applicable)
+1827:revision or skepticism about its durability. The Chair’s instructions include a nudge about the
+1830:Table 8: Data Revision Scenario: Member Deliberation and Voting (as of July 7th)
+1863:4.25%–4.50% target range. This shift reflects the Chair’s slightly more dovish opening proposal
+1881:     In sum, the scenario moves the committee toward a slightly lower and more consensus oriented
+1897:the Chair’s moderation narrows the spread from proposal to final decision.
+1899:dissents in both cases underscores the strong central consensus despite the shock. The minimum
+1902:Overall, the Monte Carlo framework yields a slightly more dovish and consensus-driven outcome
+1924: dissents recorded. The Chair’s moderation narrows variability from agenda to final
+1932:Jerome H. Powell — Chair of the Board of Governors (Term as Chair
+1934: • Tenure: Joined the Board on 25 May 2012. Became Chair on 5 February 2018. Reappointed
+1935:   in 2022; current Chair term ends in 2026, Board service extends through January 2028.
+1936: • Background: Served as Assistant Secretary and Under Secretary of the U.S. Treasury under
+1943:   during the 2022–2023 inflation surge. In a July 2025 press conference, reiterated that holding
+1949:Philip N. Jefferson — Vice Chair of the Board of Governors (Term until
+1951: • Tenure: Joined the Board on 23 May 2022. Became Vice Chair on 13 September 2023;
+1952:   current term as Vice Chair runs through 2027.
+1953: • Background: Macro and labor economist; provost at Davidson College; chaired the economics
+1964:Michael S. Barr — Governor (Term through 2032; Former Vice Chair for
+1966: • Tenure: Took office on 19 July 2022. Served as Vice Chair for Supervision until 28 February
+1968: • Background: Dean of the Gerald R. Ford School of Public Policy at the University of
+1975:   in July 2025.
+1981:Michelle W. Bowman — Governor and Vice Chair for Supervision (Term
+1984:   Became Vice Chair for Supervision on 9 June 2025 for a four-year term.
+1985: • Background: Kansas State Bank Commissioner; VP of Farmers & Drovers Bank; former
+1990: • Policy Contributions: Frequently dissents from consensus decisions to keep rates steady,
+1999: • Background: Professor of economics and international relations at Michigan State University;
+2013: • Background: Labor economist; U.S. Executive Director at the World Bank; Vice Provost
+2024: • Background: Former EVP and research director at the Federal Reserve Bank of St. Louis;
+2040: • Tenure: President of the New York Fed since 18 June 2018; permanent Vice Chair of the
+2042: • Background: Former president and CEO of the San Francisco Fed; executive VP and
+2053: • Tenure: President since 1 July 2022.
+2054: • Background: Former provost and EVP for academic affairs at the University of Michigan;
+2066: • Background: Robert P. Gwinn Professor of Economics at the University of Chicago Booth
+2067:   School; former Chair of the U.S. Council of Economic Advisers; advisor to CBO and NY Fed.
+2081: • Background: Co-founder and co-CIO of Evince Asset Management (2018–2022); EVP at NY
+2093: • Tenure: President since 21 August 2023.
+2094: • Background: Over 40 years in banking and supervision. Former president of American
+2095:   National Bank in Omaha (1989–2007); later chairman and CEO of Mutual of Omaha Bank. Led

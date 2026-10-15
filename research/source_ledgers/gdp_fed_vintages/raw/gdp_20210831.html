@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=6" type="text/css" />
+      <script type="text/javascript">
+        /* Stamps the saved theme on <html> before the page paints. The
+           switcher in js/accessibility.js settles the rest, but on inner
+           pages it does not run until the end of the body and inside the
+           release frame it is a separate download - either way the reader
+           would otherwise watch a light page turn dark in front of them. */
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+      </script>
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: #444;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      
+
+      <link id="pibConsentCss" href="/css/consent.css?v=7" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=48" rel="stylesheet" type="text/css" /><meta property="og:title" content="Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1750782" /><meta property="og:description" content="            The National Statistical Office (NSO), Ministry of Statistics and Programme Implementati" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="rduqs6zrfsbjc2wdxikq-f-5ab55d8ce-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":134,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"3f9b5090","ak.r":32554,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":63009,"ak.gh":"49.44.130.127","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1791212053","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==1rTmRIJsvlv1gh0+XRjA1xaCW/njSifJGYmFixl/0ViU2fj+voxoubMXLlWw6Bfytnw5y6eBYchT4fnO2c4MHEGdljnNepnZ5ZvN3yeUuwjsyj+eiK8XYtXNME++Xhh1OM2Yj8/YQ0LmCo/IajobaZIpDv0+CetY6IU6sOoWyCPqxh/kQc9g4t7EivaB7xuY078I2ADjETknSaQHPCHxVCFsOw0piQlYuDZkWGnbpcKv84G51QVk2mqaq3jOzBUIpoEA8GRxL8rVgq+++DTgfe+2HNbObBFw9quH0+lYveVlE2PIPIBtNlUd0TTVF5YxBGjAwJdw+cbg40vyrslBWmv/qbDRZGVEyTOPYJLn4gRazkvvdMBN60tR5MRjPHbZBeq4AfVjURspgvlkzajwMHkfI3Dla09fIhDEU3ydUIo=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+      <form method="post" action="./PressReleasePage.aspx?PRID=1750782&amp;lang=2&amp;reg=48" id="form1">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="qDUTK1sXFCRzSMnPdB57WME11j0no5wYseLsiMlN7mnZcLznyefyppdQKso/TaJOwv8bcbt6a6sc98BSGf2CYziT6USWPyzPrS5N3xTBvgjlL5D4Zk/ujlm6rpLp0acZ2WrywA4YTqmfqF41GKbveSzv8vO3Ynn5FE5xGdLFbpe/JMqJPWrh++65J4ydiojtt45jtgNgUOHqw+jeR5QJE2gs/jZLjb2Kh7N0F+mFOpH1XUVOw/0XDuaO/xbUMbViMCZIOFZWLvV5ceKDG8a9JwUattA=" />
+                              
+            <div id="templateCss"></div>
+            
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</div>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="1750782" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part" dir="ltr">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Statistics & Programme Implementation
+                        </div>
+                        
+                        <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2026/sep/ph_9768_20260902_10000501.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h1 id="Titleh2">
+                                    Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22
+                              </h1>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              Posted On:
+                31 AUG 2021 5:30PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <p style="margin-right:4.3pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation has released the estimates of Gross Domestic Product (GDP) for the first quarter (April-June) Q1 of 2021-22, both at Constant (2011-12) and Current Prices, along with the corresponding quarterly estimates of expenditure components of the GDP.&nbsp;&nbsp; These are presented in Statements 1 to 4.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries / Departments/Private agencies serve as valuable inputs in the compilation of these estimates. For Agriculture &amp; allied activities, the first quarter estimates are based on agricultural production targets for 2021-22 obtained from the Department of Agriculture, Cooperation &amp; Farmers&rsquo; Welfare; estimates of production, mainly in the form of production targets for Milk, Egg, Meat and Wool for Livestock Sector, from the Department of Animal Husbandry &amp; Dairying and Fish production data from the Department of Fisheries.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Index of Industrial Production (IIP), monthly accounts of Union and State Governments expenditure maintained by Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) respectively for the period April-June 2021 have been used. Performance of key sectors like Transport including Railways, Road, Air and Water Transport etc., Communication, Banking and Insurance during this period has been considered while compiling the estimates. Performance of the corporate sector in the first quarter based on data received from BSE/NSE has also been taken into account. Additional data sources like GST data, e-way bills have also been put to use. </span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products and subsidies on products at Current Prices.&nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. Latest available data on the CGA and CAG websites for Revenue expenditure, Interest payments, Subsidies etc., was used for estimating Government Final Consumption Expenditure (GFCE). </span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With a view to contain the second wave of the Covid-19 pandemic, localized and calibrated lockdowns were imposed during the first quarter of 2021-22. Restrictions were imposed on the economic activities not deemed essential, as also on the movement of people. The <span style="background-color:white">lockdown instructions in various States were duly considered by the National Statistical Office.</span> The impact on economic activities and the data collection mechanisms owing to COVID-19 pandemic has an effect on the Quarterly GDP estimates also. The impact of these measures on overall economic activity are embedded in source data. </span></span></p>
+
+<p style="margin-right:4.3pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP at Constant (2011-12) Prices in Q1 of 2021-22 is estimated at ₹ 32.38 lakh crore, as against ₹ 26.95 lakh crore in Q1 of 2020-21, showing a growth of 20.1 percent as compared to contraction of 24.4 percent in Q1 2020-21.&nbsp; Quarterly GVA at Basic Price at Constant (2011-12) Prices for Q1 of 2021-22 is estimated at ₹ 30.48 lakh crore, as against ₹ 25.66 lakh crore in Q1 of 2020-21, showing a growth of 18.8 percent.</span></span></p>
+
+<p style="margin-right:7.0pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP at Current Prices in the year Q1 2021-22 is estimated at ₹ 51.23 lakh crore, as against ₹ 38.89 lakh crore in Q1 2020-21, showing a growth of 31.7 percent as compared to contraction of 22.3 percent in Q1 2020-21. GVA at Basic Price at Current Prices in Q1 2021-22, is estimated at ₹ 46.20 lakh crore, as against ₹ 36.53 lakh crore in Q1 2020-21, showing a growth of 26.5 percent.</span></span></p>
+
+<p style="margin-right:7.0pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimates of GDP along with GVA at Basic Price by kind of economic activity, Expenditures on GDP at Constant (2011-12) and Current Prices, as well as percentage change and rates of expenditure components of GDP for Q1 2019-20 to 2021-22, are given in <strong><u>Statements 1 to 4</u></strong>.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Percentage change in the main indicators used in the estimation are given in Annexure 1.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimates are likely to undergo revisions in due course, as per the release calendar.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The next release of quarterly GDP estimates for the quarter July-September, 2021 (Q2 of 2021-22) will be on 30.11.202l.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0017E2Q.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image002OLVI.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0035MDW.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/aug/doc202183111.pdf" target="_blank"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Click here to see the Complete Press Note</span></span></strong></a></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">******</span></span></p>
+
+<p style="margin-left:0in; margin-right:-.2pt"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">DS/VJ/AK </span></span></p>
+
+<p>&nbsp;</p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(Release ID: 1750782)</span>
+                        <span id="lblViews">Visitor Counter : 11425</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">Read this release in: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1750882' target="_blank">
+                                          हिन्दी </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1751009' target="_blank">
+                                          Urdu </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Statistics & Programme Implementation
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          Posted On:
+                        31 AUG 2021 5:30PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <p style="margin-right:4.3pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation has released the estimates of Gross Domestic Product (GDP) for the first quarter (April-June) Q1 of 2021-22, both at Constant (2011-12) and Current Prices, along with the corresponding quarterly estimates of expenditure components of the GDP.&nbsp;&nbsp; These are presented in Statements 1 to 4.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries / Departments/Private agencies serve as valuable inputs in the compilation of these estimates. For Agriculture &amp; allied activities, the first quarter estimates are based on agricultural production targets for 2021-22 obtained from the Department of Agriculture, Cooperation &amp; Farmers&rsquo; Welfare; estimates of production, mainly in the form of production targets for Milk, Egg, Meat and Wool for Livestock Sector, from the Department of Animal Husbandry &amp; Dairying and Fish production data from the Department of Fisheries.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Index of Industrial Production (IIP), monthly accounts of Union and State Governments expenditure maintained by Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) respectively for the period April-June 2021 have been used. Performance of key sectors like Transport including Railways, Road, Air and Water Transport etc., Communication, Banking and Insurance during this period has been considered while compiling the estimates. Performance of the corporate sector in the first quarter based on data received from BSE/NSE has also been taken into account. Additional data sources like GST data, e-way bills have also been put to use. </span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products and subsidies on products at Current Prices.&nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. Latest available data on the CGA and CAG websites for Revenue expenditure, Interest payments, Subsidies etc., was used for estimating Government Final Consumption Expenditure (GFCE). </span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With a view to contain the second wave of the Covid-19 pandemic, localized and calibrated lockdowns were imposed during the first quarter of 2021-22. Restrictions were imposed on the economic activities not deemed essential, as also on the movement of people. The <span style="background-color:white">lockdown instructions in various States were duly considered by the National Statistical Office.</span> The impact on economic activities and the data collection mechanisms owing to COVID-19 pandemic has an effect on the Quarterly GDP estimates also. The impact of these measures on overall economic activity are embedded in source data. </span></span></p>
+
+<p style="margin-right:4.3pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP at Constant (2011-12) Prices in Q1 of 2021-22 is estimated at ₹ 32.38 lakh crore, as against ₹ 26.95 lakh crore in Q1 of 2020-21, showing a growth of 20.1 percent as compared to contraction of 24.4 percent in Q1 2020-21.&nbsp; Quarterly GVA at Basic Price at Constant (2011-12) Prices for Q1 of 2021-22 is estimated at ₹ 30.48 lakh crore, as against ₹ 25.66 lakh crore in Q1 of 2020-21, showing a growth of 18.8 percent.</span></span></p>
+
+<p style="margin-right:7.0pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GDP at Current Prices in the year Q1 2021-22 is estimated at ₹ 51.23 lakh crore, as against ₹ 38.89 lakh crore in Q1 2020-21, showing a growth of 31.7 percent as compared to contraction of 22.3 percent in Q1 2020-21. GVA at Basic Price at Current Prices in Q1 2021-22, is estimated at ₹ 46.20 lakh crore, as against ₹ 36.53 lakh crore in Q1 2020-21, showing a growth of 26.5 percent.</span></span></p>
+
+<p style="margin-right:7.0pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimates of GDP along with GVA at Basic Price by kind of economic activity, Expenditures on GDP at Constant (2011-12) and Current Prices, as well as percentage change and rates of expenditure components of GDP for Q1 2019-20 to 2021-22, are given in <strong><u>Statements 1 to 4</u></strong>.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Percentage change in the main indicators used in the estimation are given in Annexure 1.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estimates are likely to undergo revisions in due course, as per the release calendar.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The next release of quarterly GDP estimates for the quarter July-September, 2021 (Q2 of 2021-22) will be on 30.11.202l.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0017E2Q.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image002OLVI.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img alt="" src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0035MDW.png" style="width:650px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/aug/doc202183111.pdf" target="_blank"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Click here to see the Complete Press Note</span></span></strong></a></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">******</span></span></p>
+
+<p style="margin-left:0in; margin-right:-.2pt"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">DS/VJ/AK </span></span></p>
+
+<p>&nbsp;</p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (Release ID: 1750782)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&text=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&title=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&text=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1750782&title=Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Estimates of Gross Domestic Product for the First Quarter (April-June) of 2021-22" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;margin-right:4.3pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation has released the estimates of Gross Domestic Product (GDP) for the first quarter (April-June) Q1 of 2021-22, both at Constant (2011-12) and Current Prices, along with the corresponding quarterly estimates of expenditure components of the GDP.&amp;nbsp;&amp;nbsp; These are presented in Statements 1 to 4.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>2.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries / Departments/Private agencies serve as valuable inputs in the compilation of these estimates. For Agriculture &amp;amp; allied activities, the first quarter estimates are based on agricultural production targets for 2021-22 obtained from the Department of Agriculture, Cooperation &amp;amp; Farmers&amp;rsquo; Welfare; estimates of production, mainly in the form of production targets for Milk, Egg, Meat and Wool for Livestock Sector, from the Department of Animal Husbandry &amp;amp; Dairying and Fish production data from the Department of Fisheries.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>3.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Index of Industrial Production (IIP), monthly accounts of Union and State Governments expenditure maintained by Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) respectively for the period April-June 2021 have been used. Performance of key sectors like Transport including Railways, Road, Air and Water Transport etc., Communication, Banking and Insurance during this period has been considered while compiling the estimates. Performance of the corporate sector in the first quarter based on data received from BSE/NSE has also been taken into account. Additional data sources like GST data, e-way bills have also been put to use. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>4.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products and subsidies on products at Current Prices.&amp;nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. Latest available data on the CGA and CAG websites for Revenue expenditure, Interest payments, Subsidies etc., was used for estimating Government Final Consumption Expenditure (GFCE). &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>5.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; With a view to contain the second wave of the Covid-19 pandemic, localized and calibrated lockdowns were imposed during the first quarter of 2021-22. Restrictions were imposed on the economic activities not deemed essential, as also on the movement of people. The &lt;span style=&quot;background-color:white&quot;>lockdown instructions in various States were duly considered by the National Statistical Office.&lt;/span> The impact on economic activities and the data collection mechanisms owing to COVID-19 pandemic has an effect on the Quarterly GDP estimates also. The impact of these measures on overall economic activity are embedded in source data. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-right:4.3pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>6.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GDP at Constant (2011-12) Prices in Q1 of 2021-22 is estimated at ₹ 32.38 lakh crore, as against ₹ 26.95 lakh crore in Q1 of 2020-21, showing a growth of 20.1 percent as compared to contraction of 24.4 percent in Q1 2020-21.&amp;nbsp; Quarterly GVA at Basic Price at Constant (2011-12) Prices for Q1 of 2021-22 is estimated at ₹ 30.48 lakh crore, as against ₹ 25.66 lakh crore in Q1 of 2020-21, showing a growth of 18.8 percent.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-right:7.0pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>7.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GDP at Current Prices in the year Q1 2021-22 is estimated at ₹ 51.23 lakh crore, as against ₹ 38.89 lakh crore in Q1 2020-21, showing a growth of 31.7 percent as compared to contraction of 22.3 percent in Q1 2020-21. GVA at Basic Price at Current Prices in Q1 2021-22, is estimated at ₹ 46.20 lakh crore, as against ₹ 36.53 lakh crore in Q1 2020-21, showing a growth of 26.5 percent.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-right:7.0pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>8.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Estimates of GDP along with GVA at Basic Price by kind of economic activity, Expenditures on GDP at Constant (2011-12) and Current Prices, as well as percentage change and rates of expenditure components of GDP for Q1 2019-20 to 2021-22, are given in &lt;strong>&lt;u>Statements 1 to 4&lt;/u>&lt;/strong>.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>9.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Percentage change in the main indicators used in the estimation are given in Annexure 1.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>10.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Estimates are likely to undergo revisions in due course, as per the release calendar.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>11.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The next release of quarterly GDP estimates for the quarter July-September, 2021 (Q2 of 2021-22) will be on 30.11.202l.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img alt=&quot;&quot; src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0017E2Q.png&quot; style=&quot;width:650px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img alt=&quot;&quot; src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image002OLVI.png&quot; style=&quot;width:650px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img alt=&quot;&quot; src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0035MDW.png&quot; style=&quot;width:650px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;a href=&quot;https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/aug/doc202183111.pdf&quot; target=&quot;_blank&quot;>&lt;strong>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Click here to see the Complete Press Note&lt;/span>&lt;/span>&lt;/strong>&lt;/a>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>******&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-.2pt&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>DS/VJ/AK &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p>&amp;nbsp;&lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: rgb(59, 89, 152);*/
+                        background-color: rgba(65,103,178,255);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: #000000;
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: rgb(77, 194, 71);*/
+                        background-color: rgba(13,191,67,255);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: rgb(219, 68, 55);*/
+                        background-color: #e2123d;
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: rgb(0, 119, 181);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: var(--dbim-h2, 20px);   /* was 20px !important - the !important blocked A+/A- */
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: var(--dbim-h3, 16px);   /* was 16px !important */
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 18px, #6e2b8b 18px, #6e2b8b 36px );
+                        border-top: 8px solid #9a2375;
+                        border-bottom: 8px solid #9a2375;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="MbIX6AtCnMTtKrww6B8lAb1qxyQdOdNaKfvnsetAVHhAOnNKYhovuGgwRVJ0lr8XWa3rSl2BRGEhSA-GmxDrdfjRbbtybY6P"/></form>
+      
+      
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"Cookie consent","title":"Cookies on this website","body":"We use essential cookies to make this website work. We also set analytics cookies when you arrive, so we can see how the site is used and improve it - you can switch these off below or at any time from the Cookie Policy page. Cookies from embedded social media content are set only if you allow them.","policyLink":"Read our Cookie Policy","accept":"Accept all","reject":"Reject optional","customize":"Customise","prefsTitle":"Cookie preferences","prefsIntro":"Choose which cookies this website may set. Essential cookies cannot be switched off because the site does not work without them. Analytics cookies are on unless you turn them off. Social media cookies stay off until you allow them. You can change these choices at any time from the Cookie Policy page.","essentialName":"Essential cookies","essentialDesc":"Needed for the site to function. These remember your session, your language and region, your text size and colour theme, and verify the security check on forms. They are always on.","analyticsName":"Analytics cookies","analyticsDesc":"Help us understand how visitors use the site - which pages are read and how long people stay - so it can be improved. The information is collected in a form that does not directly identify you. These are on when you arrive; switching them off here stops them and deletes the ones already set.","socialName":"Social media cookies","socialDesc":"Set by content embedded from X, Facebook and YouTube, such as timelines and videos. These platforms may use them to track you across websites. They stay off until you allow them.","save":"Save preferences","cancel":"Cancel"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scientific_files_unchanged_during_collection": true,
+  "branch_refs_unchanged_during_collection": true,
+  "main_preserved": true,
+  "legacy_inputs_and_portable_rolling_outputs_match_receipt": true,
+  "tested_source_hashes_match_current_files": true,
+  "review_archive_hashes_match": true,
+  "provider_cap_unchanged": true,
+  "publication_readiness_established": false
+}

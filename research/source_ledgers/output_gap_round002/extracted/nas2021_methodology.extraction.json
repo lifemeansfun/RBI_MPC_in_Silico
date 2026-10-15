@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/nas2021_methodology.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/nas2021_methodology.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "c57295a15cee43d381eb2fda0c97a389117310bc4814cbc8661e816080f3adb7",
+  "extracted_sha256": "40ae638111476ba14a63d4637ccf052873d5f49c5042df8e87ffaaea5719819a"
+}

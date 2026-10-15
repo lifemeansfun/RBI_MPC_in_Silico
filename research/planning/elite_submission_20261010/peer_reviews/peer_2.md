@@ -1,0 +1,7 @@
+**B has the strongest reasoning.** It connects the fixed-prefix intervention, the ±⅓ endpoint bound, meeting-level uncertainty and the distinction between historical-cohort and future-meeting targets. Its proposed effect threshold makes feasibility assessable before spending; additional replicates cannot manufacture historical information.
+
+**D’s novelty argument has the most consequential unresolved weakness.** Nearby forecasting and consensus-protocol work establishes topical overlap, but does not establish that privileged numerical ballot visibility has already been studied. This concern is **unverified**, not a demonstrated factual error. The evidence packet also says the revised reference’s full methods remain unavailable. D appropriately proposes an exact-intervention audit; its crowding conclusion should remain provisional until that audit.
+
+**All miss the prefix-specific ceiling of the agreement endpoint.** If \(c(a)\) counts fixed peers choosing joint rate/stance label \(a\), the contrast equals \([c(a_V)-c(a_H)]/15\). With five distinct peer labels, its maximum magnitude is only \(1/15\); with unanimous peers, it can reach \(1/3\). Thus peer fragmentation changes attainable effects substantially.
+
+The cheapest discriminating observation is a hand-enumerated table of five-peer label partitions and feasible Governor choices, compared with the proposed meaningful-effect threshold. This needs no generations and could reveal that a substantively useful effect is unattainable for important prefixes.

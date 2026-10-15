@@ -1,0 +1,72 @@
+{
+  "fragmented_reject": {
+    "rate_unresolved": 3,
+    "stance_unresolved": 3,
+    "rate_synthetic": 0,
+    "stance_synthetic": 0,
+    "rate_denominator": 0,
+    "stance_denominator": 0,
+    "union_denominator": 0,
+    "saturated_fraction": 0.0
+  },
+  "fragmented_legacy_synthetic": {
+    "rate_unresolved": 0,
+    "stance_unresolved": 0,
+    "rate_synthetic": 3,
+    "stance_synthetic": 3,
+    "rate_denominator": 3,
+    "stance_denominator": 3,
+    "union_denominator": 3,
+    "saturated_fraction": 0.0
+  },
+  "fragmented_status_quo": {
+    "rate_unresolved": 0,
+    "stance_unresolved": 0,
+    "rate_synthetic": 3,
+    "stance_synthetic": 3,
+    "rate_denominator": 3,
+    "stance_denominator": 3,
+    "union_denominator": 3,
+    "saturated_fraction": 0.0
+  },
+  "mixed_channel_rejection": {
+    "rate_unresolved": 2,
+    "stance_unresolved": 2,
+    "rate_synthetic": 0,
+    "stance_synthetic": 0,
+    "rate_denominator": 2,
+    "stance_denominator": 2,
+    "union_denominator": 1,
+    "saturated_fraction": 0.0
+  },
+  "upper_saturated": {
+    "rate_unresolved": 0,
+    "stance_unresolved": 0,
+    "rate_synthetic": 0,
+    "stance_synthetic": 0,
+    "rate_denominator": 3,
+    "stance_denominator": 3,
+    "union_denominator": 3,
+    "saturated_fraction": 1.0
+  },
+  "exact_upper_endpoint": {
+    "rate_unresolved": 0,
+    "stance_unresolved": 0,
+    "rate_synthetic": 0,
+    "stance_synthetic": 0,
+    "rate_denominator": 3,
+    "stance_denominator": 3,
+    "union_denominator": 3,
+    "saturated_fraction": 0.0
+  },
+  "lower_saturated": {
+    "rate_unresolved": 0,
+    "stance_unresolved": 0,
+    "rate_synthetic": 0,
+    "stance_synthetic": 0,
+    "rate_denominator": 3,
+    "stance_denominator": 3,
+    "union_denominator": 3,
+    "saturated_fraction": 1.0
+  }
+}

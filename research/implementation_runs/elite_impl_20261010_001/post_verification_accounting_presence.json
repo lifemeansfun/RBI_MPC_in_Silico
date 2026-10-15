@@ -1,0 +1,11 @@
+{
+  "ledger_presence": {
+    ".cache/research_v3_budget.sqlite": false,
+    ".cache/research_v3_budget.sqlite.initialized.json": false,
+    ".cache/corrected_budget_v1.sqlite": false,
+    ".cache/corrected_budget_v1.sqlite.initialized.json": false
+  },
+  "action": "Read file presence only; no accounting constructor or new allocation",
+  "new_research_provider_calls": 0,
+  "new_provider_spend_usd": 0
+}

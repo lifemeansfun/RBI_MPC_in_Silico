@@ -1,0 +1,602 @@
+{
+  "sources": [
+    {
+      "id": "fed_20200916_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2020",
+      "discovery_parent_sha256": "ca27c9dc9ead7c7b76f8fbe64bd604ed51e7bc478bd14c30911f11f90588f967"
+    },
+    {
+      "id": "fed_20201105_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2020",
+      "discovery_parent_sha256": "ca27c9dc9ead7c7b76f8fbe64bd604ed51e7bc478bd14c30911f11f90588f967"
+    },
+    {
+      "id": "fed_20201216_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201216a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2020",
+      "discovery_parent_sha256": "ca27c9dc9ead7c7b76f8fbe64bd604ed51e7bc478bd14c30911f11f90588f967"
+    },
+    {
+      "id": "fed_20240131_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240131_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240320_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240320_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240501_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240501_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240612_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240612_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240731_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240731_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240918_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20240918_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230201_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230201_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230322_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230322_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230503_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230503_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230614_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230614_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230726_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230726_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230920_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20230920_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20231101_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20231101_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20231213_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20231213_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220126_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220126_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220316_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220316_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220504_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220504_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220615_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220615_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220727_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220727_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220921_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20220921_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20221102_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20221102_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20221214_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20221214_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210127_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210127_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210317_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210317_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210428_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210428_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210616_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210616_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210728_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210728_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210922_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20210922_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20211103_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20211103_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20211215_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
+      "format": "html",
+      "role": "statement",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "fed_20211215_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_calendar_2021_2024",
+      "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57"
+    },
+    {
+      "id": "gdp_20210531_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/may/doc202153111.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2021-05-31",
+      "reference_period": "FY2020-21Q4",
+      "discovery_parent_id": "gdp_20210531",
+      "discovery_parent_sha256": "3bc29b7d3f3adfa4aeca89697d007fb9da11b1d6de98fd8414fab29f5c4791bf"
+    },
+    {
+      "id": "gdp_20210831_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/aug/doc202183111.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2021-08-31",
+      "reference_period": "FY2021-22Q1",
+      "discovery_parent_id": "gdp_20210831",
+      "discovery_parent_sha256": "2d64560aa9b6354469828aa203dc3127e915c0e4c99f1ef4eb4556164a017f5e"
+    },
+    {
+      "id": "gdp_20211130_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/nov/doc2021113041.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2021-11-30",
+      "reference_period": "FY2021-22Q2",
+      "discovery_parent_id": "gdp_20211130",
+      "discovery_parent_sha256": "c38513eca975a87551a00f1c8f8adf27c46998f0c4fecbb1b2430e5053c22174"
+    },
+    {
+      "id": "gdp_20221130_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/nov/doc20221130138801.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2022-11-30",
+      "reference_period": "FY2022-23Q2",
+      "discovery_parent_id": "gdp_20221130",
+      "discovery_parent_sha256": "9dbe0b3dfdeb310643ac67ea53f9e63b33debbb02a649100294e24623051ed5f"
+    },
+    {
+      "id": "gdp_20230831_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/aug/doc2023831247301.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2023-08-31",
+      "reference_period": "FY2023-24Q1",
+      "discovery_parent_id": "gdp_20230831",
+      "discovery_parent_sha256": "f85573a2ea247b1bca5bbbe830426ebdaa8353bb1f76193b53b79e7e9c9c324e"
+    },
+    {
+      "id": "gdp_20240229_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/feb/doc2024229315601.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2024-02-29",
+      "reference_period": "FY2023-24Q3",
+      "discovery_parent_id": "gdp_20240229",
+      "discovery_parent_sha256": "796b30a2e317a2b6db93c88b323b478c187d198fa896ed579bb760f8372d2760"
+    },
+    {
+      "id": "gdp_20240531_attachment",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/may/doc2024531339301.pdf",
+      "format": "pdf",
+      "role": "gdp_release_pdf",
+      "release_date": "2024-05-31",
+      "reference_period": "FY2023-24Q4",
+      "discovery_parent_id": "gdp_20240531",
+      "discovery_parent_sha256": "067076c4480ec953ef93fa013f316058855030a0e5751e5ff67427d90add1061"
+    },
+    {
+      "id": "fed_20200916_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200916a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_20200916_statement",
+      "discovery_parent_sha256": "9037f42242e6386026d5db1fd5a28b0ca2c9cc426bb448409b6eb023ea2db51e"
+    },
+    {
+      "id": "fed_20201105_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201105a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_20201105_statement",
+      "discovery_parent_sha256": "d9318e03e0236aa79d12416b0419bd990f6c0b66af7a3ff04ec45a964d15db3f"
+    },
+    {
+      "id": "fed_20201216_implementation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20201216a1.htm",
+      "format": "html",
+      "role": "implementation",
+      "discovery_parent_id": "fed_20201216_statement",
+      "discovery_parent_sha256": "bfc56c319846f8385807321440a09877f2ffdb503d3206d5298c5b83ad65c731"
+    }
+  ]
+}

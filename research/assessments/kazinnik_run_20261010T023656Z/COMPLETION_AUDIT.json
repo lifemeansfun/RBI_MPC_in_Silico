@@ -1,0 +1,142 @@
+{
+  "objective_sha256": "df2cd80b10680771681bd6643910c77d0fcd89900a5ddce7d3176bda84980d9b",
+  "audit_utc": "2026-10-10T11:05:43.901131+00:00",
+  "scope": "Bounded research task and honest incomplete-outcome delivery; empirical scientific success is not established.",
+  "stop_authority": "Objective \u00a75: allowance exhausted or necessary dependency unavailable; minimum completed-phase artifacts and honest gap/accounting remain mandatory.",
+  "requirements": [
+    {
+      "requirement": "Read objective, inspect applicable instructions/current implementation, preserve branch/source record",
+      "status": "COMPLETE",
+      "evidence": [
+        "goal-objective.md",
+        "raw/activation_environment.json",
+        "raw/activation_git_status.txt",
+        "initial_scientific_sha256.json",
+        "raw/delivery_integrity_assistant.json"
+      ]
+    },
+    {
+      "requirement": "One new run ID; cumulative counters and historical ledgers retained",
+      "status": "COMPLETE_WITH_DISCLOSED_DEVIATIONS",
+      "evidence": [
+        "run_ledger.json",
+        "raw/reference_worker_probe_record.json",
+        "review_attempt_001/result.json",
+        "review_attempt_002/result.json"
+      ],
+      "limitations": "Undeclared arithmetic probe charged cycle1; time allowance exceeded and review package partially failed. No cap increase/reset or third reviewer."
+    },
+    {
+      "requirement": "Available August full text and bounded attempt at later revision, exact version/hash",
+      "status": "COMPLETE_AVAILABLE_PHASE",
+      "evidence": [
+        "SOURCE_VERSION_RECORD.md",
+        "sources/acquisition_records.json",
+        "sources/FOMC_In_Silico_2025-08-31.pdf",
+        "sources/web_search_records.json"
+      ],
+      "remaining": "Later full methods/materials unavailable and explicitly unverified."
+    },
+    {
+      "requirement": "Paper-to-project mechanism matrix and dual-track differences",
+      "status": "COMPLETE_AVAILABLE_PHASE",
+      "evidence": [
+        "PAPER_TO_PROJECT_MATRIX.md"
+      ],
+      "remaining": "Exact author-material reproduction and necessary empirical mechanism execution missing; no Taylor/Bayesian equivalence claim."
+    },
+    {
+      "requirement": "Choose consequential question before new evaluation; freeze primary scientific choices",
+      "status": "PARTIAL_AND_EXPLICITLY_INCOMPLETE",
+      "evidence": [
+        "FROZEN_QUESTION_AND_ANALYSIS.json"
+      ],
+      "remaining": "Question/analysis locked; exact executable personas/roster/prompts/adapter/live command absent. No new outcome inspected or favorable replacement question used."
+    },
+    {
+      "requirement": "Repair decisive blockers and execute actual live study, independent result recomputation",
+      "status": "NOT_EXECUTED_PER_STOP_CLAUSE",
+      "evidence": [
+        "raw/provider_allowance_audit.json",
+        "REVIEW_ADJUDICATION.md"
+      ],
+      "remaining": "Authenticated allowance, roster/persona/prefix integration, live raw output and effect/uncertainty missing. Review recomputes inherited mock evidence only."
+    },
+    {
+      "requirement": "Predefined A-G acceptance evidence and final actual evidence/gap judgments",
+      "status": "COMPLETE_AS_ASSESSMENT; SCIENTIFIC_GATES_NOT_MET",
+      "evidence": [
+        "acceptance_criteria.json",
+        "criterion_evidence_table.json"
+      ],
+      "remaining": "A unverified; B-F fail; G scoped pass. No requirement weakened."
+    },
+    {
+      "requirement": "One final critique with at most one infrastructure retry, immutable science, contamination/access audit",
+      "status": "SUBSTANTIVE_CRITIQUE_SAVED; INFRASTRUCTURE_CLOSEOUT_PARTIAL",
+      "evidence": [
+        "review_attempt_001/isolation_preflight.json",
+        "review_attempt_001/output/final_message.md",
+        "review_attempt_002/output/REVIEW.md",
+        "review_attempt_002/output/context_declaration.json",
+        "review_attempt_002/output/context_addendum.json",
+        "review_attempt_002/partial_review_receipt.json"
+      ],
+      "remaining": "No complete hidden-context audit; critic source check failed; final JSON/audit index absent after account usage limit. Both dispatches counted; no certification/extra retry."
+    },
+    {
+      "requirement": "Versioned acquired-source record, matrix, reproducible available package, evidence/gaps, raw evidence and run ledger",
+      "status": "COMPLETE_MINIMUM_STOP_DELIVERY",
+      "evidence": [
+        "SOURCE_VERSION_RECORD.md",
+        "PAPER_TO_PROJECT_MATRIX.md",
+        "FROZEN_SCIENTIFIC_INPUT.zip",
+        "frozen_archive_receipt.json",
+        "criterion_evidence_table.json",
+        "FINAL_ASSESSMENT.md",
+        "REPRODUCTION.md",
+        "run_ledger.json",
+        "REVIEW_ADJUDICATION.md"
+      ]
+    },
+    {
+      "requirement": "Changes/rationale; actual checks; effect/uncertainty; negative failures; exact gaps; commands/paths; next actions; adaptation/contribution/readiness separately; terminal status",
+      "status": "COMPLETE_HONEST_REPORT",
+      "evidence": [
+        "FINAL_ASSESSMENT.md",
+        "REVIEW_ADJUDICATION.md",
+        "REPRODUCTION.md",
+        "criterion_evidence_table.json"
+      ],
+      "remaining": "Primary effect and interval explicitly null/missing because unrun, not fabricated. Status2; all three scientific readiness conclusions not established."
+    },
+    {
+      "requirement": "Eight elapsed hours, closeout reserve, no spending increase, cycle/reviewer ceilings",
+      "status": "TIME_COMPLIANCE_FAIL; OTHER_MAIN_COUNTERS_WITHIN_BOUNDS",
+      "evidence": [
+        "run_ledger.json"
+      ],
+      "remaining": "Elapsed overrun disclosed; cause unverified, no explicit pause. Provider calls/cost0; 1 charged cycle/2 dispatches. Compliance failure is retained and does not manufacture scientific success."
+    },
+    {
+      "requirement": "Stop after delivered assessment; no reopening on new objections",
+      "status": "FINAL_DELIVERY_ONLY",
+      "evidence": [
+        "REVIEW_ADJUDICATION.md",
+        "FINAL_ASSESSMENT.md"
+      ],
+      "remaining": "Further research/review requires new instruction."
+    }
+  ],
+  "bounded_task_completion_basis": "The objective expressly permits status2 completion after required completed-phase/minimum source/method/gap/accounting delivery is verified. This audit does not claim the unperformed research or missed compliance elements were achieved.",
+  "primary_scientific_contribution_achieved": false,
+  "terminal_research_status": 2,
+  "minimum_deliverables_present": true,
+  "artifact_verification_pending": false,
+  "artifact_verification": {
+    "command": ".venv/bin/python research/assessments/kazinnik_run_20261010T023656Z/verify_package.py",
+    "exit_code": 0,
+    "scope": "102 delivered hashes, 83 preserved scientific hashes, branch/HEAD/main, counter ceilings, incomplete labels and primary result missing"
+  },
+  "bounded_minimum_delivery_verified": true
+}

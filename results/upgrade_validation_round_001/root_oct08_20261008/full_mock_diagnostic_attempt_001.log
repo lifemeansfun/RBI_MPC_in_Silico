@@ -1,0 +1,25 @@
+Completed full: 16 meeting-replicate records; replay passed
+Completed earlier_rounds: 16 meeting-replicate records; replay passed
+Completed independent: 16 meeting-replicate records; replay passed
+Completed masked: 16 meeting-replicate records; replay passed
+Traceback (most recent call last):
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/run_mock_diagnostic.py", line 137, in <module>
+    asyncio.run(main(parser.parse_args().output.resolve()))
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/run_mock_diagnostic.py", line 115, in main
+    source_missingness = {s.meeting_date:list(s.missing_fields) for s in snapshots}
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/run_mock_diagnostic.py", line 115, in <dictcomp>
+    source_missingness = {s.meeting_date:list(s.missing_fields) for s in snapshots}
+                                              ^^^^^^^^^^^^^^^^
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/lib/python3.11/site-packages/pydantic/main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'MacroMeetingSnapshot' object has no attribute 'missing_fields'

@@ -1,0 +1,27 @@
+{
+  "id": "prehistory_annual_report_2019_2020",
+  "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2019-2020_English.pdf",
+  "format": "pdf",
+  "role": "prehistory_publication_evidence",
+  "release_date": "",
+  "retrieved_at_utc": "2026-10-05T15:10:31.701981+00:00",
+  "status_code": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2019-2020_English.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 15:13:44 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "3685741",
+    "Connection": "keep-alive",
+    "Last-Modified": "Tue, 17 Mar 2020 12:19:04 GMT",
+    "ETag": "\"5e70c038-383d6d\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 15:13:44 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 3685741,
+  "acquired": true,
+  "local_file": "raw/prehistory_annual_report_2019_2020.pdf",
+  "sha256": "54d989887c24c5ba60485797cffcf3f33ad8d6ccc70b357ad1ad77e998d63755"
+}

@@ -1,0 +1,120 @@
+{
+  "max_commands": 6,
+  "timeout_seconds_per_command": 1200,
+  "live_research_call_limit": 0,
+  "provider_spend_limit_usd": 0,
+  "credential_environment_removed": true,
+  "dotenv_disabled": true,
+  "started_at_unix": 1791636171.769233,
+  "commands": [
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "scripts/prepare_paired_engineering_study.py",
+        "--executable-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_003/executable_personas",
+        "--audit",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_003/eligibility_audit.json",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 6.843384027481079,
+      "log": "command_001.log"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.run_frozen_study",
+        "--protocol",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle/protocol.json",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/validation"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 6.434611082077026,
+      "log": "command_002.log"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.run_frozen_study",
+        "--protocol",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle/protocol.json",
+        "--execution",
+        "mock",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/mock"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 31.020185947418213,
+      "log": "command_003.log"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.run_frozen_study",
+        "--protocol",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle/protocol.json",
+        "--execution",
+        "live",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/live_refused"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "elapsed_seconds": 6.333173036575317,
+      "log": "command_004.log"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.run_frozen_study",
+        "--protocol",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_bundle/protocol.json",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_validation"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_bundle/code",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 6.794111013412476,
+      "log": "command_005.log"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.run_frozen_study",
+        "--protocol",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_bundle/protocol.json",
+        "--execution",
+        "replay",
+        "--retained-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_evidence",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_replay"
+      ],
+      "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/portable_bundle/code",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "elapsed_seconds": 6.770359992980957,
+      "log": "command_006.log"
+    }
+  ],
+  "status": "passed",
+  "actual_research_provider_calls": 0,
+  "provider_spend_usd": 0,
+  "elapsed_seconds": 64.43147993087769
+}

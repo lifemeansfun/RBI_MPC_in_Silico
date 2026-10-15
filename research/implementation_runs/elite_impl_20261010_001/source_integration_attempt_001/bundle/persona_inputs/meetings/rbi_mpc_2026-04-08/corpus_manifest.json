@@ -1,0 +1,1518 @@
+{
+  "calibration_cutoff": "2026-04-06",
+  "construct_validated": false,
+  "evidence_limit": "Verified retained raw bytes, attribution and printed publication headers; neither authenticated historical first availability nor validated policy-preference constructs or pre-cutoff membership.",
+  "extraction_rule": {
+    "biography": null,
+    "dove_lexicon": [
+      "growth",
+      "slack",
+      "over-tightening",
+      "lag",
+      "lags",
+      "sacrifice",
+      "soften",
+      "real rate",
+      "neutral",
+      "output gap",
+      "recovery",
+      "headwind",
+      "downturn"
+    ],
+    "hawk_lexicon": [
+      "inflation",
+      "restrictive",
+      "vigilance",
+      "unanchored",
+      "persistence",
+      "second-round",
+      "overheating",
+      "pressures",
+      "brake",
+      "firm",
+      "committed",
+      "tolerance",
+      "target"
+    ],
+    "orientation": "(hawk_hits-dove_hits)/max(hawk_hits+dove_hits,1); no rounding",
+    "priority": "fixed RBI-mandate instruction, not a fitted member preference",
+    "quotes": "first 20-60-word sentence per chronological source; first, middle, last distinct indices",
+    "stance_bias": "neutral; fixed procedural parameter, not extracted or construct validated",
+    "tenure": "corpus-coverage label only; no appointment-tenure claim",
+    "version": "rolling-executable-lexical-v1"
+  },
+  "historical_first_availability_verified": false,
+  "information_cutoff": "2026-04-06T00:00:00+05:30",
+  "meeting_id": "rbi_mpc_2026-04-08",
+  "members": {
+    "indranil_bhattacharyya": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Shri Indranil Bhattacharyya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "indranil_bhattacharyya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/indranil_bhattacharyya.txt",
+          "original_member_id": "indranil_bhattacharyya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/indranil_bhattacharyya.txt",
+          "statement_id": "rbi_mpc_2025-10-01:indranil_bhattacharyya",
+          "statement_sha256": "4246baf293e2def100eb2ce8352d244dfc50087fb4e3a48db3a1c29250473c5f"
+        },
+        {
+          "attribution_heading": "Statement by Shri Indranil Bhattacharyya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "indranil_bhattacharyya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/indranil_bhattacharyya.txt",
+          "original_member_id": "indranil_bhattacharyya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/indranil_bhattacharyya.txt",
+          "statement_id": "rbi_mpc_2025-12-05:indranil_bhattacharyya",
+          "statement_sha256": "a723ff3466df2a7f53c405386294e48207aba12b805c0ee5de9f7c3d7453d168"
+        },
+        {
+          "attribution_heading": "Statement by Shri Indranil Bhattacharyya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "indranil_bhattacharyya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/indranil_bhattacharyya.txt",
+          "original_member_id": "indranil_bhattacharyya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/indranil_bhattacharyya.txt",
+          "statement_id": "rbi_mpc_2026-02-06:indranil_bhattacharyya",
+          "statement_sha256": "e2cb31f9dd2705e814ddfd1132a313cda382bb74b456835268dd5b301cec88ae"
+        }
+      ],
+      "dove_hits": 22,
+      "hawk_hits": 59,
+      "history_status": "available_personal_history",
+      "meetings_count": 3,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": 0.4567901234567901,
+        "is_internal": true,
+        "key_themes": [
+          "\"In a world characterised by geo-political strife, geo-economic fragmentation and strategic realignment brought about by all-pervasive uncertainty on trade and tariffs, the Indian economy has demonstrated strength and resilience.\" (2025-10-01)",
+          "\"The global economy remained robust in 2025 as evident from upward revision in growth projections 3 but lingering uncertainties and persisting fragilities continue to cloud its outlook.\" (2025-12-05)",
+          "\"Notwithstanding an escalation of geo-political strife amidst intensifying tariff wars between transatlantic allies, global growth projections for 2026 has been revised upwards.\" (2026-02-06)"
+        ],
+        "member_id": "indranil_bhattacharyya",
+        "name": "Indranil Bhattacharyya",
+        "provenance_status": "dated_corpus",
+        "role": "Executive Director",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2025-10-01 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2025-10-01",
+          "statement_id": "rbi_mpc_2025-10-01:indranil_bhattacharyya",
+          "statement_sha256": "4246baf293e2def100eb2ce8352d244dfc50087fb4e3a48db3a1c29250473c5f",
+          "text": "In a world characterised by geo-political strife, geo-economic fragmentation and strategic realignment brought about by all-pervasive uncertainty on trade and tariffs, the Indian economy has demonstrated strength and resilience."
+        },
+        {
+          "decision_date": "2025-12-05",
+          "statement_id": "rbi_mpc_2025-12-05:indranil_bhattacharyya",
+          "statement_sha256": "a723ff3466df2a7f53c405386294e48207aba12b805c0ee5de9f7c3d7453d168",
+          "text": "The global economy remained robust in 2025 as evident from upward revision in growth projections 3 but lingering uncertainties and persisting fragilities continue to cloud its outlook."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:indranil_bhattacharyya",
+          "statement_sha256": "e2cb31f9dd2705e814ddfd1132a313cda382bb74b456835268dd5b301cec88ae",
+          "text": "Notwithstanding an escalation of geo-political strife amidst intensifying tariff wars between transatlantic allies, global growth projections for 2026 has been revised upwards."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 1939
+    },
+    "nagesh_kumar": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2024-10-09:nagesh_kumar",
+          "statement_sha256": "0aaedbaa42e9bf440c31df9847eeab1eb36d993c3ff61197a9af533b294bb77f"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2024-12-06:nagesh_kumar",
+          "statement_sha256": "8d6ab899a8f732a00b45d06955e4be29a8a67f92ae41b33f4e4876c2bb565f9d"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-02-07",
+          "meeting_id": "rbi_mpc_2025-02-07",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-02-07/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+            "publication_date": "2025-02-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+            "source_id": "rbi_prid_59818",
+            "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-02-07/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-02-07:nagesh_kumar",
+          "statement_sha256": "8f43225f5e8d2b7321bcc2b8eed07f90ca7c405f30c6e5eb120e9049c0575a22"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-04-09",
+          "meeting_id": "rbi_mpc_2025-04-09",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-04-09/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60279.html",
+            "publication_date": "2025-04-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8.html",
+            "source_id": "rbi_prid_60279",
+            "source_sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-04-09/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-04-09:nagesh_kumar",
+          "statement_sha256": "b0f238d5107fbb4cdf3d29900305498156c56ba7cb54323d82792668c4cb2a61"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-06-06",
+          "meeting_id": "rbi_mpc_2025-06-06",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-06-06/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+            "publication_date": "2025-06-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63.html",
+            "source_id": "rbi_prid_60686",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-06-06/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-06-06:nagesh_kumar",
+          "statement_sha256": "e25c6fb921e72a76fe948b7735e2a73ba81b3a39b8a5972ccefba4c33d35de89"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-08-06",
+          "meeting_id": "rbi_mpc_2025-08-06",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-08-06/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+            "publication_date": "2025-08-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa.html",
+            "source_id": "rbi_prid_61056",
+            "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-08-06/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-08-06:nagesh_kumar",
+          "statement_sha256": "a4f7ca1a88b5c76b908d7d58a0cff6d2ad425279cb1304180cc4114bba71dd4d"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-10-01:nagesh_kumar",
+          "statement_sha256": "44f42b0a7d258a3fbed0b9eeac79b85fd74826ba80f41522c811d1b62fcf6af1"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2025-12-05:nagesh_kumar",
+          "statement_sha256": "43f8c99ad9aaffa9269ed35a5e1ca4a8a76329dfcc1d271a2b4bee3cc51840e4"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Nagesh Kumar",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "nagesh_kumar",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/nagesh_kumar.txt",
+          "original_member_id": "nagesh_kumar",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/nagesh_kumar.txt",
+          "statement_id": "rbi_mpc_2026-02-06:nagesh_kumar",
+          "statement_sha256": "26b3e45584eb5cce0725eaeb42c75d757498595f52e550d0638534fb59546025"
+        }
+      ],
+      "dove_hits": 109,
+      "hawk_hits": 44,
+      "history_status": "available_personal_history",
+      "meetings_count": 9,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": -0.42483660130718953,
+        "is_internal": false,
+        "key_themes": [
+          "\"At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals.\" (2024-10-09)",
+          "\"The June MPC is taking place against the backdrop of continued global uncertainties on tariffs, protectionism, and trade wars that are affecting the global trade and growth outlook.\" (2025-06-06)",
+          "\"The conclusion of the long-pending EU-India FTA negotiations on 27 January, followed quickly by the announcement of the US-India trade deal have helped to lift the sentiment, which had been depressed by the imposition of 50% tariffs on India’s exports by the US since August 2025.\" (2026-02-06)"
+        ],
+        "member_id": "nagesh_kumar",
+        "name": "Nagesh Kumar",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:nagesh_kumar",
+          "statement_sha256": "0aaedbaa42e9bf440c31df9847eeab1eb36d993c3ff61197a9af533b294bb77f",
+          "text": "At the outset, I must say, that looking at the global economic situation, one feels proud of the management of the Indian economy that has made it the fastest-growing large economy globally, with a relatively low inflation rate, exchange rate stability, large foreign exchange reserves, among other robust macroeconomic fundamentals."
+        },
+        {
+          "decision_date": "2025-06-06",
+          "statement_id": "rbi_mpc_2025-06-06:nagesh_kumar",
+          "statement_sha256": "e25c6fb921e72a76fe948b7735e2a73ba81b3a39b8a5972ccefba4c33d35de89",
+          "text": "The June MPC is taking place against the backdrop of continued global uncertainties on tariffs, protectionism, and trade wars that are affecting the global trade and growth outlook."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:nagesh_kumar",
+          "statement_sha256": "26b3e45584eb5cce0725eaeb42c75d757498595f52e550d0638534fb59546025",
+          "text": "The conclusion of the long-pending EU-India FTA negotiations on 27 January, followed quickly by the announcement of the US-India trade deal have helped to lift the sentiment, which had been depressed by the imposition of 50% tariffs on India’s exports by the US since August 2025."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 7269
+    },
+    "poonam_gupta": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Dr. Poonam Gupta",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-06-06",
+          "meeting_id": "rbi_mpc_2025-06-06",
+          "member_id": "poonam_gupta",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-06-06/poonam_gupta.txt",
+          "original_member_id": "poonam_gupta",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+            "publication_date": "2025-06-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63.html",
+            "source_id": "rbi_prid_60686",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-06-06/poonam_gupta.txt",
+          "statement_id": "rbi_mpc_2025-06-06:poonam_gupta",
+          "statement_sha256": "a90cf61077ba9112602aa172c18dbf9b6ad75aa4de4d047745a859a5763f54f4"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Poonam Gupta",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-08-06",
+          "meeting_id": "rbi_mpc_2025-08-06",
+          "member_id": "poonam_gupta",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-08-06/poonam_gupta.txt",
+          "original_member_id": "poonam_gupta",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+            "publication_date": "2025-08-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa.html",
+            "source_id": "rbi_prid_61056",
+            "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-08-06/poonam_gupta.txt",
+          "statement_id": "rbi_mpc_2025-08-06:poonam_gupta",
+          "statement_sha256": "5389b9fb4e055ad18e6ea0155dfbc30545052fa8263d33a557441de78de4ab1f"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Poonam Gupta",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "poonam_gupta",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/poonam_gupta.txt",
+          "original_member_id": "poonam_gupta",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/poonam_gupta.txt",
+          "statement_id": "rbi_mpc_2025-10-01:poonam_gupta",
+          "statement_sha256": "aaccaf991d004473cbfce9141ea89453fc1b6849a83012ccaa2e07d644dea8c8"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Poonam Gupta",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "poonam_gupta",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/poonam_gupta.txt",
+          "original_member_id": "poonam_gupta",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/poonam_gupta.txt",
+          "statement_id": "rbi_mpc_2025-12-05:poonam_gupta",
+          "statement_sha256": "f74922a77ee9afb8250f5643ed6247b2ce4f6d03d8ac4ba2f52afbc48c73b7ae"
+        },
+        {
+          "attribution_heading": "Statement by Dr. Poonam Gupta",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "poonam_gupta",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/poonam_gupta.txt",
+          "original_member_id": "poonam_gupta",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/poonam_gupta.txt",
+          "statement_id": "rbi_mpc_2026-02-06:poonam_gupta",
+          "statement_sha256": "7e2efcb3ba27a9da82ae515d2e0d54fad49ccf56f88cbe0c70f2876fe3d8a490"
+        }
+      ],
+      "dove_hits": 39,
+      "hawk_hits": 45,
+      "history_status": "available_personal_history",
+      "meetings_count": 5,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": 0.07142857142857142,
+        "is_internal": true,
+        "key_themes": [
+          "\"The Indian economy has exhibited remarkable resilience during the past decade, amidst an extremely uncertain and shifting global economic outlook, marked by worsening trade dynamics, financial volatility and geopolitical flareups.\" (2025-06-06)",
+          "\"The Indian economy is proving to be resilient overall, well on its way to attain a healthy growth rate in the ballpark of 6.5 to 7.0 per cent, both this year and the next.\" (2025-10-01)",
+          "\"Yet, from the Indian perspective, the announcement of a trade deal with the US and the signing of a major free trade agreement (FTA) with the EU have resulted in a more favorable external sector outlook.\" (2026-02-06)"
+        ],
+        "member_id": "poonam_gupta",
+        "name": "Poonam Gupta",
+        "provenance_status": "dated_corpus",
+        "role": "Deputy Governor",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2025-06-06 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2025-06-06",
+          "statement_id": "rbi_mpc_2025-06-06:poonam_gupta",
+          "statement_sha256": "a90cf61077ba9112602aa172c18dbf9b6ad75aa4de4d047745a859a5763f54f4",
+          "text": "The Indian economy has exhibited remarkable resilience during the past decade, amidst an extremely uncertain and shifting global economic outlook, marked by worsening trade dynamics, financial volatility and geopolitical flareups."
+        },
+        {
+          "decision_date": "2025-10-01",
+          "statement_id": "rbi_mpc_2025-10-01:poonam_gupta",
+          "statement_sha256": "aaccaf991d004473cbfce9141ea89453fc1b6849a83012ccaa2e07d644dea8c8",
+          "text": "The Indian economy is proving to be resilient overall, well on its way to attain a healthy growth rate in the ballpark of 6.5 to 7.0 per cent, both this year and the next."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:poonam_gupta",
+          "statement_sha256": "7e2efcb3ba27a9da82ae515d2e0d54fad49ccf56f88cbe0c70f2876fe3d8a490",
+          "text": "Yet, from the Indian perspective, the announcement of a trade deal with the US and the signing of a major free trade agreement (FTA) with the EU have resulted in a more favorable external sector outlook."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 2374
+    },
+    "ram_singh": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/ram_singh.txt",
+          "statement_id": "rbi_mpc_2024-10-09:ram_singh",
+          "statement_sha256": "527c10917277bbc62a0da47d80b7b6ddf48032f57ac91a88fd50d3e8cb3f995a"
+        },
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/ram_singh.txt",
+          "statement_id": "rbi_mpc_2024-12-06:ram_singh",
+          "statement_sha256": "566890e134aa8cffaa17e1f0c78123f49c69872ca9c68f654202dae03d796c08"
+        },
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-02-07",
+          "meeting_id": "rbi_mpc_2025-02-07",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-02-07/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+            "publication_date": "2025-02-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+            "source_id": "rbi_prid_59818",
+            "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-02-07/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-02-07:ram_singh",
+          "statement_sha256": "033db21387e31a9219cb64c9f9843f16d886513b63156992e3b9164381ca44b9"
+        },
+        {
+          "attribution_heading": "Statement by Prof Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-04-09",
+          "meeting_id": "rbi_mpc_2025-04-09",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-04-09/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60279.html",
+            "publication_date": "2025-04-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8.html",
+            "source_id": "rbi_prid_60279",
+            "source_sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-04-09/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-04-09:ram_singh",
+          "statement_sha256": "b0612aa33a942d3aeada17019e73572002484721dafead7f6a28cb1b379d99f3"
+        },
+        {
+          "attribution_heading": "Statement by Prof. Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-06-06",
+          "meeting_id": "rbi_mpc_2025-06-06",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-06-06/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+            "publication_date": "2025-06-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63.html",
+            "source_id": "rbi_prid_60686",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-06-06/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-06-06:ram_singh",
+          "statement_sha256": "22aeaaa9312df4824e9ad4482b51287cf589184a72c791341915b5e82c743cf7"
+        },
+        {
+          "attribution_heading": "Statement by Prof. Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-08-06",
+          "meeting_id": "rbi_mpc_2025-08-06",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-08-06/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+            "publication_date": "2025-08-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa.html",
+            "source_id": "rbi_prid_61056",
+            "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-08-06/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-08-06:ram_singh",
+          "statement_sha256": "f1e116973c16bd7b25c0c702cee5235e51b59ad4c0aa08f0d2774b3b5eda8661"
+        },
+        {
+          "attribution_heading": "Statement by Prof. Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-10-01:ram_singh",
+          "statement_sha256": "fe3541e26caf5902a042b0da0f81076cf9b6796bebf712f663362a46d9affcc0"
+        },
+        {
+          "attribution_heading": "Statement by Prof. Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/ram_singh.txt",
+          "statement_id": "rbi_mpc_2025-12-05:ram_singh",
+          "statement_sha256": "6f3ec5581709f4b1860102642a91a7f31fbe94989f0cd74bd523b5ed35375353"
+        },
+        {
+          "attribution_heading": "Statement by Prof. Ram Singh",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "ram_singh",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/ram_singh.txt",
+          "original_member_id": "ram_singh",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/ram_singh.txt",
+          "statement_id": "rbi_mpc_2026-02-06:ram_singh",
+          "statement_sha256": "b85acdc115f9c969fddac5dbc2069ab01bb1ad6bd56e4a3a1d668e590214e7b6"
+        }
+      ],
+      "dove_hits": 183,
+      "hawk_hits": 209,
+      "history_status": "available_personal_history",
+      "meetings_count": 9,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": 0.0663265306122449,
+        "is_internal": false,
+        "key_themes": [
+          "\"The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter.\" (2024-10-09)",
+          "\"My assessment of the current growth-inflation dynamics and the prospects is very similar to what is described in the MPC statement for the June 2025 meeting.\" (2025-06-06)",
+          "\"The real GDP (FAE) is estimated to grow by 7.4 per cent in 2025-26, with private consumption and fixed investment contributing significantly to the growth.\" (2026-02-06)"
+        ],
+        "member_id": "ram_singh",
+        "name": "Ram Singh",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:ram_singh",
+          "statement_sha256": "527c10917277bbc62a0da47d80b7b6ddf48032f57ac91a88fd50d3e8cb3f995a",
+          "text": "The real GDP has grown by 6.7 per cent in Q1:2024-25, a tad less than the projected value for the quarter."
+        },
+        {
+          "decision_date": "2025-06-06",
+          "statement_id": "rbi_mpc_2025-06-06:ram_singh",
+          "statement_sha256": "22aeaaa9312df4824e9ad4482b51287cf589184a72c791341915b5e82c743cf7",
+          "text": "My assessment of the current growth-inflation dynamics and the prospects is very similar to what is described in the MPC statement for the June 2025 meeting."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:ram_singh",
+          "statement_sha256": "b85acdc115f9c969fddac5dbc2069ab01bb1ad6bd56e4a3a1d668e590214e7b6",
+          "text": "The real GDP (FAE) is estimated to grow by 7.4 per cent in 2025-26, with private consumption and fixed investment contributing significantly to the growth."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 10300
+    },
+    "sanjay_malhotra": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-02-07",
+          "meeting_id": "rbi_mpc_2025-02-07",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-02-07/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+            "publication_date": "2025-02-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+            "source_id": "rbi_prid_59818",
+            "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-02-07/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-02-07:sanjay_malhotra",
+          "statement_sha256": "34ca8dd83e53490cfac8a8affec8137399c98b16e6473ff3c8f677f96f25a6df"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-04-09",
+          "meeting_id": "rbi_mpc_2025-04-09",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-04-09/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60279.html",
+            "publication_date": "2025-04-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8.html",
+            "source_id": "rbi_prid_60279",
+            "source_sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-04-09/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-04-09:sanjay_malhotra",
+          "statement_sha256": "ac9375f35c639d660913a4fd01415e278367c520691763e8917600b4276c3176"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-06-06",
+          "meeting_id": "rbi_mpc_2025-06-06",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-06-06/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+            "publication_date": "2025-06-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63.html",
+            "source_id": "rbi_prid_60686",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-06-06/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-06-06:sanjay_malhotra",
+          "statement_sha256": "a2b32150bcf468fffe51272cc9c0049b97d350f664093cb42c6674512d490b6c"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-08-06",
+          "meeting_id": "rbi_mpc_2025-08-06",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-08-06/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+            "publication_date": "2025-08-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa.html",
+            "source_id": "rbi_prid_61056",
+            "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-08-06/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-08-06:sanjay_malhotra",
+          "statement_sha256": "a80264cfdd6ad27b94db6833d630dc4e679e4ae2b1165022ce5ca3f5962db311"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-10-01:sanjay_malhotra",
+          "statement_sha256": "1cd97f6e03d26e6de213024471b6a641d18a56a57615508fde1da0efa5913146"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2025-12-05:sanjay_malhotra",
+          "statement_sha256": "57c3f0591a5c49fa450833a9325dc67760e0f611cb20fe6570f666a98f34fdc9"
+        },
+        {
+          "attribution_heading": "Statement by Shri Sanjay Malhotra",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "sanjay_malhotra",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/sanjay_malhotra.txt",
+          "original_member_id": "sanjay_malhotra",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/sanjay_malhotra.txt",
+          "statement_id": "rbi_mpc_2026-02-06:sanjay_malhotra",
+          "statement_sha256": "82ec98f955303f7f7e42c95bfe8c888e7a5be7dc4ffcca3037eda931e27698f6"
+        }
+      ],
+      "dove_hits": 83,
+      "hawk_hits": 113,
+      "history_status": "available_personal_history",
+      "meetings_count": 7,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": 0.15306122448979592,
+        "is_internal": true,
+        "key_themes": [
+          "\"In a world order dominated by continuing geopolitical tensions and elevated trade and policy uncertainties, monetary policy, as the guardian of macroeconomic and financial stability, is traversing through a challenging time.\" (2025-02-07)",
+          "\"The global economy continues to traverse a period of heightened uncertainty on account of trade and tariff negotiations and lingering geopolitical tensions.\" (2025-08-06)",
+          "\"Despite escalating geopolitical tensions and increasing trade frictions posing huge challenges, global growth, supported by a surge in technology-related investments, conducive fiscal and monetary policies, and accommodative financial conditions, is expected to be marginally higher in 2026.\" (2026-02-06)"
+        ],
+        "member_id": "sanjay_malhotra",
+        "name": "Sanjay Malhotra",
+        "provenance_status": "dated_corpus",
+        "role": "Governor",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2025-02-07 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2025-02-07",
+          "statement_id": "rbi_mpc_2025-02-07:sanjay_malhotra",
+          "statement_sha256": "34ca8dd83e53490cfac8a8affec8137399c98b16e6473ff3c8f677f96f25a6df",
+          "text": "In a world order dominated by continuing geopolitical tensions and elevated trade and policy uncertainties, monetary policy, as the guardian of macroeconomic and financial stability, is traversing through a challenging time."
+        },
+        {
+          "decision_date": "2025-08-06",
+          "statement_id": "rbi_mpc_2025-08-06:sanjay_malhotra",
+          "statement_sha256": "a80264cfdd6ad27b94db6833d630dc4e679e4ae2b1165022ce5ca3f5962db311",
+          "text": "The global economy continues to traverse a period of heightened uncertainty on account of trade and tariff negotiations and lingering geopolitical tensions."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:sanjay_malhotra",
+          "statement_sha256": "82ec98f955303f7f7e42c95bfe8c888e7a5be7dc4ffcca3037eda931e27698f6",
+          "text": "Despite escalating geopolitical tensions and increasing trade frictions posing huge challenges, global growth, supported by a surge in technology-related investments, conducive fiscal and monetary policies, and accommodative financial conditions, is expected to be marginally higher in 2026."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 5341
+    },
+    "saugata_bhattacharya": {
+      "construct_validated": false,
+      "corpus_sources": [
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-10-09",
+          "meeting_id": "rbi_mpc_2024-10-09",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-10-09/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+            "publication_date": "2024-10-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b.html",
+            "source_id": "rbi_prid_58958",
+            "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-10-09/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2024-10-09:saugata_bhattacharya",
+          "statement_sha256": "0b5dcadb6d8b901374618a112cf448c7d7a6aba289080e25ca6f6a1de737ba06"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2024-12-06",
+          "meeting_id": "rbi_mpc_2024-12-06",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2024-12-06/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+            "publication_date": "2024-12-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60.html",
+            "source_id": "rbi_prid_59347",
+            "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2024-12-06/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2024-12-06:saugata_bhattacharya",
+          "statement_sha256": "86baaeabba3fea091a4141b388ad18b46e77e8551bf9ee898818df9af4b2e6de"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-02-07",
+          "meeting_id": "rbi_mpc_2025-02-07",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-02-07/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+            "publication_date": "2025-02-21",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008.html",
+            "source_id": "rbi_prid_59818",
+            "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-02-07/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-02-07:saugata_bhattacharya",
+          "statement_sha256": "369892133df17f237b29cc62ef0a64f819a006005a5c5864460df697355f74bb"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-04-09",
+          "meeting_id": "rbi_mpc_2025-04-09",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-04-09/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60279.html",
+            "publication_date": "2025-04-23",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8.html",
+            "source_id": "rbi_prid_60279",
+            "source_sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-04-09/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-04-09:saugata_bhattacharya",
+          "statement_sha256": "333ca39a0202037317e77fe3fee0f231fb607098a81ed15f44ac48201c89554b"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-06-06",
+          "meeting_id": "rbi_mpc_2025-06-06",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-06-06/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+            "publication_date": "2025-06-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63.html",
+            "source_id": "rbi_prid_60686",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-06-06/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-06-06:saugata_bhattacharya",
+          "statement_sha256": "37846436ea94504536845461950eb4f2625f36183790da1660ed872eaf87571f"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-08-06",
+          "meeting_id": "rbi_mpc_2025-08-06",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-08-06/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+            "publication_date": "2025-08-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa.html",
+            "source_id": "rbi_prid_61056",
+            "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-08-06/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-08-06:saugata_bhattacharya",
+          "statement_sha256": "3a3a52da9f1e9c037457b1f69f42b0722e904c314f8de9f164618db8ac1fb509"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-10-01",
+          "meeting_id": "rbi_mpc_2025-10-01",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-10-01/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+            "publication_date": "2025-10-15",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d.html",
+            "source_id": "rbi_prid_61433",
+            "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-10-01/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-10-01:saugata_bhattacharya",
+          "statement_sha256": "96efdccc39e7e4e84547dc6aa342597057747ae7d7c12d3f7bd6e2f3dc488641"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2025-12-05",
+          "meeting_id": "rbi_mpc_2025-12-05",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2025-12-05/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+            "publication_date": "2025-12-19",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943.html",
+            "source_id": "rbi_prid_61856",
+            "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2025-12-05/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2025-12-05:saugata_bhattacharya",
+          "statement_sha256": "59ab94c693be5d3cebb9b1815586aca1366058df7222e555aec451e633858461"
+        },
+        {
+          "attribution_heading": "Statement by Shri Saugata Bhattacharya",
+          "attribution_status": "personal_heading_and_raw_bytes_verified",
+          "decision_date": "2026-02-06",
+          "meeting_id": "rbi_mpc_2026-02-06",
+          "member_id": "saugata_bhattacharya",
+          "origin_statement_file": "derived_statements/rbi_mpc_2026-02-06/saugata_bhattacharya.txt",
+          "original_member_id": "saugata_bhattacharya",
+          "source": {
+            "availability_precision": "calendar_day_only",
+            "historical_first_availability_verified": false,
+            "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+            "publication_date": "2026-02-20",
+            "publication_status": "verified_retained_header",
+            "publication_time": null,
+            "source_file": "sources/1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328.html",
+            "source_id": "rbi_prid_62261",
+            "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+          },
+          "statement_file": "derived_statements/rbi_mpc_2026-02-06/saugata_bhattacharya.txt",
+          "statement_id": "rbi_mpc_2026-02-06:saugata_bhattacharya",
+          "statement_sha256": "49720c27cd689d0470f7ec52a56a3248c3cffc3da461437335dc4b9dafb128cf"
+        }
+      ],
+      "dove_hits": 67,
+      "hawk_hits": 81,
+      "history_status": "available_personal_history",
+      "meetings_count": 9,
+      "persona_fields": {
+        "biography": null,
+        "calibration_cutoff": "2026-04-06",
+        "hawk_dove_score": 0.0945945945945946,
+        "is_internal": false,
+        "key_themes": [
+          "\"Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook.\" (2024-10-09)",
+          "\"Hence, there is little to add to the essence of my statement in the minutes of the last April ’25 meeting.\" (2025-06-06)",
+          "\"The RBI Governor’s statement post the February 2026 policy review provides a comprehensive and detailed coverage and analysis of the present domestic and global macroeconomic environment and outlook.\" (2026-02-06)"
+        ],
+        "member_id": "saugata_bhattacharya",
+        "name": "Saugata Bhattacharya",
+        "provenance_status": "dated_corpus",
+        "role": "External Member",
+        "stance_bias": "neutral",
+        "system_prompt_override": null,
+        "tenure": "Personal corpus coverage 2024-10-09 to 2026-02-06; appointment tenure unverified",
+        "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+      },
+      "quote_evidence": [
+        {
+          "decision_date": "2024-10-09",
+          "statement_id": "rbi_mpc_2024-10-09:saugata_bhattacharya",
+          "statement_sha256": "0b5dcadb6d8b901374618a112cf448c7d7a6aba289080e25ca6f6a1de737ba06",
+          "text": "Prospects for future demand remain hazy, with each emerging data point seeming to present a confusing and occasionally dissonant outlook."
+        },
+        {
+          "decision_date": "2025-06-06",
+          "statement_id": "rbi_mpc_2025-06-06:saugata_bhattacharya",
+          "statement_sha256": "37846436ea94504536845461950eb4f2625f36183790da1660ed872eaf87571f",
+          "text": "Hence, there is little to add to the essence of my statement in the minutes of the last April ’25 meeting."
+        },
+        {
+          "decision_date": "2026-02-06",
+          "statement_id": "rbi_mpc_2026-02-06:saugata_bhattacharya",
+          "statement_sha256": "49720c27cd689d0470f7ec52a56a3248c3cffc3da461437335dc4b9dafb128cf",
+          "text": "The RBI Governor’s statement post the February 2026 policy review provides a comprehensive and detailed coverage and analysis of the present domestic and global macroeconomic environment and outlook."
+        }
+      ],
+      "role_evidence_status": "documented_role_at_observed_meeting",
+      "total_words": 5914
+    }
+  },
+  "missing_history_member_ids": [],
+  "packet_file": "rolling_inputs/packets/rbi_mpc_2026-04-08.json",
+  "packet_sha256": "4a287bcd732db852d8b5fdf4fd07443a2d1a7864cce382cd93da0a4f95d598b7",
+  "predictive_readiness": false,
+  "protocol_file": "rolling_inputs/protocol.json",
+  "protocol_sha256": "fa39fbf921f0db91a4e7ce6379cbfd15c558e5d6d2f9ab1574804f9cc8ffe4eb",
+  "rolling_receipt_file": "rolling_inputs/receipt.json",
+  "rolling_receipt_sha256": "ac7efe40a493dbe93c542963c9193d569cce4b88a63d64a1c34784fa41c21cb9",
+  "roster": {
+    "appointment_dates": null,
+    "decision_date": "2026-04-08",
+    "governor_id": "sanjay_malhotra",
+    "information_cutoff": "2026-04-06T00:00:00+05:30",
+    "meeting_id": "rbi_mpc_2026-04-08",
+    "meeting_start_date": "2026-04-06",
+    "members": [
+      {
+        "is_internal": false,
+        "member_id": "nagesh_kumar",
+        "name": "Nagesh Kumar",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "saugata_bhattacharya",
+        "name": "Saugata Bhattacharya",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": false,
+        "member_id": "ram_singh",
+        "name": "Ram Singh",
+        "role": "External Member",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "sanjay_malhotra",
+        "name": "Sanjay Malhotra",
+        "role": "Governor",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "poonam_gupta",
+        "name": "Poonam Gupta",
+        "role": "Deputy Governor",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      },
+      {
+        "is_internal": true,
+        "member_id": "indranil_bhattacharyya",
+        "name": "Indranil Bhattacharyya",
+        "role": "Executive Director",
+        "role_evidence_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934).",
+        "role_evidence_source": {
+          "availability_precision": "calendar_day_only",
+          "historical_first_availability_verified": false,
+          "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+          "publication_date": "2026-04-22",
+          "publication_status": "verified_retained_header",
+          "publication_time": null,
+          "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+          "source_id": "rbi_prid_62599",
+          "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+          "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+        },
+        "role_evidence_status": "documented_role_at_observed_meeting"
+      }
+    ],
+    "panel_status": "exposed_retrospective",
+    "predictive_roster_readiness": "unverified_pre_cutoff_membership",
+    "roster_available_at_cutoff": false,
+    "roster_evidence_status": "retrospective_oracle_attendance",
+    "roster_source": {
+      "availability_precision": "calendar_day_only",
+      "historical_first_availability_verified": false,
+      "origin_source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+      "publication_date": "2026-04-22",
+      "publication_status": "verified_retained_header",
+      "publication_time": null,
+      "source_file": "sources/55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3.html",
+      "source_id": "rbi_prid_62599",
+      "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+    },
+    "roster_source_excerpt": "2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934)."
+  },
+  "roster_available_at_cutoff": false,
+  "roster_evidence_status": "retrospective_oracle_attendance",
+  "rosters_file": "rolling_inputs/realized_rosters.json",
+  "rosters_sha256": "ce7e352b20f3643a5516de2078dec7410a3c862d52f83f87ca143e263d3d88ab",
+  "source_bundle_root": "rolling_inputs",
+  "version": "dated-lexical-rolling-v3"
+}

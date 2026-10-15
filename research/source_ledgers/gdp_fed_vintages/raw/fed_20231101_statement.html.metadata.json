@@ -1,0 +1,28 @@
+{
+  "id": "fed_20231101_statement",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm",
+  "format": "html",
+  "role": "statement",
+  "discovery_parent_id": "fed_calendar_2021_2024",
+  "discovery_parent_sha256": "e9a6efa7b070ac58e575da9a3de11602a9152217ba2202ac1cae258a4f14fd57",
+  "retrieved_at_utc": "2026-10-05T14:54:23.185966+00:00",
+  "status_code": 200,
+  "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm",
+  "response_headers": {
+    "Date": "Mon, 05 Oct 2026 14:54:23 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "CF-Ray": "a45d42e419a4c766-BOM",
+    "CF-Cache-Status": "HIT",
+    "Last-Modified": "Thu, 26 Feb 2026 22:26:55 GMT",
+    "Server": "cloudflare",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Encoding": "gzip"
+  },
+  "bytes": 82521,
+  "acquired": true,
+  "local_file": "raw/fed_20231101_statement.html",
+  "sha256": "24cc2be8d92ed3c371324a672a92b30a1f1ffbf05bea05794f088296a387aaee"
+}

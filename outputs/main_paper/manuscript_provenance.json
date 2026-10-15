@@ -1,0 +1,69 @@
+{
+  "source_commit": "7f2436bc4f32d6021b1e885eb49286c850de9139",
+  "source_archive": "/private/tmp/rbi_main_paper_2026_10_06/source",
+  "analysis": "Frozen artifacts recomputed; no new provider calls or simulation reruns",
+  "recomputed_metrics": {
+    "mock": {
+      "n": 25,
+      "exact_rate": 0.76,
+      "directional_rate": 0.76,
+      "stance": 0.76,
+      "rate_mae_bps": 10.0,
+      "dissent_tp": 22,
+      "dissent_fp": 21,
+      "dissent_fn": 0,
+      "dissent_f1": 0.676923076923077,
+      "dissent_exact_match": 0.4
+    },
+    "saved_provider_attributed": {
+      "n": 8,
+      "exact_rate": 1.0,
+      "directional_rate": 1.0,
+      "stance": 1.0,
+      "rate_mae_bps": 0.0,
+      "dissent_tp": 10,
+      "dissent_fp": 4,
+      "dissent_fn": 0,
+      "dissent_f1": 0.8333333333333334,
+      "dissent_exact_match": 0.5
+    },
+    "formal_union": {
+      "n": 8,
+      "exact_rate": 1.0,
+      "directional_rate": 1.0,
+      "stance": 1.0,
+      "rate_mae_bps": 0.0,
+      "dissent_tp": 6,
+      "dissent_fp": 8,
+      "dissent_fn": 0,
+      "dissent_f1": 0.6,
+      "dissent_exact_match": 0.25
+    },
+    "taylor": {
+      "n": 25,
+      "exact_rate": 0.16,
+      "directional_rate": 0.28,
+      "stance": 0.48,
+      "rate_mae_bps": 33.0,
+      "dissent_tp": 0,
+      "dissent_fp": 0,
+      "dissent_fn": 0,
+      "dissent_f1": 0,
+      "dissent_exact_match": 0.0
+    }
+  },
+  "source_sha256": {
+    "results/tables/meeting_by_meeting_comparison.csv": "1a4324970a4c9d3e13152d324561f4d3f90e5d6353c5c22fc4f6efab6e50c9c9",
+    "results/tables/holdout_meeting_by_meeting_comparison.csv": "a6948da373ea8134ac86f47928390d92b3b80c138d2fe637b8ea033d1b7a21f2",
+    "results/tables/rational_taylor_panel_results.csv": "5527464f867a257a51a8a5f570dfd638bd47c30d0d06182830d240a890d8523f",
+    "data/processed/macro_panel.parquet": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "document_sha256": "157aa8989d49a7ab45ec85d703fc2ee9685c3da676e6101e7a6a94a0b5934f85",
+  "word_count": 5789,
+  "references": 14,
+  "tables": 7,
+  "figures": 2,
+  "equations": 4
+}

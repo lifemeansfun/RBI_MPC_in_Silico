@@ -1,0 +1,520 @@
+{
+  "title": "RBI MPC In Silico Simulation and Retrospective Validation of Monetary Policy Committee Decisions",
+  "abstract": "Monetary policy committees combine heterogeneous judgments, institutional voting rules and macroeconomic information. Large language models offer a way to represent this interaction, but historical agreement alone does not establish forecasting skill or valid deliberative mechanisms. This study develops and retrospectively evaluates RBI MPC In Silico, a six-member simulation of the Reserve Bank of India Monetary Policy Committee. The original implementation combines statement-derived personas, a staged language-model workflow, explicit rate and stance aggregation, and a heterogeneous smoothed Taylor-rule comparator. The evidence comprises 25 meetings from October 2020 to August 2024, 150 archived member statements, an offline heuristic panel and saved provider-attributed outputs for eight nominal holdout meetings. Recomputed exact rate agreement is 76.0% for the offline panel, 16.0% for the configured Taylor comparator and 80.0% for a lagged-decision baseline. The eight saved committee outcomes achieve 100% rate and stance agreement; however, all eight observed decisions are holds with an unchanged stance, and persistence achieves the same result. Union-dissent F1 is 0.833 against the original labels and 0.600 under a stricter formal-ballot interpretation; rate-dissent F1 is 0.500. Two stylized shocks and six ablations produce predominantly unchanged decisions. Validation also identifies evaluation-period information in persona construction, post-meeting inflation observations, unsupported historical actions and a deliberation round disconnected from final-vote prompts. These findings establish an auditable computational prototype and expose requirements for stronger evaluation. They do not establish incremental forecasting performance, identified persuasion effects or superior monetary policy. Release-vintage inputs, frozen chronological calibration, strong baselines and controlled information-flow experiments are necessary before such claims can be tested.",
+  "keywords": "Monetary policy committees; large language models; multi-agent simulation; Reserve Bank of India; retrospective validation; dissent; real-time data",
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "1 Introduction"
+    },
+    {
+      "type": "p",
+      "text": "Monetary policy is often determined by a committee whose members share an institutional mandate but differ in their assessment of inflation, economic slack, uncertainty and the costs of policy adjustment. A committee simulator therefore has two distinct tasks: representing individual judgments and explaining how those judgments become a collective decision. The distinction matters because an accurate committee decision can conceal inaccurate individual votes, and a persuasive simulated discussion can leave the final outcome unchanged. Committee research treats information pooling, leadership and voting procedures as substantive features of the decision process (Blinder, 2007; Riboni and Ruge-Murcia, 2010)."
+    },
+    {
+      "type": "p",
+      "text": "Large language models can generate institutionally situated arguments and respond to other agents in natural language. This creates an opportunity to model policy discussions alongside conventional numerical reaction functions. It also creates an identification problem. A model may reproduce a historical decision because the decision is common, because its persona incorporates later information, because the historical episode appeared in training data, or because the aggregation rule suppresses individual errors. None of these explanations requires a useful representation of deliberation. Evaluation must therefore connect claims about forecasting, member heterogeneity and persuasion to separate observable quantities and appropriate comparisons."
+    },
+    {
+      "type": "p",
+      "text": "This study examines RBI MPC In Silico, a computational representation of the Reserve Bank of India Monetary Policy Committee. The original project encodes six member personas, a four-stage discussion protocol, separate policy-rate and stance outputs, and an institutional aggregation layer. A parallel smoothed Taylor-rule simulation supplies a transparent numerical comparator. The historical corpus covers October 2020 through August 2024, including a tightening episode and the subsequent period of unchanged policy rates. The study evaluates the original software and retained evidence, including a methodology audit preserved with that software, rather than incorporating later implementation changes."
+    },
+    {
+      "type": "p",
+      "text": "Three questions organize the analysis. First, how closely do the saved committee decisions and dissent sets reproduce the historical records? Second, do these results improve on simple admissible descriptions of policy persistence and previous ballots? Third, do the implementation and intervention evidence support the intended interpretation of a deliberative multi-agent system? The third question is essential: mechanism claims require an information path through which the proposed mechanism can affect the measured outcome."
+    },
+    {
+      "type": "p",
+      "text": "The contribution is an explicitly bounded retrospective evaluation. It documents the original architecture, reproduces its descriptive scores, tests sensitivity to ballot definitions and comparator assumptions, and separates numerical correctness from empirical validity. The strongest positive finding is that an inspectable committee simulation can reproduce the eight saved aggregate outcomes. The central qualification is that persistence reproduces the same outcomes, while leakage and information-flow defects prevent a clean test of prospective or deliberative value. Reporting these limits is part of the research contribution, because apparently strong aggregate agreement can otherwise obscure the conditions under which a simulator has been evaluated."
+    },
+    {
+      "type": "h1",
+      "text": "2 Related Research and Institutional Setting"
+    },
+    {
+      "type": "h2",
+      "text": "2 1 Committee decisions and language model agents"
+    },
+    {
+      "type": "p",
+      "text": "The economics of policy committees emphasizes the relationship between individual preferences, shared information and collective procedure. Blinder (2007) discusses why committees may improve monetary policymaking and how their organization shapes decisions. Riboni and Ruge-Murcia (2010) compare alternative committee protocols, including consensus and chairman dominance. These perspectives motivate explicit aggregation and member-level evaluation, but they do not imply that a particular simulated voting rule is institutionally correct or that conversational agreement identifies information pooling."
+    },
+    {
+      "type": "p",
+      "text": "Text can provide evidence about central bank preferences when its measurement is linked to an empirical design. Baerg and Lowe (2020), for example, combine topic and scaling methods to estimate textual policy preferences. The present project's lexical persona score is a simpler handcrafted measure. Its interpretability is useful, but the score should not be treated as an estimated preference parameter merely because it is computed from statements. The relevant question is whether a score formed from admissible past statements predicts later member behavior beyond simpler alternatives."
+    },
+    {
+      "type": "p",
+      "text": "Language-model simulation research provides a complementary architectural foundation. Argyle et al. (2023) investigate conditional fidelity in simulated human samples. Park et al. (2023) show how memory, reflection and interaction can produce organized agent behavior. Horton et al. (2023, revised 2026) examine language models as simulated economic agents. These studies motivate computational experimentation; transferring their findings to named central bank members requires additional validation. In particular, plausibility of language and similarity of aggregate outcomes are insufficient to establish fidelity to the latent preferences of a specific policymaker."
+    },
+    {
+      "type": "p",
+      "text": "Monetary-policy applications already include staged FOMC meeting simulations such as MiniFed (Seok et al., 2024) and FOMC In Silico (Kazinnik and Sinclair, 2025, revised 2026). The current revision of the latter reports a longitudinal evaluation, so an earlier single-episode draft is not an adequate basis for claiming that longitudinal committee simulation is new. This study's distinct scope is the RBI setting and a transparent reassessment of one original implementation. No superiority claim is drawn across studies with different meeting samples, information sets, models or versions."
+    },
+    {
+      "type": "h2",
+      "text": "2 2 The RBI setting and modeled procedure"
+    },
+    {
+      "type": "p",
+      "text": "The studied roster consists of three RBI officials and three external members. Shaktikanta Das and Michael Debabrata Patra are present throughout the corpus; Mridul K. Saggar is replaced by Rajiv Ranjan during 2022. The external members are Shashanka Bhide, Ashima Goyal and Jayanth R. Varma. This composition provides a natural setting for modeling heterogeneous emphasis on inflation and growth, although observed differences in public arguments are not direct measurements of stable utility functions."
+    },
+    {
+      "type": "p",
+      "text": "The Reserve Bank of India Act places meeting quorum, majority voting and the Governor's casting vote in Section 45ZI; Section 45ZL concerns publication of minutes, including publication fourteen days after a meeting. The statutory quorum is four subject to the specified Governor or Deputy Governor condition, whereas the simulator requires six ballots. The manuscript therefore treats complete attendance as a simulation assumption. Separate rate and stance outputs are motivated by the minutes, rather than presented as two independently mandated statutory voting algorithms (Government of India, 1934)."
+    },
+    {
+      "type": "p",
+      "text": "The rule engine selects an action with at least four of six votes and gives the Governor the deciding role in an exact binary three-to-three split. When votes are fragmented across more than two rate actions, the engine uses a median of seven values formed by counting the Governor's vote twice. Stance aggregation uses its implemented categorical procedure. These extensions make every admitted profile computable, but they are modeling choices requiring separate documentary or empirical justification. Exhaustive tests can establish that the program follows those choices; they cannot establish that every choice reproduces the actual committee procedure."
+    },
+    {
+      "type": "h1",
+      "text": "3 Materials and Methods"
+    },
+    {
+      "type": "h2",
+      "text": "3 1 Study scope and evidence provenance"
+    },
+    {
+      "type": "p",
+      "text": "The analysis freezes the original main-branch version at commit 7f2436bc4f32d6021b1e885eb49286c850de9139. This version contains the original research implementation, saved results and the independent methodology audit dated 5 October 2026. No subsequent upgraded implementation supplies a result in this manuscript. The archival evidence comprises raw RBI minute pages, their extracted member statements, a processed macroeconomic panel, persona files, saved meeting outcomes, transcripts, numerical comparator results and audit logs. Table 1 distinguishes the evaluation tracks and their evidential roles."
+    },
+    {
+      "type": "table",
+      "id": "design",
+      "caption": "Table 1 Study design and retained evaluation tracks",
+      "note": "The count of 17 calibration meetings follows the dated rows; an original configuration comment stating 16 is inconsistent with those rows. Provider attribution describes the saved runner and artifacts, not a newly authenticated provider execution."
+    },
+    {
+      "type": "p",
+      "text": "There are 25 meetings and 150 extracted member statements (RBI, 2020–2024). Seventeen meetings through 6 April 2023 are designated calibration observations, and eight meetings from 8 June 2023 through 8 August 2024 are designated holdout observations. The full panel contains 19 holds and six increases: one of 40 basis points, three of 50, one of 35 and one of 25. There are no rate cuts. All eight nominal holdout decisions are holds, and all eight retain withdrawal of accommodation. This outcome composition substantially limits what an apparently perfect holdout classifier can demonstrate."
+    },
+    {
+      "type": "p",
+      "text": "Local checks find agreement between the 25 archived minute files and the 150 normalized extracted statements. This supports fidelity of the local extraction process. It does not certify every derived label, authenticate an official source signature, or establish the historical availability of the macroeconomic inputs. Decision dates and publication dates also require separation. In particular, the original panel labels the May 2022 decision with the minutes-publication date of 18 May, whereas the policy decision was taken on 4 May. The original row identifier is preserved when reproducing scores; its temporal interpretation is explicitly qualified."
+    },
+    {
+      "type": "h2",
+      "text": "3 2 Information sets and persona construction"
+    },
+    {
+      "type": "p",
+      "text": "The briefing combines the current repo rate, headline, core and food inflation, output-gap and growth measures, liquidity, exchange rates, oil prices, the US federal funds rate, monsoon conditions and the previous stance. A hardcoded macroeconomic panel supplies these fields. Although the configuration names an HP-filter parameter, the retained evidence does not establish a release-vintage series and reproducible output-gap estimation path for each meeting. Real-time availability is material: reaction-function inference can change when later revised observations replace contemporaneously available data (Orphanides, 1998)."
+    },
+    {
+      "type": "p",
+      "text": "Two concrete timing discrepancies are documented. The 10 August 2023 briefing contains July headline inflation of 7.44% and food inflation of 11.51%, released on 14 August at 17:30 Indian Standard Time. The 8 August 2024 briefing contains July headline inflation of 3.54%, released on 12 August at 17:30. These official observations therefore postdate the corresponding decisions (MoSPI, 2023, 2024). They demonstrate contamination of the intended pre-decision information set, without measuring how much contamination changes a given prediction. Other field discrepancies may also reflect rounding, differing definitions or revisions; they should not all be classified as future-data leakage without source-level dating."
+    },
+    {
+      "type": "p",
+      "text": "For each member, the persona extractor counts handcrafted hawkish and dovish lexical cues, scales their difference by their combined count, and blends the resulting lexical score with a member-specific prior. Before rounding and clipping to the interval from minus one to one, the blend is given by Equation 1. The prior weight is 0.60 and the lexical weight is 0.40. Persona files also encode institutional role, stance bias and substantive emphasis. The prior is assigned by the implementation; there is no likelihood-based estimation or posterior uncertainty that would justify interpreting the blend as a fitted Bayesian model."
+    },
+    {
+      "type": "equation",
+      "id": "persona",
+      "number": 1,
+      "alt": "Member persona score equals 0.60 times the assigned prior plus 0.40 times the lexical score"
+    },
+    {
+      "type": "p",
+      "text": "The original extraction uses the full statement corpus. The personas used for the eight holdout meetings consequently incorporate statements from the evaluation period, including all eight evaluation statements for each continuing holdout member. The split is chronological in the evaluation table but not enforced in persona construction. Accordingly, the term nominal holdout is used throughout. A clean out-of-sample interpretation would require reconstruction of each persona from pre-cutoff statements and freezing of its lexical rules, priors and prompts before inspecting the test period."
+    },
+    {
+      "type": "h2",
+      "text": "3 3 Behavioral committee workflow"
+    },
+    {
+      "type": "p",
+      "text": "The intended behavioral protocol contains four rounds: initial policy assessment, response to peers, deliberation and a binding ballot. Each generated response is represented in a structured schema with a policy-rate preference, a stance preference and a rationale. The member order places the Governor last. The final ballots are aggregated separately for rate and stance, and the union of members dissenting on either output forms the original dissent prediction. Figure 1 shows the implemented information flow rather than assuming that the intended round labels describe the executed experiment."
+    },
+    {
+      "type": "figure",
+      "id": "architecture",
+      "caption": "Figure 1 Information flow in the original behavioral implementation",
+      "note": "Round 3 outputs are retained but are not inserted into the final-vote prompts. The Governor sees the five non-Governor final ballots and their rationale summaries. The synthetic staff information introduced after initial assessments is another input change, so round differences do not isolate peer persuasion."
+    },
+    {
+      "type": "p",
+      "text": "Inspection and controlled offline prompt probes show that final-vote prompts contain Round 1 and Round 2 material but omit Round 3 outputs. Replacing all Round 3 rate preferences with minus 50 or plus 50 basis points leaves the six final-vote prompts unchanged. The implemented final decision therefore cannot be causally attributed to exposure to that round. The five non-Governor ballots are generated in parallel; the Governor votes last with visibility of their binding votes and rationale summaries. Governor-last ordering and visibility are experimental assumptions whose effects must be tested, rather than explanations established by the observed outcomes."
+    },
+    {
+      "type": "p",
+      "text": "The later briefing introduces a synthetic staff inflation forecast calculated as 0.75 times current headline inflation plus one percentage point, and a growth quantity derived from supplied GVA growth and the output gap. These are generated modeling inputs rather than recovered confidential RBI forecasts. Their introduction is confounded with progression through the discussion. If later decisions differ from initial assessments, the difference may reflect additional synthetic information, visibility of peer material, Governor visibility of binding votes or fallback behavior. The original workflow does not separately identify these channels."
+    },
+    {
+      "type": "p",
+      "text": "The default rate menu is minus 50, minus 25, zero, plus 25 and plus 50 basis points. Some schemas additionally admit plus 35 and plus 40, but the default aggregation path does not. Consequently, two historical increases cannot be matched exactly by that path even if the underlying economic judgment is correct. The maximum full-panel exact accuracy on the default menu is 23 of 25, or 92.0%. This is a representational limitation, not evidence against the substantive possibility of simulating those decisions."
+    },
+    {
+      "type": "p",
+      "text": "The full 25-meeting behavioral results come from an offline mock or heuristic execution and are not interpreted as 25 language-model experiments. The eight saved provider-attributed meetings use a runner configured to request Gemini 3.1 Flash Lite at temperature 0.1 with one replicate per meeting. These runner overrides differ from global defaults of temperature 0.6 and three replicates. Saved outcomes and CSV rows agree, and the outcomes report zero fallbacks; however, they omit complete effective-model, seed, prompt-hash and input-hash linkage. The analysis reproduces saved results and does not claim a freshly authenticated live run."
+    },
+    {
+      "type": "h2",
+      "text": "3 4 Numerical reaction function comparator"
+    },
+    {
+      "type": "p",
+      "text": "The numerical track adapts a Taylor-style reaction function to member-specific coefficients and an external interest-rate term (Taylor, 1993). Equations 2 and 3 define the unsmoothed target and partial adjustment. Inflation, policy rates and the output gap enter in percentage units. In the equations, π denotes inflation, x the output gap and f the US policy rate; stars mark reference values, i indexes members and t indexes meetings. The equilibrium real-rate assumption is 1.4%, the inflation target is 4.0%, the external reference rate is 2.5% and the smoothing coefficient is 0.75. The member coefficients are listed in Appendix B. They are hardcoded assumptions in the original software, not estimates from a documented calibration objective."
+    },
+    {
+      "type": "equation",
+      "id": "taylor",
+      "number": 2,
+      "alt": "Unsmoothed member policy target equals assumed real rate plus inflation plus weighted inflation gap output gap and external interest-rate gap"
+    },
+    {
+      "type": "equation",
+      "id": "smooth",
+      "number": 3,
+      "alt": "Member policy rate equals rho times the previous policy rate plus one minus rho times the unsmoothed target"
+    },
+    {
+      "type": "p",
+      "text": "Each implied change is converted to basis points and quantized to the closest admitted rate action. A heuristic mapping produces a categorical stance from the rate vote and inflation relative to target. The Monte Carlo engine generates 1,000 draws per meeting with independent Gaussian perturbations of headline inflation, the output gap and the external rate. Their standard deviations are 0.20, 0.30 and 0.10 percentage points, respectively, with clipping to configured ranges. Member votes are aggregated through the same numerical rule engine, and modal committee decisions are retained."
+    },
+    {
+      "type": "p",
+      "text": "This comparator supplies a transparent conditional calculation, not a structural equilibrium model. Positive inflation responsiveness and a smoothing coefficient below one are properties of the reaction function. They do not establish rational expectations, equilibrium determinacy or welfare optimality. Monte Carlo convergence assesses integration under assumed perturbations; it does not validate the perturbation distribution or identify uncertainty in real policy preferences. A fair empirical comparison also requires attention to calibration, because an arbitrary smoothing parameter can materially change discrete forecast accuracy."
+    },
+    {
+      "type": "h2",
+      "text": "3 5 Outcomes baselines and sensitivity analysis"
+    },
+    {
+      "type": "p",
+      "text": "Exact rate accuracy records equality of predicted and observed basis-point changes. Directional accuracy compares the signs of those changes, treating zero as a separate hold category. Mean absolute error is measured in basis points, and stance accuracy compares categorical outputs. These metrics are reported separately: a near-magnitude error during an increase can fail exact accuracy while retaining correct direction. The meeting is the principal observational unit. Member ballots and generated model calls are nested within meetings and do not create additional independent policy episodes."
+    },
+    {
+      "type": "p",
+      "text": "For dissent, each meeting contains a predicted member set and an observed member set. True positives, false positives and false negatives are summed across meetings to calculate micro-averaged precision, recall and F1 as in Equation 4. Exact set agreement additionally requires the whole set to match. The original target is the union of rate and stance dissent as supplied in the processed panel. A sensitivity analysis uses the preserved reviewer's stricter formal-ballot interpretation, distinguishing a recorded vote against a resolution or an explicit alternative binding vote from a reservation or disagreement with guidance. The stricter annotations are a transparent sensitivity, not a separately collected consensus gold standard."
+    },
+    {
+      "type": "equation",
+      "id": "f1",
+      "number": 4,
+      "alt": "Micro averaged dissent F1 equals twice true positives divided by twice true positives plus false positives plus false negatives"
+    },
+    {
+      "type": "p",
+      "text": "Comparators include holding the current policy rate while carrying forward the previous stance, copying the previous observed rate change and dissent set, and a fixed frequent-member dissent prediction selected from calibration data. The lagged baseline uses prior observations rather than the current outcome; its first-row convention is retained from the audit. In the holdout period, a fixed Varma dissent set also provides a useful elementary comparison. These baselines reveal whether complexity contributes beyond policy persistence or repeated member behavior."
+    },
+    {
+      "type": "p",
+      "text": "Uncertainty is interpreted conservatively because the eight-meeting period is small and homogeneous. The exact two-sided 95% binomial interval for eight successes in eight trials is reported only as an independent-trial diagnostic. It does not correct contamination or temporal dependence. Paired rate comparison with persistence has no discordant observations, so it provides no evidence of improvement. The smoothing grid and ballot adjudication were examined during the retrospective audit; they are exploratory sensitivities and do not turn the inspected period into a new confirmatory test."
+    },
+    {
+      "type": "h2",
+      "text": "3 6 Counterfactuals ablations and software verification"
+    },
+    {
+      "type": "p",
+      "text": "The retained counterfactual analysis changes briefing inputs at two historical anchors: a monsoon and vegetable-price shock in August 2023 and a 75-basis-point US tightening shock in August 2022. Six saved ablations withhold selected member material, suppress the casting vote in tied and untied profiles, or mute food-inflation and monsoon information. They measure changes in the simulator's discrete outputs. They do not identify real-economy causal effects, and their interpretation requires that the intended intervention be isolated from other information changes."
+    },
+    {
+      "type": "p",
+      "text": "The audit separately tests program behavior through the existing unit suite, finite-profile voting checks, numerical finite differences, input negative controls and controlled prompt probes. These checks validate specified properties of the code and reveal counterexamples to stronger claims. They are not substitutes for a new historical or prospective experiment. In particular, generating figures from retained result tables is a reproducibility check on presentation and arithmetic, not a regeneration of the research experiment from an empty result directory."
+    },
+    {
+      "type": "h1",
+      "text": "4 Results"
+    },
+    {
+      "type": "h2",
+      "text": "4 1 Committee agreement and baseline performance"
+    },
+    {
+      "type": "p",
+      "text": "Table 2 reports recomputed committee-level performance. On the full 25-meeting panel, the offline behavioral track matches 19 rate changes exactly, giving 76.0% exact and directional accuracy with a 10.0-basis-point mean absolute error. Stance agreement is 76.0%. Holding the rate produces the same rate score and error, while carrying forward the previous stance achieves 96.0% stance agreement. Copying the preceding observed policy change yields 80.0% exact accuracy, 92.0% directional accuracy and a 4.0-basis-point mean absolute error. Thus the offline behavioral panel does not improve on the strongest simple comparator reported here."
+    },
+    {
+      "type": "table",
+      "id": "performance",
+      "caption": "Table 2 Recomputed committee outcome agreement",
+      "note": "Full-panel behavioral results are offline heuristic outputs. The eight saved provider-attributed results are a different execution track. Percentages use meeting counts. Rates are changes, and MAE is in basis points. The lag baseline carries forward the previous observed change and previous stance; it is not an instruction always to repeat the previous rate level."
+    },
+    {
+      "type": "p",
+      "text": "The configured Taylor comparator matches four of 25 rate changes exactly, or 16.0%, with directional accuracy of 28.0% and mean absolute error of 33.0 basis points. In the eight-meeting period its exact and directional accuracy are both 12.5%, with a 34.375-basis-point mean absolute error. This establishes poor performance of that configuration on this supplied panel. It does not establish that numerical policy rules generally underperform the language-model architecture, because neither the coefficients nor smoothing were fitted through a comparable documented procedure."
+    },
+    {
+      "type": "p",
+      "text": "The saved provider-attributed committee outcomes match all eight hold decisions and all eight stances, with zero rate error. Persistence also matches all eight on both dimensions. The paired improvement in rate accuracy is therefore zero percentage points, and the paired rate test has no discordant cases. Even under independent Bernoulli sampling, the exact 95% interval for eight of eight successes is approximately 63.1% to 100%; the temporal dependence and one-regime coverage further restrict generalization. A uniform five-action random predictor is not an informative primary baseline for this period."
+    },
+    {
+      "type": "figure",
+      "id": "performance_plot",
+      "caption": "Figure 2 Aggregate agreement and dissent sensitivity",
+      "note": "Panel A compares exact rate agreement within each execution track; it does not equate offline outputs with provider-attributed outputs. Panel B compares micro union-dissent F1 under original and stricter formal-ballot labels. The lagged-ballot comparator changes with the corresponding label convention."
+    },
+    {
+      "type": "h2",
+      "text": "4 2 Dissent predictions and annotation sensitivity"
+    },
+    {
+      "type": "p",
+      "text": "Against the original supplied labels, the eight saved provider-attributed outcomes have ten true positive dissent identifications, four false positives and no false negatives. Precision is 0.714, recall is 1.000 and F1 is 0.833. Complete dissent-set agreement occurs in four of eight meetings. The original-label lagged-ballot baseline has F1 of 0.947 and exact set agreement in seven of eight meetings; the fixed Varma set has F1 of 0.889 and exact set agreement in six of eight. The saved simulation therefore does not exceed these elementary dissent comparators."
+    },
+    {
+      "type": "table",
+      "id": "dissent",
+      "caption": "Table 3 Holdout dissent performance under alternative target definitions",
+      "note": "TP FP and FN count member identifications pooled across eight meetings. Union means rate or stance dissent. Formal-ballot labels exclude reservations without a recorded opposing ballot and separate guidance disagreement. They are reviewer adjudications preserved in the original version; a new independent annotation study was not performed."
+    },
+    {
+      "type": "p",
+      "text": "Under the stricter formal-ballot interpretation, the first four holdout meetings have no formal rate or stance dissenters, although reservations appear in member statements. Varma supplies formal dissent in February and April 2024, and Varma and Goyal in June and August. The simulation's union predictions produce six true positives and eight false positives, with no false negatives: precision falls to 0.429, F1 to 0.600 and exact set agreement to two of eight. The stricter lagged-ballot baseline retains F1 of 0.800 and exact set agreement in six of eight. Appendix A presents every meeting-level set used in this sensitivity."
+    },
+    {
+      "type": "p",
+      "text": "Rate-only predictions are more limited. The simulation identifies Varma as a rate dissenter in June and August 2024 but misses the four remaining formal rate-dissent member observations. Rate-dissent precision is 1.000, recall is 0.333 and F1 is 0.500. Most of the stronger union score therefore derives from stance predictions rather than accurate reproduction of the rate ballots. This difference shows why a union metric must be accompanied by dimension-specific results. Comparisons with a Taylor rate-dissent probability are not directly equivalent to comparisons with the behavioral union target."
+    },
+    {
+      "type": "h2",
+      "text": "4 3 Deliberative and comparator sensitivities"
+    },
+    {
+      "type": "p",
+      "text": "Aggregating the saved initial assessments already matches all eight committee rate and stance outcomes. Its original-label union-dissent F1 is 0.800, compared with 0.833 for final ballots. The aggregate agreement therefore does not require the later discussion in these saved cases. The small dissent difference is descriptive and does not isolate a mechanism, given changed information, Governor visibility of binding votes and the disconnected third round. Mean stance dispersion decreases from approximately 0.489 in the initial round to 0.435 in Round 3 but returns to approximately 0.489 for final ballots. The corresponding small-sample sign diagnostic for the interim reduction has p = 0.125."
+    },
+    {
+      "type": "p",
+      "text": "The numerical comparator is sensitive to policy inertia. In the preserved six-value smoothing grid, minimizing calibration-period rate error selects rho = 0.975. That exploratory configuration gives 87.5% holdout exact and directional agreement and a 3.125-basis-point mean absolute error, versus 12.5% and 34.375 basis points at the original rho = 0.75. Rho = 0.99 predicts all eight holds, though its calibration error is higher. Because the grid was chosen during retrospective inspection and retains the flawed macro panel, these results are not new validated forecasts. They show that the size of the original comparator gap depends materially on an unestimated assumption."
+    },
+    {
+      "type": "p",
+      "text": "The audit also reassesses persona validation. Perfect agreement with an assigned hawk-dove ranking is not independent behavioral evidence when the ranking and score incorporate researcher choices. Correlating hawk-dove scores with sign-reversed recorded dissent frequencies, preserving ties, gives a Spearman correlation of approximately 0.845 and an exact two-sided permutation p-value of 0.0667 across the six holdout members. Those frequencies themselves depend on disputed dissent definitions. The result supports neither a precise latent-preference estimate nor rejection of a null at a conventional 5% threshold."
+    },
+    {
+      "type": "h2",
+      "text": "4 4 Counterfactual responses and null ablations"
+    },
+    {
+      "type": "p",
+      "text": "The saved monsoon and vegetable-price scenario changes the behavioral decision from a hold to a 25-basis-point increase, while the numerical comparator remains at a 50-basis-point increase. Both retain withdrawal of accommodation. Under the external tightening scenario, both tracks remain at a 50-basis-point increase, producing a zero discrete rate response. Table 4 preserves these changes and all six ablation outcomes. Zero responses are scientifically relevant and should not be replaced by a general assertion that the model detects every macroeconomic channel."
+    },
+    {
+      "type": "table",
+      "id": "interventions",
+      "caption": "Table 4 Saved illustrative shocks and ablations",
+      "note": "All entries are changes in saved simulator outputs. The constructed tied profile changes stance but not the rate. Unchanged outputs may reflect aggregation thresholds or the upper rate-action bound; they do not by themselves establish that an underlying economic effect is absent."
+    },
+    {
+      "type": "p",
+      "text": "Neither member-material ablation changes the committee rate or stance. Muting food inflation or monsoon information also produces unchanged outcomes. Suppressing the casting vote in the untied baseline has no effect. In a manually constructed three-to-three tie, the saved rate remains a hold while stance changes from withdrawal of accommodation to neutral. This last example illustrates the effect of the implemented tie procedure on a constructed profile, rather than documenting a causal effect of the Governor during a historical meeting."
+    },
+    {
+      "type": "p",
+      "text": "Interpretation is further limited by intervention fidelity. The member ablation leaves other information channels, including final-ballot visibility, available; it is not a complete removal of that member's influence. The external-rate scenario also changes an unrelated growth field to missing, and baseline artifacts are not consistently protected from overwrite. With one anchor per shock, no independently authenticated provider repetitions and rate-menu saturation at plus 50 basis points, these illustrations cannot identify a robust response function or establish the welfare desirability of the chosen policy."
+    },
+    {
+      "type": "h2",
+      "text": "4 5 Engineering evidence and experimental limits"
+    },
+    {
+      "type": "p",
+      "text": "The preserved audit reports 28 passing tests in the existing pytest suite, 16 passing deep-battery assertions and 17 passing intensive-battery assertions. Exhaustive checks cover 15,625 admitted six-member rate profiles and 729 stance profiles. Across 75,000 adjacent rate-profile monotonicity comparisons, no violation of the implemented rule is found. Across 3,000 derivative comparisons at 1,000 Taylor parameter settings, numerical finite differences have a maximum gradient discrepancy of approximately 1.45 times ten to the minus ten. The saved 25-meeting, 1,000-draw numerical decisions are reproduced. These are useful correctness results under stated domains and assumptions."
+    },
+    {
+      "type": "p",
+      "text": "The same audit finds limitations that successful assertions do not resolve. Existing-suite statement coverage is approximately 64.1% and branch coverage 56.4%. Cache replay of a second nominal replicate can produce no new model draws. Budget-stop exceptions can be absorbed into fallback generation, and fallback responses can be recorded under requested rather than effective model identity. Controlled failures show that a cross-model script can label identical heuristic outputs as a pass even when neither provider succeeds. The previously retained unavailable-model result remains inconclusive. These negative controls limit claims of independent replication, verified model robustness and end-to-end live provenance."
+    },
+    {
+      "type": "h1",
+      "text": "5 Discussion"
+    },
+    {
+      "type": "h2",
+      "text": "5 1 What the original experiment establishes"
+    },
+    {
+      "type": "p",
+      "text": "The study demonstrates a feasible architecture for representing named committee members, organizing structured policy arguments and mapping individual outputs to an inspectable committee decision. Its archived transcripts and separate numerical comparator make several methodological questions observable that would be hidden in a single aggregate prompt. The saved outcomes can be reconciled with the published result rows, while explicit voting and Taylor calculations can be tested independently of language generation. These are meaningful foundations for a reproducible research program."
+    },
+    {
+      "type": "p",
+      "text": "The results also demonstrate why aggregate imitation should not be conflated with incremental forecasting. A homogeneous run of eight unchanged decisions permits a persistence classifier to achieve perfect agreement. On the broader panel, simple lagged policy behavior improves on the saved heuristic results. Dissent evaluation is more discriminating, yet its score is sensitive to whether a reservation is coded as an opposing ballot and whether rate and stance are pooled. Preserving both definitions prevents an attractive summary statistic from becoming a claim about a different target."
+    },
+    {
+      "type": "p",
+      "text": "The original protocol provides no identified estimate of the benefit of deliberation. Initial aggregation already reproduces the eight aggregate outcomes, and the intended deliberation round does not reach final-vote prompts. The small difference in dissent F1 cannot distinguish peer persuasion from synthetic information, order effects or repeated-member priors. This is an architectural and experimental limitation, rather than evidence that deliberation is unimportant in the real committee. A negative finding about one implementation must not be generalized into a theory of monetary policy decision-making."
+    },
+    {
+      "type": "h2",
+      "text": "5 2 Threats to validity"
+    },
+    {
+      "type": "p",
+      "text": "Internal validity is affected by full-corpus persona construction, post-decision observations and intervention contamination. Construct validity is affected by the difference between formal votes, reservations and guidance disagreements, and by action menus that cannot express every historical change. Comparator validity is affected by hardcoded Taylor coefficients and an unestimated smoothing parameter. Execution validity is affected by incomplete linkage between saved outcomes and effective provider calls, cache identity and fallback behavior. Each limitation applies to a different inferential step; passing a numerical test does not remove a data-timing defect, and correcting a ballot label does not authenticate a provider execution."
+    },
+    {
+      "type": "p",
+      "text": "External validity is particularly restricted. The sample contains no cuts, the nominal test contains no rate transition or stance transition, and the modeled roster is narrow. Historical named-member prompts may invoke information acquired during model pretraining. Memorization is plausible but is not demonstrated by the retained evidence, and unknown training cutoffs prevent its exclusion. Repeated seeds would measure within-meeting generation variability; they would not supply additional independent regimes or erase exposure to the historical record. Neither results nor failure rates are available for a genuinely prospective panel in this original version."
+    },
+    {
+      "type": "p",
+      "text": "Policy usefulness requires an additional distinction between predicting what a committee did and selecting a socially desirable policy. The numerical track is not a closed-loop macroeconomic model, and the behavioral track supplies no identified welfare criterion. Smaller simulated policy changes or greater conversational consensus can coexist with poor stabilization. The present counterfactuals consequently support only conditional statements about this simulator's saved outputs. They should not be used as estimates of RBI policy effects or recommendations for live monetary-policy decisions."
+    },
+    {
+      "type": "h2",
+      "text": "5 3 A testable research agenda"
+    },
+    {
+      "type": "p",
+      "text": "A stronger study would begin with a release-vintage information ledger. Every observation would carry its reference period, release time, source and revision status, and every derived gap would have a reproducible estimation procedure using only available data. Official decisions and member ballots would be independently annotated with separate fields for rate, stance, reservations and guidance. Disagreements between annotators would be adjudicated with source excerpts and an immutable label history. This would convert the intended historical information set and target construct into auditable objects."
+    },
+    {
+      "type": "p",
+      "text": "Persona construction, numerical calibration, prompts and model-selection decisions would then be frozen before a fresh chronological test spanning actual policy transitions. Comparisons should include persistence, lagged ballots, calibrated reaction functions, generic personas and independent-agent aggregation. A controlled factorial design could vary peer-message visibility, staff information and order while holding the other channels constant. Final ballots should consume the intended discussion, and paired intervention runs should preserve all nonspecified inputs. A deliberation effect would then be measured as an incremental outcome relative to an explicitly comparable no-peer condition."
+    },
+    {
+      "type": "p",
+      "text": "Execution records should connect every outcome to immutable inputs, full prompts, effective provider and model, decoding settings, seed, cache status, fallback status and cost. Distinct stochastic replicates should produce distinct calls when new generation is intended, and failed or unavailable models should remain failures rather than be pooled with successful outputs. Meeting-level uncertainty and null findings should accompany every primary comparison. These requirements define future tests; no corrected performance gain is assumed in advance, and the inspected eight-meeting period should be treated as development evidence for subsequent designs."
+    },
+    {
+      "type": "h1",
+      "text": "6 Conclusion"
+    },
+    {
+      "type": "p",
+      "text": "RBI MPC In Silico combines member-specific textual representations, staged interaction, explicit committee aggregation and a transparent numerical policy-rule comparator. The original saved eight-meeting run reproduces committee rate and stance decisions, but persistence does equally well. Dissent performance is lower than simple lagged ballots and changes materially under a formal-ballot definition. The predominantly null intervention outputs and disconnected deliberation round do not establish a persuasion mechanism. The project is therefore best supported as an auditable retrospective prototype whose validation reveals both useful engineering foundations and unresolved experimental threats. A claim of incremental forecasting, deliberative validity or policy superiority requires a new frozen evaluation with real-time data, explicit ballot targets, strong baselines and authenticated execution evidence."
+    },
+    {
+      "type": "h1",
+      "text": "Data and Code Availability"
+    },
+    {
+      "type": "p",
+      "text": "The frozen source version is commit 7f2436bc4f32d6021b1e885eb49286c850de9139 in lifemeansfun/RBI_MPC_in_Silico. At manuscript preparation the repository is private; the manuscript therefore does not claim unrestricted public code access. Original institutional minute records are public RBI releases, with their individual URLs retained in data/raw/manifest.csv. Raw extracts, original results, review annotations, numerical sensitivities and audit logs are retained in the source version. No new paid provider execution or prospective evaluation was performed for this manuscript. Appendix C maps the main reported quantities to their retained artifacts and gives the offline audit command."
+    },
+    {
+      "type": "h1",
+      "text": "References"
+    },
+    {
+      "type": "references"
+    },
+    {
+      "type": "h1",
+      "text": "Appendix A Meeting Level Ballot Sensitivity"
+    },
+    {
+      "type": "p",
+      "text": "All eight committee rate decisions below are holds and all committee stances are withdrawal of accommodation. V denotes Jayanth R. Varma, G denotes Ashima Goyal and None denotes an empty dissent set. The formal column is the union of opposing rate and stance ballots under the preserved reviewer interpretation. Reservations and guidance disagreement remain distinct statuses rather than being assigned an unrecorded opposing vote."
+    },
+    {
+      "type": "table",
+      "id": "meetings",
+      "caption": "Table A1 Saved predictions and alternative observed dissent sets",
+      "note": "In February and April 2024 the formal rate and stance dissenter is Varma; in June and August both Varma and Goyal dissent on those dimensions. The saved rate predictions identify only Varma in the final two meetings. These distinctions produce Table 3's pooled counts."
+    },
+    {
+      "type": "h1",
+      "text": "Appendix B Reaction Function Assumptions"
+    },
+    {
+      "type": "p",
+      "text": "Table B1 records the member coefficients hardcoded in the original reaction-function panel. Saggar is used for the earlier roster and Ranjan for its successor. These values encode assumed heterogeneity; they are not estimated behavioral parameters. Shared settings are real rate 1.4%, inflation target 4.0%, external reference rate 2.5%, smoothing rho 0.75 and 1,000 Monte Carlo draws per meeting. The macro perturbation standard deviations are 0.20, 0.30 and 0.10 percentage points for inflation, output gap and the external interest rate."
+    },
+    {
+      "type": "table",
+      "id": "coefficients",
+      "caption": "Table B1 Assumed member reaction coefficients",
+      "note": "Alpha multiplies the inflation gap in addition to the unit coefficient on inflation; beta multiplies the output gap; gamma multiplies the external interest-rate gap. The total unsmoothed derivative with respect to inflation is therefore one plus alpha."
+    },
+    {
+      "type": "h1",
+      "text": "Appendix C Reproducibility and Evidence Map"
+    },
+    {
+      "type": "p",
+      "text": "The retained independent audit ran on macOS arm64 with Python 3.11.16, NumPy 2.4.6, pandas 3.0.5 and SciPy 1.17.1. Its logs and hashes describe that execution environment; the present document's arithmetic checks read the frozen CSV and JSON artifacts without issuing provider calls. The original environment specification and dependency files remain with the source. A new offline audit can be invoked from that version with the following command, choosing an unused output directory because the runner protects existing audit results."
+    },
+    {
+      "type": "code",
+      "text": ".venv/bin/python scripts/audit_methodology.py --output results/methodology_audit_new"
+    },
+    {
+      "type": "p",
+      "text": "The command is an offline audit of the original implementation and retained artifacts; it is not a fresh provider-backed reproduction. Authenticating the saved historical calls would additionally require their input-to-prompt-to-effective-model linkage. The evidence map below makes the scope of each reported result explicit."
+    },
+    {
+      "type": "table",
+      "id": "evidence",
+      "caption": "Table C1 Retained evidence for the main analyses",
+      "note": "Paths are relative to the frozen project root. Sensitivity artifacts coexist with the original data; their presence does not mean that the original execution used corrected labels or a repaired information set."
+    }
+  ],
+  "references": [
+    {
+      "key": "Argyle et al., 2023",
+      "text": "Argyle, L. P., Busby, E. C., Fulda, N., Gubler, J. R., Rytting, C., and Wingate, D. (2023). Out of one, many: Using language models to simulate human samples. Political Analysis, 31, 337–351.",
+      "url": "https://doi.org/10.1017/pan.2023.2"
+    },
+    {
+      "key": "Baerg and Lowe, 2020",
+      "text": "Baerg, N., and Lowe, W. (2020). A textual Taylor rule: Estimating central bank preferences combining topic and scaling methods. Political Science Research and Methods, 8(1), 106–122.",
+      "url": "https://doi.org/10.1017/psrm.2018.31"
+    },
+    {
+      "key": "Blinder, 2007",
+      "text": "Blinder, A. S. (2007). Monetary policy by committee: Why and how? European Journal of Political Economy, 23(1), 106–123.",
+      "url": "https://www.princeton.edu/~blinder/articles.htm"
+    },
+    {
+      "key": "Government of India, 1934",
+      "text": "Government of India. (1934). The Reserve Bank of India Act, 1934. Consolidated text, Sections 45ZI and 45ZL.",
+      "url": "https://financialservices.gov.in/sites/default/files/Act-Policies/2026-01/The-Reserve-Bank-of-India-Act--1934.pdf"
+    },
+    {
+      "key": "Horton et al., 2023",
+      "text": "Horton, J. J., Filippas, A., and Manning, B. S. (2023, revised February 2026). Large language models as simulated economic agents: What can we learn from Homo Silicus? NBER Working Paper 31122.",
+      "url": "https://doi.org/10.3386/w31122"
+    },
+    {
+      "key": "Kazinnik and Sinclair, 2025",
+      "text": "Kazinnik, S., and Sinclair, T. M. (2025, revised 12 July 2026). FOMC In Silico: A multi-agent system for monetary policy decision modeling. SSRN working paper 5424097.",
+      "url": "https://doi.org/10.2139/ssrn.5424097"
+    },
+    {
+      "key": "MoSPI, 2023",
+      "text": "Ministry of Statistics and Programme Implementation. (2023). Consumer Price Index numbers on base 2012=100 for rural, urban and combined for the month of July 2023. Press release, 14 August, 17:30 IST.",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1948574&lang=2&reg=48"
+    },
+    {
+      "key": "MoSPI, 2024",
+      "text": "Ministry of Statistics and Programme Implementation. (2024). Consumer Price Index numbers on base 2012=100 for rural, urban and combined for the month of July 2024. Press release, 12 August, 17:30 IST.",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2044604&lang=2&reg=48"
+    },
+    {
+      "key": "Orphanides, 1998",
+      "text": "Orphanides, A. (1998). Monetary policy rules based on real-time data. Finance and Economics Discussion Series, Board of Governors of the Federal Reserve System, January.",
+      "url": "https://www.federalreserve.gov/econres/feds/monetary-policy-rules-based-on-real-time-data.htm"
+    },
+    {
+      "key": "Park et al., 2023",
+      "text": "Park, J. S., O’Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., and Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. arXiv 2304.03442, version 2.",
+      "url": "https://doi.org/10.48550/arXiv.2304.03442"
+    },
+    {
+      "key": "RBI, 2020–2024",
+      "text": "Reserve Bank of India. (2020–2024). Minutes of the Monetary Policy Committee. Corpus of 25 releases from October 2020 to August 2024; individual source links are recorded in the study manifest. Representative source: minutes of the June 2023 meeting.",
+      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55899"
+    },
+    {
+      "key": "Riboni and Ruge-Murcia, 2010",
+      "text": "Riboni, A., and Ruge-Murcia, F. J. (2010). Monetary policy by committee: Consensus, chairman dominance, or simple majority? Quarterly Journal of Economics, 125(1), 363–416.",
+      "url": "https://doi.org/10.1162/qjec.2010.125.1.363"
+    },
+    {
+      "key": "Seok et al., 2024",
+      "text": "Seok, S., Wen, S., Yang, Q., Feng, J., and Yang, W. (2024). MiniFed: Integrating LLM-based agentic-workflow for simulating FOMC meeting. arXiv 2410.18012, version 2.",
+      "url": "https://doi.org/10.48550/arXiv.2410.18012"
+    },
+    {
+      "key": "Taylor, 1993",
+      "text": "Taylor, J. B. (1993). Discretion versus policy rules in practice. Carnegie-Rochester Conference Series on Public Policy, 39, 195–214.",
+      "url": "https://doi.org/10.1016/0167-2231(93)90009-L"
+    }
+  ]
+}

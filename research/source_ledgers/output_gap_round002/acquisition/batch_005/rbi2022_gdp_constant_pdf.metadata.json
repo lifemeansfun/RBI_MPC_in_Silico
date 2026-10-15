@@ -1,0 +1,25 @@
+{
+  "id": "rbi2022_gdp_constant_pdf",
+  "url": "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/156T_15092022EB54A70BC79E461388C3FE67F44C36D3.PDF",
+  "filename": "rbi2022_gdp_constant.pdf",
+  "role": "Published quarterly constant-price GDP history in 2022 RBI Handbook",
+  "discovery": "Exact link in retained official rbi2022_index.html table row: Table 156 : Quarterly Estimates of Gross Domestic Product (At Constant Prices) New Series (Base : 2011-12) 10 kb 125 kb",
+  "retrieved_at_utc": "2026-10-09T16:20:47.606241+00:00",
+  "status": 200,
+  "final_url": "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/156T_15092022EB54A70BC79E461388C3FE67F44C36D3.PDF",
+  "response_headers": {
+    "Set-Cookie": "TSa07da9d1029=08c70ea5e1ab280020b810da4644c938b6c77e7925ff946fa7bea8d2b14c2fc4da95c4bf87ff9b1880a5bf68f38d4930; Secure; Max-Age=30; Path=/",
+    "Cache-Control": "no-store, must-revalidate, no-cache, max-age=0",
+    "Content-Type": "text/html",
+    "Content-Length": "45261",
+    "Connection": "close",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "local_file": "acquisition/batch_005/raw/rbi2022_gdp_constant.pdf",
+  "bytes": 45261,
+  "sha256": "7692b7a4b423c255b56889299f7524801f89dc442711232274107824c00627fd",
+  "primary_final_host": true,
+  "acquired": true
+}

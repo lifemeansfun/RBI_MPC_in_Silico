@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 80,
+  "quoted_excerpts_verified": 243,
+  "action_distribution": {
+    "hold": 8,
+    "cut": 4,
+    "increase": 1
+  }
+}

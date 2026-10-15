@@ -8,6 +8,9 @@ trimming of administrative boilerplate/signatures).
 
 import re
 import logging
+import hashlib
+import json
+from datetime import date, datetime
 from pathlib import Path
 from typing import Optional
 from bs4 import BeautifulSoup
@@ -66,29 +69,56 @@ class StatementExtractor:
     """Extracts, cleans, and defensively validates individual member statements from minutes HTML."""
 
     def __init__(self, processed_dir: Optional[Path] = None):
-        self.processed_dir = processed_dir or (PROJECT_ROOT / "data" / "processed" / "statements")
+        self.processed_dir = processed_dir or (PROJECT_ROOT / "data" / "processed" / "statements_v2")
         self.processed_dir.mkdir(parents=True, exist_ok=True)
 
     @staticmethod
     def extract_meeting_date(soup: BeautifulSoup, default_date: str = "unknown") -> str:
         """Parses meeting end-date from title or text (e.g. 'August 8 to 10, 2023' -> 2023-08-10)."""
-        text = soup.get_text()
-        months = {
-            "january": "01", "february": "02", "march": "03", "april": "04",
-            "may": "05", "june": "06", "july": "07", "august": "08",
-            "september": "09", "october": "10", "november": "11", "december": "12"
-        }
+        return StatementExtractor.extract_meeting_metadata(soup)["decision_date"]
 
-        # Match 'Month Day to Day, Year' or 'Month Day-Day, Year' or 'Month Day, Year'
-        pattern = r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:\s*(?:to|-)\s*(\d{1,2}))?,?\s+(\d{4})"
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            month_str = match.group(1).lower()
-            end_day = match.group(3) or match.group(2)
-            year = match.group(4)
-            return f"{year}-{months[month_str]}-{int(end_day):02d}"
+    @staticmethod
+    def extract_meeting_metadata(soup: BeautifulSoup) -> dict:
+        """Parse the meeting title and publication header independently.
 
-        return default_date
+        No full-document date search may accidentally use the later press-release date.
+        """
+        months = {name.lower(): n for n, name in enumerate(
+            ("January", "February", "March", "April", "May", "June", "July", "August",
+             "September", "October", "November", "December"), 1)}
+        titles = set()
+        for node in soup.find_all(["strong", "b", "p", "td"]):
+            text = " ".join(node.get_text(" ", strip=True).split())
+            if text.startswith("Minutes of the Monetary Policy Committee Meeting") and len(text) < 180:
+                titles.add(text)
+        if len(titles) != 1:
+            raise ValueError("Expected one unambiguous MPC meeting title")
+        title = titles.pop()
+        pattern = r"(" + "|".join(months) + r")\s+([\d\s,\-–andto]+),\s*(\d{4})$"
+        match = re.search(pattern, title, re.IGNORECASE)
+        if not match:
+            raise ValueError(f"Unrecognized meeting title: {title}")
+        days = [int(x) for x in re.findall(r"\d+", match.group(2))]
+        year, month = int(match.group(3)), months[match.group(1).lower()]
+        start, decision = date(year, month, min(days)), date(year, month, max(days))
+        text = " ".join(soup.get_text(" ", strip=True).split())
+        header = text[:text.index(title)]
+        published = re.findall(r"Date\s*:\s*([A-Za-z]+\s+\d{1,2},\s*\d{4})", header)
+        if len(published) != 1:
+            raise ValueError("Missing or ambiguous minutes publication header")
+        for fmt in ("%b %d, %Y", "%B %d, %Y"):
+            try:
+                publication = datetime.strptime(published[0], fmt).date()
+                break
+            except ValueError:
+                continue
+        else:
+            raise ValueError("Unrecognized publication date")
+        if publication < decision:
+            raise ValueError("Minutes publication predates decision")
+        return {"title": title, "meeting_start_date": start.isoformat(),
+                "decision_date": decision.isoformat(), "publication_date": publication.isoformat(),
+                "availability_basis": "RBI press-release header date; conservatively available after that day"}
 
     def process_html_file(self, html_path: Path) -> dict[str, str]:
         """
@@ -103,7 +133,8 @@ class StatementExtractor:
             return {}
 
         soup = BeautifulSoup(content, "html.parser")
-        meeting_date = self.extract_meeting_date(soup, default_date=html_path.stem)
+        metadata = self.extract_meeting_metadata(soup)
+        meeting_date = metadata["decision_date"]
         full_text = soup.get_text()
 
         # Locate all member heading occurrences
@@ -156,20 +187,30 @@ class StatementExtractor:
 
         # Defensive validation: check if exactly 6 members are present
         if len(extracted_statements) != 6:
-            logger.warning(
-                "Meeting %s extracted %d statements (expected 6): %s",
-                meeting_date, len(extracted_statements), list(extracted_statements.keys())
-            )
+            raise ValueError(f"Meeting {meeting_date} has {len(extracted_statements)} statements, expected 6")
 
         # Persist extracted statements atomically
         date_dir = self.processed_dir / meeting_date
         date_dir.mkdir(parents=True, exist_ok=True)
         for member_id, stmt in extracted_statements.items():
             file_path = date_dir / f"{member_id}.txt"
-            temp_path = date_dir / f".{member_id}.txt.tmp"
-            with open(temp_path, "w", encoding="utf-8") as f:
-                f.write(stmt)
-            temp_path.replace(file_path)
+            payload = stmt.encode("utf-8")
+            if file_path.exists() and file_path.read_bytes() != payload:
+                raise FileExistsError(f"Refusing to overwrite a different statement: {file_path}")
+            if not file_path.exists():
+                with file_path.open("xb") as f:
+                    f.write(payload)
+        metadata.update({"source_file": str(html_path.resolve().relative_to(PROJECT_ROOT)),
+                         "source_sha256": hashlib.sha256(html_path.read_bytes()).hexdigest(),
+                         "statement_sha256": {m: hashlib.sha256(s.encode()).hexdigest()
+                                               for m, s in extracted_statements.items()}})
+        meta_path = date_dir / "source_manifest.json"
+        payload = (json.dumps(metadata, sort_keys=True, indent=2) + "\n").encode()
+        if meta_path.exists() and meta_path.read_bytes() != payload:
+            raise FileExistsError(f"Conflicting statement metadata: {meta_path}")
+        if not meta_path.exists():
+            with meta_path.open("xb") as f:
+                f.write(payload)
 
         print(f"[+] Processed {html_path.name} -> Meeting Date: {meeting_date} | Extracted: {len(extracted_statements)}/6 statements.")
         return extracted_statements

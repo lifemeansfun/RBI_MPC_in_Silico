@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "counts": {
+    "meetings": 13,
+    "member_meetings": 78,
+    "literal_rate_ballots_observed": 72,
+    "literal_no_rate_ballots": 3,
+    "exact_rate_choice_disagreements": 4,
+    "formal_stance_votes_observed": 20,
+    "formal_stance_votes_observed_strict_sensitivity": 18,
+    "formal_stance_meetings_with_all_six_observed": 3,
+    "stance_menu_not_supported_by_current_simulator": [
+      "calibrated_tightening"
+    ],
+    "rate_direction_counts": {
+      "hold": 8,
+      "cut": 4,
+      "hike": 1
+    }
+  },
+  "provenance": {
+    "collector_annotation_sha256": "2ad73cc76bf7975e9dd3fe29d3347e789c421a396fbd25207ea58ecd502e1c38",
+    "independent_annotation_sha256": "3d63ace293a5cf105071d10ab2740c53738ac322fa5c04a2277d7bdf1e16b997",
+    "source_catalog_sha256": "722f29fa5c01c122e6df3511d2e6b894fddb58fac2fc90145ce5a36b9f8ff86e",
+    "generator_sha256": "c9f99fa4c690b4ced36e72e8ab37b30fbfd6ef164e2f4812ff73abf81fd21e72",
+    "same_primary_source_hashes_checked": 25,
+    "exact_independent_raw_fragments_rechecked": 386
+  },
+  "empirical_model_validation": false,
+  "live_model_calls": 0
+}

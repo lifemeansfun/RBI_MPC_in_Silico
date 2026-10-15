@@ -1,0 +1,9 @@
+2026-10-10T03:25:23.323096Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=filesystem backend=seatbelt reason=operation_not_permitted path=unknown
+2026-10-10T03:25:23.363123Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=filesystem backend=seatbelt reason=operation_not_permitted path=unknown
+2026-10-10T03:25:23.398291Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=filesystem backend=seatbelt reason=operation_not_permitted path=unknown
+2026-10-10T03:26:13.358585Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=filesystem backend=seatbelt reason=failed_to_write_file path=unknown
+2026-10-10T03:26:13.367968Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0 seconds
+Output:
+Failed to write file /var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-final-critique-20261010-kpvt9449/output/context_declaration.json
+

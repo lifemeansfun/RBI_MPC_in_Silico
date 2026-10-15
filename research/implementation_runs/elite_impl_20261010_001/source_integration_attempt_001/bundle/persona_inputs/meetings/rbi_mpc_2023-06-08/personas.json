@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": 0.30755711775043937,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"To arrive at a voting decision I take up issues of global risks facing the economy, factors determining its expected inflation path and growth recovery, as well as the type and the impact of guidance.32.\" (2022-02-10)",
+      "\"The global slowdown is turning out to be less severe than expected but there are signs of a slowing in both growth and inflation suggesting central banks (CBs) tightening is adequate and lagged effects will bring about the required further fall in inflation.\" (2023-04-06)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": 0.26851851851851855,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"As the third Covid-19 wave peters out in India, the time has come to think of the objectives of monetary policy in much broader terms than “mitigate the impact of COVID-19 on the economy”.\" (2022-02-10)",
+      "\"The first risk emanates from the announcement of an output cut by OPEC+ during the weekend just before the MPC meeting.\" (2023-04-06)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": 0.4574468085106383,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"In corroboration, the UNCTAD nowcasts merchandise trade volume to have picked up pace in the last quarter of 2021 from the quarter before.\" (2022-02-10)",
+      "\"Hence, inflation remains elevated and generalised; and, as I stated at the time of the MPC’s February 2023 meeting, it is the biggest risk to the outlook for the Indian economy.\" (2023-04-06)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": 0.5430711610486891,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"Central banks across the globe continue their fight against inflation this year with more than a dozen central banks hiking rates by 75 bps or even more in one go.\" (2022-09-30)",
+      "\"Let me begin from where I ended my last minutes of February 2023: “Going ahead, assessment of the impact of the cumulative rate hikes will become important especially in view of higher policy transmission in a primarily bank-based economy”.\" (2023-04-06)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": 0.29559748427672955,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"This has impelled some central banks to embark on aggressive policy tightening to quell inflation risks, while a few others, mostly emerging market economies (EMEs), continue to maintain accommodative policies.\" (2022-02-10)",
+      "\"While issues of geopolitics and high inflation continue to impact the outlook, the emergence of banking sector turmoil on both sides of the Atlantic and the sudden announcement of oil production cut by the OPEC+ countries have rendered the global outlook even more uncertain.\" (2023-04-06)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2023-06-06",
+    "corpus_manifest_hash": "92451b125d4b23868999a50b101aba0222ea02a53263711bf4bdbf0fc5f9eb4e",
+    "hawk_dove_score": -0.012755102040816327,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The First Advance Estimates (FAE) released by NSO place the GDP growth in 2021-22 at 9.2 per cent over the previous year, lower than the projected 9.5 per cent in the December MPC statement.\" (2022-02-10)",
+      "\"The Second Advance Estimates (SAE) of the National Income for FY 2022-23 released by the National Statistical Office have retained the overall YOY growth of GDP at constant prices at 7 per cent as provided in the First Advance Estimates (FAE) published on January 6, 2023.\" (2023-04-06)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2023-04-06; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

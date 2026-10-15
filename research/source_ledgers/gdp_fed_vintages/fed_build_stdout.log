@@ -1,0 +1,11 @@
+{
+  "meeting_count": 25,
+  "dated_fed_directives": 33,
+  "legacy_macro_panel_sha256": "9824467d54e139e3a7a48dc18e8107186c454ea14110136c21897307dd2940eb",
+  "cpi_meeting_ledger_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c",
+  "meeting_fed_ledger_sha256": "192a3dca7ba73732c681ea2786e085e9b8e98e209afe90eaf106d2aaaebe1eb9",
+  "all_release_and_effective_dates_before_cutoffs": true,
+  "successor_effective_dates_after_meeting_starts": true,
+  "effective_date_precision": "Calendar date only; exact implementation instant not assumed",
+  "field_semantics": "Target upper bound is not the effective federal funds rate or range midpoint"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdp_20210226",
+  "url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20SAE%2026-02-2021.pdf",
+  "role": "gdp_release_pdf",
+  "format": "pdf",
+  "release_date": "2021-02-26",
+  "reference_period": "FY2020-21Q3",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:12.955798+00:00",
+  "status_code": 200,
+  "final_url": "https://www.mospi.gov.in/sites/default/files/press_release/PRESS%20NOTE%20SAE%2026-02-2021.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:57:25 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "735193",
+    "Connection": "keep-alive",
+    "Last-Modified": "Fri, 26 Feb 2021 12:05:42 GMT",
+    "ETag": "\"6038e416-b37d9\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:57:25 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 735193,
+  "acquired": true,
+  "local_file": "raw/gdp_20210226.pdf",
+  "sha256": "182bf27eb37fdc5c8b33a3f516b46a14de33cebd50c7d46f168c65cafdda91cf"
+}

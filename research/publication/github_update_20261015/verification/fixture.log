@@ -1,0 +1,6 @@
+.venv/bin/python -m src.backtest.run_frozen_study --create-fixture --output-root "/private/tmp/rbi_publish_20261015_c7xt8emf/fixture"
+{
+  "actual_generation_calls": 0,
+  "evidence_type": "engineering_fixture",
+  "protocol": "/private/tmp/rbi_publish_20261015_c7xt8emf/fixture/protocol.json"
+}

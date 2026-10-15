@@ -1,0 +1,427 @@
+project:
+  name: "RBI_MPC_In_Silico"
+  version: "3.0.0-research-upgrade"
+
+run:
+  provider: "gemini"                      # "gemini" | "openai" | "anthropic" | "ollama" | "mock"
+  dev_model: "gemini-3.1-flash-lite"
+  final_model: "gemini-3.1-flash-lite"
+  fallback_models: []                    # A different model is a separately frozen condition
+  rate_limit_rpm: 5                       # Google AI Studio Free Tier limit is 5 RPM
+  budget_usd_cap: 25.0
+  temperature: 0.6
+  n_replicates: 3
+  seed_base: 42
+  use_cache: true
+  cache_dir: ".cache/llm_cache.sqlite"
+  max_output_tokens: 2048
+  request_timeout_seconds: 60
+  model_epoch: "2026-10-05-standard-api"
+  budget_ledger_path: ".cache/research_v3_budget.sqlite"
+
+decision_space:
+  action_set_bps: [-50, -25, 0, 25, 35, 40, 50]
+  simulate_stance: true
+  stance_set: ["withdrawal_of_accommodation", "neutral", "accommodative"]
+
+panels:
+  primary_roster: "2020_2024"
+  primary_panel_start: "2020-10-01"
+  primary_panel_end: "2024-08-31"
+  calibration_holdout_split: 0.68         # Explicit historical split: 17 calibration / 8 exposed retrospective evaluation
+  forward_test_panel_start: "2024-10-01"
+  forward_test_panel_end: "latest"
+
+taylor_rule:
+  r_star_pct: 1.4
+  pi_star_pct: 4.0
+  hp_filter_lambda: 14400                 # Ravn-Uhlig monthly parameter
+  smoothing_rho: 0.75                     # Interest rate inertia
+  default_alpha: 1.5
+  default_beta: 0.5
+  default_gamma: 0.2                      # Open-economy US Fed Funds sensitivity
+  us_neutral_rate_pct: 2.5
+
+monte_carlo:
+  n_draws: 1000
+  macro_noise_std_pct: 0.20
+
+validation:
+  # Descriptive channel thresholds; empirical readiness requires separate evidence.
+  directional_accuracy_threshold: 0.75
+  stance_accuracy_threshold: 0.70
+  dissent_f1_threshold: 0.50
+  exact_rate_accuracy_threshold: 0.75
+  rate_dissent_f1_threshold: 0.50
+  stance_dissent_f1_threshold: 0.50
+
+debate_protocol:
+  rounds: 4                               # 1: Stance, 2: Rebuttal, 3: Deliberation, 4: Binding Vote
+  order_mode: "fixed_governor_last"
+  cross_visibility: true
+{
+  "configured_ledger": ".cache/research_v3_budget.sqlite",
+  "configured_ledger_exists": false,
+  "initialization_marker_exists": false,
+  "cache_schema": [
+    {
+      "name": "response_cache",
+      "sql": "CREATE TABLE response_cache (\n                    cache_key TEXT PRIMARY KEY,\n                    provider TEXT NOT NULL,\n                    model TEXT NOT NULL,\n                    system_prompt TEXT,\n                    user_prompt TEXT NOT NULL,\n                    temperature REAL,\n                    seed INTEGER,\n                    response_text TEXT NOT NULL,\n                    input_tokens INTEGER,\n                    output_tokens INTEGER,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                )"
+    },
+    {
+      "name": "response_cache_v2",
+      "sql": "CREATE TABLE response_cache_v2 (\n                    cache_key TEXT PRIMARY KEY, payload_json TEXT NOT NULL,\n                    payload_hash TEXT NOT NULL, created_at TEXT DEFAULT CURRENT_TIMESTAMP\n                )"
+    }
+  ],
+  "checked_utc": "2026-10-10T02:40:23.332896+00:00",
+  "remaining_allowance_usd": null,
+  "reason": "Configured durable spending ledger and marker absent; cache is not billing evidence. No fresh spending ledger may reset accounting.",
+  "cache_rows_response_cache": 1132,
+  "cache_rows_response_cache_v2": 72
+}
+"""Build portable, immutable retrospective roster and rolling-persona packets.
+
+No model call, outcome-dependent fit, retrospective biography, or silent ontology
+mapping occurs here.  Realized attendance remains an explicitly oracle input.
+"""
+from __future__ import annotations
+
+import argparse
+import ast
+import hashlib
+import json
+import platform
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+
+from bs4 import BeautifulSoup
+
+from src.schemas.temporal_panel_schema import (
+    DatedSourceRef, PersonalStatementRef, RollingPersonaPacket, TemporalMeetingRoster,
+    TemporalMember, SOURCE_STANCE_ACTIONS_V2,
+)
+
+ROOT = Path(__file__).resolve().parents[2]
+EXPANDED = Path("research/source_ledgers/expanded_panel_oct08")
+ORIGINAL = Path("data/processed/statements_v2")
+ALIAS = {"michael_patra": "michael_debabrata_patra"}
+# Names/roles below are verified against each attendance paragraph and personal
+# heading before use; these are identifiers, not fitted policy personalities.
+MEMBERS = {
+    "shashanka_bhide": ("Shashanka Bhide", "External Member"),
+    "ashima_goyal": ("Ashima Goyal", "External Member"),
+    "jayanth_varma": ("Jayanth R. Varma", "External Member"),
+    "mridul_saggar": ("Mridul K. Saggar", "Executive Director"),
+    "michael_debabrata_patra": ("Michael Debabrata Patra", "Deputy Governor"),
+    "rajiv_ranjan": ("Rajiv Ranjan", "Executive Director"),
+    "shaktikanta_das": ("Shaktikanta Das", "Governor"),
+    "nagesh_kumar": ("Nagesh Kumar", "External Member"),
+    "saugata_bhattacharya": ("Saugata Bhattacharya", "External Member"),
+    "ram_singh": ("Ram Singh", "External Member"),
+    "m_rajeshwar_rao": ("Rajeshwar Rao", "Deputy Governor"),
+    "sanjay_malhotra": ("Sanjay Malhotra", "Governor"),
+    "poonam_gupta": ("Poonam Gupta", "Deputy Governor"),
+    "indranil_bhattacharyya": ("Indranil Bhattacharyya", "Executive Director"),
+}
+# Fixed descriptive lexicons, inherited transparently from the current extractor.
+# Their reuse prevents selecting a new lexical statistic after viewing outcomes.
+HAWK_LEXICON = ("inflation", "restrictive", "vigilance", "unanchored", "persistence",
+                "second-round", "overheating", "pressures", "brake", "firm", "committed", "tolerance", "target")
+DOVE_LEXICON = ("growth", "slack", "over-tightening", "lag", "lags", "sacrifice", "soften",
+                "real rate", "neutral", "output gap", "recovery", "headwind", "downturn")
+
+
+def sha256(payload):
+    return hashlib.sha256(payload).hexdigest()
+
+
+def normalized(text):
+    return " ".join(text.split())
+
+
+def canonical_member_id(value):
+    result = ALIAS.get(value, value)
+    if result not in MEMBERS:
+        raise ValueError(f"Unknown member identity: {value}")
+    return result
+
+
+def canonical_roster(values):
+    result = tuple(canonical_member_id(value) for value in values)
+    if len(result) != 6 or len(set(result)) != 6:
+        raise ValueError("Alias normalization would duplicate or omit an attendee")
+    return result
+
+
+def _read_json(path):
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"Duplicate JSON key {key}")
+            result[key] = value
+        return result
+    def reject(value):
+        raise ValueError(f"Invalid JSON constant {value}")
+    return json.loads(path.read_text(), object_pairs_hook=unique, parse_constant=reject)
+
+
+def source_path(root, relative):
+    path = (root / relative).resolve()
+    if not path.is_relative_to(root) or not path.is_file():
+        raise ValueError(f"Missing or outside-root scientific input: {relative}")
+    return path
+
+
+def _publication_day(soup):
+    """Read retained RBI header only; never infer publication from decision day."""
+    body = soup.select_one("#doublescroll")
+    if body is None:
+        return None
+    matches = re.findall(r"Date\s*:\s*([A-Za-z]+\s+\d{1,2},\s*\d{4})",
+                         normalized(body.get_text(" ", strip=True))[:300])
+    if len(matches) != 1:
+        return None
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(matches[0], fmt).date().isoformat()
+        except ValueError:
+            pass
+    return None
+
+
+def _name_present(text, identifier):
+    name = MEMBERS[identifier][0]
+    # The original roster abbreviates Jayanth R. and Mridul K. inconsistently.
+    if identifier == "jayanth_varma":
+        return bool(re.search(r"Jayanth\s+(?:R\.?\s+)?Varma", text))
+    if identifier == "mridul_saggar":
+        return bool(re.search(r"Mridul\s+(?:K\.?\s+)?Saggar", text))
+    return name in text
+
+
+def _personal_heading(text, identifier):
+    prefix = re.match(r"Statement\s+by\s+(.+?)(?=\s+\d+\.|$)", normalized(text))
+    if prefix is None or not _name_present(prefix.group(0), identifier):
+        raise ValueError(f"Personal attribution heading missing or wrong for {identifier}")
+    return prefix.group(0)
+
+
+class _SourceStore:
+    def __init__(self, root):
+        self.root = root
+        self.inputs = {}
+        self.payloads = {}
+        self.origin_to_portable = {}
+        self.soups = {}
+
+    def read(self, relative, expected=None):
+        path = source_path(self.root, relative)
+        payload = path.read_bytes()
+        digest = sha256(payload)
+        if expected is not None and digest != expected:
+            raise ValueError(f"Scientific input hash mismatch: {relative}")
+        self.inputs[str(relative)] = digest
+        portable = "sources/" + digest + path.suffix
+        self.payloads[portable] = payload
+        self.origin_to_portable[str(relative)] = portable
+        return path, payload
+
+    def ref(self, relative, expected, source_id, url, claimed_publication):
+        _, payload = self.read(relative, expected)
+        soup = BeautifulSoup(payload, "html.parser")
+        publication = _publication_day(soup)
+        # A missing header stays missing. A disagreement is corruption, not an
+        # opportunity to prefer the ledger's date.
+        if publication is not None and publication != claimed_publication:
+            raise ValueError(f"Publication ledger/header mismatch for {relative}")
+        self.soups[str(relative)] = soup
+        return DatedSourceRef(
+            source_id=source_id, source_file=str(relative), source_sha256=expected,
+            source_url=url, publication_date=publication,
+            publication_status="verified_retained_header" if publication else "unresolved")
+
+
+def _roster(meeting, ids, source, excerpt, *, previous_role_evidence=None):
+    ids = canonical_roster(ids)
+    if any(not _name_present(excerpt, identifier) for identifier in ids):
+        raise ValueError("Attendance excerpt does not support every normalized identity")
+    # October 2026's resolution names attendees without repeating every role.
+    # Carry only unchanged identities' prior explicitly documented role source;
+    # do not reinterpret that source as a pre-cutoff appointment announcement.
+    roles_explicit = all(role in excerpt for role in ("Governor", "Deputy Governor", "Executive Director"))
+    members = []
+    for identifier in ids:
+        if roles_explicit:
+            role_source, role_excerpt = source, excerpt
+        else:
+            if previous_role_evidence is None or identifier not in previous_role_evidence:
+                raise ValueError("Role missing from attendance and no earlier documented role source")
+            role_source, role_excerpt = previous_role_evidence[identifier]
+        members.append(TemporalMember(member_id=identifier, name=MEMBERS[identifier][0],
+                                      role=MEMBERS[identifier][1],
+                                      is_internal=MEMBERS[identifier][1] != "External Member",
+                                      role_evidence_source=role_source, role_evidence_excerpt=role_excerpt))
+    members = tuple(members)
+    governor = [m.member_id for m in members if m.role == "Governor"]
+    if len(governor) != 1:
+        raise ValueError("Attendance excerpt does not support exactly one known Governor")
+    # The role labels must be present in the attendance text; external roles are
+    # source-designated non-RBI members, not estimated behavioral preferences.
+    return TemporalMeetingRoster(
+        meeting_id=meeting["meeting_id"], decision_date=meeting["decision_date"],
+        meeting_start_date=meeting["meeting_start_date"],
+        information_cutoff=meeting["meeting_start_date"] + "T00:00:00+05:30",
+        members=members, governor_id=governor[0], roster_source=source,
+        roster_source_excerpt=excerpt)
+
+
+def _original_inputs(store):
+    meetings, statements = [], []
+    directory = source_path(store.root, ORIGINAL / "2020-10-09/source_manifest.json").parent.parent
+    for manifest_path in sorted(directory.glob("*/source_manifest.json")):
+        relative = manifest_path.relative_to(store.root)
+        store.read(relative)
+        meta = _read_json(manifest_path)
+        decision = meta["decision_date"]
+        if manifest_path.parent.name != decision:
+            raise ValueError("Original statement folder and decision disagree")
+        source_id = Path(meta["source_file"]).stem
+        prid = source_id.rsplit("_", 1)[-1]
+        source = store.ref(meta["source_file"], meta["source_sha256"], source_id,
+                           "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=" + prid,
+                           meta["publication_date"])
+        soup = store.soups[meta["source_file"]]
+        body = soup.select_one("#doublescroll")
+        if body is None:
+            raise ValueError("Missing official minutes article body")
+        blocks = [normalized(e.get_text(" ", strip=True)) for e in body.find_all("p")]
+        excerpts = [b for b in blocks if b.startswith("2.") and "meeting was attended" in b.lower()]
+        if len(excerpts) != 1:
+            raise ValueError("Ambiguous original attendance paragraph")
+        meeting = {"meeting_id": "rbi_mpc_" + decision, "decision_date": decision,
+                   "meeting_start_date": meta["meeting_start_date"]}
+        roster = _roster(meeting, tuple(meta["statement_sha256"]), source, excerpts[0])
+        meetings.append(roster)
+        raw_text = normalized(soup.get_text())
+        for old_id, digest in sorted(meta["statement_sha256"].items()):
+            identifier = canonical_member_id(old_id)
+            name = str(manifest_path.parent.relative_to(store.root) / (old_id + ".txt"))
+            _, payload = store.read(name, digest)
+            text = payload.decode("utf-8")
+            if normalized(text) not in raw_text:
+                raise ValueError("Personal statement is not in retained raw minutes")
+            heading = _personal_heading(text, identifier)
+            statements.append((PersonalStatementRef(
+                statement_id=meeting["meeting_id"] + ":" + identifier, member_id=identifier,
+                original_member_id=old_id, meeting_id=meeting["meeting_id"], decision_date=decision,
+                source=source, statement_file=name, statement_sha256=digest,
+                attribution_heading=heading), text))
+    return meetings, statements
+
+
+def _expanded_inputs(store):
+    catalog_path, _ = store.read(EXPANDED / "source_catalog.json")
+    ledger_path, _ = store.read(EXPANDED / "meeting_label_ledger.json")
+    statement_path, _ = store.read(EXPANDED / "member_statements.jsonl")
+    catalog = {r["source_id"]: r for r in _read_json(catalog_path)["records"]}
+    ledger = _read_json(ledger_path)
+    meetings, refs, prior_roles = [], {}, {}
+    for row in ledger["meetings"]:
+        evidence = row["roster_source_excerpt"]
+        record = catalog[evidence["source_id"]]
+        relative = EXPANDED / evidence["source_path"]
+        if record["sha256"] != evidence["source_sha256"] or record["raw_path"] != evidence["source_path"]:
+            raise ValueError("Roster source/catalog mismatch")
+        source = store.ref(relative, record["sha256"], record["source_id"], record["url"],
+                           record["publication_date"])
+        if row["information_cutoff_exclusive_ist"] != row["meeting_start_date"] + "T00:00:00+05:30":
+            raise ValueError("Expanded cutoff is inconsistent with meeting start")
+"""Verify dated corpus bytes and fitted persona fields before research generation."""
+import json
+from datetime import date, datetime
+from pathlib import Path
+
+from src.infra.evidence import file_hash
+from src.infra.exceptions import GenerationProvenanceError
+from src.schemas.persona_schema import MemberPersona
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def verify_personas(personas, cutoff, *, source_root=None, corpus_manifest_path=None):
+    root = Path(source_root or PROJECT_ROOT).resolve()
+    if isinstance(cutoff, datetime):
+        if cutoff.tzinfo is None:
+            raise GenerationProvenanceError('Persona prediction cutoff needs a timezone')
+        cutoff = cutoff.date().isoformat()
+    if not isinstance(cutoff, str) or date.fromisoformat(cutoff).isoformat() != cutoff:
+        raise GenerationProvenanceError('Persona prediction cutoff must be an ISO calendar day')
+    validated = [MemberPersona.model_validate(p.model_dump()) for p in personas]
+    if not validated or len({p.member_id for p in validated}) != len(validated):
+        raise GenerationProvenanceError('Distinct nonempty research personas required')
+    manifests = {}
+    for persona in validated:
+        if (persona.provenance_status != 'dated_corpus' or not persona.calibration_cutoff
+                or persona.calibration_cutoff > cutoff):
+            raise GenerationProvenanceError('Undated, assumed or future corpus cannot be research persona evidence')
+        path = Path(corpus_manifest_path) if corpus_manifest_path else (
+            root / 'personas' / f'calibration_{persona.calibration_cutoff}_v2' / 'corpus_manifest.json')
+        if not path.is_file() or file_hash(path) != persona.corpus_manifest_hash:
+            raise GenerationProvenanceError('Missing or changed persona corpus manifest')
+        if path not in manifests:
+            manifests[path] = json.loads(path.read_text())
+        manifest = manifests[path]
+        if manifest.get('calibration_cutoff') != persona.calibration_cutoff:
+            raise GenerationProvenanceError('Persona and corpus cutoffs differ')
+        member = manifest.get('members', {}).get(persona.member_id)
+        if not member or not member.get('corpus_sources') or not member.get('meetings_count'):
+            raise GenerationProvenanceError('Persona has no actual pre-cutoff corpus')
+        fields = {'name': 'name', 'role': 'role', 'is_internal': 'is_internal',
+                  'hawk_dove_score': 'calibrated_hawk_dove', 'stance_bias': 'stance_bias',
+                  'voting_priority': 'voting_priority', 'biography': 'biography',
+                  'key_themes': 'exemplar_quotes'}
+        if any(getattr(persona, field) != member.get(key) for field, key in fields.items()):
+            raise GenerationProvenanceError('Persona fields differ from their frozen corpus fit')
+        if persona.system_prompt_override is not None:
+            raise GenerationProvenanceError('An unregistered prompt override is not the frozen corpus fit')
+        rows = member['corpus_sources']
+        if len(rows) != member['meetings_count'] or len({r['decision_date'] for r in rows}) != len(rows):
+            raise GenerationProvenanceError('Corpus source rows are duplicated or incomplete')
+        for row in rows:
+            decision = date.fromisoformat(row['decision_date']).isoformat()
+            publication = date.fromisoformat(row['publication_date']).isoformat()
+            if not decision <= publication < persona.calibration_cutoff:
+                raise GenerationProvenanceError('Corpus statement is unavailable at calibration cutoff')
+            for name in ('source', 'statement'):
+                source = (root / row[f'{name}_file']).resolve()
+                if (not source.is_relative_to(root) or not source.is_file()
+                        or file_hash(source) != row[f'{name}_sha256']):
+                    raise GenerationProvenanceError(f'Missing or changed persona {name} bytes')
+    return validated
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.295597
+is_internal: true
+key_themes:
+- '"After the sharpest contraction in economic activity in Q1:2020-21, a number of
+  high frequency indicators of economic activity for Q2:2020-21 indicate a sequential
+  improvement." (2020-10-09)'
+- '"This has impelled some central banks to embark on aggressive policy tightening
+  to quell inflation risks, while a few others, mostly emerging market economies (EMEs),
+  continue to maintain accommodative policies." (2022-02-10)'
+- '"While issues of geopolitics and high inflation continue to impact the outlook,
+  the emergence of banking sector turmoil on both sides of the Atlantic and the sudden
+  announcement of oil production cut by the OPEC+ countries have rendered the global
+  outlook even more uncertain." (2023-04-06)'
+member_id: shaktikanta_das
+name: Shaktikanta Das
+provenance_status: dated_corpus
+role: Governor
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

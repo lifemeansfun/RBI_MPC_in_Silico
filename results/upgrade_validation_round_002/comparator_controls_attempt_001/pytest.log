@@ -1,0 +1,290 @@
+FFF...................FFFFF..                                            [100%]
+=================================== FAILURES ===================================
+________ test_full_runtime_evidence_and_anchored_replay[joint_persona] _________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_full_runtime_evidence_and0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b0c1e50>
+mode = 'joint_persona'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mode", ["joint_persona", "macro_only"])
+    async def test_full_runtime_evidence_and_anchored_replay(tmp_path, monkeypatch, mode):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch, mode=mode)
+        plan = freeze(forecaster, snapshot, roster, personas, mode=mode)
+>       record = await forecaster.generate(plan)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+__________ test_full_runtime_evidence_and_anchored_replay[macro_only] __________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_full_runtime_evidence_and1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b0c1990>
+mode = 'macro_only'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mode", ["joint_persona", "macro_only"])
+    async def test_full_runtime_evidence_and_anchored_replay(tmp_path, monkeypatch, mode):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch, mode=mode)
+        plan = freeze(forecaster, snapshot, roster, personas, mode=mode)
+>       record = await forecaster.generate(plan)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '7e39a49e99e71205413400d4ec746508a90843591f12274d9b451577197635fa', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...ead4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'macro_only', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+____________ test_common_mask_mapping_preserves_raw_nested_aliases _____________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_common_mask_mapping_prese0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b6a9d10>
+
+    @pytest.mark.asyncio
+    async def test_common_mask_mapping_preserves_raw_nested_aliases(tmp_path, monkeypatch):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch, masked=True)
+        frozen = freeze(forecaster, snapshot, roster, personas, mask_date=True, mask_identity=True)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': 'dc44bdd2a223fdf220e3b8fe3a0a157401d96e6ee71ca4676ae483e786c66fea', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+___________ test_casting_and_explicit_synthetic_policy_are_distinct ____________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_casting_and_explicit_synt0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b9f8f90>
+
+    @pytest.mark.asyncio
+    async def test_casting_and_explicit_synthetic_policy_are_distinct(tmp_path, monkeypatch):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch)
+        raw = ballots(roster, rates=[25,25,25,0,0,0], committee_rate=25)
+        monkeypatch.setattr(forecaster.client, "_generate_mock", lambda *args: (canonical_json(raw),200,300))
+        frozen = freeze(forecaster, snapshot, roster, personas)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:234: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+_ test_rehashed_corruption_still_rejects_under_external_plan_anchor[prediction] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_rehashed_corruption_still0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b985d50>
+field = 'prediction'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("field", ["prediction", "usage", "frozen_plan", "generation"])
+    async def test_rehashed_corruption_still_rejects_under_external_plan_anchor(tmp_path, monkeypatch, field):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch)
+        frozen = freeze(forecaster, snapshot, roster, personas)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:252: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+___ test_rehashed_corruption_still_rejects_under_external_plan_anchor[usage] ___
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_rehashed_corruption_still1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aed9f10>
+field = 'usage'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("field", ["prediction", "usage", "frozen_plan", "generation"])
+    async def test_rehashed_corruption_still_rejects_under_external_plan_anchor(tmp_path, monkeypatch, field):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch)
+        frozen = freeze(forecaster, snapshot, roster, personas)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:252: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+_ test_rehashed_corruption_still_rejects_under_external_plan_anchor[frozen_plan] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_rehashed_corruption_still2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aec8350>
+field = 'frozen_plan'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("field", ["prediction", "usage", "frozen_plan", "generation"])
+    async def test_rehashed_corruption_still_rejects_under_external_plan_anchor(tmp_path, monkeypatch, field):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch)
+        frozen = freeze(forecaster, snapshot, roster, personas)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:252: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+_ test_rehashed_corruption_still_rejects_under_external_plan_anchor[generation] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...e_validation_round_002/comparator_controls_attempt_001/checkout/isolated_test_outputs/test_rehashed_corruption_still3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10b93ee90>
+field = 'generation'
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("field", ["prediction", "usage", "frozen_plan", "generation"])
+    async def test_rehashed_corruption_still_rejects_under_external_plan_anchor(tmp_path, monkeypatch, field):
+        forecaster, snapshot, roster, personas, calls = setup(tmp_path, monkeypatch)
+        frozen = freeze(forecaster, snapshot, roster, personas)
+>       record = await forecaster.generate(frozen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_comparator_forecasters.py:252: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/comparator_forecasters.py:460: in generate
+    _bind_generation(generation, plan)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+generation = {'raw_text': '{"committee_rationale":"Offline fixture committee rationale","fallback_triggered":false,"member_ballots"...r_controls', 'generation_settings_hash': '81e21fc3ada0ee72cab98c28ac84ebc0914e87bad2969c60abb9097552f69fc1', ...}, ...}
+plan = {'budget_matched_to_panel': False, 'code_hashes': {'src/behavioral/comparator_forecasters.py': 'c2c2b8beadd60450856046...4d69cfef89aeecf8b22602da709886', ...}, 'contract_version': 'joint_comparator_v1', 'control_mode': 'joint_persona', ...}
+
+    def _bind_generation(generation: dict, plan: dict) -> None:
+        metadata = generation["metadata"]
+        settings = plan["generation_settings"]
+        if generation["request_identity"] != plan["identity"]:
+            raise GenerationProvenanceError("Comparator generation returned a different request identity")
+        for field in ("provider", "temperature", "seed", "max_output_tokens", "input_token_bound",
+                      "model_epoch", "parser_version"):
+            if metadata[field] != settings[field] or type(metadata[field]) is not type(settings[field]):
+>               raise GenerationProvenanceError(f"Comparator generation changed frozen {field}")
+E               src.infra.exceptions.GenerationProvenanceError: Comparator generation changed frozen model_epoch
+
+src/behavioral/comparator_forecasters.py:215: GenerationProvenanceError
+=========================== short test summary info ============================
+FAILED tests/test_comparator_forecasters.py::test_full_runtime_evidence_and_anchored_replay[joint_persona]
+FAILED tests/test_comparator_forecasters.py::test_full_runtime_evidence_and_anchored_replay[macro_only]
+FAILED tests/test_comparator_forecasters.py::test_common_mask_mapping_preserves_raw_nested_aliases
+FAILED tests/test_comparator_forecasters.py::test_casting_and_explicit_synthetic_policy_are_distinct
+FAILED tests/test_comparator_forecasters.py::test_rehashed_corruption_still_rejects_under_external_plan_anchor[prediction]
+FAILED tests/test_comparator_forecasters.py::test_rehashed_corruption_still_rejects_under_external_plan_anchor[usage]
+FAILED tests/test_comparator_forecasters.py::test_rehashed_corruption_still_rejects_under_external_plan_anchor[frozen_plan]
+FAILED tests/test_comparator_forecasters.py::test_rehashed_corruption_still_rejects_under_external_plan_anchor[generation]
+8 failed, 21 passed in 1.22s

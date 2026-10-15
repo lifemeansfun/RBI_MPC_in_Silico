@@ -7,11 +7,15 @@ Executes:
   Quantifies Behavioral-vs-Rational Policy Wedges across both tracks.
 - Phase 8:
   1. Experiment 1: Leave-One-Member-Out Persuasion Ablation (withholding Varma & Patra)
-  2. Experiment 2: Statutory Casting-Vote Ablation (RBI Act Section 45ZL)
+  2. Experiment 2: Casting-Vote Removal (RBI Act Section 45ZI(8))
   3. Experiment 3: Macro-Factor Muting (Neutralizing Monsoon departure & Food inflation)
 Exports:
-- results/tables/table3_counterfactual_shock_responses.csv
-- results/tables/table4_attribution_ablation_effects.csv
+- distinct corrected_counterfactual experiment output; legacy results are retained
+
+This legacy-panel entry point defaults to offline mock diagnostics. Its assumed
+comparator and synthetic historical stress scenarios do not establish forecasting
+superiority or real-policy causal effects. Use the frozen source-linked study
+runner for empirical research.
 """
 
 import asyncio
@@ -20,6 +24,7 @@ import sys
 from pathlib import Path
 import yaml
 import pandas as pd
+import uuid
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
@@ -33,6 +38,7 @@ from src.scenarios.scenario_runner import ScenarioRunner
 from src.attribution.attribution_runner import AttributionRunner, AttributionResult
 from src.behavioral.debate_orchestrator import DebateOrchestrator
 from src.infra.llm_client import LLMClient
+from src.infra.transcript_logger import TranscriptLogger
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("rbi_mpc.counterfactual_runner")
@@ -61,38 +67,35 @@ def load_meeting_snapshot(meeting_date: str) -> MacroMeetingSnapshot:
     if row.empty:
         raise ValueError(f"Meeting date {meeting_date} not found in macro panel")
     r = row.iloc[0].to_dict()
-    return MacroMeetingSnapshot(
-        meeting_date=r["meeting_date"],
-        current_repo_rate_pct=float(r["current_repo_rate_pct"]),
-        cpi_headline_yoy_pct=float(r["cpi_headline_yoy_pct"]),
-        cpi_core_yoy_pct=float(r["cpi_core_yoy_pct"]),
-        cpi_food_yoy_pct=float(r.get("cpi_food_yoy_pct", 5.0)),
-        iip_growth_yoy_pct=float(r.get("iip_growth_yoy_pct", 4.0)),
-        gva_growth_yoy_pct=float(r.get("gva_growth_yoy_pct", 6.0)),
-        output_gap_pct=float(r.get("output_gap_pct", 0.0)),
-        system_liquidity_cr=float(r.get("system_liquidity_cr", -10000.0)),
-        usd_inr_exchange_rate=float(r.get("usd_inr_exchange_rate", 82.0)),
-        brent_crude_usd_bbl=float(r.get("brent_crude_usd_bbl", 85.0)),
-        us_fed_funds_rate_pct=float(r.get("us_fed_funds_rate_pct", 5.0)),
-        monsoon_departure_lpa_pct=float(r.get("monsoon_departure_lpa_pct", 0.0)),
-        prev_stance=str(r["prev_stance"]),
-    )
+    payload = {}
+    for field in MacroMeetingSnapshot.model_fields:
+        if field in r:
+            value = r[field]
+            payload[field] = None if isinstance(value, (float, int)) and pd.isna(value) else value
+    payload["input_track"] = "legacy_unverified"
+    return MacroMeetingSnapshot.model_validate(payload)
 
 
-async def run_phase_7_and_8():
+async def run_phase_7_and_8(output_root: Path | None = None, experiment_id: str | None = None, provider: str = "mock"):
     logger.info("Initializing Phase 7 & 8: Counterfactuals & Attribution Layer...")
-    results_dir = PROJECT_ROOT / "results" / "tables"
-    results_dir.mkdir(parents=True, exist_ok=True)
+    if provider != "mock":
+        raise ValueError("Legacy-panel scenario script permits offline diagnostics only; use the frozen source-linked study runner for live research")
+    experiment_id = experiment_id or "diagnostic_" + uuid.uuid4().hex
+    experiment_dir = (output_root or PROJECT_ROOT / "results" / "corrected_counterfactual") / experiment_id
+    experiment_dir.mkdir(parents=True, exist_ok=False)
+    results_dir = experiment_dir / "tables"
+    results_dir.mkdir()
 
     personas = load_all_personas()
     gov_id = "shaktikanta_das"
     taylor_rule = SmoothedTaylorRule()
-    scenario_runner = ScenarioRunner(taylor_rule=taylor_rule)
+    scenario_runner = ScenarioRunner(taylor_rule=taylor_rule, fragmentation_policy="legacy_synthetic")
     member_params = [MEMBER_TAYLOR_PARAMS[p.member_id] for p in personas]
 
     # Initialize Debate Orchestrator
-    client = LLMClient()
-    orchestrator = DebateOrchestrator(llm_client=client)
+    client = LLMClient(provider=provider, cache_enabled=False)
+    transcripts = TranscriptLogger(output_root=experiment_dir / "traces", identity={"experiment_id": experiment_id})
+    orchestrator = DebateOrchestrator(llm_client=client, logger=transcripts)
 
     # =========================================================================
     # PHASE 7: COUNTERFACTUAL SCENARIO EXPERIMENTS
@@ -111,8 +114,8 @@ async def run_phase_7_and_8():
 
     # Behavioral Track
     logger.info("Running Behavioral Deliberation Track on Monsoon Shock (2023-08-10)...")
-    beh_monsoon_base = await orchestrator.run_meeting(snap_monsoon_base, personas, gov_id, replicate_id=1)
-    beh_monsoon_shock = await orchestrator.run_meeting(snap_monsoon_shock, personas, gov_id, replicate_id=1)
+    beh_monsoon_base = await orchestrator.run_meeting(snap_monsoon_base, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="monsoon_baseline")
+    beh_monsoon_shock = await orchestrator.run_meeting(snap_monsoon_shock, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="monsoon_shock")
 
     wedge_monsoon_base = beh_monsoon_base.rate_decision_bps - rat_monsoon.baseline_repo_rate_change_bps
     wedge_monsoon_shock = beh_monsoon_shock.rate_decision_bps - rat_monsoon.shocked_repo_rate_change_bps
@@ -145,8 +148,8 @@ async def run_phase_7_and_8():
     rat_fed = scenario_runner.run_us_fed_spillover_shock(snap_fed_base, member_params, gov_id)
 
     logger.info("Running Behavioral Deliberation Track on US Fed Shock (2022-08-05)...")
-    beh_fed_base = await orchestrator.run_meeting(snap_fed_base, personas, gov_id, replicate_id=1)
-    beh_fed_shock = await orchestrator.run_meeting(snap_fed_shock, personas, gov_id, replicate_id=1)
+    beh_fed_base = await orchestrator.run_meeting(snap_fed_base, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="fed_baseline")
+    beh_fed_shock = await orchestrator.run_meeting(snap_fed_shock, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="fed_shock")
 
     wedge_fed_base = beh_fed_base.rate_decision_bps - rat_fed.baseline_repo_rate_change_bps
     wedge_fed_shock = beh_fed_shock.rate_decision_bps - rat_fed.shocked_repo_rate_change_bps
@@ -177,8 +180,8 @@ async def run_phase_7_and_8():
     rat_pandemic = scenario_runner.run_pandemic_easing_shock(snap_pandemic_base, member_params, gov_id)
 
     logger.info("Running Behavioral Deliberation Track on Pandemic Easing Shock...")
-    beh_pandemic_base = await orchestrator.run_meeting(snap_pandemic_base, personas, gov_id, replicate_id=1)
-    beh_pandemic_shock = await orchestrator.run_meeting(snap_pandemic_shock, personas, gov_id, replicate_id=1)
+    beh_pandemic_base = await orchestrator.run_meeting(snap_pandemic_base, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="pandemic_baseline")
+    beh_pandemic_shock = await orchestrator.run_meeting(snap_pandemic_shock, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="pandemic_shock")
 
     wedge_pandemic_base = beh_pandemic_base.rate_decision_bps - rat_pandemic.baseline_repo_rate_change_bps
     wedge_pandemic_shock = beh_pandemic_shock.rate_decision_bps - rat_pandemic.shocked_repo_rate_change_bps
@@ -209,8 +212,8 @@ async def run_phase_7_and_8():
     rat_taper = scenario_runner.run_taper_tantrum_shock(snap_taper_base, member_params, gov_id)
 
     logger.info("Running Behavioral Deliberation Track on Taper Tantrum Shock...")
-    beh_taper_base = await orchestrator.run_meeting(snap_taper_base, personas, gov_id, replicate_id=1)
-    beh_taper_shock = await orchestrator.run_meeting(snap_taper_shock, personas, gov_id, replicate_id=1)
+    beh_taper_base = await orchestrator.run_meeting(snap_taper_base, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="taper_baseline")
+    beh_taper_shock = await orchestrator.run_meeting(snap_taper_shock, personas, gov_id, replicate_id=1, experiment_id=experiment_id, condition_id="taper_shock")
 
     wedge_taper_base = beh_taper_base.rate_decision_bps - rat_taper.baseline_repo_rate_change_bps
     wedge_taper_shock = beh_taper_shock.rate_decision_bps - rat_taper.shocked_repo_rate_change_bps
@@ -234,7 +237,32 @@ async def run_phase_7_and_8():
         "shocked_dissenters_behavioral": ";".join(beh_taper_shock.dissenting_members_rate + beh_taper_shock.dissenting_members_stance),
     })
 
+    for record, rational, behavioral_base, behavioral_shock in zip(scenario_records,
+            [rat_monsoon, rat_fed, rat_pandemic, rat_taper],
+            [beh_monsoon_base, beh_fed_base, beh_pandemic_base, beh_taper_base],
+            [beh_monsoon_shock, beh_fed_shock, beh_pandemic_shock, beh_taper_shock]):
+        record["rational_resolution_policies"] = rational.resolution_policies
+        record["rational_synthetic_resolutions"] = rational.synthetic_resolutions
+        record["rational_fragmentation_policy"] = scenario_runner.fragmentation_policy
+        record["behavioral_fragmentation_policy"] = behavioral_base.fragmentation_policy
+        record["behavioral_baseline_resolution_policies"] = {
+            "rate": behavioral_base.rate_resolution_policy, "stance": behavioral_base.stance_resolution_policy}
+        record["behavioral_shocked_resolution_policies"] = {
+            "rate": behavioral_shock.rate_resolution_policy, "stance": behavioral_shock.stance_resolution_policy}
+        record["shocked_dissenters_behavioral_rate"] = sorted(set(behavioral_shock.dissenting_members_rate))
+        record["shocked_dissenters_behavioral_stance"] = sorted(set(behavioral_shock.dissenting_members_stance))
     df_scenarios = pd.DataFrame(scenario_records)
+    df_scenarios["study_experiment_id"] = experiment_id
+    df_scenarios["behavioral_evidence_type"] = "mock"
+    df_scenarios["rational_evidence_type"] = "assumed_reaction_function"
+    df_scenarios["baseline_input_track"] = "legacy_unverified"
+    df_scenarios["shocked_input_track"] = "counterfactual"
+    df_scenarios["estimand_scope"] = "simulator_local"
+    df_scenarios["independent_live_model_evidence"] = False
+    df_scenarios["evidence_type"] = "mock"
+    df_scenarios["input_track"] = "legacy_unverified"
+    df_scenarios["estimand_scope"] = "simulator_local"
+    df_scenarios["comparator_status"] = "assumed_parameters_not_fitted"
     table3_path = results_dir / "table3_counterfactual_shock_responses.csv"
     df_scenarios.to_csv(table3_path, index=False)
     logger.info("Saved Phase 7 Counterfactual Results to %s", table3_path)
@@ -273,8 +301,8 @@ async def run_phase_7_and_8():
     )
     attribution_records.append(res_ablate_patra.__dict__)
 
-    # Experiment 2: Statutory Casting-Vote Ablation (§45ZL)
-    logger.info("Running Experiment 2: Statutory Casting-Vote Ablation (§45ZL)...")
+    # Experiment 2: Casting-Vote Removal (§45ZI(8))
+    logger.info("Running Experiment 2: Casting-Vote Removal (§45ZI(8))...")
     # 2A. Untied Baseline Meeting (Casting vote dormant)
     res_casting_untied = AttributionRunner.ablate_casting_vote(
         meeting_outcome=anchor_decision,
@@ -285,7 +313,7 @@ async def run_phase_7_and_8():
     res_casting_untied.description = "Evaluates casting vote on baseline meeting where majority was already established; casting vote is dormant."
     attribution_records.append(res_casting_untied.__dict__)
 
-    # 2B. Statutory Equality of Votes (3-3 Tie Split under §45ZL)
+    # 2B. Constructed equality is a rule probe, not an empirical meeting effect.
     from src.schemas.debate_schema import MeetingCommitteeDecision
     tie_split_decision = MeetingCommitteeDecision(
         meeting_date=anchor_snap.meeting_date,
@@ -299,14 +327,15 @@ async def run_phase_7_and_8():
         dissenting_members_rate=["michael_patra", "rajiv_ranjan", "shashanka_bhide"],
         dissenting_members_stance=["jayanth_varma", "ashima_goyal", "shashanka_bhide"],
         member_votes=[],
+        prior_stance=anchor_snap.prev_stance,
     )
     res_casting_tie = AttributionRunner.ablate_casting_vote(
         meeting_outcome=tie_split_decision,
         governor_id=gov_id,
     )
     res_casting_tie.experiment_id = "EXP_2_CASTING_VOTE_TIE_SPLIT"
-    res_casting_tie.experiment_name = "Governor Statutory Casting-Vote Ablation (3-3 Tie Split under §45ZL)"
-    res_casting_tie.description = "Evaluates whether Governor casting vote breaks a 3-3 equality of votes; without casting vote, motion fails to reach majority."
+    res_casting_tie.experiment_name = "Constructed Binary Casting Rule Probe (§45ZI(8))"
+    res_casting_tie.description = "Constructed equality rule probe; without Governor casting, synthetic status quo retains 0 bps and actual prior stance. This is not an empirical intervention effect."
     attribution_records.append(res_casting_tie.__dict__)
 
     # Experiment 3A: Macro-Factor Muting (Neutralize Food Inflation)

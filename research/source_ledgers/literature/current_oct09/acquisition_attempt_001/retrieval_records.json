@@ -1,0 +1,67 @@
+[
+  {
+    "id": "gwu_fomc_2025",
+    "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "final_url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "file": "research/source_ledgers/literature/current_oct09/acquisition_attempt_001/gwu_fomc_2025.pdf",
+    "sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+    "bytes": 2640547,
+    "valid_pdf_magic": true,
+    "retrieved_at_unix": 1791563653.771039,
+    "availability_limit": "Retrieval today does not prove historical publication bytes or authenticate author results"
+  },
+  {
+    "id": "argyle_arxiv_v1",
+    "url": "https://arxiv.org/pdf/2209.06899v1",
+    "final_url": "https://arxiv.org/pdf/2209.06899v1",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "file": "research/source_ledgers/literature/current_oct09/acquisition_attempt_001/argyle_arxiv_v1.pdf",
+    "sha256": "391f94c0c8bd2f9bed2aa77420e203f863e527296a9ad4412318b1b33d55aeef",
+    "bytes": 3204201,
+    "valid_pdf_magic": true,
+    "retrieved_at_unix": 1791563648.865709,
+    "availability_limit": "Retrieval today does not prove historical publication bytes or authenticate author results"
+  },
+  {
+    "id": "bisbee_publisher",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B92267DC26195C7F36E63EA04A47D2FE/S1047198724000056a.pdf/synthetic-replacements-for-human-survey-data-the-perils-of-large-language-models.pdf",
+    "final_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B92267DC26195C7F36E63EA04A47D2FE/S1047198724000056a.pdf/synthetic-replacements-for-human-survey-data-the-perils-of-large-language-models.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "file": "research/source_ledgers/literature/current_oct09/acquisition_attempt_001/bisbee_publisher.pdf",
+    "sha256": "ec566f7ead5bdbc2e74f41901697848265e7604ce4e482f2fbf7758563bf9cfc",
+    "bytes": 987819,
+    "valid_pdf_magic": true,
+    "retrieved_at_unix": 1791563646.755899,
+    "availability_limit": "Retrieval today does not prove historical publication bytes or authenticate author results"
+  },
+  {
+    "id": "cummins_arxiv",
+    "url": "https://arxiv.org/abs/2509.13397",
+    "final_url": "https://arxiv.org/abs/2509.13397",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "file": "research/source_ledgers/literature/current_oct09/acquisition_attempt_001/cummins_arxiv.html",
+    "sha256": "211133d5842a9a6fa76bdfe6c3e8788b2aa581316166a237f9937928d086a39f",
+    "bytes": 42293,
+    "valid_pdf_magic": false,
+    "retrieved_at_unix": 1791563648.167316,
+    "availability_limit": "Retrieval today does not prove historical publication bytes or authenticate author results"
+  },
+  {
+    "id": "ssrn_fomc_record",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "final_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "status_code": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/source_ledgers/literature/current_oct09/acquisition_attempt_001/ssrn_fomc_record.html",
+    "sha256": "5f7dc1d97563b09238c830f434b4c05309879ba98a0b3b6b5f090b1e1d6550b2",
+    "bytes": 896438,
+    "valid_pdf_magic": false,
+    "retrieved_at_unix": 1791563645.4175801,
+    "availability_limit": "Retrieval today does not prove historical publication bytes or authenticate author results"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_009/raw/revision_policy_2016.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/revision_policy_2016.txt"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "3dedd6658612d9e1668bbd95c04ff83988dc25cc07f9fb4af36efbaaadf1854b",
+  "extracted_sha256": "2b8b71382df7ca812707272e044898b2935b6c98bf1410712a6415874511eb5c"
+}

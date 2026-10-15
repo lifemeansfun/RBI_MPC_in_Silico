@@ -1,0 +1,21 @@
+...F....................................                                 [100%]
+=================================== FAILURES ===================================
+________________ test_ballot_permutations_do_not_change_metrics ________________
+
+    def test_ballot_permutations_do_not_change_metrics():
+        ballots = [vote(member, rate) for member, rate in zip(ROSTER, [0, 0, 0, 25, 25, -25])]
+        expected = ballot_metrics(ballots)
+        assert expected["joint_agreeing_pairs"] == 4
+        for shuffled in permutations(ballots):
+>           assert ballot_metrics(shuffled) == expected
+E           AssertionError: assert {'n_ballots':...66666666, ...} == {'n_ballots':...66666666, ...}
+E             
+E             Omitting 11 identical items, use -vv to show
+E             Differing items:
+E             {'rate_population_sd_bps': 17.17960677340692} != {'rate_population_sd_bps': 17.179606773406917}
+E             Use -v to get more diff
+
+tests/test_paired_consensus.py:95: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_paired_consensus.py::test_ballot_permutations_do_not_change_metrics
+1 failed, 39 passed in 0.13s

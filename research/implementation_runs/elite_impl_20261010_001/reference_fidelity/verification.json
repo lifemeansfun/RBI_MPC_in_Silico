@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "scope": "evidence file integrity, page counts, source bindings, explicit missing revision and open gates; not empirical replication",
+  "checks": [
+    {
+      "id": "gwu_retained_august_2025",
+      "bytes_and_sha256": "passed",
+      "http_status": null,
+      "retrieval_status": "copied_retained_exact_bytes"
+    },
+    {
+      "id": "fedsight_arxiv_2512_15728v1",
+      "bytes_and_sha256": "passed",
+      "http_status": 200,
+      "retrieval_status": "acquired"
+    },
+    {
+      "id": "takano_arxiv_2511_02469v1",
+      "bytes_and_sha256": "passed",
+      "http_status": 200,
+      "retrieval_status": "acquired"
+    },
+    {
+      "id": "acl_2025_findings_606",
+      "bytes_and_sha256": "passed",
+      "http_status": 200,
+      "retrieval_status": "acquired"
+    },
+    {
+      "id": "gwu_current_2025_005",
+      "bytes_and_sha256": "passed",
+      "http_status": 200,
+      "retrieval_status": "acquired"
+    },
+    {
+      "id": "ssrn_record_5424097",
+      "bytes_and_sha256": "passed",
+      "http_status": 403,
+      "retrieval_status": "http_failure"
+    },
+    {
+      "id": "ssrn_papers_delivery_5424097",
+      "bytes_and_sha256": "passed",
+      "http_status": 403,
+      "retrieval_status": "http_failure"
+    },
+    {
+      "id": "ssrn_download_delivery_5424097",
+      "bytes_and_sha256": "passed",
+      "http_status": 404,
+      "retrieval_status": "http_failure"
+    },
+    {
+      "id": "stanford_publication",
+      "bytes_and_sha256": "passed",
+      "http_status": 200,
+      "retrieval_status": "acquired"
+    },
+    {
+      "id": "gwu_working_papers",
+      "bytes_and_sha256": "passed",
+      "http_status": 403,
+      "retrieval_status": "http_failure"
+    }
+  ],
+  "primary_fulltexts": 4,
+  "revised_full_methods_acquired": false,
+  "novelty_gate": "open",
+  "domain_importance_gate": "open",
+  "previous_failed_audit": "verification_failure_001.txt"
+}

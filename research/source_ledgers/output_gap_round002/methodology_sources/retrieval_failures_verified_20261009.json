@@ -1,0 +1,39 @@
+{
+  "scope": "Observed tool failures preserved alongside later successful direct downloads; failure does not imply source unavailable by all channels",
+  "observed_web_failures": [
+    {
+      "operation": "open",
+      "url": "https://www.imf.org/external/pubs/ft/qna/index.htm",
+      "result": "403 Forbidden"
+    },
+    {
+      "operation": "open",
+      "url": "https://www.imf.org/external/pubs/ft/qna/pdf/2017/chapter7.pdf",
+      "result": "403 Forbidden; candidate URL not confirmed"
+    },
+    {
+      "operation": "open",
+      "url": "https://www.imf.org/external/pubs/ft/qna/pdf/2017/QNAManual2017text.pdf",
+      "result": "403 Forbidden; later direct urllib PDF download succeeded"
+    },
+    {
+      "operation": "open",
+      "url": "https://www.elibrary.imf.org/display/book/9781475589870/ch007.xml",
+      "result": "403 Forbidden; later direct urllib HTML download succeeded"
+    },
+    {
+      "operation": "find",
+      "url": "Eurostat 2009 PDF and BIS 584 PDF",
+      "result": "Several tool Internal Error responses; downloaded raw PDF text was inspected instead"
+    },
+    {
+      "operation": "open",
+      "url": "https://www.bis.org/publ/work584.pdf",
+      "result": "Redirected to HTML landing page, not a PDF. Correct PDF href inspected on landing page and downloaded separately."
+    }
+  ],
+  "local_failure_record": "initial_acquisition_failure_20261009.json",
+  "recovery": "Identical source script rerun with an absolute path; completed ledger is acquisition_20261009T161349Z/retrieval_ledger.json",
+  "model_calls": 0,
+  "existing_scientific_data_edits": 0
+}

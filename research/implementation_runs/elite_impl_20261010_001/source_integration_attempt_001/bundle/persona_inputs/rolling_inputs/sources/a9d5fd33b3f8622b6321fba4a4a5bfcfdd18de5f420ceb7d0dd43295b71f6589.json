@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2022-09-30",
+  "meeting_start_date": "2022-09-28",
+  "publication_date": "2022-10-14",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+  "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+  "statement_sha256": {
+    "ashima_goyal": "15285d89e27df50eb7620571759a91f5c9ea5216ddcfd1dfba925596e288e598",
+    "jayanth_varma": "1dfc52436650f6dff9fd93907c6a6aa78ddeca11db03fb4ed82d27e1f9a36661",
+    "michael_patra": "fa56136e555a3c53c46b2848e8fa7c1a8e654e6c1ae4e4c88718f9eadb66e470",
+    "rajiv_ranjan": "a459d16268f224e96d7a80e406b82d5d2029ac4743081cf0ad597fc5440f9d45",
+    "shaktikanta_das": "9e7f29b32637388a60ea6abedfdf0861cffd8c6b2e43e0eef12ccb9e24eca667",
+    "shashanka_bhide": "d5cfc96836d1495cea06dc9ac3d10ca081182a8eb7265202bb86bb86928ac687"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, September 28-30, 2022"
+}

@@ -1,0 +1,41 @@
+{
+  "defined_before_new_primary_evaluation": true,
+  "new_primary_evaluation_has_not_occurred": true,
+  "criteria": [
+    {
+      "criterion": "A",
+      "name": "Reference fidelity and justified departures",
+      "acceptance_evidence": "Version-specific full-text/source hashes; section/protocol map; verify necessary mechanisms; Taylor distinct; no imported performance"
+    },
+    {
+      "criterion": "B",
+      "name": "Important incremental contribution",
+      "acceptance_evidence": "Consequential frozen mechanism beyond geography, primary-source comparison including limitations of unavailable revised methods; empirical mechanism estimate"
+    },
+    {
+      "criterion": "C",
+      "name": "Source/timing/persona/label validity",
+      "acceptance_evidence": "Pre-cutoff sourced input histories and membership, declared missing history/labels, typed rate and stance targets; eligible frozen cohort"
+    },
+    {
+      "criterion": "D",
+      "name": "Identification, baselines and empirical execution",
+      "acceptance_evidence": "Equal prefix/matched branch resource allocation, own state retained, chair copying excluded, fresh live final generations, purposeful hold/calibration baselines"
+    },
+    {
+      "criterion": "E",
+      "name": "Measurement/uncertainty/no pseudoreplication",
+      "acceptance_evidence": "Predeclared agreement/dispersion and forecasting/dissent endpoints, meeting-unit paired estimates, temporal uncertainty, replication and missingness sensitivity"
+    },
+    {
+      "criterion": "F",
+      "name": "Integrated reproducibility/provenance/failure transparency",
+      "acceptance_evidence": "Immutable input/config/code/raw identities, bounded accounting, fail-closed execution, independent source-to-result recomputation and corruption controls"
+    },
+    {
+      "criterion": "G",
+      "name": "Conclusions proportional to evidence",
+      "acceptance_evidence": "Simulator-local scope, separate adaptation/contribution/readiness conclusions; nulls/failures retained; no certification or unsupported causal/welfare claim"
+    }
+  ]
+}

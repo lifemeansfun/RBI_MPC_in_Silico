@@ -1,0 +1,43 @@
+{
+  "source_commit": "7f2436bc4f32d6021b1e885eb49286c850de9139",
+  "document_sha256": "480c80505e8d53866d3931f3edb672a382d89a0c2c596d9f00aa1d8bc2bd3a83",
+  "structural_checks": "passed",
+  "rendered_pages": 18,
+  "tables": 7,
+  "figures": 2,
+  "rendered_equations": 4,
+  "linked_references": 14,
+  "render_directory": "/private/tmp/rbi_main_paper_2026_10_06/qa_delivery",
+  "scope": "Document integrity and formatting only; no research simulations executed",
+  "visual_review": {
+    "status": "passed",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "resolution": "original",
+    "finding": "No clipping, overlap, missing equation glyphs, split table rows or page-number defects observed"
+  },
+  "independent_fact_check": {
+    "scope": "Frozen-source document and table verification",
+    "status": "passed",
+    "empirical_replication": false,
+    "verified": "Table 2 eight rows; Table 3 six rows; Appendix A eight meetings and dissent sets; Appendix B 21 coefficients; two shocks and six ablations"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdp_20200831",
+  "url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2020-21.pdf",
+  "role": "gdp_release_pdf",
+  "format": "pdf",
+  "release_date": "2020-08-31",
+  "reference_period": "FY2020-21Q1",
+  "discovery": "Official source found through primary-domain web search/open, 2026-10-05",
+  "retrieved_at_utc": "2026-10-05T14:54:12.377261+00:00",
+  "status_code": 200,
+  "final_url": "https://mospi.gov.in/sites/default/files/press_release/PRESS_NOTE-Q1_2020-21.pdf",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Mon, 05 Oct 2026 14:57:24 GMT",
+    "Content-Type": "application/pdf",
+    "Content-Length": "328186",
+    "Connection": "keep-alive",
+    "Last-Modified": "Mon, 31 Aug 2020 12:32:42 GMT",
+    "ETag": "\"5f4cedea-501fa\"",
+    "Accept-Ranges": "bytes",
+    "Expires": "Wed, 04 Nov 2026 14:57:24 GMT",
+    "Cache-Control": "max-age=2592000, public",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "bytes": 328186,
+  "acquired": true,
+  "local_file": "raw/gdp_20200831.pdf",
+  "sha256": "a89d91b589fb63528f8be994817fd93f64ab370eed1d065032328a539cbe1706"
+}

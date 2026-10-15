@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "principal_artifact_count": 52,
+  "portable_input_files": 420,
+  "portable_code_files": 78,
+  "criterion_links_verified": true,
+  "failed_checks": [],
+  "forbidden_bundle_files": [],
+  "scope": "Artifact links/bytes and absence of forbidden file copies; not an independent scientific review"
+}

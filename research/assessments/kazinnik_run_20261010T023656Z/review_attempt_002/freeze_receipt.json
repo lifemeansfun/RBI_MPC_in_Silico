@@ -1,0 +1,10 @@
+{
+  "snapshot": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi-final-critique-20261010-kpvt9449/input",
+  "source_manifest_sha256": "e849cf8d79416ae509f4b880f9cefcd13e50e676f32ba5235f35bfbe869890a1",
+  "files": 2731,
+  "freeze_utc": "2026-10-10T03:23:39.626467+00:00",
+  "excludes_parent_assessment_matrix_and_prior_reviews": true,
+  "shared_runtime": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv",
+  "copied_context_free_scientific_inputs_only": true,
+  "source_working_tree_identity": "78de7f75bda03d696205b188af17b9540e02a172"
+}

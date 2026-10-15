@@ -1,0 +1,492 @@
+{
+  "baseline": "always no dissent, no fitting",
+  "scope": "offline exposed source-label diagnostic, zero model calls",
+  "channels": {
+    "literal_rate_no": {
+      "n_meetings": 13,
+      "n_member_targets": 78,
+      "observed_targets": 72,
+      "unknown_targets": 6,
+      "observed_fraction": 0.9230769230769231,
+      "observed_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 3,
+        "true_negative": 69,
+        "observed_positive": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "complete_meetings": [
+        "2024-10-09",
+        "2024-12-06",
+        "2025-02-07",
+        "2025-04-09",
+        "2025-06-06",
+        "2025-08-06",
+        "2025-10-01",
+        "2025-12-05",
+        "2026-02-06",
+        "2026-04-08",
+        "2026-06-05",
+        "2026-08-05"
+      ],
+      "complete_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 3,
+        "true_negative": 69,
+        "observed_positive": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "complete_meeting_exact_match_pct": 83.33333333333333,
+      "completion_bounds": {
+        "precision": null,
+        "recall_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "f1_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "some_completions_have_no_positive_truth": false,
+        "all_completions_have_no_positive_truth": false,
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness"
+      },
+      "meeting_counts": [
+        {
+          "meeting_date": "2024-10-09",
+          "roster_size": 6,
+          "fn": 1,
+          "tn": 5
+        },
+        {
+          "meeting_date": "2024-12-06",
+          "roster_size": 6,
+          "fn": 2,
+          "tn": 4
+        },
+        {
+          "meeting_date": "2025-02-07",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-04-09",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-06-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-08-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-10-01",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-12-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-02-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-04-08",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-06-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-08-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-10-07",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        }
+      ],
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict"
+    },
+    "rate_choice_disagreement": {
+      "n_meetings": 13,
+      "n_member_targets": 78,
+      "observed_targets": 78,
+      "unknown_targets": 0,
+      "observed_fraction": 1.0,
+      "observed_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 4,
+        "true_negative": 74,
+        "observed_positive": 4,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "complete_meetings": [
+        "2024-10-09",
+        "2024-12-06",
+        "2025-02-07",
+        "2025-04-09",
+        "2025-06-06",
+        "2025-08-06",
+        "2025-10-01",
+        "2025-12-05",
+        "2026-02-06",
+        "2026-04-08",
+        "2026-06-05",
+        "2026-08-05",
+        "2026-10-07"
+      ],
+      "complete_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 4,
+        "true_negative": 74,
+        "observed_positive": 4,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "complete_meeting_exact_match_pct": 76.92307692307692,
+      "completion_bounds": {
+        "precision": null,
+        "recall_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "f1_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "some_completions_have_no_positive_truth": false,
+        "all_completions_have_no_positive_truth": false,
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness"
+      },
+      "meeting_counts": [
+        {
+          "meeting_date": "2024-10-09",
+          "roster_size": 6,
+          "fn": 1,
+          "tn": 5
+        },
+        {
+          "meeting_date": "2024-12-06",
+          "roster_size": 6,
+          "fn": 2,
+          "tn": 4
+        },
+        {
+          "meeting_date": "2025-02-07",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-04-09",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-06-06",
+          "roster_size": 6,
+          "tn": 5,
+          "fn": 1
+        },
+        {
+          "meeting_date": "2025-08-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-10-01",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-12-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-02-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-04-08",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-06-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-08-05",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2026-10-07",
+          "roster_size": 6,
+          "tn": 6
+        }
+      ],
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict"
+    },
+    "formal_stance_disagreement": {
+      "n_meetings": 13,
+      "n_member_targets": 78,
+      "observed_targets": 20,
+      "unknown_targets": 58,
+      "observed_fraction": 0.2564102564102564,
+      "observed_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 20,
+        "observed_positive": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "complete_meetings": [
+        "2024-10-09",
+        "2024-12-06",
+        "2025-02-07"
+      ],
+      "complete_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 18,
+        "observed_positive": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "complete_meeting_exact_match_pct": 100.0,
+      "completion_bounds": {
+        "precision": null,
+        "recall_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "f1_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "some_completions_have_no_positive_truth": true,
+        "all_completions_have_no_positive_truth": false,
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness"
+      },
+      "meeting_counts": [
+        {
+          "meeting_date": "2024-10-09",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2024-12-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-02-07",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-04-09",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-06-06",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-08-06",
+          "roster_size": 6,
+          "unknown_predicted_negative": 5,
+          "tn": 1
+        },
+        {
+          "meeting_date": "2025-10-01",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-12-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-02-06",
+          "roster_size": 6,
+          "tn": 1,
+          "unknown_predicted_negative": 5
+        },
+        {
+          "meeting_date": "2026-04-08",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-06-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-08-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-10-07",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        }
+      ],
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict"
+    },
+    "formal_stance_disagreement_strict_sensitivity": {
+      "n_meetings": 13,
+      "n_member_targets": 78,
+      "observed_targets": 18,
+      "unknown_targets": 60,
+      "observed_fraction": 0.23076923076923078,
+      "observed_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 18,
+        "observed_positive": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "complete_meetings": [
+        "2024-10-09",
+        "2024-12-06",
+        "2025-02-07"
+      ],
+      "complete_case": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 18,
+        "observed_positive": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "complete_meeting_exact_match_pct": 100.0,
+      "completion_bounds": {
+        "precision": null,
+        "recall_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "f1_given_positive_truth": [
+          0.0,
+          0.0
+        ],
+        "some_completions_have_no_positive_truth": true,
+        "all_completions_have_no_positive_truth": false,
+        "interpretation": "Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness"
+      },
+      "meeting_counts": [
+        {
+          "meeting_date": "2024-10-09",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2024-12-06",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-02-07",
+          "roster_size": 6,
+          "tn": 6
+        },
+        {
+          "meeting_date": "2025-04-09",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-06-06",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-08-06",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-10-01",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2025-12-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-02-06",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-04-08",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-06-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-08-05",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        },
+        {
+          "meeting_date": "2026-10-07",
+          "roster_size": 6,
+          "unknown_predicted_negative": 6
+        }
+      ],
+      "scope": "Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict"
+    }
+  }
+}

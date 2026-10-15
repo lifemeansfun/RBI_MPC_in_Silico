@@ -1,0 +1,153 @@
+{
+  "scope": "offline engineering and diagnostic validation; not independent live-model, forecasting, persuasion or external-validity evidence",
+  "final_code_and_input_sha256": {
+    "src/behavioral/debate_orchestrator.py": "911f0bcfcc3d4e8df31f74aececef1d729d7fc93215f2c68bdcae6ad1ebc0789",
+    "src/schemas/debate_schema.py": "2478243e661288aad1a220acceac6f172c17e67090fbe0070d561498c9f44ea9",
+    "src/schemas/decision_space.py": "59f785af5c6a086a1c5a9c8666466aaf0353ef7892aaee3377f5b6740b82ffa0",
+    "src/attribution/attribution_runner.py": "b52d35fa16e7077f2c0cbb038aa9027a78c6eef08adcd277e5da18d7b73df4bc",
+    "src/rule_engine/engine.py": "8e8bc06660ddc4edf52885627faad617a9b837ae703696cd1408d4a034221c77",
+    "src/scenarios/scenario_runner.py": "02dffa59c8ab532cffda5a8dbbb2e56d1cd451777fb51717f5c34afa59b2978b",
+    "src/scenarios/run_counterfactual_experiments.py": "90c50267ad46a56f2e98fbe5be7a94efd54178fed34eee6f8e65eaf991401411",
+    "tests/test_deliberation_upgrade.py": "db96d0926656a1e3e383f3d5ac582bc0c15ea57223e42545a1de0ca57160c250",
+    "tests/test_attribution_and_scenarios.py": "24cae77ad5576f4795c0b29aed6bf19e4dcd046561b0d4c8ebdbfbf350c02a8a",
+    "tests/test_debate_mock.py": "219f0c889383ec17013aafb8efc2abd099a8bf34a6080839f82143906e848dcf",
+    "src/persona_engine/provenance.py": "668b5c76a8712c7462b01b03c1d85f06d58b19da74a1fe989a3b31a903b5936e",
+    "config/config.yaml": "e678df5131e48ae8cdfdd6a42b5b33d0f300c0865eea516be808ac2f7ac72f57"
+  },
+  "raw_log_sha256": {
+    "pytest_prefixed_regressions.log": "b1e16f264e64951b0049dc3870b9d1f63beecb4bc6c33eae6a1ac5da051aeba2",
+    "pytest_final_candidate.log": "a1c457ad4fd2d2e832410a22788f0b61c16ccdd488219046648cedb241cdacbe",
+    "pytest_integration_final.log": "62603da2db5f0a8a19806844a52834479fcc1b9b25c069d8e3ac786f44b7c67f",
+    "fullpath_scenarios.log": "3ed9f6418188245db1c60c1705738b611a2d554515a57fa21e032671dc8f1575",
+    "pytest_mask_prefixed.log": "5bd9a9e4e7d582442bb4c6050c5aa799a9d8e1ea5544e0bacef0cb9b034204a4",
+    "pytest_fixed.log": "e0736576814882d2b7199f5d0e2ab6d7176c05948d46562c855c1466aa4ff6b8",
+    "pytest_final2.log": "caa8f2d38e26a3cc013337c4e58eb3d93925418bfea02180b114f894e6026145",
+    "pytest_logger_prefixed.log": "af3902b3e9ae3fb590ba4b12497ba04d83d5b5b88c16562da9d88d07bccaf1b5",
+    "pytest_deliberation_final.log": "d55175bda597bc56df07c0fd1dc873c90fee57c6c21c877a6ac10c4893e35d94",
+    "pytest_final.log": "e9bfd339a58caf6416daf772a794630fec200de07fc5fa32eb2b7b2ce0952c1e",
+    "pytest_parent_prefixed.log": "836d1bfa9e90b48e1d4e6346a34b014ab078f34ad2a4e5e744646b37079c370b",
+    "pytest_stable.log": "9fb03bc69f8fc0a09f666c078fe93afea7c3bbe73673f73d2cd5adb4d9ab223a",
+    "pytest_semantic_prefixed.log": "29d8387351c549a5bc82860a19a83fdfce8bbfb701f7e1b205cc603abb07d7a7",
+    "pytest_fixed4.log": "a4f311bb236c050dcede4d9515f62f014d9096c4a017f708658ac5b7cffdfda9",
+    "pytest_fixed2.log": "4aa4d068df67132ceafa097d6ff4b29995fce98d73b68685b9dfb1fd653e6e55",
+    "pytest_initial.log": "074971a5f02b38c08ecb3c205c544a2ede4318bdae4747405d71b913f20203ea",
+    "pytest_fixed3.log": "89c7d7dafa98c75dad2da20ffc9d9bc3206fd7cda49a15972ab81bf2ee803735"
+  },
+  "final_suite": "........................................................................ [ 74%]\n.........................                                                [100%]\n97 passed in 4.21s",
+  "earlier_failed_checks_preserved": true,
+  "fullpath": {
+    "provider_calls": 0,
+    "mock_round_artifacts": 288,
+    "meeting_outcomes": 12,
+    "condition_outcomes": {
+      "fed_baseline": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "monsoon_baseline_outgoing_removed_michael_patra": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "taper_shock": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      },
+      "monsoon_baseline_mute_food_inflation": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      },
+      "pandemic_baseline": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "monsoon_shock": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      },
+      "monsoon_baseline_mute_monsoon": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      },
+      "monsoon_baseline": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "monsoon_baseline_outgoing_removed_jayanth_varma": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "taper_baseline": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "legacy_unverified"
+      },
+      "fed_shock": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      },
+      "pandemic_shock": {
+        "rate": 0,
+        "stance": "withdrawal_of_accommodation",
+        "evidence_types": [
+          "mock"
+        ],
+        "input_track": "counterfactual"
+      }
+    },
+    "scenarios": 4,
+    "attribution_records": 6,
+    "evidence_type": "mock",
+    "baseline_input_track": "legacy_unverified",
+    "comparator_status": "assumed_parameters_not_fitted"
+  },
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "git_branch": "project_upgrade_codex",
+  "verification": {
+    "ast_parse": 11,
+    "git_diff_check": "passed prior to final suite"
+  }
+}

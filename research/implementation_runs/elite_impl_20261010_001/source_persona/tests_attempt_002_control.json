@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/verification/run_isolated_pytest.py",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/tests_attempt_002",
+    "tests/test_executable_rolling_and_eligibility.py"
+  ],
+  "timeout_seconds": 1200,
+  "started_at_unix": 1791635659.736773,
+  "exit_code": 0,
+  "elapsed_seconds": 137.04717803001404
+}

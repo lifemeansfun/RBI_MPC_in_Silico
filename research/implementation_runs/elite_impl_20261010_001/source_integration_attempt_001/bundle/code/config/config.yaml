@@ -1,0 +1,61 @@
+project:
+  name: "RBI_MPC_In_Silico"
+  version: "3.0.0-research-upgrade"
+
+run:
+  provider: "gemini"                      # "gemini" | "openai" | "anthropic" | "ollama" | "mock"
+  dev_model: "gemini-3.1-flash-lite"
+  final_model: "gemini-3.1-flash-lite"
+  fallback_models: []                    # A different model is a separately frozen condition
+  rate_limit_rpm: 5                       # Google AI Studio Free Tier limit is 5 RPM
+  budget_usd_cap: 25.0
+  temperature: 0.6
+  n_replicates: 3
+  seed_base: 42
+  use_cache: true
+  cache_dir: ".cache/llm_cache.sqlite"
+  max_output_tokens: 2048
+  request_timeout_seconds: 60
+  model_epoch: "2026-10-05-standard-api"
+  budget_ledger_path: ".cache/research_v3_budget.sqlite"
+
+decision_space:
+  action_set_bps: [-50, -25, 0, 25, 35, 40, 50]
+  simulate_stance: true
+  stance_set: ["withdrawal_of_accommodation", "neutral", "accommodative"]
+
+panels:
+  primary_roster: "2020_2024"
+  primary_panel_start: "2020-10-01"
+  primary_panel_end: "2024-08-31"
+  calibration_holdout_split: 0.68         # Explicit historical split: 17 calibration / 8 exposed retrospective evaluation
+  forward_test_panel_start: "2024-10-01"
+  forward_test_panel_end: "latest"
+
+taylor_rule:
+  r_star_pct: 1.4
+  pi_star_pct: 4.0
+  hp_filter_lambda: 14400                 # Ravn-Uhlig monthly parameter
+  smoothing_rho: 0.75                     # Interest rate inertia
+  default_alpha: 1.5
+  default_beta: 0.5
+  default_gamma: 0.2                      # Open-economy US Fed Funds sensitivity
+  us_neutral_rate_pct: 2.5
+
+monte_carlo:
+  n_draws: 1000
+  macro_noise_std_pct: 0.20
+
+validation:
+  # Descriptive channel thresholds; empirical readiness requires separate evidence.
+  directional_accuracy_threshold: 0.75
+  stance_accuracy_threshold: 0.70
+  dissent_f1_threshold: 0.50
+  exact_rate_accuracy_threshold: 0.75
+  rate_dissent_f1_threshold: 0.50
+  stance_dissent_f1_threshold: 0.50
+
+debate_protocol:
+  rounds: 4                               # 1: Stance, 2: Rebuttal, 3: Deliberation, 4: Binding Vote
+  order_mode: "fixed_governor_last"
+  cross_visibility: true

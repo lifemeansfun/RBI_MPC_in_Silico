@@ -1,0 +1,102 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-05-02",
+    "corpus_manifest_hash": "9f3dbdb139fc1c5f91544987f55c72f86efadf0f76b9e6e9c8c19aedeeb94bfe",
+    "hawk_dove_score": 0.2971246006389776,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"A global conviction seems to have firmed up that the inflation spike is due to Covid-19 related supply bottlenecks and therefore is temporary.\" (2021-08-06)",
+      "\"The Ukraine war has lasted more than a month, uncertainties continue, oil prices are volatile, supply disruptions will raise inflation but also reduce demand; the continued high impact of Covid-19 in major countries will have similar effects.37.\" (2022-04-08)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-05-02",
+    "corpus_manifest_hash": "9f3dbdb139fc1c5f91544987f55c72f86efadf0f76b9e6e9c8c19aedeeb94bfe",
+    "hawk_dove_score": 0.3023255813953488,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"In the last several meetings, my statements have expressed the belief that the balance of risk and reward is in favour of monetary accommodation.\" (2021-08-06)",
+      "\"However, I would like to point out that the hostilities in Europe have imparted an adverse shock not only to inflation, but also to growth.\" (2022-04-08)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-05-02",
+    "corpus_manifest_hash": "9f3dbdb139fc1c5f91544987f55c72f86efadf0f76b9e6e9c8c19aedeeb94bfe",
+    "hawk_dove_score": 0.3837837837837838,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"With infections plateauing and vaccination underway on a national scale, people are stepping out of isolation and workplaces are filling up.\" (2021-08-06)",
+      "\"In a world in which deglobalisation seems imminent, one thing has become globalised and that is the alarm about inflation.\" (2022-04-08)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-05-02",
+    "corpus_manifest_hash": "9f3dbdb139fc1c5f91544987f55c72f86efadf0f76b9e6e9c8c19aedeeb94bfe",
+    "hawk_dove_score": 0.1901840490797546,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"This one was no less, given the nuancing required at this critical juncture – to continue to foster growth which is nascent even as there is a sharp spike in inflation almost across the globe.\" (2021-08-06)",
+      "\"The Monetary Policy Committee (MPC) meets at a time when tectonic shifts in geopolitical environment are materially affecting the global and domestic outlook on both inflation and growth.\" (2022-04-08)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-05-02",
+    "corpus_manifest_hash": "9f3dbdb139fc1c5f91544987f55c72f86efadf0f76b9e6e9c8c19aedeeb94bfe",
+    "hawk_dove_score": -0.1813953488372093,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The revival of economic activity seen in Q4: FY2020-21 was disrupted in the first two months of Q1: FY2021-22 by the surge of second wave of the Covid-19 pandemic.\" (2021-08-06)",
+      "\"At the beginning of February 2022, a number of indicators reflected an environment of sustained overall growth for the economy.\" (2022-04-08)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-04-08; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

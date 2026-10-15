@@ -1,0 +1,106 @@
+[
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2024-10-09",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2024-12-06",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-02-07",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-04-09",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "accommodative",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-06-06",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-08-06",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-10-01",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2025-12-05",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2026-02-06",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2026-04-08",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2026-06-05",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2026-08-05",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": true,
+    "source_stance": "neutral",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  },
+  {
+    "mapping": null,
+    "meeting_id": "rbi_mpc_2026-10-07",
+    "ontology": "expanded_source_v2",
+    "simulator_v1_supported": false,
+    "source_stance": "calibrated_tightening",
+    "status": "outcome_diagnostic_excluded_from_persona_inputs"
+  }
+]

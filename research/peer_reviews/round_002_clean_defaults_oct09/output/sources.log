@@ -1,0 +1,288 @@
+"""Build a separate source-linked historical panel without altering legacy data.
+
+This is a partially covered retrospective panel, not an untouched evaluation. No
+unsourced core inflation, output gap, exchange rate or liquidity values are filled.
+"""
+import csv
+import hashlib
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+from bs4 import BeautifulSoup
+from src.data_pipeline.statement_extractor import StatementExtractor
+from src.schemas.macro_schema import MacroMeetingSnapshot, ObservationEvidence
+
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def digest(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def normalized(text):
+    return " ".join(text.split())
+
+
+def write_new(path, obj):
+    payload = (json.dumps(obj, sort_keys=True, indent=2, allow_nan=False) + "\n").encode()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        if path.read_bytes() != payload:
+            raise FileExistsError(f"Different immutable panel artifact exists: {path}")
+    else:
+        with path.open("xb") as stream:
+            stream.write(payload)
+
+
+def build_vintage_panel(output_dir=None, fed_ledger=None, gdp_ledger=None):
+    output_dir = Path(output_dir or ROOT / "data/processed/vintage_v2").resolve()
+    cpi_dir = ROOT / "research/source_ledgers/cpi_vintages"
+    cpi_path = cpi_dir / "meeting_cpi_ledger.csv"
+    cpi_rows = sorted(csv.DictReader(cpi_path.open(newline="")), key=lambda r: r["decision_date"])
+    # These are adjudicated source labels, retained independently of reviewer verdicts.
+    adjudication_path = ROOT / "results/methodology_audit_2026-10-05/data_adjudicated_truth.json"
+    adjudication = json.loads(adjudication_path.read_text())
+    labels = {r["adjudicated_meeting_date"]: r for r in adjudication["mapping"]}
+    if len(labels) != len(cpi_rows) or len(cpi_rows) != 25:
+        raise ValueError("Expected complete unique 25-meeting historical joins")
+    import pandas as pd
+    legacy_path = ROOT / "data/processed/macro_panel.parquet"
+    legacy = pd.read_parquet(legacy_path).set_index("meeting_date").to_dict("index")
+    fed_path = Path(fed_ledger or ROOT / "research/source_ledgers/gdp_fed_vintages/meeting_fed_ledger.csv").resolve()
+    fed = {r["decision_date"]: r for r in csv.DictReader(fed_path.open(newline=""))} if fed_path.exists() else {}
+    gdp_path = Path(gdp_ledger).resolve() if gdp_ledger else None
+    gdp = {r["decision_date"]: r for r in csv.DictReader(gdp_path.open(newline=""))} if gdp_path else {}
+    prior_dir = ROOT / "research/source_ledgers/prior_policy"
+    prior_record = json.loads((prior_dir / "source_record.json").read_text())
+    prior_source = prior_dir / "august_2020_resolution.html"
+    if digest(prior_source) != prior_record["sha256"]:
+        raise ValueError("Changed initial policy source")
+    previous = {"repo": 4.0, "stance": "accommodative", "source": prior_source,
+                "release": "2020-08-07T00:00:00+05:30", "period": "2020-08-06", "url": prior_record["url"]}
+    snapshots, truth_rows = [], []
+    for cpi in cpi_rows:
+        meeting = cpi["decision_date"]
+        label = labels[meeting]
+        source = ROOT / "data/raw/minutes_html" / label["source_file"]
+        soup = BeautifulSoup(source.read_bytes(), "html.parser")
+        meta = StatementExtractor.extract_meeting_metadata(soup)
+        if meta["decision_date"] != meeting:
+            raise ValueError("Truth decision date does not agree with source title")
+        text = normalized(soup.get_text(" ", strip=True))
+        for excerpt in label["resolution_evidence"]:
+            if normalized(excerpt) not in text:
+                raise ValueError(f"Truth resolution excerpt missing: {meeting}")
+        old = legacy[label["panel_meeting_date"]]
+        rate_action = int(old["real_rate_decision_bps"])
+        stance = old["real_stance_decision"]
+        post_repo = round(previous["repo"] + rate_action / 100, 2)
+        # Require a source clause linking the repo rate to the actual published level.
+        clauses = [normalized(n.get_text(" ", strip=True)) for n in soup.find_all(["li", "p"])]
+        rate_clauses = [t for t in clauses if "policy repo rate" in t.lower() and len(t) < 1000
+                        and any(float(value) == post_repo for value in re.findall(r"(?:to|at)\s+([\d.]+)\s*per cent", t))]
+        if not rate_clauses:
+            raise ValueError(f"Cannot verify published repo level {post_repo} on {meeting}")
+        truth = {"meeting_date": meeting, "actual_rate_bps": rate_action, "actual_stance": stance,
+                 "rate_dissenters": label["formal_rate_dissenters"],
+                 "stance_dissenters": label["formal_stance_dissenters"],
+                 "reservations": label["stance_reservations_without_recorded_against_vote"],
+                 "guidance_disagreements": label["forward_guidance_dissenters"],
+                 "source_file": str(source.relative_to(ROOT)), "source_sha256": digest(source),
+                 "source_lines": label["source_lines"], "resolution_evidence": label["resolution_evidence"],
+                 "publication_date": meta["publication_date"],
+                 "definition": "formal rate and stance dissent only; reservations and guidance are separate"}
+        truth_rows.append(truth)
+        observations = []
+        def add(field, value, units, period, vintage, released, url, path, sha, pointer, basis):
+            observations.append(ObservationEvidence(field=field, value=value, units=units,
+                reference_period=period, vintage=vintage, released_at=released, source_url=url,
+                source_file=str(Path(path).relative_to(ROOT)), source_sha256=sha,
+                source_pointer=pointer, availability_basis=basis))
+        for field, value in (("current_repo_rate_pct", previous["repo"]), ("prev_stance", previous["stance"])):
+            add(field, value, "% per annum" if field.startswith("current") else "stance category",
+                previous["period"], "prior published resolution", previous["release"], previous["url"],
+                previous["source"], digest(previous["source"]), "Published resolution repo rate and stance",
+                "Prior resolution release; conservative following calendar day availability")
+        cpi_source = cpi_dir / cpi["local_source_file"]
+        for field, column in (("cpi_headline_yoy_pct", "headline_cpi_yoy_pct"), ("cfpi_yoy_pct", "cfpi_yoy_pct")):
+            add(field, float(cpi[column]), "YoY %", cpi["reference_month"], cpi["vintage"],
+                cpi["documented_release_timestamp_ist"], cpi["source_url"], cpi_source,
+                cpi["source_sha256"], cpi["source_table_pointer"], cpi["release_timestamp_basis"])
+        extra = {}
+        if fed:
+            row = fed[meeting]
+            if row["series"] != "us_fed_target_upper_pct":
+                raise ValueError("Fed series must be target upper bound")
+            field, value = "us_fed_funds_rate_pct", float(row["value"])
+            extra[field] = value
+            add(field, value, row["units"], row["reference_period"], row["vintage"],
+                row["documented_release_timestamp_utc"], row["source_url"], fed_path.parent / row["local_source_file"],
+                row["source_sha256"], row["source_table_pointer"], row["release_timestamp_basis"])
+        # GDP integration uses an independently verified ledger with the same evidence contract.
+        if gdp:
+            row = gdp[meeting]
+            for field in ("gdp_growth_yoy_pct", "gva_growth_yoy_pct"):
+                if row.get(field):
+                    value = extra[field] = float(row[field])
+                    add(field, value, "YoY %", row["latest_reference_period"], row["vintage"], row["documented_release_timestamp_ist"],
+                        row["source_url"], gdp_path.parent / row["local_source_file"], row["source_sha256"],
+                        row["gdp_source_table_pointer" if field.startswith("gdp") else "gva_source_table_pointer"], row["release_timestamp_basis"])
+        snapshot = MacroMeetingSnapshot(meeting_date=meeting, meeting_start_date=cpi["meeting_start_date"],
+            information_cutoff=cpi["cutoff_exclusive_ist"], input_track="source_linked",
+            current_repo_rate_pct=previous["repo"], prev_stance=previous["stance"],
+            cpi_headline_yoy_pct=float(cpi["headline_cpi_yoy_pct"]), cfpi_yoy_pct=float(cpi["cfpi_yoy_pct"]),
+            observations=tuple(observations), **extra)
+        snapshot.verify_sources(ROOT)
+        snapshots.append(snapshot.model_dump(mode="json"))
+        previous = {"repo": post_repo, "stance": stance, "source": source,
+                    "release": meta["publication_date"] + "T23:59:59+05:30", "period": meeting,
+                    "url": f"https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid={source.stem.rsplit('_', 1)[-1]}"}
+    write_new(output_dir / "snapshots.json", snapshots)
+    write_new(output_dir / "truth.json", truth_rows)
+    write_new(output_dir / "manifest.json", {"version": "source-linked-historical-v2", "n_meetings": len(snapshots),
+        "historical_split": {"calibration_through": "2023-04-06", "calibration_count": 17,
+                             "retrospective_evaluation_after": "2023-04-06", "evaluation_count": 8},
+        "exposure_status": "Entire 2020-2024 panel was already inspected; evaluation is retrospective",
+        "snapshots_sha256": digest(output_dir / "snapshots.json"), "truth_sha256": digest(output_dir / "truth.json"),
+        "cpi_ledger_sha256": digest(cpi_path), "fed_ledger_sha256": digest(fed_path) if fed else None,
+        "gdp_ledger_sha256": digest(gdp_path) if gdp else None,
+        "withheld_fields": [f for f in ("cpi_core_yoy_pct", "cpi_food_yoy_pct", "output_gap_pct", "iip_growth_yoy_pct",
+                              "system_liquidity_cr", "usd_inr_exchange_rate", "brent_crude_usd_bbl", "monsoon_departure_lpa_pct")],
+        "full_open_economy_benchmark_ready": False,
+        "limits": "Printed release timing and current retained bytes; not independently archived contemporaneous hashes."})
+    return snapshots, truth_rows
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "data/processed/vintage_v2")
+    parser.add_argument("--gdp-ledger", type=Path)
+    args = parser.parse_args()
+    build_vintage_panel(args.output_dir, gdp_ledger=args.gdp_ledger)
+"""Verify dated corpus bytes and fitted persona fields before research generation."""
+import json
+from datetime import date, datetime
+from pathlib import Path
+
+from src.infra.evidence import file_hash
+from src.infra.exceptions import GenerationProvenanceError
+from src.schemas.persona_schema import MemberPersona
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def verify_personas(personas, cutoff, *, source_root=None, corpus_manifest_path=None):
+    root = Path(source_root or PROJECT_ROOT).resolve()
+    if isinstance(cutoff, datetime):
+        if cutoff.tzinfo is None:
+            raise GenerationProvenanceError('Persona prediction cutoff needs a timezone')
+        cutoff = cutoff.date().isoformat()
+    if not isinstance(cutoff, str) or date.fromisoformat(cutoff).isoformat() != cutoff:
+        raise GenerationProvenanceError('Persona prediction cutoff must be an ISO calendar day')
+    validated = [MemberPersona.model_validate(p.model_dump()) for p in personas]
+    if not validated or len({p.member_id for p in validated}) != len(validated):
+        raise GenerationProvenanceError('Distinct nonempty research personas required')
+    manifests = {}
+    for persona in validated:
+        if (persona.provenance_status != 'dated_corpus' or not persona.calibration_cutoff
+                or persona.calibration_cutoff > cutoff):
+            raise GenerationProvenanceError('Undated, assumed or future corpus cannot be research persona evidence')
+        path = Path(corpus_manifest_path) if corpus_manifest_path else (
+            root / 'personas' / f'calibration_{persona.calibration_cutoff}_v2' / 'corpus_manifest.json')
+        if not path.is_file() or file_hash(path) != persona.corpus_manifest_hash:
+            raise GenerationProvenanceError('Missing or changed persona corpus manifest')
+        if path not in manifests:
+            manifests[path] = json.loads(path.read_text())
+        manifest = manifests[path]
+        if manifest.get('calibration_cutoff') != persona.calibration_cutoff:
+            raise GenerationProvenanceError('Persona and corpus cutoffs differ')
+        member = manifest.get('members', {}).get(persona.member_id)
+        if not member or not member.get('corpus_sources') or not member.get('meetings_count'):
+            raise GenerationProvenanceError('Persona has no actual pre-cutoff corpus')
+        fields = {'name': 'name', 'role': 'role', 'is_internal': 'is_internal',
+                  'hawk_dove_score': 'calibrated_hawk_dove', 'stance_bias': 'stance_bias',
+                  'voting_priority': 'voting_priority', 'biography': 'biography',
+                  'key_themes': 'exemplar_quotes'}
+        if any(getattr(persona, field) != member.get(key) for field, key in fields.items()):
+            raise GenerationProvenanceError('Persona fields differ from their frozen corpus fit')
+        if persona.system_prompt_override is not None:
+            raise GenerationProvenanceError('An unregistered prompt override is not the frozen corpus fit')
+        rows = member['corpus_sources']
+        if len(rows) != member['meetings_count'] or len({r['decision_date'] for r in rows}) != len(rows):
+            raise GenerationProvenanceError('Corpus source rows are duplicated or incomplete')
+        for row in rows:
+            decision = date.fromisoformat(row['decision_date']).isoformat()
+            publication = date.fromisoformat(row['publication_date']).isoformat()
+            if not decision <= publication < persona.calibration_cutoff:
+                raise GenerationProvenanceError('Corpus statement is unavailable at calibration cutoff')
+            for name in ('source', 'statement'):
+                source = (root / row[f'{name}_file']).resolve()
+                if (not source.is_relative_to(root) or not source.is_file()
+                        or file_hash(source) != row[f'{name}_sha256']):
+                    raise GenerationProvenanceError(f'Missing or changed persona {name} bytes')
+    return validated
+cat: research/source_ledgers/expanded_panel_oct08_doublecode/source_qa.json: No such file or directory
+45ZI. Meetings of Monetary Policy Committee.
+(1) The Bank shall organise at least four meetings of the Monetary Policy
+Committee in a year.
+(2) The meeting schedule of the Monetary Policy Committee for a year shall be
+published by the Bank at least one week before the first meeting in that year.
+(3) The meeting schedule may be changed only—
+(a) by way of a decision taken at a prior meeting of the Monetary Policy
+Committee; or
+(b) if, in the opinion of the Governor, an additional meeting is required or a
+meeting is required to be rescheduled due to administrative exigencies.
+(4) Any change in meeting schedule shall be published by the Bank as soon as
+practicable.
+(5) The quorum for a meeting of the Monetary Policy Committee shall be four
+Members, at least one of whom shall be the Governor and in his absence, the
+Deputy Governor who is the Member of the Monetary Policy Committee.
+(6) The meetings of the Monetary Policy Committee shall be presided over by
+the Governor, and in his absence by the Deputy Governor who is a Member of
+the Monetary Policy Committee.
+(7) Each Member of the Monetary Policy Committee shall have one vote.
+(8) All questions which come up before any meeting of the Monetary Policy
+Committee shall be decided by a majority of votes by the Members present and
+voting, and in the event of an equality of votes, the Governor shall have a
+second or casting vote.
+(9) The Central Government may, if it considers necessary, convey its views in
+writing to the Monetary Policy Committee from time to time.
+(10) The vote of each Member of the Monetary Policy Committee for a
+proposed resolution shall be recorded against such Member.
+(11) Each Member of the Monetary Policy Committee shall write a statement
+specifying the reasons for voting in favour of, or against the proposed
+resolution.
+89
+(12) The procedure, conduct, code of confidentiality and any other incidental
+matter for the functioning of the Monetary Policy Committee shall be such as
+may be specified by the regulations made by the Central Board.
+(13) The proceeding of the Monetary Policy Committee shall be confidential.
+45ZJ. Steps to be taken to implement decision of Monetary Policy Committee.
+(1) The Bank shall publish a document explaining the steps to be taken by it to
+implement the decisions of the Monetary Policy Committee, including any
+changes thereto.
+(2) The particulars to be included in such document and the frequency of
+publications of such document shall be such as may be specified by the
+regulations made by the Central Board.
+45ZK. Publication of decisions.
+The Bank shall publish, after the conclusion of every meeting of the Monetary
+Policy Committee, the resolution adopted by the said Committee;
+45ZL. Publication of proceedings of meeting of Monetary Policy Committee.
+The Bank shall publish, on the fourteenth day after every meeting of the
+Monetary Policy Committee, the minutes of the proceedings of the meeting
+which shall include the following, namely:—
+(a) the resolution adopted at the meeting of the Monetary Policy Committee;
+(b) the vote of each member of the Monetary Policy Committee, ascribed to
+such member, on resolutions adopted in the said meeting; and
+(c) the statement of each member of the Monetary Policy Committee under
+sub-section (11) of section 45ZL on the resolutions adopted in the said
+meeting.
+45ZM. Monetary Policy Report.
+(1) The Bank shall, once in every six months, publish a document to be called
+the Monetary Policy Report, explaining—
+(a) the sources of inflation; and
+(b) the forecasts of inflation for the period between six to eighteen months
+from the date of publication of the document.
+90

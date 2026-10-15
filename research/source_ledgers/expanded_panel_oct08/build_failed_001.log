@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/source_ledgers/expanded_panel_oct08/build_ledger.py", line 264, in <module>
+    main()
+  File "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/source_ledgers/expanded_panel_oct08/build_ledger.py", line 238, in main
+    assert any("accommodative" in p.lower() for p in own_stance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

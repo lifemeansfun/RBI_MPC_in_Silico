@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "results/upgrade_validation_round_002/scenario_probe.py",
+    "--source-root",
+    "results/upgrade_validation_round_002/scenario_doses_attempt_002/checkout",
+    "--output",
+    "results/upgrade_validation_round_002/scenario_dose_probe_001"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "source_root_import_explicit": true,
+  "provider_calls": 0
+}

@@ -1,0 +1,445 @@
+{
+  "schema_version": "reference-fidelity-v1",
+  "prepared_date": "2026-10-10",
+  "scope": "Four specified primary full texts; bounded official acquisition of the July2026 revision. Internal evidence record, not an independent scientific review or exhaustive novelty search.",
+  "status_semantics": {
+    "verified_document_fact": "Read in exact retained primary bytes; not replicated empirical behavior",
+    "author_reported_result": "Published paper/abstract result; not independently reproduced",
+    "inference": "Comparison or limitation inferred from inspected text",
+    "unavailable": "No full-method evidence acquired"
+  },
+  "gates": {
+    "novelty": "open",
+    "domain_importance": "open",
+    "scientific_generation": "not_performed",
+    "empirical_superiority": "not_established",
+    "current_revised_reference_methods": "unavailable"
+  },
+  "records": [
+    {
+      "id": "kazinnik_gwu_aug2025",
+      "primary_url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+      "version": "GWU2025-005, cover August2025; title August31,2025",
+      "evidence_depth": "full_text",
+      "pdf_file": "sources/gwu_retained_august_2025.pdf",
+      "sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+      "pdf_pages": 52,
+      "inspected_method_pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "method": {
+        "agents": 12,
+        "composition": {
+          "governors": 7,
+          "reserve_bank_presidents": 5
+        },
+        "model": "OpenAI GPT family; stage-specific configurations not fully specified in inspected appendix",
+        "information": [
+          "FRED/BLS indicators",
+          "member biographies/speeches",
+          "synthetic Beige Book",
+          "news"
+        ],
+        "snapshot_date": "2025-07-31",
+        "initial_priors_shared_between": [
+          "LLM",
+          "MonteCarlo"
+        ],
+        "committee_stages": [
+          "optional consensus",
+          "three discussion rounds",
+          "Chair agenda",
+          "numeric adoption/dissent"
+        ],
+        "adoption_agenda_weight": 0.3,
+        "political_pressure_agenda_weight": 0.1,
+        "interventions": [
+          "dovish Chair proposal bias",
+          "reduced Chair authority",
+          "direction-dependent appointment/career dissent costs",
+          "labor-data revision",
+          "standalone revision appendix"
+        ]
+      },
+      "validation": {
+        "meeting_case": "July2025",
+        "llm_iterations": "approximately100; individual tables differ",
+        "monte_carlo_draws": 10000,
+        "result_status": "author_reported",
+        "multi_meeting_218_backtest_in_this_version": false
+      },
+      "overlap_inference": [
+        "member-persona monetary simulation",
+        "deliberation/consensus",
+        "political/institutional counterfactuals",
+        "same initial priors for comparator"
+      ],
+      "specific_hbn_prefix_documented": false,
+      "limits": {
+        "premeeting_vintage_proof": "not_independently_audited; July31 snapshot for July30 meeting and August revision remain explicit timing differences",
+        "independent_behavioral_effect": "not_proved_by_LLM_minus_MC",
+        "publication_cover_request": "Contact authors before publication citation; no contact made"
+      }
+    },
+    {
+      "id": "kazinnik_ssrn_jul2026",
+      "primary_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+      "version": "SSRN indexed record: last revised July12,2026; date written August31,2025",
+      "evidence_depth": "indexed_abstract_and_metadata_only",
+      "fulltext_sha256": null,
+      "fulltext_acquired": false,
+      "methods": null,
+      "abstract_author_reports": {
+        "meeting_count": 218,
+        "cohort": "2000-June2026",
+        "mae_bps": 8.3,
+        "within_25_bps_percent": 94,
+        "direction_accuracy_percent": 91,
+        "claims": [
+          "composition larger than Chair/mandate effects",
+          "deliberation increases consensus without forecasting gain",
+          "institutional resistance to captured Chair differs from public persuasion"
+        ]
+      },
+      "acquisition_attempt_ids": [
+        "ssrn_record_5424097",
+        "ssrn_papers_delivery_5424097",
+        "ssrn_download_delivery_5424097"
+      ],
+      "status": "unavailable_full_methods",
+      "indexed_evidence_file": "web_official_revision_access.json",
+      "same_as_gwu_aug2025": false,
+      "inference": "Revised abstract has closer contribution overlap; exact interventions, cohort construction, model and validation cannot be inferred from older PDF."
+    },
+    {
+      "id": "fedsight_v1",
+      "primary_url": "https://arxiv.org/pdf/2512.15728v1",
+      "version": "arXiv2512.15728v1, December5,2025; NeurIPS2025 finance workshop",
+      "evidence_depth": "full_text",
+      "pdf_file": "sources/fedsight_arxiv_2512_15728v1.pdf",
+      "sha256": "909d1b279a4a1f03876040b56bb3838584deaa6b08a2f44708fd4571411649f5",
+      "pdf_pages": 9,
+      "inspected_method_pages": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "method": {
+        "platform": "CrewAI",
+        "model": "GPT4o",
+        "agents": {
+          "analyst": 1,
+          "economist": 1,
+          "representative_member": 3
+        },
+        "member_archetypes": [
+          "Regional Pragmatists",
+          "Academic Balancers",
+          "Central Policymakers"
+        ],
+        "information": [
+          "structured six-domain predictors",
+          "Beige Book",
+          "dot plot",
+          "FedWatch"
+        ],
+        "claimed_availability": "two days before each meeting",
+        "variants": [
+          "baseline",
+          "ICL historical feedback memory",
+          "Chain-of-Draft <=30-word steps then revision"
+        ]
+      },
+      "validation": {
+        "meetings": 16,
+        "cohort": "February2023-December2024",
+        "labels": {
+          "hold": 9,
+          "cut": 3,
+          "hike": 4
+        },
+        "runs_per_meeting": 5,
+        "secondary_cohort": "eight2018 meetings",
+        "comparators": [
+          "MiniFed",
+          "ordinalRandomForest",
+          "linearRegression"
+        ],
+        "cod_exact_accuracy_percent": 93.75,
+        "cod_direction_accuracy_percent": 100,
+        "cod_agent_accuracy_percent": 90.22,
+        "cod_vote_stability_percent": 93.33,
+        "result_status": "author_reported"
+      },
+      "metric_semantics": {
+        "agent_accuracy": "member vote versus realized meeting decision",
+        "vote_stability": "member consistency across runs",
+        "pair_agreement": "not these metrics"
+      },
+      "overlap_inference": [
+        "structured+narrative monetary forecasting",
+        "heterogeneous agents",
+        "deliberation/voting",
+        "prompt efficiency variants"
+      ],
+      "specific_hbn_prefix_documented": false,
+      "limits": [
+        "code withheld for contractual/IP reasons",
+        "small cohort",
+        "model version dependence",
+        "institutional reasoning is argued, not a leakage test",
+        "stability is not meeting-level statistical significance"
+      ]
+    },
+    {
+      "id": "takano_v1",
+      "primary_url": "https://arxiv.org/pdf/2511.02469v1",
+      "version": "arXiv2511.02469v1, November4,2025; PRIMA accepted metadata; proceedings methods not inspected",
+      "evidence_depth": "full_text",
+      "pdf_file": "sources/takano_arxiv_2511_02469v1.pdf",
+      "sha256": "f219d80f69f8a4c6cb5cc81fbd35fada1f16e28dea579d0129d7e42ff568dbef",
+      "pdf_pages": 17,
+      "inspected_method_pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "method": {
+        "model": "gpt-4o-mini-2024-07-18",
+        "temperature": 1,
+        "agents": 7,
+        "beliefs": {
+          "strong_hawk": 1,
+          "moderate_hawk": 1,
+          "neutral": 3,
+          "moderate_dove": 1,
+          "strong_dove": 1
+        },
+        "max_rounds": 10,
+        "early_stop": "unanimity",
+        "fallback": "largest vote count",
+        "information": [
+          "BeigeBook summary sentences",
+          "three months unemployment/inflation",
+          "last two policy rate decisions"
+        ],
+        "peer_channel": [
+          "previous labels",
+          "justifications",
+          "belief profiles"
+        ],
+        "ablations": [
+          "remove text",
+          "remove numeric indicators",
+          "remove rate history",
+          "no belief seven-vote baseline",
+          "no debate = retained main round0 majority"
+        ]
+      },
+      "validation": {
+        "selected_meetings": 60,
+        "labels": {
+          "raise": 15,
+          "hold": 30,
+          "lower": 15
+        },
+        "stated_span": "January2000-December2025",
+        "selection": "random with label quotas; exclude if target equals preceding or following target",
+        "forecast_horizon": "two weeks at BeigeBook release",
+        "macro_f1_full": 0.476,
+        "macro_f1_no_debate": 0.415,
+        "result_status": "author_reported",
+        "repeat_count": "not specified in inspected experimental section"
+      },
+      "overlap_inference": [
+        "peer influence",
+        "belief labels",
+        "consensus",
+        "component ablation",
+        "reuse of actual round0 baseline outputs"
+      ],
+      "specific_hbn_prefix_documented": false,
+      "limits": [
+        "outcome-based selection is retrospective",
+        "December2025 stated span postdates November4v1 submission",
+        "Experiment3 discussed but absent from Table2; visually confirmed PDFp12",
+        "formal latent conditional-independence assumption is not empirical construct validation"
+      ]
+    },
+    {
+      "id": "acl606",
+      "primary_url": "https://aclanthology.org/2025.findings-acl.606.pdf",
+      "version": "FindingsACL2025 July; pp11640-11671",
+      "evidence_depth": "full_text",
+      "pdf_file": "sources/acl_2025_findings_606.pdf",
+      "sha256": "f4c85dab5bc9dada9d6bc4554dbc7224386769039bc1c2fcff7d856e31863f6d",
+      "pdf_pages": 32,
+      "inspected_method_pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "method": {
+        "model": [
+          "Llama3-8B-Instruct",
+          "Llama3-70B-Instruct"
+        ],
+        "default_agents": 3,
+        "personas": "task-generated experts",
+        "default_voting_start_round": 3,
+        "memory_rounds": 2,
+        "main_max_rounds": 5,
+        "consensus_protocols": [
+          "majority",
+          "supermajority",
+          "unanimity"
+        ],
+        "voting_protocols": [
+          "simple",
+          "ranked",
+          "approval",
+          "cumulative"
+        ],
+        "other_interventions": [
+          "critical replies",
+          "reasoning-only hides final solutions",
+          "all-agent drafting",
+          "collective improvement",
+          "number of agents",
+          "discussion rounds"
+        ],
+        "tie_handling": "continue discussion; capped failures use first-agent solution"
+      },
+      "validation": {
+        "eval_samples_per_run": {
+          "MMLU": 375,
+          "MMLUPro": 374,
+          "GPQA": 250,
+          "StrategyQA": 330,
+          "MuSR": 152,
+          "SQuAD2": 373
+        },
+        "runs": 3,
+        "comparators": [
+          "single agent",
+          "single agent CoT",
+          "protocol alternatives"
+        ],
+        "uncertainty": "standard deviation across three runs",
+        "domain": "knowledge/reasoning benchmarks, no monetary meetings",
+        "result_status": "author_reported"
+      },
+      "overlap_inference": [
+        "one-variable protocol comparisons",
+        "withholding final-answer content",
+        "agreement-versus-task-accuracy distinction",
+        "diversity/round-count analyses"
+      ],
+      "specific_hbn_prefix_documented": false,
+      "limits": [
+        "reasoning-only visibility contrast is substantive overlap",
+        "no monetary external validity established",
+        "paper absence of exact HBN does not prove novelty beyond these texts"
+      ]
+    }
+  ],
+  "current_candidate": {
+    "status": "repository-implemented engineering mechanism; scientific evaluation not run",
+    "scope": "simulator_local",
+    "agents": 6,
+    "shared_calls": 23,
+    "prefix": "R1-R3 all six, R4 five non-Governor; actual outputs/receipts frozen",
+    "branch_calls": 1,
+    "conditions": {
+      "H": "withhold peers' realized final ballots and rationales",
+      "B": "member/rate/stance tuples labelled binding ballots",
+      "N": "identical tuples labelled nonbinding preferences"
+    },
+    "held_fixed": [
+      "macro/personas",
+      "R1-R3 generated outputs",
+      "Governor own state",
+      "five realized final ballots",
+      "earlier argument/identity/order"
+    ],
+    "rationales": "never in final-information channel; earlier arguments/preferences remain visible in every branch",
+    "candidate_estimands": [
+      "B-H visibility",
+      "B-N binding-status versus numerical anchoring"
+    ],
+    "outcomes": [
+      "rate/stance/joint pair agreement from six ballots",
+      "prediction error separately",
+      "institutional resolution separately"
+    ],
+    "pair_agreement_ceiling": {
+      "global_absolute_effect": 0.3333333333333333,
+      "pairs": 15,
+      "attainable_range": "depends on five realized peers"
+    },
+    "failure_policy": "all planned failures retained; valid fragmentation preserves ballots",
+    "novelty_status": "unestablished",
+    "domain_importance_status": "unestablished"
+  },
+  "unresolved_dependencies": [
+    "July2026 exact revised full methods",
+    "broader scoped novelty evidence",
+    "human/construct/importance validation",
+    "frozen scientific protocol/funding",
+    "prospective or clearly labelled retrospective outcome evidence"
+  ],
+  "diagnostic_failures": [
+    {
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5213527",
+      "result": "web reader InternalError",
+      "date": "2026-10-10",
+      "excluded_reason": "Initial wrong identifier; not used as evidence"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2511.02469v1",
+      "operation": "web screenshot PDFpage12",
+      "result": "TimeoutError",
+      "fallback": "exact downloaded PDF rendered locally; Table2 verified"
+    }
+  ]
+}

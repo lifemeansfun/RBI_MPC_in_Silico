@@ -1,0 +1,870 @@
+"""Voting under RBI Act §45ZI(5),(7),(8), with explicit simulator assumptions.
+
+Primary source: https://dea.gov.in/files/acts_documents/Chapter_IIIF_RBI_Act.pdf
+§45ZL concerns publication of minutes, not casting votes. A six-voter simulation
+is stricter than legal quorum. Multiaction fragmentation resolution is synthetic,
+because a categorical menu is not the Act's vote on a specified question.
+"""
+
+from collections import Counter
+from dataclasses import dataclass
+from typing import Any, Sequence, Optional
+
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS, validate_rate_action
+
+
+@dataclass(frozen=True)
+class AggregationResult:
+    winning_action: Any
+    vote_tally: dict[Any, int]
+    tie_broken_by_governor: bool
+    majority_achieved: bool
+    dissenting_members: list[str]
+    synthetic_resolution: bool = False
+    resolution_policy: str = "majority"
+    full_roster_simulation: bool = True
+    members_present: int = 6
+
+
+class InstitutionalRuleEngine:
+    """Stateless voting; authority and synthetic choices remain separately labeled."""
+
+    @staticmethod
+    def validate_attendance(
+        member_votes: dict[str, Any], governor_id: str, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None,
+        attending_member_ids: Optional[Sequence[str]] = None,
+    ) -> None:
+        if full_roster and len(member_votes) != 6:
+            raise ValueError(f"Full-roster simulation requires exactly 6 member votes; received {len(member_votes)}")
+        attendees = list(attending_member_ids) if attending_member_ids is not None else list(member_votes)
+        if any(not isinstance(m, str) or not m for m in attendees) or len(set(attendees)) != len(attendees):
+            raise ValueError("Attending member identities must be distinct nonempty strings")
+        if any(not isinstance(m, str) or not m for m in member_votes):
+            raise ValueError("Voter identities must be nonempty strings")
+        if not set(member_votes).issubset(attendees):
+            raise ValueError("A vote cannot be cast by an absent member")
+        if not 4 <= len(attendees) <= 6:
+            raise ValueError("RBI Act §45ZI(5) quorum requires 4 to 6 attending members")
+        if full_roster and set(attendees) != set(member_votes):
+            raise ValueError("Full-roster simulation requires all six attendees to vote")
+        if governor_id not in attendees:
+            if full_roster:
+                raise ValueError(f"Governor {governor_id} must be present in member votes")
+            if deputy_governor_id is None or deputy_governor_id not in attendees:
+                raise ValueError("Quorum must include Governor, or Deputy Governor in Governor's absence")
+        if not member_votes:
+            raise ValueError("At least one member present must vote")
+
+    @classmethod
+    def _aggregate(
+        cls, member_votes: dict[str, Any], governor_id: str, valid_actions: Sequence[Any], *,
+        kind: str, full_roster: bool, deputy_governor_id: Optional[str],
+        attending_member_ids: Optional[Sequence[str]], fragmentation_policy: str, prior_action: Any,
+    ) -> AggregationResult:
+        cls.validate_attendance(member_votes, governor_id, full_roster=full_roster,
+                                deputy_governor_id=deputy_governor_id,
+                                attending_member_ids=attending_member_ids)
+        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+            raise ValueError("Unknown fragmentation policy")
+        for member, vote in member_votes.items():
+            if kind == "rate":
+                try:
+                    validate_rate_action(vote)
+                except ValueError as exc:
+                    raise ValueError(f"Vote {vote!r} by {member} is outside valid action set: {valid_actions}") from exc
+            if vote not in valid_actions:
+                raise ValueError(f"Vote {vote!r} by {member} is outside valid action set: {valid_actions}")
+        tally = dict(Counter(member_votes.values()))
+        top_action, top_count = max(tally.items(), key=lambda item: item[1])
+        majority = top_count > len(member_votes) / 2
+        casting = False
+        synthetic = False
+        policy = "majority"
+        if majority:
+            winner = top_action
+        elif len(tally) == 2 and len(set(tally.values())) == 1 and governor_id in member_votes:
+            winner = member_votes[governor_id]
+            casting = True
+            policy = "governor_casting_vote_45ZI_8"
+        else:
+            if fragmentation_policy == "reject":
+                raise ValueError("No majority or Governor-resolvable binary equality; declare a synthetic resolution policy")
+            synthetic = True
+            policy = fragmentation_policy
+            if fragmentation_policy == "status_quo":
+                if prior_action not in valid_actions:
+                    raise ValueError("Status-quo resolution requires a valid prior action")
+                winner = prior_action
+            else:
+                if governor_id not in member_votes:
+                    raise ValueError("Legacy synthetic fragmentation requires a Governor ballot")
+                gov_action = member_votes[governor_id]
+                if kind == "rate":
+                    weighted = sorted([*member_votes.values(), gov_action])
+                    winner = weighted[len(weighted) // 2]
+                    policy = "synthetic_governor_weighted_median"
+                else:
+                    winner = top_action if list(tally.values()).count(top_count) == 1 else gov_action
+                    policy = "synthetic_plurality_governor_priority"
+        return AggregationResult(
+            winning_action=winner, vote_tally=tally, tie_broken_by_governor=casting,
+            majority_achieved=majority,
+            dissenting_members=[m for m, action in member_votes.items() if action != winner],
+            synthetic_resolution=synthetic, resolution_policy=policy,
+            full_roster_simulation=full_roster,
+            members_present=len(attending_member_ids) if attending_member_ids is not None else len(member_votes),
+        )
+
+    @classmethod
+    def aggregate_rate_votes(
+        cls, member_votes: dict[str, int], governor_id: str,
+        valid_actions: Sequence[int] = RATE_ACTIONS_BPS, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None, attending_member_ids: Optional[Sequence[str]] = None,
+        fragmentation_policy: str = "legacy_synthetic", prior_action: int = 0,
+    ) -> AggregationResult:
+        return cls._aggregate(member_votes, governor_id, valid_actions, kind="rate",
+                              full_roster=full_roster, deputy_governor_id=deputy_governor_id,
+                              attending_member_ids=attending_member_ids,
+                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+
+    @classmethod
+    def aggregate_stance_votes(
+        cls, member_votes: dict[str, str], governor_id: str,
+        valid_stances: Sequence[str] = STANCE_ACTIONS, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None, attending_member_ids: Optional[Sequence[str]] = None,
+        fragmentation_policy: str = "legacy_synthetic", prior_action: Optional[str] = None,
+    ) -> AggregationResult:
+        return cls._aggregate(member_votes, governor_id, valid_stances, kind="stance",
+                              full_roster=full_roster, deputy_governor_id=deputy_governor_id,
+                              attending_member_ids=attending_member_ids,
+                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+"""
+Open-Economy Smoothed Taylor Rule Engine for the Rational Benchmark Track.
+Calculates implied nominal policy rate with central bank interest-rate inertia,
+inflation gap, output gap, and external US Federal Reserve interest rate differential.
+"""
+
+from dataclasses import dataclass
+from typing import Sequence
+import math
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.decision_space import RATE_ACTIONS_BPS
+
+
+@dataclass
+class MemberTaylorParameters:
+    """Taylor coefficients; fitting/assumption provenance is supplied by the study."""
+    member_id: str
+    alpha: float = 1.5   # Inflation gap sensitivity
+    beta: float = 0.5    # Output gap sensitivity
+    gamma: float = 0.2   # US Fed rate differential sensitivity
+
+    def __post_init__(self):
+        if not self.member_id or not all(math.isfinite(x) for x in (self.alpha, self.beta, self.gamma)):
+            raise ValueError("Taylor parameters require a member ID and finite coefficients")
+
+
+class SmoothedTaylorRule:
+    """
+    Implements:
+    r*_t = r_star + pi_t + alpha_i * (pi_t - pi_target) + beta_i * output_gap + gamma_i * (i_us - i_us_target)
+    r_t = rho * r_{t-1} + (1 - rho) * r*_t
+    """
+
+    def __init__(
+        self,
+        r_star_pct: float = 1.4,
+        pi_star_pct: float = 4.0,
+        smoothing_rho: float = 0.75,
+        us_neutral_rate_pct: float = 2.5,
+        action_set_bps: Sequence[int] = RATE_ACTIONS_BPS,
+    ):
+        if not all(math.isfinite(x) for x in (r_star_pct, pi_star_pct, smoothing_rho, us_neutral_rate_pct)):
+            raise ValueError("Taylor settings must be finite")
+        if not 0 <= smoothing_rho < 1:
+            raise ValueError("Taylor smoothing must be in [0,1)")
+        if not action_set_bps or len(set(action_set_bps)) != len(action_set_bps) or any(type(x) is not int or x not in RATE_ACTIONS_BPS for x in action_set_bps):
+            raise ValueError("Invalid Taylor action domain")
+        self.r_star = r_star_pct
+        self.pi_star = pi_star_pct
+        self.rho = smoothing_rho
+        self.us_neutral_rate = us_neutral_rate_pct
+        self.action_set_bps = action_set_bps
+
+    def compute_continuous_rate(
+        self,
+        snapshot: MacroMeetingSnapshot,
+        params: MemberTaylorParameters,
+    ) -> float:
+        """Computes the target nominal policy rate before discretization."""
+        # Inflation gap: pi_t - pi*
+        inflation_gap = snapshot.cpi_headline_yoy_pct - self.pi_star
+        # Output gap: y_t - y*
+        if params.beta != 0 and snapshot.output_gap_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced output gap; beta=0 is a reduced-input sensitivity")
+        output_gap = snapshot.output_gap_pct if snapshot.output_gap_pct is not None else 0.0
+        # External US Fed rate gap
+        if params.gamma != 0 and snapshot.us_fed_funds_rate_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced Fed target; gamma=0 is a reduced-input sensitivity")
+        us_rate_gap = snapshot.us_fed_funds_rate_pct - self.us_neutral_rate if snapshot.us_fed_funds_rate_pct is not None else 0.0
+
+        # Unsmoothed Taylor target: r* + pi_t + alpha*(pi - pi*) + beta*gap + gamma*us_gap
+        target_rate = (
+            self.r_star
+            + snapshot.cpi_headline_yoy_pct
+            + params.alpha * inflation_gap
+            + params.beta * output_gap
+            + params.gamma * us_rate_gap
+        )
+
+        # Apply interest rate smoothing with previous rate
+        prev_rate = snapshot.current_repo_rate_pct
+        smoothed_rate = self.rho * prev_rate + (1.0 - self.rho) * target_rate
+        return smoothed_rate
+
+    def compute_discrete_action(
+        self,
+        snapshot: MacroMeetingSnapshot,
+        params: MemberTaylorParameters,
+    ) -> tuple[int, str]:
+        """
+        Discretizes the implied continuous rate into the nearest valid basis point action
+        and assigns an implied policy stance.
+        Returns: (vote_bps, stance_string)
+        """
+        smoothed_rate = self.compute_continuous_rate(snapshot, params)
+        raw_change_bps = (smoothed_rate - snapshot.current_repo_rate_pct) * 100.0
+
+        # Discretize to closest action in action set
+        discrete_vote_bps = min(self.action_set_bps, key=lambda a: abs(a - raw_change_bps))
+
+        # Implied stance
+        if discrete_vote_bps > 0 or snapshot.cpi_headline_yoy_pct > (self.pi_star + 1.0):
+            implied_stance = "withdrawal_of_accommodation"
+        elif discrete_vote_bps < 0 and snapshot.cpi_headline_yoy_pct < self.pi_star:
+            implied_stance = "accommodative"
+        else:
+            implied_stance = "neutral"
+
+        return int(discrete_vote_bps), implied_stance
+"""Calibration-only bounded Taylor comparator with explicit reduced-input status."""
+from dataclasses import dataclass, asdict
+import hashlib
+import json
+from datetime import date
+import numpy as np
+from scipy.optimize import lsq_linear
+from src.rational.taylor_rule import SmoothedTaylorRule, MemberTaylorParameters
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.decision_space import RATE_ACTIONS_BPS
+
+
+@dataclass(frozen=True)
+class FittedTaylorComparator:
+    r_star: float
+    alpha: float
+    beta: float
+    gamma: float
+    rho: float
+    calibration_cutoff: str
+    calibration_dates: tuple[str, ...]
+    calibration_hash: str
+    fit_objective: str
+    input_scope: str
+    coefficient_bounds: tuple[tuple[float, ...], tuple[float, ...]]
+    bootstrap_coefficients: tuple[tuple[float, ...], ...]
+    bootstrap_seed: int
+    bootstrap_method: str
+    bootstrap_block_size: int
+    feature_names: tuple[str, ...]
+    design_rank: int
+    noise_basis: str = "No fitted observation-noise process; deterministic comparator"
+
+    def predict(self, snapshot):
+        if snapshot.meeting_date <= self.calibration_cutoff:
+            # This is allowed as a fitted diagnostic, never interpreted as heldout accuracy.
+            pass
+        rule = SmoothedTaylorRule(r_star_pct=self.r_star, smoothing_rho=self.rho)
+        params = MemberTaylorParameters("fitted_committee", self.alpha, self.beta, self.gamma)
+        return rule.compute_discrete_action(snapshot, params)
+
+    def to_dict(self):
+        return asdict(self)
+
+
+def fit_taylor_comparator(snapshots, actual_rate_actions, *, calibration_cutoff="2023-04-06",
+                          reduced_input=False, rho=.75, bootstrap_draws=500, seed=42, bootstrap_block_size=2):
+    """Fit a predeclared rho and bounded coefficients using calibration meetings only.
+
+    This fits committee rates, not individual preferences or dissent. Stance mapping
+    is a stated Taylor heuristic and has not been fitted to committee stance labels.
+    """
+    cutoff = date.fromisoformat(calibration_cutoff).isoformat()
+    if len(snapshots) != len(actual_rate_actions) or len(snapshots) < 8:
+        raise ValueError("Taylor calibration needs >=8 aligned meetings")
+    dates = [s.meeting_date for s in snapshots]
+    if len(set(dates)) != len(dates) or dates != sorted(dates) or any(d > cutoff for d in dates):
+        raise ValueError("Duplicate, unsorted or heldout meeting in calibration")
+    if (type(reduced_input) is not bool or type(rho) not in (int, float) or not np.isfinite(rho)
+            or not 0 <= rho < 1 or type(bootstrap_draws) is not int or bootstrap_draws < 1
+            or type(bootstrap_block_size) is not int or not 1 <= bootstrap_block_size <= len(snapshots)
+            or type(seed) is not int):
+        raise ValueError("Invalid calibration settings")
+    if any(type(action) is not int or action not in RATE_ACTIONS_BPS for action in actual_rate_actions):
+        raise ValueError('Calibration actions must be exact integer members of the shared action domain')
+    use_gap = not reduced_input
+    use_fed = all(s.us_fed_funds_rate_pct is not None for s in snapshots)
+    if not reduced_input and (not use_fed or any(s.output_gap_pct is None for s in snapshots)):
+        raise ValueError("Full open-economy comparator cannot be fitted without actual available gap and Fed inputs")
+    features = ["r_star", "alpha"] + (["beta"] if use_gap else []) + (["gamma"] if use_fed else [])
+    X = np.asarray([[1, s.cpi_headline_yoy_pct - 4]
+                    + ([s.output_gap_pct] if use_gap else [])
+                    + ([s.us_fed_funds_rate_pct - 2.5] if use_fed else []) for s in snapshots], dtype=float)
+    # Implied unsmoothed target after removing the observed CPI level.
+    y = np.asarray([(s.current_repo_rate_pct + int(action) / 100 - rho * s.current_repo_rate_pct) / (1-rho)
+                    - s.cpi_headline_yoy_pct for s, action in zip(snapshots, actual_rate_actions)])
+    if not np.isfinite(X).all() or not np.isfinite(y).all():
+        raise ValueError("Nonfinite comparator calibration")
+    lower = np.zeros(X.shape[1])
+    upper = np.asarray([5.0, 3.0] + ([2.0] if use_gap else []) + ([2.0] if use_fed else []))
+    def fit(rows):
+        result = lsq_linear(X[rows], y[rows], bounds=(lower, upper))
+        if not result.success or not np.isfinite(result.x).all():
+            raise ValueError("Comparator optimizer failed")
+        return tuple(float(v) for v in result.x)
+    coefficients = dict(zip(features, fit(np.arange(len(snapshots)))))
+    rng = np.random.default_rng(seed)
+    def block_rows():
+        starts = rng.integers(0, len(snapshots), int(np.ceil(len(snapshots)/bootstrap_block_size)))
+        return ((starts[:,None]+np.arange(bootstrap_block_size)) % len(snapshots)).ravel()[:len(snapshots)]
+    boot = tuple(fit(block_rows()) for _ in range(bootstrap_draws))
+    payload = {"snapshots": [s.model_dump(mode="json") for s in snapshots],
+               "actions": list(actual_rate_actions), "features": features, "rho": rho,
+               "bounds": [lower.tolist(), upper.tolist()], 'bootstrap_block_size':bootstrap_block_size,
+               'bootstrap_draws':bootstrap_draws, 'bootstrap_seed':seed}
+    digest = hashlib.sha256(json.dumps(payload, sort_keys=True, allow_nan=False).encode()).hexdigest()
+    return FittedTaylorComparator(coefficients["r_star"], coefficients["alpha"], coefficients.get("beta", 0),
+        coefficients.get("gamma", 0), rho, cutoff, tuple(dates), digest,
+        "bounded least squares of next policy repo rate; rho fixed before evaluation",
+        "reduced-input sensitivity; original output-gap scope remains unresolved" if reduced_input else "full open-economy",
+        (tuple(lower.tolist()), tuple(upper.tolist())), boot, seed,
+        'circular temporal-block sensitivity; small calibration sample, not identified structural uncertainty',
+        bootstrap_block_size, tuple(features), int(np.linalg.matrix_rank(X)))
+"""
+Monte Carlo Simulation Engine for the Rational Benchmark Track.
+Perturbs macroeconomic observations with assumed Gaussian noise across N=1,000 draws.
+The noise and fragmented-vote resolver are sensitivity assumptions, not fitted truth.
+Incorporates defensive numerical guards, NaN/None handling, and bounds checking.
+"""
+
+import numpy as np
+import logging
+import hashlib
+import json
+from typing import Sequence, Optional
+from dataclasses import dataclass
+
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.rational.taylor_rule import SmoothedTaylorRule, MemberTaylorParameters
+from src.rule_engine.engine import InstitutionalRuleEngine
+
+logger = logging.getLogger("rbi_mpc.monte_carlo")
+
+
+@dataclass
+class MonteCarloResult:
+    meeting_date: str
+    mean_implied_rate: float
+    modal_rate_decision_bps: int
+    modal_stance_decision: str
+    rate_distribution_pct: dict[int, float]
+    stance_distribution_pct: dict[str, float]
+    dissent_probability_by_member: dict[str, float]
+    rate_dissent_probability_by_member: dict[str, float]
+    stance_dissent_probability_by_member: dict[str, float]
+    noise_basis: str = "assumed Gaussian sensitivity, not estimated forecast errors"
+
+
+class MonteCarloEngine:
+    """Orchestrates noisy Monte Carlo draws and statistical aggregation with defensive validation."""
+
+    def __init__(
+        self,
+        taylor_rule: SmoothedTaylorRule,
+        n_draws: int = 1000,
+        noise_std_pct: float = 0.20,
+        seed: int = 42,
+    ):
+        if type(n_draws) is not int or n_draws < 1 or not np.isfinite(noise_std_pct) or noise_std_pct < 0:
+            raise ValueError("Monte Carlo needs positive integer draws and finite nonnegative noise")
+        self.rule = taylor_rule
+        self.n_draws = n_draws
+        self.noise_std = noise_std_pct
+        self.seed = seed
+
+    def simulate(
+        self,
+        snapshot: MacroMeetingSnapshot,
+        member_params: Sequence[MemberTaylorParameters],
+        governor_id: str = "shaktikanta_das",
+    ) -> MonteCarloResult:
+        """
+        Simulate a stated sensitivity under §45ZI majority/casting plus explicit synthetic fragmentation.
+        """
+        if len(member_params) != 6:
+            raise ValueError(f"Monte Carlo simulation requires exactly 6 members; got {len(member_params)}")
+        if len({p.member_id for p in member_params}) != 6 or governor_id not in {p.member_id for p in member_params}:
+            raise ValueError("Member parameters need unique IDs including Governor")
+        for params in member_params:
+            self.rule.compute_continuous_rate(snapshot, params)  # Reject required missing inputs before all draws.
+
+        rng = np.random.default_rng(self.seed)
+
+        base_cpi, base_gap, base_us = snapshot.cpi_headline_yoy_pct, snapshot.output_gap_pct, snapshot.us_fed_funds_rate_pct
+        parent_hash = hashlib.sha256(json.dumps(snapshot.model_dump(mode="json"), sort_keys=True).encode()).hexdigest()
+
+        # Generate perturbation vectors
+        cpi_noise = rng.normal(0.0, self.noise_std, self.n_draws)
+        gap_noise = rng.normal(0.0, self.noise_std * 1.5, self.n_draws)
+        us_noise = rng.normal(0.0, self.noise_std * 0.5, self.n_draws)
+
+        rate_decisions: list[int] = []
+        stance_decisions: list[str] = []
+        member_dissents: dict[str, int] = {p.member_id: 0 for p in member_params}
+        rate_dissents = {p.member_id: 0 for p in member_params}
+        stance_dissents = {p.member_id: 0 for p in member_params}
+        continuous_rates: list[float] = []
+
+        for i in range(self.n_draws):
+            # Noisy snapshot with clamped bounds
+            perturbed_cpi = float(base_cpi + cpi_noise[i])
+            perturbed_gap = float(base_gap + gap_noise[i]) if base_gap is not None else None
+            perturbed_us = float(np.clip(base_us + us_noise[i], 0, 20)) if base_us is not None else None
+            noisy_snap = MacroMeetingSnapshot.model_validate({**snapshot.model_dump(),
+                "input_track": "counterfactual", "parent_snapshot_hash": parent_hash,
+                "intervention": {"type": "assumed_monte_carlo_noise", "draw": i, "seed": self.seed,
+                                 "std_pct": self.noise_std, "fed_bounds": [0, 20]},
+                "cpi_headline_yoy_pct": perturbed_cpi, "output_gap_pct": perturbed_gap,
+                "us_fed_funds_rate_pct": perturbed_us})
+
+            member_rate_votes: dict[str, int] = {}
+            member_stance_votes: dict[str, str] = {}
+
+            for p in member_params:
+                r_vote, s_vote = self.rule.compute_discrete_action(noisy_snap, p)
+                member_rate_votes[p.member_id] = r_vote
+                member_stance_votes[p.member_id] = s_vote
+                continuous_rates.append(self.rule.compute_continuous_rate(noisy_snap, p))
+
+            # Full roster and fragmentation are simulator choices, not §45ZL.
+            rate_res = InstitutionalRuleEngine.aggregate_rate_votes(
+                member_rate_votes, governor_id=governor_id, valid_actions=self.rule.action_set_bps
+            )
+            stance_res = InstitutionalRuleEngine.aggregate_stance_votes(
+                member_stance_votes, governor_id=governor_id
+            )
+
+            rate_decisions.append(rate_res.winning_action)
+            stance_decisions.append(stance_res.winning_action)
+
+            for dissenter in set(rate_res.dissenting_members) | set(stance_res.dissenting_members):
+                member_dissents[dissenter] += 1
+            for dissenter in rate_res.dissenting_members:
+                rate_dissents[dissenter] += 1
+            for dissenter in stance_res.dissenting_members:
+                stance_dissents[dissenter] += 1
+
+        # Calculate empirical distributions
+        rate_tally: dict[int, int] = {}
+        for r in rate_decisions:
+            rate_tally[r] = rate_tally.get(r, 0) + 1
+        rate_dist = {k: round(v / self.n_draws * 100.0, 2) for k, v in sorted(rate_tally.items())}
+        modal_rate = max(rate_tally.items(), key=lambda x: x[1])[0]
+
+        stance_tally: dict[str, int] = {}
+        for s in stance_decisions:
+            stance_tally[s] = stance_tally.get(s, 0) + 1
+        stance_dist = {k: round(v / self.n_draws * 100.0, 2) for k, v in sorted(stance_tally.items())}
+        modal_stance = max(stance_tally.items(), key=lambda x: x[1])[0]
+
+        dissent_probs = {k: round(v / self.n_draws, 3) for k, v in member_dissents.items()}
+
+        return MonteCarloResult(
+            meeting_date=snapshot.meeting_date,
+            mean_implied_rate=float(np.mean(continuous_rates)),
+            modal_rate_decision_bps=modal_rate,
+            modal_stance_decision=modal_stance,
+            rate_distribution_pct=rate_dist,
+            stance_distribution_pct=stance_dist,
+            dissent_probability_by_member=dissent_probs,
+            rate_dissent_probability_by_member={k: v / self.n_draws for k, v in rate_dissents.items()},
+            stance_dissent_probability_by_member={k: v / self.n_draws for k, v in stance_dissents.items()},
+        )
+"""Declared synthetic sensitivity scenarios; numerical wedges are simulator-local."""
+
+import hashlib
+import json
+import math
+from typing import Sequence, Any
+from dataclasses import dataclass, field
+
+from src.schemas.macro_schema import MacroMeetingSnapshot, OBSERVABLE_FIELDS
+from src.rational.taylor_rule import SmoothedTaylorRule, MemberTaylorParameters
+from src.rule_engine.engine import InstitutionalRuleEngine
+from src.infra.evidence import content_hash
+
+
+def apply_snapshot_intervention(
+    baseline: MacroMeetingSnapshot, updates: dict[str, Any], name: str,
+    assumptions: dict[str, Any] | None = None,
+) -> MacroMeetingSnapshot:
+    """Preserve every unrelated validated field, and validate changed fields afresh.
+
+    Existing observation records describe the parent snapshot, not the synthetic
+    values. The counterfactual track and intervention manifest make that explicit.
+    """
+    # Revalidate to reject bypassed/model_construct inputs before preserving their evidence.
+    baseline = type(baseline).model_validate(baseline.model_dump())
+    if baseline.input_track == "source_linked":
+        baseline.verify_sources()
+    payload = baseline.model_dump(mode="json")
+    unknown = set(updates) - set(OBSERVABLE_FIELDS)
+    if unknown:
+        raise ValueError(f"Unknown intervention fields: {sorted(unknown)}")
+    for key, value in updates.items():
+        if isinstance(value, (int, float)) and (isinstance(value, bool) or not math.isfinite(value)):
+            raise ValueError(f"Intervention field {key} must be finite")
+    fields = type(baseline).model_fields
+    parent_hash = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
+    payload.update(updates)
+    if "input_track" in fields:
+        payload["input_track"] = "counterfactual"
+    if "parent_snapshot_hash" in fields:
+        payload["parent_snapshot_hash"] = parent_hash
+    if "intervention" in fields:
+        payload["intervention"] = {"name": name, "changed_fields": updates, "assumptions": assumptions or {},
+                                   "estimand_scope": "simulator_local", "parent_snapshot_hash": parent_hash,
+                                   "parent_snapshot": baseline.model_dump(mode="json")}
+    return type(baseline).model_validate(payload)
+
+
+def _add_if_observed(value: float | None, delta: float) -> float | None:
+    return None if value is None else value + delta
+
+
+def _finite_parameter(value: float, name: str) -> None:
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+        raise ValueError(f"{name} must be finite")
+
+
+@dataclass
+class ScenarioOutcome:
+    scenario_name: str
+    baseline_repo_rate_change_bps: int
+    shocked_repo_rate_change_bps: int
+    baseline_stance: str
+    shocked_stance: str
+    rate_wedge_bps: int
+    stance_changed: bool
+    dissenting_members_shocked: list[str]
+    estimand_scope: str = "simulator_local"
+    scenario_evidence_type: str = "synthetic_sensitivity"
+    dissenting_members_stance_shocked: list[str] = field(default_factory=list)
+    baseline_snapshot_hash: str = ""
+    shocked_snapshot_hash: str = ""
+    resolution_policies: dict[str, str] = field(default_factory=dict)
+    synthetic_resolutions: dict[str, bool] = field(default_factory=dict)
+
+
+class ScenarioRunner:
+    """Apply declared shocks to a fitted or explicitly assumed rational comparator."""
+    def __init__(self, taylor_rule: SmoothedTaylorRule, fragmentation_policy: str = "reject"):
+        self.rule = taylor_rule
+        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+            raise ValueError("Unknown scenario fragmentation policy")
+        self.fragmentation_policy = fragmentation_policy
+
+    def _run(self, name, baseline, shocked, member_params, governor_id):
+        if len({p.member_id for p in member_params}) != len(member_params):
+            raise ValueError("Comparator members must have unique identities")
+        baseline_votes = {p.member_id: self.rule.compute_discrete_action(baseline, p) for p in member_params}
+        shock_votes = {p.member_id: self.rule.compute_discrete_action(shocked, p) for p in member_params}
+        settings = {"fragmentation_policy": self.fragmentation_policy}
+        base_r = InstitutionalRuleEngine.aggregate_rate_votes({m: v[0] for m, v in baseline_votes.items()}, governor_id, prior_action=0, **settings)
+        base_s = InstitutionalRuleEngine.aggregate_stance_votes({m: v[1] for m, v in baseline_votes.items()}, governor_id, prior_action=baseline.prev_stance, **settings)
+        shock_r = InstitutionalRuleEngine.aggregate_rate_votes({m: v[0] for m, v in shock_votes.items()}, governor_id, prior_action=0, **settings)
+        shock_s = InstitutionalRuleEngine.aggregate_stance_votes({m: v[1] for m, v in shock_votes.items()}, governor_id, prior_action=shocked.prev_stance, **settings)
+        return ScenarioOutcome(name, base_r.winning_action, shock_r.winning_action,
+                               base_s.winning_action, shock_s.winning_action,
+                               shock_r.winning_action - base_r.winning_action,
+                               shock_s.winning_action != base_s.winning_action, shock_r.dissenting_members,
+                               dissenting_members_stance_shocked=shock_s.dissenting_members,
+                               baseline_snapshot_hash=content_hash(baseline.model_dump(mode="json")),
+                               shocked_snapshot_hash=content_hash(shocked.model_dump(mode="json")),
+                               resolution_policies={"baseline_rate": base_r.resolution_policy, "baseline_stance": base_s.resolution_policy,
+                                                    "shocked_rate": shock_r.resolution_policy, "shocked_stance": shock_s.resolution_policy},
+                               synthetic_resolutions={"baseline_rate": base_r.synthetic_resolution, "baseline_stance": base_s.synthetic_resolution,
+                                                      "shocked_rate": shock_r.synthetic_resolution, "shocked_stance": shock_s.synthetic_resolution})
+
+    def run_monsoon_food_shock(self, baseline_snapshot, member_params, governor_id,
+                               food_cpi_shock_pct=4.0, monsoon_departure_pct=-20.0):
+        shock = self.build_monsoon_food_shock_snapshot(baseline_snapshot, food_cpi_shock_pct, monsoon_departure_pct)
+        return self._run("Monsoon Failure & Food Inflation Shock", baseline_snapshot, shock, member_params, governor_id)
+
+    def run_us_fed_spillover_shock(self, baseline_snapshot, member_params, governor_id,
+                                  fed_hike_bps=75, inr_depreciation=1.50):
+        shock = self.build_us_fed_spillover_snapshot(baseline_snapshot, fed_hike_bps, inr_depreciation)
+        return self._run(f"US Federal Reserve Spillover Shock (+{fed_hike_bps} bps)", baseline_snapshot, shock, member_params, governor_id)
+
+    def run_pandemic_easing_shock(self, baseline_snapshot, member_params, governor_id):
+        return self._run("2020 Pandemic Easing Cycle", baseline_snapshot,
+                         self.build_pandemic_easing_snapshot(baseline_snapshot), member_params, governor_id)
+
+    def run_taper_tantrum_shock(self, baseline_snapshot, member_params, governor_id):
+        return self._run("2013 Taper Tantrum Crisis", baseline_snapshot,
+                         self.build_taper_tantrum_snapshot(baseline_snapshot), member_params, governor_id)
+
+    @staticmethod
+    def build_monsoon_food_shock_snapshot(baseline_snapshot, food_cpi_shock_pct=4.0, monsoon_departure_pct=-20.0):
+        _finite_parameter(food_cpi_shock_pct, "food_cpi_shock_pct")
+        _finite_parameter(monsoon_departure_pct, "monsoon_departure_pct")
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": _add_if_observed(baseline_snapshot.cpi_headline_yoy_pct, food_cpi_shock_pct * 0.458),
+            "cpi_food_yoy_pct": _add_if_observed(baseline_snapshot.cpi_food_yoy_pct, food_cpi_shock_pct),
+            "iip_growth_yoy_pct": _add_if_observed(baseline_snapshot.iip_growth_yoy_pct, -0.5),
+            "output_gap_pct": _add_if_observed(baseline_snapshot.output_gap_pct, -0.2),
+            "monsoon_departure_lpa_pct": monsoon_departure_pct,
+        }, "monsoon_food_shock", {"food_headline_weight": 0.458, "iip_drag_pct": -0.5, "output_gap_drag_pct": -0.2})
+
+    @staticmethod
+    def build_us_fed_spillover_snapshot(baseline_snapshot, fed_hike_bps=75, inr_depreciation=1.50):
+        _finite_parameter(fed_hike_bps, "fed_hike_bps")
+        _finite_parameter(inr_depreciation, "inr_depreciation")
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": _add_if_observed(baseline_snapshot.cpi_headline_yoy_pct, 0.30),
+            "cpi_core_yoy_pct": _add_if_observed(baseline_snapshot.cpi_core_yoy_pct, 0.20),
+            "system_liquidity_cr": _add_if_observed(baseline_snapshot.system_liquidity_cr, -30000.0),
+            "usd_inr_exchange_rate": _add_if_observed(baseline_snapshot.usd_inr_exchange_rate, inr_depreciation),
+            "us_fed_funds_rate_pct": _add_if_observed(baseline_snapshot.us_fed_funds_rate_pct, fed_hike_bps / 100.0),
+        }, "us_fed_spillover", {"fed_hike_bps": fed_hike_bps, "inr_depreciation": inr_depreciation,
+                                "headline_delta_pct": 0.30, "core_delta_pct": 0.20, "liquidity_drain_cr": 30000.0})
+
+    @staticmethod
+    def build_pandemic_easing_snapshot(baseline_snapshot):
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": 4.50, "cpi_core_yoy_pct": 3.50, "cpi_food_yoy_pct": 5.50,
+            "iip_growth_yoy_pct": -16.7, "output_gap_pct": -4.0,
+            "system_liquidity_cr": _add_if_observed(baseline_snapshot.system_liquidity_cr, 150000.0),
+            "usd_inr_exchange_rate": 76.0, "brent_crude_usd_bbl": 25.0,
+            "us_fed_funds_rate_pct": 0.25, "prev_stance": "accommodative",
+        }, "pandemic_easing_sensitivity", {"historical_reconstruction": False})
+
+    @staticmethod
+    def build_taper_tantrum_snapshot(baseline_snapshot):
+        return apply_snapshot_intervention(baseline_snapshot, {
+            "cpi_headline_yoy_pct": 9.84, "cpi_core_yoy_pct": 8.00, "cpi_food_yoy_pct": 13.00,
+            "iip_growth_yoy_pct": 1.0, "output_gap_pct": 0.5, "system_liquidity_cr": -80000.0,
+            "usd_inr_exchange_rate": 68.80, "brent_crude_usd_bbl": 110.0,
+            "us_fed_funds_rate_pct": 0.25, "prev_stance": "withdrawal_of_accommodation",
+        }, "taper_tantrum_sensitivity", {"historical_reconstruction": False})
+"""Declared removal sensitivities identify effects inside this simulator only."""
+
+from typing import Sequence, Optional
+from dataclasses import dataclass, field
+
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.persona_schema import MemberPersona
+from src.schemas.debate_schema import MeetingCommitteeDecision
+from src.schemas.decision_space import STANCE_ACTIONS
+from src.behavioral.debate_orchestrator import DebateOrchestrator, InformationVisibility
+from src.infra.evidence import content_hash
+from src.scenarios.scenario_runner import apply_snapshot_intervention
+
+
+@dataclass
+class AttributionResult:
+    experiment_id: str
+    experiment_name: str
+    baseline_decision_bps: int
+    ablated_decision_bps: int
+    baseline_stance: str
+    ablated_stance: str
+    outcome_shifted: bool
+    marginal_contribution_bps: int
+    description: str
+    estimand_scope: str = "simulator_local"
+    donor_behavior: str = "not_applicable"
+    condition_id: str = ""
+    replicate_id: int = 1
+    member_rate_changes_bps: dict[str, int] = field(default_factory=dict)
+    member_stance_changed: dict[str, bool] = field(default_factory=dict)
+    study_experiment_id: str = ""
+    baseline_condition_id: str = ""
+    evidence_types: list[str] = field(default_factory=list)
+
+
+class AttributionRunner:
+    @staticmethod
+    def _paired_generation_settings(orchestrator, baseline, snapshot, personas, governor_id,
+                                    model, temperature, seed):
+        """Reject a mismatched intervention before any new generation is submitted.
+
+        Historical decisions remain readable, but without frozen input/settings
+        identities they cannot qualify as a paired mechanism experiment.
+        """
+        if not baseline.snapshot_hash or not baseline.persona_hash or not baseline.generation_settings or not baseline.governor_id:
+            raise ValueError("Attribution baseline lacks frozen paired input and generation identities")
+        validated_snapshot = type(snapshot).model_validate(snapshot.model_dump())
+        if content_hash(validated_snapshot.model_dump(mode="json")) != baseline.snapshot_hash:
+            raise ValueError("Attribution snapshot differs from the frozen baseline")
+        if content_hash([p.model_dump(mode="json") for p in personas]) != baseline.persona_hash:
+            raise ValueError("Attribution personas differ from the frozen baseline")
+        if governor_id != baseline.governor_id:
+            raise ValueError("Attribution Governor differs from the frozen baseline")
+        selected_seed = baseline.seed_base if seed is None else seed
+        if type(selected_seed) is not int or selected_seed != baseline.seed_base:
+            raise ValueError("Attribution seed differs from the paired baseline schedule")
+        frozen = baseline.generation_settings
+        selected_model = frozen["model"] if model is None else model
+        selected_temperature = frozen["temperature"] if temperature is None else temperature
+        current = orchestrator.generation_settings(selected_model, selected_temperature)
+        if current != frozen:
+            raise ValueError("Attribution generation settings differ from the frozen baseline")
+        return {"model": selected_model, "temperature": selected_temperature, "seed": selected_seed}
+
+    @staticmethod
+    def _condition_settings(baseline):
+        graph = {key: value for key, value in baseline.visibility.items() if key in InformationVisibility.__dataclass_fields__}
+        return {"visibility": InformationVisibility(**graph),
+                "mask_identity": baseline.visibility.get("mask_identity", False),
+                "mask_date": baseline.visibility.get("mask_date", False),
+                "fragmentation_policy": baseline.fragmentation_policy}
+
+    @staticmethod
+    def ablate_casting_vote(meeting_outcome: MeetingCommitteeDecision, governor_id: str,
+                            prior_stance: Optional[str] = None) -> AttributionResult:
+        """Remove actual binary casting; status-quo resolution is a synthetic policy.
+
+        Retain the actual pre-meeting stance. A fragmented menu outcome must never
+        masquerade as a statutory casting vote, even when its winner is Governor's.
+        """
+        if meeting_outcome.member_votes and governor_id not in {v.member_id for v in meeting_outcome.member_votes}:
+            raise ValueError("Casting removal requires a Governor ballot")
+        if meeting_outcome.governor_id is not None and governor_id != meeting_outcome.governor_id:
+            raise ValueError("Casting removal Governor differs from the recorded baseline")
+        for tie, tally, synthetic in (
+            (meeting_outcome.tie_broken_by_governor_rate, meeting_outcome.rate_vote_tally, meeting_outcome.synthetic_resolution_rate),
+            (meeting_outcome.tie_broken_by_governor_stance, meeting_outcome.stance_vote_tally, meeting_outcome.synthetic_resolution_stance),
+        ):
+            if tie and (synthetic or len(tally) != 2 or len(set(tally.values())) != 1 or any(n <= 0 for n in tally.values())):
+                raise ValueError("Casting flag must represent binary equality, not synthetic fragmentation")
+        if prior_stance is not None and prior_stance not in STANCE_ACTIONS:
+            raise ValueError("Casting removal prior stance must use the declared stance domain")
+        if prior_stance is not None and meeting_outcome.prior_stance is not None and prior_stance != meeting_outcome.prior_stance:
+            raise ValueError("Casting removal prior stance contradicts the recorded baseline")
+        prev = meeting_outcome.prior_stance if prior_stance is None else prior_stance
+        if meeting_outcome.tie_broken_by_governor_stance and prev not in STANCE_ACTIONS:
+            raise ValueError("Casting removal requires the actual prior stance")
+        rate = 0 if meeting_outcome.tie_broken_by_governor_rate else meeting_outcome.rate_decision_bps
+        stance = prev if meeting_outcome.tie_broken_by_governor_stance else meeting_outcome.stance_decision
+        return AttributionResult(
+            experiment_id="EXP_2_CASTING_VOTE", experiment_name="Governor Casting-Vote Removal (§45ZI(8))",
+            baseline_decision_bps=meeting_outcome.rate_decision_bps, ablated_decision_bps=rate,
+            baseline_stance=meeting_outcome.stance_decision, ablated_stance=stance,
+            outcome_shifted=(rate != meeting_outcome.rate_decision_bps or stance != meeting_outcome.stance_decision),
+            marginal_contribution_bps=meeting_outcome.rate_decision_bps - rate,
+            description="Simulator-local numerical casting removal; unresolved equality uses synthetic status quo (0 bps and actual prior stance). Ballots are held fixed.",
+            donor_behavior="all_ballots_held_fixed", replicate_id=meeting_outcome.replicate_id,
+            condition_id="casting_removed",
+            study_experiment_id=meeting_outcome.experiment_id, baseline_condition_id=meeting_outcome.condition_id,
+            evidence_types=meeting_outcome.evidence_types if meeting_outcome.member_votes else ["constructed_rule_probe"],
+        )
+
+    @staticmethod
+    def mute_macro_input(baseline_snapshot: MacroMeetingSnapshot, muted_factor: str) -> MacroMeetingSnapshot:
+        if muted_factor == "monsoon":
+            return apply_snapshot_intervention(baseline_snapshot, {"monsoon_departure_lpa_pct": 0.0},
+                                               "mute_monsoon", {"neutral_departure_pct": 0.0})
+        if muted_factor == "food_inflation":
+            if baseline_snapshot.cpi_food_yoy_pct is None:
+                raise ValueError("Food muting requires an observed food-inflation baseline")
+            headline = baseline_snapshot.cpi_headline_yoy_pct
+            if headline is not None:
+                headline -= (baseline_snapshot.cpi_food_yoy_pct - 4.0) * 0.458
+            return apply_snapshot_intervention(baseline_snapshot, {"cpi_headline_yoy_pct": headline, "cpi_food_yoy_pct": 4.0},
+                                               "mute_food_inflation", {"assumed_food_reference_pct": 4.0, "food_headline_weight": 0.458})
+        raise ValueError(f"Unknown muting factor: {muted_factor}")
+
+    @staticmethod
+    def _result(base, treatment, experiment_id, experiment_name, description, donor_behavior="not_applicable"):
+        baseline_votes = {v.member_id: v for v in base.member_votes}
+        treatment_votes = {v.member_id: v for v in treatment.member_votes}
+        if set(baseline_votes) != set(treatment_votes) or len(baseline_votes) != len(base.member_votes) or len(treatment_votes) != len(treatment.member_votes):
+            raise ValueError("Attribution requires exactly aligned unique member ballots")
+        if base.meeting_date != treatment.meeting_date or base.replicate_id != treatment.replicate_id:
+            raise ValueError("Attribution requires paired meeting and replicate identity")
+        if base.seed_schedule != treatment.seed_schedule:
+            raise ValueError("Attribution requires the same declared paired seed schedule")
+        if (base.experiment_id != treatment.experiment_id or base.governor_id != treatment.governor_id
+                or base.persona_hash != treatment.persona_hash or base.generation_settings != treatment.generation_settings):
+            raise ValueError("Attribution requires matching frozen experiment, roster and generation settings")
+        return AttributionResult(
+            experiment_id=experiment_id, experiment_name=experiment_name,
+            baseline_decision_bps=base.rate_decision_bps, ablated_decision_bps=treatment.rate_decision_bps,
+            baseline_stance=base.stance_decision, ablated_stance=treatment.stance_decision,
+            outcome_shifted=(base.rate_decision_bps != treatment.rate_decision_bps or base.stance_decision != treatment.stance_decision),
+            marginal_contribution_bps=base.rate_decision_bps - treatment.rate_decision_bps,
+            description=description, donor_behavior=donor_behavior,
+            replicate_id=treatment.replicate_id, condition_id=treatment.condition_id,
+            member_rate_changes_bps={m: treatment_votes[m].final_rate_vote_bps - v.final_rate_vote_bps for m, v in baseline_votes.items()},
+            member_stance_changed={m: treatment_votes[m].final_stance_vote != v.final_stance_vote for m, v in baseline_votes.items()},
+            study_experiment_id=base.experiment_id, baseline_condition_id=base.condition_id,
+            evidence_types=sorted(set(base.evidence_types + treatment.evidence_types)),
+        )
+
+    @classmethod
+    async def run_leave_one_out_ablation(
+        cls, orchestrator: DebateOrchestrator, baseline_decision: MeetingCommitteeDecision,
+        snapshot: MacroMeetingSnapshot, personas: Sequence[MemberPersona], governor_id: str,
+        ablated_member_id: str, model: Optional[str] = None, temperature: Optional[float] = None,
+        seed: Optional[int] = None,
+    ) -> AttributionResult:
+        paired = cls._paired_generation_settings(orchestrator, baseline_decision, snapshot, personas,
+                                                governor_id, model, temperature, seed)
+        treatment = await orchestrator.run_meeting(
+            snapshot=snapshot, personas=personas, governor_id=governor_id,
+            replicate_id=baseline_decision.replicate_id, **paired,
+            ablated_member_id=ablated_member_id, experiment_id=baseline_decision.experiment_id,
+            condition_id=f"{baseline_decision.condition_id}_outgoing_removed_{ablated_member_id}",
+            control_mode=baseline_decision.control_mode,
+            **cls._condition_settings(baseline_decision),
+        )
+        own_state_retained = baseline_decision.visibility.get("own_state", True)
+        return cls._result(
+            baseline_decision, treatment, f"EXP_1_LEAVE_OUT_{ablated_member_id.upper()}",
+            f"Outgoing Information Removal ({ablated_member_id})",
+            f"Simulator-local removal of {ablated_member_id}'s outgoing R1-R3 arguments, identities and Governor-visible R4 ballot. The donor's vote still counts, own-state visibility matches baseline ({own_state_retained}); all members may respond endogenously.",
+            donor_behavior="own_state_retained_endogenous_ballot" if own_state_retained else "own_state_withheld_in_both_conditions_endogenous_ballot",
+        )
+
+    @classmethod
+    async def run_macro_muting_ablation(
+        cls, orchestrator: DebateOrchestrator, baseline_decision: MeetingCommitteeDecision,
+        snapshot: MacroMeetingSnapshot, personas: Sequence[MemberPersona], governor_id: str,
+        muted_factor: str, model: Optional[str] = None, temperature: Optional[float] = None,
+        seed: Optional[int] = None,
+    ) -> AttributionResult:
+        paired = cls._paired_generation_settings(orchestrator, baseline_decision, snapshot, personas,
+                                                governor_id, model, temperature, seed)
+        treatment = await orchestrator.run_meeting(
+            snapshot=cls.mute_macro_input(snapshot, muted_factor), personas=personas, governor_id=governor_id,
+            replicate_id=baseline_decision.replicate_id, **paired,
+            experiment_id=baseline_decision.experiment_id,
+            condition_id=f"{baseline_decision.condition_id}_mute_{muted_factor}",
+            control_mode=baseline_decision.control_mode,
+            **cls._condition_settings(baseline_decision),
+        )
+        return cls._result(baseline_decision, treatment, f"EXP_3_MUTE_{muted_factor.upper()}",
+                           f"Macro Input Sensitivity ({muted_factor})",
+                           f"Simulator-local sensitivity to an explicitly synthetic {muted_factor} intervention; unrelated fields are preserved.")

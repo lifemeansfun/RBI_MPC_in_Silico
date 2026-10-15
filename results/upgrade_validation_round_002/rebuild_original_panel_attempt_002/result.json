@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "matches_tested_source": {
+    "research/source_ledgers/historical_labels_round002/README.md": true,
+    "research/source_ledgers/historical_labels_round002/export_labels.py": true,
+    "research/source_ledgers/historical_labels_round002/input_manifest.json": true,
+    "research/source_ledgers/historical_labels_round002/label_annotations.json": true,
+    "research/source_ledgers/historical_labels_round002/label_ledger.json": true,
+    "research/source_ledgers/historical_labels_round002/observed_targets.json": true,
+    "research/verification/rebuild_scientific_inputs.py": true,
+    "src/data_pipeline/vintage_panel.py": true,
+    "tests/test_vintage_rebuild.py": true
+  },
+  "all_tested_source_unchanged": true
+}

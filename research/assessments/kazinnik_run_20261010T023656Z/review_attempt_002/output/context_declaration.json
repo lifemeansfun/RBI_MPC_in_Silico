@@ -1,0 +1,21 @@
+{
+  "declared_at_utc": "2026-10-10 03:27:40 UTC",
+  "initial_context": {
+    "parent_chat": false,
+    "earlier_reviews": false,
+    "scientific_plans": false,
+    "memory_derived_project_findings": false,
+    "git_history": false,
+    "project_information_present": "Only the current user request, snapshot/output paths, environment metadata and task framing. No project findings or previous assessment were supplied in visible initial context.",
+    "unexpected_injection": "Generic tool, collaboration and skill-catalog instructions were present. No unexpected project-specific scientific information was visible. No skills, plugins, memory, parent files or Git history were accessed."
+  },
+  "independence_status": "independent_with_declared_limits",
+  "observed_access": {
+    "successful": ["pwd in supplied snapshot", "top-level listing of supplied snapshot", "creation of designated output directory"],
+    "denials_observed": [],
+    "restriction_claims": "User reports OS restrictions on parent evidence, memory, sessions and input/parent writes. These were not probed. Tool environment advertises unrestricted filesystem access; actual enforcement is not independently established. Voluntary scope restriction is in force.",
+    "external_symlink": "Snapshot .venv points to a host project outside the snapshot; it will not be followed."
+  },
+  "limitations": ["Shared host", "Shared model family", "Shared Python runtime if used", "No complete auditability of hidden provider-side prompt construction can be certified"],
+  "policy": "Read scientific materials only from supplied snapshot; independently consult public original-method/source anchors as explicitly requested; write only to designated output. No live generations, scientific edits, retries, prior assessments or repair loop."
+}

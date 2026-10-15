@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "pdftoppm",
+    "-f",
+    "2",
+    "-singlefile",
+    "-scale-to",
+    "2800",
+    "-png",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_001/raw/nas2019_s8_18_2.pdf",
+    "research/source_ledgers/output_gap_round002/visual_checks/nas2019_gdp_constant_page2"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "source_sha256": "d9a110c3fa809344f12396f8063fe55d4883493997d1b813f39ea16e8dc8653c"
+}

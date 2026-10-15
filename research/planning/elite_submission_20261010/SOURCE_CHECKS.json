@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-10",
+  "scope": "Primary-source checks for planning, not an exhaustive novelty review or source-acquisition completion",
+  "sources": [
+    {
+      "title": "FedSight AI",
+      "version": "arXiv:2512.15728v1, 5 December 2025",
+      "url": "https://arxiv.org/html/2512.15728v1",
+      "inspection": "Full HTML returned; examined methods, sampling, evaluation, limitations; results remain author-reported"
+    },
+    {
+      "title": "Modeling Hawkish-Dovish Latent Beliefs in Multi-Agent Debate-Based LLMs for Monetary Policy Decision Classification",
+      "version": "arXiv:2511.02469v1, 4 November 2025",
+      "url": "https://arxiv.org/html/2511.02469v1",
+      "inspection": "Methods, sampling, prompts, ablations and results examined; no reproduction performed"
+    },
+    {
+      "title": "Voting or Consensus? Decision-Making in Multi-Agent Debate",
+      "version": "Findings of ACL 2025",
+      "url": "https://aclanthology.org/2025.findings-acl.606.pdf",
+      "inspection": "Official full PDF returned; relevant setup/protocol sections examined"
+    },
+    {
+      "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+      "version": "arXiv:2411.10109v3, 28 June 2026",
+      "url": "https://arxiv.org/abs/2411.10109v3",
+      "inspection": "Primary abstract and revision history; full methods not inspected in this planning turn"
+    },
+    {
+      "title": "Take Caution in Using LLMs as Human Surrogates",
+      "version": "arXiv:2410.19599; related published 2025 paper",
+      "url": "https://arxiv.org/abs/2410.19599",
+      "inspection": "Primary abstract; PMC full text blocked by browser check"
+    },
+    {
+      "title": "A textual Taylor rule",
+      "url": "https://www.cambridge.org/core/journals/political-science-research-and-methods/article/abs/textual-taylor-rule-estimating-central-bank-preferences-combining-topic-and-scaling-methods/E1CAE25BBA2864109ACF25D599EDD083",
+      "inspection": "Official publisher search record, not complete methods"
+    },
+    {
+      "title": "Gemini Developer API pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite",
+      "inspection": "Official pricing page and relevant lines; text input 0.25 USD/million and output including thinking 1.50 USD/million; not authenticated account balance"
+    },
+    {
+      "title": "Gemini API rate limits",
+      "url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "inspection": "Official project-wide RPM/TPM/RPD dimensions; account-specific quotas not queried"
+    },
+    {
+      "title": "Reserve Bank of India Act",
+      "version": "Consolidation amended through Finance Act 2022",
+      "url": "https://www.dicgc.org.in/sites/default/files/2024-10/RBIA1934170510.pdf",
+      "inspection": "Official-hosted PDF returned; later applicable amendments remain to be checked"
+    },
+    {
+      "title": "RBI minutes publication example",
+      "url": "https://www.rbi.org.in/CommonPerson/english/scripts/PressReleases.aspx?Id=2601",
+      "inspection": "Official RBI indexed excerpt describing resolution, recorded member votes and published statements"
+    }
+  ],
+  "failed_fetches": [
+    {
+      "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+      "result": "Web reader timeout; retained source/version record available in existing assessment"
+    },
+    {
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+      "result": "403; revised full methods still unavailable"
+    },
+    {
+      "url": "https://www.indiacode.nic.in/handle/123456789/2398",
+      "result": "Web reader timeout"
+    },
+    {
+      "url": "https://www.nber.org/papers/w13391",
+      "result": "Web reader failure; no claim of full-method inspection"
+    },
+    {
+      "url": "https://www.nature.com/articles/s43588-026-01060-3",
+      "result": "Web reader failure; not relied on for a substantive planning claim"
+    }
+  ]
+}

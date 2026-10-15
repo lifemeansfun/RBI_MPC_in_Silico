@@ -1,0 +1,23 @@
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.307557
+is_internal: false
+key_themes:
+- "\"The question of what can revive growth as well as reduce inflation is best examined\
+  \ in the context of India\u2019s macroeconomic structure.\" (2020-10-09)"
+- '"To arrive at a voting decision I take up issues of global risks facing the economy,
+  factors determining its expected inflation path and growth recovery, as well as
+  the type and the impact of guidance.32." (2022-02-10)'
+- '"The global slowdown is turning out to be less severe than expected but there are
+  signs of a slowing in both growth and inflation suggesting central banks (CBs) tightening
+  is adequate and lagged effects will bring about the required further fall in inflation."
+  (2023-04-06)'
+member_id: ashima_goyal
+name: Dr. Ashima Goyal
+provenance_status: dated_corpus
+role: External Member
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

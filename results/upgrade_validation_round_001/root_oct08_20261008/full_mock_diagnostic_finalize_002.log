@@ -1,0 +1,67 @@
+{
+  "output": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_001/root_oct08_20261008/full_mock_diagnostic_attempt_001",
+  "n_meetings": 8,
+  "replay_summaries": {
+    "full": {
+      "replay_version": 1,
+      "study_manifest_hash": "4c3fe042b212e2b095f7341cff1ad933d971a4f6251b84c3f171aee703a5748e",
+      "producer_code_hash": "717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0",
+      "evidence_scope": "exposed retrospective study",
+      "n_meetings": 8,
+      "n_replicates": 2,
+      "generation_evidence_counts": {
+        "mock": 384
+      },
+      "recorded_estimated_cost_usd": 0.0,
+      "replay_provider_calls": 0,
+      "independent_live_replication": false,
+      "qualification": "Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated"
+    },
+    "earlier_rounds": {
+      "replay_version": 1,
+      "study_manifest_hash": "6aad8bddccc4b175ff4c0b7e3c6a2284823d9230623ba346c44d41c96b3a3803",
+      "producer_code_hash": "717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0",
+      "evidence_scope": "exposed retrospective study",
+      "n_meetings": 8,
+      "n_replicates": 2,
+      "generation_evidence_counts": {
+        "mock": 384
+      },
+      "recorded_estimated_cost_usd": 0.0,
+      "replay_provider_calls": 0,
+      "independent_live_replication": false,
+      "qualification": "Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated"
+    },
+    "independent": {
+      "replay_version": 1,
+      "study_manifest_hash": "06b633db454a24f9716b67e68c5e0a65f68ff8ab30e502020889102d03989d95",
+      "producer_code_hash": "717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0",
+      "evidence_scope": "exposed retrospective study",
+      "n_meetings": 8,
+      "n_replicates": 2,
+      "generation_evidence_counts": {
+        "mock": 192
+      },
+      "recorded_estimated_cost_usd": 0.0,
+      "replay_provider_calls": 0,
+      "independent_live_replication": false,
+      "qualification": "Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated"
+    },
+    "masked": {
+      "replay_version": 1,
+      "study_manifest_hash": "72ac25064d750c59383f7e867e368415798310a0def55f2726d0dfdc0d5ff5ef",
+      "producer_code_hash": "717b04a97c6c2ee2a7492dd754c67fa23debe4bdc39796f7a5a2c602d10905e0",
+      "evidence_scope": "exposed retrospective study",
+      "n_meetings": 8,
+      "n_replicates": 2,
+      "generation_evidence_counts": {
+        "mock": 384
+      },
+      "recorded_estimated_cost_usd": 0.0,
+      "replay_provider_calls": 0,
+      "independent_live_replication": false,
+      "qualification": "Recomputed saved evidence; neither provider invoices nor uncontaminated forecasting are authenticated"
+    }
+  },
+  "elapsed_seconds": 12.15606689453125
+}

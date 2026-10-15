@@ -1,0 +1,145 @@
+.FFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+_ test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>1] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...pgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/counterexample_temp/test_replay_rejects_rehashed_s1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1073bba10>
+mutation = <function <lambda> at 0x107529ee0>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mutation", [
+        lambda d: d["generation"]["parsed"].pop("action"),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2}',
+                                          parsed={"member_id": "member", "round_number": 2}),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2,"action":true}',
+                                          parsed={"member_id": "member", "round_number": 2, "action": True}),
+        lambda d: d["generation"]["metadata"].update(evidence_type="live_model"),
+        lambda d: d.update(action=40),
+    ])
+    async def test_replay_rejects_rehashed_schema_track_and_payload_contradictions(tmp_path, monkeypatch, mutation):
+        from src.infra.transcript_logger import read_transcript
+        client = LLMClient(provider="mock", cache_enabled=False)
+        monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+        result = await invoke(client)
+        logger = TranscriptLogger("source", output_root=tmp_path, identity={"experiment_id": "study"})
+        path = logger.save_round_transcript("2023-08-10", 1, 2, "member", result.parsed.model_dump(),
+                                            condition_id="full", generation=result)
+        assert read_transcript(path)["generation"]["metadata"]["evidence_type"] == "mock"
+        _rehash_transcript(path, mutation)
+>       with pytest.raises(ArtifactIntegrityError):
+E       Failed: DID NOT RAISE ArtifactIntegrityError
+
+tests/test_runtime_upgrade.py:560: Failed
+_ test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>2] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...pgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/counterexample_temp/test_replay_rejects_rehashed_s2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x107900e90>
+mutation = <function <lambda> at 0x107529f80>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mutation", [
+        lambda d: d["generation"]["parsed"].pop("action"),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2}',
+                                          parsed={"member_id": "member", "round_number": 2}),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2,"action":true}',
+                                          parsed={"member_id": "member", "round_number": 2, "action": True}),
+        lambda d: d["generation"]["metadata"].update(evidence_type="live_model"),
+        lambda d: d.update(action=40),
+    ])
+    async def test_replay_rejects_rehashed_schema_track_and_payload_contradictions(tmp_path, monkeypatch, mutation):
+        from src.infra.transcript_logger import read_transcript
+        client = LLMClient(provider="mock", cache_enabled=False)
+        monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+        result = await invoke(client)
+        logger = TranscriptLogger("source", output_root=tmp_path, identity={"experiment_id": "study"})
+        path = logger.save_round_transcript("2023-08-10", 1, 2, "member", result.parsed.model_dump(),
+                                            condition_id="full", generation=result)
+        assert read_transcript(path)["generation"]["metadata"]["evidence_type"] == "mock"
+        _rehash_transcript(path, mutation)
+>       with pytest.raises(ArtifactIntegrityError):
+E       Failed: DID NOT RAISE ArtifactIntegrityError
+
+tests/test_runtime_upgrade.py:560: Failed
+_ test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>3] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...pgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/counterexample_temp/test_replay_rejects_rehashed_s3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x107905710>
+mutation = <function <lambda> at 0x10752a020>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mutation", [
+        lambda d: d["generation"]["parsed"].pop("action"),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2}',
+                                          parsed={"member_id": "member", "round_number": 2}),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2,"action":true}',
+                                          parsed={"member_id": "member", "round_number": 2, "action": True}),
+        lambda d: d["generation"]["metadata"].update(evidence_type="live_model"),
+        lambda d: d.update(action=40),
+    ])
+    async def test_replay_rejects_rehashed_schema_track_and_payload_contradictions(tmp_path, monkeypatch, mutation):
+        from src.infra.transcript_logger import read_transcript
+        client = LLMClient(provider="mock", cache_enabled=False)
+        monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+        result = await invoke(client)
+        logger = TranscriptLogger("source", output_root=tmp_path, identity={"experiment_id": "study"})
+        path = logger.save_round_transcript("2023-08-10", 1, 2, "member", result.parsed.model_dump(),
+                                            condition_id="full", generation=result)
+        assert read_transcript(path)["generation"]["metadata"]["evidence_type"] == "mock"
+        _rehash_transcript(path, mutation)
+>       with pytest.raises(ArtifactIntegrityError):
+E       Failed: DID NOT RAISE ArtifactIntegrityError
+
+tests/test_runtime_upgrade.py:560: Failed
+_ test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>4] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...pgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/counterexample_temp/test_replay_rejects_rehashed_s4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x107a98b10>
+mutation = <function <lambda> at 0x10752a0c0>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("mutation", [
+        lambda d: d["generation"]["parsed"].pop("action"),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2}',
+                                          parsed={"member_id": "member", "round_number": 2}),
+        lambda d: d["generation"].update(raw_text='{"member_id":"member","round_number":2,"action":true}',
+                                          parsed={"member_id": "member", "round_number": 2, "action": True}),
+        lambda d: d["generation"]["metadata"].update(evidence_type="live_model"),
+        lambda d: d.update(action=40),
+    ])
+    async def test_replay_rejects_rehashed_schema_track_and_payload_contradictions(tmp_path, monkeypatch, mutation):
+        from src.infra.transcript_logger import read_transcript
+        client = LLMClient(provider="mock", cache_enabled=False)
+        monkeypatch.setattr(client, "_generate_mock", lambda *args: (RAW, 10, 5))
+        result = await invoke(client)
+        logger = TranscriptLogger("source", output_root=tmp_path, identity={"experiment_id": "study"})
+        path = logger.save_round_transcript("2023-08-10", 1, 2, "member", result.parsed.model_dump(),
+                                            condition_id="full", generation=result)
+        assert read_transcript(path)["generation"]["metadata"]["evidence_type"] == "mock"
+        _rehash_transcript(path, mutation)
+>       with pytest.raises(ArtifactIntegrityError):
+E       Failed: DID NOT RAISE ArtifactIntegrityError
+
+tests/test_runtime_upgrade.py:560: Failed
+_______________ test_submit_rechecks_uncertain_ledger_atomically _______________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...pgrade_validation_round_001/runtime_oct08_20261008T133500_096775Z/counterexample_temp/test_submit_rechecks_uncertain0')
+
+    def test_submit_rechecks_uncertain_ledger_atomically(tmp_path):
+        governor = CostGovernor(1, tmp_path / "budget.sqlite")
+        earlier = governor.reserve("earlier", "gemini", "gemini-3.1-flash-lite", 100, 100)
+        pending = governor.reserve("pending", "gemini", "gemini-3.1-flash-lite", 100, 100)
+        governor.mark_submitted(earlier)
+        governor.assert_can_submit()
+        # Another task settles an unknown charge after the pending task's precheck.
+        governor.mark_uncertain(earlier, "provider timeout")
+>       with pytest.raises(UncertainChargeError):
+E       Failed: DID NOT RAISE UncertainChargeError
+
+tests/test_runtime_upgrade.py:572: Failed
+=========================== short test summary info ============================
+FAILED tests/test_runtime_upgrade.py::test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>1]
+FAILED tests/test_runtime_upgrade.py::test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>2]
+FAILED tests/test_runtime_upgrade.py::test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>3]
+FAILED tests/test_runtime_upgrade.py::test_replay_rejects_rehashed_schema_track_and_payload_contradictions[<lambda>4]
+FAILED tests/test_runtime_upgrade.py::test_submit_rechecks_uncertain_ledger_atomically
+5 failed, 1 passed, 28 deselected in 0.21s

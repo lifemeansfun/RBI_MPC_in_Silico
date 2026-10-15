@@ -1,0 +1,449 @@
+            raise ValueError("Full-roster simulation requires exactly 6 distinct member personas")
+        if any(not p.member_id.strip() or not p.name.strip() for p in personas):
+            raise ValueError("Member identities and names must be nonempty")
+        if governor_id not in {p.member_id for p in personas}:
+            raise ValueError("Governor must be among the simulated personas")
+        if getattr(self.client, "provider", "mock") != "mock":
+            personas = verify_personas(personas, snapshot.information_cutoff)
+        if control_mode not in ("full", "earlier_rounds", "independent"):
+            raise ValueError("Unknown deliberation control mode")
+        if type(replicate_id) is not int or replicate_id < 1 or type(seed) is not int:
+            raise ValueError("Replicate must be a positive integer and seed an integer")
+        if type(mask_identity) is not bool or type(mask_date) is not bool:
+            raise ValueError("Identity and date masking must be boolean controls")
+        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+            raise ValueError("Unknown fragmentation policy")
+        if visibility is not None and not isinstance(visibility, InformationVisibility):
+            raise ValueError("Visibility must use the declared InformationVisibility contract")
+        visibility = visibility or InformationVisibility()
+        if ablated_member_id is not None:
+            if visibility.ablated_member_id not in (None, ablated_member_id):
+                raise ValueError("Conflicting outgoing-member interventions")
+            visibility = replace(visibility, ablated_member_id=ablated_member_id)
+        if visibility.ablated_member_id is not None and visibility.ablated_member_id not in {p.member_id for p in personas}:
+            raise ValueError("Ablated member must belong to the simulated roster")
+        if control_mode == "independent":
+            visibility = replace(visibility, peer_arguments=False, governor_ballots=False)
+        declared_visibility = {**asdict(visibility), "mask_identity": mask_identity, "mask_date": mask_date}
+        settings = self.generation_settings(model=model, temperature=temperature)
+        snapshot_hash = content_hash(snapshot.model_dump(mode="json"))
+        persona_hash = content_hash([p.model_dump(mode="json") for p in personas])
+        frozen_identity = getattr(self.logger, "identity", {})
+        condition_identity = {"experiment_id": experiment_id, "persona_hash": persona_hash,
+                              "snapshot_hash": snapshot_hash, "generation_settings_hash": content_hash(settings)}
+        for key, value in condition_identity.items():
+            if key in frozen_identity and frozen_identity[key] != value:
+                raise GenerationProvenanceError(f"Frozen logger {key} differs from planned condition")
+        identity_aliases = {}
+        if mask_identity:
+            tokens = [token.casefold() for p in personas for token in (p.member_id, p.name)]
+            if len(set(tokens)) != len(tokens):
+                raise ValueError("Masked roster needs distinct member identities and names ignoring case")
+            for idx, persona in enumerate(personas):
+                identity_aliases[persona.member_id] = f"member_{idx + 1}"
+                identity_aliases[persona.name] = f"Simulated Member {idx + 1}"
+        if condition_id is None:
+            # Visibility changes cannot accidentally overwrite the full condition's traces.
+            baseline_visibility = InformationVisibility()
+            suffix = "" if visibility == baseline_visibility and not mask_identity and not mask_date else "_" + hashlib.sha256(json.dumps(declared_visibility, sort_keys=True).encode()).hexdigest()[:12]
+            condition_id = control_mode + suffix
+        outputs: dict[int, dict[str, StrictRoundOutput]] = {}
+        seeds: dict[str, int] = {}
+        evidence_types: set[str] = set()
+        rounds = (1, 4) if control_mode == "independent" else (1, 2, 3, 4)
+        # A deterministic submission order prevents asyncio.gather from continuing a failed condition.
+        ordered_personas = [p for p in personas if p.member_id != governor_id] + [p for p in personas if p.member_id == governor_id]
+        for round_number in rounds:
+            outputs[round_number] = {}
+            for persona in ordered_personas:
+                visible_rounds = [r for r in rounds if r < round_number]
+                if round_number == 4 and control_mode == "earlier_rounds":
+                    visible_rounds = [1, 2]
+                context = self._round_context(outputs, visible_rounds, persona, personas, visibility)
+                if round_number == 4 and persona.member_id == governor_id:
+                    ballots = self._governor_ballot_context(list(outputs[4].values()), personas, visibility)
+                    context += "\n\n" + ballots if ballots else ""
+                request_seed = planned_seed(seed, snapshot.meeting_date, replicate_id, persona.member_id, round_number)
+                seeds[f"{persona.member_id}:round_{round_number}"] = request_seed
+                identity = {**getattr(self.logger, "identity", {}), "experiment_id": experiment_id, "condition_id": condition_id,
+                            "meeting_date": snapshot.meeting_date, "replicate_id": replicate_id,
+                            "member_id": persona.member_id, "round_number": round_number,
+                            "snapshot_hash": snapshot_hash, "persona_hash": persona_hash,
+                            "generation_settings_hash": content_hash(settings)}
+                if mask_identity:
+                    identity["output_member_id"] = identity_aliases[persona.member_id]
+                output, evidence_type = await self._generate_round(
+                    persona, snapshot, round_number, context, model=settings["model"], temperature=settings["temperature"],
+                    seed=request_seed, identity=identity, mask_identity=mask_identity, mask_date=mask_date,
+                    identity_aliases=identity_aliases, generation_settings=settings,
+                )
+                outputs[round_number][persona.member_id] = output
+                evidence_types.add(evidence_type)
+        final_votes = list(outputs[4].values())
+        rate = InstitutionalRuleEngine.aggregate_rate_votes(
+            {v.member_id: v.final_rate_vote_bps for v in final_votes}, governor_id,
+            fragmentation_policy=fragmentation_policy, prior_action=0,
+        )
+        stance = InstitutionalRuleEngine.aggregate_stance_votes(
+            {v.member_id: v.final_stance_vote for v in final_votes}, governor_id,
+            fragmentation_policy=fragmentation_policy, prior_action=snapshot.prev_stance,
+        )
+        for vote in final_votes:
+            vote.dissenting_on_rate = vote.member_id in rate.dissenting_members
+            vote.dissenting_on_stance = vote.member_id in stance.dissenting_members
+        decision = MeetingCommitteeDecision(
+            meeting_date=snapshot.meeting_date, replicate_id=replicate_id,
+            rate_decision_bps=rate.winning_action, stance_decision=stance.winning_action,
+            rate_vote_tally=rate.vote_tally, stance_vote_tally=stance.vote_tally,
+            tie_broken_by_governor_rate=rate.tie_broken_by_governor,
+            tie_broken_by_governor_stance=stance.tie_broken_by_governor,
+            dissenting_members_rate=rate.dissenting_members, dissenting_members_stance=stance.dissenting_members,
+            member_votes=final_votes, prior_stance=snapshot.prev_stance,
+            experiment_id=experiment_id, condition_id=condition_id, control_mode=control_mode,
+            visibility=declared_visibility, seed_schedule=seeds, seed_base=seed, generation_count=len(seeds),
+            governor_id=governor_id, snapshot_hash=snapshot_hash, persona_hash=persona_hash, generation_settings=settings,
+            evidence_types=sorted(evidence_types), input_track=getattr(snapshot, "input_track", "legacy_unverified"),
+            rate_resolution_policy=rate.resolution_policy, stance_resolution_policy=stance.resolution_policy,
+            synthetic_resolution_rate=rate.synthetic_resolution, synthetic_resolution_stance=stance.synthetic_resolution,
+            fragmentation_policy=fragmentation_policy,
+        )
+        self.logger.save_meeting_summary(snapshot.meeting_date, replicate_id, decision.model_dump(),
+                                         experiment_id=experiment_id, condition_id=condition_id)
+        return decision
+"""Voting under RBI Act §45ZI(5),(7),(8), with explicit simulator assumptions.
+
+Primary source: https://dea.gov.in/files/acts_documents/Chapter_IIIF_RBI_Act.pdf
+§45ZL concerns publication of minutes, not casting votes. A six-voter simulation
+is stricter than legal quorum. Multiaction fragmentation resolution is synthetic,
+because a categorical menu is not the Act's vote on a specified question.
+"""
+
+from collections import Counter
+from dataclasses import dataclass
+from typing import Any, Sequence, Optional
+
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS, validate_rate_action
+
+
+@dataclass(frozen=True)
+class AggregationResult:
+    winning_action: Any
+    vote_tally: dict[Any, int]
+    tie_broken_by_governor: bool
+    majority_achieved: bool
+    dissenting_members: list[str]
+    synthetic_resolution: bool = False
+    resolution_policy: str = "majority"
+    full_roster_simulation: bool = True
+    members_present: int = 6
+
+
+class InstitutionalRuleEngine:
+    """Stateless voting; authority and synthetic choices remain separately labeled."""
+
+    @staticmethod
+    def validate_attendance(
+        member_votes: dict[str, Any], governor_id: str, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None,
+        attending_member_ids: Optional[Sequence[str]] = None,
+    ) -> None:
+        if full_roster and len(member_votes) != 6:
+            raise ValueError(f"Full-roster simulation requires exactly 6 member votes; received {len(member_votes)}")
+        attendees = list(attending_member_ids) if attending_member_ids is not None else list(member_votes)
+        if any(not isinstance(m, str) or not m for m in attendees) or len(set(attendees)) != len(attendees):
+            raise ValueError("Attending member identities must be distinct nonempty strings")
+        if any(not isinstance(m, str) or not m for m in member_votes):
+            raise ValueError("Voter identities must be nonempty strings")
+        if not set(member_votes).issubset(attendees):
+            raise ValueError("A vote cannot be cast by an absent member")
+        if not 4 <= len(attendees) <= 6:
+            raise ValueError("RBI Act §45ZI(5) quorum requires 4 to 6 attending members")
+        if full_roster and set(attendees) != set(member_votes):
+            raise ValueError("Full-roster simulation requires all six attendees to vote")
+        if governor_id not in attendees:
+            if full_roster:
+                raise ValueError(f"Governor {governor_id} must be present in member votes")
+            if deputy_governor_id is None or deputy_governor_id not in attendees:
+                raise ValueError("Quorum must include Governor, or Deputy Governor in Governor's absence")
+        if not member_votes:
+            raise ValueError("At least one member present must vote")
+
+    @classmethod
+    def _aggregate(
+        cls, member_votes: dict[str, Any], governor_id: str, valid_actions: Sequence[Any], *,
+        kind: str, full_roster: bool, deputy_governor_id: Optional[str],
+        attending_member_ids: Optional[Sequence[str]], fragmentation_policy: str, prior_action: Any,
+    ) -> AggregationResult:
+        cls.validate_attendance(member_votes, governor_id, full_roster=full_roster,
+                                deputy_governor_id=deputy_governor_id,
+                                attending_member_ids=attending_member_ids)
+        if fragmentation_policy not in ("reject", "legacy_synthetic", "status_quo"):
+            raise ValueError("Unknown fragmentation policy")
+        for member, vote in member_votes.items():
+            if kind == "rate":
+                try:
+                    validate_rate_action(vote)
+                except ValueError as exc:
+                    raise ValueError(f"Vote {vote!r} by {member} is outside valid action set: {valid_actions}") from exc
+            if vote not in valid_actions:
+                raise ValueError(f"Vote {vote!r} by {member} is outside valid action set: {valid_actions}")
+        tally = dict(Counter(member_votes.values()))
+        top_action, top_count = max(tally.items(), key=lambda item: item[1])
+        majority = top_count > len(member_votes) / 2
+        casting = False
+        synthetic = False
+        policy = "majority"
+        if majority:
+            winner = top_action
+        elif len(tally) == 2 and len(set(tally.values())) == 1 and governor_id in member_votes:
+            winner = member_votes[governor_id]
+            casting = True
+            policy = "governor_casting_vote_45ZI_8"
+        else:
+            if fragmentation_policy == "reject":
+                raise ValueError("No majority or Governor-resolvable binary equality; declare a synthetic resolution policy")
+            synthetic = True
+            policy = fragmentation_policy
+            if fragmentation_policy == "status_quo":
+                if prior_action not in valid_actions:
+                    raise ValueError("Status-quo resolution requires a valid prior action")
+                winner = prior_action
+            else:
+                if governor_id not in member_votes:
+                    raise ValueError("Legacy synthetic fragmentation requires a Governor ballot")
+                gov_action = member_votes[governor_id]
+                if kind == "rate":
+                    weighted = sorted([*member_votes.values(), gov_action])
+                    winner = weighted[len(weighted) // 2]
+                    policy = "synthetic_governor_weighted_median"
+                else:
+                    winner = top_action if list(tally.values()).count(top_count) == 1 else gov_action
+                    policy = "synthetic_plurality_governor_priority"
+        return AggregationResult(
+            winning_action=winner, vote_tally=tally, tie_broken_by_governor=casting,
+            majority_achieved=majority,
+            dissenting_members=[m for m, action in member_votes.items() if action != winner],
+            synthetic_resolution=synthetic, resolution_policy=policy,
+            full_roster_simulation=full_roster,
+            members_present=len(attending_member_ids) if attending_member_ids is not None else len(member_votes),
+        )
+
+    @classmethod
+    def aggregate_rate_votes(
+        cls, member_votes: dict[str, int], governor_id: str,
+        valid_actions: Sequence[int] = RATE_ACTIONS_BPS, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None, attending_member_ids: Optional[Sequence[str]] = None,
+        fragmentation_policy: str = "reject", prior_action: int = 0,
+    ) -> AggregationResult:
+        return cls._aggregate(member_votes, governor_id, valid_actions, kind="rate",
+                              full_roster=full_roster, deputy_governor_id=deputy_governor_id,
+                              attending_member_ids=attending_member_ids,
+                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+
+    @classmethod
+    def aggregate_stance_votes(
+        cls, member_votes: dict[str, str], governor_id: str,
+        valid_stances: Sequence[str] = STANCE_ACTIONS, *, full_roster: bool = True,
+        deputy_governor_id: Optional[str] = None, attending_member_ids: Optional[Sequence[str]] = None,
+        fragmentation_policy: str = "reject", prior_action: Optional[str] = None,
+    ) -> AggregationResult:
+        return cls._aggregate(member_votes, governor_id, valid_stances, kind="stance",
+                              full_roster=full_roster, deputy_governor_id=deputy_governor_id,
+                              attending_member_ids=attending_member_ids,
+                              fragmentation_policy=fragmentation_policy, prior_action=prior_action)
+"""
+Open-Economy Smoothed Taylor Rule Engine for the Rational Benchmark Track.
+Calculates implied nominal policy rate with central bank interest-rate inertia,
+inflation gap, output gap, and external US Federal Reserve interest rate differential.
+"""
+
+from dataclasses import dataclass
+from typing import Sequence
+import math
+from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.decision_space import RATE_ACTIONS_BPS
+
+
+@dataclass
+class MemberTaylorParameters:
+    """Taylor coefficients; fitting/assumption provenance is supplied by the study."""
+    member_id: str
+    alpha: float = 1.5   # Inflation gap sensitivity
+    beta: float = 0.5    # Output gap sensitivity
+    gamma: float = 0.2   # US Fed rate differential sensitivity
+
+    def __post_init__(self):
+        if not self.member_id or not all(math.isfinite(x) for x in (self.alpha, self.beta, self.gamma)):
+            raise ValueError("Taylor parameters require a member ID and finite coefficients")
+
+
+class SmoothedTaylorRule:
+    """
+    Implements:
+    r*_t = r_star + pi_t + alpha_i * (pi_t - pi_target) + beta_i * output_gap + gamma_i * (i_us - i_us_target)
+    r_t = rho * r_{t-1} + (1 - rho) * r*_t
+    """
+
+    def __init__(
+        self,
+        r_star_pct: float = 1.4,
+        pi_star_pct: float = 4.0,
+        smoothing_rho: float = 0.75,
+        us_neutral_rate_pct: float = 2.5,
+        action_set_bps: Sequence[int] = RATE_ACTIONS_BPS,
+    ):
+        if not all(math.isfinite(x) for x in (r_star_pct, pi_star_pct, smoothing_rho, us_neutral_rate_pct)):
+            raise ValueError("Taylor settings must be finite")
+        if not 0 <= smoothing_rho < 1:
+            raise ValueError("Taylor smoothing must be in [0,1)")
+        if not action_set_bps or len(set(action_set_bps)) != len(action_set_bps) or any(type(x) is not int or x not in RATE_ACTIONS_BPS for x in action_set_bps):
+            raise ValueError("Invalid Taylor action domain")
+        self.r_star = r_star_pct
+        self.pi_star = pi_star_pct
+        self.rho = smoothing_rho
+        self.us_neutral_rate = us_neutral_rate_pct
+        self.action_set_bps = action_set_bps
+
+    def compute_continuous_rate(
+        self,
+        snapshot: MacroMeetingSnapshot,
+        params: MemberTaylorParameters,
+    ) -> float:
+        """Computes the target nominal policy rate before discretization."""
+        # Inflation gap: pi_t - pi*
+        inflation_gap = snapshot.cpi_headline_yoy_pct - self.pi_star
+        # Output gap: y_t - y*
+        if params.beta != 0 and snapshot.output_gap_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced output gap; beta=0 is a reduced-input sensitivity")
+        output_gap = snapshot.output_gap_pct if snapshot.output_gap_pct is not None else 0.0
+        # External US Fed rate gap
+        if params.gamma != 0 and snapshot.us_fed_funds_rate_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced Fed target; gamma=0 is a reduced-input sensitivity")
+        us_rate_gap = snapshot.us_fed_funds_rate_pct - self.us_neutral_rate if snapshot.us_fed_funds_rate_pct is not None else 0.0
+
+        # Unsmoothed Taylor target: r* + pi_t + alpha*(pi - pi*) + beta*gap + gamma*us_gap
+        target_rate = (
+            self.r_star
+            + snapshot.cpi_headline_yoy_pct
+            + params.alpha * inflation_gap
+            + params.beta * output_gap
+            + params.gamma * us_rate_gap
+        )
+
+        # Apply interest rate smoothing with previous rate
+        prev_rate = snapshot.current_repo_rate_pct
+        smoothed_rate = self.rho * prev_rate + (1.0 - self.rho) * target_rate
+        return smoothed_rate
+
+    def compute_discrete_action(
+        self,
+        snapshot: MacroMeetingSnapshot,
+        params: MemberTaylorParameters,
+    ) -> tuple[int, str]:
+        """
+        Discretizes the implied continuous rate into the nearest valid basis point action
+        and assigns an implied policy stance.
+        Returns: (vote_bps, stance_string)
+        """
+        smoothed_rate = self.compute_continuous_rate(snapshot, params)
+        raw_change_bps = (smoothed_rate - snapshot.current_repo_rate_pct) * 100.0
+
+        # Discretize to closest action in action set
+        discrete_vote_bps = min(self.action_set_bps, key=lambda a: abs(a - raw_change_bps))
+
+        # Implied stance
+        if discrete_vote_bps > 0 or snapshot.cpi_headline_yoy_pct > (self.pi_star + 1.0):
+            implied_stance = "withdrawal_of_accommodation"
+        elif discrete_vote_bps < 0 and snapshot.cpi_headline_yoy_pct < self.pi_star:
+            implied_stance = "accommodative"
+        else:
+            implied_stance = "neutral"
+
+        return int(discrete_vote_bps), implied_stance
+# Source-linked original historical labels
+
+These inputs describe the 25 already exposed RBI MPC decisions from 9 October 2020 to 8 August 2024. They are retrospective scientific data. Reconstruction or repeated inspection does not make this panel an untouched evaluation.
+
+`label_annotations.json` retains the scientific interpretation fields, committee-resolution excerpts, publication/decision/start dates, source paths and raw-source SHA-256 identities. Its provenance records the SHA-256 of the archival scientific truth from which the interpretation fields were exported. Every retained excerpt was checked against the corresponding primary-source bytes. This is a portable annotation export, not independent second coding. No numerical rate or stance outcome is imported from the legacy parquet.
+
+`label_ledger.json` adds the published repo level before/after each meeting, the rate change derived from consecutive levels, the stance category derived from the committee's published clause, and the six literal rate-ballot cells. Source dates, selected clauses, rate ballots and attributed signed-statement votes are checked during every reconstruction. The complete April/May 2022 clause remains available: the committee remained accommodative while focusing on withdrawal of accommodation; the leading published category is `accommodative`.
+
+`observed_targets.json` exposes chronological `{meeting_date, member_targets:{member_id:bool|null}}` records separately for literal rate No, disagreement with the committee's exact rate quantum, and formal stance dissent. For this original panel, the two rate channels both contain 150 observed targets, including ten positive events. They are separate definitions even though their targets coincide here. A No vote against a quantified resolution establishes disagreement; it does not identify every alternative magnitude. Narrative preferences that ultimately concur with the binding resolution are not relabeled as formal dissent.
+
+Formal stance contains 144 observed targets, fifteen positives and six missing targets. Nineteen meetings have complete stance labels. Jayanth Varma's reservations in August 2022 and April, June, August, October and December 2023 remain `null`. The four reservations in the 2021–February 2022 committee summaries are resolved by an attributed, explicit signed-statement vote against the stance. The October 2020 disagreement over the duration/formulation of forward guidance stays separate from the accommodative stance category. Missingness never means a known negative, affirmative ballot or invented abstention.
+
+`input_manifest.json` freezes the SHA-256 of 122 required scientific files: these annotations/labels/targets, the observation ledgers, 25 original minutes, the prior policy resolution/record, and the retained CPI, GDP/GVA and FOMC raw sources used by those ledgers. A separately retained manifest digest can anchor a copied source root:
+
+```
+0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757
+```
+
+From the project root, one offline command builds the scientific panel and labels into an explicit new destination:
+
+```sh
+.venv/bin/python research/verification/rebuild_scientific_inputs.py \
+  --source-root . \
+  --output-root /absolute/path/to/new-reconstruction \
+  --expected-input-manifest-sha256 0c618df1e00a4731c9a312799a65c472d1d5e6815bff4f19a66b2430de4cd757
+```
+
+It writes `panel/{snapshots,truth,manifest}.json`, `labels/{label_ledger,observed_targets}.json` and `reconstruction_receipt.json`. The receipt records input hashes, code identity, runtime/dependency details and zero network/model calls. An optional `--reference-panel data/processed/vintage_v3` records byte and semantic comparisons; the reference is not used to construct scientific inputs. The rebuilt snapshots and archival truth are byte identical to `vintage_v3`; the manifest differs in its version and added label-ledger/input-manifest/observability metadata. Archival truth preserves known-positive lists for old-study replay. New observability-aware scoring must use the explicit member targets rather than interpreting a missing formal vote as a negative.
+
+The standalone export command consumes only these annotations and retained primary sources:
+
+```sh
+.venv/bin/python research/source_ledgers/historical_labels_round002/export_labels.py \
+  --source-root . --output-dir /absolute/path/to/new-label-export
+```
+
+Preserve the catalogue and source bytes as one scientific version. A new input version needs its own declared catalogue and outputs. A checksum ties transcriptions to retained bytes; it does not authenticate contemporaneous web availability or prove that no intermediate revision existed. Missing output gap, core/food CPI, IIP, liquidity, FX, oil and monsoon inputs stay missing. Engineering reconstruction is not empirical model replication, forecasting skill, cognitive diversity or causal policy evidence.
+
+For a source-only scientific copy, include `src/`, this whole directory, `research/verification/rebuild_scientific_inputs.py`, `research/source_ledgers/prior_policy/`, all observation ledger/raw files named in `input_manifest.json`, and the 25 `data/raw/minutes_html/` files named there. `data/processed/macro_panel.parquet`, audit results, Git history, model credentials and prior assessments are unnecessary. Tests may additionally include `tests/test_vintage_rebuild.py` and archival `data/processed/vintage_v3/` for the optional equivalence check.
+# Source-label reconciliation
+
+The two retained source passes were written separately. This directory compares them and records parent adjudication; it does not call the result independent consensus or a universal gold standard. Neither model predictions nor prior forecasting scores entered these decisions.
+
+Both passes agree on all 78 exact rate choices and rate-choice disagreements. Literal ballot agreement includes six unknown cells; only 72 literal ballots are observed. Three literal No ballots differ from four exact-magnitude disagreements because June 2025 Bhattacharya votes Yes for a 25-bps cut while the committee chooses 50 bps.
+
+For formal stance, 76 of 78 entries agree including unknowns. Two personal statements explicitly link a status-quo vote to both rate and stance. The primary definition accepts these contextual personal votes as neutral, with the preceding neutral stance as referent. A strict-narrative sensitivity preserves the second coder's nulls. Both original annotations, excerpts and reasons remain in comparison.json. Resolution-reported October 2026 preferences are not substituted for unavailable personal statements.
+
+The primary definition observes 20 formal stance cells; the strict sensitivity observes 18. Only three meetings have all six stance votes observed. Unknown votes, unassessed reservations and unassessed guidance are never coded as negatives. These labels cover an already exposed retrospective panel of 13 decisions, including eight holds, four cuts and one increase. `calibrated_tightening` is outside the current simulator's three-stance ontology and requires explicit versioned integration.
+
+`build_adjudication.py` verifies 25 shared primary-source hashes and 386 exact annotation raw fragments, then writes new outputs exclusively. The independent pass's broader annotations-plus-statements check covers 1,048 fragments separately; these counts refer to different inputs. Hashes check retained consistency, not authenticated historical first availability.
+
+`evaluate_missing_labels.py` produces one offline no-dissent baseline diagnostic for each distinct channel, including the strict stance sensitivity. The new evaluator reports observed and complete cases plus sharp logical bounds over every possible assignment to missing labels. Bounds are not confidence intervals and do not assume random missingness. This deterministic baseline uses no model generation and cannot establish model performance. Run into a new output directory:
+
+```sh
+PYTHONPATH=. .venv/bin/python research/source_ledgers/expanded_panel_oct09_adjudication/evaluate_missing_labels.py --output-dir results/source_label_diagnostics_new
+```
+(12) The procedure, conduct, code of confidentiality and any other incidental
+matter for the functioning of the Monetary Policy Committee shall be such as
+may be specified by the regulations made by the Central Board.
+(13) The proceeding of the Monetary Policy Committee shall be confidential.
+45ZJ. Steps to be taken to implement decision of Monetary Policy Committee.
+(1) The Bank shall publish a document explaining the steps to be taken by it to
+implement the decisions of the Monetary Policy Committee, including any
+changes thereto.
+(2) The particulars to be included in such document and the frequency of
+publications of such document shall be such as may be specified by the
+regulations made by the Central Board.
+45ZK. Publication of decisions.
+The Bank shall publish, after the conclusion of every meeting of the Monetary
+Policy Committee, the resolution adopted by the said Committee;
+45ZL. Publication of proceedings of meeting of Monetary Policy Committee.
+The Bank shall publish, on the fourteenth day after every meeting of the
+Monetary Policy Committee, the minutes of the proceedings of the meeting
+which shall include the following, namely:—
+(a) the resolution adopted at the meeting of the Monetary Policy Committee;
+(b) the vote of each member of the Monetary Policy Committee, ascribed to
+such member, on resolutions adopted in the said meeting; and
+(c) the statement of each member of the Monetary Policy Committee under
+sub-section (11) of section 45ZL on the resolutions adopted in the said
+meeting.
+45ZM. Monetary Policy Report.
+(1) The Bank shall, once in every six months, publish a document to be called
+the Monetary Policy Report, explaining—
+(a) the sources of inflation; and
+(b) the forecasts of inflation for the period between six to eighteen months
+from the date of publication of the document.
+90

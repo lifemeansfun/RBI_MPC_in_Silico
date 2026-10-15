@@ -1,0 +1,11 @@
+{
+  "id": "nas2020_quarterly_candidate_1",
+  "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/8.18.2.pdf",
+  "filename": "nas2020_quarterly_candidate_1.pdf",
+  "role": "Bounded candidate NAS2020 quarterly expenditure GDP table; identity must be verified",
+  "discovery": "Candidate derived from verified NAS2019 Statement8.18.2 and NAS2020 no-S Excel filename structure; not asserted to be actual link",
+  "retrieved_at_utc": "2026-10-09T16:22:44.812956+00:00",
+  "acquired": false,
+  "error_type": "HTTPError",
+  "error": "HTTP Error 404: Not Found"
+}

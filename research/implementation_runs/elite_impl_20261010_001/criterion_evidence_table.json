@@ -1,0 +1,96 @@
+{
+  "version": "implementation-closeout-v1",
+  "status": "RESEARCH INCOMPLETE — SPECIFIED EVIDENCE OR RESOURCES REMAIN NECESSARY",
+  "criteria": [
+    {
+      "criterion": "A",
+      "name": "Reference fidelity and justified departures",
+      "status": "UNVERIFIED",
+      "acceptance": "Version-specific full-method mapping and decisive verification of required adapted mechanisms, with comparator departures explicit",
+      "verified": "Exact August 2025 fulltext and three related primary fulltexts retained with method/page/hash records; Taylor remains a distinct comparator",
+      "remaining": "July 2026 revised full methods unavailable; complete scientific adaptation and relevant reference-mechanism reproduction remain unestablished",
+      "evidence": [
+        "reference_fidelity/METHOD_AND_CONTRIBUTION_MATRIX.md",
+        "reference_fidelity/reference_methods.json"
+      ]
+    },
+    {
+      "criterion": "B",
+      "name": "Important incremental contribution",
+      "status": "UNVERIFIED",
+      "acceptance": "Substantiated distinction from closest prior work and domain/methods assessment of meaningful scientific importance",
+      "verified": "Actual late-Governor H/B/N contrast is explicit; overlaps with peer influence and final-solution withholding documented",
+      "remaining": "Exact novelty, domain importance and meaningful effect not assessed; no favorable verdict sought",
+      "evidence": [
+        "reference_fidelity/METHOD_AND_CONTRIBUTION_MATRIX.md"
+      ]
+    },
+    {
+      "criterion": "C",
+      "name": "Source, timing, persona and label validity",
+      "status": "UNVERIFIED",
+      "acceptance": "Source/availability/roster/ontology evidence appropriate to each claim, with independent coding and persona-construct validation where claimed",
+      "verified": "38 meetings audited; raw bytes/headings/declared cutoffs and deterministic v3 fields reconstructed; 23 reduced conditional-simulator eligible",
+      "remaining": "Oracle attendance, unauthenticated historical first availability, absent human coding/construct validation; 13 missing macro meetings, 14 missing histories, unsupported stance; no premeeting forecasting eligibility",
+      "evidence": [
+        "source_persona/reconstruction_attempt_003/eligibility_audit.json",
+        "source_persona/reconstruction_attempt_003/executable_personas/receipt.json"
+      ]
+    },
+    {
+      "criterion": "D",
+      "name": "Identification, baselines and empirical execution",
+      "status": "FAIL",
+      "acceptance": "Frozen scientifically justified cohort/controls with actual fresh live-model evidence and matched comparisons",
+      "verified": "Actual common 23-output prefix, field-only H/B/N branches and retained raw ballots exercised with mock outputs; all-planned schedule is immutable",
+      "remaining": "Zero live study calls; no reconciled allowance/quota, externally assessed scientific freeze, pilot or main-study execution; semantic disclosure audit missing",
+      "evidence": [
+        "source_integration_attempt_001/mock/completion.json",
+        "source_integration_attempt_001/live_refused/failure.json",
+        "post_verification_accounting_presence.json"
+      ]
+    },
+    {
+      "criterion": "E",
+      "name": "Measurement, uncertainty and no pseudoreplication",
+      "status": "UNVERIFIED",
+      "acceptance": "Independently recomputed endpoints, planned missingness accounting and adequate meeting/temporal uncertainty under stated assumptions",
+      "verified": "Independent arithmetic, fixed-peer attainable ranges, raw request/transcript joins, hierarchical planned-denominator bounds; absent uncertainty stays null",
+      "remaining": "No live variance/precision design, empirical intervals or temporal generalization; fixture null is not evidence of equivalence",
+      "evidence": [
+        "source_integration_attempt_001/mock/analysis.json",
+        "full_suite_attempt_001/result.json"
+      ]
+    },
+    {
+      "criterion": "F",
+      "name": "Integrated reproducibility, provenance and failures",
+      "status": "UNVERIFIED",
+      "acceptance": "Complete source reconstruction, independent saved-output analysis and fresh live replication with valid accounting and retained failures",
+      "verified": "518 isolated tests, portable source-linked mock execution, two identical independent replays including a clean-installed environment; corrupt/unresolved paths fail closed",
+      "remaining": "Fresh live replication/provider authentication/billing unverified; new runner blocks existing outputs and does not yet implement controlled continuation of a stopped study; final independent scientific critique not performed",
+      "evidence": [
+        "full_suite_attempt_001/result.json",
+        "source_integration_attempt_001/run_control.json",
+        "clean_install_attempt_001/run_control.json"
+      ]
+    },
+    {
+      "criterion": "G",
+      "name": "Conclusions proportional to evidence",
+      "status": "PASS",
+      "acceptance": "Current conclusions explicitly limited to verified evidence, with nulls/failures/contrary and missing evidence retained",
+      "verified": "Mock/replay/source checks separately labeled; no forecasting, human cognition, welfare, equilibrium or journal-readiness claim made",
+      "remaining": "Conclusions must be reassessed against any later empirical evidence",
+      "evidence": [
+        "IMPLEMENTATION_REPORT.md",
+        "criterion_evidence_table.json"
+      ]
+    }
+  ],
+  "adaptation_established": false,
+  "contribution_established": false,
+  "publication_readiness_established": false,
+  "new_scientific_reviewer_dispatches": 0,
+  "scope": "Current engineering batch, preserving the terminal prior assessment and its accounting"
+}

@@ -1,0 +1,13 @@
+{
+  "src/infra/cost_governor.py": "c0b9f7ebd91f25c0c8fcdc4a3d79e13f74193cbbf896438bfecd773f0d14cdf4",
+  "src/infra/config_loader.py": "be88e4ff700f1c569d827de306e97013952deac1dd413a502f10e04b165c3313",
+  "src/infra/checkpoint.py": "728530e79df8d719d9fb3748acf802b39ed9e1ed9d20ccb7b78fdad8e6468cd1",
+  "src/infra/transcript_logger.py": "a30c77e3d73bc290e02cb536631a259164d20de9dcb435ded374f4a3adc2ea77",
+  "src/infra/cache.py": "3cd258d52b32e74fdcdaef5ce451956025ba5bf367ac7980f643100d0359decc",
+  "src/infra/__init__.py": "95a1d3127fd23782776374c26fe311fcaaa9343bb02b03cc805ad8948e4b253f",
+  "src/infra/llm_client.py": "b775d1f1ca8be51d4372414621f179c0895ff6e8b0f89aaaf7a8d3a806ca962d",
+  "src/infra/exceptions.py": "d9ca96f0057ca894af2b2a62632fd9b71a572c7593cb7a3d8baff4c9edc159ed",
+  "src/infra/generation_evidence.py": "d82c41150159efa5b438a8ec6b4b30c5e105de6b1e4a1ef6109c6b84f80c4c94",
+  "src/infra/evidence.py": "cab5633c69668c96167a15704547d6a0b1d87514cf07fdd8fad9b67ae20e24f0",
+  "tests/test_runtime_upgrade.py": "5877b24efde88b95dac80300ca63d6d1468bd8ea02c6346bde1935da7a984ad3"
+}

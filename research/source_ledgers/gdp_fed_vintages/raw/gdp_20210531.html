@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=6" type="text/css" />
+      <script type="text/javascript">
+        /* Stamps the saved theme on <html> before the page paints. The
+           switcher in js/accessibility.js settles the rest, but on inner
+           pages it does not run until the end of the body and inside the
+           release frame it is a separate download - either way the reader
+           would otherwise watch a light page turn dark in front of them. */
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+      </script>
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: #444;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      
+
+      <link id="pibConsentCss" href="/css/consent.css?v=7" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=48" rel="stylesheet" type="text/css" /><meta property="og:title" content="Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1723153" /><meta property="og:description" content="
+1. The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation, has" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="rduqs6zrfsbjc2wdxikq-f-5ab55d8ce-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":75,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"5c61d584","ak.r":32554,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":63008,"ak.gh":"49.44.130.141","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1791212053","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==vVHV0dqKkviBvQ+Vuy++50pf1C9CgIesbEP5j+0z5AEBhUENwfe+Y7MmphxY+Z0fUlY6oucnCEzrXwVI7U2QDp8rClAGk/ZgVZXykaAGrn6c422zw6wwu5h8eEzTj0MQUKVNd4BXWB8jyFbNcQ5/VzE2S1iA7hHajhGtxm1U4CQ0budYU4Qz6mSDei6Em/53vF3wzGQOsW7GJOz6BnqipvXWa5zmvSmh5KSjhYbaKg3+KmgpZYZdAqMooc2TFIvVLwAY4lABanUw+GJX6X4FIMQQ9GqBfE7b1yXPq3R/GoBjs34melL9UAwT6jO4ht4+rucuXymDAtFy+gd8WFQ1cghZCYohFKS7jRIi9qVwuyxSx/ZqRc+NzC+0JE0iLTyl8XDEQFHg3VCSyqTfRSeoQq8mOi2BcvZ7YPsF7IyO9F0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+      <form method="post" action="./pressreleasepage.aspx?lang=2&amp;prid=1723153&amp;reg=48" id="form1">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/pressreleasepage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="xnEWo5jYvSTKs2ykFN5GryizGMnTOS+PKYry2zzV67rOMW3Ccj5/4GNjc4Wu2O2sZYKZ0zvwk3ey+CpxQlDAaW56f/lmbw1pt/zerSgGuJFof/+z9jBPiTA6KG6m/5DkW+LKwXb/G7VvZndRO0OPz7sU0xS3Rnz0YCwhXpUH3MVFrx/HCiUTAtyw8I7GHE07xEhmx1Sx/rYz1fSdsZSB0slRS9JmZicRC0/qqDgrjxuth1eYd3keoxaWmPioOqJRNgHMg73pIf4Kc1MgceSKsOywX04=" />
+                              
+            <div id="templateCss"></div>
+            
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</div>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="1723153" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part" dir="ltr">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Statistics & Programme Implementation
+                        </div>
+                        
+                        <div id="lg_g">
+                        </div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h1 id="Titleh2">
+                                    Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21
+                              </h1>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              Posted On:
+                31 MAY 2021 5:30PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <div class="Section2">
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">1. The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation, has released the Provisional Estimates of National Income for the financial year 2020-21, both at Constant (2011-12) and Current Prices. These are presented in Statements 1 to 4.</span></span></p>
+
+<ol start="2">
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Quarterly Estimates of Gross Domestic Product (GDP) for the fourth quarter Q4 (January-March) of 2020-21, both at Constant (2011-12) and Current Prices along with the corresponding quarterly estimates of expenditure components of GDP are also released. These are presented in Statements 5 to 8. Estimates including growth rates of Q1, Q2 and Q3 of 2020-21 released earlier have been revised in accordance with the revision policy of National Accounts.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Second Advance Estimates (SAE) of National Income for the year 2020-21 were released on 26<sup>th</sup> February, 2021. These estimates have now been revised incorporating latest information on (i) Index of Industrial Production (IIP), (ii) Third Advance Estimates of Crop Production, (iii) Production of Livestock products and Fisheries, (iv) Accounts of Central &amp; State Governments, (v) GST data on Taxes and Supplies, details of other taxes. Besides information on indicators like Deposits &amp; Credits, Passenger and Freight Traffic of Railways, Passengers and Cargo Handled by Civil Aviation, Cargo Handled at Major Sea Ports, Sales of Commercial Vehicles etc., available for first 9/10 months of the financial year at the time of SAE, have been revised with updated data (upto March 2021). </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Early results on the performance of Corporate Sector for April-December 2020, which were used in SAE, have been revised using the latest available information. Considering the current Covid situation, the statutory timelines for filing the requisite financial returns of fourth quarter have been extended by the Government. Consequently, the private corporate sector estimates of industries are based on other indicators like IIP, GST etc. This may have implications on subsequent revision of these estimates.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Improved performance of indicators, used in compilation of GVA, in the fourth quarter of 2020-21, owing to calibrated and steady opening of the economy, is reflected in the improved growth estimated now for the year 2020-21 as compared to the previous projection in SAE. In addition to this, revised data received from some source agencies for the previous quarters and receipt of GST data for third quarter along with fourth quarter have also contributed to the revision in the estimates.&nbsp; </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Public Administration, Defence &amp; Other Services category includes the Other Services sector i.e. Education, Health, Recreation, and other personal serviceswhich have a greater share in the overall category. Owing to their contact intensive nature, these services had to bear the maximum brunt of the lockdown induced by the prevailing pandemic. With the gradual opening of the economy, the performance of these services has improved over the quarters. </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The Revised Estimates of Tax Revenue for 2020-21 as available in the Annual Financial Statement of the Central Government for 2021-22, and latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products at Current Prices.&nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. There was a sharp spike from Rs 2.27 lakh crore in BE 2020-21 to Rs 5.95 lakh crore in the revised Estimates for the major subsidies (especially food subsidies) of Centre, presented in Budget 2021-22, in RE 2020-21. Revised provision of subsidies of Centre has been considered after adjusting for arrears of previous years and repayment/prepayment of loans, as per information received from Ministry of Finance. For subsidy component of States, latest information available on the CAG website has been taken into account.Estimates of Revenue expenditure, Interest payments, Subsidies etc. were projected using the latest available data on the CGA and CAG websites and the information available in the Budget 2020-21 documents of Union and States, while accounting for relative shares of Centre &amp; States, for estimating Government Final Consumption Expenditure (GFCE) and subsidies.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The estimates of Gross Fixed Capital Formation (GFCF) are compiled using the commodity flow approach. Capital expenditure of Government will be indirectly reflected in the estimates of GFCF. The change in the estimates of &lsquo;Valuables&rsquo; category is owing to latest information available on the indicator.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To meet the crisis caused by the pandemic, the Government has announced numerous policy measures, from providing the most vulnerable with daily food rations to postponing some deadlines for compliance and tax filings. Clarifications provided by International agencies like IMF, EUROSTAT etc. on treatment/economic classification of various measures provided by the Government in the pandemic times were also considered while compiling the estimates. Percentage changes in the main indicators used in estimation are given in the Annexure.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The measures taken by the Government to contain spread of the Covid-19 pandemic have had an impact on economic activities as well as on data collection mechanisms. The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries/ Departments/ Private agencies serve as valuable inputs in the compilation of these estimates. There have been disruptions in data flow from some source agencies leading to data coverage issues. The limitations in the datasets and the timeliness have a bearing on the GDP estimates and its subsequent revisions. To address the data challenges arising out of the unprecedented situation, the National Statistical Office has explored alternate data sources, indicators and methodology along with clarifications from International agencies, to capture the current economic situation, as per accepted best practices. Estimates are, therefore, likely to undergo sharp revisions in due course, as per the release calendar. Users should take this into consideration when interpreting the figures.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Real GDP or Gross Domestic Product (GDP) at Constant (2011-12) Prices in the year 2020-21 is now estimated to attain a level of ₹135.13 lakh crore, as against the First Revised Estimate of GDP for the year 2019-20 of ₹145.69 lakh crore, released on 29<sup>th</sup> January 2021. The growth in GDP during 2020-21 is estimated at -7.3 percent as compared to 4.0 percent in 2019-20.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP at Current Prices in the year 2020-21 is estimated to attain a level of ₹197.46 lakh crore, as against the First Revised Estimates of ₹203.51 lakh crore in 2019-20, showing a change of -3.0 percent as compared to 7.8 percent in 2019-20.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP at Constant (2011-12) Prices in Q4 of 2020-21 is estimated at ₹38.96 lakh crore, as against ₹38.33 lakh crore in Q4 of 2019-20, showing a growth of 1.6 percent.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Estimates of Gross/Net National Income and Per Capita Income along with GVA at Basic Prices by kind of economic activity, Expenditures on GDP for Provisional Estimates and Fourth Quarter (Q4) 2018-19, 2019-20 and 2020-21 at Constant (2011-12) and Current Prices, along with percent changes and applicable rates, are given in Statements 1 to 8.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The next release of quarterly GDP estimates for the quarter April-June 2022<br />
+	(Q1 of 2021-22) will be on 31.08.2021.</span></span></li>
+</ol>
+
+<p style="margin-right:4.3pt; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">************</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0021YT7.png" style="height:862px; width:598px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0033FVJ.png" style="height:852px; width:601px" /></span></span></p>
+</div>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<div class="Section3">
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image004TAM0.png" style="height:817px; width:598px" /></span></span></p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<div class="Section4">
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0058TIL.png" style="height:564px; width:992px" /></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0069HB2.png" style="height:571px; width:985px" /></span></span></p>
+</div>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Annexure</strong></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image00756FT.png" style="height:855px; width:656px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/may/doc202153111.pdf" target="_blank"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><u>Click here to see the complete press note -&nbsp;</u></span></span></a></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*******</span></span></p>
+
+<p><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">DS/VJ/AK</span></span></p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(Release ID: 1723153)</span>
+                        <span id="lblViews">Visitor Counter : 30109</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">Read this release in: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1723207' target="_blank">
+                                          Marathi </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1723587' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1723325' target="_blank">
+                                          हिन्दी </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1723437' target="_blank">
+                                          Punjabi </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Statistics & Programme Implementation
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          Posted On:
+                        31 MAY 2021 5:30PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <div class="Section2">
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">1. The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation, has released the Provisional Estimates of National Income for the financial year 2020-21, both at Constant (2011-12) and Current Prices. These are presented in Statements 1 to 4.</span></span></p>
+
+<ol start="2">
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Quarterly Estimates of Gross Domestic Product (GDP) for the fourth quarter Q4 (January-March) of 2020-21, both at Constant (2011-12) and Current Prices along with the corresponding quarterly estimates of expenditure components of GDP are also released. These are presented in Statements 5 to 8. Estimates including growth rates of Q1, Q2 and Q3 of 2020-21 released earlier have been revised in accordance with the revision policy of National Accounts.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Second Advance Estimates (SAE) of National Income for the year 2020-21 were released on 26<sup>th</sup> February, 2021. These estimates have now been revised incorporating latest information on (i) Index of Industrial Production (IIP), (ii) Third Advance Estimates of Crop Production, (iii) Production of Livestock products and Fisheries, (iv) Accounts of Central &amp; State Governments, (v) GST data on Taxes and Supplies, details of other taxes. Besides information on indicators like Deposits &amp; Credits, Passenger and Freight Traffic of Railways, Passengers and Cargo Handled by Civil Aviation, Cargo Handled at Major Sea Ports, Sales of Commercial Vehicles etc., available for first 9/10 months of the financial year at the time of SAE, have been revised with updated data (upto March 2021). </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Early results on the performance of Corporate Sector for April-December 2020, which were used in SAE, have been revised using the latest available information. Considering the current Covid situation, the statutory timelines for filing the requisite financial returns of fourth quarter have been extended by the Government. Consequently, the private corporate sector estimates of industries are based on other indicators like IIP, GST etc. This may have implications on subsequent revision of these estimates.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Improved performance of indicators, used in compilation of GVA, in the fourth quarter of 2020-21, owing to calibrated and steady opening of the economy, is reflected in the improved growth estimated now for the year 2020-21 as compared to the previous projection in SAE. In addition to this, revised data received from some source agencies for the previous quarters and receipt of GST data for third quarter along with fourth quarter have also contributed to the revision in the estimates.&nbsp; </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Public Administration, Defence &amp; Other Services category includes the Other Services sector i.e. Education, Health, Recreation, and other personal serviceswhich have a greater share in the overall category. Owing to their contact intensive nature, these services had to bear the maximum brunt of the lockdown induced by the prevailing pandemic. With the gradual opening of the economy, the performance of these services has improved over the quarters. </span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The Revised Estimates of Tax Revenue for 2020-21 as available in the Annual Financial Statement of the Central Government for 2021-22, and latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products at Current Prices.&nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. There was a sharp spike from Rs 2.27 lakh crore in BE 2020-21 to Rs 5.95 lakh crore in the revised Estimates for the major subsidies (especially food subsidies) of Centre, presented in Budget 2021-22, in RE 2020-21. Revised provision of subsidies of Centre has been considered after adjusting for arrears of previous years and repayment/prepayment of loans, as per information received from Ministry of Finance. For subsidy component of States, latest information available on the CAG website has been taken into account.Estimates of Revenue expenditure, Interest payments, Subsidies etc. were projected using the latest available data on the CGA and CAG websites and the information available in the Budget 2020-21 documents of Union and States, while accounting for relative shares of Centre &amp; States, for estimating Government Final Consumption Expenditure (GFCE) and subsidies.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The estimates of Gross Fixed Capital Formation (GFCF) are compiled using the commodity flow approach. Capital expenditure of Government will be indirectly reflected in the estimates of GFCF. The change in the estimates of &lsquo;Valuables&rsquo; category is owing to latest information available on the indicator.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To meet the crisis caused by the pandemic, the Government has announced numerous policy measures, from providing the most vulnerable with daily food rations to postponing some deadlines for compliance and tax filings. Clarifications provided by International agencies like IMF, EUROSTAT etc. on treatment/economic classification of various measures provided by the Government in the pandemic times were also considered while compiling the estimates. Percentage changes in the main indicators used in estimation are given in the Annexure.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The measures taken by the Government to contain spread of the Covid-19 pandemic have had an impact on economic activities as well as on data collection mechanisms. The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries/ Departments/ Private agencies serve as valuable inputs in the compilation of these estimates. There have been disruptions in data flow from some source agencies leading to data coverage issues. The limitations in the datasets and the timeliness have a bearing on the GDP estimates and its subsequent revisions. To address the data challenges arising out of the unprecedented situation, the National Statistical Office has explored alternate data sources, indicators and methodology along with clarifications from International agencies, to capture the current economic situation, as per accepted best practices. Estimates are, therefore, likely to undergo sharp revisions in due course, as per the release calendar. Users should take this into consideration when interpreting the figures.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Real GDP or Gross Domestic Product (GDP) at Constant (2011-12) Prices in the year 2020-21 is now estimated to attain a level of ₹135.13 lakh crore, as against the First Revised Estimate of GDP for the year 2019-20 of ₹145.69 lakh crore, released on 29<sup>th</sup> January 2021. The growth in GDP during 2020-21 is estimated at -7.3 percent as compared to 4.0 percent in 2019-20.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP at Current Prices in the year 2020-21 is estimated to attain a level of ₹197.46 lakh crore, as against the First Revised Estimates of ₹203.51 lakh crore in 2019-20, showing a change of -3.0 percent as compared to 7.8 percent in 2019-20.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">GDP at Constant (2011-12) Prices in Q4 of 2020-21 is estimated at ₹38.96 lakh crore, as against ₹38.33 lakh crore in Q4 of 2019-20, showing a growth of 1.6 percent.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Estimates of Gross/Net National Income and Per Capita Income along with GVA at Basic Prices by kind of economic activity, Expenditures on GDP for Provisional Estimates and Fourth Quarter (Q4) 2018-19, 2019-20 and 2020-21 at Constant (2011-12) and Current Prices, along with percent changes and applicable rates, are given in Statements 1 to 8.</span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The next release of quarterly GDP estimates for the quarter April-June 2022<br />
+	(Q1 of 2021-22) will be on 31.08.2021.</span></span></li>
+</ol>
+
+<p style="margin-right:4.3pt; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">************</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0021YT7.png" style="height:862px; width:598px" /></span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0033FVJ.png" style="height:852px; width:601px" /></span></span></p>
+</div>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<div class="Section3">
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image004TAM0.png" style="height:817px; width:598px" /></span></span></p>
+</div>
+
+<p style="text-align:center">&nbsp;</p>
+
+<div class="Section4">
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0058TIL.png" style="height:564px; width:992px" /></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0069HB2.png" style="height:571px; width:985px" /></span></span></p>
+</div>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:right"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Annexure</strong></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image00756FT.png" style="height:855px; width:656px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/may/doc202153111.pdf" target="_blank"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><u>Click here to see the complete press note -&nbsp;</u></span></span></a></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*******</span></span></p>
+
+<p><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">DS/VJ/AK</span></span></p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (Release ID: 1723153)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&text=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&title=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&text=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1723153&title=Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Provisional estimates of Annual National Income, 2020-21 and Quarterly estimates (Q4) of Gross Domestic Product, 2020-21" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;div class=&quot;Section2&quot;>
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>1. The National Statistical Office (NSO), Ministry of Statistics and Programme Implementation, has released the Provisional Estimates of National Income for the financial year 2020-21, both at Constant (2011-12) and Current Prices. These are presented in Statements 1 to 4.&lt;/span>&lt;/span>&lt;/p>
+
+
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Quarterly Estimates of Gross Domestic Product (GDP) for the fourth quarter Q4 (January-March) of 2020-21, both at Constant (2011-12) and Current Prices along with the corresponding quarterly estimates of expenditure components of GDP are also released. These are presented in Statements 5 to 8. Estimates including growth rates of Q1, Q2 and Q3 of 2020-21 released earlier have been revised in accordance with the revision policy of National Accounts.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The Second Advance Estimates (SAE) of National Income for the year 2020-21 were released on 26th February, 2021. These estimates have now been revised incorporating latest information on (i) Index of Industrial Production (IIP), (ii) Third Advance Estimates of Crop Production, (iii) Production of Livestock products and Fisheries, (iv) Accounts of Central &amp;amp; State Governments, (v) GST data on Taxes and Supplies, details of other taxes. Besides information on indicators like Deposits &amp;amp; Credits, Passenger and Freight Traffic of Railways, Passengers and Cargo Handled by Civil Aviation, Cargo Handled at Major Sea Ports, Sales of Commercial Vehicles etc., available for first 9/10 months of the financial year at the time of SAE, have been revised with updated data (upto March 2021). &lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Early results on the performance of Corporate Sector for April-December 2020, which were used in SAE, have been revised using the latest available information. Considering the current Covid situation, the statutory timelines for filing the requisite financial returns of fourth quarter have been extended by the Government. Consequently, the private corporate sector estimates of industries are based on other indicators like IIP, GST etc. This may have implications on subsequent revision of these estimates.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Improved performance of indicators, used in compilation of GVA, in the fourth quarter of 2020-21, owing to calibrated and steady opening of the economy, is reflected in the improved growth estimated now for the year 2020-21 as compared to the previous projection in SAE. In addition to this, revised data received from some source agencies for the previous quarters and receipt of GST data for third quarter along with fourth quarter have also contributed to the revision in the estimates.&amp;nbsp; &lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Public Administration, Defence &amp;amp; Other Services category includes the Other Services sector i.e. Education, Health, Recreation, and other personal serviceswhich have a greater share in the overall category. Owing to their contact intensive nature, these services had to bear the maximum brunt of the lockdown induced by the prevailing pandemic. With the gradual opening of the economy, the performance of these services has improved over the quarters. &lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>GDP is derived as the sum of the gross value added (GVA) at basic prices, plus all taxes on products, less all subsidies on products. The total tax revenue used for GDP compilation includes Non-GST Revenue and GST Revenue. The Revised Estimates of Tax Revenue for 2020-21 as available in the Annual Financial Statement of the Central Government for 2021-22, and latest information on the website of Controller General of Accounts (CGA) and Comptroller and Auditor General of India (CAG) have been used for estimating taxes on products at Current Prices.&amp;nbsp; For obtaining Taxes on Products at Constant Prices, volume extrapolation is done using volume growth of taxed goods and services and aggregated to get the total volume of taxes. There was a sharp spike from Rs 2.27 lakh crore in BE 2020-21 to Rs 5.95 lakh crore in the revised Estimates for the major subsidies (especially food subsidies) of Centre, presented in Budget 2021-22, in RE 2020-21. Revised provision of subsidies of Centre has been considered after adjusting for arrears of previous years and repayment/prepayment of loans, as per information received from Ministry of Finance. For subsidy component of States, latest information available on the CAG website has been taken into account.Estimates of Revenue expenditure, Interest payments, Subsidies etc. were projected using the latest available data on the CGA and CAG websites and the information available in the Budget 2020-21 documents of Union and States, while accounting for relative shares of Centre &amp;amp; States, for estimating Government Final Consumption Expenditure (GFCE) and subsidies.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The estimates of Gross Fixed Capital Formation (GFCF) are compiled using the commodity flow approach. Capital expenditure of Government will be indirectly reflected in the estimates of GFCF. The change in the estimates of &amp;lsquo;Valuables&amp;rsquo; category is owing to latest information available on the indicator.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>To meet the crisis caused by the pandemic, the Government has announced numerous policy measures, from providing the most vulnerable with daily food rations to postponing some deadlines for compliance and tax filings. Clarifications provided by International agencies like IMF, EUROSTAT etc. on treatment/economic classification of various measures provided by the Government in the pandemic times were also considered while compiling the estimates. Percentage changes in the main indicators used in estimation are given in the Annexure.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The measures taken by the Government to contain spread of the Covid-19 pandemic have had an impact on economic activities as well as on data collection mechanisms. The Quarterly estimates of National Accounts are indicator based and data sourced from various Ministries/ Departments/ Private agencies serve as valuable inputs in the compilation of these estimates. There have been disruptions in data flow from some source agencies leading to data coverage issues. The limitations in the datasets and the timeliness have a bearing on the GDP estimates and its subsequent revisions. To address the data challenges arising out of the unprecedented situation, the National Statistical Office has explored alternate data sources, indicators and methodology along with clarifications from International agencies, to capture the current economic situation, as per accepted best practices. Estimates are, therefore, likely to undergo sharp revisions in due course, as per the release calendar. Users should take this into consideration when interpreting the figures.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Real GDP or Gross Domestic Product (GDP) at Constant (2011-12) Prices in the year 2020-21 is now estimated to attain a level of ₹135.13 lakh crore, as against the First Revised Estimate of GDP for the year 2019-20 of ₹145.69 lakh crore, released on 29th January 2021. The growth in GDP during 2020-21 is estimated at -7.3 percent as compared to 4.0 percent in 2019-20.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>GDP at Current Prices in the year 2020-21 is estimated to attain a level of ₹197.46 lakh crore, as against the First Revised Estimates of ₹203.51 lakh crore in 2019-20, showing a change of -3.0 percent as compared to 7.8 percent in 2019-20.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>GDP at Constant (2011-12) Prices in Q4 of 2020-21 is estimated at ₹38.96 lakh crore, as against ₹38.33 lakh crore in Q4 of 2019-20, showing a growth of 1.6 percent.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Estimates of Gross/Net National Income and Per Capita Income along with GVA at Basic Prices by kind of economic activity, Expenditures on GDP for Provisional Estimates and Fourth Quarter (Q4) 2018-19, 2019-20 and 2020-21 at Constant (2011-12) and Current Prices, along with percent changes and applicable rates, are given in Statements 1 to 8.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The next release of quarterly GDP estimates for the quarter April-June 2022&lt;br />
+	(Q1 of 2021-22) will be on 31.08.2021.&lt;/span>&lt;/span>&lt;/li>
+
+
+&lt;p style=&quot;margin-right:4.3pt; text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>************&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0021YT7.png&quot; style=&quot;height:862px; width:598px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0033FVJ.png&quot; style=&quot;height:852px; width:601px&quot; />&lt;/span>&lt;/span>&lt;/p>
+&lt;/div>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;div class=&quot;Section3&quot;>
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image004TAM0.png&quot; style=&quot;height:817px; width:598px&quot; />&lt;/span>&lt;/span>&lt;/p>
+&lt;/div>
+
+&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+
+&lt;div class=&quot;Section4&quot;>
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0058TIL.png&quot; style=&quot;height:564px; width:992px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0069HB2.png&quot; style=&quot;height:571px; width:985px&quot; />&lt;/span>&lt;/span>&lt;/p>
+&lt;/div>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:right&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Annexure&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image00756FT.png&quot; style=&quot;height:855px; width:656px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p>&lt;a href=&quot;https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/may/doc202153111.pdf&quot; target=&quot;_blank&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;u>Click here to see the complete press note -&amp;nbsp;&lt;/u>&lt;/span>&lt;/span>&lt;/a>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>*******&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>DS/VJ/AK&lt;/span>&lt;/span>&lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: rgb(59, 89, 152);*/
+                        background-color: rgba(65,103,178,255);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: #000000;
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: rgb(77, 194, 71);*/
+                        background-color: rgba(13,191,67,255);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: rgb(219, 68, 55);*/
+                        background-color: #e2123d;
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: rgb(0, 119, 181);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: var(--dbim-h2, 20px);   /* was 20px !important - the !important blocked A+/A- */
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: var(--dbim-h3, 16px);   /* was 16px !important */
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 18px, #6e2b8b 18px, #6e2b8b 36px );
+                        border-top: 8px solid #9a2375;
+                        border-bottom: 8px solid #9a2375;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/pressreleasepage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="tqjpCanf0focTsxa-9cwFWBUVuWw7TE-AhgZoVStEApk4hYyXOFpCz7lA5EImCsB-4J7JdRbxO077e05ukwjn0X6xumOSwx_"/></form>
+      
+      
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"Cookie consent","title":"Cookies on this website","body":"We use essential cookies to make this website work. We also set analytics cookies when you arrive, so we can see how the site is used and improve it - you can switch these off below or at any time from the Cookie Policy page. Cookies from embedded social media content are set only if you allow them.","policyLink":"Read our Cookie Policy","accept":"Accept all","reject":"Reject optional","customize":"Customise","prefsTitle":"Cookie preferences","prefsIntro":"Choose which cookies this website may set. Essential cookies cannot be switched off because the site does not work without them. Analytics cookies are on unless you turn them off. Social media cookies stay off until you allow them. You can change these choices at any time from the Cookie Policy page.","essentialName":"Essential cookies","essentialDesc":"Needed for the site to function. These remember your session, your language and region, your text size and colour theme, and verify the security check on forms. They are always on.","analyticsName":"Analytics cookies","analyticsDesc":"Help us understand how visitors use the site - which pages are read and how long people stay - so it can be improved. The information is collected in a form that does not directly identify you. These are on when you arrive; switching them off here stops them and deletes the ones already set.","socialName":"Social media cookies","socialDesc":"Set by content embedded from X, Facebook and YouTube, such as timelines and videos. These platforms may use them to track you across websites. They stay off until you allow them.","save":"Save preferences","cancel":"Cancel"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+</body>
+</html>
+

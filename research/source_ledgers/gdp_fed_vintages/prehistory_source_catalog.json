@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "id": "prehistory_nas19_statement_8_18_1",
+      "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS19/S%208.18.1.pdf",
+      "format": "pdf",
+      "role": "prehistory_candidate",
+      "publication_year": 2019,
+      "release_date": "",
+      "release_date_precision": "Not printed in table; publicationmonthneedsseparateevidence"
+    },
+    {
+      "id": "prehistory_annual_report_2019_2020",
+      "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/Annual_Report_2019-2020_English.pdf",
+      "format": "pdf",
+      "role": "prehistory_publication_evidence",
+      "release_date": ""
+    },
+    {
+      "id": "prehistory_nas2019_landing",
+      "url": "https://www.mospi.gov.in/publication/national-accounts-statistics-2019",
+      "format": "html",
+      "role": "prehistory_landing_candidate",
+      "release_date": ""
+    }
+  ],
+  "discovery": "Primary-domain web search/open; table and official report publication-month corroboration; 2026-10-05"
+}

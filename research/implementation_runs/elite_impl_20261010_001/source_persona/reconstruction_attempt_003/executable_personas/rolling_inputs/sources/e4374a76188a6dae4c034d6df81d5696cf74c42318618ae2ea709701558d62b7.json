@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2022-12-07",
+  "meeting_start_date": "2022-12-05",
+  "publication_date": "2022-12-21",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+  "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+  "statement_sha256": {
+    "ashima_goyal": "13abe90f26f48403e47a02542a284e4d55bce9ca0bea70f7e460ee44cf12bc56",
+    "jayanth_varma": "525de9c4452b3f64066b8d43f52b9dc33c78ca12a2e891d37d1789314cf61f07",
+    "michael_patra": "d57b6d48b89b587e0c06946f57d01b0cd7d083596c09b3a93652aaea93f2616b",
+    "rajiv_ranjan": "a10578b3a1b4e7600108d39ebdb41dc2d700b949c8d267f6dfdb41e6f99b3816",
+    "shaktikanta_das": "7d8a56e2768ae087a0e0dfbd183f0c12b78e9c121569e8bb9ad6caa20d6fc4b8",
+    "shashanka_bhide": "4a28e8a426425c22ab700596b3a9dadbc3e752ccb51aea9ed7a11c881d6a1f4b"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, December 5-7, 2022"
+}

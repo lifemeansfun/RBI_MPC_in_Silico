@@ -1,0 +1,25 @@
+{
+  "id": "rbi2023_gdp_constant_xlsx",
+  "url": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/160T_1509202339814172E4C948B5BFF15E6987AFD5BB.XLSX",
+  "filename": "rbi2023_gdp_constant.xlsx",
+  "role": "Published quarterly constant-price GDP history in 2023 RBI Handbook",
+  "discovery": "Exact link in retained official rbi2023_index.html table row: Table 160 : Quarterly Estimates of Gross Domestic Product (At Constant Prices) New Series (Base : 2011-12) 11 kb 108 kb",
+  "retrieved_at_utc": "2026-10-09T16:20:47.971687+00:00",
+  "status": 200,
+  "final_url": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/160T_1509202339814172E4C948B5BFF15E6987AFD5BB.XLSX",
+  "response_headers": {
+    "Set-Cookie": "TSa07da9d1029=08c70ea5e1ab28001be298f76434991045a406e4349c0eaba11eaa8f57d282773a0d832766283bf1ed8588bd7f55b21a; Secure; Max-Age=30; Path=/",
+    "Cache-Control": "no-store, must-revalidate, no-cache, max-age=0",
+    "Content-Type": "text/html",
+    "Content-Length": "50857",
+    "Connection": "close",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "local_file": "acquisition/batch_005/raw/rbi2023_gdp_constant.xlsx",
+  "bytes": 50857,
+  "sha256": "8460cd1ef0b9908b8f14543d5baa62eaaa9aa846d76e6defb8b813bf835e96b6",
+  "primary_final_host": true,
+  "acquired": true
+}

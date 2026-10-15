@@ -1,0 +1,24 @@
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.543071
+is_internal: true
+key_themes:
+- '"The global macroeconomic and financial environment has turned extremely adverse
+  since February 2022 with the start of the war in Ukraine and is posing significant
+  challenges to real-time macroeconomic assessment and management." (2022-05-04)'
+- '"Central banks across the globe continue their fight against inflation this year
+  with more than a dozen central banks hiking rates by 75 bps or even more in one
+  go." (2022-09-30)'
+- "\"Let me begin from where I ended my last minutes of February 2023: \u201CGoing\
+  \ ahead, assessment of the impact of the cumulative rate hikes will become important\
+  \ especially in view of higher policy transmission in a primarily bank-based economy\u201D\
+  .\" (2023-04-06)"
+member_id: rajiv_ranjan
+name: Dr. Rajiv Ranjan
+provenance_status: dated_corpus
+role: Executive Director
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

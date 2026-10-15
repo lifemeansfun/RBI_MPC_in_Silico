@@ -1,6 +1,8 @@
 # Round 1 comprehensive upgrade plan
 
-Status: implementation starting. The independent review in `research/peer_reviews/round_001_retry/` returned **Not fully elite research grade**. The first dispatch failed on quota and supplied no verdict; the fresh retry completed. This plan addresses the completed review's D1-D10, additional source-label issues demonstrated in the retained audit, and the original forecasting/counterfactual research scope. No item is complete merely because it is documented below.
+**Current status, 10 October 2026: implementation stopped under the attached bounded goal.** The cumulative reviewer-dispatch allowance is exhausted. This plan and its former continuation/approval clauses are historical and superseded by [the terminal readiness assessment](</Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/assessments/bounded_readiness_20261010/READINESS_ASSESSMENT.md>). Research remains incomplete; further implementation or review requires a new user instruction. The original plan below is retained as the scientific record.
+
+Status: implementation and offline verification substantially progressed; scientific requirements remain open. Round 2 is active in `research/implementation_plans/round_002.md`. The independent review in `research/peer_reviews/round_001_retry/` returned **Not fully elite research grade**. The first dispatch failed on quota and supplied no verdict; the fresh retry completed. This plan addresses the completed review's D1-D10, additional source-label issues demonstrated in the retained audit, and the original forecasting/counterfactual research scope. No item is complete merely because it is documented below.
 
 ## Requirements and acceptance map
 

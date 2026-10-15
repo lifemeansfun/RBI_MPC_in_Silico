@@ -1,0 +1,253 @@
+FFFFFFFFF                                                                [100%]
+=================================== FAILURES ===================================
+______ test_whitespace_only_identity_or_rationale_is_rejected[member_id] _______
+
+field = 'member_id'
+
+    @pytest.mark.parametrize("field", ["member_id", "member_name", "key_rationale"])
+    def test_whitespace_only_identity_or_rationale_is_rejected(field):
+        data = dict(member_id="m", member_name="M", proposed_rate_change_bps=35, proposed_stance="neutral", key_rationale="evidence")
+        data[field] = " \t\n "
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:453: Failed
+_____ test_whitespace_only_identity_or_rationale_is_rejected[member_name] ______
+
+field = 'member_name'
+
+    @pytest.mark.parametrize("field", ["member_id", "member_name", "key_rationale"])
+    def test_whitespace_only_identity_or_rationale_is_rejected(field):
+        data = dict(member_id="m", member_name="M", proposed_rate_change_bps=35, proposed_stance="neutral", key_rationale="evidence")
+        data[field] = " \t\n "
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:453: Failed
+____ test_whitespace_only_identity_or_rationale_is_rejected[key_rationale] _____
+
+field = 'key_rationale'
+
+    @pytest.mark.parametrize("field", ["member_id", "member_name", "key_rationale"])
+    def test_whitespace_only_identity_or_rationale_is_rejected(field):
+        data = dict(member_id="m", member_name="M", proposed_rate_change_bps=35, proposed_stance="neutral", key_rationale="evidence")
+        data[field] = " \t\n "
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:453: Failed
+___ test_decision_semantics_reject_corruptions_without_repair[wrong_winner] ____
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'wrong_winner'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+_ test_decision_semantics_reject_corruptions_without_repair[false_dissent_flag] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'false_dissent_flag'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+_ test_decision_semantics_reject_corruptions_without_repair[duplicate_dissent] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject2')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'duplicate_dissent'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+___ test_decision_semantics_reject_corruptions_without_repair[short_roster] ____
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject3')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'short_roster'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+__ test_decision_semantics_reject_corruptions_without_repair[boolean_as_text] __
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject4')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'boolean_as_text'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+_ test_decision_semantics_reject_corruptions_without_repair[duplicate_canonical_tally] _
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...tion_round_001/deliberation_oct08_20261008T133507614973Z/pytest_semantic_prefixed_tmp/test_decision_semantics_reject5')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+corruption = 'duplicate_canonical_tally'
+
+    @pytest.mark.parametrize("corruption", ["wrong_winner", "false_dissent_flag", "duplicate_dissent", "short_roster", "boolean_as_text", "duplicate_canonical_tally"])
+    async def test_decision_semantics_reject_corruptions_without_repair(tmp_path, snapshot, roster, corruption):
+        decision = await orchestrator(tmp_path, ScriptedClient()).run_meeting(snapshot, roster, roster[0].member_id)
+        payload = decision.model_dump(mode="json")
+        if corruption == "wrong_winner":
+            payload.update(rate_decision_bps=40, dissenting_members_rate=[p.member_id for p in roster])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "false_dissent_flag":
+            payload["member_votes"][0]["dissenting_on_rate"] = True
+        elif corruption == "duplicate_dissent":
+            payload.update(rate_decision_bps=40, synthetic_resolution_rate=True, rate_resolution_policy="status_quo",
+                           dissenting_members_rate=[p.member_id for p in roster] + [roster[0].member_id])
+            for vote in payload["member_votes"]:
+                vote["dissenting_on_rate"] = True
+        elif corruption == "short_roster":
+            payload["member_votes"].pop()
+            payload["rate_vote_tally"] = {"35": 5}
+            payload["stance_vote_tally"] = {"neutral": 5}
+        elif corruption == "boolean_as_text":
+            payload["tie_broken_by_governor_rate"] = "false"
+        else:
+            payload["rate_vote_tally"] = {35: 6, "35": 6}
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_deliberation_upgrade.py:480: Failed
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_whitespace_only_identity_or_rationale_is_rejected[member_id]
+FAILED tests/test_deliberation_upgrade.py::test_whitespace_only_identity_or_rationale_is_rejected[member_name]
+FAILED tests/test_deliberation_upgrade.py::test_whitespace_only_identity_or_rationale_is_rejected[key_rationale]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[wrong_winner]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[false_dissent_flag]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[duplicate_dissent]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[short_roster]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[boolean_as_text]
+FAILED tests/test_deliberation_upgrade.py::test_decision_semantics_reject_corruptions_without_repair[duplicate_canonical_tally]
+9 failed, 79 deselected in 0.70s

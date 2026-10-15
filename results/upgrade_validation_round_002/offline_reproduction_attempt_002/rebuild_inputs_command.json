@@ -1,0 +1,11 @@
+{
+  "name": "rebuild_inputs",
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "research/verification/rebuild_scientific_inputs.py",
+    "--output-root",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/offline_reproduction_attempt_002/rebuilt_inputs"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+  "started_at_unix": 1791562517.921332
+}

@@ -1,0 +1,234 @@
+FFFFFFF                                                                  [100%]
+=================================== FAILURES ===================================
+_______ test_attribution_freezes_generation_settings_and_input_identity ________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_freezes_gener0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_attribution_freezes_generation_settings_and_input_identity(tmp_path, snapshot, roster):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="frozen_pair", condition_id="baseline", model="frozen_model", temperature=0.12)
+>       assert len(baseline.snapshot_hash) == 64 and len(baseline.persona_hash) == 64
+                   ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_deliberation_upgrade.py:166: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = MeetingCommitteeDecision(meeting_date='2023-08-10', replicate_id=1, rate_decision_bps=35, stance_decision='neutral', r...n_policy='majority', synthetic_resolution_rate=False, synthetic_resolution_stance=False, fragmentation_policy='reject')
+item = 'snapshot_hash'
+
+    def __getattr__(self, item: str) -> Any:
+        private_attributes = object.__getattribute__(self, '__private_attributes__')
+        if item in private_attributes:
+            attribute = private_attributes[item]
+            if hasattr(attribute, '__get__'):
+                return attribute.__get__(self, type(self))  # type: ignore
+    
+            try:
+                # Note: self.__pydantic_private__ cannot be None if self.__private_attributes__ has items
+                return self.__pydantic_private__[item]  # type: ignore
+            except KeyError as exc:
+                raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc
+        else:
+            # `__pydantic_extra__` can fail to be set if the model is not yet fully initialized.
+            # See `BaseModel.__repr_args__` for more details
+            try:
+                pydantic_extra = object.__getattribute__(self, '__pydantic_extra__')
+            except AttributeError:
+                pydantic_extra = None
+    
+            if pydantic_extra and item in pydantic_extra:
+                return pydantic_extra[item]
+            else:
+                if hasattr(self.__class__, item):
+                    return super().__getattribute__(item)  # Raises AttributeError if appropriate
+                else:
+                    # this is the current error
+>                   raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E                   AttributeError: 'MeetingCommitteeDecision' object has no attribute 'snapshot_hash'
+
+.venv/lib/python3.11/site-packages/pydantic/main.py:1042: AttributeError
+__________ test_attribution_pairing_refuses_drift_before_calls[seed] ___________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'seed'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+        with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+            await AttributionRunner.run_leave_one_out_ablation(**kwargs)
+>       assert len(client.calls) == before
+E       assert 48 == 24
+E        +  where 48 = len([{'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical si...JSON format without markdown wrapping or conversational preambles.", 'model': 'frozen', 'temperature': 0.15, ...}, ...])
+E        +    where [{'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for 2023-08-10.\nThis is a historical si...JSON format without markdown wrapping or conversational preambles.", 'model': 'frozen', 'temperature': 0.15, ...}, ...] = <test_deliberation_upgrade.ScriptedClient object at 0x107833dd0>.calls
+
+tests/test_deliberation_upgrade.py:192: AssertionError
+__________ test_attribution_pairing_refuses_drift_before_calls[model] __________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus1')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'model'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+>       with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:190: Failed
+_______ test_attribution_pairing_refuses_drift_before_calls[temperature] _______
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus2')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'temperature'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+>       with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:190: Failed
+________ test_attribution_pairing_refuses_drift_before_calls[snapshot] _________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus3')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'snapshot'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+>       with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:190: Failed
+________ test_attribution_pairing_refuses_drift_before_calls[personas] _________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus4')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'personas'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+>       with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:190: Failed
+________ test_attribution_pairing_refuses_drift_before_calls[governor] _________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj..._validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_regression_tmp/test_attribution_pairing_refus5')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+mismatch = 'governor'
+
+    @pytest.mark.parametrize("mismatch", ["seed", "model", "temperature", "snapshot", "personas", "governor"])
+    async def test_attribution_pairing_refuses_drift_before_calls(tmp_path, snapshot, roster, mismatch):
+        client = ScriptedClient()
+        runner = orchestrator(tmp_path, client)
+        baseline = await runner.run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="paired_preflight", condition_id="baseline", model="frozen", temperature=0.15, seed=64)
+        kwargs = {"orchestrator": runner, "baseline_decision": baseline, "snapshot": snapshot,
+                  "personas": roster, "governor_id": roster[0].member_id, "ablated_member_id": roster[2].member_id}
+        if mismatch in ("seed", "model", "temperature"):
+            kwargs[mismatch] = {"seed": 65, "model": "different", "temperature": 0.25}[mismatch]
+        elif mismatch == "snapshot":
+            kwargs["snapshot"] = snapshot.model_copy(update={"cpi_headline_yoy_pct": 6.1})
+        elif mismatch == "personas":
+            kwargs["personas"] = [p.model_copy(update={"hawk_dove_score": 0.2}) for p in roster]
+        else:
+            kwargs["governor_id"] = roster[1].member_id
+        before = len(client.calls)
+>       with pytest.raises(ValueError, match="pair|baseline|Baseline|frozen"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_deliberation_upgrade.py:190: Failed
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_attribution_freezes_generation_settings_and_input_identity
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[seed]
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[model]
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[temperature]
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[snapshot]
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[personas]
+FAILED tests/test_deliberation_upgrade.py::test_attribution_pairing_refuses_drift_before_calls[governor]
+7 failed, 48 deselected in 0.55s

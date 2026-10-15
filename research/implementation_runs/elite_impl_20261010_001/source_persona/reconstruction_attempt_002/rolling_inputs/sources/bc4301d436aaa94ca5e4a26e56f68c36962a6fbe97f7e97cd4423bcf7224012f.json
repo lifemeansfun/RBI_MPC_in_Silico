@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2021-04-07",
+  "meeting_start_date": "2021-04-05",
+  "publication_date": "2021-04-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+  "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+  "statement_sha256": {
+    "ashima_goyal": "f1b6dce44b185a1de0d21d4d9508a3b8297089a6b811be495407652a2b8d8ae2",
+    "jayanth_varma": "49e7ad8824b7626e388b3d7a1ffc78c6e652cf918bb7971791d1acf6c4fd64aa",
+    "michael_patra": "0cc92ce73405e1e1ee793c8ea81ecb36c61cc16e7cebc3930b4d77fe6a78573e",
+    "mridul_saggar": "81dba7a77c4d55d8d1d8c308c6d1d7901565ec3a68863f15adf3af7a36e6bf4a",
+    "shaktikanta_das": "2821902d47da9190ae65d5681423fcc0c72f17d156189964a0a6d32ac3109f71",
+    "shashanka_bhide": "91530a9f8f36e8e9019218373f26e0d4a5fa8b3f5560e91e8e2e1badc9cef1e0"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, April 5-7, 2021"
+}

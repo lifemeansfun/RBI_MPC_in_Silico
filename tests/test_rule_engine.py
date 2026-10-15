@@ -1,6 +1,6 @@
 """
-Exhaustive unit tests for RBI Institutional Rule Engine (RBI Act §45ZL).
-Covers all voting equivalence classes with 100% branch coverage.
+Representative majority/casting and explicitly synthetic fragmentation controls.
+Voting provisions are in RBI Act §45ZI; publication provisions are in §45ZL.
 """
 
 import pytest
@@ -68,7 +68,7 @@ def test_binary_3_3_tie_governor_casting_vote():
         "shashanka_bhide": 0,
     }
     result = InstitutionalRuleEngine.aggregate_rate_votes(votes, governor_id=GOVERNOR)
-    # Governor voted +25, so +25 wins via §45ZL casting vote
+    # Governor voted +25, so +25 wins via §45ZI casting vote.
     assert result.winning_action == 25
     assert result.tie_broken_by_governor is True
     assert result.majority_achieved is False
@@ -101,8 +101,11 @@ def test_fragmented_rate_vote_fallback():
         "michael_patra": 25,
         "rajiv_ranjan": 25,
     }
-    result = InstitutionalRuleEngine.aggregate_rate_votes(votes, governor_id=GOVERNOR)
-    # Median with Governor vote x2 is 0
+    with pytest.raises(ValueError,match='No majority'):
+        InstitutionalRuleEngine.aggregate_rate_votes(votes, governor_id=GOVERNOR)
+    result = InstitutionalRuleEngine.aggregate_rate_votes(votes, governor_id=GOVERNOR,
+                                                         fragmentation_policy='legacy_synthetic')
+    # The explicitly requested synthetic weighted median is 0.
     assert result.winning_action == 0
     assert result.majority_achieved is False
     assert sorted(result.dissenting_members) == ["ashima_goyal", "jayanth_varma", "michael_patra", "rajiv_ranjan"]

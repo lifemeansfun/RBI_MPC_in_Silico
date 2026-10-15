@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2023-12-08",
+  "meeting_start_date": "2023-12-06",
+  "publication_date": "2023-12-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_56982.html",
+  "source_sha256": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+  "statement_sha256": {
+    "ashima_goyal": "34e2d10126a2915b90f84820c960ed240d3fedad1d653aa1e0b367563e70b2de",
+    "jayanth_varma": "c61c433f265c87ede706ce003daa5720b42d0bb136ced72391c4d86ce816be28",
+    "michael_patra": "59cf80b0eafa72a1d532cf623bd093382980283dcc33c4dcd9282eb08e328ebb",
+    "rajiv_ranjan": "4502733c5aacfd2bbd3ee4163304bc823a88c2ac898930ec6c4551b3f739e439",
+    "shaktikanta_das": "e8b490d77da81fb26248bc6f7ba68c713ff6e52e022a6c4b95029c4e7584ab61",
+    "shashanka_bhide": "6cb4b7b8d0fbc920ee2f3160dd18dd2ed40e195bac2bae1a0cf5252d356e0027"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, December 6 to 8, 2023"
+}

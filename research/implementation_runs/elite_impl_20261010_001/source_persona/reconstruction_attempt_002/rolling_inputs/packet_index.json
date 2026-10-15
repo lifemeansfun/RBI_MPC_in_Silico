@@ -1,0 +1,1155 @@
+[
+  {
+    "history_counts": {
+      "ashima_goyal": 0,
+      "jayanth_varma": 0,
+      "michael_debabrata_patra": 0,
+      "mridul_saggar": 0,
+      "shaktikanta_das": 0,
+      "shashanka_bhide": 0
+    },
+    "meeting_id": "rbi_mpc_2020-10-09",
+    "missing_history_member_ids": [
+      "ashima_goyal",
+      "jayanth_varma",
+      "michael_debabrata_patra",
+      "mridul_saggar",
+      "shaktikanta_das",
+      "shashanka_bhide"
+    ],
+    "packet_file": "packets/rbi_mpc_2020-10-09.json",
+    "packet_sha256": "7e282716822da97d8b9b9db0d7be1a0462c5a8bc70ef12c5ba4f11ec4db190b2",
+    "rolling_fit_meeting_ids": [],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 1,
+      "jayanth_varma": 1,
+      "michael_debabrata_patra": 1,
+      "mridul_saggar": 1,
+      "shaktikanta_das": 1,
+      "shashanka_bhide": 1
+    },
+    "meeting_id": "rbi_mpc_2020-12-04",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2020-12-04.json",
+    "packet_sha256": "1117589577f9ef5cab5ce675f937ebc991d2455cb3f8b0cc53606242678e53da",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 2,
+      "jayanth_varma": 2,
+      "michael_debabrata_patra": 2,
+      "mridul_saggar": 2,
+      "shaktikanta_das": 2,
+      "shashanka_bhide": 2
+    },
+    "meeting_id": "rbi_mpc_2021-02-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-02-05.json",
+    "packet_sha256": "50b32f107c28007cd842eaa2dbda49e9ab58d4305fb5f81593b1d043162b7540",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 3,
+      "jayanth_varma": 3,
+      "michael_debabrata_patra": 3,
+      "mridul_saggar": 3,
+      "shaktikanta_das": 3,
+      "shashanka_bhide": 3
+    },
+    "meeting_id": "rbi_mpc_2021-04-07",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-04-07.json",
+    "packet_sha256": "91dbf4261ceb84a562a4d65b0333ef4232cb40a6a8fbdbd65c772e332879e328",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 4,
+      "jayanth_varma": 4,
+      "michael_debabrata_patra": 4,
+      "mridul_saggar": 4,
+      "shaktikanta_das": 4,
+      "shashanka_bhide": 4
+    },
+    "meeting_id": "rbi_mpc_2021-06-04",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-06-04.json",
+    "packet_sha256": "c2563ed4cfda1c86135f6c9915819341f2b3e876574ac6531fca314c9bb12997",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 5,
+      "jayanth_varma": 5,
+      "michael_debabrata_patra": 5,
+      "mridul_saggar": 5,
+      "shaktikanta_das": 5,
+      "shashanka_bhide": 5
+    },
+    "meeting_id": "rbi_mpc_2021-08-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-08-06.json",
+    "packet_sha256": "f29a5ef7e603fa80b7968f97c06ebe5a72a40c300582165bcbfa87da841dd73c",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 6,
+      "jayanth_varma": 6,
+      "michael_debabrata_patra": 6,
+      "mridul_saggar": 6,
+      "shaktikanta_das": 6,
+      "shashanka_bhide": 6
+    },
+    "meeting_id": "rbi_mpc_2021-10-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-10-08.json",
+    "packet_sha256": "14494f6190153bfabf17de12f42547075de61b12a78a63dac2f6b7a37a810aa9",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 7,
+      "jayanth_varma": 7,
+      "michael_debabrata_patra": 7,
+      "mridul_saggar": 7,
+      "shaktikanta_das": 7,
+      "shashanka_bhide": 7
+    },
+    "meeting_id": "rbi_mpc_2021-12-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2021-12-08.json",
+    "packet_sha256": "3eb626ce519eb0b6651fcde5ec0fb21a196ebd5850f78a4a1acc1a9430b223b6",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 8,
+      "jayanth_varma": 8,
+      "michael_debabrata_patra": 8,
+      "mridul_saggar": 8,
+      "shaktikanta_das": 8,
+      "shashanka_bhide": 8
+    },
+    "meeting_id": "rbi_mpc_2022-02-10",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-02-10.json",
+    "packet_sha256": "2bb89cd7ab95de79fd8f2406f34ea68884ae425b8dccf48e34bfc3655f88546d",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 9,
+      "jayanth_varma": 9,
+      "michael_debabrata_patra": 9,
+      "mridul_saggar": 9,
+      "shaktikanta_das": 9,
+      "shashanka_bhide": 9
+    },
+    "meeting_id": "rbi_mpc_2022-04-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-04-08.json",
+    "packet_sha256": "0335ad53d0009976fd359e874b36b6b77a4fe122fb7af96993324edc621f7729",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 10,
+      "jayanth_varma": 10,
+      "michael_debabrata_patra": 10,
+      "rajiv_ranjan": 0,
+      "shaktikanta_das": 10,
+      "shashanka_bhide": 10
+    },
+    "meeting_id": "rbi_mpc_2022-05-04",
+    "missing_history_member_ids": [
+      "rajiv_ranjan"
+    ],
+    "packet_file": "packets/rbi_mpc_2022-05-04.json",
+    "packet_sha256": "c94e4d156f6b73f70ed3cd7233792f37fe17807065f68b51fca20fe9c34bc220",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 11,
+      "jayanth_varma": 11,
+      "michael_debabrata_patra": 11,
+      "rajiv_ranjan": 1,
+      "shaktikanta_das": 11,
+      "shashanka_bhide": 11
+    },
+    "meeting_id": "rbi_mpc_2022-06-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-06-08.json",
+    "packet_sha256": "3900955647627aa4d15f73b186020962865b2ec193d67aa26c9d817cb10a0982",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 12,
+      "jayanth_varma": 12,
+      "michael_debabrata_patra": 12,
+      "rajiv_ranjan": 2,
+      "shaktikanta_das": 12,
+      "shashanka_bhide": 12
+    },
+    "meeting_id": "rbi_mpc_2022-08-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-08-05.json",
+    "packet_sha256": "91166c7cd757dfaaa1ff8b8ec41823a29da9f02c0e164e32d848308b34b152ba",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 13,
+      "jayanth_varma": 13,
+      "michael_debabrata_patra": 13,
+      "rajiv_ranjan": 3,
+      "shaktikanta_das": 13,
+      "shashanka_bhide": 13
+    },
+    "meeting_id": "rbi_mpc_2022-09-30",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-09-30.json",
+    "packet_sha256": "18b66bd67efb0e38958633f3a187f0d680b4aa972383666e4d499955e25700d2",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 14,
+      "jayanth_varma": 14,
+      "michael_debabrata_patra": 14,
+      "rajiv_ranjan": 4,
+      "shaktikanta_das": 14,
+      "shashanka_bhide": 14
+    },
+    "meeting_id": "rbi_mpc_2022-12-07",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2022-12-07.json",
+    "packet_sha256": "3e896fcd202c7aecef936103d51b8979be8f992a73a5268bcc5fb35354108358",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 15,
+      "jayanth_varma": 15,
+      "michael_debabrata_patra": 15,
+      "rajiv_ranjan": 5,
+      "shaktikanta_das": 15,
+      "shashanka_bhide": 15
+    },
+    "meeting_id": "rbi_mpc_2023-02-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-02-08.json",
+    "packet_sha256": "8a65b9dd3c7e268ba3639801090dc08ad5e2f9f6a375a89cda1b4f7e209e0c8f",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 16,
+      "jayanth_varma": 16,
+      "michael_debabrata_patra": 16,
+      "rajiv_ranjan": 6,
+      "shaktikanta_das": 16,
+      "shashanka_bhide": 16
+    },
+    "meeting_id": "rbi_mpc_2023-04-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-04-06.json",
+    "packet_sha256": "e709bda50c2efe7eb99431a2cb87e0b72e2b85478cb10f1d80fd25d1e65a438a",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 17,
+      "jayanth_varma": 17,
+      "michael_debabrata_patra": 17,
+      "rajiv_ranjan": 7,
+      "shaktikanta_das": 17,
+      "shashanka_bhide": 17
+    },
+    "meeting_id": "rbi_mpc_2023-06-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-06-08.json",
+    "packet_sha256": "64ad137ec512120bdc47b49e07f24aa0d333cfeabeb81c844c523d25536e6dd1",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 18,
+      "jayanth_varma": 18,
+      "michael_debabrata_patra": 18,
+      "rajiv_ranjan": 8,
+      "shaktikanta_das": 18,
+      "shashanka_bhide": 18
+    },
+    "meeting_id": "rbi_mpc_2023-08-10",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-08-10.json",
+    "packet_sha256": "6e9cff49d6bc7d73826629651cd76dbcc39d194d4de25d78c34e798c2fcd0120",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 19,
+      "jayanth_varma": 19,
+      "michael_debabrata_patra": 19,
+      "rajiv_ranjan": 9,
+      "shaktikanta_das": 19,
+      "shashanka_bhide": 19
+    },
+    "meeting_id": "rbi_mpc_2023-10-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-10-06.json",
+    "packet_sha256": "823720c613540d8de65c57579c3e593cf037e09c08b120a72cc4b75cc05ef93a",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 20,
+      "jayanth_varma": 20,
+      "michael_debabrata_patra": 20,
+      "rajiv_ranjan": 10,
+      "shaktikanta_das": 20,
+      "shashanka_bhide": 20
+    },
+    "meeting_id": "rbi_mpc_2023-12-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2023-12-08.json",
+    "packet_sha256": "15d3a4683c59e329a43f2591ec57444546024a619e96256bdf32c43d89aeae67",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 21,
+      "jayanth_varma": 21,
+      "michael_debabrata_patra": 21,
+      "rajiv_ranjan": 11,
+      "shaktikanta_das": 21,
+      "shashanka_bhide": 21
+    },
+    "meeting_id": "rbi_mpc_2024-02-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2024-02-08.json",
+    "packet_sha256": "c5e4e4381d31fcffc50cbffa73f090f7d2ce4cfb6697978741307c9f2b33d886",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 22,
+      "jayanth_varma": 22,
+      "michael_debabrata_patra": 22,
+      "rajiv_ranjan": 12,
+      "shaktikanta_das": 22,
+      "shashanka_bhide": 22
+    },
+    "meeting_id": "rbi_mpc_2024-04-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2024-04-05.json",
+    "packet_sha256": "3593fd3bfe1430d8701f2bf78e7c90a2c9d7dacb884153daee96f746f9d82866",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 23,
+      "jayanth_varma": 23,
+      "michael_debabrata_patra": 23,
+      "rajiv_ranjan": 13,
+      "shaktikanta_das": 23,
+      "shashanka_bhide": 23
+    },
+    "meeting_id": "rbi_mpc_2024-06-07",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2024-06-07.json",
+    "packet_sha256": "01f92afb3d645934ac13023600a2b3db15d42795c67e08989e846b8e9b7fc16a",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "ashima_goyal": 24,
+      "jayanth_varma": 24,
+      "michael_debabrata_patra": 24,
+      "rajiv_ranjan": 14,
+      "shaktikanta_das": 24,
+      "shashanka_bhide": 24
+    },
+    "meeting_id": "rbi_mpc_2024-08-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2024-08-08.json",
+    "packet_sha256": "a68baa9fdc5d0d93bc6486c79e2338cc74b04881d708562e38ad1e00caf87dc1",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "michael_debabrata_patra": 25,
+      "nagesh_kumar": 0,
+      "rajiv_ranjan": 15,
+      "ram_singh": 0,
+      "saugata_bhattacharya": 0,
+      "shaktikanta_das": 25
+    },
+    "meeting_id": "rbi_mpc_2024-10-09",
+    "missing_history_member_ids": [
+      "nagesh_kumar",
+      "saugata_bhattacharya",
+      "ram_singh"
+    ],
+    "packet_file": "packets/rbi_mpc_2024-10-09.json",
+    "packet_sha256": "094a31cff752160f05fe7026333829e5e89710469948b2bb751ad7aa049c478a",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "michael_debabrata_patra": 26,
+      "nagesh_kumar": 1,
+      "rajiv_ranjan": 16,
+      "ram_singh": 1,
+      "saugata_bhattacharya": 1,
+      "shaktikanta_das": 26
+    },
+    "meeting_id": "rbi_mpc_2024-12-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2024-12-06.json",
+    "packet_sha256": "dac8e82647b625d8fb8a9543bfa5c0caea9f5e984175dd3dc039f558f54b8f38",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08",
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08",
+      "rbi_mpc_2024-10-09"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "m_rajeshwar_rao": 0,
+      "nagesh_kumar": 2,
+      "rajiv_ranjan": 17,
+      "ram_singh": 2,
+      "sanjay_malhotra": 0,
+      "saugata_bhattacharya": 2
+    },
+    "meeting_id": "rbi_mpc_2025-02-07",
+    "missing_history_member_ids": [
+      "m_rajeshwar_rao",
+      "sanjay_malhotra"
+    ],
+    "packet_file": "packets/rbi_mpc_2025-02-07.json",
+    "packet_sha256": "1875ae271c8441055474f7974fde5ddfe6de7cd8b4765922143d37f0d260a6b4",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08",
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "m_rajeshwar_rao": 1,
+      "nagesh_kumar": 3,
+      "rajiv_ranjan": 18,
+      "ram_singh": 3,
+      "sanjay_malhotra": 1,
+      "saugata_bhattacharya": 3
+    },
+    "meeting_id": "rbi_mpc_2025-04-09",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2025-04-09.json",
+    "packet_sha256": "0e31e8959599f22933f9cd73e22e39f4316075cd113bf56836adfad00f5d242f",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08",
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "nagesh_kumar": 4,
+      "poonam_gupta": 0,
+      "rajiv_ranjan": 19,
+      "ram_singh": 4,
+      "sanjay_malhotra": 2,
+      "saugata_bhattacharya": 4
+    },
+    "meeting_id": "rbi_mpc_2025-06-06",
+    "missing_history_member_ids": [
+      "poonam_gupta"
+    ],
+    "packet_file": "packets/rbi_mpc_2025-06-06.json",
+    "packet_sha256": "c7a23192e83d0b4843b0e8e8ef84e3a8448ec6f181093c1c3a4131b56e8c6f81",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08",
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "nagesh_kumar": 5,
+      "poonam_gupta": 1,
+      "rajiv_ranjan": 20,
+      "ram_singh": 5,
+      "sanjay_malhotra": 3,
+      "saugata_bhattacharya": 5
+    },
+    "meeting_id": "rbi_mpc_2025-08-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2025-08-06.json",
+    "packet_sha256": "74b86cb1da3f4a1b62e160841361f17a06fee97d1934120ee71da9706caaf332",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08",
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 0,
+      "nagesh_kumar": 6,
+      "poonam_gupta": 2,
+      "ram_singh": 6,
+      "sanjay_malhotra": 4,
+      "saugata_bhattacharya": 6
+    },
+    "meeting_id": "rbi_mpc_2025-10-01",
+    "missing_history_member_ids": [
+      "indranil_bhattacharyya"
+    ],
+    "packet_file": "packets/rbi_mpc_2025-10-01.json",
+    "packet_sha256": "ef9fc149aca155f149746b7732f4d53976133c4bcd383ebed287af2b3c61e008",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 1,
+      "nagesh_kumar": 7,
+      "poonam_gupta": 3,
+      "ram_singh": 7,
+      "sanjay_malhotra": 5,
+      "saugata_bhattacharya": 7
+    },
+    "meeting_id": "rbi_mpc_2025-12-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2025-12-05.json",
+    "packet_sha256": "7c209e558a968ec01e9213cba62dc12d5f0ddb63dd4c7cffb660b24747245c6b",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 2,
+      "nagesh_kumar": 8,
+      "poonam_gupta": 4,
+      "ram_singh": 8,
+      "sanjay_malhotra": 6,
+      "saugata_bhattacharya": 8
+    },
+    "meeting_id": "rbi_mpc_2026-02-06",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2026-02-06.json",
+    "packet_sha256": "e5ce0a817637bf778228847031a7e58ecab1e68a834a383445e91306fc31d2c1",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 3,
+      "nagesh_kumar": 9,
+      "poonam_gupta": 5,
+      "ram_singh": 9,
+      "sanjay_malhotra": 7,
+      "saugata_bhattacharya": 9
+    },
+    "meeting_id": "rbi_mpc_2026-04-08",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2026-04-08.json",
+    "packet_sha256": "4a287bcd732db852d8b5fdf4fd07443a2d1a7864cce382cd93da0a4f95d598b7",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05",
+      "rbi_mpc_2026-02-06"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 4,
+      "nagesh_kumar": 10,
+      "poonam_gupta": 6,
+      "ram_singh": 10,
+      "sanjay_malhotra": 8,
+      "saugata_bhattacharya": 10
+    },
+    "meeting_id": "rbi_mpc_2026-06-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2026-06-05.json",
+    "packet_sha256": "aeacd1efc622d4dd6d1b482f911aa57b2e54b7ba88d7c11a26c1bee37f081a44",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05",
+      "rbi_mpc_2026-02-06",
+      "rbi_mpc_2026-04-08"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 5,
+      "nagesh_kumar": 11,
+      "poonam_gupta": 7,
+      "ram_singh": 11,
+      "sanjay_malhotra": 9,
+      "saugata_bhattacharya": 11
+    },
+    "meeting_id": "rbi_mpc_2026-08-05",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2026-08-05.json",
+    "packet_sha256": "3bd44e51d16adc2b55f952fe2c7f56ca1439ed1d7a48854b58e5dabcc759be23",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05",
+      "rbi_mpc_2026-02-06",
+      "rbi_mpc_2026-04-08",
+      "rbi_mpc_2026-06-05"
+    ],
+    "same_meeting_sources_excluded": 6
+  },
+  {
+    "history_counts": {
+      "indranil_bhattacharyya": 6,
+      "nagesh_kumar": 12,
+      "poonam_gupta": 8,
+      "ram_singh": 12,
+      "sanjay_malhotra": 10,
+      "saugata_bhattacharya": 12
+    },
+    "meeting_id": "rbi_mpc_2026-10-07",
+    "missing_history_member_ids": [],
+    "packet_file": "packets/rbi_mpc_2026-10-07.json",
+    "packet_sha256": "d241fb77d6bd9f4788eea09e8bed49f9cff343dcc5d48a86b25e46c33b81e40b",
+    "rolling_fit_meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06",
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09",
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06",
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05",
+      "rbi_mpc_2026-02-06",
+      "rbi_mpc_2026-04-08",
+      "rbi_mpc_2026-06-05",
+      "rbi_mpc_2026-08-05"
+    ],
+    "same_meeting_sources_excluded": 0
+  }
+]

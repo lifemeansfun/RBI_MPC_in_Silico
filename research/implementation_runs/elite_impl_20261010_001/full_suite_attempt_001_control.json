@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "research/verification/run_isolated_pytest.py",
+    "research/implementation_runs/elite_impl_20261010_001/full_suite_attempt_001"
+  ],
+  "timeout_seconds": 1200,
+  "live_research_call_limit": 0,
+  "provider_spend_limit_usd": 0,
+  "started_at_unix": 1791636116.4649339,
+  "exit_code": 0,
+  "elapsed_seconds": 209.28220319747925
+}

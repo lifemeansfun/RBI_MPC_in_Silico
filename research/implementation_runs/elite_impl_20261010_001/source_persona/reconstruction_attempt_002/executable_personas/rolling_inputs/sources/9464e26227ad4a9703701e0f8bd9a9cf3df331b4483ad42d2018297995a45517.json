@@ -1,0 +1,17 @@
+{
+  "availability_basis": "RBI press-release header date; conservatively available after that day",
+  "decision_date": "2023-02-08",
+  "meeting_start_date": "2023-02-06",
+  "publication_date": "2023-02-22",
+  "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+  "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+  "statement_sha256": {
+    "ashima_goyal": "81b5cbc244157c66b14df4e8fba670c72703d6aa3bd00e9b14d266f0b255952d",
+    "jayanth_varma": "3f30e6015e31826901bd2d2cb749e6e798dd0d4a0d4931dcab3f4ecdca99e91c",
+    "michael_patra": "e810c34e5e75e40d3c6a5c098c69f80890d5a7096647db9fb0633b094a39417d",
+    "rajiv_ranjan": "37c93693768bed1661d755f685f2223b92810e873e0dbcb3be90b2e43ebb091d",
+    "shaktikanta_das": "b4fb0830f78d83efee7658967ac2a6a14db631ba3c6bbd5c95638973958f02f2",
+    "shashanka_bhide": "e787bef103a6c1c4c02942d0e8d35c1adb4d2448ad9633a99ba063f2782e6a9b"
+  },
+  "title": "Minutes of the Monetary Policy Committee Meeting, February 6-8, 2023"
+}

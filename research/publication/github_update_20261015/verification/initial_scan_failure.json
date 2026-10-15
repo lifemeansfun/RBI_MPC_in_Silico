@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "phase": "publication preflight before staging",
+  "error": "BadZipFile while inspecting a docx-suffixed fixture",
+  "effect": "no staging or publication occurred; next scan handles non-ZIP fixtures as text",
+  "provider_calls": 0
+}

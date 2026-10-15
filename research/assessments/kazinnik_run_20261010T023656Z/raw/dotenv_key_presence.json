@@ -1,0 +1,6 @@
+{
+  "GEMINI_API_KEY": true,
+  "GOOGLE_API_KEY": false,
+  "ANTHROPIC_API_KEY": false,
+  "OPENAI_API_KEY": false
+}

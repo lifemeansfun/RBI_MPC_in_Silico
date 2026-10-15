@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "date": "2026-10-15",
+  "tested_export_index_tree": "99fb34ff5950f2a8343e6952168f6b92f45e7828",
+  "verified_unchanged_scientific_runtime_input_files": 1295,
+  "mismatches": [],
+  "post_export_changes": "status/manuscript metadata documentation, publication records and removal of duplicate scratch paths; no runtime/test/scientific input changes",
+  "file_manifest_sha256": "1e19da6f11078aeb1a14d3855222fd44556c4942df14967e0bb1b5bb4016ea97",
+  "provider_calls": 0
+}

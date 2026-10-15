@@ -1,0 +1,68 @@
+{
+  "catalog_file": "research/source_ledgers/output_gap_round002/catalog_007.json",
+  "catalog_sha256": "92fa18c2ca1927a90de614edb5c53bc3500cb55b51297c6670c3537806d38925",
+  "script_sha256": "a77e97cf7f1b9a93569ddf147089f03933bab8cd3c94f7b7d710364dbcfc7c78",
+  "sources": [
+    {
+      "id": "nas2020_quarterly_candidate_1",
+      "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/8.18.2.pdf",
+      "filename": "nas2020_quarterly_candidate_1.pdf",
+      "role": "Bounded candidate NAS2020 quarterly expenditure GDP table; identity must be verified",
+      "discovery": "Candidate derived from verified NAS2019 Statement8.18.2 and NAS2020 no-S Excel filename structure; not asserted to be actual link",
+      "retrieved_at_utc": "2026-10-09T16:22:44.812956+00:00",
+      "acquired": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "nas2020_quarterly_candidate_2",
+      "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/8.18.2.xlsx",
+      "filename": "nas2020_quarterly_candidate_2.xlsx",
+      "role": "Bounded candidate NAS2020 quarterly expenditure GDP table; identity must be verified",
+      "discovery": "Candidate derived from verified NAS2019 Statement8.18.2 and NAS2020 no-S Excel filename structure; not asserted to be actual link",
+      "retrieved_at_utc": "2026-10-09T16:22:44.813878+00:00",
+      "status": 200,
+      "final_url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/8.18.2.xlsx",
+      "response_headers": {
+        "Server": "nginx",
+        "Date": "Fri, 09 Oct 2026 16:26:01 GMT",
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Length": "31987",
+        "Connection": "close",
+        "Last-Modified": "Tue, 21 Jul 2020 11:42:18 GMT",
+        "ETag": "\"5f16d49a-7cf3\"",
+        "Accept-Ranges": "bytes",
+        "Expires": "Sun, 08 Nov 2026 16:26:01 GMT",
+        "Cache-Control": "max-age=2592000",
+        "Cross-Origin-Resource-Policy": "cross-origin"
+      },
+      "local_file": "acquisition/batch_007/raw/nas2020_quarterly_candidate_2.xlsx",
+      "bytes": 31987,
+      "sha256": "7306929437513aab2492182c4090a8ff9da2a5d515729bab5847bc41dbf37b9c",
+      "primary_final_host": true,
+      "acquired": true
+    },
+    {
+      "id": "nas2020_quarterly_candidate_3",
+      "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S%208.18.2.xlsx",
+      "filename": "nas2020_quarterly_candidate_3.xlsx",
+      "role": "Bounded candidate NAS2020 quarterly expenditure GDP table; identity must be verified",
+      "discovery": "Candidate derived from verified NAS2019 Statement8.18.2 and NAS2020 no-S Excel filename structure; not asserted to be actual link",
+      "retrieved_at_utc": "2026-10-09T16:22:44.814094+00:00",
+      "acquired": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "nas2020_quarterly_candidate_4",
+      "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2020/S8.18.2.xlsx",
+      "filename": "nas2020_quarterly_candidate_4.xlsx",
+      "role": "Bounded candidate NAS2020 quarterly expenditure GDP table; identity must be verified",
+      "discovery": "Candidate derived from verified NAS2019 Statement8.18.2 and NAS2020 no-S Excel filename structure; not asserted to be actual link",
+      "retrieved_at_utc": "2026-10-09T16:22:44.814285+00:00",
+      "acquired": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

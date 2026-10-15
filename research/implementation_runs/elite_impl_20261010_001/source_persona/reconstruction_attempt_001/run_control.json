@@ -1,0 +1,68 @@
+{
+  "started_at": "2026-10-10T12:32:15.997496+00:00",
+  "timeout_seconds_per_command": 1200,
+  "python": "3.11.16 (main, Aug 14 2026, 15:24:25) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "model_calls": 0,
+  "commands": [
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.persona_engine.rolling_inputs",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/rolling_inputs",
+        "--source-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.656225919723511,
+      "log": "command_001.log",
+      "log_sha256": "2c5c28b84d0ec28f54a50ed27f754eaa641014d2fb1dd42def6ea34ac9f8ac96"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.persona_engine.executable_rolling",
+        "--rolling-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/rolling_inputs",
+        "--output-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/executable_personas"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.279845952987671,
+      "log": "command_002.log",
+      "log_sha256": "064f9c49310dcdb228931d0e3c87423a62aa5955ec6a12a80c05e19ecce68783"
+    },
+    {
+      "argv": [
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+        "-m",
+        "src.backtest.eligibility_audit",
+        "--rolling-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/rolling_inputs",
+        "--executable-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/executable_personas",
+        "--source-root",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project",
+        "--output-file",
+        "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/research/implementation_runs/elite_impl_20261010_001/source_persona/reconstruction_attempt_001/eligibility_audit.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.94217300415039,
+      "log": "command_003.log",
+      "log_sha256": "93fcf5d7d59c551ec4fceea956a41028c540e05a7e5bc84442aa6a456136c15e"
+    }
+  ],
+  "code_sha256": {
+    "src/persona_engine/provenance.py": "b8b5e223927092e41e84146ac1187aa20578b3f054f10a22f48b6fa6f2e4cc1d",
+    "src/persona_engine/executable_rolling.py": "69dcfb81ff5e99c2542a6d1133eaa8347a84bcf633030ddfd6a98061705f0e5b",
+    "src/persona_engine/rolling_inputs.py": "1cc8f08bd879ea8ebcc062bf9b98a1e9ca44ba8a92e33d0893f1ec1d8330139a",
+    "src/backtest/eligibility_audit.py": "ca28487af1e9f639d695f035db742e6791a411de0b4c1961394983c6a7e7781b",
+    "src/schemas/macro_schema.py": "8120fabca9976b82242f532ed2279089f8429eb2b5e221a10bbfdcf909aff388",
+    "src/schemas/persona_schema.py": "9739c5312a387b6f1d789499ad7047943e70ac6fd925487b2d26406761f20d92",
+    "src/schemas/temporal_panel_schema.py": "6b57f7637b517acb36268e4d67bf85a43565b4c54b2b8d333d473687baac8120"
+  },
+  "finished_at": "2026-10-10T12:32:46.894428+00:00"
+}

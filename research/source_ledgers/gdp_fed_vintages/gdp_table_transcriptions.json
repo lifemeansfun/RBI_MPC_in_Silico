@@ -1,0 +1,779 @@
+{
+  "tables": [
+    {
+      "q": 4,
+      "year": 2019,
+      "page": 8,
+      "gdp_page": 9,
+      "gva": [
+        2952197,
+        2962592,
+        3036177,
+        3123451,
+        3157366,
+        3142027,
+        3206925,
+        3296807,
+        3307707,
+        3278144,
+        3318220,
+        3397049
+      ],
+      "gva_growth": [
+        6.9,
+        6.1,
+        5.6,
+        5.6,
+        4.8,
+        4.3,
+        3.5,
+        3.0
+      ],
+      "gdp": [
+        3136572,
+        3232072,
+        3314801,
+        3491719,
+        3359162,
+        3432553,
+        3500033,
+        3689678,
+        3535267,
+        3584335,
+        3642748,
+        3803601
+      ],
+      "gdp_growth": [
+        7.1,
+        6.2,
+        5.6,
+        5.7,
+        5.2,
+        4.4,
+        4.1,
+        3.1
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 29,52,197 29,62,592 30,36,177 31,23,451 31,57,366 31,42,027 32,06,925 32,96,807 33,07,707 32,78,144 33,18,220 33,97,049 6.9 6.1 5.6 5.6 4.8 4.3 3.5 3.0",
+        "GDP 31,36,572 32,32,072 33,14,801 34,91,719 33,59,162 34,32,553 35,00,033 36,89,678 35,35,267 35,84,335 36,42,748 38,03,601 100.0 100.0 100.0 100.0 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over 7.1 6.2 5.6 5.7 5.2 4.4 4.1 3.1 previous year)"
+      ],
+      "source_id": "gdp_20200529",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20200529_page8.png"
+    },
+    {
+      "q": 1,
+      "year": 2020,
+      "page": 5,
+      "gva": [
+        3157366,
+        3307707,
+        2553320
+      ],
+      "gva_growth": [
+        4.8,
+        -22.8
+      ],
+      "gdp": [
+        3359162,
+        3535267,
+        2689556
+      ],
+      "gdp_growth": [
+        5.2,
+        -23.9
+      ],
+      "gdp_page": 5,
+      "source_id": "gdp_20200831",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20200831_page5.png"
+    },
+    {
+      "q": 2,
+      "year": 2020,
+      "page": 5,
+      "gva": [
+        3157366,
+        3142027,
+        3307707,
+        3278144,
+        2553320,
+        3048589
+      ],
+      "gva_growth": [
+        4.8,
+        4.3,
+        -22.8,
+        -7.0
+      ],
+      "gdp": [
+        3359162,
+        3432553,
+        3535267,
+        3584335,
+        2689556,
+        3314167
+      ],
+      "gdp_growth": [
+        5.2,
+        4.4,
+        -23.9,
+        -7.5
+      ],
+      "gdp_page": 5,
+      "source_id": "gdp_20201127",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20201127_page5.png"
+    },
+    {
+      "q": 3,
+      "year": 2020,
+      "page": 8,
+      "gva": [
+        3149109,
+        3128794,
+        3196347,
+        3305273,
+        3271453,
+        3304890,
+        2566163,
+        3033277,
+        3337592
+      ],
+      "gva_growth": [
+        5.0,
+        4.6,
+        3.4,
+        -22.4,
+        -7.3,
+        1.0
+      ],
+      "gdp": [
+        3384141,
+        3404720,
+        3492973,
+        3566708,
+        3561530,
+        3607630,
+        2697045,
+        3299887,
+        3622275
+      ],
+      "gdp_growth": [
+        5.4,
+        4.6,
+        3.3,
+        -24.4,
+        -7.3,
+        0.4
+      ],
+      "gdp_page": 8,
+      "source_id": "gdp_20210226",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20210226_page8.png"
+    },
+    {
+      "q": 4,
+      "year": 2020,
+      "page": 8,
+      "gva": [
+        3149109,
+        3128794,
+        3196347,
+        3269953,
+        3305273,
+        3271453,
+        3304890,
+        3389855,
+        2565909,
+        3032285,
+        3339272,
+        3515963
+      ],
+      "gva_growth": [
+        5.0,
+        4.6,
+        3.4,
+        3.7,
+        -22.4,
+        -7.3,
+        1.0,
+        3.7
+      ],
+      "gdp": [
+        3384141,
+        3404720,
+        3492973,
+        3721482,
+        3566708,
+        3561530,
+        3607630,
+        3833401,
+        2695421,
+        3296715,
+        3624266,
+        3896335
+      ],
+      "gdp_growth": [
+        5.4,
+        4.6,
+        3.3,
+        3.0,
+        -24.4,
+        -7.4,
+        0.5,
+        1.6
+      ],
+      "gdp_page": 8,
+      "source_id": "gdp_20210531_attachment",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20210531_attachment_page8.png"
+    },
+    {
+      "q": 1,
+      "year": 2021,
+      "page": 4,
+      "gdp_page": 4,
+      "gva": [
+        3305273,
+        2565909,
+        3047516
+      ],
+      "gva_growth": [
+        -22.4,
+        18.8
+      ],
+      "gdp": [
+        3566708,
+        2695421,
+        3238020
+      ],
+      "gdp_growth": [
+        -24.4,
+        20.1
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 33,05,273 25,65,909 30,47,516 -22.4 18.8",
+        "GDP 35,66,708 26,95,421 32,38,020 100.0 100.0",
+        "GDP (Percentage change over -24.4 20.1 previous year)"
+      ],
+      "source_id": "gdp_20210831_attachment",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20210831_attachment_page4.png"
+    },
+    {
+      "q": 2,
+      "year": 2021,
+      "page": 4,
+      "gdp_page": 4,
+      "gva": [
+        3305273,
+        3271453,
+        2565909,
+        3032285,
+        3047516,
+        3288736
+      ],
+      "gva_growth": [
+        -22.4,
+        -7.3,
+        18.8,
+        8.5
+      ],
+      "gdp": [
+        3566708,
+        3561530,
+        2695421,
+        3296718,
+        3238020,
+        3573451
+      ],
+      "gdp_growth": [
+        -24.4,
+        -7.4,
+        20.1,
+        8.4
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 33,05,273 32,71,453 25,65,909 30,32,285 30,47,516 32,88,736 -22.4 -7.3 18.8 8.5",
+        "GDP 35,66,708 35,61,530 26,95,421 32,96,718 32,38,020 35,73,451 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over previous year) -24.4 -7.4 20.1 8.4 National 9001: 2015 IS/ ISO"
+      ],
+      "source_id": "gdp_20211130_attachment",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20211130_attachment_page4.png"
+    },
+    {
+      "q": 3,
+      "year": 2021,
+      "page": 7,
+      "gva": [
+        3287872,
+        3256509,
+        3297492,
+        2583801,
+        3064920,
+        3366311,
+        3059219,
+        3321681,
+        3525787
+      ],
+      "gva_growth": [
+        -21.4,
+        -5.9,
+        2.1,
+        18.4,
+        8.4,
+        4.7
+      ],
+      "gdp": [
+        3548958,
+        3546223,
+        3599696,
+        2703598,
+        3310930,
+        3626220,
+        3253106,
+        3591649,
+        3822159
+      ],
+      "gdp_growth": [
+        -23.8,
+        -6.6,
+        0.7,
+        20.3,
+        8.5,
+        5.4
+      ],
+      "gdp_page": 7,
+      "source_id": "gdp_20220228",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20220228_page7.png"
+    },
+    {
+      "q": 4,
+      "year": 2021,
+      "page": 7,
+      "gdp_page": 7,
+      "gva": [
+        3287872,
+        3256509,
+        3297492,
+        3377603,
+        2583801,
+        3064920,
+        3366311,
+        3570041,
+        3052664,
+        3319248,
+        3524786,
+        3708776
+      ],
+      "gva_growth": [
+        -21.4,
+        -5.9,
+        2.1,
+        5.7,
+        18.1,
+        8.3,
+        4.7,
+        3.9
+      ],
+      "gdp": [
+        3548958,
+        3546223,
+        3599696,
+        3821081,
+        2703598,
+        3310930,
+        3626220,
+        3917725,
+        3246434,
+        3589178,
+        3821878,
+        4078025
+      ],
+      "gdp_growth": [
+        -23.8,
+        -6.6,
+        0.7,
+        2.5,
+        20.1,
+        8.4,
+        5.4,
+        4.1
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 32,87,872 32,56,509 32,97,492 33,77,603 25,83,801 30,64,920 33,66,311 35,70,041 30,52,664 33,19,248 35,24,786 37,08,776 -21.4 -5.9 2.1 5.7 18.1 8.3 4.7 3.9",
+        "GDP 35,48,958 35,46,223 35,99,696 38,21,081 27,03,598 33,10,930 36,26,220 39,17,725 32,46,434 35,89,178 38,21,878 40,78,025 100.0 100.0 100.0 100.0 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over -23.8 -6.6 0.7 2.5 20.1 8.4 5.4 4.1 previous year)"
+      ],
+      "source_id": "gdp_20220531",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20220531_page7.png"
+    },
+    {
+      "q": 1,
+      "year": 2022,
+      "page": 4,
+      "gdp_page": 4,
+      "gva": [
+        2583801,
+        3052664,
+        3441826
+      ],
+      "gva_growth": [
+        18.1,
+        12.7
+      ],
+      "gdp": [
+        2703598,
+        3246434,
+        3685125
+      ],
+      "gdp_growth": [
+        20.1,
+        13.5
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 2,583,801 3,052,664 3,441,826 18.1 12.7",
+        "GDP 2,703,598 3,246,434 3,685,125 100.0 100.0",
+        "GDP (Percentage change over previous year) 20.1 13.5 National 9001: 2015 IS/ ISO"
+      ],
+      "source_id": "gdp_20220831",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20220831_page4.png"
+    },
+    {
+      "q": 2,
+      "year": 2022,
+      "page": 4,
+      "gdp_page": 4,
+      "gva": [
+        2583801,
+        3064920,
+        3052664,
+        3319248,
+        3441826,
+        3505599
+      ],
+      "gva_growth": [
+        18.1,
+        8.3,
+        12.7,
+        5.6
+      ],
+      "gdp": [
+        2703598,
+        3310930,
+        3246434,
+        3589178,
+        3685125,
+        3816578
+      ],
+      "gdp_growth": [
+        20.1,
+        8.4,
+        13.5,
+        6.3
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 2,583,801 3,064,920 3,052,664 3,319,248 3,441,826 3,505,599 18.1 8.3 12.7 5.6",
+        "GDP 2,703,598 3,310,930 3,246,434 3,589,178 3,685,125 3,816,578 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over 20.1 8.4 13.5 6.3 previous year)"
+      ],
+      "source_id": "gdp_20221130_attachment",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20221130_attachment_page4.png"
+    },
+    {
+      "q": 3,
+      "year": 2022,
+      "page": 9,
+      "gdp_page": 9,
+      "gva": [
+        2599861,
+        3092846,
+        3392540,
+        3126277,
+        3381314,
+        3553504,
+        3503189,
+        3566493,
+        3717073
+      ],
+      "gva_growth": [
+        20.2,
+        9.3,
+        4.7,
+        12.1,
+        5.5,
+        4.6
+      ],
+      "gdp": [
+        2724023,
+        3346731,
+        3660581,
+        3311050,
+        3651659,
+        3850772,
+        3747908,
+        3880988,
+        4018584
+      ],
+      "gdp_growth": [
+        21.6,
+        9.1,
+        5.2,
+        13.2,
+        6.3,
+        4.4
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 25,99,861 30,92,846 33,92,540 31,26,277 33,81,314 35,53,504 35,03,189 35,66,493 37,17,073 20.2 9.3 4.7 12.1 5.5 4.6",
+        "GDP 27,24,023 33,46,731 36,60,581 33,11,050 36,51,659 38,50,772 37,47,908 38,80,988 40,18,584 100.0 100.0 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over 21.6 9.1 5.2 13.2 6.3 4.4 previous year)"
+      ],
+      "source_id": "gdp_20230228",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20230228_page9.png"
+    },
+    {
+      "q": 4,
+      "year": 2022,
+      "page": 7,
+      "gdp_page": 7,
+      "gva": [
+        2599861,
+        3092846,
+        3392540,
+        3596234,
+        3126277,
+        3381314,
+        3553504,
+        3736930,
+        3499841,
+        3564263,
+        3721575,
+        3979162
+      ],
+      "gva_growth": [
+        20.2,
+        9.3,
+        4.7,
+        3.9,
+        11.9,
+        5.4,
+        4.7,
+        6.5
+      ],
+      "gdp": [
+        2724023,
+        3346731,
+        3660581,
+        3955784,
+        3311050,
+        3651659,
+        3850772,
+        4112360,
+        3744285,
+        3878000,
+        4022625,
+        4361515
+      ],
+      "gdp_growth": [
+        21.6,
+        9.1,
+        5.2,
+        4.0,
+        13.1,
+        6.2,
+        4.5,
+        6.1
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 25,99,861 30,92,846 33,92,540 35,96,234 31,26,277 33,81,314 35,53,504 37,36,930 34,99,841 35,64,263 37,21,575 39,79,162 20.2 9.3 4.7 3.9 11.9 5.4 4.7 6.5",
+        "GDP 27,24,023 33,46,731 36,60,581 39,55,784 33,11,050 36,51,659 38,50,772 41,12,360 37,44,285 38,78,000 40,22,625 43,61,515 100.0 100.0 100.0 100.0 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over 21.6 9.1 5.2 4.0 13.1 6.2 4.5 6.1 previous year)"
+      ],
+      "source_id": "gdp_20230531",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20230531_page7.png"
+    },
+    {
+      "q": 1,
+      "year": 2023,
+      "page": 4,
+      "gva": [
+        3126277,
+        3499841,
+        3773932
+      ],
+      "gva_growth": [
+        11.9,
+        7.8
+      ],
+      "gdp": [
+        3311050,
+        3744285,
+        4037144
+      ],
+      "gdp_growth": [
+        13.1,
+        7.8
+      ],
+      "gdp_page": 4,
+      "source_id": "gdp_20230831_attachment",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20230831_attachment_page4.png"
+    },
+    {
+      "q": 2,
+      "year": 2023,
+      "page": 4,
+      "gva": [
+        3126277,
+        3381314,
+        3499841,
+        3564263,
+        3773932,
+        3828698
+      ],
+      "gva_growth": [
+        11.9,
+        5.4,
+        7.8,
+        7.4
+      ],
+      "gdp": [
+        3311050,
+        3651659,
+        3744285,
+        3878000,
+        4037144,
+        4174312
+      ],
+      "gdp_growth": [
+        13.1,
+        6.2,
+        7.8,
+        7.6
+      ],
+      "gdp_page": 4,
+      "source_id": "gdp_20231130",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20231130_page4.png"
+    },
+    {
+      "q": 3,
+      "year": 2023,
+      "page": 9,
+      "gdp_page": 9,
+      "gva": [
+        3162549,
+        3397048,
+        3569131,
+        3521025,
+        3568105,
+        3741633,
+        3810828,
+        3841953,
+        3984960
+      ],
+      "gva_growth": [
+        11.3,
+        5.0,
+        4.8,
+        8.2,
+        7.7,
+        6.5
+      ],
+      "gdp": [
+        3350730,
+        3672438,
+        3870108,
+        3779954,
+        3872858,
+        4034890,
+        4090545,
+        4185636,
+        4372011
+      ],
+      "gdp_growth": [
+        12.8,
+        5.5,
+        4.3,
+        8.2,
+        8.1,
+        8.4
+      ],
+      "text_rows": [
+        "GVA at Basic Prices 31,62,549 33,97,048 35,69,131 35,21,025 35,68,105 37,41,633 38,10,828 38,41,953 39,84,960 11.3 5.0 4.8 8.2 7.7 6.5",
+        "GDP 33,50,730 36,72,438 38,70,108 37,79,954 38,72,858 40,34,890 40,90,545 41,85,636 43,72,011 100.0 100.0 100.0 100.0 100.0 100.0",
+        "GDP (Percentage change over previous 12.8 5.5 4.3 8.2 8.1 8.4 year)"
+      ],
+      "source_id": "gdp_20240229_attachment",
+      "transcription_basis": "Original PDF text rows with shape and aligned growth checks; representative rendered table QA",
+      "reviewed_render": "visual_checks/gdp_20240229_attachment_page9.png"
+    },
+    {
+      "q": 4,
+      "year": 2023,
+      "page": 13,
+      "gva": [
+        3162549,
+        3397048,
+        3569131,
+        3748113,
+        3521025,
+        3568105,
+        3741633,
+        3974137,
+        3811997,
+        3842473,
+        3995825,
+        4223455
+      ],
+      "gva_growth": [
+        11.3,
+        5.0,
+        4.8,
+        6.0,
+        8.3,
+        7.7,
+        6.8,
+        6.3
+      ],
+      "gdp": [
+        3350730,
+        3672438,
+        3870108,
+        4128570,
+        3779954,
+        3872858,
+        4034890,
+        4383726,
+        4091484,
+        4185779,
+        4380675,
+        4723784
+      ],
+      "gdp_growth": [
+        12.8,
+        5.5,
+        4.3,
+        6.2,
+        8.2,
+        8.1,
+        8.6,
+        7.8
+      ],
+      "gdp_page": 13,
+      "source_id": "gdp_20240531_attachment",
+      "transcription_basis": "Visually adjudicated table rows with retained OCR assistance",
+      "reviewed_render": "visual_checks/gdp_20240531_attachment_page13.png"
+    }
+  ],
+  "note": "Rows are constant2011-12prices; levels rupees crore; growth YoY percent; year is latest fiscal-year start. Flat order: levels3fiscalyears withQ1..Qmaxeach; growthlast2fiscalyears. Never pool different release vintages as if one coherent snapshot."
+}

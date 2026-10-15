@@ -105,180 +105,122 @@ DOVE_LEXICON = [
 
 
 class PersonaExtractor:
-    """Analyzes empirical statement corpus to construct grounded, calibrated persona models."""
+    """Deterministic lexical summaries restricted by documented publication availability.
 
-    def __init__(self, statements_dir: Optional[Path] = None, output_dir: Optional[Path] = None):
-        self.statements_dir = statements_dir or (PROJECT_ROOT / "data" / "processed" / "statements")
-        self.output_dir = output_dir or (PROJECT_ROOT / "personas" / "2020_2024_roster")
+    Lexical counts are descriptive statistics, not estimates of a structural hawk/dove
+    utility. No subjective legacy priors or retrospective biographies enter this fit.
+    """
+    def __init__(self, statements_dir=None, output_dir=None, information_cutoff="2023-04-30", source_root=None):
+        from datetime import date
+        self.statements_dir = Path(statements_dir or PROJECT_ROOT / "data/processed/statements_v2")
+        self.information_cutoff = date.fromisoformat(str(information_cutoff)).isoformat()
+        self.output_dir = Path(output_dir or PROJECT_ROOT / "personas" / f"calibration_{self.information_cutoff}_v2")
+        self.source_root = Path(source_root or PROJECT_ROOT)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self._sources = {}
 
-    def load_member_corpus(self, member_id: str) -> dict[str, str]:
-        """Loads all meeting statements for a given member into {meeting_date: statement_text}."""
-        corpus = {}
-        for date_dir in sorted(self.statements_dir.iterdir()):
-            if not date_dir.is_dir():
+    def load_member_corpus(self, member_id):
+        import hashlib, json
+        if member_id not in ROSTER_META:
+            raise ValueError(f"Unknown roster member {member_id}")
+        corpus, sources = {}, []
+        for folder in sorted(self.statements_dir.iterdir()):
+            if not folder.is_dir() or not (folder / f"{member_id}.txt").exists():
                 continue
-            stmt_file = date_dir / f"{member_id}.txt"
-            if stmt_file.exists():
-                try:
-                    with open(stmt_file, "r", encoding="utf-8") as f:
-                        corpus[date_dir.name] = f.read()
-                except Exception as e:
-                    logger.warning("Could not read %s: %s", stmt_file, e)
+            manifest_path = folder / "source_manifest.json"
+            if not manifest_path.is_file():
+                raise StatementParsingError(f"Missing publication manifest: {folder}")
+            meta = json.loads(manifest_path.read_text())
+            from src.schemas.macro_schema import iso_day
+            publication = iso_day(meta["publication_date"])
+            decision = iso_day(meta["decision_date"])
+            if publication < decision or folder.name != decision:
+                raise StatementParsingError(f"Inconsistent dates: {folder}")
+            # Entire publication day must precede the declared cutoff.
+            if publication >= self.information_cutoff:
+                continue
+            path = folder / f"{member_id}.txt"
+            payload = path.read_bytes()
+            digest = hashlib.sha256(payload).hexdigest()
+            source = (self.source_root / meta["source_file"]).resolve()
+            if not source.is_relative_to(self.source_root.resolve()) or not source.is_file():
+                raise StatementParsingError(f"Missing source: {source}")
+            if hashlib.sha256(source.read_bytes()).hexdigest() != meta["source_sha256"]:
+                raise StatementParsingError(f"Changed source: {source}")
+            if digest != meta["statement_sha256"].get(member_id):
+                raise StatementParsingError(f"Changed statement: {path}")
+            corpus[decision] = payload.decode("utf-8")
+            sources.append({"decision_date": decision, "publication_date": publication,
+                            "statement_file": str(path.resolve().relative_to(self.source_root.resolve())),
+                            "statement_sha256": digest, "source_file": meta["source_file"],
+                            "source_sha256": meta["source_sha256"], "availability_basis": meta["availability_basis"]})
+        self._sources[member_id] = sources
         return corpus
 
-    def analyze_member(self, member_id: str) -> dict[str, Any]:
-        """Performs quantitative content analysis on a member's statements."""
+    def analyze_member(self, member_id):
         corpus = self.load_member_corpus(member_id)
-        if not corpus:
-            logger.warning("No corpus found for member %s", member_id)
-            meta = ROSTER_META.get(member_id, {})
-            return {
-                "member_id": member_id,
-                "meetings_count": 0,
-                "total_words": 0,
-                "hawk_score": meta.get("default_hawk_dove", 0.0),
-                "key_themes": [],
-                "exemplar_quotes": [],
-            }
+        meta = ROSTER_META[member_id]
+        hawk_hits = dove_hits = total_words = 0
+        sentences = []
+        for decision, text in corpus.items():
+            total_words += len(text.split())
+            hawk_hits += sum(len(re.findall(r"\b" + re.escape(word) + r"\b", text, re.I)) for word in HAWK_LEXICON)
+            dove_hits += sum(len(re.findall(r"\b" + re.escape(word) + r"\b", text, re.I)) for word in DOVE_LEXICON)
+            candidates = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if 20 <= len(s.split()) <= 60]
+            if candidates:
+                sentences.append((decision, candidates[0]))
+        score = (hawk_hits - dove_hits) / max(hawk_hits + dove_hits, 1)
+        # Predeclared chronological spread; no hand-prior-conditioned quote selection.
+        indices = sorted(set([0, len(sentences) // 2, len(sentences) - 1])) if sentences else []
+        quotes = [f'"{sentences[i][1]}" ({sentences[i][0]})' for i in indices]
+        return {"member_id": member_id, "name": meta["name"], "role": meta["role"],
+                "is_internal": meta["is_internal"], "tenure": "Calibration corpus through " + self.information_cutoff,
+                "meetings_count": len(corpus), "total_words": total_words,
+                "hawk_hits": hawk_hits, "dove_hits": dove_hits, "calibrated_hawk_dove": round(score, 6),
+                "stance_bias": "neutral", "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate.",
+                "biography": None, "exemplar_quotes": quotes,
+                "calibration_cutoff": self.information_cutoff, "corpus_sources": self._sources[member_id],
+                "method": "unweighted lexical contrast; descriptive, not a Bayesian or preference estimate"}
 
-        total_words = 0
-        hawk_hits = 0
-        dove_hits = 0
-        all_sentences = []
+    @staticmethod
+    def _write_identical_or_new(path, payload):
+        if path.exists():
+            if path.read_bytes() != payload:
+                raise FileExistsError(f"Refusing to overwrite a different frozen persona artifact: {path}")
+            return
+        with path.open("xb") as stream:
+            stream.write(payload)
 
-        for date_str, text in corpus.items():
-            words = text.lower().split()
-            total_words += len(words)
-            for h in HAWK_LEXICON:
-                hawk_hits += len(re.findall(r"\b" + re.escape(h) + r"\b", text, re.IGNORECASE))
-            for d in DOVE_LEXICON:
-                dove_hits += len(re.findall(r"\b" + re.escape(d) + r"\b", text, re.IGNORECASE))
-
-            # Collect sentences for exemplar extraction
-            sentences = re.split(r"(?<=[.!?])\s+", text)
-            for s in sentences:
-                s_clean = s.strip()
-                if 20 <= len(s_clean.split()) <= 60:
-                    all_sentences.append((date_str, s_clean))
-
-        # Relative lexical tone ratio: (hawk - dove) / (hawk + dove + 1)
-        lexical_score = (hawk_hits - dove_hits) / max(hawk_hits + dove_hits, 1)
-
-        meta = ROSTER_META.get(member_id, {})
-        prior_score = meta.get("default_hawk_dove", 0.0)
-
-        # Calibrated score is a Bayesian blend: 60% empirical voting/priors + 40% lexical intensity
-        calibrated_score = round(0.60 * prior_score + 0.40 * lexical_score, 2)
-        calibrated_score = max(-1.0, min(1.0, calibrated_score))
-
-        # Select 3 characteristic exemplar quotes
-        exemplars = []
-        for d_str, s in all_sentences:
-            if prior_score > 0 and any(k in s.lower() for k in ["target", "restrictive", "anchored", "vigilant"]):
-                exemplars.append(f'"{s}" ({d_str})')
-            elif prior_score < 0 and any(k in s.lower() for k in ["growth", "real interest rate", "lag", "slack"]):
-                exemplars.append(f'"{s}" ({d_str})')
-            if len(exemplars) >= 3:
-                break
-
-        # Fallback exemplars if filter didn't catch 3
-        if len(exemplars) < 3 and all_sentences:
-            for d_str, s in all_sentences[:3]:
-                if f'"{s}" ({d_str})' not in exemplars:
-                    exemplars.append(f'"{s}" ({d_str})')
-
-        return {
-            "member_id": member_id,
-            "name": meta.get("name", member_id),
-            "role": meta.get("role", "Member"),
-            "is_internal": meta.get("is_internal", False),
-            "tenure": meta.get("tenure", "2020-10 to 2024-10"),
-            "meetings_count": len(corpus),
-            "total_words": total_words,
-            "hawk_hits": hawk_hits,
-            "dove_hits": dove_hits,
-            "calibrated_hawk_dove": calibrated_score,
-            "stance_bias": meta.get("default_stance", "withdrawal_of_accommodation"),
-            "voting_priority": meta.get("voting_priority", "Balanced policy posture"),
-            "biography": meta.get("biography", None),
-            "exemplar_quotes": exemplars[:3],
-        }
-
-    def calibrate_and_persist_all(self) -> dict[str, dict[str, Any]]:
-        """Calibrates all roster members and saves YAML profiles and review report."""
-        summary = {}
-        for member_id in ROSTER_META.keys():
-            data = self.analyze_member(member_id)
-            summary[member_id] = data
-
-            # Construct MemberPersona object
-            persona = MemberPersona(
-                member_id=data["member_id"],
-                name=data["name"],
-                role=data["role"],
-                is_internal=data["is_internal"],
-                tenure=data["tenure"],
-                hawk_dove_score=data["calibrated_hawk_dove"],
-                stance_bias=data["stance_bias"],
-                voting_priority=data["voting_priority"],
-                biography=data["biography"],
-                key_themes=data["exemplar_quotes"] if data["exemplar_quotes"] else [data["voting_priority"]],
-            )
-
-            # Persist YAML
-            yaml_path = self.output_dir / f"{member_id}.yaml"
-            with open(yaml_path, "w", encoding="utf-8") as f:
-                yaml.dump(persona.model_dump(), f, default_flow_style=False, sort_keys=False)
-
-        # Generate PERSONA_REVIEW.md
-        review_path = PROJECT_ROOT / "personas" / "PERSONA_REVIEW.md"
-        review_path.parent.mkdir(parents=True, exist_ok=True)
-        self.generate_review_report(summary, review_path)
-
-        print(f"[+] Successfully calibrated {len(summary)} personas under {self.output_dir}.")
-        print(f"[+] Persona review report saved to {review_path}.")
+    def calibrate_and_persist_all(self):
+        import hashlib, json
+        summary = {member: self.analyze_member(member) for member in ROSTER_META}
+        manifest = {"version": "dated-lexical-v2", "calibration_cutoff": self.information_cutoff,
+                    "selection_rule": "publication day strictly precedes cutoff", "members": summary}
+        encoded = (json.dumps(manifest, sort_keys=True, indent=2) + "\n").encode()
+        digest = hashlib.sha256(encoded).hexdigest()
+        for member, data in summary.items():
+            persona = MemberPersona(member_id=member, name=data["name"], role=data["role"],
+                                    is_internal=data["is_internal"], tenure=data["tenure"],
+                                    hawk_dove_score=data["calibrated_hawk_dove"], stance_bias="neutral",
+                                    voting_priority=data["voting_priority"], biography=None,
+                                    key_themes=data["exemplar_quotes"], calibration_cutoff=self.information_cutoff,
+                                    corpus_manifest_hash=digest,
+                                    provenance_status="dated_corpus" if data["meetings_count"] else "assumed")
+            self._write_identical_or_new(self.output_dir / f"{member}.yaml",
+                                        yaml.safe_dump(persona.model_dump(), sort_keys=True).encode())
+        self._write_identical_or_new(self.output_dir / "corpus_manifest.json", encoded)
+        self.generate_review_report(summary, self.output_dir / "PERSONA_REVIEW.md")
         return summary
 
-    def generate_review_report(self, summary: dict[str, dict[str, Any]], review_path: Path):
-        """Generates academic review documentation of calibrated personas."""
-        lines = [
-            "# RBI MPC In Silico: Persona Calibration Review",
-            "",
-            "This report documents the quantitative calibration of empirical persona models for the 2020–2024 RBI Monetary Policy Committee.",
-            "Each agent's policy posture is anchored in verifiable historical minutes statements, lexical frequency analysis, and voting dissents.",
-            "",
-            "## Summary Table: Calibrated Roster Parameters",
-            "",
-            "| Member Name | Role | Affiliation | Meetings | Statement Words | Hawk Hits | Dove Hits | Calibrated Score | Stance Bias |",
-            "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
-        ]
-
-        for m_id, d in summary.items():
-            affil = "Internal RBI" if d["is_internal"] else "External Appointee"
-            lines.append(
-                f"| {d['name']} | {d['role']} | {affil} | {d['meetings_count']} | {d['total_words']:,} | {d['hawk_hits']} | {d['dove_hits']} | **{d['calibrated_hawk_dove']:+.2f}** | `{d['stance_bias']}` |"
-            )
-
-        lines.extend([
-            "",
-            "## Empirical Qualitative Anchoring (Exemplar Quotes)",
-            "",
-        ])
-
-        for m_id, d in summary.items():
-            lines.append(f"### {d['name']} ({d['role']})")
-            lines.append(f"- **Calibrated Hawk-Dove Orientation**: `{d['calibrated_hawk_dove']:+.2f}`")
-            lines.append(f"- **Institutional Mandate**: {d['voting_priority']}")
-            lines.append("- **Verbatim Minutes Excerpts**:")
-            for q in d["exemplar_quotes"]:
-                lines.append(f"  - {q}")
-            lines.append("")
-
-        with open(review_path, "w", encoding="utf-8") as f:
-            f.write("\n".join(lines))
+    def generate_review_report(self, summary, review_path):
+        lines = ["# Dated lexical persona evidence", "", f"Publication cutoff: {self.information_cutoff}.",
+                 "Scores are corpus descriptions, not validated behavioral preferences. No legacy hand priors or biography claims are fitted.", "",
+                 "| Member | Included meetings | Words | Hawk hits | Dove hits | Lexical contrast |",
+                 "|---|---:|---:|---:|---:|---:|"]
+        for member, data in summary.items():
+            lines.append(f"| {member} | {data['meetings_count']} | {data['total_words']} | {data['hawk_hits']} | {data['dove_hits']} | {data['calibrated_hawk_dove']} |")
+        self._write_identical_or_new(review_path, ("\n".join(lines) + "\n").encode())
 
 
 if __name__ == "__main__":
-    extractor = PersonaExtractor()
-    extractor.calibrate_and_persist_all()
+    PersonaExtractor().calibrate_and_persist_all()

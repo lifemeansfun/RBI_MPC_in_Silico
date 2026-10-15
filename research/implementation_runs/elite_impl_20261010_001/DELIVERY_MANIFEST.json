@@ -1,0 +1,214 @@
+{
+  "version": "implementation-delivery-v1",
+  "files": {
+    "IMPLEMENTATION_REPORT.md": {
+      "sha256": "de9fabd95f056e195b1d37ee7a7f58c3eb11353a9f53445fae15f2c5d10af153",
+      "bytes": 12005
+    },
+    "criterion_evidence_table.json": {
+      "sha256": "02333bc2928b2aa5f91e2850eb5f42e0608bb44dac4e93d5af9fc64ed94aa9d4",
+      "bytes": 5754
+    },
+    "run_ledger.json": {
+      "sha256": "2e4242dd8941e308cb81d5418f4d8b56997317a45b7add74e92523e984e17260",
+      "bytes": 2685
+    },
+    "run_ledger_before_closeout.json": {
+      "sha256": "c21f95cfbc9e1eaf0a1f8c114c732560f3dc03a6395a42cb8135dae8ad021dfb",
+      "bytes": 1050
+    },
+    "baseline_code_manifest.json": {
+      "sha256": "f972eb505807ba9af3c77cb11cb7162467f25bb0b42c2518501de2371bb5b5e7",
+      "bytes": 10170
+    },
+    "baseline_git_status.txt": {
+      "sha256": "a2c985260b0f3b48e9d7ae6244e93cd1f6b163bc6113b438710dcf15de1a8008",
+      "bytes": 3244
+    },
+    "post_verification_accounting_presence.json": {
+      "sha256": "d528dabbe28cd3a2efa22e0a442c2cf1ac57d6b2996b03c0f6eb34ac45934fce",
+      "bytes": 405
+    },
+    "preservation_and_verification.json": {
+      "sha256": "122f11616f6752c429365b0f677a7cf6a58880bf66390e0430bea0e3978a72f9",
+      "bytes": 733
+    },
+    "finalize_delivery.py": {
+      "sha256": "3bcb41c6e8426a5642fc92b33b2bcff0de54755a95e054e66ca77eab8b61f581",
+      "bytes": 25307
+    },
+    "run_source_integration.py": {
+      "sha256": "dbaea267a67b842dc391ce88797f9bfe61b168d87d6252db5b8bd423ea518144",
+      "bytes": 3452
+    },
+    "diagnostic_read_failure_001.json": {
+      "sha256": "6f666d94b8070baa5e748f9aa92073642f9ee4921b3eedf2071b9e3769082b33",
+      "bytes": 390
+    },
+    "full_suite_attempt_001_control.json": {
+      "sha256": "1031434e54d3fc07dcbccda2e085dbd57a8fe31bffebe66373ff7c906dcbf50f",
+      "bytes": 485
+    },
+    "full_suite_attempt_001/result.json": {
+      "sha256": "2c8ab84812f882ba43ce8f48ba5dab2662e9f4a3df007ddd926bfabb9ca5c795",
+      "bytes": 984
+    },
+    "full_suite_attempt_001/pytest.log": {
+      "sha256": "ec6262bd2fa1c9167d4097a13b9e85328f3e33041194e1c974b95c9b127ab111",
+      "bytes": 672
+    },
+    "full_suite_attempt_001/command.json": {
+      "sha256": "54daf25b10e7e54cab2377047c52b927a79c8761f90d3eb9736e064a8d611de0",
+      "bytes": 893
+    },
+    "full_suite_attempt_001/source_manifest_before.json": {
+      "sha256": "ba7aced5d101095a0bf990d40b35a0fe3d1db61e6f852fa94e35c91f9cc98fd2",
+      "bytes": 189102
+    },
+    "full_suite_attempt_001/source_manifest_after.json": {
+      "sha256": "ba7aced5d101095a0bf990d40b35a0fe3d1db61e6f852fa94e35c91f9cc98fd2",
+      "bytes": 189102
+    },
+    "runner_attempt_001/result.json": {
+      "sha256": "b24ad751a7693e71217fba9c155707d41e315dba59d157cd1ecec4158e3de0c3",
+      "bytes": 1005
+    },
+    "runner_attempt_001/pytest.log": {
+      "sha256": "86ca788a29e0737d87e3d0e07f874340fed9069a66b2e7e62bb0979c1b50cfcd",
+      "bytes": 6723
+    },
+    "runner_attempt_002/result.json": {
+      "sha256": "957d5df5d8f6943b735e3bd107e778c9fc655fa4d5d7884ed8e9591f945bff2c",
+      "bytes": 1005
+    },
+    "runner_attempt_002/pytest.log": {
+      "sha256": "e9df5468069e78664b22c2f929f5f1a7f2d744bebe2abdeb5d80e1d0aebeae83",
+      "bytes": 99
+    },
+    "source_integration_attempt_001/run_control.json": {
+      "sha256": "ede7a40e04f12d548523a1fe988a68e9173d139d46b5e24bf610a6a89ee582d7",
+      "bytes": 7099
+    },
+    "source_integration_attempt_001/bundle/protocol.json": {
+      "sha256": "8f7eca497686c152cc8c672a3dca4bbba93a005a0076d80929f63fa16494074d",
+      "bytes": 88698
+    },
+    "source_integration_attempt_001/mock/analysis.json": {
+      "sha256": "32098b5fd48a4dad4f90615940ef5507fef4e72b6ab0470a11a20955637d484d",
+      "bytes": 7945
+    },
+    "source_integration_attempt_001/mock/completion.json": {
+      "sha256": "4f8ef994d48d80e8e6dcd15e92258db8534e62f52c2889936e78a9412a91b7d3",
+      "bytes": 495
+    },
+    "source_integration_attempt_001/live_refused/failure.json": {
+      "sha256": "19d97b88e23ffbcb2af19a8b623bc73090de8db00d7d8f447bc80db9867614b8",
+      "bytes": 420
+    },
+    "source_integration_attempt_001/portable_replay/replay_receipt.json": {
+      "sha256": "65e2985d00e1195ef1693f6f7ea5565c4c37da34c38159e1b4ebb49a6f31059c",
+      "bytes": 379
+    },
+    "source_persona/reconstruction_attempt_003/run_control.json": {
+      "sha256": "03e3bbd810ddb2ddcd6c235ef8318b6ab48cdc1ab915c9789be8ef419f9addee",
+      "bytes": 4327
+    },
+    "source_persona/reconstruction_attempt_003/eligibility_audit.json": {
+      "sha256": "28fcb112697c4543c0df9be0def32a43ed6335cd26a76f86da057facb9fc0a91",
+      "bytes": 216593
+    },
+    "source_persona/reconstruction_attempt_003/executable_personas/receipt.json": {
+      "sha256": "5fd73e27a8561cde156e0f803bc650dcb76614a3f91da1b4b1a3cb8bdde00753",
+      "bytes": 63111
+    },
+    "reference_fidelity/METHOD_AND_CONTRIBUTION_MATRIX.md": {
+      "sha256": "0079598a55e8eb652b6e8cbba5fc262e5e56f00e73aa8158d5eb71e3209dd802",
+      "bytes": 9402
+    },
+    "reference_fidelity/reference_methods.json": {
+      "sha256": "13056d0cfb21645475c84b2a76459df78d2a746bb3b964fd1071d6dfc83db5b7",
+      "bytes": 14690
+    },
+    "reference_fidelity/file_manifest.json": {
+      "sha256": "964ab88bdc535f7dec6d90b33654cf89aed5f1b04079c2bdef17ea29352048f5",
+      "bytes": 3281
+    },
+    "clean_install_attempt_001/run_control.json": {
+      "sha256": "8c8a25212b129aaa6bf3fbb03cdef1261b8ba7b5ad08c6bbfe947845606de710",
+      "bytes": 8819
+    },
+    "clean_install_attempt_001/fresh_environment.json": {
+      "sha256": "a29767ec4028bdc9680bffb661cea70091358f1d72eab53792f1505946bb3108",
+      "bytes": 2264
+    },
+    "clean_install_attempt_001/driver.py": {
+      "sha256": "25361f71aff947480c64124a404fd34da8cad4c8dce2e54dcd143f487348e49c",
+      "bytes": 7746
+    },
+    "clean_install_attempt_001/predeclared_limits.json": {
+      "sha256": "14ce84f282a4a52601a0568938bb728d4216070d58375796ddbc03812364d012",
+      "bytes": 628
+    },
+    "clean_install_attempt_001/portable_manifest_before.json": {
+      "sha256": "20e1d1197e48b96469ba5aea4bdf77b258e07a7b7cb557258fca15caa1fc9426",
+      "bytes": 80457
+    },
+    "clean_install_attempt_001/portable_manifest_after.json": {
+      "sha256": "20e1d1197e48b96469ba5aea4bdf77b258e07a7b7cb557258fca15caa1fc9426",
+      "bytes": 80457
+    },
+    "clean_install_attempt_001/fresh_portable_replay/replay_receipt.json": {
+      "sha256": "65e2985d00e1195ef1693f6f7ea5565c4c37da34c38159e1b4ebb49a6f31059c",
+      "bytes": 379
+    },
+    "clean_install_attempt_001/001_create_venv.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "clean_install_attempt_001/002_install_locked_requirements.log": {
+      "sha256": "dbf1703041c322cc984cab46c2afc6365f37bde4f3fe5f13d150e64d6e9dc6f5",
+      "bytes": 32971
+    },
+    "clean_install_attempt_001/003_reconcile_versions.log": {
+      "sha256": "a29767ec4028bdc9680bffb661cea70091358f1d72eab53792f1505946bb3108",
+      "bytes": 2264
+    },
+    "clean_install_attempt_001/004_pip_check.log": {
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "bytes": 30
+    },
+    "clean_install_attempt_001/005_fresh_portable_validation.log": {
+      "sha256": "8cb0be3daa4336bcc4315bc03e8f7444423f1d7b093c0e8329111a68ba2a31b6",
+      "bytes": 351
+    },
+    "clean_install_attempt_001/006_fresh_independent_replay.log": {
+      "sha256": "97a373c9f5503b4c3bc0284a9632d44a87d1c93099a738b2712f34755185e1e6",
+      "bytes": 313
+    },
+    "source_integration_attempt_001/command_001.log": {
+      "sha256": "1df40866b20dad01fd7e67d1fc2186ba5876dbae7e2100b38f84b82ad91b23f6",
+      "bytes": 216
+    },
+    "source_integration_attempt_001/command_002.log": {
+      "sha256": "8cb0be3daa4336bcc4315bc03e8f7444423f1d7b093c0e8329111a68ba2a31b6",
+      "bytes": 351
+    },
+    "source_integration_attempt_001/command_003.log": {
+      "sha256": "d9cfa8c2b9dc29f4b5f5af5ae9cd8d152a6671a445eee9511bb5d7b2e97aeda5",
+      "bytes": 453
+    },
+    "source_integration_attempt_001/command_004.log": {
+      "sha256": "0d46af3f05cdad1b7628922156e0d056f4b64e40937dc233dc3d058816109964",
+      "bytes": 2087
+    },
+    "source_integration_attempt_001/command_005.log": {
+      "sha256": "8cb0be3daa4336bcc4315bc03e8f7444423f1d7b093c0e8329111a68ba2a31b6",
+      "bytes": 351
+    },
+    "source_integration_attempt_001/command_006.log": {
+      "sha256": "97a373c9f5503b4c3bc0284a9632d44a87d1c93099a738b2712f34755185e1e6",
+      "bytes": 313
+    }
+  },
+  "nested_evidence": "Frozen protocol, source/persona receipts and reference manifests index complete source/raw evidence; failed isolated attempts remain in their original directories"
+}

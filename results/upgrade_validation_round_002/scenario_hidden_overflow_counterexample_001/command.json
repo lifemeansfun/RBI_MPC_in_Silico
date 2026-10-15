@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/scenario_hidden_overflow_counterexample_001/probe.py",
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/scenario_doses_attempt_002/checkout"
+  ],
+  "cwd": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/scenario_doses_attempt_002/checkout",
+  "source_sha256": "95c19ebc1f68f0095d97a464541428e71a1a1d42366cc2debc976e35f7d9e259"
+}

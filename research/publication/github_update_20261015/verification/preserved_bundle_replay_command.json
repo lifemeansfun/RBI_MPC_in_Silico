@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "-m",
+    "src.backtest.run_frozen_study",
+    "--protocol",
+    "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle/protocol.json",
+    "--retained-root",
+    "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/mock",
+    "--execution",
+    "replay",
+    "--output-root",
+    "/private/tmp/rbi_publish_20261015_c7xt8emf/preserved_bundle_replay"
+  ],
+  "cwd": "/private/tmp/rbi_publish_20261015_c7xt8emf/checkout/research/implementation_runs/elite_impl_20261010_001/source_integration_attempt_001/bundle/code",
+  "started_at_unix": 1792077889.113099,
+  "provider_generation_requested": false,
+  "scope": "Relocated retained source-linked mock replay from published historical bundle code"
+}

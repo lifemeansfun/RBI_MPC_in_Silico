@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "threadId": "01a10b4b-1b90-7621-a220-fe25243df43a",
+    "objective": "Read the Codex goal objective file at /Users/manishharigovind/.codex/attachments/980abce9-e46e-49aa-9d87-161f166aefac/goal-objective.md before continuing.",
+    "status": "active",
+    "tokensUsed": 4908742,
+    "timeUsedSeconds": 14240,
+    "createdAt": 1791205962,
+    "updatedAt": 1791598442
+  },
+  "remainingTokens": null,
+  "completionBudgetReport": null
+}

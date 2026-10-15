@@ -1,0 +1,589 @@
+[
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [
+      "jayanth_varma"
+    ],
+    "meeting_date": "2020-10-09",
+    "publication_date": "2020-10-23",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+    "source_lines": [
+      864
+    ],
+    "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+    "stance_dissenters": []
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2020-12-04",
+    "publication_date": "2020-12-18",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Further, all members of the MPC voted unanimously to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+    "source_lines": [
+      864
+    ],
+    "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+    "stance_dissenters": []
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2021-02-05",
+    "publication_date": "2021-02-22",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "13. All members of the MPC \u2013 Dr. Shashanka Bhide; Dr. Ashima Goyal; Prof. Jayanth R. Varma; Dr. Mridul K. Saggar; Dr. Michael Debabrata Patra; and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged at 4 per cent. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+    "source_lines": [
+      864
+    ],
+    "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+    "stance_dissenters": []
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2021-04-07",
+    "publication_date": "2021-04-22",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged. Furthermore, all members of the MPC voted to continue with the accommodative stance as long as necessary to sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+    "source_lines": [
+      864
+    ],
+    "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+    "stance_dissenters": []
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2021-06-04",
+    "publication_date": "2021-06-18",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "14. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted to keep the policy repo rate unchanged at 4.0 per cent. Furthermore, all members of the MPC unanimously voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+    "source_lines": [
+      864
+    ],
+    "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+    "stance_dissenters": []
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2021-08-06",
+    "publication_date": "2021-08-20",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+      "15. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted to keep the policy repo rate unchanged at 4.0 per cent.",
+      "16. All members, namely, Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das, except Prof. Jayanth R. Varma, voted to continue with the accommodative stance as long as necessary to revive and sustain growth on a durable basis and continue to mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Prof. Jayanth R. Varma expressed reservations on this part of the resolution."
+    ],
+    "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+    "source_lines": [
+      863
+    ],
+    "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+    "stance_dissenters": [
+      "jayanth_varma"
+    ]
+  },
+  {
+    "actual_rate_bps": 0,
+    "actual_stance": "accommodative",
+    "definition": "formal rate and stance dissent only; reservations and guidance are separate",
+    "guidance_disagreements": [],
+    "meeting_date": "2021-10-08",
+    "publication_date": "2021-10-22",
+    "rate_dissenters": [],
+    "reservations": [],
+    "resolution_evidence": [
+{
+  "annotation_file": "research/source_ledgers/historical_labels_round002/label_annotations.json",
+  "annotation_sha256": "b855647a715a6212aeae9197a859737d64174b9e85df77c41bbb062c728ad145",
+  "definitions": {
+    "committee_stance_category": "The leading published stance category. April and May 2022 remain accommodative while focusing on withdrawal; the complete clause is retained",
+    "date_definition": "meeting_date is decision date parsed from the minutes title; publication_date is the separate later minutes header",
+    "exact_rate_disagreement": "A recorded vote against the quantified rate resolution. For this original panel all literal No votes reject the committee rate quantum. This does not identify every alternative rate magnitude",
+    "formal_stance_dissent": "A recorded vote against the committee stance category or an explicit alternative binding stance vote. An attributed signed-statement vote resolves the four 2021-2022 summary reservations",
+    "guidance_disagreement": "Disagreement over the duration or formulation of forward guidance is separate from disagreement over the stance category",
+    "literal_rate_no": "The literal published Yes/No ballot cell on the committee rate resolution; not an inferred preference",
+    "stance_missing": "A stance reservation without an explicit against/alternative binding vote is null, not negative, affirmative or an invented abstention"
+  },
+  "meetings": [
+    {
+      "actual_rate_bps": 0,
+      "actual_stance": "accommodative",
+      "exact_rate_disagreement_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+        "shaktikanta_das": false,
+        "shashanka_bhide": false
+      },
+      "formal_stance_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+        "shaktikanta_das": false,
+        "shashanka_bhide": false
+      },
+      "guidance_disagreements": [
+        "jayanth_varma"
+      ],
+      "literal_rate_ballots": {
+        "ashima_goyal": "Yes",
+        "jayanth_varma": "Yes",
+        "michael_patra": "Yes",
+        "mridul_saggar": "Yes",
+        "shaktikanta_das": "Yes",
+        "shashanka_bhide": "Yes"
+      },
+      "meeting_date": "2020-10-09",
+      "meeting_start_date": "2020-10-07",
+      "member_stance_evidence": {
+        "ashima_goyal": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "jayanth_varma": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "michael_patra": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "mridul_saggar": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "shaktikanta_das": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ],
+        "shashanka_bhide": [
+          "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+        ]
+      },
+      "policy_rate_clause": "keep the policy repo rate under the liquidity adjustment facility (LAF) unchanged at 4.0 per cent.",
+      "policy_stance_clause": "The MPC also decided to continue with the accommodative stance as long as necessary \u2013 at least during the current financial year and into the next financial year \u2013 to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward.",
+      "publication_date": "2020-10-23",
+      "rate_dissenters": [],
+      "repo_after_pct": 4.0,
+      "repo_before_pct": 4.0,
+      "reservations": [],
+      "resolution_evidence": [
+        "13. All members of the MPC \u2013 Dr. Shashanka Bhide, Dr. Ashima Goyal, Prof. Jayanth R. Varma, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das \u2013 unanimously voted for keeping the policy repo rate unchanged and continue with the accommodative stance as long as necessary to revive growth on a durable basis and mitigate the impact of COVID-19 on the economy, while ensuring that inflation remains within the target going forward. Dr. Shashanka Bhide, Dr. Ashima Goyal, Dr. Mridul K. Saggar, Dr. Michael Debabrata Patra and Shri Shaktikanta Das voted to continue with this accommodative stance at least during the current financial year and into the next financial year, with Prof. Jayanth R. Varma voting against this formulation."
+      ],
+      "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+      "source_lines": [
+        864
+      ],
+      "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+      "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560",
+      "stance_dissenters": [],
+      "statement_stance_dissenters": []
+    },
+    {
+      "actual_rate_bps": 0,
+      "actual_stance": "accommodative",
+      "exact_rate_disagreement_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+        "shaktikanta_das": false,
+        "shashanka_bhide": false
+      },
+      "formal_stance_targets": {
+        "ashima_goyal": false,
+        "jayanth_varma": false,
+        "michael_patra": false,
+        "mridul_saggar": false,
+"""Strong, reproducible historical baselines; only published prior truth is usable."""
+from collections import Counter
+from datetime import date
+import hashlib
+import json
+from src.validation.metrics import MetricsEvaluator
+
+
+def fit_dissent_baseline(calibration_truth, cutoff="2023-04-06", *, information_cutoff="2023-04-30"):
+    if date.fromisoformat(cutoff).isoformat() != cutoff or date.fromisoformat(information_cutoff).isoformat() != information_cutoff:
+        raise ValueError('Baseline cutoffs must be ISO calendar dates')
+    if not calibration_truth or any(row['meeting_date'] > cutoff for row in calibration_truth):
+        raise ValueError('Holdout or empty truth in calibration')
+    if len({row['meeting_date'] for row in calibration_truth}) != len(calibration_truth):
+        raise ValueError('Duplicate calibration meeting')
+    for row in calibration_truth:
+        meeting, publication = date.fromisoformat(row['meeting_date']), date.fromisoformat(row['publication_date'])
+        if publication < meeting or row['publication_date'] >= information_cutoff:
+            raise ValueError('Calibration labels are unavailable at the declared selection freeze')
+    result = {'cutoff': cutoff, 'information_cutoff':information_cutoff,
+              'method': 'best constant dissent set per channel by calibration F1 then exact-match',
+              'selection_status': 'calibration only; cohort-specific',
+              'calibration_hash': hashlib.sha256(json.dumps(calibration_truth, sort_keys=True).encode()).hexdigest()}
+    for channel in ('rate_dissenters', 'stance_dissenters'):
+        candidates = sorted({tuple(sorted(row[channel])) for row in calibration_truth})
+        truth = [row[channel] for row in calibration_truth]
+        scored = []
+        for candidate in candidates:
+            precision, recall, f1, exact = MetricsEvaluator.compute_dissent_f1([candidate] * len(truth), truth)
+            scored.append((f1 if f1 is not None else -1, exact, candidate))
+        # Lexical tie-break is predetermined and recorded; no evaluation labels used.
+        result[channel] = list(max(scored, key=lambda item: (item[0], item[1], tuple(item[2])))[2])
+    return result
+
+
+def baseline_predictions(snapshots, truth, frozen_dissent):
+    by_date = {row['meeting_date']: row for row in truth}
+    if len(by_date) != len(truth):
+        raise ValueError('Duplicate truth meeting')
+    rows = []
+    for snapshot in snapshots:
+        # Entire minutes publication day precedes the meeting-start cutoff.
+        cutoff = snapshot.information_cutoff.date().isoformat() if snapshot.information_cutoff else snapshot.meeting_date
+        available = sorted([r for r in truth if r['publication_date'] < cutoff], key=lambda r:r['meeting_date'])
+        prior = available[-1] if available else None
+        for name in ('hold_previous_stance', 'lag_persistence', 'calibration_constant_dissent'):
+            rate = prior['actual_rate_bps'] if name == 'lag_persistence' and prior else 0
+            stance = prior['actual_stance'] if name == 'lag_persistence' and prior else snapshot.prev_stance
+            rate_dissent = prior['rate_dissenters'] if name == 'lag_persistence' and prior else []
+            stance_dissent = prior['stance_dissenters'] if name == 'lag_persistence' and prior else []
+            if name == 'calibration_constant_dissent':
+                if snapshot.meeting_date <= frozen_dissent['cutoff'] or cutoff < frozen_dissent['information_cutoff']:
+                    raise ValueError('Fitted baseline evaluated inside calibration')
+                rate_dissent, stance_dissent = frozen_dissent['rate_dissenters'], frozen_dissent['stance_dissenters']
+            rows.append({'meeting_date':snapshot.meeting_date, 'baseline':name, 'rate_bps':rate,
+                         'stance':stance, 'rate_dissenters':list(rate_dissent), 'stance_dissenters':list(stance_dissent),
+                         'source_prior_meeting':prior['meeting_date'] if prior else None,
+                         'evidence_type':'deterministic_baseline'})
+    return rows
+5:provider submission per request; SDK retries and model fallbacks are disabled.
+76:    seed: int
+77:    provider_reported_seed: int | None
+80:    input_token_bound: int
+136:    provider_reported_seed: int | None = None
+149:        if self.governor is None and self.provider != "mock":
+150:            self.governor = get_governor(self.cfg.run.budget_usd_cap,
+151:                                       ledger_path or getattr(self.cfg.run, "budget_ledger_path", None))
+170:                                               retry_options=types.HttpRetryOptions(attempts=1)),
+181:        seed: Optional[int] = None, response_schema: Optional[Type[T]] = None,
+184:        max_output_tokens: int | None = None, input_token_bound: int | None = None,
+189:        seed = self.cfg.run.seed_base if seed is None else seed
+197:        if type(seed) is not int or type(max_output_tokens) is not int or max_output_tokens <= 0:
+205:        identity = normalize_request_identity(request_identity, required=self.provider != "mock")
+220:        if self.provider != "mock":
+221:            if self.provider != "gemini" or model not in TOKEN_RATES_PER_MILLION or model == "mock":
+225:                                                 "seed": seed, "max_output_tokens": max_output_tokens})
+232:        if self.provider == "mock":
+233:            input_bound_method = "offline_mock_explicit_bound" if input_token_bound is not None else "offline_mock_utf8_bytes_plus_8192"
+235:            input_bound_method = "explicit_bound_verified_by_provider_count" if input_token_bound is not None else "utf8_bytes_plus_8192_verified_by_provider_count"
+236:        if input_token_bound is None:
+237:            input_token_bound = len(canonical_json({"system": system_prompt, "user": user_prompt, "schema": schema}).encode("utf-8")) + 8192
+238:        if type(input_token_bound) is not int or input_token_bound < 0:
+239:            raise GenerationProvenanceError("input_token_bound must be a nonnegative integer")
+241:            self.provider, model, system_prompt, user_prompt, temperature, seed,
+245:                               "tools": [], "input_token_bound": input_token_bound},
+252:            response_id=None, seed=seed, provider_reported_seed=None, temperature=temperature,
+253:            max_output_tokens=max_output_tokens, input_token_bound=input_token_bound,
+259:            evidence_type="mock" if self.provider == "mock" else "live_model", attempt_count=1,
+262:            price_revision=PRICE_REVISION if self.provider != "mock" else None,
+263:            price_source=PRICE_SOURCE if self.provider != "mock" else None,
+268:            if self.provider != "mock":
+277:                                       "user_prompt": "user_prompt", "temperature": "temperature", "seed": "seed",
+284:                    for field in ("provider", "requested_model", "routed_model", "model_epoch", "seed",
+285:                                  "temperature", "max_output_tokens", "input_token_bound", "schema_name",
+304:                    if source["provider"] != "mock":
+307:                                       "price_revision": "price_revision", "input_bound": "input_token_bound",
+317:            if self.provider == "mock":
+318:                raw_text, it, ot = self._generate_mock(user_prompt, system_prompt, model, response_schema, expected)
+320:                                   token_usage_source="offline_mock_fixture", finish_reason="mock")
+323:                    # Reserve before *any* provider call: budget refusal submits none.
+325:                                                input_token_bound, max_output_tokens, PRICE_REVISION)
+332:                        if type(counted) is not int or counted < 0 or counted > input_token_bound:
+342:                            self._call_gemini(user_prompt, system_prompt, model, temperature, seed,
+354:                                           provider_reported_seed=response.provider_reported_seed,
+377:                            # A timed-out thread may continue remotely. No release/retry.
+403:                               seed, raw_text, metadata.input_tokens or 0, metadata.output_tokens or 0,
+431:            if data.get("fallback_triggered", False) is not False:
+448:        response = await asyncio.to_thread(client.models.count_tokens, model=model, contents=envelope)
+452:                           temperature: float, seed: int, *, response_schema=None,
+457:            temperature=temperature, seed=seed, system_instruction=system_prompt,
+482:    def _generate_mock(
+490:        """Offline mock responses for deterministic unit and integration tests."""
+497:        member_id = expected_identity.get("member_id", m_ids[-1] if m_ids else "mock_member")
+518:        logger.debug("[RESEARCH INTEGRITY NOTICE] Using offline mock generator for offline testing.")
+520:            mock_data = {
+528:            mock_data = {
+539:            mock_data = {
+548:        raw_text = json.dumps(mock_data)
+"""Semantic validation of copied generation evidence, beyond content digests.
+
+Digests detect accidental changes; they do not authenticate a provider invoice.
+Replay must also reconcile the recorded schema, request, evidence track and cost.
+"""
+
+import json
+import math
+from datetime import date, datetime
+
+from src.infra.cost_governor import PRICE_REVISION, PRICE_SOURCE, TOKEN_RATES_PER_MILLION
+from src.infra.evidence import canonical_json, content_hash
+from src.infra.exceptions import ArtifactIntegrityError, GenerationProvenanceError
+
+REQUIRED_METADATA_FIELDS = frozenset("""
+request_id request_hash request_payload_json provider requested_model routed_model served_model model_epoch
+response_id seed provider_reported_seed temperature max_output_tokens input_token_bound input_bound_method
+schema_name schema_hash schema_json parser_version prompt_hash system_prompt user_prompt cache_key cache_replay
+source_request_id source_evidence_type evidence_type attempt_count finish_reason input_tokens output_tokens
+token_usage_source estimated_cost_usd reservation_id price_revision price_source created_at
+""".split())
+
+
+def strict_json(text: str):
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"Duplicate JSON field {key!r}")
+            result[key] = value
+        return result
+
+    def finite(value):
+        raise ValueError(f"Nonfinite JSON value {value}")
+
+    value = json.loads(text, object_pairs_hook=unique, parse_constant=finite)
+    canonical_json(value)  # Also rejects overflow such as 1e999.
+    return value
+
+
+def validate_recorded_schema(value, schema: dict, *, schema_only: bool = False) -> None:
+    """Use the actual recorded schema, with strict integers and no remote fetching."""
+    try:
+        from jsonschema import Draft202012Validator, validators
+        from jsonschema.exceptions import SchemaError, ValidationError
+        from referencing import Registry
+        from referencing.exceptions import NoSuchResource, Unresolvable
+    except ImportError as exc:
+        raise ArtifactIntegrityError("jsonschema dependency is required to validate replay evidence") from exc
+
+    def no_remote(uri):
+        raise NoSuchResource(ref=uri)
+
+    def check_references(node):
+        if isinstance(node, dict):
+            for key, child in node.items():
+                if key in {"$ref", "$dynamicRef"} and (not isinstance(child, str) or not child.startswith("#")):
+                    raise ArtifactIntegrityError("Recorded schema may not fetch external references")
+                check_references(child)
+        elif isinstance(node, list):
+            for child in node:
+                check_references(child)
+
+    try:
+        check_references(schema)
+        Draft202012Validator.check_schema(schema)
+        checker = Draft202012Validator.TYPE_CHECKER.redefine(
+            "integer", lambda _, item: type(item) is int,
+        ).redefine("number", lambda _, item: type(item) is int or type(item) is float and math.isfinite(item))
+        validator = validators.extend(Draft202012Validator, type_checker=checker)
+        if not schema_only:
+            validator(schema, registry=Registry(retrieve=no_remote)).validate(value)
+    except (SchemaError, ValidationError, Unresolvable, TypeError, ValueError) as exc:
+        raise ArtifactIntegrityError(f"Output violates recorded strict schema: {exc}") from exc
+
+
+def validate_generation_evidence(generation: dict, *, identity_aliases: dict | None = None) -> dict | None:
+    """Reject semantic contradictions in a successful generation/cache/replay record."""
+    try:
+        canonical_json(generation)
+        metadata = generation["metadata"]
+        if not isinstance(metadata, dict) or set(metadata) != REQUIRED_METADATA_FIELDS:
+            raise ArtifactIntegrityError("Generation metadata is incomplete or has unknown fields")
+        request = strict_json(metadata["request_payload_json"])
+        identity = generation["request_identity"]
+        if not isinstance(identity, dict) or request["request_identity"] != identity:
+            raise ArtifactIntegrityError("Canonical generation identity differs from the request")
+        if metadata["request_hash"] != content_hash(request) or metadata["cache_key"] != metadata["request_hash"]:
+            raise ArtifactIntegrityError("Generation request hash mismatch")
+        for field in ("provider", "routed_model", "temperature", "seed", "max_output_tokens", "model_epoch",
+                      "parser_version", "system_prompt", "user_prompt"):
+            if request[field] != metadata[field] or type(request[field]) is not type(metadata[field]):
+                raise ArtifactIntegrityError(f"Generation {field} differs from canonical request")
+        if metadata["requested_model"] != metadata["routed_model"]:
+            raise ArtifactIntegrityError("Unexpected model substitution in generation evidence")
+        schema = request["schema"]
+        if metadata["schema_hash"] != content_hash(schema) or strict_json(metadata["schema_json"]) != schema:
+            raise ArtifactIntegrityError("Generation schema provenance differs from request")
+        if metadata["prompt_hash"] != content_hash({"system": request["system_prompt"], "user": request["user_prompt"]}):
+            raise ArtifactIntegrityError("Generation prompt hash mismatch")
+        if type(metadata["seed"]) is not int or type(metadata["attempt_count"]) is not int or metadata["attempt_count"] != 1:
+            raise ArtifactIntegrityError("Generation seed/attempt count is invalid")
+        if type(metadata["temperature"]) not in (float, int) or not 0 <= metadata["temperature"] <= 2:
+            raise ArtifactIntegrityError("Generation temperature is invalid")
+        for field, minimum in (("input_token_bound", 0), ("max_output_tokens", 1), ("input_tokens", 0), ("output_tokens", 0)):
+            if type(metadata[field]) is not int or metadata[field] < minimum:
+                raise ArtifactIntegrityError(f"Generation {field} is missing or invalid")
+        if metadata["input_token_bound"] != request["generation_config"]["input_token_bound"]:
+            raise ArtifactIntegrityError("Generation input reservation differs from request")
+        if request["generation_config"] != {"response_mime_type": "application/json", "candidate_count": 1,
+                                            "tools": [], "input_token_bound": metadata["input_token_bound"]}:
+            raise ArtifactIntegrityError("Evidence claims an unsupported generation/cost configuration")
+        if metadata["input_bound_method"] not in {"explicit_bound_verified_by_provider_count", "utf8_bytes_plus_8192_verified_by_provider_count",
+                                                "offline_mock_explicit_bound", "offline_mock_utf8_bytes_plus_8192"}:
+            raise ArtifactIntegrityError("Generation input-bound method is unknown")
+        if datetime.fromisoformat(metadata["created_at"]).tzinfo is None:
+            raise ArtifactIntegrityError("Generation time lacks a timezone")
+        if metadata["provider_reported_seed"] is not None and type(metadata["provider_reported_seed"]) is not int:
+            raise ArtifactIntegrityError("Provider-reported seed is invalid")
+        for field in ("response_id", "served_model"):
+src/validation/observed_labels.py:3:Observed-case scores are descriptive of labeled cells, not estimates for missing
+src/validation/observed_labels.py:4:votes. Bounds enumerate logically possible completions without a missing-at-random
+src/validation/observed_labels.py:15:    if channel not in ('literal_rate_no', 'rate_choice_disagreement', 'formal_stance_disagreement'):
+src/validation/observed_labels.py:17:    if type(strict_stance) is not bool or (strict_stance and channel != 'formal_stance_disagreement'):
+src/validation/observed_labels.py:31:            elif channel == 'rate_choice_disagreement':
+src/validation/observed_labels.py:32:                target = member['rate_magnitude_disagreement']['value']
+src/validation/observed_labels.py:68:            'observed_positive':positives, 'precision':tp/(tp+fp) if tp+fp else None,
+src/validation/observed_labels.py:78:    precision_bounds = ([tp/(tp+fp+up), (tp+up)/(tp+fp+up)] if tp+fp+up else None)
+src/validation/observed_labels.py:92:    return {'precision':precision_bounds, 'recall_given_positive_truth':recall_bounds,
+src/validation/observed_labels.py:96:            'interpretation':'Sharp logical bounds across missing-label completions; not confidence intervals or an assumption of random missingness'}
+src/validation/observed_labels.py:103:    is boolean, every unobserved member target is explicitly None. Extra/missing
+src/validation/observed_labels.py:146:            'scope':'Observed-case and complete-case descriptive scores with explicit missingness; no population-generalization or empirical-superiority verdict'}
+src/validation/observed_labels.py:153:    positive counts in four groups suffices; enumerating all 2^missing assignment
+src/validation/observed_labels.py:168:        raise ValueError('Paired missing-label completion state limit exceeded')
+src/validation/metrics.py:19:    dissent_precision: float | None = Field(ge=0, le=1)
+src/validation/metrics.py:55:        precision = tp / (tp + fp) if tp + fp else None
+src/validation/metrics.py:59:        return precision, recall, f1, exact / len(predicted_dissenters_list) * 100
+src/validation/metrics.py:88:        precision, recall, f1, exact_dissent = cls.compute_dissent_f1(predicted_dissenters, ground_truth_dissenters)
+src/validation/metrics.py:115:            dissent_exact_match_rate_pct=exact_dissent, dissent_precision=precision,
+src/validation/metrics.py:124:    """Reject duplicates, missing or extra outcomes before computing metrics."""
+src/validation/metrics.py:137:                               baseline_losses: Sequence[float], *, block_size=2, n_resamples=10000, seed=42):
+src/validation/metrics.py:140:    Circular moving-block bootstrap preserves short temporal dependence. The exact
+src/validation/metrics.py:148:    if not np.isfinite(delta).all() or block_size < 1 or n_resamples < 100:
+src/validation/metrics.py:154:    block_size = min(block_size, n)
+src/validation/metrics.py:156:    starts = rng.integers(0, n, size=(n_resamples, math.ceil(n / block_size)))
+src/validation/metrics.py:157:    indices = (starts[..., None] + np.arange(block_size)) % n
+src/validation/metrics.py:170:            "bootstrap": "circular temporal-block", "block_size": block_size, "resamples": n_resamples,
+src/reporting/study_report.py:101:            if channel not in ('literal_rate_no','exact_rate_disagreement','formal_stance_dissent'):
+src/reporting/study_report.py:107:        require(set(selected_targets)=={'literal_rate_no','exact_rate_disagreement','formal_stance_dissent'},
+src/reporting/study_report.py:118:                    for channel,field in [('exact_rate_disagreement','sim_rate_dissenters'),
+src/reporting/study_report.py:129:                for channel,field in [('exact_rate_disagreement','rate_dissenters'),
+src/reporting/study_report.py:143:                            ('exact_rate_disagreement','sim_rate_dissenters','rate_dissenters'),
+src/reporting/study_report.py:184:                   'source_missingness':{s.meeting_date:[name for name in OBSERVABLE_FIELDS if getattr(s,name) is None] for s in snapshots},
+src/reporting/study_report.py:188:                   'statistical_scope':'Exploratory meeting-level rate-loss comparisons on exposed history; temporal block size 2; replicate means are not extra independent meetings',
+src/reporting/study_report.py:204:                  'Positive advantage means lower model MAE. Intervals use meeting clusters and a circular temporal-block bootstrap. These are exploratory diagnostics on exposed history.','',
+src/reporting/study_report.py:210:                  'Observed-case F1 uses only documented targets. Bounds range over all assignments to missing targets with positive truth; they are logical identification bounds, not sampling confidence intervals. An unobserved positive class remains undefined.',
+src/reporting/study_report.py:223:                  'Archival positive-list scores above preserve producer semantics. New formal-vote scoring excludes unobserved member targets and reports complete cases and sharp missing-label bounds in summary.json; these bounds are not confidence intervals.',
+src/reporting/study_report.py:224:                  'Paired F1 differences in summary.json use the same missing-label completion for model and baseline. They show whether a ranking is robust to missing targets; no probability or statistical significance is assigned to those completions.',
+src/reporting/study_report.py:226:                  'The complete input missingness is recorded in summary.json. An unavailable output gap leaves the full intended comparator unresolved.',
+"""Reconstruct the original historical scientific panel entirely offline.
+
+Invoke from a source-only checkout with an explicit new output root. Comparisons
+against an archival panel are optional diagnostics, never reconstruction inputs.
+"""
+import argparse
+import importlib.metadata
+import json
+import platform
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from src.data_pipeline.vintage_panel import (LABEL_DIRECTORY, build_vintage_panel, digest,
+                                            read_json, source_path, verify_input_manifest, write_new)
+from research.source_ledgers.historical_labels_round002.export_labels import export
+
+
+def rebuild_scientific_inputs(source_root, output_root, *, expected_input_manifest_sha256=None,
+                              reference_panel=None):
+    root = Path(source_root).resolve()
+    output = Path(output_root).resolve()
+    if output.exists():
+        raise FileExistsError("Use a new output root; reconstruction never overwrites an existing artifact")
+    if output == root or root.is_relative_to(output):
+        raise ValueError("Output root cannot contain the scientific source root")
+    input_manifest_path = source_path(root, LABEL_DIRECTORY / "input_manifest.json")
+    input_manifest_hash = digest(input_manifest_path)
+    if expected_input_manifest_sha256 is not None and expected_input_manifest_sha256 != input_manifest_hash:
+        raise ValueError("Separately supplied scientific input manifest anchor does not match")
+    catalog = verify_input_manifest(root)
+    # These are the actual numerical reconstruction dependencies, not code history.
+    code_paths = ("src/data_pipeline/vintage_panel.py", "src/data_pipeline/statement_extractor.py",
+                  "src/schemas/macro_schema.py", "src/schemas/decision_space.py",
+                  "research/source_ledgers/historical_labels_round002/export_labels.py",
+                  "research/verification/rebuild_scientific_inputs.py")
+    code_hashes = {name: digest(source_path(root, name)) for name in code_paths}
+    build_vintage_panel(output / "panel", gdp_ledger="research/source_ledgers/gdp_fed_vintages/meeting_gdp_ledger.csv",
+                        source_root=root)
+    export(root, output / "labels")
+    if catalog != verify_input_manifest(root) or digest(input_manifest_path) != input_manifest_hash:
+        raise ValueError("Scientific inputs changed during offline reconstruction")
+    if any(digest(source_path(root, name)) != sha for name, sha in code_hashes.items()):
+        raise ValueError("Scientific reconstruction code changed during execution")
+    comparisons = {}
+    if reference_panel is not None:
+        reference = Path(reference_panel).resolve()
+        for name in ("snapshots.json", "truth.json", "manifest.json"):
+            original, rebuilt = reference / name, output / "panel" / name
+            before, after = read_json(original), read_json(rebuilt)
+            comparisons[name] = {"reference_sha256": digest(original), "rebuilt_sha256": digest(rebuilt),
+                                 "byte_equal": original.read_bytes() == rebuilt.read_bytes(),
+                                 "semantic_equal": before == after}
+            if name == "manifest.json":
+                comparisons[name]["different_keys"] = sorted(key for key in set(before) | set(after)
+                                                             if before.get(key) != after.get(key))
+    versions = {name: importlib.metadata.version(name) for name in ("pydantic", "beautifulsoup4")}
+    receipt = {"version": "offline-historical-input-reconstruction-v1", "status": "complete",
+               "input_manifest_sha256": input_manifest_hash, "scientific_input_files": len(catalog["files"]),
+               "input_hashes": catalog["files"], "code_sha256": code_hashes,
+               "environment": {"python": sys.version, "executable": sys.executable,
+                               "platform": platform.platform(), "dependencies": versions},
+               "command_arguments": sys.argv, "reference_comparison": comparisons,
+               "reference_used_for_construction": False, "network_calls": 0, "model_calls": 0,
+               "scope": "Source reconstruction and observability, not empirical model replication or superiority"}
+    write_new(output / "reconstruction_receipt.json", receipt)
+    return receipt
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source-root", type=Path, default=ROOT)
+    parser.add_argument("--output-root", type=Path, required=True)
+    parser.add_argument("--expected-input-manifest-sha256")
+    parser.add_argument("--reference-panel", type=Path)
+    args = parser.parse_args()
+    result = rebuild_scientific_inputs(args.source_root, args.output_root,
+                                      expected_input_manifest_sha256=args.expected_input_manifest_sha256,
+                                      reference_panel=args.reference_panel)
+    print(json.dumps({"status": result["status"], "scientific_input_files": result["scientific_input_files"],
+                      "reference_comparison": result["reference_comparison"]}, sort_keys=True))

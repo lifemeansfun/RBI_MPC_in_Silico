@@ -1,0 +1,266 @@
+{
+  "created_at_utc": "2026-10-09T16:19:08.932426+00:00",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "acquire_primary_sources_20261009.py",
+      "bytes": 6547,
+      "sha256": "eb7d8474bab1257c340e7e5c0a3164d17ce37888a23384ffa0b17f53eed18339"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/census_x13_2017.pdf",
+      "bytes": 1896614,
+      "sha256": "787b1146c6606f1431deb505186b8512ddea5709c8c2c0d2c36f1d4f3251c82b"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/champagne_poulin_sekkel_2016.pdf",
+      "bytes": 527088,
+      "sha256": "3435e4dcd2d95746e4e21c1b9af40718b0e8e968858680ebf8e11cdcf3d7da60"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/edge_rudd_2012.pdf",
+      "bytes": 101743,
+      "sha256": "e7fd829c25814fbf61bde42cd883c02d9be6da22a048d31ed9e2978513376f30"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/eurostat_2009.pdf",
+      "bytes": 629309,
+      "sha256": "3a16053b279956924d3b74bec3216ecc4b333536bf0f477ac8cd25fcfa3623cb"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/eurostat_2024.pdf",
+      "bytes": 1169222,
+      "sha256": "b8c78bb4caeb16e1e9a24706cf0803a50fe99b1495ab7da297df32d51c082107"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/gruen_robinson_stone_2002.pdf",
+      "bytes": 187711,
+      "sha256": "319d34be763abe48974cd89722750751b7293e2357bbb12fee0865116b1a876b"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/hamilton_2017.pdf",
+      "bytes": 486170,
+      "sha256": "93e1ef47a7679d3a1483751477e6c63929603d7665fb758bc826f158593167de"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/imf_qna_2017.pdf",
+      "bytes": 4441361,
+      "sha256": "450159e6772e6cc18252e25f6d9a419936dd925833b6b277b4917b241c6acd8c"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/imf_qna_2017_ch7.response.bin",
+      "bytes": 1260167,
+      "sha256": "e3b61c98540d887438568aa665e81ae8b7827d2edb6f2e7d8f576ce28faed107"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/kamber_morley_wong_2016_legacy.response.bin",
+      "bytes": 127624,
+      "sha256": "6b6ff142c38f0f574025654c22e34dc8bdcb218d1fe413cc18a298f0c8de5055"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/kamber_morley_wong_2016_pdf.pdf",
+      "bytes": 2547999,
+      "sha256": "4a95aefb0a7ab0f718f41eb2d8a6745c4ecaa7032b7e21069dc079b52996a32d"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/raw/ovn_1999.pdf",
+      "bytes": 296166,
+      "sha256": "0cd0060927fa5bd5831cff7ef9679abfae4033f7e465b112e113debe93de6619"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/census_x13_2017.txt",
+      "bytes": 965314,
+      "sha256": "ec4a44081fe605a7ee80f662ba2a9dcd6c0248683288126db5f61efa8e6f1239"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/champagne_poulin_sekkel_2016.txt",
+      "bytes": 57146,
+      "sha256": "0d1b821a8b5d1eaff5cad4db382dda4c7eb355d15ac7184feeaba883f9dec12d"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/edge_rudd_2012.txt",
+      "bytes": 31613,
+      "sha256": "9df12a28022506fc6a13d025a4df7cbaee29abd9d77e5f674e2abffe88489152"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/eurostat_2009.txt",
+      "bytes": 106635,
+      "sha256": "f3cd4db5c2e7f30f290709ff9cedbd79e783a544f796eb0ce672478a56f93871"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/eurostat_2024.txt",
+      "bytes": 187692,
+      "sha256": "27f6385afde91820676ec3e825c2405fbce28bbfef61c59a7ff5e92bc7f1cf39"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/gruen_robinson_stone_2002.txt",
+      "bytes": 127004,
+      "sha256": "fed1b2d3d7d576cab906db33dc3660ed2c941b5a931cd911b0e85e27bac766f8"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/hamilton_2017.txt",
+      "bytes": 129879,
+      "sha256": "fe035b59612969a8eaf544c8fbf4bcd5812a4e1ce06ee085a9f48eeea714973c"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/imf_qna_2017.txt",
+      "bytes": 1565597,
+      "sha256": "55f08cc95fd19e6d954ef3f360a92f8d5e94b16b0b36b5cd00efe80a113b6dfc"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/kamber_morley_wong_2016_pdf.txt",
+      "bytes": 85098,
+      "sha256": "10ed498a31d10863d7f860fe6e1a16576e0afd00ece9f6718e951700226aa9f6"
+    },
+    {
+      "path": "acquisition_20261009T161203Z/text/ovn_1999.txt",
+      "bytes": 88055,
+      "sha256": "8b6e2162b90b4006a49a5c1d918f44cb66517d5a703a9bb869e7c1e08d8633c0"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/census_x13_2017.pdf",
+      "bytes": 1896614,
+      "sha256": "787b1146c6606f1431deb505186b8512ddea5709c8c2c0d2c36f1d4f3251c82b"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/champagne_poulin_sekkel_2016.pdf",
+      "bytes": 527088,
+      "sha256": "3435e4dcd2d95746e4e21c1b9af40718b0e8e968858680ebf8e11cdcf3d7da60"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/edge_rudd_2012.pdf",
+      "bytes": 101743,
+      "sha256": "e7fd829c25814fbf61bde42cd883c02d9be6da22a048d31ed9e2978513376f30"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/eurostat_2009.pdf",
+      "bytes": 629309,
+      "sha256": "3a16053b279956924d3b74bec3216ecc4b333536bf0f477ac8cd25fcfa3623cb"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/eurostat_2024.pdf",
+      "bytes": 1169222,
+      "sha256": "b8c78bb4caeb16e1e9a24706cf0803a50fe99b1495ab7da297df32d51c082107"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/gruen_robinson_stone_2002.pdf",
+      "bytes": 187711,
+      "sha256": "319d34be763abe48974cd89722750751b7293e2357bbb12fee0865116b1a876b"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/hamilton_2017.pdf",
+      "bytes": 486170,
+      "sha256": "93e1ef47a7679d3a1483751477e6c63929603d7665fb758bc826f158593167de"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/imf_qna_2017.pdf",
+      "bytes": 4441361,
+      "sha256": "450159e6772e6cc18252e25f6d9a419936dd925833b6b277b4917b241c6acd8c"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/imf_qna_2017_ch7.response.bin",
+      "bytes": 1260140,
+      "sha256": "00d7e9d62e1e0f3c03363bb41b5779e47f3b6e64cdb9c3c43df9ace984917657"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/kamber_morley_wong_2016_legacy.response.bin",
+      "bytes": 127624,
+      "sha256": "6b6ff142c38f0f574025654c22e34dc8bdcb218d1fe413cc18a298f0c8de5055"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/kamber_morley_wong_2016_pdf.pdf",
+      "bytes": 2547999,
+      "sha256": "4a95aefb0a7ab0f718f41eb2d8a6745c4ecaa7032b7e21069dc079b52996a32d"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/raw/ovn_1999.pdf",
+      "bytes": 296166,
+      "sha256": "0cd0060927fa5bd5831cff7ef9679abfae4033f7e465b112e113debe93de6619"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/retrieval_ledger.json",
+      "bytes": 24558,
+      "sha256": "61650cdfdb8aa9138fe47915db0e6d6d3053dab8bb4c69b2f484690bdf4d7543"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/census_x13_2017.txt",
+      "bytes": 965314,
+      "sha256": "ec4a44081fe605a7ee80f662ba2a9dcd6c0248683288126db5f61efa8e6f1239"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/champagne_poulin_sekkel_2016.txt",
+      "bytes": 57146,
+      "sha256": "0d1b821a8b5d1eaff5cad4db382dda4c7eb355d15ac7184feeaba883f9dec12d"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/edge_rudd_2012.txt",
+      "bytes": 31613,
+      "sha256": "9df12a28022506fc6a13d025a4df7cbaee29abd9d77e5f674e2abffe88489152"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/eurostat_2009.txt",
+      "bytes": 106635,
+      "sha256": "f3cd4db5c2e7f30f290709ff9cedbd79e783a544f796eb0ce672478a56f93871"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/eurostat_2024.txt",
+      "bytes": 187692,
+      "sha256": "27f6385afde91820676ec3e825c2405fbce28bbfef61c59a7ff5e92bc7f1cf39"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/gruen_robinson_stone_2002.txt",
+      "bytes": 127004,
+      "sha256": "fed1b2d3d7d576cab906db33dc3660ed2c941b5a931cd911b0e85e27bac766f8"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/hamilton_2017.txt",
+      "bytes": 129879,
+      "sha256": "fe035b59612969a8eaf544c8fbf4bcd5812a4e1ce06ee085a9f48eeea714973c"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/imf_qna_2017.txt",
+      "bytes": 1565597,
+      "sha256": "55f08cc95fd19e6d954ef3f360a92f8d5e94b16b0b36b5cd00efe80a113b6dfc"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/kamber_morley_wong_2016_pdf.txt",
+      "bytes": 85098,
+      "sha256": "10ed498a31d10863d7f860fe6e1a16576e0afd00ece9f6718e951700226aa9f6"
+    },
+    {
+      "path": "acquisition_20261009T161349Z/text/ovn_1999.txt",
+      "bytes": 88055,
+      "sha256": "8b6e2162b90b4006a49a5c1d918f44cb66517d5a703a9bb869e7c1e08d8633c0"
+    },
+    {
+      "path": "bibliography_verified_20261009.json",
+      "bytes": 25198,
+      "sha256": "c6d1a0e538690e69721160dd499fcc1d0bda8625e91ff15fc2f301b58fa82f4a"
+    },
+    {
+      "path": "imf_primary_web_inspection_20261009.json",
+      "bytes": 38325,
+      "sha256": "85b16f0affc6b9cd6edf00fcf3e0032721e35f972e206d4e1828f41278f676c2"
+    },
+    {
+      "path": "initial_acquisition_failure_20261009.json",
+      "bytes": 4930,
+      "sha256": "32cc6101272895988b8809b43840b3400524851b48da2739e59205f3b001c3bc"
+    },
+    {
+      "path": "methodology_memo_20261009.md",
+      "bytes": 12002,
+      "sha256": "6a61490bb052efe4c1560d870f4adf5517e9bcf5e6a5ed01d12f2f1019026723"
+    },
+    {
+      "path": "retrieval_failures_verified_20261009.json",
+      "bytes": 1596,
+      "sha256": "9c446cb219ba9a70b464c43383740e36dbb363faaf6d0384a8bf9284f2aee269"
+    },
+    {
+      "path": "verification_20261009.json",
+      "bytes": 2142,
+      "sha256": "35139dc0e4beec330d29c40a4ac9be3ba7f1c024b1b60e47a8d9880df67a3d2a"
+    }
+  ]
+}

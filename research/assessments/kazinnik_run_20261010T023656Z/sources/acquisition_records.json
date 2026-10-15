@@ -1,0 +1,57 @@
+[
+  {
+    "id": "gwu_current",
+    "url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "retrieved_utc": "2026-10-10T02:38:55.858942+00:00",
+    "status_code": 200,
+    "final_url": "https://www2.gwu.edu/~forcpgm/2025-005.pdf",
+    "content_type": "application/pdf",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/gwu_current.bin",
+    "bytes": 2640547,
+    "sha256": "bb87d87e450d7a73206ab8845afc21d595dd6a3965c4a23b647f53f28ca70914",
+    "pdf_magic": true
+  },
+  {
+    "id": "ssrn_record",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.320898+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_record.bin",
+    "bytes": 896436,
+    "sha256": "fb12d44ca19f805b2244e22e35b763b9597f244b51f82f2dfb647480a2a482c2",
+    "pdf_magic": false
+  },
+  {
+    "id": "ssrn_delivery",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "retrieved_utc": "2026-10-10T02:39:00.693880+00:00",
+    "status_code": 403,
+    "final_url": "https://papers.ssrn.com/sol3/Delivery.cfm/5424097.pdf?abstractid=5424097",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/ssrn_delivery.bin",
+    "bytes": 896436,
+    "sha256": "2ad1e4feb1a4002f63558e4241696c999dc4ba581a4eb9e3a39fad1af9256dbf",
+    "pdf_magic": false
+  },
+  {
+    "id": "nber_program",
+    "url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "retrieved_utc": "2026-10-10T02:40:42.020654+00:00",
+    "status_code": 200,
+    "final_url": "https://www.nber.org/conferences/si-2026-forecasting-empirical-methods",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "research/assessments/kazinnik_run_20261010T023656Z/sources/nber_program.html",
+    "sha256": "af512842e3c73dc0fcbf8303f960076a0a835e23da7dd196cc810a2e8db7e723",
+    "bytes": 121190,
+    "pdf_magic": false,
+    "candidate_links": []
+  },
+  {
+    "id": "nber_printable",
+    "url": "https://conference.nber.org/agenda/simple_printable?conf_id=SI26EFFE",
+    "retrieved_utc": "2026-10-10T02:40:43.113770+00:00",
+    "error": "HTTPSConnectionPool(host='conference.nber.org', port=443): Max retries exceeded with url: /agenda/simple_printable?conf_id=SI26EFFE (Caused by NewConnectionError(\"HTTPSConnection(host='conference.nber.org', port=443): Failed to establish a new connection: [Errno 51] Network is unreachable\"))"
+  }
+]

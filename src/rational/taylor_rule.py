@@ -6,16 +6,22 @@ inflation gap, output gap, and external US Federal Reserve interest rate differe
 
 from dataclasses import dataclass
 from typing import Sequence
+import math
 from src.schemas.macro_schema import MacroMeetingSnapshot
+from src.schemas.decision_space import RATE_ACTIONS_BPS
 
 
 @dataclass
 class MemberTaylorParameters:
-    """Calibrated Taylor rule coefficients for an individual committee member."""
+    """Taylor coefficients; fitting/assumption provenance is supplied by the study."""
     member_id: str
     alpha: float = 1.5   # Inflation gap sensitivity
     beta: float = 0.5    # Output gap sensitivity
     gamma: float = 0.2   # US Fed rate differential sensitivity
+
+    def __post_init__(self):
+        if not self.member_id or not all(math.isfinite(x) for x in (self.alpha, self.beta, self.gamma)):
+            raise ValueError("Taylor parameters require a member ID and finite coefficients")
 
 
 class SmoothedTaylorRule:
@@ -31,8 +37,14 @@ class SmoothedTaylorRule:
         pi_star_pct: float = 4.0,
         smoothing_rho: float = 0.75,
         us_neutral_rate_pct: float = 2.5,
-        action_set_bps: Sequence[int] = (-50, -25, 0, 25, 50),
+        action_set_bps: Sequence[int] = RATE_ACTIONS_BPS,
     ):
+        if not all(math.isfinite(x) for x in (r_star_pct, pi_star_pct, smoothing_rho, us_neutral_rate_pct)):
+            raise ValueError("Taylor settings must be finite")
+        if not 0 <= smoothing_rho < 1:
+            raise ValueError("Taylor smoothing must be in [0,1)")
+        if not action_set_bps or len(set(action_set_bps)) != len(action_set_bps) or any(type(x) is not int or x not in RATE_ACTIONS_BPS for x in action_set_bps):
+            raise ValueError("Invalid Taylor action domain")
         self.r_star = r_star_pct
         self.pi_star = pi_star_pct
         self.rho = smoothing_rho
@@ -48,9 +60,13 @@ class SmoothedTaylorRule:
         # Inflation gap: pi_t - pi*
         inflation_gap = snapshot.cpi_headline_yoy_pct - self.pi_star
         # Output gap: y_t - y*
-        output_gap = snapshot.output_gap_pct
+        if params.beta != 0 and snapshot.output_gap_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced output gap; beta=0 is a reduced-input sensitivity")
+        output_gap = snapshot.output_gap_pct if snapshot.output_gap_pct is not None else 0.0
         # External US Fed rate gap
-        us_rate_gap = snapshot.us_fed_funds_rate_pct - self.us_neutral_rate
+        if params.gamma != 0 and snapshot.us_fed_funds_rate_pct is None:
+            raise ValueError("Open-economy Taylor benchmark requires a sourced Fed target; gamma=0 is a reduced-input sensitivity")
+        us_rate_gap = snapshot.us_fed_funds_rate_pct - self.us_neutral_rate if snapshot.us_fed_funds_rate_pct is not None else 0.0
 
         # Unsmoothed Taylor target: r* + pi_t + alpha*(pi - pi*) + beta*gap + gamma*us_gap
         target_rate = (

@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "attempt": "Fed2021historicalURLthroughwebtool",
+      "candidate_url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2021.htm",
+      "status": "Web tool returned internal inaccessible response; no response body exposed to preserve",
+      "used_as_input": false,
+      "fallback": "Successful official current FOMC calendar retains2021statement/implementation hyperlinks; acquiredbytes/hashes"
+    },
+    {
+      "attempt": "LongerpreperiodGDPvintagehistory",
+      "candidate_url": "https://mospi.gov.in/quarter-wise-gdp-estimates-and-growth-rate-current-and-constant-prices-during-2018-19-2024-25-base",
+      "local_source_file": "raw/history_candidate_post_cutoff_2025.html",
+      "source_sha256": "f4c6c87130c01add20bda6961a8a4d907a7fc44f558d435247dbb03ccfa06b4e",
+      "status": "Successfully acquired endpoint; rejected for2020available-informationhistory because title spans2018-19through2024-25andcontemporaryvintageavailabilitynotestablished",
+      "used_as_input": false
+    },
+    {
+      "attempt": "Corrigendumfilenamedateinterpretation",
+      "candidate_url": "https://mospi.gov.in/sites/default/files/press_release/CorrigendumPR05032024.pdf",
+      "local_source_file": "raw/gdp_corrigendum_20240305.pdf",
+      "source_sha256": "84468ab4783c4b1fa9cdb3b72ff4545522ab7f42425d3577ef3569e00fc6ca66",
+      "printed_document_date": "2024-03-01",
+      "filename_contains_date": "05032024",
+      "website_release_datetime": null,
+      "status": "Initialcatalogguess2024-03-05corrected; filenameisnotreleaseevidence. DocumentcorrectsannualCURRENT-priceGNDI/NNDI/percapitarows25/26/30,notquarterlyconstant-priceGDP/GVA",
+      "used_as_input": false
+    },
+    {
+      "attempt": "Outputgapestimate",
+      "status": "Withheld",
+      "reason": "Sparseavailable-sourcehistory13quartersatfirstcutoff; olderandintermediateavailable-vintagerevisioncoverageandfrozenonesided/seasonalestimatormissing",
+      "used_as_input": false
+    }
+  ],
+  "no_fabricated_gap_or_forecast_as_realization": true
+}

@@ -1,0 +1,342 @@
+"""Release-aware observables and separately labeled historical truth.
+Legacy inputs remain readable and unverified; missing observations are never zero.
+"""
+from datetime import date, datetime
+import hashlib
+from pathlib import Path
+from typing import Literal
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from src.schemas.decision_space import StanceType
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def iso_day(value: str) -> str:
+    if not isinstance(value, str) or date.fromisoformat(value).isoformat() != value:
+        raise ValueError("Expected a real calendar date in YYYY-MM-DD format")
+    return value
+
+
+class ObservationEvidence(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True, allow_inf_nan=False)
+    field: str
+    value: float | str
+    units: str
+    reference_period: str
+    vintage: str
+    released_at: datetime
+    source_url: str
+    source_file: str
+    source_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    source_pointer: str = Field(min_length=1)
+    availability_basis: str = Field(min_length=1)
+    transformation: str | None = None
+    input_evidence: tuple["ObservationEvidence", ...] = ()
+
+    @field_validator("released_at")
+    @classmethod
+    def timezone_required(cls, value: datetime) -> datetime:
+        if value.tzinfo is None or value.utcoffset() is None:
+            raise ValueError("Release timestamps need a timezone")
+        return value
+
+    def verify_source(self, root: Path = PROJECT_ROOT) -> None:
+        path = (root / self.source_file).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            raise ValueError(f"Missing or outside-project source for {self.field}")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != self.source_sha256:
+            raise ValueError(f"Source hash mismatch for {self.field}")
+        for item in self.input_evidence:
+            item.verify_source(root)
+
+
+OBSERVABLE_FIELDS = (
+    "current_repo_rate_pct", "prev_stance", "cpi_headline_yoy_pct", "cpi_core_yoy_pct",
+    "cpi_food_yoy_pct", "cfpi_yoy_pct", "iip_growth_yoy_pct", "gva_growth_yoy_pct",
+    "gdp_growth_yoy_pct", "output_gap_pct", "system_liquidity_cr", "usd_inr_exchange_rate",
+    "brent_crude_usd_bbl", "us_fed_funds_rate_pct", "monsoon_departure_lpa_pct")
+
+
+class MacroMeetingSnapshot(BaseModel):
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False, validate_assignment=True)
+    meeting_date: str
+    meeting_start_date: str | None = None
+    information_cutoff: datetime | None = None
+    input_track: Literal["legacy_unverified", "source_linked", "synthetic", "counterfactual"] = "legacy_unverified"
+    parent_snapshot_hash: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    intervention: dict = Field(default_factory=dict)
+    current_repo_rate_pct: float = Field(ge=0, le=20)
+    cpi_headline_yoy_pct: float
+    cpi_core_yoy_pct: float | None = None
+    cpi_food_yoy_pct: float | None = None
+    cfpi_yoy_pct: float | None = None
+    iip_growth_yoy_pct: float | None = None
+    gva_growth_yoy_pct: float | None = None
+    gdp_growth_yoy_pct: float | None = None
+    output_gap_pct: float | None = None
+    system_liquidity_cr: float | None = None
+    usd_inr_exchange_rate: float | None = Field(default=None, ge=40, le=150)
+    brent_crude_usd_bbl: float | None = Field(default=None, ge=10, le=250)
+    us_fed_funds_rate_pct: float | None = Field(default=None, ge=0, le=20)
+    monsoon_departure_lpa_pct: float | None = None
+    prev_stance: StanceType = "withdrawal_of_accommodation"
+    observations: tuple[ObservationEvidence, ...] = ()
+    # Historical compatibility fields never enter the prompt.
+    real_rate_decision_bps: int | None = None
+    real_stance_decision: StanceType | None = None
+    real_dissenters: list[str] = Field(default_factory=list)
+    real_dissenters_rate: list[str] | None = None
+    real_dissenters_stance: list[str] | None = None
+    real_reservations: list[str] = Field(default_factory=list)
+    real_guidance_disagreements: list[str] = Field(default_factory=list)
+
+    @field_validator("meeting_date", "meeting_start_date")
+    @classmethod
+    def real_calendar_day(cls, value):
+        return iso_day(value) if value is not None else None
+
+    @model_validator(mode="after")
+    def validate_information(self):
+        if self.meeting_start_date and self.meeting_start_date > self.meeting_date:
+            raise ValueError("Meeting start is after decision")
+        if self.information_cutoff:
+            if self.information_cutoff.tzinfo is None:
+                raise ValueError("Information cutoff needs a timezone")
+            if self.information_cutoff.date().isoformat() > (self.meeting_start_date or self.meeting_date):
+                raise ValueError("Information cutoff is after meeting start")
+        if self.input_track == "counterfactual" and (not self.parent_snapshot_hash or not self.intervention):
+            raise ValueError("Counterfactual inputs require a parent hash and intervention record")
+        if self.input_track != "source_linked":
+            return self
+        if not self.information_cutoff or not self.meeting_start_date:
+            raise ValueError("Source-linked inputs require start and cutoff")
+        evidence = {item.field: item for item in self.observations}
+        if len(evidence) != len(self.observations):
+            raise ValueError("Duplicate observation evidence")
+        supplied = self.observable_values()
+        if set(evidence) != set(supplied):
+            raise ValueError(f"Evidence fields differ from supplied observations: {set(evidence) ^ set(supplied)}")
+        def check(item):
+            if item.released_at >= self.information_cutoff:
+                raise ValueError(f"Future or unavailable release: {item.field}")
+            for child in item.input_evidence:
+                check(child)
+        for name, item in evidence.items():
+            if item.value != supplied[name]:
+                raise ValueError(f"Observation/evidence value mismatch: {name}")
+            check(item)
+            if name == "output_gap_pct" and (not item.transformation or not item.input_evidence):
+                raise ValueError("Output gap requires a recorded method and input vintages")
+        return self
+
+    def observable_values(self) -> dict:
+        return {name: getattr(self, name) for name in OBSERVABLE_FIELDS if getattr(self, name) is not None}
+
+    def verify_sources(self, root: Path = PROJECT_ROOT) -> None:
+        if self.input_track != "source_linked":
+            raise ValueError("Research requires source-linked observations")
+        for item in self.observations:
+            item.verify_source(root)
+
+    def to_prompt_text(self, mask_date: bool = False) -> str:
+        label = "date masked" if mask_date else self.meeting_date
+        lines = [f"=== MACROECONOMIC INPUTS FOR SIMULATED MPC MEETING: {label} ===",
+                 f"Input evidence track: {self.input_track}."]
+        descriptions = {
+            "current_repo_rate_pct": "Current policy repo rate (%)", "prev_stance": "Prevailing stance",
+            "cpi_headline_yoy_pct": "Combined headline CPI inflation (YoY %)",
+            "cpi_core_yoy_pct": "Core CPI inflation (YoY %)",
+            "cpi_food_yoy_pct": "CPI food and beverages inflation (YoY %)",
+            "cfpi_yoy_pct": "Combined CFPI inflation (YoY %; distinct food index)",
+            "iip_growth_yoy_pct": "Industrial production growth (YoY %)",
+            "gva_growth_yoy_pct": "Real GVA growth (YoY %)", "gdp_growth_yoy_pct": "Real GDP growth (YoY %)",
+            "output_gap_pct": "One-sided estimated output gap (%)", "system_liquidity_cr": "Net liquidity (INR crore)",
+            "usd_inr_exchange_rate": "USD/INR exchange rate", "brent_crude_usd_bbl": "Brent crude (USD/barrel)",
+            "us_fed_funds_rate_pct": "US federal funds target upper bound (%)",
+            "monsoon_departure_lpa_pct": "Monsoon departure from LPA (%)",
+        }
+        for name, value in self.observable_values().items():
+            rendered = f"{value:.2f}" if isinstance(value, float) else value
+            lines.append(f"- {descriptions[name]}: {rendered}")
+        lines.extend(["RBI inflation target: 4.00%, tolerance band 2.00%-6.00%.",
+                      "Unlisted observations are unavailable. Do not impute them from knowledge of this historical meeting.",
+                      "CRITICAL GROUNDING CONSTRAINT:",
+                      "Ground reasoning ONLY in supplied observations. Do NOT cite fictitious numbers or invent macroeconomic indicators."])
+        return "\n".join(lines)
+
+
+MacroSnapshot = MacroMeetingSnapshot
+"""
+Pydantic schema for MPC Member Personas.
+Validates the structure of persona YAML profiles and prompt generation.
+"""
+
+from typing import Optional, Literal
+from pydantic import BaseModel, Field, ConfigDict
+from src.schemas.decision_space import RATE_ACTIONS_BPS, STANCE_ACTIONS, StanceType
+
+
+class MemberPersona(BaseModel):
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
+
+    member_id: str
+    name: str
+    role: str = Field(description="Governor | Deputy Governor | Executive Director | External Member")
+    is_internal: bool = Field(description="True if RBI official, False if external government appointee")
+    tenure: str = Field(description="e.g. 2020-10 to 2024-10")
+    hawk_dove_score: float = Field(
+        ge=-1.0, le=1.0,
+        description="Hawk (+1.0) vs Dove (-1.0) score based on historical statements"
+    )
+    stance_bias: StanceType = Field(
+        default="withdrawal_of_accommodation",
+        description="Historical tendency on stance (withdrawal_of_accommodation, neutral, accommodative)"
+    )
+    voting_priority: str = Field(
+        description="Summary of primary monetary policy objective and behavioral posture"
+    )
+    biography: Optional[str] = Field(
+        default=None,
+        description="Double-blind qualitative abstract of academic/policy background for zero-shot prompting."
+    )
+    key_themes: list[str] = Field(
+        default_factory=list,
+        description="3-5 recurring economic concepts or arguments cited in official minutes"
+    )
+    system_prompt_override: Optional[str] = None
+    calibration_cutoff: Optional[str] = None
+    corpus_manifest_hash: Optional[str] = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    provenance_status: Literal["legacy_unverified", "dated_corpus", "assumed"] = "legacy_unverified"
+
+    def build_system_prompt(self, zero_shot_biography: bool = False, mask_identity: bool = False) -> str:
+        """Generates the grounded system prompt for the LLM agent.
+        If zero_shot_biography=True, explicit quantitative parameters are hidden to mitigate prompt endogeneity.
+        """
+        themes_str = "\n".join(f"- {theme}" for theme in self.key_themes)
+        role_type = "Internal RBI Official" if self.is_internal else "External Academic / Expert Appointee"
+        
+        prompt_lines = [
+            f"You are {'a simulated committee member' if mask_identity else self.name}, serving in a simulated RBI Monetary Policy Committee (MPC).",
+            f"Member ID: {self.member_id}",
+            f"Your institutional role: {self.role} ({role_type}).",
+            f"Persona evidence status: {self.provenance_status}.",
+            "",
+            "=== YOUR ECONOMIC PHILOSOPHY & MONETARY POSTURE ==="
+        ]
+
+        if zero_shot_biography and self.biography:
+            prompt_lines.extend([
+                "Supplied biography (its availability must be established by the experiment):",
+                f"{self.biography}",
+                "",
+                "Use only this supplied background, without recalling historical meeting outcomes."
+            ])
+        else:
+            prompt_lines.extend([
+                f"- Lexical orientation statistic: {self.hawk_dove_score:+.2f} (Scale: -1.0 Dove to +1.0 Hawk; not a validated structural preference)",
+                f"- Underlying Policy Priority: {self.voting_priority}",
+                "- Recurring Themes in Your Historical Signed Minutes:",
+                themes_str
+            ])
+
+        prompt_lines.extend([
+            "",
+            "=== INSTITUTIONAL INSTRUCTIONS & BEHAVIORAL RULES ===",
+            "1. You are deliberating in a simulation. Your outputs are generated statements, not actual official minutes.",
+            "2. Ground all arguments in Indian macroeconomic reality: CPI-Combined inflation (RBI 4.00% target with +/-2% band), monsoon progress and food price spikes, growth recovery, system liquidity, and US Fed policy spillovers.",
+            "3. Maintain your authentic personal perspective. Do not automatically collapse into consensus with the Governor unless the macroeconomic evidence genuinely warrants it.",
+            "4. You must cast votes strictly from the authorized action sets:",
+            "   - Rate Change: " + ", ".join(f"{a:+d}" if a > 0 else str(a) for a in RATE_ACTIONS_BPS) + " bps",
+            "   - Policy Stance: " + ", ".join(repr(s) for s in STANCE_ACTIONS),
+            "5. Always respond in the requested structured JSON format without markdown wrapping or conversational preambles."
+        ])
+        
+        return "\n".join(prompt_lines).strip()
+research/source_ledgers/expanded_panel_oct08_doublecode/annotations.json
+research/source_ledgers/expanded_panel_oct08_doublecode/validation_secondary.json
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59244.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61056.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61332.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59818.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62169.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63742.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61856.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61749.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62974.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62261.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62514.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59347.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_59692.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60176.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62599.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_58958.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_58850.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_61433.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60957.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60279.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63287.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_63403.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60686.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_60604.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/raw/rbi_prid_62863.html
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/WORKINGS.md
+research/source_ledgers/expanded_panel_oct08_doublecode/source_snapshot/source_map.json
+research/source_ledgers/expanded_panel_oct08_doublecode/validation.json
+research/source_ledgers/expanded_panel_oct08_doublecode/artifact_sha256.json
+research/source_ledgers/expanded_panel_oct08_doublecode/verify_annotations.py
+research/source_ledgers/expanded_panel_oct08_doublecode/verify_annotations_v2.py
+research/source_ledgers/expanded_panel_oct08_doublecode/build_annotations.py
+research/source_ledgers/expanded_panel_oct08_doublecode/validation_failures.json
+research/source_ledgers/expanded_panel_oct08_doublecode/METHODS_AND_MISSINGNESS.md
+research/source_ledgers/expanded_panel_oct08_doublecode/statement_evidence.json
+{
+  "cpi_ledger_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c",
+  "exposure_status": "Entire 2020-2024 panel was already inspected; evaluation is retrospective",
+  "fed_ledger_sha256": "192a3dca7ba73732c681ea2786e085e9b8e98e209afe90eaf106d2aaaebe1eb9",
+  "full_open_economy_benchmark_ready": false,
+  "gdp_ledger_sha256": "837138053bad27bbadf5d5f6cfd323417dd3b969453d3854b00be3e6365b3142",
+  "historical_split": {
+    "calibration_count": 17,
+    "calibration_through": "2023-04-06",
+    "evaluation_count": 8,
+    "retrospective_evaluation_after": "2023-04-06"
+  },
+  "limits": "Printed release timing and current retained bytes; not independently archived contemporaneous hashes.",
+  "n_meetings": 25,
+  "snapshots_sha256": "b2f005537ff220842ef2547c8500d9b4f1496c52f9f96ee65cb9fe9ed6c5fbe6",
+  "truth_sha256": "333d8da00ea15d860d62a2ab81c2b30ca7e93896d248aeb09248dc68e5b5df7d",
+  "version": "source-linked-historical-v2",
+  "withheld_fields": [
+    "cpi_core_yoy_pct",
+    "cpi_food_yoy_pct",
+    "output_gap_pct",
+    "iip_growth_yoy_pct",
+    "system_liquidity_cr",
+    "usd_inr_exchange_rate",
+    "brent_crude_usd_bbl",
+    "monsoon_departure_lpa_pct"
+  ]
+}
+biography: null
+calibration_cutoff: '2023-04-30'
+corpus_manifest_hash: 387eb098a4de20a3878e604ed0d49cdc2e4de1cb31360a7e2e4408975f012348
+hawk_dove_score: 0.307557
+is_internal: false
+key_themes:
+- "\"The question of what can revive growth as well as reduce inflation is best examined\
+  \ in the context of India\u2019s macroeconomic structure.\" (2020-10-09)"
+- '"To arrive at a voting decision I take up issues of global risks facing the economy,
+  factors determining its expected inflation path and growth recovery, as well as
+  the type and the impact of guidance.32." (2022-02-10)'
+- '"The global slowdown is turning out to be less severe than expected but there are
+  signs of a slowing in both growth and inflation suggesting central banks (CBs) tightening
+  is adequate and lagged effects will bring about the required further fall in inflation."
+  (2023-04-06)'
+member_id: ashima_goyal
+name: Dr. Ashima Goyal
+provenance_status: dated_corpus
+role: External Member
+stance_bias: neutral
+system_prompt_override: null
+tenure: Calibration corpus through 2023-04-30
+voting_priority: Evaluate supplied inflation and activity evidence under the RBI mandate.

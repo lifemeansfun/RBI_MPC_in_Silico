@@ -1,0 +1,6 @@
+{
+  "command": ".venv/bin/python inline stdlib ZipFile RBI2020 XLSX",
+  "exit_code": 1,
+  "error": "zipfile.BadZipFile: File is not a zip file",
+  "correction": "Inspect MIME and magic bytes; HTTP200 is not sufficient semantic verification"
+}

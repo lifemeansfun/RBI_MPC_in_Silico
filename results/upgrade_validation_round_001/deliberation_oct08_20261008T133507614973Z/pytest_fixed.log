@@ -1,0 +1,57 @@
+.F.....................................................                  [100%]
+=================================== FAILURES ===================================
+______________ test_actual_runtime_masked_mock_and_full_identity _______________
+
+tmp_path = PosixPath('/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_proj...grade_validation_round_001/deliberation_oct08_20261008T133507614973Z/pytest_fixed_tmp/test_actual_runtime_masked_moc0')
+snapshot = MacroMeetingSnapshot(meeting_date='2023-08-10', meeting_start_date=None, information_cutoff=None, input_track='synthet...nters_stance=['stance_truth'], real_reservations=['reservation_truth'], real_guidance_disagreements=['guidance_truth'])
+roster = [MemberPersona(member_id='original_id_0', name='Original Person 0', role='Governor', is_internal=True, tenure='2020-20...ystem_prompt_override=None, calibration_cutoff=None, corpus_manifest_hash=None, provenance_status='legacy_unverified')]
+
+    async def test_actual_runtime_masked_mock_and_full_identity(tmp_path, snapshot, roster):
+        identity = {"experiment_id": "masked_runtime", "code_hash": "a" * 64, "persona_hash": "b" * 64,
+                    "data_hash": "c" * 64, "config_hash": "d" * 64}
+        logger = TranscriptLogger(run_id="masked", output_root=tmp_path, identity=identity)
+        client = LLMClient(provider="mock", cache_enabled=False, ledger_path=tmp_path / "budget.sqlite3")
+>       decision = await DebateOrchestrator(client, logger).run_meeting(snapshot, roster, roster[0].member_id,
+            experiment_id="masked_runtime", mask_identity=True, mask_date=True)
+
+tests/test_deliberation_upgrade.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/behavioral/debate_orchestrator.py:329: in run_meeting
+    output, evidence_type = await self._generate_round(
+src/behavioral/debate_orchestrator.py:244: in _generate_round
+    self.logger.save_round_transcript(
+src/infra/transcript_logger.py:172: in save_round_transcript
+    result = self._payload(payload, generation, prompt, meeting_date, replicate_id,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <src.infra.transcript_logger.TranscriptLogger object at 0x10be0eb10>
+payload = {'member_id': 'original_id_1', 'fallback_triggered': False, 'member_name': 'Original Person 1', 'proposed_rate_change_bps': 0, ...}
+generation = {'raw_text': '{"member_id": "member_2", "member_name": "Simulated Member 2", "proposed_rate_change_bps": 0, "proposed_...ddddddddddddddddddddddddd', 'data_hash': 'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', ...}, ...}
+prompt = {'user_prompt': 'INFORMATION CUTOFF: use only supplied information available for [date masked].\nThis is a historical ...Original Person 0': 'Simulated Member 1', 'original_id_1': 'member_2', 'Original Person 1': 'Simulated Member 2', ...}}
+meeting_date = '2023-08-10', replicate_id = 1, experiment_id = 'masked_runtime'
+condition_id = 'full_8424efb64e12', round_number = 1
+member_id = 'original_id_1'
+
+    def _payload(self, payload, generation, prompt, meeting_date, replicate_id,
+                 experiment_id, condition_id, round_number=None, member_id=None):
+        result = dict(payload)
+        bound = {**self.identity, "experiment_id": experiment_id or self.experiment_id,
+                 "condition_id": condition_id or self.condition_id, "meeting_date": meeting_date,
+                 "replicate_id": replicate_id}
+        if round_number is not None:
+            bound.update(round_number=round_number, member_id=member_id)
+        result["artifact_identity"] = bound
+        if generation is not None:
+            result["generation"] = generation.to_dict() if hasattr(generation, "to_dict") else generation
+            request = result["generation"].get("request_identity", {})
+            required = {"experiment_id", "condition_id", "meeting_date", "replicate_id", "member_id", "round_number"}
+            if round_number is not None and (required - request.keys()):
+                raise ArtifactIntegrityError("Round transcript requires complete generation identity")
+            if any(key in request and request[key] != value for key, value in bound.items() if value is not None):
+>               raise ArtifactIntegrityError("Transcript identity differs from generation request")
+E               src.infra.exceptions.ArtifactIntegrityError: Transcript identity differs from generation request
+
+src/infra/transcript_logger.py:160: ArtifactIntegrityError
+=========================== short test summary info ============================
+FAILED tests/test_deliberation_upgrade.py::test_actual_runtime_masked_mock_and_full_identity
+1 failed, 54 passed in 2.21s

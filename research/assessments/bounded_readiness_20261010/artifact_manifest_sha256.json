@@ -1,0 +1,15 @@
+{
+  "READINESS_ASSESSMENT.md": "3a4904f7db1c551d33ea780890bee49f06ee8071b8183126332033e80db1b6c4",
+  "collect_evidence.py": "708a9bcae2195b96a3f3901adc97a51b5704af7fccb470bba8e5851641f976f2",
+  "commands.json": "760f0b55b1532ec78269bb56e04669eed71af73d2f0f3ec77d160056ad039b10",
+  "completion_audit.json": "ddadc6dc040fd4af18c254e25b9e6206b2caa38961ba977464bd5cc1e71860c7",
+  "criterion_matrix.json": "d134733b1c2066e4de29067874055a3770d329a188cd6f0988e89cd78e919bbf",
+  "evidence_files_sha256.json": "168ed7743a045364200b43bb4235eb6eb27363074449e61a1e1ed2d74cb7fd13",
+  "evidence_inventory.json": "283f4564774a87bcd5ac593ea497cb847864ea45d5fca07591b791d14e56a208",
+  "goal-objective.md": "91e61c1e974c04ebe985e53df767beee3ad3d5ee1ca76e066d63258cf49fe836",
+  "goal_state_at_closeout.json": "00994a4998a3df879337e144d4bed5fc87b827a06a2d30a10aeea7ed79010b83",
+  "integrity_checks.json": "0b820aad658962a69fb291755d21797420e6a314d7ab16ca0648e587581167a6",
+  "review_dispatch_ledger.json": "0b7c5131faf1d9e1eca1425c350b46ef121958234bae08e6e3e369dcd700df7d",
+  "scientific_files_sha256.json": "ad04eb0b9ab04776a55829494ddee043e2d946009092b642404cadf5459b725f",
+  "verify_closeout.py": "01510a8a8d80ad9152231f3fa43ff9c3467a070ceb49350479a5b799adc4d7ea"
+}

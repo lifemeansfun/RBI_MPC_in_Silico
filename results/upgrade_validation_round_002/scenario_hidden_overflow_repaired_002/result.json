@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "control": {
+    "rejected": true,
+    "error": "derived intervention delta must be finite"
+  },
+  "provider_calls": 0
+}

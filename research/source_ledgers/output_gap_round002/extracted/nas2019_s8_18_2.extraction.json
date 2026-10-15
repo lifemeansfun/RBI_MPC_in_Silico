@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "pdftotext",
+    "-layout",
+    "research/source_ledgers/output_gap_round002/acquisition/batch_001/raw/nas2019_s8_18_2.pdf",
+    "research/source_ledgers/output_gap_round002/extracted/nas2019_s8_18_2.txt"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "d9a110c3fa809344f12396f8063fe55d4883493997d1b813f39ea16e8dc8653c",
+  "text_sha256": "36365c43c94d5be371bfb7293e8d83aab0118be29b089eaf298b3f379fe2c48c"
+}

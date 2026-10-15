@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/.venv/bin/python",
+    "research/assessments/kazinnik_run_20261010T023656Z/verify_package.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"artifact_integrity\": \"PASS\",\n  \"scope\": \"Delivery hashes, preserved files/branches, accounting and evidence labels only. No scientific readiness claim.\",\n  \"delivery_files\": 102,\n  \"preserved_scientific_files\": 83,\n  \"errors\": []\n}\n",
+  "stderr": "",
+  "manifest_sha256": "b72f28a473c365c7472b7c94301bb20bda73be4e174eb990f9af1b83b34af1ed",
+  "verified_utc": "2026-10-10T11:06:23.734569+00:00",
+  "scope": "Required delivery and preservation; no empirical-readiness certification"
+}

@@ -1,0 +1,28 @@
+{
+  "cpi_ledger_sha256": "c63e8efcc244ba5bc8b4695f376fe33904832d4e0f8f6ca1a5bb32fdd1fc5b2c",
+  "exposure_status": "Entire 2020-2024 panel was already inspected; evaluation is retrospective",
+  "fed_ledger_sha256": "192a3dca7ba73732c681ea2786e085e9b8e98e209afe90eaf106d2aaaebe1eb9",
+  "full_open_economy_benchmark_ready": false,
+  "gdp_ledger_sha256": "837138053bad27bbadf5d5f6cfd323417dd3b969453d3854b00be3e6365b3142",
+  "historical_split": {
+    "calibration_count": 17,
+    "calibration_through": "2023-04-06",
+    "evaluation_count": 8,
+    "retrospective_evaluation_after": "2023-04-06"
+  },
+  "limits": "Printed release timing and current retained bytes; not independently archived contemporaneous hashes.",
+  "n_meetings": 25,
+  "snapshots_sha256": "b2f005537ff220842ef2547c8500d9b4f1496c52f9f96ee65cb9fe9ed6c5fbe6",
+  "truth_sha256": "333d8da00ea15d860d62a2ab81c2b30ca7e93896d248aeb09248dc68e5b5df7d",
+  "version": "source-linked-historical-v2",
+  "withheld_fields": [
+    "cpi_core_yoy_pct",
+    "cpi_food_yoy_pct",
+    "output_gap_pct",
+    "iip_growth_yoy_pct",
+    "system_liquidity_cr",
+    "usd_inr_exchange_rate",
+    "brent_crude_usd_bbl",
+    "monsoon_departure_lpa_pct"
+  ]
+}

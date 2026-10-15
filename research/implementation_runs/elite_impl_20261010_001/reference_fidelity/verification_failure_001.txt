@@ -1,0 +1,9 @@
+2026-10-10: First reference-package integrity audit stopped with a local script error.
+Traceback (most recent call last):
+  File "<stdin>", line 24, in <module>
+NameError: name 'PdfReader' is not defined
+
+Cause: pypdf was imported as a module; the audit used an unqualified class name.
+This was an audit-driver error, not a source hash failure. The interrupted audit
+had checked all retained retrieval byte lengths and SHA-256 values. Corrected
+audit uses pypdf.PdfReader. Raw source and extraction files were not changed.

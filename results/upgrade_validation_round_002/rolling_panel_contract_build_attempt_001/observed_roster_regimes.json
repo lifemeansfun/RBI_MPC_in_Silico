@@ -1,0 +1,646 @@
+[
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2020-10-09",
+    "governor_id": "shaktikanta_das",
+    "last_observed_decision": "2022-04-08",
+    "meeting_ids": [
+      "rbi_mpc_2020-10-09",
+      "rbi_mpc_2020-12-04",
+      "rbi_mpc_2021-02-05",
+      "rbi_mpc_2021-04-07",
+      "rbi_mpc_2021-06-04",
+      "rbi_mpc_2021-08-06",
+      "rbi_mpc_2021-10-08",
+      "rbi_mpc_2021-12-08",
+      "rbi_mpc_2022-02-10",
+      "rbi_mpc_2022-04-08"
+    ],
+    "member_ids": [
+      "ashima_goyal",
+      "jayanth_varma",
+      "michael_debabrata_patra",
+      "mridul_saggar",
+      "shaktikanta_das",
+      "shashanka_bhide"
+    ],
+    "regime_id": "observed_roster_2020-10-09",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2020-10-23",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_50560.html",
+        "source_id": "mpc_minutes_prid_50560",
+        "source_sha256": "50e309831b906bc25458a8d6138a3f0bf1ac4afa3c41430d14a8dbf8fb91a781",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50560"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2020-12-18",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_50831.html",
+        "source_id": "mpc_minutes_prid_50831",
+        "source_sha256": "49b40f2cdcc4d17a5972ae8c20e18788dbab2db86afc4df4e95b44d754099fdf",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50831"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-02-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_51161.html",
+        "source_id": "mpc_minutes_prid_51161",
+        "source_sha256": "8575d9d3d6ede83c35d3268235ae5c58eaa9704ed040c7ec1c0144d77e81ce7a",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=51161"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-04-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_51456.html",
+        "source_id": "mpc_minutes_prid_51456",
+        "source_sha256": "2ce060b249d918dcf0a59099bd5b29c1a61e9f30c75eb416d9fb40ad27654010",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=51456"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-06-18",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_51754.html",
+        "source_id": "mpc_minutes_prid_51754",
+        "source_sha256": "026acadf5db06e9af9d3ddeccf5520c768d82401a58ce9ec1128c7371cecce74",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=51754"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-08-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_52088.html",
+        "source_id": "mpc_minutes_prid_52088",
+        "source_sha256": "cdf44728563b24b69eec32fbd577bd6364182597ed3eace3e8f0cecc1dec8d98",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=52088"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-10-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_52450.html",
+        "source_id": "mpc_minutes_prid_52450",
+        "source_sha256": "b2be28827c9dc6ab0661d1f7d40ac747aab8e0724a7bca5a18c0cc3bba4b14b9",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=52450"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2021-12-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_52843.html",
+        "source_id": "mpc_minutes_prid_52843",
+        "source_sha256": "c23e0d7b7c46ea028a5da94f7b8d827cd731b94ab30321106d441e2b70d4f5d5",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=52843"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-02-24",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_53319.html",
+        "source_id": "mpc_minutes_prid_53319",
+        "source_sha256": "cc3d198cfa021ab326e2d0195ae741a22bb3b93725d9532fac4d2807a22490f3",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53319"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-04-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_53601.html",
+        "source_id": "mpc_minutes_prid_53601",
+        "source_sha256": "3e019aae98719bcb599b8dc468351356715c310335c19d640e28ef74a8f23fc5",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53601"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": null
+  },
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2022-05-04",
+    "governor_id": "shaktikanta_das",
+    "last_observed_decision": "2024-08-08",
+    "meeting_ids": [
+      "rbi_mpc_2022-05-04",
+      "rbi_mpc_2022-06-08",
+      "rbi_mpc_2022-08-05",
+      "rbi_mpc_2022-09-30",
+      "rbi_mpc_2022-12-07",
+      "rbi_mpc_2023-02-08",
+      "rbi_mpc_2023-04-06",
+      "rbi_mpc_2023-06-08",
+      "rbi_mpc_2023-08-10",
+      "rbi_mpc_2023-10-06",
+      "rbi_mpc_2023-12-08",
+      "rbi_mpc_2024-02-08",
+      "rbi_mpc_2024-04-05",
+      "rbi_mpc_2024-06-07",
+      "rbi_mpc_2024-08-08"
+    ],
+    "member_ids": [
+      "ashima_goyal",
+      "jayanth_varma",
+      "michael_debabrata_patra",
+      "rajiv_ranjan",
+      "shaktikanta_das",
+      "shashanka_bhide"
+    ],
+    "regime_id": "observed_roster_2022-05-04",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-05-18",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_53728.html",
+        "source_id": "mpc_minutes_prid_53728",
+        "source_sha256": "3a40df35d8f9598c7fcfbef1c25b3d7ab6ec0434bb87c1604d9d3e60f694dfa2",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53728"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-06-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_53904.html",
+        "source_id": "mpc_minutes_prid_53904",
+        "source_sha256": "a8530679187cc9166222564dff15ef8d19083f2672f8365d9007f9ad64baafad",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53904"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-08-19",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_54236.html",
+        "source_id": "mpc_minutes_prid_54236",
+        "source_sha256": "352764b560c4b30dfe9ceb6b97bee003fae78af517187e79c1af750b463e3a0b",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54236"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-10-14",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_54541.html",
+        "source_id": "mpc_minutes_prid_54541",
+        "source_sha256": "8d7d983c2c8c5501d629c105237c86e6710595066a6164d6320602f0f8438002",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54541"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2022-12-21",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_54918.html",
+        "source_id": "mpc_minutes_prid_54918",
+        "source_sha256": "9c3ad7a31791e5c643b2b35edf8c8fb1f78be10ccea52c35ad04ba99682dc115",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=54918"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-02-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_55267.html",
+        "source_id": "mpc_minutes_prid_55267",
+        "source_sha256": "a040ab87190c232a0bf294146b3f49f66e4df845d78f19e34f735677e382596e",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55267"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-04-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_55538.html",
+        "source_id": "mpc_minutes_prid_55538",
+        "source_sha256": "2f146f7a182087e77b4c4f590603c0ff6c6352724ee6093709bd618fce9d9495",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55538"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-06-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_55899.html",
+        "source_id": "mpc_minutes_prid_55899",
+        "source_sha256": "53a50a768acfaa0c1bd5b74eed41213d8f10a7faab0c9fccb0d56ad921523dcd",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=55899"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-08-24",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_56252.html",
+        "source_id": "mpc_minutes_prid_56252",
+        "source_sha256": "a7945a0ad7ff0f65095d99618b61a60942b6865bc82e3f41c519c59435c5da4a",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56252"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-10-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_56606.html",
+        "source_id": "mpc_minutes_prid_56606",
+        "source_sha256": "4c7a3d8a6cd5a78a66084a24809a40ae1a8ee98214f8ea45e6a952085f11360b",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56606"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2023-12-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_56982.html",
+        "source_id": "mpc_minutes_prid_56982",
+        "source_sha256": "227ce1984faf60e52c45cd828d34592c7b3a94e0d038ab2eaf7c3a79449b7248",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56982"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-02-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_57366.html",
+        "source_id": "mpc_minutes_prid_57366",
+        "source_sha256": "39a0cbf152371c29cbd2cf114c6d79f437f5c57af568cb53c64492ef57579521",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57366"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-04-19",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_57735.html",
+        "source_id": "mpc_minutes_prid_57735",
+        "source_sha256": "14e2eac9145b7c70dfea57281fd68d196bf9ab038a4845649f89e3d983d9b9de",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57735"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-06-21",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_58136.html",
+        "source_id": "mpc_minutes_prid_58136",
+        "source_sha256": "4d43b1f04ff7d0a8c92d803232321402cce26269f8502583f21a4b7f8e89a742",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58136"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-08-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "data/raw/minutes_html/mpc_minutes_prid_58545.html",
+        "source_id": "mpc_minutes_prid_58545",
+        "source_sha256": "b7cc33f872acaea44d1d396ec4151a56a3fbc198dea6074fca3d8096eb7e670c",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58545"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": {
+      "added_member_ids": [
+        "rajiv_ranjan"
+      ],
+      "after_old_roster_observed_decision": "2022-04-08",
+      "appointment_day_known": false,
+      "by_new_roster_observed_decision": "2022-05-04",
+      "departed_member_ids": [
+        "mridul_saggar"
+      ]
+    }
+  },
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2024-10-09",
+    "governor_id": "shaktikanta_das",
+    "last_observed_decision": "2024-12-06",
+    "meeting_ids": [
+      "rbi_mpc_2024-10-09",
+      "rbi_mpc_2024-12-06"
+    ],
+    "member_ids": [
+      "michael_debabrata_patra",
+      "nagesh_kumar",
+      "rajiv_ranjan",
+      "ram_singh",
+      "saugata_bhattacharya",
+      "shaktikanta_das"
+    ],
+    "regime_id": "observed_roster_2024-10-09",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-10-23",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_58958.html",
+        "source_id": "rbi_prid_58958",
+        "source_sha256": "916ee73dcafdb078ef2fcef2e3d891eb8d978248e94ce1882039fc02433ad85b",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58958"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2024-12-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59347.html",
+        "source_id": "rbi_prid_59347",
+        "source_sha256": "21b784590978a0770ce91f5dcb2ee7c65e378629ca812debc8f0a29b3b405d60",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59347"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": {
+      "added_member_ids": [
+        "nagesh_kumar",
+        "ram_singh",
+        "saugata_bhattacharya"
+      ],
+      "after_old_roster_observed_decision": "2024-08-08",
+      "appointment_day_known": false,
+      "by_new_roster_observed_decision": "2024-10-09",
+      "departed_member_ids": [
+        "ashima_goyal",
+        "jayanth_varma",
+        "shashanka_bhide"
+      ]
+    }
+  },
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2025-02-07",
+    "governor_id": "sanjay_malhotra",
+    "last_observed_decision": "2025-04-09",
+    "meeting_ids": [
+      "rbi_mpc_2025-02-07",
+      "rbi_mpc_2025-04-09"
+    ],
+    "member_ids": [
+      "m_rajeshwar_rao",
+      "nagesh_kumar",
+      "rajiv_ranjan",
+      "ram_singh",
+      "sanjay_malhotra",
+      "saugata_bhattacharya"
+    ],
+    "regime_id": "observed_roster_2025-02-07",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-02-21",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_59818.html",
+        "source_id": "rbi_prid_59818",
+        "source_sha256": "b0da9ea304e9ea8665afd163250e2423e3f169c54c6a44219b69c997a022f008",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=59818"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-04-23",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60279.html",
+        "source_id": "rbi_prid_60279",
+        "source_sha256": "6e1970684627c5d7a462c03818de5df04ea478cebb1c2a7c18600f97390038b8",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60279"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": {
+      "added_member_ids": [
+        "m_rajeshwar_rao",
+        "sanjay_malhotra"
+      ],
+      "after_old_roster_observed_decision": "2024-12-06",
+      "appointment_day_known": false,
+      "by_new_roster_observed_decision": "2025-02-07",
+      "departed_member_ids": [
+        "michael_debabrata_patra",
+        "shaktikanta_das"
+      ]
+    }
+  },
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2025-06-06",
+    "governor_id": "sanjay_malhotra",
+    "last_observed_decision": "2025-08-06",
+    "meeting_ids": [
+      "rbi_mpc_2025-06-06",
+      "rbi_mpc_2025-08-06"
+    ],
+    "member_ids": [
+      "nagesh_kumar",
+      "poonam_gupta",
+      "rajiv_ranjan",
+      "ram_singh",
+      "sanjay_malhotra",
+      "saugata_bhattacharya"
+    ],
+    "regime_id": "observed_roster_2025-06-06",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-06-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_60686.html",
+        "source_id": "rbi_prid_60686",
+        "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-08-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61056.html",
+        "source_id": "rbi_prid_61056",
+        "source_sha256": "cd8cad9cdc27917faffea7f116a2a17711bbc16d21d319e7bd62bf6dfdb8ffaa",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61056"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": {
+      "added_member_ids": [
+        "poonam_gupta"
+      ],
+      "after_old_roster_observed_decision": "2025-04-09",
+      "appointment_day_known": false,
+      "by_new_roster_observed_decision": "2025-06-06",
+      "departed_member_ids": [
+        "m_rajeshwar_rao"
+      ]
+    }
+  },
+  {
+    "appointment_end_date": null,
+    "appointment_start_date": null,
+    "first_observed_decision": "2025-10-01",
+    "governor_id": "sanjay_malhotra",
+    "last_observed_decision": "2026-10-07",
+    "meeting_ids": [
+      "rbi_mpc_2025-10-01",
+      "rbi_mpc_2025-12-05",
+      "rbi_mpc_2026-02-06",
+      "rbi_mpc_2026-04-08",
+      "rbi_mpc_2026-06-05",
+      "rbi_mpc_2026-08-05",
+      "rbi_mpc_2026-10-07"
+    ],
+    "member_ids": [
+      "indranil_bhattacharyya",
+      "nagesh_kumar",
+      "poonam_gupta",
+      "ram_singh",
+      "sanjay_malhotra",
+      "saugata_bhattacharya"
+    ],
+    "regime_id": "observed_roster_2025-10-01",
+    "source_refs": [
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-10-15",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61433.html",
+        "source_id": "rbi_prid_61433",
+        "source_sha256": "aa95a77d99f94341b770eab10bd65b36568e0ddb3681fa9469c4e49fc47b475d",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61433"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2025-12-19",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_61856.html",
+        "source_id": "rbi_prid_61856",
+        "source_sha256": "7b0817210a8a7d4de84ef4032dff7663355c71fa28bec1d514cc96b82d93a943",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=61856"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2026-02-20",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62261.html",
+        "source_id": "rbi_prid_62261",
+        "source_sha256": "1b33da05dd6e9dd7dd4e7c11b105c657cbb9378cc37d9e1b28b21b437b2a0328",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62261"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2026-04-22",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62599.html",
+        "source_id": "rbi_prid_62599",
+        "source_sha256": "55bb6590c037e2f4ab3d0d444e27ae4a7465f2eeb2ce6dabb3c831cced56c0d3",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62599"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2026-06-19",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_62974.html",
+        "source_id": "rbi_prid_62974",
+        "source_sha256": "87c4c6b118bd02efd5e1bf861e1eaf887df02b36bf0d343d5da303cf4c3b9484",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62974"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2026-08-19",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_63403.html",
+        "source_id": "rbi_prid_63403",
+        "source_sha256": "fac123344bc3edfccbdff625b59a378e49af9cacb54cde11a266f95603564f59",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63403"
+      },
+      {
+        "availability_precision": "calendar_day_only",
+        "historical_first_availability_verified": false,
+        "publication_date": "2026-10-07",
+        "publication_status": "verified_retained_header",
+        "publication_time": null,
+        "source_file": "research/source_ledgers/expanded_panel_oct08/raw/rbi_prid_63742.html",
+        "source_id": "rbi_prid_63742",
+        "source_sha256": "082252ec277abd6f8e43eee9dc48a77326ffa9430dd2193ee936796144d3cf0d",
+        "source_url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742"
+      }
+    ],
+    "status": "realized_attendance_interval_not_appointment_tenure",
+    "turnover_bracket": {
+      "added_member_ids": [
+        "indranil_bhattacharyya"
+      ],
+      "after_old_roster_observed_decision": "2025-08-06",
+      "appointment_day_known": false,
+      "by_new_roster_observed_decision": "2025-10-01",
+      "departed_member_ids": [
+        "rajiv_ranjan"
+      ]
+    }
+  }
+]

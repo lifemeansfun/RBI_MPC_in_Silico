@@ -1,0 +1,25 @@
+{
+  "id": "rbi2020_gdp_constant_xlsx",
+  "url": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/159TDCC198E89BA34A6B8B369EA2677DAEC6.XLSX",
+  "filename": "rbi2020_gdp_constant.xlsx",
+  "role": "GDP constant-price table 159 machine-readable source",
+  "discovery": "Exact XLSX link parsed from retained official RBI 2020 dated index",
+  "retrieved_at_utc": "2026-10-09T16:20:01.554997+00:00",
+  "status": 200,
+  "final_url": "https://rbidocs.rbi.org.in/rdocs/Publications/DOCs/159TDCC198E89BA34A6B8B369EA2677DAEC6.XLSX",
+  "response_headers": {
+    "Set-Cookie": "TSa07da9d1029=08c70ea5e1ab2800ac8b08bde3a8e94a86041d4b1fe8d4395c2e3fb6530fa1e3c070de890b7d4f8236e4e66b941c803b; Secure; Max-Age=30; Path=/",
+    "Cache-Control": "no-store, must-revalidate, no-cache, max-age=0",
+    "Content-Type": "text/html",
+    "Content-Length": "48361",
+    "Connection": "close",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "local_file": "acquisition/batch_004/raw/rbi2020_gdp_constant.xlsx",
+  "bytes": 48361,
+  "sha256": "e3b4cd8f4dbdb87e395aa0dcab089f81dbc56d7104efded345338314ead5df51",
+  "primary_final_host": true,
+  "acquired": true
+}

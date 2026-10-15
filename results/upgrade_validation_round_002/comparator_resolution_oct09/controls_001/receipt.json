@@ -1,0 +1,18 @@
+{
+  "scope": "synthetic procedural controls; no fitted noise, authentic forecasts or empirical advantage",
+  "case_count": 7,
+  "provider_calls": 0,
+  "loaded_implementation": "/Users/manishharigovind/Desktop/VIT Vellore/5th semester/Artificial Intelligence and expert systems/AI_project/results/upgrade_validation_round_002/comparator_resolution_oct09/attempt_004/checkout/src/rational/monte_carlo.py",
+  "implementation_sha256": "ebda98c206481f6ae2f1d88bc8452ef44562489a4a6c0a088ffbba9c24190a44",
+  "script_sha256": "8831c661ff38b9519f60ccacbf891f7afd15853e720d142db60127052364d6fd",
+  "files": {
+    "exact_upper_endpoint.json": "aee40ceaf5da5277d14b533157222c9b4f479522f7b281581b2c74282a45992c",
+    "fragmented_legacy_synthetic.json": "ba9699a36ec98661551e66ea887cf3bf792332ed22aa2f2b266b9716a49cec84",
+    "fragmented_reject.json": "cb75d5ceb4f603fd49112cbe22a9124ab04b5ac0c31b0c545186bb6562b400c0",
+    "fragmented_status_quo.json": "1a52a0118e4ef61d08a18b0320e932bc932a224683b2d1b3edf48a88aca9c168",
+    "input_snapshot.json": "1b001a8a22bc3ce10374bdd3c86b7f0653eb73d8e26fc22f2490d1353ba11861",
+    "lower_saturated.json": "fb6eef352c8cc99f5887d26539b84e8cd508f5903b63baf2b18528867932943d",
+    "mixed_channel_rejection.json": "b360eadcaffe3294b3b0572b24e02ac2ec8af34854f86d589364814d506edca0",
+    "upper_saturated.json": "9cf7230e8a0af078283b5a5220d2fbd7930dba08222045d362c7aa2e2b5606f3"
+  }
+}

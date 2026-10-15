@@ -1,0 +1,136 @@
+{
+  "protocol_id": "chair_final_ballot_visibility_v1",
+  "frozen_utc": "2026-10-10T03:22:15.805118+00:00",
+  "status": "QUESTION_AND_ANALYSIS_LOCKED; EXECUTABLE_STUDY_PROTOCOL_INCOMPLETE; NO_NEW_EVALUATION",
+  "question": "Does giving the Governor non-Governor binding ballots change measured committee agreement, conditional on identical preceding arguments, own state and non-Governor ballots?",
+  "importance": "Tests whether an informational privilege at binding voting creates a consensus effect that could otherwise be attributed to deliberation. Institutional protocol measurement beyond a geographical transfer.",
+  "novelty_limit": "July 2026 abstract already discusses consensus. Its full methods are unavailable; uniqueness and importance relative to the complete revision are unverified.",
+  "claim_scope": "Simulator-local protocol effect conditional on the generated common prefix. No real-MPC persuasion, superior policy, cognitive validity, equilibrium or welfare claim.",
+  "primary_estimand": "Average meeting-level difference in final joint rate-and-stance pairwise ballot agreement: ballots-visible minus ballots-hidden; average planned stochastic replicate differences within each meeting first.",
+  "primary_endpoint": {
+    "joint_ballot_agreement": "Number of unordered member pairs agreeing on BOTH exact rate change and stance divided by 15; all six valid final ballots required",
+    "range": [
+      0,
+      1
+    ],
+    "effect_range_conditional_on_fixed_non_governor_ballots": [
+      -0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "secondary_consensus_endpoints": [
+    "Exact-rate pairwise agreement /15",
+    "Stance pairwise agreement /15",
+    "Mean absolute pairwise rate distance in bps",
+    "Final-minus-initial round agreement and rate dispersion, separated by branch"
+  ],
+  "forecasting_endpoints": "Secondary descriptive exact rate, bps MAE, hike/cut/hold and stance. Committee unresolved aggregation remains missing. No general forecasting-superiority claim.",
+  "dissent_endpoints": "Exact-rate preference disagreement and formal stance disagreement computed separately. Literal YES/NO, reservations and guidance disagreement are not silently converted.",
+  "cohort": {
+    "candidate_meetings": [
+      "2020-10-09",
+      "2020-12-04",
+      "2021-02-05",
+      "2021-04-07",
+      "2021-06-04",
+      "2021-08-06",
+      "2021-10-08",
+      "2021-12-08",
+      "2022-02-10",
+      "2022-04-08",
+      "2022-05-04",
+      "2022-06-08",
+      "2022-08-05",
+      "2022-09-30",
+      "2022-12-07",
+      "2023-02-08",
+      "2023-04-06",
+      "2023-06-08",
+      "2023-08-10",
+      "2023-10-06",
+      "2023-12-08",
+      "2024-02-08",
+      "2024-04-05",
+      "2024-06-07",
+      "2024-08-08"
+    ],
+    "candidate_count": 25,
+    "history_exclusions": [
+      "2020-10-09",
+      "2022-05-04"
+    ],
+    "maximum_history_eligible_count": 23,
+    "eligibility": "Each supplied observation available before its exclusive cutoff and source hash supported; all six members verified from pre-cutoff roster sources; each persona has at least one pre-cutoff personal statement and verified corpus manifest; supported rate/stance ontology. History eligibility alone is insufficient. No post-outcome discretionary exclusions.",
+    "minimum_for_primary_estimation": 12,
+    "minimum_regime_coverage": "At least four hikes and four holds in candidate cohort; no cut regime represented, so no all-regime forecasting claim.",
+    "current_pre_cutoff_membership_status": "UNVERIFIED",
+    "current_executable_persona_status": "MISSING_ADAPTER",
+    "already_exposed": "All candidate 2020-2024 outcomes were inspected in development; retrospective evaluation only."
+  },
+  "labels_and_missingness": "Retain independent source annotations with source paragraphs. Unknown formal stance stays null; no imputation. Report complete/observed target counts and paired logical completion bounds for secondary dissent. Missing labels do not gate consensus from generated ballots.",
+  "personas": "Fixed existing lexical rule over strictly prior personal statements; no calibration outcomes in extraction; no new model biography or inferred structural preference. Exact executable persona bytes and dated manifests are not yet available and cannot be represented as frozen.",
+  "model_and_prompts": {
+    "provider": "gemini",
+    "requested_model": "gemini-3.1-flash-lite",
+    "fallback_models": [],
+    "temperature": 0.6,
+    "max_output_tokens": 2048,
+    "max_input_token_bound": 65536,
+    "seeds": "Existing planned_seed version paired-member-round-v1; base42; replicate IDs1,2; branch Governor calls share requested seed but provider determinism is not assumed.",
+    "identity_and_date": "Retain names/dates; acknowledge potential pretrained historical contamination. Prefix is identical across treatment branches. No memorization-removal claim.",
+    "common_prompts": "Existing four-round system/tasks and own state; no forced consensus. Final Governor contexts differ ONLY in availability of fixed non-Governor final ballots. Exact paired-prefix adapter/prompt bytes do not yet exist; executable freeze incomplete."
+  },
+  "conditions": {
+    "common_prefix": "Generate R1-R3 for all six (18 calls) and R4 for five non-Governors (5 calls) once per meeting/replicate. Preserve this common raw input with immutable origin request identities.",
+    "ballots_visible": "Fresh Governor R4 receives common own/peer R1-R3 plus five non-Governor final ballots.",
+    "ballots_hidden": "Fresh Governor R4 receives the same own/peer R1-R3, without those five final ballots.",
+    "order": "Five non-Governors followed by Governor; fixed in both. Randomized branch submission order via prespecified SHA256 of meeting/replicate parity.",
+    "reused_prefix_evidence": "Shared generated input, not a second independent generation or cache replay labeled fresh. Branch calls must be fresh and logged under separate identities.",
+    "controls": "The smallest two-branch contrast tests binding-ballot privilege. It does not identify full deliberation or peer persuasion. Full/independent/joint/macro-only comparisons are excluded from the primary analysis."
+  },
+  "comparators": "Primary matched branch control; initial-round agreement as descriptive reference. Hold and published-prior persistence plus calibration-selected constant dissent only for descriptive forecasting/dissent. Taylor is a distinct mechanical comparator, excluded from the primary causal contrast.",
+  "aggregation": "Default categorical majority/binary casting, six-person simulator roster. Preserve unresolved multi-action ballots; no undocumented synthetic resolver. Consensus can be computed from valid ballots even if committee resolution is undefined; implementation for this separation is pending.",
+  "resource_policy": {
+    "replicates": 2,
+    "max_meetings": 23,
+    "max_fresh_generation_calls": 1150,
+    "calls_per_meeting_replicate": 25,
+    "branch_specific_calls": 1,
+    "prefix_calls": 23,
+    "rpm": 5,
+    "runtime_limit_minutes": 270,
+    "generation_retries": 0,
+    "hypothetical_max_token_tariff_cost_usd": 22.3744,
+    "tariff_status": "October5 stored tariff; not freshly verified for execution",
+    "remaining_existing_allowance_usd": null,
+    "launch_rule": "Do not launch until the existing allowance is reconciled, current tariff/quota verified, immutable executable inputs/adapter integrated, and whole batch plus closeout fits the activation deadline. The numeric design is not authorization to reset ledger or spend an unverified remainder.",
+    "token_matching": "Equal branch call/output caps; input length differs by intended ballot treatment. Report actual tokens/cost and do not claim equal tokens. Reject prompts above bound."
+  },
+  "failure_rules": "No retries, model substitution or heuristic fallback. Budget/cancellation/provenance/provider/schema failure halts the batch. Preserve every incomplete prefix/branch. Do not regenerate a prefix until agreement appears. Report planned/completed meetings and pairs; incomplete pair effects remain missing, with worst-case conditional completion bounds [-1/3,+1/3]; failures may be informative. Undefined institutional aggregation is recorded separately from invalid model output.",
+  "analysis": {
+    "unit": "Meeting; not member, round, call or replicate",
+    "estimate": "Mean of within-meeting mean paired differences; publish every meeting/replicate value and failure.",
+    "uncertainty": "Paired temporal moving-block bootstrap, block length3, 10000 resamples, seed20261010; percentile95% interval; sensitivity block lengths2,4. Small dependent cohort limits inference. No optional stopping or equivalence claim from nonsignificance.",
+    "multiplicity": "One primary endpoint; secondary endpoints descriptive with intervals and no confirmatory significance claims.",
+    "sample_adequacy": "Maximum23 dependent meetings; no power claim. Report achieved precision and serial/block sensitivity. An imprecise estimate cannot establish no effect or equivalence. Minimum12 is an operational estimation floor, not proof of adequate power.",
+    "independent_recomputation": "Reconstruct all ballots/consensus endpoints directly from raw frozen generation records and common prefixes, checking request/code/input identities; verify sources, not merely producer summaries."
+  },
+  "freeze_files": {
+    "data/processed/vintage_v3/snapshots.json": "b2f005537ff220842ef2547c8500d9b4f1496c52f9f96ee65cb9fe9ed6c5fbe6",
+    "data/processed/vintage_v3/truth.json": "333d8da00ea15d860d62a2ab81c2b30ca7e93896d248aeb09248dc68e5b5df7d",
+    "src/behavioral/debate_orchestrator.py": "911f0bcfcc3d4e8df31f74aececef1d729d7fc93215f2c68bdcae6ad1ebc0789",
+    "src/schemas/debate_schema.py": "2478243e661288aad1a220acceac6f172c17e67090fbe0070d561498c9f44ea9",
+    "src/persona_engine/rolling_inputs.py": "1cc8f08bd879ea8ebcc062bf9b98a1e9ca44ba8a92e33d0893f1ec1d8330139a",
+    "src/persona_engine/provenance.py": "668b5c76a8712c7462b01b03c1d85f06d58b19da74a1fe989a3b31a903b5936e",
+    "config/config.yaml": "554f42ec8a01547dd148d9f686780c921f86d5dbc88d1a4d94e2f26354c83630"
+  },
+  "unmet_executable_freeze_fields": [
+    "Pre-cutoff roster source bytes/availability",
+    "Executable rolling personas/corpus manifests",
+    "Paired-prefix/branch integration and exact frozen prompt identities",
+    "Authenticated remaining provider allowance",
+    "Current tariff/quota and complete prospective command",
+    "Source-to-new-result replay and independent recomputation"
+  ],
+  "post_review_policy": "No scientific repair loop after final critique. New objections enter gap report; any later specification change needs new instruction and is unreviewed."
+}

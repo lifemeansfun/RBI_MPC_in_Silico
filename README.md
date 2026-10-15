@@ -1,63 +1,64 @@
 # RBI MPC In Silico
 
-A research prototype for simulating the Reserve Bank of India's Monetary Policy Committee with member personas, LLM deliberation, rate and stance ballots, and a smoothed Taylor-rule comparator. Developed for Artificial Intelligence and Expert Systems at VIT Vellore.
+A research prototype for simulating the Reserve Bank of India's Monetary Policy Committee with member personas, LLM deliberation, rate/stance ballots and mechanical comparators, developed for Artificial Intelligence and Expert Systems at VIT Vellore.
 
-## Research status
+**Status on 15 October 2026: research incomplete.** The experimental branch contains substantial engineering repairs and reproducibility evidence. It has not established forecasting superiority, validated policymaker preferences, a benefit from deliberation or a publication-ready incremental contribution.
 
-The project includes historical data, saved simulations, counterfactual experiments, reports, and an independent methodology audit dated **5 October 2026**. Its current evidence **does not establish independent out-of-sample forecasting superiority or causal effects in real RBI policymaking**.
+## Start here
 
-The audit demonstrates future-release macro inputs, holdout statements entering persona calibration, inconsistent formal-dissent labels, a homogeneous holdout matched by persistence, disconnected Round 3 information flow, and experimental provenance failures. Existing numerical and implementation checks pass, but do not resolve those methodological issues.
+- [Current project status](PROJECT_STATUS.md): what exists, what is verified, the known statistics defect and scientific limitations.
+- [Next-steps plan](research/planning/github_update_20261015/PLAN.md): preservation, verification repair, scientific design, accounted live readiness and manuscript completion.
+- [GitHub publication inventory](research/publication/github_update_20261015/README.md): included files, verification and local exclusions.
+- [Latest implementation closeout](research/implementation_runs/elite_impl_20261010_001/IMPLEMENTATION_REPORT.md): the completed first engineering batch and outstanding research gates.
 
-- [Full methodology audit](results/methodology_audit_2026-10-05/METHODOLOGY_AUDIT.md)
-- [Data review](results/methodology_audit_2026-10-05/data_review.md)
-- [Statistical review](results/methodology_audit_2026-10-05/statistical_review.md)
-- [Architecture review](results/methodology_audit_2026-10-05/architecture_review.md)
-- [Protocol for a fresh evaluation](results/methodology_audit_2026-10-05/FRESH_EVALUATION_PROTOCOL.md)
+## Branches and manuscript
 
-The earlier [results report](results/RESULTS_REPORT.md) and [project plan](RBI_MPC_In_Silico_Project_Plan_version_2.md) are retained as part of the research record. Read their claims together with the audit rather than treating them as currently validated conclusions.
+`main` remains the original baseline at `7f2436bc4f32d6021b1e885eb49286c850de9139`, including the [5 October methodology audit](results/methodology_audit_2026-10-05/METHODOLOGY_AUDIT.md). The owner identifies it as the submission baseline; an external submitted file or receipt is not authenticated here. `project_upgrade_codex` contains the experimental upgrade and this preservation checkpoint. Publishing this branch does not merge it into main.
 
-## Contents
+The [original-main manuscript](outputs/main_paper/RBI_MPC_In_Silico_Research_Manuscript.docx) and its [authoring record](outputs/main_paper/README.md) are preserved separately. It was prepared from main, not from upgraded experimental results. Its saved QA receipt covers a prior revision; current final-layout QA remains pending. The root overview DOCX is an older proposal. No upgraded empirical manuscript exists.
 
-| Directory | Contents |
-|---|---|
-| `src/` | Data extraction, personas, LLM infrastructure, deliberation, voting, numerical comparators, scenarios, and reporting |
-| `config/` | Simulation settings and persona defaults |
-| `data/` | Local RBI minute archives, extracted statements, macro panel, and saved checkpoints |
-| `personas/` | Persisted historical member profiles and calibration review |
-| `runs/` | Saved mock and live-labeled simulation transcripts; provenance limitations are documented in the audit |
-| `results/` | Existing research tables, figures, reports, and independent audit evidence |
-| `scripts/` | Existing verification/stress scripts, reproduction harness, and additive offline audit runner |
-| `tests/` | Offline unit/integration tests and fixtures |
+The original eight-meeting holdout contains only holds; a constant-hold rule matches its 100% rate accuracy. The audit also documents temporal leakage, persona contamination, label/provenance problems and disconnected final-round information. Read the [historical results report](results/RESULTS_REPORT.md) together with that audit rather than treating its old claims as validated conclusions.
 
-## Environment
+## Engineering evidence and limits
 
-Python 3.11 or later is required. To create an environment:
+The retained 10 October suite and a fresh exported-package run on **15 October** each record **518 passing tests**. The new run also passed offline source reconstruction, saved mock-study verification, fixture validation and relocated replay of the preserved source-linked bundle. It reused the compatible project virtual environment; it was not a new clean installation. Raw records are in the publication inventory. The latest source-linked integration used **26 mock generations on one historical meeting**, with zero new live study calls. Tests, integrity hashes and portable replay establish behavior within their engineering scope; they do not establish empirical superiority.
+
+The current source audit inventories 38 meetings, with 23 eligible for a reduced conditional simulation, zero eligible for premeeting forecasting and zero eligible for the full intended comparator. Missing sources, roster timing, labels, constructs, novelty, precision and accounting remain open gates. A known two-meeting uncertainty defect remains disclosed in the status page and is scheduled for repair before scientific use.
+
+## Environment and offline verification
+
+Use Python 3.11 or later; the recorded research environment is Python 3.11.16. Install the dependency lock for the captured environment:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements-lock.txt
+.venv/bin/python -m pip check
+make test OUT=/tmp/rbi-tests-new
+make reproduce OUT=/tmp/rbi-reproduce-new
 ```
 
-Dependency ranges are not locked. The actual versions used for the October 2026 audit are recorded in [audit_results.json](results/methodology_audit_2026-10-05/audit_results.json).
+Every output path must be unused. Tests run in a copied scientific checkout; reproduction rebuilds historical inputs and verifies the included saved mock study. Neither command performs a new live-model scientific evaluation. Drivers use the repository's `.venv/bin/python`. The broad `requirements.txt` records dependency constraints; the lock records exact captured versions.
 
-Local credentials belong in `.env`, following [.env.example](.env.example). The virtual environment, credentials, local LLM cache, and coverage caches are excluded from Git.
-
-## Repeat the offline audit
-
-From the repository root, use a new output directory:
+For an explicitly artificial new frozen engineering fixture:
 
 ```sh
-.venv/bin/python scripts/audit_methodology.py --output results/methodology_audit_local
+make study-fixture OUT=/tmp/rbi-fixture-new
+make study-validate PROTOCOL=/tmp/rbi-fixture-new/protocol.json OUT=/tmp/rbi-validate-new
 ```
 
-The runner copies project inputs into a separate temporary snapshot because existing tests write to fixed run paths and caches. It executes the existing tests and batteries, recomputes the rational panel, exhausts the configured voting space, and runs numerical sensitivity and negative controls. It records source hashes, environment details, raw logs and results, refuses to replace a previous audit result, and makes no live LLM calls. It does not repeat every independent reviewer probe or constitute a fresh forecasting study.
+Use `make help` for mock/replay commands. Existing historical protocols seal exact executable files/settings; run a preserved bundle from its own `bundle/code/` directory if active code has changed. Never rewrite historical protocol hashes to force compatibility.
 
-The saved audit found **28 passing pytest tests**, **33 passing existing battery checks**, **16,354 valid voting profiles**, and reproducible rational calculations. It also demonstrated that several passing guards accept invalid research evidence. A successful process exit is therefore distinct from a successful research hypothesis.
+Live execution requires a separately frozen scientific protocol, source eligibility, authenticated accounting and declared resource limits. This checkpoint authorizes no provider spending. Local credentials belong in ignored `.env` files; they are not required for offline tests or replay. Legacy direct scripts can retain fixed-output behavior; use declared current entry points and unused destinations.
 
-## Existing commands
+## Repository map
 
-The [Makefile](Makefile) retains the project's original commands. `make reproduce` runs tests, verification, figure generation, and integrity checks against existing artifacts; it does not reconstruct all live experiments from raw data. Existing scenario and live-run commands can call the configured external model and overwrite fixed experiment paths. The audit documents these execution limitations and the changes needed for a credible frozen evaluation.
+| Path | Contents |
+|---|---|
+| `src/`, `tests/`, `config/` | Implementation, failure controls, tests and simulation settings |
+| `data/`, `personas/`, `research/source_ledgers/` | Preserved original inputs, corrected versions, provenance and source metadata |
+| `research/implementation_runs/`, `research/assessments/`, `research/peer_reviews/` | Scoped implementation evidence, scientific assessments, completed and failed reviews |
+| `results/`, `runs/` | Historical outputs, corrected mock diagnostics and raw verification records |
+| `outputs/main_paper/` | Original-main manuscript, sources, provenance and earlier revision |
+| `research/verification/`, `scripts/` | Reconstruction, isolated testing, freeze and replay entry points |
 
-## Related research
-
-The original proposal adapts the August 2025 draft of [FOMC In Silico by Sophia Kazinnik and Tara Sinclair](https://www2.gwu.edu/~forcpgm/2025-005.pdf). The bundled paper and original plans are preserved; the audit distinguishes that draft from subsequent revisions and evaluates this implementation on its own evidence.
+Large duplicate checkouts, local runtime installations, review archives, unrelated coursework and new third-party fulltexts with unassessed redistribution permissions are excluded from this GitHub package and retained locally. Acquisition records and hashes remain available. Historical manifests may refer to those local-only files; the publication inventory documents the boundary. No original data or evidence was deleted for this update.

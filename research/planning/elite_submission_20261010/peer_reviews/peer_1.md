@@ -1,0 +1,7 @@
+B has the strongest reasoning. It connects the documented implementation defects to identification, distinguishes finite-cohort effects from future-meeting inference, and separates generation noise from historical information. Its proposed paired-prompt fixture directly tests whether the intended intervention exists. E adds a valuable complementary safeguard: independent recomputation can detect errors that producer-dependent replay preserves.
+
+D’s most consequential weakness is its novelty argument. The cited studies establish neighboring work, but their topic overlap does not establish overlap with this exact conditional ballot-visibility estimand. The evidence packet also says the revised reference’s full methods remain unavailable. This is an unverified concern, not a demonstrated factual error; D appropriately proposes checking exact interventions before abandoning the candidate.
+
+All five omit an explicit response to model-version drift during a multi-hour run or prospective collection. Freezing a model name may not freeze the underlying service behavior. That could confound comparisons across collection periods even when each paired prefix is correct. The cheapest discriminating observation is a read-only inspection of existing response metadata and the provider’s versioning contract: can the study identify and hold a specific revision? Prespecify how absent or changing revision identity limits claims or interrupts collection.
+
+These are planning assessments, not scientific validation.

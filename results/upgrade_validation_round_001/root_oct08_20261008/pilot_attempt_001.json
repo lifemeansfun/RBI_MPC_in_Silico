@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_study_replay.py",
+    "-q"
+  ],
+  "result": "failed",
+  "passed": 18,
+  "failed": 1,
+  "elapsed_seconds": 10.01,
+  "failure_test": "test_complete_portable_replay_and_replicate_separation",
+  "error_type": "ArtifactIntegrityError",
+  "error": "Checkpoint artifact missing/corrupt in copied portable evidence",
+  "reason": "The test copied only the condition directory; transcript runs are sibling directories referenced by checkpoints. The corruption guard correctly refused incomplete evidence. Fixed fixture to copy the entire evidence root.",
+  "provenance": "Initial focused console/tool output; full subsequent outputs are captured separately",
+  "at": "2026-10-08T13:59:04.037653+00:00"
+}

@@ -1,0 +1,935 @@
+{
+  "meeting_id": "rbi_mpc_2025-06-06",
+  "meeting_number": 55,
+  "meeting_start_date": "2025-06-04",
+  "decision_date": "2025-06-06",
+  "minutes_source_id": "rbi_prid_60686",
+  "resolution_source_id": "rbi_prid_60604",
+  "committee": {
+    "rate_delta_bps": -50,
+    "repo_rate_percent": 5.5,
+    "stance": "neutral",
+    "outcome_evidence": [
+      {
+        "source_id": "rbi_prid_60686",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+        "raw_path": "raw/rbi_prid_60686.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+        "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+        "publication_date": "2025-06-20",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 11,
+        "raw_character_start": 37100,
+        "raw_character_end_exclusive": 37705,
+        "excerpt": "6. After assessing the current and evolving macroeconomic situation, the MPC voted to reduce the policy repo rate by 50 basis points (bps) to 5.50 per cent with immediate effect. Consequently, the standing deposit facility (SDF) rate under the liquidity adjustment facility (LAF) shall stand adjusted to 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate to 5.75 per cent. This decision is in consonance with the objective of achieving the medium-term target for consumer price index (CPI) inflation of 4 per cent within a band of +/- 2 per cent, while supporting growth.",
+        "raw_html_excerpt": "<p>6. After assessing the current and evolving macroeconomic situation, the MPC voted to reduce the policy repo rate by 50 basis points (bps) to 5.50 per cent with immediate effect. Consequently, the standing deposit facility (SDF) rate under the liquidity adjustment facility (LAF) shall stand adjusted to 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate to 5.75 per cent. This decision is in consonance with the objective of achieving the medium-term target for consumer price index (CPI) inflation of 4 per cent within a band of +/- 2 per cent, while supporting growth.</p>",
+        "raw_html_excerpt_utf8_sha256": "dcaa3579acfd43935039c4b82b78fd45be91e2d7cdbdbec61f83da93bddb75be"
+      },
+      {
+        "source_id": "rbi_prid_60686",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+        "raw_path": "raw/rbi_prid_60686.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+        "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+        "publication_date": "2025-06-20",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 20,
+        "raw_character_start": 42875,
+        "raw_character_end_exclusive": 43473,
+        "excerpt": "13. Thus, it is imperative to continue to stimulate domestic private consumption and investment through policy levers to step up the growth momentum. This changed growth-inflation dynamics calls for not only continuing with the policy easing but also frontloading the rate cuts to support growth. Accordingly, the MPC voted to reduce the policy repo rate by 50 bps to 5.50 per cent. Dr. Nagesh Kumar, Prof. Ram Singh, Dr. Rajiv Ranjan, Dr. Poonam Gupta and Shri Sanjay Malhotra, voted to decrease the policy repo rate by 50 bps. Shri Saugata Bhattacharya voted for a 25 bps cut in repo rate.",
+        "raw_html_excerpt": "<p>13. Thus, it is imperative to continue to stimulate domestic private consumption and investment through policy levers to step up the growth momentum. This changed growth-inflation dynamics calls for not only continuing with the policy easing but also frontloading the rate cuts to support growth. Accordingly, the MPC voted to reduce the policy repo rate by 50 bps to 5.50 per cent. Dr. Nagesh Kumar, Prof. Ram Singh, Dr. Rajiv Ranjan, Dr. Poonam Gupta and Shri Sanjay Malhotra, voted to decrease the policy repo rate by 50 bps. Shri Saugata Bhattacharya voted for a 25 bps cut in repo rate.</p>",
+        "raw_html_excerpt_utf8_sha256": "1b4c3384e6300009abfbf1ed6c19f6c2b7d4d9b0719f3c6015bdcf9cc16708a0"
+      },
+      {
+        "source_id": "rbi_prid_60686",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+        "raw_path": "raw/rbi_prid_60686.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+        "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+        "publication_date": "2025-06-20",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 21,
+        "raw_character_start": 43477,
+        "raw_character_end_exclusive": 44101,
+        "excerpt": "14. After having reduced the policy repo rate by 100 bps in quick succession since February 2025, under the current circumstances, monetary policy is left with very limited space to support growth. Hence, the MPC also decided to change the stance from accommodative to neutral. From here onwards, the MPC will be carefully assessing the incoming data and the evolving outlook to chart out the future course of monetary policy in order to strike the right growth-inflation balance. The fast-changing global economic situation too necessitates continuous monitoring and assessment of the evolving macroeconomic outlook.",
+        "raw_html_excerpt": "<p>14. After having reduced the policy repo rate by 100 bps in quick succession since February 2025, under the current circumstances, monetary policy is left with very limited space to support growth. Hence, the MPC also decided to change the stance from accommodative to neutral. From here onwards, the MPC will be carefully assessing the incoming data and the evolving outlook to chart out the future course of monetary policy in order to strike the right growth-inflation balance. The fast-changing global economic situation too necessitates continuous monitoring and assessment of the evolving macroeconomic outlook.</p>",
+        "raw_html_excerpt_utf8_sha256": "e8538d238866423986376bcd094ef69c490bc0fdb6ccbadc28422793d921c617"
+      }
+    ],
+    "resolution_outcome_evidence": [
+      {
+        "source_id": "rbi_prid_60604",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60604",
+        "raw_path": "raw/rbi_prid_60604.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60604.html",
+        "source_sha256": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+        "publication_date": "2025-06-06",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 3,
+        "raw_character_start": 34945,
+        "raw_character_end_exclusive": 35551,
+        "excerpt": "2. After assessing the current and evolving macroeconomic situation, the MPC voted to reduce the policy repo rate by 50 basis points (bps) to 5.50 per cent with immediate effect. Consequently, the standing deposit facility (SDF) rate under the liquidity adjustment facility (LAF) shall stand adjusted to 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate to 5.75 per cent. This decision is in consonance with the objective of achieving the medium-term target for consumer price index (CPI) inflation of 4 per cent within a band of +/- 2 per cent, while supporting growth.",
+        "raw_html_excerpt": "<p>2. After assessing the current and evolving macroeconomic situation, the MPC voted to reduce the policy repo rate by 50 basis points (bps) to 5.50 per cent with immediate effect. Consequently, the standing deposit facility (SDF) rate under the liquidity adjustment facility (LAF) shall stand adjusted to 5.25 per cent and the marginal standing facility (MSF) rate and the Bank Rate to 5.75 per cent. This decision is in consonance with the objective of achieving the medium-term target for consumer price index (CPI) inflation of 4 per cent within a band of +/- 2 per cent, while supporting growth. </p>",
+        "raw_html_excerpt_utf8_sha256": "c8371dbb3ec2dd222b753ce963f3a0a68f564c81bb0ac9fe91d51964b4e362d7"
+      },
+      {
+        "source_id": "rbi_prid_60604",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60604",
+        "raw_path": "raw/rbi_prid_60604.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60604.html",
+        "source_sha256": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+        "publication_date": "2025-06-06",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 12,
+        "raw_character_start": 40661,
+        "raw_character_end_exclusive": 41258,
+        "excerpt": "9. Thus, it is imperative to continue to stimulate domestic private consumption and investment through policy levers to step up the growth momentum. This changed growth-inflation dynamics calls for not only continuing with the policy easing but also frontloading the rate cuts to support growth. Accordingly, the MPC voted to reduce the policy repo rate by 50 bps to 5.50 per cent. Dr. Nagesh Kumar, Prof. Ram Singh, Dr. Rajiv Ranjan, Dr. Poonam Gupta and Shri Sanjay Malhotra, voted to decrease the policy repo rate by 50 bps. Shri Saugata Bhattacharya voted for a 25 bps cut in repo rate.",
+        "raw_html_excerpt": "<p>9. Thus, it is imperative to continue to stimulate domestic private consumption and investment through policy levers to step up the growth momentum. This changed growth-inflation dynamics calls for not only continuing with the policy easing but also frontloading the rate cuts to support growth. Accordingly, the MPC voted to reduce the policy repo rate by 50 bps to 5.50 per cent. Dr. Nagesh Kumar, Prof. Ram Singh, Dr. Rajiv Ranjan, Dr. Poonam Gupta and Shri Sanjay Malhotra, voted to decrease the policy repo rate by 50 bps. Shri Saugata Bhattacharya voted for a 25 bps cut in repo rate.</p>",
+        "raw_html_excerpt_utf8_sha256": "ccc61fca30e3fb11df4824c0d012f822dd4ea0068304cc87463ce2230f176db6"
+      },
+      {
+        "source_id": "rbi_prid_60604",
+        "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60604",
+        "raw_path": "raw/rbi_prid_60604.html",
+        "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60604.html",
+        "source_sha256": "530e858cad4f4fff141fae33f294d8c12a36f6af8bc08b642e7f3f06b8de6abb",
+        "publication_date": "2025-06-06",
+        "evidence_kind": "paragraph",
+        "zero_based_p_index": 13,
+        "raw_character_start": 41260,
+        "raw_character_end_exclusive": 41884,
+        "excerpt": "10. After having reduced the policy repo rate by 100 bps in quick succession since February 2025, under the current circumstances, monetary policy is left with very limited space to support growth. Hence, the MPC also decided to change the stance from accommodative to neutral. From here onwards, the MPC will be carefully assessing the incoming data and the evolving outlook to chart out the future course of monetary policy in order to strike the right growth-inflation balance. The fast-changing global economic situation too necessitates continuous monitoring and assessment of the evolving macroeconomic outlook.",
+        "raw_html_excerpt": "<p>10. After having reduced the policy repo rate by 100 bps in quick succession since February 2025, under the current circumstances, monetary policy is left with very limited space to support growth. Hence, the MPC also decided to change the stance from accommodative to neutral. From here onwards, the MPC will be carefully assessing the incoming data and the evolving outlook to chart out the future course of monetary policy in order to strike the right growth-inflation balance. The fast-changing global economic situation too necessitates continuous monitoring and assessment of the evolving macroeconomic outlook.</p>",
+        "raw_html_excerpt_utf8_sha256": "05d490d9559e1a8b53761bba1d595d7672ab797f6a57137233a19cee988da779"
+      }
+    ]
+  },
+  "rate_vote_table_proposal": {
+    "source_id": "rbi_prid_60686",
+    "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+    "raw_path": "raw/rbi_prid_60686.html",
+    "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+    "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+    "publication_date": "2025-06-20",
+    "evidence_kind": "rate_vote_table_heading",
+    "zero_based_p_index": 24,
+    "raw_character_start": 44269,
+    "raw_character_end_exclusive": 44359,
+    "excerpt": "Voting on the Resolution to reduce the policy repo rate",
+    "raw_html_excerpt": "<p align=\"center\" class=\"head\">Voting on the Resolution to reduce the policy repo rate</p>",
+    "raw_html_excerpt_utf8_sha256": "a06d892df560bc82858d7578c95bfba9efb57c22b48e0632bf0afe80ce5649df"
+  },
+  "members": [
+    {
+      "member_id": "nagesh_kumar",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44692,
+            "raw_character_end_exclusive": 44809,
+            "excerpt": "Dr. Nagesh Kumar Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Nagesh Kumar</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "c453c96efacf7a06b7a0751e5ae0bef88b06f62d9e798fb1b9ba884460373805"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 50,
+      "final_member_rate_choice_delta_bps": {
+        "value": -50,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 33,
+            "raw_character_start": 50171,
+            "raw_character_end_exclusive": 50311,
+            "excerpt": "24. Hence, I vote for a 50-basis point cut in the repo rate to 5.50%. I also suggest a shift in stance from accommodative to neutral.",
+            "raw_html_excerpt": "<p>24. Hence, I vote for a 50-basis point cut in the repo rate to 5.50%. I also suggest a shift in stance from accommodative to neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "48baccdfd8456f1590dc6a8f3beef2ce61f296b7740c1fc0a2a3b0e1d49cae3d"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44692,
+            "raw_character_end_exclusive": 44809,
+            "excerpt": "Dr. Nagesh Kumar Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Nagesh Kumar</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "c453c96efacf7a06b7a0751e5ae0bef88b06f62d9e798fb1b9ba884460373805"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 33,
+            "raw_character_start": 50171,
+            "raw_character_end_exclusive": 50311,
+            "excerpt": "24. Hence, I vote for a 50-basis point cut in the repo rate to 5.50%. I also suggest a shift in stance from accommodative to neutral.",
+            "raw_html_excerpt": "<p>24. Hence, I vote for a 50-basis point cut in the repo rate to 5.50%. I also suggest a shift in stance from accommodative to neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "48baccdfd8456f1590dc6a8f3beef2ce61f296b7740c1fc0a2a3b0e1d49cae3d"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    },
+    {
+      "member_id": "saugata_bhattacharya",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44815,
+            "raw_character_end_exclusive": 44941,
+            "excerpt": "Shri Saugata Bhattacharya Yes 25",
+            "raw_html_excerpt": "<tr>        <td>Shri Saugata Bhattacharya</td>        <td align=\"center\">Yes</td>        <td align=\"center\">25</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "6f6d150b1a084a47c448f192158326bd725d7dec5b846390ddcf7cfffbf2b1f0"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 25,
+      "final_member_rate_choice_delta_bps": {
+        "value": -25,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 38,
+            "raw_character_start": 52043,
+            "raw_character_end_exclusive": 52346,
+            "excerpt": "28. Recognising the prevailing uncertainties, I believe that a measured and cautious progress in policy easing is more appropriate at this time. Accordingly, I vote to cut the policy repo rate by 25 basis points to 5.75%. I concur with the view to change the stance from accommodative to neutral.",
+            "raw_html_excerpt": "<p>28. Recognising the prevailing uncertainties, I believe that a measured and cautious progress in policy easing is more appropriate at this time. Accordingly, I vote to cut the policy repo rate by 25 basis points to 5.75%. I concur with the view to change the stance from accommodative to neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "bc82a8655a2da8b346c1c482c1599534f553c8886346bdfd185f9d19d5123f26"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44815,
+            "raw_character_end_exclusive": 44941,
+            "excerpt": "Shri Saugata Bhattacharya Yes 25",
+            "raw_html_excerpt": "<tr>        <td>Shri Saugata Bhattacharya</td>        <td align=\"center\">Yes</td>        <td align=\"center\">25</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "6f6d150b1a084a47c448f192158326bd725d7dec5b846390ddcf7cfffbf2b1f0"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": true,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 38,
+            "raw_character_start": 52043,
+            "raw_character_end_exclusive": 52346,
+            "excerpt": "28. Recognising the prevailing uncertainties, I believe that a measured and cautious progress in policy easing is more appropriate at this time. Accordingly, I vote to cut the policy repo rate by 25 basis points to 5.75%. I concur with the view to change the stance from accommodative to neutral.",
+            "raw_html_excerpt": "<p>28. Recognising the prevailing uncertainties, I believe that a measured and cautious progress in policy easing is more appropriate at this time. Accordingly, I vote to cut the policy repo rate by 25 basis points to 5.75%. I concur with the view to change the stance from accommodative to neutral.</p>",
+            "raw_html_excerpt_utf8_sha256": "bc82a8655a2da8b346c1c482c1599534f553c8886346bdfd185f9d19d5123f26"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    },
+    {
+      "member_id": "ram_singh",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44947,
+            "raw_character_end_exclusive": 45063,
+            "excerpt": "Prof. Ram Singh Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Prof. Ram Singh</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "453118848969c70b2039d56a5bf2376f957a490c21683b0998b077383d5b1453"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 50,
+      "final_member_rate_choice_delta_bps": {
+        "value": -50,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 57,
+            "raw_character_start": 61005,
+            "raw_character_end_exclusive": 61208,
+            "excerpt": "44. Considering the above-described strong case for a growth supportive MP, I vote to reduce the policy repo rate under the liquidity adjustment facility (LAF) by 50 basis points to 5.50 per cent.",
+            "raw_html_excerpt": "<p>44. Considering the above-described strong case for a growth supportive MP, I vote to reduce the policy repo rate under the liquidity adjustment facility (LAF) by 50 basis points to 5.50 per cent.</p>",
+            "raw_html_excerpt_utf8_sha256": "da44050d4bbfe33a6dffd390350a60bd82bfb0a5fac2bf7835d006cf77e282bc"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 44947,
+            "raw_character_end_exclusive": 45063,
+            "excerpt": "Prof. Ram Singh Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Prof. Ram Singh</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "453118848969c70b2039d56a5bf2376f957a490c21683b0998b077383d5b1453"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 58,
+            "raw_character_start": 61212,
+            "raw_character_end_exclusive": 61365,
+            "excerpt": "45. However, in view of unquantifiable global uncertainties, I support the change in the monetary policy stance from \u2018accommodative\u2019 to \u2018neutral\u2019.",
+            "raw_html_excerpt": "<p>45. However, in view of unquantifiable global uncertainties, I support the change in the monetary policy stance from \u2018accommodative\u2019 to \u2018neutral\u2019.</p>",
+            "raw_html_excerpt_utf8_sha256": "dd95c046176acee71ffd6bc986489971675ca11de97f79365e1718ae33241aaf"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    },
+    {
+      "member_id": "rajiv_ranjan",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45069,
+            "raw_character_end_exclusive": 45186,
+            "excerpt": "Dr. Rajiv Ranjan Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Rajiv Ranjan</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "29ff8df1d512579e157412852cf86e087908e2e36993e76825badedef48f28bf"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 50,
+      "final_member_rate_choice_delta_bps": {
+        "value": -50,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 60,
+            "raw_character_start": 61422,
+            "raw_character_end_exclusive": 61947,
+            "excerpt": "46. Since the April policy, the incoming data point to more than anticipated softening of inflation. The Reserve Bank\u2019s anti-inflationary policy stance in the last two years, supply side measures by the Government and a good agricultural season seem to have helped gain control over inflation. This has given flexibility and opportunity for monetary policy to support growth. Accordingly, the MPC voted for a rate cut of 50-bps in this policy. My vote for this frontloaded rate cut was premised on following arguments.",
+            "raw_html_excerpt": "<p>46. Since the April policy, the incoming data point to more than anticipated softening of inflation. The Reserve Bank\u2019s anti-inflationary policy stance in the last two years, supply side measures by the Government and a good agricultural season seem to have helped gain control over inflation. This has given flexibility and opportunity for monetary policy to support growth. Accordingly, the MPC voted for a rate cut of 50-bps in this policy. My vote for this frontloaded rate cut was premised on following arguments.</p>",
+            "raw_html_excerpt_utf8_sha256": "34155bef592c726c7273e4a94c4849d9a910777d7ffc8f2930abaa08f394eff6"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45069,
+            "raw_character_end_exclusive": 45186,
+            "excerpt": "Dr. Rajiv Ranjan Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Rajiv Ranjan</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "29ff8df1d512579e157412852cf86e087908e2e36993e76825badedef48f28bf"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 66,
+            "raw_character_start": 64930,
+            "raw_character_end_exclusive": 66180,
+            "excerpt": "52. At the same time, it was felt that pairing the 50 bps rate cut with the same accommodative stance is not suitable, even though we shifted to this stance just two months back. Having front-loaded the policy rate cut by 50 bps, we would be left with less room for further downward adjustments in policy rates. There is a risk that a combination of 50 bps cut with an accommodative stance could mislead financial markets about the scale and scope of further monetary policy easing, repricing of which eventually could create unnecessary volatility. At the same time, it is to be noted that the shift in stance to neutral should not be confused to be a sign that the direction of monetary policy has changed. The neutral stance provides flexibility and is meant to signal that there is no strong bias for any rate action absent any meaningful change in the macroeconomic outlook. It needs to be highlighted that our policy setting under prevailing uncertainties is not cast in stone. We will be responding appropriately through our policy action in the event of any material change in the outlook. In the near term, we need to focus more on facilitating transmission of easier monetary policy, while keeping a close watch on the incoming data.",
+            "raw_html_excerpt": "<p>52. At the same time, it was felt that pairing the 50 bps rate cut with the same accommodative stance is not suitable, even though we shifted to this stance just two months back. Having front-loaded the policy rate cut by 50 bps, we would be left with less room for further downward adjustments in policy rates. There is a risk that a combination of 50 bps cut with an accommodative stance could mislead financial markets about the scale and scope of further monetary policy easing, repricing of which eventually could create unnecessary volatility. At the same time, it is to be noted that the shift in stance to neutral should not be confused to be a sign that the direction of monetary policy has changed. The neutral stance provides flexibility and is meant to signal that there is no strong bias for any rate action absent any meaningful change in the macroeconomic outlook. It needs to be highlighted that our policy setting under prevailing uncertainties is not cast in stone. We will be responding appropriately through our policy action in the event of any material change in the outlook. In the near term, we need to focus more on facilitating transmission of easier monetary policy, while keeping a close watch on the incoming data.</p>",
+            "raw_html_excerpt_utf8_sha256": "d9e6e18fb4c7155f552784dff32a76bb75a99b9704a7651668b40d33d04227f7"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": true,
+        "status": "documented_qualification_or_conditional_guidance",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 66,
+            "raw_character_start": 64930,
+            "raw_character_end_exclusive": 66180,
+            "excerpt": "52. At the same time, it was felt that pairing the 50 bps rate cut with the same accommodative stance is not suitable, even though we shifted to this stance just two months back. Having front-loaded the policy rate cut by 50 bps, we would be left with less room for further downward adjustments in policy rates. There is a risk that a combination of 50 bps cut with an accommodative stance could mislead financial markets about the scale and scope of further monetary policy easing, repricing of which eventually could create unnecessary volatility. At the same time, it is to be noted that the shift in stance to neutral should not be confused to be a sign that the direction of monetary policy has changed. The neutral stance provides flexibility and is meant to signal that there is no strong bias for any rate action absent any meaningful change in the macroeconomic outlook. It needs to be highlighted that our policy setting under prevailing uncertainties is not cast in stone. We will be responding appropriately through our policy action in the event of any material change in the outlook. In the near term, we need to focus more on facilitating transmission of easier monetary policy, while keeping a close watch on the incoming data.",
+            "raw_html_excerpt": "<p>52. At the same time, it was felt that pairing the 50 bps rate cut with the same accommodative stance is not suitable, even though we shifted to this stance just two months back. Having front-loaded the policy rate cut by 50 bps, we would be left with less room for further downward adjustments in policy rates. There is a risk that a combination of 50 bps cut with an accommodative stance could mislead financial markets about the scale and scope of further monetary policy easing, repricing of which eventually could create unnecessary volatility. At the same time, it is to be noted that the shift in stance to neutral should not be confused to be a sign that the direction of monetary policy has changed. The neutral stance provides flexibility and is meant to signal that there is no strong bias for any rate action absent any meaningful change in the macroeconomic outlook. It needs to be highlighted that our policy setting under prevailing uncertainties is not cast in stone. We will be responding appropriately through our policy action in the event of any material change in the outlook. In the near term, we need to focus more on facilitating transmission of easier monetary policy, while keeping a close watch on the incoming data.</p>",
+            "raw_html_excerpt_utf8_sha256": "d9e6e18fb4c7155f552784dff32a76bb75a99b9704a7651668b40d33d04227f7"
+          }
+        ]
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    },
+    {
+      "member_id": "poonam_gupta",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45192,
+            "raw_character_end_exclusive": 45309,
+            "excerpt": "Dr. Poonam Gupta Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Poonam Gupta</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "0ea370eb9f50f8dae3b9247f86343f7049ee4852d17e4b02b0991bfd7c660073"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 50,
+      "final_member_rate_choice_delta_bps": {
+        "value": -50,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 72,
+            "raw_character_start": 68184,
+            "raw_character_end_exclusive": 68689,
+            "excerpt": "57. The issue then arises, how much support can be provided, and at what pace. Overall, while a case can be made for two consecutive rate cuts of 25 bps each in this as well as the next policy cycle, there is also merit in front-loading these cuts. Therefore, I vote for a policy rate cut by 50 bps in this meeting. This should help in fostering policy certainty and faster transmission than a staggered rate cut, and in more effectively countering the challenges emanating from the global economy.",
+            "raw_html_excerpt": "<p>57. The issue then arises, how much support can be provided, and at what pace. Overall, while a case can be made for two consecutive rate cuts of 25 bps each in this as well as the next policy cycle, there is also merit in front-loading these cuts. Therefore, I vote for a policy rate cut by 50 bps in this meeting. This should help in fostering policy certainty and faster transmission than a staggered rate cut, and in more effectively countering the challenges emanating from the global economy.</p>",
+            "raw_html_excerpt_utf8_sha256": "80844b504c2786bb37a5f1917b7fce0286823adf458947e21323cb6b27fae718"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45192,
+            "raw_character_end_exclusive": 45309,
+            "excerpt": "Dr. Poonam Gupta Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Dr. Poonam Gupta</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "0ea370eb9f50f8dae3b9247f86343f7049ee4852d17e4b02b0991bfd7c660073"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 73,
+            "raw_character_start": 68693,
+            "raw_character_end_exclusive": 68893,
+            "excerpt": "58. Going forward, I support a change in stance from accommodative to neutral. This means that any further actions should be contingent upon incoming data and the evolving global uncertainties.",
+            "raw_html_excerpt": "<p>58. Going forward, I support a change in stance from accommodative to neutral. This means that any further actions should be contingent upon incoming data and the evolving global uncertainties.</p>",
+            "raw_html_excerpt_utf8_sha256": "0497a554c45ca512aca6f574877c5ad42d49bf999a2f4182148ef18a8939ed94"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": true,
+        "status": "documented_qualification_or_conditional_guidance",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 73,
+            "raw_character_start": 68693,
+            "raw_character_end_exclusive": 68893,
+            "excerpt": "58. Going forward, I support a change in stance from accommodative to neutral. This means that any further actions should be contingent upon incoming data and the evolving global uncertainties.",
+            "raw_html_excerpt": "<p>58. Going forward, I support a change in stance from accommodative to neutral. This means that any further actions should be contingent upon incoming data and the evolving global uncertainties.</p>",
+            "raw_html_excerpt_utf8_sha256": "0497a554c45ca512aca6f574877c5ad42d49bf999a2f4182148ef18a8939ed94"
+          }
+        ]
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    },
+    {
+      "member_id": "sanjay_malhotra",
+      "literal_rate_ballot": {
+        "value": "Yes",
+        "status": "documented_literal_table_cell",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45315,
+            "raw_character_end_exclusive": 45436,
+            "excerpt": "Shri Sanjay Malhotra Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Shri Sanjay Malhotra</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "a6e3d40c9b899f43ce841374e0f2dbaeaa5307a4c3e3d5912e5a4e6cc4cd5fad"
+          }
+        ]
+      },
+      "table_magnitude_bps_unsigned": 50,
+      "final_member_rate_choice_delta_bps": {
+        "value": -50,
+        "status": "documented_member_choice",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 78,
+            "raw_character_start": 70783,
+            "raw_character_end_exclusive": 71814,
+            "excerpt": "62. With a projection of 3.7 per cent for 2025-26, the inflation outlook for the year is looking more benign than we had anticipated in the April policy. On the other hand, while growth remains steady, it is lower than our aspirations. The growth forecast remains the same as the outturn of last year which was 6.5 per cent. On the whole, I believe that, given the current macroeconomic conditions and the outlook, monetary policy needs to support growth, while remaining consistent with the objective of price stability. Given the sharp reduction in inflation of about 3 percentage points over the past few months (6.2 in October 2024 to 3.2 in April, 2025), and the projected reduction in annual average inflation by almost one percentage point from 4.6 to 3.7 per cent, I vote for a 50 bps rate cut. It is expected that the front-loaded rate action along with certainty on the liquidity front would send a clear signal to the economic agents, thereby supporting consumption and investment through lower cost of borrowing.",
+            "raw_html_excerpt": "<p>62. With a projection of 3.7 per cent for 2025-26, the inflation outlook for the year is looking more benign than we had anticipated in the April policy. On the other hand, while growth remains steady, it is lower than our aspirations. The growth forecast remains the same as the outturn of last year which was 6.5 per cent. On the whole, I believe that, given the current macroeconomic conditions and the outlook, monetary policy needs to support growth, while remaining consistent with the objective of price stability. Given the sharp reduction in inflation of about 3 percentage points over the past few months (6.2 in October 2024 to 3.2 in April, 2025), and the projected reduction in annual average inflation by almost one percentage point from 4.6 to 3.7 per cent, I vote for a 50 bps rate cut. It is expected that the front-loaded rate action along with certainty on the liquidity front would send a clear signal to the economic agents, thereby supporting consumption and investment through lower cost of borrowing.</p>",
+            "raw_html_excerpt_utf8_sha256": "753e1e40653d243469c5b36cb20c28a071a5f625b77a052f2b56c26f6f468f54"
+          },
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "rate_vote_table_row",
+            "zero_based_p_index": null,
+            "raw_character_start": 45315,
+            "raw_character_end_exclusive": 45436,
+            "excerpt": "Shri Sanjay Malhotra Yes 50",
+            "raw_html_excerpt": "<tr>        <td>Shri Sanjay Malhotra</td>        <td align=\"center\">Yes</td>        <td align=\"center\">50</td>      </tr>",
+            "raw_html_excerpt_utf8_sha256": "a6e3d40c9b899f43ce841374e0f2dbaeaa5307a4c3e3d5912e5a4e6cc4cd5fad"
+          }
+        ]
+      },
+      "exact_rate_choice_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices",
+        "derivation": "member signed basis-point change differs from committee signed change"
+      },
+      "rate_direction_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_final_choices"
+      },
+      "formal_stance_vote": {
+        "value": null,
+        "status": "no_explicit_stance_ballot_or_vote_narrative_identified",
+        "evidence": [],
+        "literal_yes_no_ballot": null
+      },
+      "all_member_stance_decision_narrative": {
+        "value": null,
+        "status": "not_identified",
+        "evidence": []
+      },
+      "committee_reported_stance_preference": {
+        "value": null,
+        "status": "not_separately_attributed",
+        "evidence": []
+      },
+      "expressed_final_stance_preference": {
+        "value": "neutral",
+        "status": "documented_personal_statement",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 79,
+            "raw_character_start": 71818,
+            "raw_character_end_exclusive": 73051,
+            "excerpt": "63. As regards the stance for monetary policy, it is important to keep in mind that the stance not only reflects the current macroeconomic conditions, but more importantly the outlook that goes into policy calculus. While the CPI headline inflation for April 2025 is 3.2 per cent, the projection for Q4 is 4.4 per cent. Growth is projected to be 6.5 per cent in this year. This growth-inflation outlook is contingent on the spatial and temporal distribution of the southwest monsoon and at the same time considerable uncertainties persist in the global commodity, financial, and currency markets. Given these uncertainties, and after having reduced the policy rates by 100 bps in quick succession since February, in the prevailing growth-inflation scenario and the outlook, monetary policy will be left with very limited space to support growth. Thus, it would be appropriate to change the stance from accommodative to neutral. A neutral stance would provide monetary policy the necessary flexibility viz., to cut, pause or hike policy rate, in response to the evolving domestic and global economic conditions. This package of measures will provide some certainty in the times of uncertainty and is expected to support growth.",
+            "raw_html_excerpt": "<p>63. As regards the stance for monetary policy, it is important to keep in mind that the stance not only reflects the current macroeconomic conditions, but more importantly the outlook that goes into policy calculus. While the CPI headline inflation for April 2025 is 3.2 per cent, the projection for Q4 is 4.4 per cent. Growth is projected to be 6.5 per cent in this year. This growth-inflation outlook is contingent on the spatial and temporal distribution of the southwest monsoon and at the same time considerable uncertainties persist in the global commodity, financial, and currency markets. Given these uncertainties, and after having reduced the policy rates by 100 bps in quick succession since February, in the prevailing growth-inflation scenario and the outlook, monetary policy will be left with very limited space to support growth. Thus, it would be appropriate to change the stance from accommodative to neutral. A neutral stance would provide monetary policy the necessary flexibility viz., to cut, pause or hike policy rate, in response to the evolving domestic and global economic conditions. This package of measures will provide some certainty in the times of uncertainty and is expected to support growth.</p>",
+            "raw_html_excerpt_utf8_sha256": "1fb62dfdbc3a9c70692e0a64f3462aa4c19ff804496023626660725b947f6220"
+          }
+        ]
+      },
+      "expressed_stance_preference_differs_from_committee": {
+        "value": false,
+        "status": "derived_from_documented_personal_preference"
+      },
+      "reservations": {
+        "value": null,
+        "status": "not_comprehensively_assessed",
+        "evidence": []
+      },
+      "guidance_qualifications": {
+        "value": true,
+        "status": "documented_qualification_or_conditional_guidance",
+        "evidence": [
+          {
+            "source_id": "rbi_prid_60686",
+            "source_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=60686",
+            "raw_path": "raw/rbi_prid_60686.html",
+            "snapshot_absolute_path": "/var/folders/wh/rvj5dycx0zgbk951gfhl9jb80000gn/T/rbi_source_doublecode_oct08_rti8uqqx/raw/rbi_prid_60686.html",
+            "source_sha256": "06631b687f49f1b365ced1a98572286262ce51a707809ccb683807a376455d63",
+            "publication_date": "2025-06-20",
+            "evidence_kind": "paragraph",
+            "zero_based_p_index": 79,
+            "raw_character_start": 71818,
+            "raw_character_end_exclusive": 73051,
+            "excerpt": "63. As regards the stance for monetary policy, it is important to keep in mind that the stance not only reflects the current macroeconomic conditions, but more importantly the outlook that goes into policy calculus. While the CPI headline inflation for April 2025 is 3.2 per cent, the projection for Q4 is 4.4 per cent. Growth is projected to be 6.5 per cent in this year. This growth-inflation outlook is contingent on the spatial and temporal distribution of the southwest monsoon and at the same time considerable uncertainties persist in the global commodity, financial, and currency markets. Given these uncertainties, and after having reduced the policy rates by 100 bps in quick succession since February, in the prevailing growth-inflation scenario and the outlook, monetary policy will be left with very limited space to support growth. Thus, it would be appropriate to change the stance from accommodative to neutral. A neutral stance would provide monetary policy the necessary flexibility viz., to cut, pause or hike policy rate, in response to the evolving domestic and global economic conditions. This package of measures will provide some certainty in the times of uncertainty and is expected to support growth.",
+            "raw_html_excerpt": "<p>63. As regards the stance for monetary policy, it is important to keep in mind that the stance not only reflects the current macroeconomic conditions, but more importantly the outlook that goes into policy calculus. While the CPI headline inflation for April 2025 is 3.2 per cent, the projection for Q4 is 4.4 per cent. Growth is projected to be 6.5 per cent in this year. This growth-inflation outlook is contingent on the spatial and temporal distribution of the southwest monsoon and at the same time considerable uncertainties persist in the global commodity, financial, and currency markets. Given these uncertainties, and after having reduced the policy rates by 100 bps in quick succession since February, in the prevailing growth-inflation scenario and the outlook, monetary policy will be left with very limited space to support growth. Thus, it would be appropriate to change the stance from accommodative to neutral. A neutral stance would provide monetary policy the necessary flexibility viz., to cut, pause or hike policy rate, in response to the evolving domestic and global economic conditions. This package of measures will provide some certainty in the times of uncertainty and is expected to support growth.</p>",
+            "raw_html_excerpt_utf8_sha256": "1fb62dfdbc3a9c70692e0a64f3462aa4c19ff804496023626660725b947f6220"
+          }
+        ]
+      },
+      "alternative_rate_magnitude_discussion": {
+        "status": "not_assessed",
+        "evidence": []
+      },
+      "statement_record_available": true
+    }
+  ],
+  "missingness": {
+    "minutes_available": true,
+    "literal_rate_ballot_table_available": true,
+    "individual_statement_count": 6,
+    "stance_literal_ballot_table_available": false,
+    "formal_stance_vote_narrative_identified": false
+  }
+}

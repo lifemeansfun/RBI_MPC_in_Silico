@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": 0.2771618625277162,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"In such circumstances it is better for the MPC to remain steady and watchful through the next couple of months.\" (2021-12-08)",
+      "\"To start with global factors, major advanced economy central banks over-stimulated after Covid-19 and are over-reacting to inflation now, creating excess volatility in cross border flows to emerging markets (EMs).\" (2022-09-30)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": 0.2914285714285714,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"I believe that monetary policy is no longer the right instrument to deal with the Covid-19 pandemic whose economic effects (as opposed to its health effects) have diminished greatly and become more concentrated in narrow pockets of the economy.\" (2021-12-08)",
+      "\"I wrote in my August statement that further withdrawal of accommodation is warranted beyond the rate increase in that meeting.\" (2022-09-30)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": 0.4444444444444444,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"Three fundamental questions about Omicron have put national authorities on high alert – is it more transmissible than other variants?\" (2021-12-08)",
+      "\"Given their mandates and the credibility they work hard to earn (in the pandemic, they prioritised revival over price stability which cannot be faulted, but it is), they prefer now to err on the side of hawkishness in their determination to bring inflation to targets, fearing a 1970s redux.\" (2022-09-30)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": 0.5365853658536586,
+    "is_internal": true,
+    "key_themes": [
+      "\"The global macroeconomic and financial environment has turned extremely adverse since February 2022 with the start of the war in Ukraine and is posing significant challenges to real-time macroeconomic assessment and management.\" (2022-05-04)",
+      "\"The risks to the global economy which were initially perceived as stagflationary are now increasingly surfacing to be that of an outright recession for most economies.\" (2022-08-05)",
+      "\"Central banks across the globe continue their fight against inflation this year with more than a dozen central banks hiking rates by 75 bps or even more in one go.\" (2022-09-30)"
+    ],
+    "member_id": "rajiv_ranjan",
+    "name": "Rajiv Ranjan",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2022-05-04 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": 0.2371638141809291,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"Since the previous meeting of the MPC (October 6-8, 2021), domestic growth and inflation have unfolded broadly on projected lines, while the global environment has turned febrile.\" (2021-12-08)",
+      "\"The world is in the eye of a new storm originating from aggressive monetary policy tightening and even more aggressive forward guidance from advanced economy (AE) central banks.\" (2022-09-30)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2022-12-05",
+    "corpus_manifest_hash": "e85c938a9b45a26b364642791a8e175385a31a1dd646ac954a853634dfb214c2",
+    "hawk_dove_score": -0.03322259136212625,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The quarterly GDP estimates by NSO for July-September 2021 point to a continued expansion of the economy, YOY basis, with GDP at constant prices rising by 8.4%, following the increase of 20.1% in Q1FY22.\" (2021-12-08)",
+      "\"While there are clear signs of slowing growth momentum in the economies across the world, inflation continues at much higher rates than the target for many countries.\" (2022-09-30)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2022-09-30; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

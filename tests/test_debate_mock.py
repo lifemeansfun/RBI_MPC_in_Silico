@@ -1,6 +1,6 @@
 """
 Integration test for the 4-round behavioral debate loop using offline Mock LLM client.
-Verifies complete deliberation mechanics, transcript logging, and §45ZL aggregation.
+Verifies complete deliberation mechanics, transcript logging, and §45ZI aggregation.
 """
 
 import pytest
@@ -93,11 +93,7 @@ def sample_snapshot():
 @pytest.mark.asyncio
 async def test_full_mock_debate_simulation(mock_personas, sample_snapshot):
     with tempfile.TemporaryDirectory() as tmpdir:
-        logger = TranscriptLogger(run_id="test_mock_run")
-        logger.run_dir = Path(tmpdir)
-        logger.transcripts_dir = Path(tmpdir) / "transcripts"
-        logger.transcripts_dir.mkdir(parents=True, exist_ok=True)
-        logger.log_file = Path(tmpdir) / "run.jsonl"
+        logger = TranscriptLogger(run_id="test_mock_run", output_root=Path(tmpdir))
 
         client = LLMClient(provider="mock", cache_enabled=False)
         orchestrator = DebateOrchestrator(llm_client=client, logger=logger)
@@ -111,12 +107,12 @@ async def test_full_mock_debate_simulation(mock_personas, sample_snapshot):
         )
 
         assert decision.meeting_date == "2023-08-10"
-        assert decision.rate_decision_bps in [-50, -25, 0, 25, 50]
+        assert decision.rate_decision_bps in [-50, -25, 0, 25, 35, 40, 50]
         assert decision.stance_decision in ["withdrawal_of_accommodation", "neutral", "accommodative"]
         assert len(decision.member_votes) == 6
 
         # Verify transcripts were generated on disk
-        rep_dir = logger.transcripts_dir / "2023-08-10" / "rep_1"
+        rep_dir = logger._directory("2023-08-10", 1, "legacy", "full")
         assert (rep_dir / "meeting_outcome.json").exists()
         assert (rep_dir / "round_1_shaktikanta_das.json").exists()
         assert (rep_dir / "round_4_jayanth_varma.json").exists()

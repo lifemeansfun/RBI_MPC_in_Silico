@@ -1,0 +1,122 @@
+[
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": 0.3333333333333333,
+    "is_internal": false,
+    "key_themes": [
+      "\"The question of what can revive growth as well as reduce inflation is best examined in the context of India’s macroeconomic structure.\" (2020-10-09)",
+      "\"In the months since the December 2020 MPC meeting growth has exceeded market expectations and headline inflation has also come in below expectations, falling within the MPC tolerance band after 6 months.\" (2021-02-05)",
+      "\"RBI surveys show consumer confidence to be lower in March 2021 compared to January, although corporate confidence was still intact.\" (2021-04-07)"
+    ],
+    "member_id": "ashima_goyal",
+    "name": "Ashima Goyal",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": 0.4838709677419355,
+    "is_internal": false,
+    "key_themes": [
+      "\"I have agonized a great deal about dissenting (in part) with a resolution on a narrow technicality when I am in agreement with the spirit of the resolution: am I making a mountain out of a molehill and creating unnecessary confusion?\" (2020-10-09)",
+      "\"I support maintaining the policy rate at its current level and I also support the accommodative stance as these decisions are consistent with the forward guidance provided by the MPC in its last two meetings (October and December 2020).\" (2021-02-05)",
+      "\"The economic recovery after the pandemic shock of 2020 remains uneven and incomplete, and the renewed jump in COVID-19 infections in certain parts of the country has increased the downside risk to the growth momentum.\" (2021-04-07)"
+    ],
+    "member_id": "jayanth_varma",
+    "name": "Jayanth R. Varma",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": 0.3246753246753247,
+    "is_internal": true,
+    "key_themes": [
+      "\"The projections of real GDP growth for 2020-21 that are set out for the first time in the MPC’s resolution provide a sense of the wounds on the soul of the economy inflicted by COVID-19.\" (2020-10-09)",
+      "\"Estimates/projections indicate that GDP growth may have attained positive territory in the second half of 2020-21, mainly on the back of a surge in government expenditure but contractions in private consumption spending are also easing and net exports are finally emerging out of a long retrenchment.\" (2021-02-05)",
+      "\"I vote to keep the policy rate unchanged and to maintain an accommodative stance as articulated in the MPC’s resolution.53.\" (2021-04-07)"
+    ],
+    "member_id": "michael_debabrata_patra",
+    "name": "Michael Debabrata Patra",
+    "provenance_status": "dated_corpus",
+    "role": "Deputy Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": 0.2159090909090909,
+    "is_internal": true,
+    "key_themes": [
+      "\"At the time of the August MPC, while noting that monetary policy was being framed under large data and forecast uncertainties, I had also indicated that growth could fall more and, inflation less, than the consensus estimates that prevailed at that point.\" (2020-10-09)",
+      "\"The MPC call to hold policy rates despite inflation staying elevated above the upper tolerance level during H2 of 2020 was based on the assessment that inflation will recede going forward.\" (2021-02-05)",
+      "\"The Central Government, in consultation with the Bank, retained the inflation target and the tolerance bands for the next five years.\" (2021-04-07)"
+    ],
+    "member_id": "mridul_saggar",
+    "name": "Mridul K. Saggar",
+    "provenance_status": "dated_corpus",
+    "role": "Executive Director",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": 0.15862068965517243,
+    "is_internal": true,
+    "key_themes": [
+      "\"After the sharpest contraction in economic activity in Q1:2020-21, a number of high frequency indicators of economic activity for Q2:2020-21 indicate a sequential improvement.\" (2020-10-09)",
+      "\"The macroeconomic environment – in terms of both growth and inflation – turned out to be better than anticipated since the December 2020 meeting of the MPC.\" (2021-02-05)",
+      "\"The curve of active cases of COVID-19, which was on a downward trend till mid-February, has changed its course with a surge in several parts of the country.\" (2021-04-07)"
+    ],
+    "member_id": "shaktikanta_das",
+    "name": "Shaktikanta Das",
+    "provenance_status": "dated_corpus",
+    "role": "Governor",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  },
+  {
+    "biography": null,
+    "calibration_cutoff": "2021-06-02",
+    "corpus_manifest_hash": "651698cb80c564edb5d320c3a667c15c81ea68ffb7a1ebe715df8cc158d11f36",
+    "hawk_dove_score": -0.2147239263803681,
+    "is_internal": false,
+    "key_themes": [
+      "\"Two key goals from the monetary policy perspective at the present juncture, in which output growth has declined sharply and inflation pressures remain, are enabling sustained recovery of the economy and moderation in inflation rate.\" (2020-10-09)",
+      "\"The First advance estimates (FAE) of GDP for 2020-21 released by the National Statistical Office (NSO) on January 7, 2021 place the annual growth of GDP in constant prices at -7.7 per cent over the previous year.\" (2021-02-05)",
+      "\"The Second Advance Estimates by the National Statistical Office place the GDP at constant prices lower by 8 per cent in 2020-21 over the previous year, slightly steeper decline than decline of 7.7 per cent as per the First Advance Estimates.\" (2021-04-07)"
+    ],
+    "member_id": "shashanka_bhide",
+    "name": "Shashanka Bhide",
+    "provenance_status": "dated_corpus",
+    "role": "External Member",
+    "stance_bias": "neutral",
+    "system_prompt_override": null,
+    "tenure": "Personal corpus coverage 2020-10-09 to 2021-04-07; appointment tenure unverified",
+    "voting_priority": "Evaluate supplied inflation and activity evidence under the RBI mandate."
+  }
+]

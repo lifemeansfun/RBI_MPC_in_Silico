@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nas2021_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2021/8.18.2.xlsx",
+    "filename": "nas2021_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified"
+  },
+  {
+    "id": "nas2022_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2022/8.18.2.xlsx",
+    "filename": "nas2022_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified"
+  },
+  {
+    "id": "nas2023_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2023/8.18.2.xlsx",
+    "filename": "nas2023_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified"
+  },
+  {
+    "id": "nas2024_quarterly_gdp_xlsx",
+    "url": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/National_Accounts/NAS2024/8.18.2.xlsx",
+    "filename": "nas2024_quarterly_gdp.xlsx",
+    "role": "Candidate coherent NAS quarterly GDP expenditure history",
+    "discovery": "Exact verified NAS2020 filename structure extended to edition folder; table and availability must be verified"
+  }
+]
